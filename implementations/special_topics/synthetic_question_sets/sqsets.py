@@ -117,6 +117,8 @@ def validation_step(documents: Sequence[Document], roles: Roles) -> Step:
         roles,
         artifact_type="validation",
         extra=_arms_extra(),
+        # Every call goes through proxy_model's ProxyBatch.
+        guarded=True,
     )
 
 

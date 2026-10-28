@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 148 60" width="148" height="60" role="img" aria-labelledby="t3">
+<title id="t3">RI #3 combines table-aware chunking, lexical retrieval, and dense retrieval</title>
+<defs>
+<clipPath id="k31"><circle cx="74" cy="30" r="27"/></clipPath>
+<clipPath id="k32"><circle cx="119" cy="30" r="27"/></clipPath>
+</defs>
+<circle cx="29" cy="30" r="27" fill="#0B7350"/>
+<circle cx="74" cy="30" r="27" fill="#313CFF"/>
+<circle cx="119" cy="30" r="27" fill="#0F6E82"/>
+<circle cx="29" cy="30" r="27" fill="#000" fill-opacity=".38" clip-path="url(#k31)"/>
+<circle cx="74" cy="30" r="27" fill="#000" fill-opacity=".38" clip-path="url(#k32)"/>
+<g fill="#fff" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI','Open Sans',Helvetica,Arial,sans-serif" font-size="11" font-weight="600" text-anchor="middle">
+<text x="29" y="33.9">Tables</text>
+<text x="74" y="33.9">Lexical</text>
+<text x="119" y="33.9">Dense</text>
+</g></svg>

@@ -84,9 +84,9 @@ arm is `BAAI/bge-small-en-v1.5` run locally. MRR is mean reciprocal rank.
 | Chunking | Chunks | Arm | Retrieval failure | MRR |
 | --- | ---: | --- | ---: | ---: |
 | Plain windows | 41,401 | BM25 | 0.6267 | 0.1965 |
-| Plain windows | 41,401 | Dense | 0.3400 | 0.3459 |
+| Plain windows | 41,401 | Dense | **0.3400** | 0.3459 |
 | Table-aware | 53,715 | BM25 | 0.6600 | 0.1677 |
-| Table-aware | 53,715 | Dense | 0.4000 | 0.3542 |
+| Table-aware | 53,715 | Dense | 0.4000 | **0.3542** |
 
 Table-aware chunking keeps a numeric cell in a chunk with its column header and
 row label in 94.6% of its appearances, against 51.3% for plain windows. Of the

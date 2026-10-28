@@ -48,6 +48,7 @@ from dataclasses import dataclass, field
 from typing import Any
 
 from .. import metering
+from ..metering import RunStopped
 from ..models import cacheable_system, profile_for
 from .corpus import Chunk, Query
 
@@ -232,8 +233,12 @@ def contextualise(
                 clients.append(local.client)
         return local.client
 
+    stopped = threading.Event()
+
     def one(chunk: Chunk) -> Chunk:
         nonlocal done
+        if stopped.is_set():
+            return chunk
         client = client_for_thread()
         prompt = build_prompt(
             documents[chunk.doc_id],
@@ -248,6 +253,9 @@ def contextualise(
                 max_tokens=max_tokens,
                 kind="contextualise",
             ).strip()
+        except RunStopped:
+            stopped.set()
+            raise
         except Exception:  # noqa: BLE001 - a failed call must not lose the chunk
             with lock:
                 cost.failures += 1
@@ -656,6 +664,7 @@ def generate_contexts(
     temperature: float = 0.0,
     workers: int = 4,
     progress_every: int = 100,
+    confirm: bool = False,
 ) -> ContextSet:
     """Write a situating context for every chunk with an OpenAI-compatible client.
 
@@ -702,6 +711,12 @@ def generate_contexts(
         ``ProxyBatch`` sets its own concurrency and ignores this.
     progress_every : int, optional
         Print a progress line every N chunks. Zero silences it.
+    confirm : bool, optional
+        Passed to :meth:`~aieng.advanced_rag.batch.ProxyBatch.complete_batch`:
+        send a paid batch whose estimate is over 10% of the key's budget left,
+        or over $1 while the key reports no budget. Without it such a batch
+        raises ``ConfirmationRequiredError`` before any call. Ignored for a
+        client that is not a ``ProxyBatch``.
 
     Returns
     -------
@@ -764,14 +779,19 @@ def generate_contexts(
             max_tokens=max_tokens,
             temperature=temperature,
             on_progress=progress,
+            confirm=confirm,
         )
         for chunk, request, outcome in zip(order, requests, outcomes, strict=True):
             record(chunk, request, outcome.response)
         result.failures.sort()
         return result
 
+    stopped = threading.Event()
+
     def one(item: tuple[Chunk, tuple[list[dict[str, Any]], int]]) -> None:
         nonlocal done
+        if stopped.is_set():
+            return
         chunk, request = item
         try:
             response = client.chat.completions.create(
@@ -780,6 +800,9 @@ def generate_contexts(
                 max_tokens=max_tokens,
                 temperature=temperature,
             )
+        except RunStopped:
+            stopped.set()
+            raise
         except Exception:  # noqa: BLE001 - a failed call must not lose the run
             response = None
         with lock:
@@ -926,6 +949,7 @@ def name_documents(
     head_chars: int = 2000,
     max_tokens: int = 40,
     workers: int = 4,
+    confirm: bool = False,
 ) -> tuple[dict[str, str], dict[str, int]]:
     """Ask a model for the name a person would use for each document.
 
@@ -949,6 +973,9 @@ def name_documents(
         Completion budget per call.
     workers : int, optional
         Threads in the pool.
+    confirm : bool, optional
+        Passed to :meth:`~aieng.advanced_rag.batch.ProxyBatch.complete_batch`,
+        as in :func:`generate_contexts`.
 
     Returns
     -------
@@ -989,12 +1016,17 @@ def name_documents(
             [messages_for(text) for _, text in order],
             max_tokens=max_tokens,
             temperature=0.0,
+            confirm=confirm,
         )
         for (doc_id, _), outcome in zip(order, outcomes, strict=True):
             record(doc_id, outcome.response)
         return names, usage
 
+    stopped = threading.Event()
+
     def one(item: tuple[str, str]) -> None:
+        if stopped.is_set():
+            return
         doc_id, text = item
         try:
             response = client.chat.completions.create(
@@ -1003,6 +1035,9 @@ def name_documents(
                 max_tokens=max_tokens,
                 temperature=0.0,
             )
+        except RunStopped:
+            stopped.set()
+            raise
         except Exception:  # noqa: BLE001 - one failed name must not stop the run
             return
         record(doc_id, response)

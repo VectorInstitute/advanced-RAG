@@ -688,6 +688,9 @@ def arm_step(
             "max_tokens": AGENT_MAX_TOKENS,
         },
         reference_model=REFERENCE_MODEL,
+        # Agents call through ADK's GovernedLlmClient and grep-iterative through
+        # governed_client, so a re-run on cached responses needs no --confirm.
+        guarded=True,
     )
 
 

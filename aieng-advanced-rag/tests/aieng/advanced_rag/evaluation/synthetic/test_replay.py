@@ -8,7 +8,12 @@ import pytest
 
 from aieng.advanced_rag.cache import TieredResultCache
 from aieng.advanced_rag.corpora.chunking import chunk_document
-from aieng.advanced_rag.evaluation.synthetic import GenerationConfig
+from aieng.advanced_rag.evaluation.synthetic import (
+    EvidenceSpan,
+    GenerationConfig,
+    SyntheticQuestion,
+    SyntheticSet,
+)
 from aieng.advanced_rag.evaluation.synthetic.replay import (
     REFERENCE_ROLES,
     Reference,
@@ -252,6 +257,27 @@ def test_corpus_wide_queries_share_one_scope(corpus, script, embedder):
     assert {q.doc_id for q in wide} == {CORPUS_SCOPE}
     assert {q.doc_id for q in scoped} <= {d.doc_id for d in corpus}
     assert [q.query_id for q in wide] == [q.query_id for q in scoped]
+
+
+def test_a_corpus_wide_question_may_quote_several_documents():
+    # Two regulations share a boilerplate sentence, so a corpus-scoped question
+    # carries a gold span in each. Scoring it corpus-wide must not need one
+    # document.
+    quote = "The employer must keep the record for two years."
+    question = SyntheticQuestion(
+        "q1",
+        "How long must the employer keep the record?",
+        "two years",
+        evidence=(
+            EvidenceSpan("a.md", 10, 59, quote),
+            EvidenceSpan("b.md", 40, 89, quote),
+        ),
+    )
+    [query] = queries_for(SyntheticSet([question]), corpus_wide=True)
+    assert query.doc_id == CORPUS_SCOPE
+    assert len(query.answers) == 2
+    with pytest.raises(ValueError, match="names no single document"):
+        queries_for(SyntheticSet([question]))
 
 
 def test_a_live_build_does_not_need_the_reference_artifact(cache):

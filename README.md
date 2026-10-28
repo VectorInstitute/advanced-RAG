@@ -1,3 +1,5 @@
+<p align="center"><img src="docs/assets/banner.avif" width="100%" alt="Conway's Game of Life cells on a blue-to-purple gradient, forming one circle that a second circle joins and leaves, overlapping in the middle"></p>
+
 # Advanced RAG Bootcamp
 
 Advanced RAG extends a foundational RAG pipeline into
@@ -57,15 +59,16 @@ Each reference implementation (RI) is independent and self-contained; see its `R
 walkthrough. Together they span the spine from a conventional baseline to
 agent-native, embedding-less retrieval, and each pairs an Advanced RAG method
 with a GraphRAG contrast. Each one's `CORPUS.md` or `README.md` records its datasets, their
-licences, and their pinned versions.
+licences, and their pinned versions. The circles under each folder name the retrieval
+elements that RI combines.
 
 | # | Implementation | Spine position | The problem |
 | --- | --- | --- | --- |
-| 1 | [`regulatory_policy_qa/`](implementations/regulatory_policy_qa/) | Baseline → Advanced RAG | The Advanced RAG spine and shared evaluation harness, with reliable "not stated" null-answer detection on dynamic regulatory content. |
-| 2 | [`cross_document_synthesis/`](implementations/cross_document_synthesis/) | Advanced → Agentic RAG | **Flagship.** Multi-hop reasoning across many documents, growing the agent loop, with the Advanced-RAG-vs-GraphRAG decision resolved on measured results. |
-| 3 | [`table_structured_reasoning/`](implementations/table_structured_reasoning/) | Advanced RAG (substrate) | Retrieval and answering over tables and structured data (Docling section folders, table-aware chunking), grounded on financial filings. |
-| 4 | [`graphrag_technical_support/`](implementations/graphrag_technical_support/) | Agentic RAG over a graph | The full KG-RAG track: graph construction, hybrid vector+graph retrieval with provenance, agentic traversal, and graph maintenance. |
-| 5 | [`agent_native_retrieval/`](implementations/agent_native_retrieval/) | Agent ∩ Retrieval overlap | The spine terminal: embedding-less, agent-native retrieval (grep/navigate/Docling-agent), benchmarked against the vector baseline on the same corpora. |
+| 1 | [`regulatory_policy_qa/`](implementations/regulatory_policy_qa/)<br><img src="docs/assets/ri-1.svg" width="140" alt="Overlapping circles: lexical, dense, and rerank"> | Baseline → Advanced RAG | The Advanced RAG spine and shared evaluation harness, with reliable "not stated" null-answer detection on dynamic regulatory content. |
+| 2 | [`cross_document_synthesis/`](implementations/cross_document_synthesis/)<br><img src="docs/assets/ri-2.svg" width="140" alt="Overlapping circles: dense, agent, and graph"> | Advanced → Agentic RAG | **Flagship.** Multi-hop reasoning across many documents, growing the agent loop, with the Advanced-RAG-vs-GraphRAG decision resolved on measured results. |
+| 3 | [`table_structured_reasoning/`](implementations/table_structured_reasoning/)<br><img src="docs/assets/ri-3.svg" width="140" alt="Overlapping circles: tables, lexical, and dense"> | Advanced RAG (substrate) | Retrieval and answering over tables and structured data (Docling section folders, table-aware chunking), grounded on financial filings. |
+| 4 | [`graphrag_technical_support/`](implementations/graphrag_technical_support/)<br><img src="docs/assets/ri-4.svg" width="140" alt="Overlapping circles: dense, graph, and agent"> | Agentic RAG over a graph | The full KG-RAG track: graph construction, hybrid vector+graph retrieval with provenance, agentic traversal, and graph maintenance. |
+| 5 | [`agent_native_retrieval/`](implementations/agent_native_retrieval/)<br><img src="docs/assets/ri-5.svg" width="140" alt="Overlapping circles: dense, agent, and lexical"> | Agent ∩ Retrieval overlap | The spine terminal: embedding-less, agent-native retrieval (grep/navigate/Docling-agent), benchmarked against the vector baseline on the same corpora. |
 
 ## Design notes
 
@@ -104,6 +107,18 @@ follow [Set up on your own machine](docs/setup.md#set-up-on-your-own-machine).
    pipeline and evaluation harness.
 3. Fetch the data for the RI closest to your use case, then move to it:
    `python -m aieng.advanced_rag.corpora.download <ri_number>`.
+
+To work on your own documents, start from RI #1's
+[`04_bring_your_own_corpus.ipynb`](implementations/regulatory_policy_qa/04_bring_your_own_corpus.ipynb).
+It reads a folder of `.txt`, `.md`, or `.pdf` files, generates a question set with known answers
+and null questions, and ranks the retrieval arms on it.
+[`07_levers_and_answers_on_your_corpus.ipynb`](implementations/regulatory_policy_qa/07_levers_and_answers_on_your_corpus.ipynb)
+scores the retrieval levers and answering with abstention on that set.
+[`99_starter_agent.ipynb`](implementations/regulatory_policy_qa/99_starter_agent.ipynb) runs an
+agent over the same folder. [Share a team's work](docs/team-workflow.md) covers a team fork and
+merging repository updates. If your data can't come onto the platform,
+[Run the notebooks on data that stays off the platform](docs/private-data.md) covers your own
+environment and endpoint.
 
 Bootcamp keys (`OPENAI_API_KEY`, `OPENAI_BASE_URL`, and `LANGFUSE_*`) live in your shell
 environment. Personal keys go in `.env`, as [`.env.example`](.env.example) lists.

@@ -74,6 +74,11 @@ FinanceBench controls, and 26 near-miss nulls. `outputs/results.json` holds ever
   page recall at 5 for the 34 diagram queries from 0.44 to 0.62 with `bge-small-en-v1.5` and
   English queries, and from 0.53 to 0.56 with BM25 and the French queries.
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="../../../docs/assets/visual-documents-dark.png">
+  <img src="../../../docs/assets/visual-documents-light.png" alt="Bar charts of answer accuracy per arm. On 76 figure-only questions, text retrieval T scores 0.03, E1 0.57, E2 0.38, L 0.55, and TV 0.62, while page-image retrieval VT scores 0.86, VV 0.84, and H 0.83. On 60 table questions, T, E1, E2, and L score 0.45 to 0.52, TV 0.72, VT and VV 0.68, and H 0.80.">
+</picture>
+
 The question set was built and checked by models, and a figure question survived only if a
 model read it off the page image, so the oracle rows on figures sit high by construction. A
 hand check of 10 sampled questions found every reference answer correct.

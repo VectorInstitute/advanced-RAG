@@ -12,6 +12,10 @@ aliases go away one release later.
 
 ### Added
 
+- `ADVANCED_RAG_SHOW_KEY_BUDGET=0` replaces the key's budget, lifetime spend, and per-run proxy
+  usage in `spend.describe`, `SpendSession.report`, and `Budget.line` with
+  `spend.HIDDEN_BUDGET_LINE`, and silences the budget warnings. The spend guards still read the
+  budget.
 - `batch.ProxyBatch` sends bulk calls to one model through infermesh (the new `batch` extra):
   a bounded in-flight window, a request rate that follows any `x-ratelimit-*` headers, and
   retries of transient errors only (429, connection failures, timeouts, 500, 502, 503, 504).
@@ -257,6 +261,36 @@ aliases go away one release later.
 
 ### Fixed
 
+- A live `load_or_run` step marked `Step(guarded=True)`, whose every model call goes through
+  `govern`, `async_llm`, a metered client, `ProxyBatch`, or `GovernedLlmClient`, no longer stops
+  before it starts when its pre-run estimate needs `confirm=True`. It runs while the response
+  cache answers its calls, and each guarded client refuses the step's first paid cache miss with
+  `ConfirmationRequiredError` before sending it, so a step whose every call is cached finishes
+  without `confirm=True`. Inside such a step, a `ProxyBatch` checks its own cache misses against
+  the budget instead of skipping the check. A step not marked guarded keeps the stop before the
+  run, and its message names `guarded=True`. `synthetic.set_step(guarded=True)` marks a question
+  set build, and RI #5's agent arms and the synthetic validation build set it.
+- `metering.RunStopped` is the base of `SpendLimitReached` and `ConfirmationRequiredError`. The
+  per-call error handling in `contextual.contextualise`, `contextual.generate_contexts`,
+  `contextual.name_documents`, `answers.judge_answers`, and `extraction.build_graph` re-raises it
+  and skips the remaining calls, where it used to count each refused call as one failure and carry
+  on.
+- `choose_models` and the spend guards read `ADVANCED_RAG_MODEL_FAMILY`, the three role
+  variables, `ADVANCED_RAG_SPEND_LIMIT_USD`, and `ADVANCED_RAG_KEY_BUDGET_USD` from the repository
+  `.env` when the environment does not set them, as the setup guides describe, and so does
+  `ADVANCED_RAG_SHOW_KEY_BUDGET`. A notebook kernel does not load `.env`, so a family or a spend
+  ceiling set there was ignored. The new `proxy.resolve_setting` does the lookup, and an exported
+  value still wins.
+- `evaluation.synthetic.proxy_model` sends a paid model's top-level `reasoning_effort` in
+  `extra_body`. LiteLLM refused the field at the top level for `gpt-6-luna`, the synthetic question
+  builder's checker for a Google generator, so a live build on the default family failed with
+  `UnsupportedParamsError`. `ProxyBatch` and every other caller send what they sent before.
+- `retrieval.contextual.generate_contexts` and `name_documents` take `confirm` and pass it to
+  `ProxyBatch.complete_batch`, so a paid build over the confirmation threshold can run.
+- `evaluation.synthetic.validation.queries_for(corpus_wide=True)` builds each query without
+  `SyntheticQuestion.to_query`. A corpus-scoped question carries a gold span in every document
+  that holds its quote, and `to_query` refused one that named several, so notebook 04 stopped
+  with `ValueError: ... names no single document` on a corpus whose documents share wording.
 - A proxy key that reports no budget skipped the 10% confirmation gate and the 50% and 80%
   warnings without a word. `spend.read_budget`, `describe`, and `SpendSession.report` assume $300,
   a team's budget for the bootcamp, or the dollars in `ADVANCED_RAG_KEY_BUDGET_USD`, run the gate

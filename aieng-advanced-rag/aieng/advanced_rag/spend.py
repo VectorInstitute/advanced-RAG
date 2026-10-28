@@ -40,6 +40,12 @@ the estimate past it raises :class:`SpendLimitReached` once it returns, and ever
 later call a metered or governed client makes raises it before the request is
 sent. The second check is what stops calls already queued on a thread pool.
 
+``ADVANCED_RAG_SHOW_KEY_BUDGET=0`` keeps the key's budget, lifetime spend, and
+per-run proxy usage out of everything this module prints: the budget line reads
+:data:`HIDDEN_BUDGET_LINE` and no budget warning fires. The committed notebook
+outputs are executed this way, so they show no figure from the key that ran
+them. The guards still read the budget, so hiding it changes no decision.
+
 Every proxy read is a short GET with the participant's bearer key, and the key
 is never printed or stored.
 """
@@ -47,7 +53,6 @@ is never printed or stored.
 from __future__ import annotations
 
 import json
-import os
 import threading
 import urllib.error
 import urllib.parse
@@ -61,6 +66,7 @@ from typing import Any, TypeAlias
 from aieng.advanced_rag import metering
 from aieng.advanced_rag.metering import CallUsage, ModelUsage, UsageMeter
 from aieng.advanced_rag.models import ModelSet, family_of
+from aieng.advanced_rag.proxy import resolve_setting
 
 
 #: Variable that sets a dollar ceiling for one run.
@@ -69,6 +75,13 @@ SPEND_LIMIT_ENV = "ADVANCED_RAG_SPEND_LIMIT_USD"
 #: Variable that replaces :data:`ASSUMED_BUDGET_USD` for a key that reports no
 #: budget. It has no effect when the key reports one.
 KEY_BUDGET_ENV = "ADVANCED_RAG_KEY_BUDGET_USD"
+
+#: Variable that hides the key's budget and spend in printed output when it is
+#: ``0``, ``false``, ``no``, or ``off``.
+SHOW_KEY_BUDGET_ENV = "ADVANCED_RAG_SHOW_KEY_BUDGET"
+
+#: The budget line printed while ``ADVANCED_RAG_SHOW_KEY_BUDGET`` hides it.
+HIDDEN_BUDGET_LINE = "key budget: not shown in the committed output"
 
 #: The budget assumed for a key that reports none: what each participant team's
 #: key holds for the whole bootcamp.
@@ -87,7 +100,8 @@ PRICES_AS_OF = "2026-10-20"
 _MILLION = 1_000_000
 
 
-class SpendLimitReached(RuntimeError):  # noqa: N818 - the name the design uses
+# The repository's mypy run sees sibling modules as Any, hence the ignore.
+class SpendLimitReached(metering.RunStopped):  # type: ignore[misc]  # noqa: N818
     """The run's estimated spend passed ``ADVANCED_RAG_SPEND_LIMIT_USD``."""
 
 
@@ -750,7 +764,10 @@ class Budget:
         return self.spent_usd / self.budget_usd
 
     def line(self) -> str:
-        """Return the budget as one line."""
+        """Return the budget as one line, or :data:`HIDDEN_BUDGET_LINE` when hidden."""
+        return self._figures() if key_budget_shown() else HIDDEN_BUDGET_LINE
+
+    def _figures(self) -> str:
         if self.assumed and self.budget_usd is not None:
             assumed = (
                 f"assuming ${self.budget_usd:,.2f} (set {KEY_BUDGET_ENV} to override)"
@@ -775,6 +792,12 @@ class Budget:
             f"key budget ${self.budget_usd:,.2f}, spent ${spent:,.2f}, "
             f"left ${left:,.2f} ({share:.0%})"
         )
+
+
+def key_budget_shown() -> bool:
+    """Return False when ``ADVANCED_RAG_SHOW_KEY_BUDGET`` hides the key's figures."""
+    raw = resolve_setting(SHOW_KEY_BUDGET_ENV).lower()
+    return raw not in {"0", "false", "no", "off"}
 
 
 def read_budget(source: ProxyAccount | None = None) -> Budget:
@@ -805,7 +828,7 @@ def budget_warnings(budget: Budget, already: set[float] | None = None) -> list[s
         One message per newly crossed threshold, highest first.
     """
     fraction = budget.fraction_spent
-    if fraction is None:
+    if fraction is None or not key_budget_shown():
         return []
     seen = already if already is not None else set()
     messages = []
@@ -990,7 +1013,11 @@ class SpendSession:
         source = self._account()
         usage = source.key_usage()
         now_spent = spent_usd(usage)
-        if now_spent is not None and self._start_spent is not None:
+        if (
+            now_spent is not None
+            and self._start_spent is not None
+            and key_budget_shown()
+        ):
             lines.append(
                 f"this run, proxy usage ${now_spent - self._start_spent:,.2f} "
                 "(team key: includes teammates' calls in the same window)"
@@ -1006,7 +1033,7 @@ class SpendSession:
 
 
 def _assumed_budget() -> float:
-    raw = os.environ.get(KEY_BUDGET_ENV, "").strip()
+    raw = resolve_setting(KEY_BUDGET_ENV)
     if not raw:
         return ASSUMED_BUDGET_USD
     try:
@@ -1018,7 +1045,7 @@ def _assumed_budget() -> float:
 
 
 def _limit_from_env() -> float | None:
-    raw = os.environ.get(SPEND_LIMIT_ENV, "").strip()
+    raw = resolve_setting(SPEND_LIMIT_ENV)
     if not raw:
         return None
     try:
@@ -1084,6 +1111,8 @@ __all__ = [
     "KEY_BUDGET_ENV",
     "OFFLINE_PRICES",
     "PRICES_AS_OF",
+    "HIDDEN_BUDGET_LINE",
+    "SHOW_KEY_BUDGET_ENV",
     "SPEND_LIMIT_ENV",
     "WARN_AT",
     "Budget",
@@ -1098,6 +1127,7 @@ __all__ = [
     "describe",
     "estimate_tokens",
     "is_paid",
+    "key_budget_shown",
     "price",
     "price_of",
     "price_table",

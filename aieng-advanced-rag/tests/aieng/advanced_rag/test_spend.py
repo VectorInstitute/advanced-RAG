@@ -76,11 +76,15 @@ def account_for(fake: FakeProxy | None, key: str | None = "test-key") -> ProxyAc
 
 
 @pytest.fixture(autouse=True)
-def offline(monkeypatch):
+def offline(monkeypatch, tmp_path):
     # No test here reaches the network, whatever the environment holds.
     spend.use_account(ProxyAccount(None, PROXY))
     monkeypatch.delenv(spend.SPEND_LIMIT_ENV, raising=False)
     monkeypatch.delenv(spend.KEY_BUDGET_ENV, raising=False)
+    monkeypatch.delenv(spend.SHOW_KEY_BUDGET_ENV, raising=False)
+    # A repository root of its own, so the settings never come from a real .env.
+    (tmp_path / ".git").mkdir()
+    monkeypatch.chdir(tmp_path)
     yield
     spend.use_account(None)
     spend.reset_session()
@@ -254,6 +258,10 @@ class TestAssumedBudget:
         assert Budget(None, 0.0).assuming().budget_usd == 120.0
         assert Budget(300.0, 0.0).assuming().budget_usd == 300.0
 
+    def test_the_env_file_overrides_the_assumption(self, tmp_path):
+        (tmp_path / ".env").write_text(f"{spend.KEY_BUDGET_ENV}=120\n")
+        assert Budget(None, 0.0).assuming().budget_usd == 120.0
+
     def test_a_malformed_variable_is_refused(self, monkeypatch):
         monkeypatch.setenv(spend.KEY_BUDGET_ENV, "lots")
         with pytest.raises(ValueError, match=spend.KEY_BUDGET_ENV):
@@ -321,6 +329,42 @@ class TestDescribe:
             models = choose_models("openai", generation="gpt-9-experimental")
         text = describe(models, source=account_for(None, key=None))
         assert "price unknown" in text
+
+
+class TestHiddenBudget:
+    @pytest.fixture(autouse=True)
+    def hidden(self, monkeypatch):
+        monkeypatch.setenv(spend.SHOW_KEY_BUDGET_ENV, "0")
+
+    def test_the_line_shows_no_figure(self):
+        assert Budget(300.0, 135.44).line() == spend.HIDDEN_BUDGET_LINE
+        assert Budget(None, 135.44).assuming().line() == spend.HIDDEN_BUDGET_LINE
+
+    def test_describe_prints_the_hidden_line_and_does_not_warn(self):
+        with warnings.catch_warnings():
+            warnings.simplefilter("error", BudgetWarning)
+            text = describe(
+                choose_models("onprem"), source=account_for(FakeProxy(spent="250"))
+            )
+        assert text.splitlines()[-1] == spend.HIDDEN_BUDGET_LINE
+        assert "250" not in text
+
+    def test_the_report_leaves_out_proxy_usage_and_the_budget(self):
+        fake = FakeProxy(budget=None, spent="135.44")
+        session = SpendSession(
+            UsageMeter(), source=account_for(fake), table=OFFLINE_PRICES
+        )
+        fake.spent = "135.50"
+        with warnings.catch_warnings():
+            warnings.simplefilter("error", BudgetWarning)
+            text = session.report()
+        assert text.splitlines() == [
+            "this run, estimated   est. $0.00 over 0 models",
+            spend.HIDDEN_BUDGET_LINE,
+        ]
+
+    def test_the_guards_still_read_the_budget(self):
+        assert Budget(300.0, 135.44).left_usd == pytest.approx(164.56)
 
 
 class TestSession:
@@ -391,6 +435,13 @@ class TestSession:
                 0.0,
                 model="Qwen3_8-27B",
             )
+
+    def test_the_ceiling_comes_from_the_env_file(self, tmp_path):
+        (tmp_path / ".env").write_text(f"{spend.SPEND_LIMIT_ENV}=0.05\n")
+        with SpendSession(
+            UsageMeter(), source=account_for(None, key=None), table=OFFLINE_PRICES
+        ) as session:
+            assert session.limit_usd == 0.05
 
     def test_a_malformed_ceiling_is_refused(self, monkeypatch):
         monkeypatch.setenv(spend.SPEND_LIMIT_ENV, "ten dollars")

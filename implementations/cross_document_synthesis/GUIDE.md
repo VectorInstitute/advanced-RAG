@@ -104,7 +104,7 @@ Every model step in notebooks 01 to 04 and 99 goes through `load_or_run`. With
 `RUN_EXPENSIVE = False` it replays the reference built with `Qwen3_6-35B-A3B` and
 prints what a rebuild on your model would cost; with `RUN_EXPENSIVE = True` it
 runs on your model and caches the result. The references hold MuSiQue question
-text and model answers, so they ship as release `reference-ri2-35b43b26a35a`
+text and model answers, so they ship as release `reference-ri2-541935cc8794`
 rather than in the repository. `scripts/setup.sh` installs them on each workspace
 start. To install them yourself, from the repository root:
 

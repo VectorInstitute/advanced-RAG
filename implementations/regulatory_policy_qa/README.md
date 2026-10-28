@@ -39,6 +39,14 @@ On the full CUAD split, SPLADE alone fails on 0.2066 of questions against 0.2436
 BM25 and dense hybrid, with an MRR of 0.5687 against 0.4969. The notebook runs on three slices and
 names the winning lever for each metric.
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="../../docs/assets/ri1-levers-dark.png">
+  <img src="../../docs/assets/ri1-levers-light.png" alt="Dot plot of nine retrieval levers on two contract slices. On CUAD 20, failure at 10 ranges from 0.260 for BM25 to 0.180 for dense plus SPLADE reranked by bge-reranker-v2-m3. On ContractNLI 20, MRR ranges from 0.689 for dense to 0.850 for the same reranked fusion.">
+</picture>
+
+The figure rescores the committed rankings in `outputs/baseline_cache/` on the two 20-contract
+slices. The notebook's table adds each lever's CPU time and index size.
+
 [`03_chunking_variants.ipynb`](03_chunking_variants.ipynb) compares plain, hierarchical,
 header-labelled, and contextual chunks of the ContractNLI test split, scored with retrieval scoped to
 the question's contract and across all 123 contracts. Inside one contract no arm beats plain chunks
@@ -64,6 +72,18 @@ questions over a pinned public-domain federal FOIA source, audits source quotes,
 answer correctness from grounding. It reconstructs the evaluation inputs from shipped artifacts
 and explains RAGAS faithfulness, relevance, and semantic similarity with local embeddings.
 The six answerable examples are a teaching fixture, not a regulatory accuracy benchmark.
+Its live RAGAS cell needs this RI's `evaluation` extra, which the workspace does not install. From
+the repository root, run
+`uv pip install --python .venv/bin/python -e "implementations/regulatory_policy_qa[evaluation]"`
+and restart the kernel. The install also moves a few shared packages to the versions RAGAS pins.
+
+[`07_levers_and_answers_on_your_corpus.ipynb`](07_levers_and_answers_on_your_corpus.ipynb) picks
+up the question set notebook 04 built on your folder. It scores BM25, dense, SPLADE, a hybrid, and
+a reranker against BM25 with paired intervals, then runs single-pass answering with abstention on
+the answerable and null questions and judges correctness and grounding separately. Each live
+answering step prints an estimate first and stops for confirmation when a paid run needs it. With
+the expensive flag off it replays reference results for notebook 04's ten ContractNLI contracts.
+The code is in [`own_corpus.py`](own_corpus.py).
 
 [`99_starter_agent.ipynb`](99_starter_agent.ipynb) adapts the shared ADK `AgentLoop` and
 framework-neutral retrieval tools. Participants can edit the agent factory and supply their own
@@ -129,7 +149,7 @@ and is already built, so nothing waits on the answer.
 - Completion of the technical onboarding / environment check
 
 ## Status
-Notebooks 01 to 06 and 99 cover the participant methods. The remote's notebooks 02 to 04 are
+Notebooks 01 to 07 and 99 cover the participant methods. The remote's notebooks 02 to 04 are
 retained unchanged; the baseline's code and measured outputs are retained too. Added notebooks
 ship with executed outputs and expensive flags off.
 

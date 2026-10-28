@@ -21,8 +21,8 @@ Answers are scored against every accepted alias. Rates below are fractions.
 | --- | --- | ---: | ---: | ---: | ---: |
 | MuSiQue | Dense | 0.2010 | 0.2733 | 0.5060 | 0.1710 |
 | MuSiQue | Decomposition | 0.2060 | 0.2805 | 0.5540 | 0.1880 |
-| MuSiQue | IRCoT | 0.4090 | 0.4854 | 0.6823 | 0.4300 |
-| NaturalQuestions | Dense | 0.5070 | 0.6302 | 0.6824 | 0.3510 |
+| MuSiQue | IRCoT | **0.4090** | **0.4854** | **0.6823** | **0.4300** |
+| NaturalQuestions | Dense | **0.5070** | **0.6302** | **0.6824** | **0.3510** |
 | NaturalQuestions | Decomposition | 0.5010 | 0.6249 | 0.6739 | 0.3440 |
 | NaturalQuestions | IRCoT | 0.4840 | 0.6036 | 0.6812 | 0.3230 |
 
@@ -70,9 +70,16 @@ judge model.
 | --- | ---: | ---: | --- | ---: |
 | Dense | 0.200 | 0.275 | | 1.00 |
 | Decomposition | 0.227 | 0.294 | +0.019 (-0.013 to 0.053) | 2.00 |
-| IRCoT | 0.420 | 0.509 | +0.234 (0.184 to 0.284) | 6.58 |
+| IRCoT | **0.420** | **0.509** | **+0.234 (0.184 to 0.284)** | 6.58 |
 | HippoRAG 2 (atlas-rag) | 0.320 | 0.418 | +0.143 (0.098 to 0.189) | 2.00 |
 | LightRAG (mix) | 0.213 | 0.284 | +0.010 (-0.016 to 0.036) | 2.00 |
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="../../docs/assets/ri2-shared-300-dark.png">
+  <img src="../../docs/assets/ri2-shared-300-light.png" alt="F1 minus dense with 95% paired intervals on the shared 300 MuSiQue questions. IRCoT gains 0.234 and HippoRAG 2 0.143, and both intervals exclude zero. Decomposition gains 0.019 and LightRAG 0.010, and both intervals include zero.">
+</picture>
+
+Pink marks the two methods whose interval excludes zero.
 
 Correction and its two controls ran on these 300 questions directly, in their
 own response-cache namespace; the next section reports them.
@@ -140,7 +147,7 @@ Live execution is explicitly gated.
 
 Default execution needs Python 3.12+, NumPy, `qdrant-client==1.19.1`, a Jupyter kernel,
 and RI #2's reference artifacts, which `scripts/setup.sh` installs from release
-`reference-ri2-35b43b26a35a`. It uses invented examples, committed results, and
+`reference-ri2-541935cc8794`. It uses invented examples, committed results, and
 the release's worked examples, with no credentials or model calls: each model step
 goes through `load_or_run`, which replays the reference while `RUN_EXPENSIVE` is
 `False`. Optional live cells use local pinned BGE embeddings and the Vector

@@ -32,7 +32,9 @@ make a bulk run safe to repeat:
   call that crosses the limit raises once it returns, which stops the batch.
   Before a live batch on a paid model, the estimate is checked against the
   key's budget with :func:`aieng.advanced_rag.runs.confirmation_needed`, as
-  ``load_or_run`` does.
+  ``load_or_run`` does. The estimate counts only the requests the cache cannot
+  answer, so a fully cached batch never asks and a partly cached one is
+  judged on its misses.
 
 Retries cover a rate limit (429), a connection failure, a timeout, and a server
 error (500, 502, 503, 504). Anything else, such as a 400 for a parameter the
@@ -60,7 +62,7 @@ from dataclasses import dataclass, field
 from pathlib import Path
 from typing import TYPE_CHECKING, Any, Literal
 
-from aieng.advanced_rag import metering
+from aieng.advanced_rag import metering, runs
 from aieng.advanced_rag.graphrag.proxy import CallLedger, ResponseCache, request_key
 from aieng.advanced_rag.metering import CallUsage
 from aieng.advanced_rag.models import adapt_request, thinking_body
@@ -556,8 +558,11 @@ class ProxyBatch:
         confirm: bool,
         budget: Budget | None,
     ) -> None:
-        """Stop a live batch whose estimate needs ``confirm=True``."""
-        from aieng.advanced_rag import runs, spend
+        """Stop a live batch whose cache misses need ``confirm=True``.
+
+        Only the misses are priced: a request the cache answers costs nothing.
+        """
+        from aieng.advanced_rag import spend
 
         if confirm or runs.step_checked() or not spend.is_paid(self.model):
             return
@@ -666,10 +671,23 @@ class ProxyBatch:
         kwargs = self._request_kwargs(params)
         self._check_messages(misses[0][2])
         self._confirm(misses, params, confirm, budget)
+        with runs._waive_deferred_stop():
+            return self._send_batch(misses, outcomes, hits, total, kwargs, on_progress)
+
+    def _send_batch(
+        self,
+        misses: list[tuple[int, str, list[dict[str, Any]]]],
+        outcomes: list[BatchOutcome | None],
+        hits: int,
+        total: int,
+        kwargs: dict[str, Any],
+        on_progress: Callable[[int, int], None] | None,
+    ) -> list[BatchOutcome]:
+        """Send the cache misses of a batch that passed its check."""
         metering.before_call(self.model)
         # infermesh calls on_result on its own event-loop thread. Running each
         # settle in the caller's context keeps the reports on the caller's
-        # question meter.
+        # question meter, and inside the waiver the caller holds.
         context = contextvars.copy_context()
 
         def settled(
@@ -720,6 +738,21 @@ class ProxyBatch:
         kwargs = self._request_kwargs(params)
         self._check_messages(misses[0][2])
         self._confirm(misses, params, confirm, budget)
+        with runs._waive_deferred_stop():
+            return await self._asend_batch(
+                misses, outcomes, hits, total, kwargs, on_progress
+            )
+
+    async def _asend_batch(
+        self,
+        misses: list[tuple[int, str, list[dict[str, Any]]]],
+        outcomes: list[BatchOutcome | None],
+        hits: int,
+        total: int,
+        kwargs: dict[str, Any],
+        on_progress: Callable[[int, int], None] | None,
+    ) -> list[BatchOutcome]:
+        """Send the cache misses of a batch that passed its check, async."""
         metering.before_call(self.model)
 
         def settled(

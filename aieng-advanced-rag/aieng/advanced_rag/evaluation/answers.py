@@ -34,6 +34,7 @@ from typing import NamedTuple
 
 from ..graphrag.evidence import Evidence
 from ..graphrag.synthesis import build_prompt
+from ..metering import RunStopped
 
 
 JUDGE_PROMPT = """You are grading one answer produced by a retrieval system.
@@ -371,6 +372,8 @@ def judge_answers(
         for done, prompt in enumerate(prompts, start=1):
             try:
                 replies.append(complete(prompt))
+            except RunStopped:
+                raise
             except Exception as error:  # noqa: BLE001 - one failed call is one missing verdict
                 replies.append(error)
             if on_progress is not None:

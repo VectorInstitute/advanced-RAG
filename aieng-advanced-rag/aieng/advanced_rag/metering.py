@@ -911,6 +911,17 @@ def _run_call_hooks(model: str | None, usage: CallUsage) -> None:
         hook(model, usage)
 
 
+class RunStopped(RuntimeError):  # noqa: N818 - names what happened, as the guards do
+    """A spend guard stopped the run before a model call was sent.
+
+    The base of :class:`aieng.advanced_rag.spend.SpendLimitReached` and
+    :class:`aieng.advanced_rag.runs.ConfirmationRequiredError`. Code that
+    catches each call's errors so one failure does not lose the rest re-raises
+    this one and sends nothing more, because every later call would be refused
+    the same way.
+    """
+
+
 #: A function called before every live model call with the model requested. The
 #: spend guard is one: once a run is past its ceiling it raises
 #: ``spend.SpendLimitReached`` before the request leaves, so calls already queued
@@ -2205,6 +2216,7 @@ __all__ = [
     "UsageMeter",
     "add_call_hook",
     "add_pre_call_hook",
+    "RunStopped",
     "before_call",
     "current_question",
     "default_meter",

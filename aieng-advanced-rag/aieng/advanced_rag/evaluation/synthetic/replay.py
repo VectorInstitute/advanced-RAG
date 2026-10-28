@@ -41,6 +41,8 @@ from aieng.advanced_rag.runs import (
     ReferenceMissingError,
     Step,
     StepResult,
+    _refuse_live_misses,
+    _unguarded,
     confirmation_needed,
     load_or_run,
 )
@@ -174,6 +176,7 @@ def set_step(
     *,
     artifact_type: str = "question-set",
     extra: Mapping[str, JsonValue] | None = None,
+    guarded: bool = False,
 ) -> Step:
     """Return the step that builds one set, keyed on everything that changes it.
 
@@ -192,6 +195,10 @@ def set_step(
         What the step produces.
     extra : mapping or None, optional
         Anything else the compute reads, such as the scoring arms.
+    guarded : bool, optional
+        Every model call the compute makes goes through a guarded client, such
+        as the :func:`~aieng.advanced_rag.evaluation.synthetic.llm.proxy_model`
+        models. See :class:`~aieng.advanced_rag.runs.Step`.
     """
     key_config: dict[str, JsonValue] = {
         "corpus": corpus_digest(documents),
@@ -209,6 +216,7 @@ def set_step(
         config=key_config,
         role="generation",
         reference_model=REFERENCE_ROLES.generator,
+        guarded=guarded,
     )
 
 
@@ -352,7 +360,9 @@ def load_or_build(
         With ``live`` off, when you have no result and no reference applies.
     ConfirmationRequiredError
         With ``live`` on and ``confirm`` false, when the estimate is over 10%
-        of the budget left, or over $1 while the budget is assumed.
+        of the budget left, or over $1 while the budget is assumed: before the
+        build, or for a step marked ``guarded``, at the build's first paid call
+        the response cache cannot answer, which is not sent.
     """
     cache = cache or TieredResultCache()
     yours = _generation_set(models, roles.generator)
@@ -416,14 +426,26 @@ def load_or_build(
         )
     if not live and shown is not None:
         return shown
-    if dollars and not confirm:
-        reason = confirmation_needed(dollars, spend.read_budget())
-        if reason is not None:
-            raise ConfirmationRequiredError(reason)
+    reason = (
+        confirmation_needed(dollars, spend.read_budget())
+        if dollars and not confirm
+        else None
+    )
+    if reason is not None and not step.guarded:
+        raise ConfirmationRequiredError(_unguarded(reason))
+    if reason is not None and show:
+        print(
+            pad + "over the confirmation threshold: running on cached responses "
+            "and stopping before the first paid call the cache cannot answer"
+        )
     # The estimate is printed and the budget checked above, so load_or_run's
-    # own line, which finds no reference under your key, is left out.
+    # own line, which finds no reference under your key, is left out. A build
+    # over the threshold runs only as far as the response cache answers it.
     captured = io.StringIO()
-    with contextlib.redirect_stdout(captured):
+    with (
+        contextlib.redirect_stdout(captured),
+        _refuse_live_misses(reason) if reason else contextlib.nullcontext(),
+    ):
         result = load_or_run(
             step,
             compute,

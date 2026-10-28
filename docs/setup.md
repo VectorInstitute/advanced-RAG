@@ -15,9 +15,8 @@ root on every start. By the time you connect, that script has:
   `tests/test_integration.py`, which records you as onboarded when it passes.
 - Fetched the core corpora and the `BAAI/bge-small-en-v1.5` embedding model, each checked against
   its pinned SHA-256.
-- Looked for reference-artifact manifests, as
-  [Install the reference artifacts](#install-the-reference-artifacts) describes, and skipped the
-  step because none exist.
+- Installed the reference artifacts every manifest names, as
+  [Install the reference artifacts](#install-the-reference-artifacts) describes.
 - Started Jupyter Lab on port 8888 in the background.
 
 The first start installs about 2.6 GB of packages and downloads about 165 MB of data. A later start takes seconds, because each step finds its

@@ -60,6 +60,7 @@ MODELS = choose_models("anthropic", judging="claude-opus-5-5", show=True)
 | `ADVANCED_RAG_EXTRACTION_MODEL` | Overrides the extraction model. |
 | `ADVANCED_RAG_SPEND_LIMIT_USD` | Stops a run once its estimate passes this many dollars. Unset means no limit beyond the key's budget. |
 | `ADVANCED_RAG_KEY_BUDGET_USD` | The budget, in US dollars, the spend guards assume when your key reports none. Default 300. Ignored when the key reports a budget. |
+| `ADVANCED_RAG_SHOW_KEY_BUDGET` | `0` hides the key's budget, lifetime spend, and per-run proxy usage in printed output, and the budget warnings. The budget line reads `key budget: not shown in the committed output`. The committed notebook outputs use it, so the figures you see in them are not your key's. The guards still apply. |
 
 An argument wins over a variable, and a variable wins over the family default. A model name
 outside the default sets works if the proxy grants it to your key; you get a warning, and its
@@ -91,13 +92,25 @@ graph   reference artifact, built with Qwen3_8-27B on Vector's cluster at $0
 With `RUN_EXPENSIVE = True` and no result of yours, the step prints the estimate, runs on your
 model, and stores the result in your local cache, so the next run reads it back at no cost. A
 step whose estimate is more than 10% of the budget left on the key stops until you pass
-`confirm=True`.
+`confirm=True`. A step with no reference build to scale, such as a question set built on your own
+documents, prints `no estimate` and runs without that check, so set `ADVANCED_RAG_SPEND_LIMIT_USD`
+before you run it.
 
 If your key reports no budget, the guard assumes $300 and the cell prints a line that says so, for
 example `key budget not set on the key; assuming $300.00 (set ADVANCED_RAG_KEY_BUDGET_USD to
 override), spent $12.40, left $287.60`. While the budget is assumed, any step estimated at more
 than $1 also stops until you pass `confirm=True`. Cached and reference results never stop, so a
 notebook with `RUN_EXPENSIVE = False` runs through without a prompt.
+
+The estimate comes from the reference build, before the step runs, so it can't see which calls the
+response cache already holds. A step whose every model call goes through the package's guarded
+clients (`govern`, `async_llm`, a metered client, `ProxyBatch`, or the ADK `GovernedLlmClient`) can
+be marked `Step(guarded=True)`. Over the threshold, a guarded step runs as far as the cache answers
+it and stops before its first paid call that misses, without sending that call. A guarded step
+whose every call is cached, such as a re-run with `RUN_EXPENSIVE = True`, finishes at no cost and
+needs no `confirm=True`. A batch of calls inside the step prices only its cache misses, so a partly
+cached batch runs when its misses are under the threshold. A step that isn't marked guarded stops
+before it runs.
 
 Later steps run on your model over whichever result came back. On each family's default
 models, answering questions over the reference graph costs cents. Rebuilding the graph costs about
@@ -238,9 +251,10 @@ When the key reports no budget, the warnings use the assumed $300, or
   published because of their corpus licence; see
   [Where the reference results come from](#where-the-reference-results-come-from).
 - A cell raises `ConfirmationRequiredError`: the step would spend more than 10% of what is left on the
-  key, or more than $1 while the key reports no budget. Read the estimate, then pass `confirm=True`
-  if you want the run. If your key has a budget the proxy does not report, set
-  `ADVANCED_RAG_KEY_BUDGET_USD` to it.
+  key, or more than $1 while the key reports no budget. A guarded step raises it at the first paid
+  call the response cache can't answer, and that call is not sent. Read the estimate, then pass
+  `confirm=True` with `live=True` (the notebook's `RUN_EXPENSIVE`) if you want the run. If your
+  key has a budget the proxy does not report, set `ADVANCED_RAG_KEY_BUDGET_USD` to it.
 - A cell raises `SpendLimitReached`: the run passed `ADVANCED_RAG_SPEND_LIMIT_USD`. The call that
   passed it was sent and billed; every later call is refused before it is sent. Raise or unset the
   limit to continue.

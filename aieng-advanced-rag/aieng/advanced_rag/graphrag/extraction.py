@@ -31,6 +31,7 @@ from __future__ import annotations
 
 import json
 import re
+import threading
 from collections import Counter
 from collections.abc import Callable, Iterable, Mapping, Sequence
 from concurrent.futures import ThreadPoolExecutor
@@ -38,6 +39,7 @@ from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any
 
+from aieng.advanced_rag.metering import RunStopped
 from aieng.advanced_rag.provenance import Provenance
 
 
@@ -828,9 +830,16 @@ def build_graph(
         )
         return f"{SYSTEM}\n\n{prompt}"
 
+    stopped = threading.Event()
+
     def call(job: tuple[str, str, list[Block]]) -> dict[str, Any] | None:
+        if stopped.is_set():
+            return None
         try:
             return parse_json_object(complete(prompt_for(job))) or None
+        except RunStopped:
+            stopped.set()
+            raise
         except Exception:  # noqa: BLE001 - any failure is one failed window, counted below
             return None
 

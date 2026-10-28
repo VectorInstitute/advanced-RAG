@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 148 60" width="148" height="60" role="img" aria-labelledby="t2">
+<title id="t2">RI #2 combines dense retrieval, an agent loop, and a graph index</title>
+<defs>
+<clipPath id="k21"><circle cx="74" cy="30" r="27"/></clipPath>
+<clipPath id="k22"><circle cx="119" cy="30" r="27"/></clipPath>
+</defs>
+<circle cx="29" cy="30" r="27" fill="#0F6E82"/>
+<circle cx="74" cy="30" r="27" fill="#C40072"/>
+<circle cx="119" cy="30" r="27" fill="#8A25C9"/>
+<circle cx="29" cy="30" r="27" fill="#000" fill-opacity=".38" clip-path="url(#k21)"/>
+<circle cx="74" cy="30" r="27" fill="#000" fill-opacity=".38" clip-path="url(#k22)"/>
+<g fill="#fff" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI','Open Sans',Helvetica,Arial,sans-serif" font-size="11" font-weight="600" text-anchor="middle">
+<text x="29" y="33.9">Dense</text>
+<text x="74" y="33.9">Agent</text>
+<text x="119" y="33.9">Graph</text>
+</g></svg>

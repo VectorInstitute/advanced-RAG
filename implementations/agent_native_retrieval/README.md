@@ -11,7 +11,7 @@ against BM25 at scale, and the coding agents that dropped their vector index) an
 measurement here. Every number in this directory is labelled with the model that produced it.
 
 Status: the tool server, the arms `C0`, `C5`, `C7`, and `grep-iterative`, and notebooks 01, 02,
-03, and 99 are built. Arms `C1` to `C4` and `C6` are planned.
+03, and 99 are built.
 
 ## Results on the shared 300
 
@@ -32,9 +32,9 @@ On `gemini-3.5-flash-lite`, the agents and the fixed pipelines move in opposite 
 | `hipporag2` | RI #4 | `Qwen3_6-35B-A3B` | 0.390 | 0.297 | 0.377 | 1.97 | 2,421 | - |
 | `hipporag2` | RI #4 | `gemini-3.5-flash-lite` | 0.265 | 0.207 | 0.273 | 1.91 | 2,227 | - |
 | `C0` | RI #5 | `Qwen3_6-35B-A3B` | 0.505 | 0.393 | 0.573 | 8.67 | 77,956 | 12% |
-| `C0` | RI #5 | `gemini-3.5-flash-lite` | 0.567 | 0.443 | 0.593 | 6.51 | 27,919 | 1% |
-| `C5` | RI #5 | `Qwen3_6-35B-A3B` | 0.551 | 0.450 | 0.600 | 12.80 | 47,619 | 12% |
-| `C5` | RI #5 | `gemini-3.5-flash-lite` | 0.567 | 0.453 | 0.573 | 10.50 | 31,779 | 1% |
+| `C0` | RI #5 | `gemini-3.5-flash-lite` | **0.567** | 0.443 | 0.593 | 6.51 | 27,919 | 1% |
+| `C5` | RI #5 | `Qwen3_6-35B-A3B` | 0.551 | 0.450 | **0.600** | 12.80 | 47,619 | 12% |
+| `C5` | RI #5 | `gemini-3.5-flash-lite` | **0.567** | 0.453 | 0.573 | 10.50 | 31,779 | 1% |
 | `grep-iterative` | RI #5 | `Qwen3_6-35B-A3B` | 0.240 | 0.183 | 0.247 | 4.66 | 2,172 | 0% |
 | `grep-iterative` | RI #5 | `gemini-3.5-flash-lite` | 0.230 | 0.197 | 0.233 | 4.72 | 2,029 | 0% |
 
@@ -76,10 +76,10 @@ four-hop question's later passages below its top 5, which these runs do not test
 
 | Arm | Passages | F1 on Qwen | F1 on Gemini | EM | Judged | Four-hop F1 | Calls per question | Tokens per question | Exhausted |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| `C0` | 11,656 | 0.517 | 0.564 | 0.475 | 0.583 | 0.541 | 6.47 | 22,551 | 0% |
+| `C0` | 11,656 | 0.517 | **0.564** | 0.475 | 0.583 | 0.541 | 6.47 | 22,551 | 0% |
 | `C0` | 139,416 | 0.469 | 0.534 | 0.442 | 0.542 | 0.524 | 7.37 | 31,355 | 1% |
 | `C5` | 11,656 | 0.553 | 0.555 | 0.467 | 0.583 | 0.542 | 11.15 | 34,964 | 1% |
-| `C5` | 139,416 | 0.556 | 0.549 | 0.467 | 0.558 | 0.619 | 12.62 | 41,496 | 4% |
+| `C5` | 139,416 | 0.556 | 0.549 | 0.467 | 0.558 | **0.619** | 12.62 | 41,496 | 4% |
 | `C7` | 11,656 | 0.559 | 0.555 | 0.467 | 0.567 | 0.529 | 10.13 | 87,552 | 1% |
 | `C7` | 139,416 | 0.513 | 0.483 | 0.400 | 0.475 | 0.430 | 11.57 | 129,697 | 8% |
 
@@ -90,6 +90,11 @@ These are single runs with no repeats on one answering model and one question se
 hold the runs, and notebook 03 prints the table. The `C0` and `C5` runs at 11,656 passages are the
 shared-300 runs above, read back from the per-question cache; the ladder and the four-hop run cost
 about $6.
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="../../docs/assets/ri5-scale-ladder-dark.png">
+  <img src="../../docs/assets/ri5-scale-ladder-light.png" alt="Slope charts of F1 on gemini-3.5-flash-lite from 11,656 to 139,416 passages. On all 120 ladder questions, C0 falls from 0.564 to 0.534, C5 from 0.555 to 0.549, and C7 from 0.555 to 0.483. On the 40 four-hop questions, C5 rises from 0.542 to 0.619, C0 falls from 0.541 to 0.524, and C7 falls from 0.529 to 0.430.">
+</picture>
 
 ### Follow-ups on the default model
 
@@ -147,17 +152,12 @@ Each arm is a configuration of one tool server and one agent loop, so switching 
 configuration only. The agent loop allows 30 model calls per question; a run that reaches the cap
 answers from what it has read and is counted as exhausted.
 
-| Arm | Tools | Built |
-| --- | --- | --- |
-| `C0` | `search` with k fixed at 5 and 512-token previews | Yes |
-| `C1` | `C0` plus `get_document` | No |
-| `C2` | `search` with agent-set k and preview length, plus `get_document` | No |
-| `C3` | `C2` plus paging, the one control with a documented failure | No |
-| `C4` | `C2` plus `expand` and `open` | No |
-| `C5` | `grep` and `open` only | Yes |
-| `C6` | `C4` plus `grep`, and `read_section` on FinanceBench | No |
-| `C7` | `search` at k 20, then `grep` inside what search returned, then `open` | Yes |
-| `grep-iterative` | RI #4's `dense-iterative` pipeline with `grep` in place of dense retrieval; the model decomposes the question and names each bridge, and does not choose tools | Yes |
+| Arm | Tools |
+| --- | --- |
+| `C0` | `search` with k fixed at 5 and 512-token previews |
+| `C5` | `grep` and `open` only |
+| `C7` | `search` at k 20, then `grep` inside what search returned, then `open` |
+| `grep-iterative` | RI #4's `dense-iterative` pipeline with `grep` in place of dense retrieval; the model decomposes the question and names each bridge, and does not choose tools |
 
 The four guards are switches on every arm: a 4,000-token cap on tool output with a hint naming
 where to continue, a "narrow the query" reply when a grep matches more than 200 documents, an

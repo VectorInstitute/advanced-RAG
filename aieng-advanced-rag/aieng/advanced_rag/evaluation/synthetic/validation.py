@@ -209,10 +209,22 @@ def queries_for(generated: SyntheticSet, *, corpus_wide: bool = False) -> list[Q
         Scope every query to :data:`CORPUS_SCOPE`, to match arms built with
         ``corpus_wide``. Otherwise each query keeps its own document.
     """
-    queries = [q.to_query() for q in generated.answerable]
     if corpus_wide:
-        queries = [replace(q, doc_id=CORPUS_SCOPE) for q in queries]
-    return queries
+        # A corpus-scoped question carries a gold span in every document that
+        # holds its quote, and regulations and contracts repeat boilerplate, so
+        # it may name several documents. to_query refuses that, and the corpus-
+        # wide arms need no single document: the qrels map every span.
+        return [
+            Query(
+                query_id=q.query_id,
+                doc_id=CORPUS_SCOPE,
+                category=q.category,
+                question=q.question,
+                answers=q.answer_spans(),
+            )
+            for q in generated.answerable
+        ]
+    return [q.to_query() for q in generated.answerable]
 
 
 def metric_name(name: str, k: int) -> str:

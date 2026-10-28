@@ -22,7 +22,7 @@ All-supporting recall is the share of questions whose top-k passages contain eve
 |---|---|---|---|---|
 | `dense` | 0.163 | 0.237 | 0.193 | 0.250 |
 | `dense-iterative` | 0.197 | 0.233 | 0.220 | 0.297 |
-| `hipporag2` | 0.320 | 0.390 | 0.297 | 0.390 |
+| `hipporag2` | **0.320** | **0.390** | **0.297** | **0.390** |
 | `lightrag` | 0.130 | 0.213 | 0.187 | 0.253 |
 | `hybrid` | 0.193 | 0.260 | 0.220 | 0.281 |
 
@@ -32,11 +32,16 @@ By hop count, F1 is:
 |---|---|---|---|
 | `dense` | 0.323 | 0.165 | 0.188 |
 | `dense-iterative` | 0.380 | 0.244 | 0.183 |
-| `hipporag2` | 0.491 | 0.374 | 0.204 |
+| `hipporag2` | **0.491** | **0.374** | **0.204** |
 | `lightrag` | 0.321 | 0.165 | 0.203 |
 | `hybrid` | 0.380 | 0.176 | 0.190 |
 
 All-supporting recall at 10 by hop count is 0.387, 0.173, and 0.000 for `dense`, and 0.613, 0.307, and 0.027 for `hipporag2`. No arm retrieves all four passages for more than two of the 75 four-hop questions.
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="../../docs/assets/ri4-graph-vs-dense-dark.png">
+  <img src="../../docs/assets/ri4-graph-vs-dense-light.png" alt="Two line charts by hop count for five arms. All-supporting recall at 10 falls from 0.613 at two hops to 0.027 at four hops for hipporag2, and from 0.387 to 0.000 for dense. F1 falls from 0.491 to 0.204 for hipporag2 and from 0.323 to 0.188 for dense. dense-iterative, hybrid, and lightrag stay below hipporag2 at two and three hops.">
+</picture>
 
 ### Which differences are more than noise
 

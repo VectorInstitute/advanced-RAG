@@ -240,6 +240,35 @@ def resolve_base_url(env_path: Path | None = None, *, start: Path | None = None)
     return (value or PROXY_BASE_URL).rstrip("/")
 
 
+def resolve_setting(
+    name: str, env_path: Path | None = None, *, start: Path | None = None
+) -> str:
+    """Return a package setting from the environment, falling back to ``.env``.
+
+    The ``ADVANCED_RAG_*`` variables that pick models and cap spend are read
+    this way, so a value in the repository ``.env`` applies to scripts and to
+    notebook kernels, which do not load that file into their environment.
+    An exported value always wins.
+
+    Parameters
+    ----------
+    name : str
+        The variable, such as ``ADVANCED_RAG_MODEL_FAMILY``.
+    env_path : Path or None, optional
+        A ``.env`` file to read when the environment does not set ``name``.
+        ``None`` looks for one with :func:`find_env_file`.
+    start : Path or None, optional
+        Where :func:`find_env_file` begins when ``env_path`` is None.
+
+    Returns
+    -------
+    str
+        The value, stripped, or ``""`` when neither source sets it.
+    """
+    value = _lookup((name,), env_path, start)
+    return value or ""
+
+
 __all__ = [
     "BASE_URL_NAME",
     "KEY_NAMES",
@@ -251,4 +280,5 @@ __all__ = [
     "read_env_file",
     "resolve_api_key",
     "resolve_base_url",
+    "resolve_setting",
 ]

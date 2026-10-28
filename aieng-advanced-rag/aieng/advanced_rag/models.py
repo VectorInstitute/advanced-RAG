@@ -48,12 +48,13 @@ library records what this proxy accepts.
 
 from __future__ import annotations
 
-import os
 import re
 import warnings
 from collections.abc import Iterator, Mapping
 from dataclasses import dataclass, replace
 from typing import Any, Literal, cast
+
+from aieng.advanced_rag.proxy import resolve_setting
 
 
 Family = Literal["anthropic", "google", "openai", "onprem"]
@@ -708,7 +709,7 @@ def _known_models() -> set[str]:
 
 
 def _resolve_family(family: str | None) -> Family:
-    value = family if family is not None else os.environ.get(FAMILY_ENV, "").strip()
+    value = family if family is not None else resolve_setting(FAMILY_ENV)
     value = (value or DEFAULT_FAMILY).lower()
     if value not in FAMILIES:
         raise ValueError(
@@ -730,6 +731,8 @@ def choose_models(
     Each role resolves in this order: the argument, then the role's variable
     (:data:`ROLE_ENV`), then the family's default. The family resolves from the
     argument, then ``ADVANCED_RAG_MODEL_FAMILY``, then :data:`DEFAULT_FAMILY`.
+    Each variable is read from the environment first and the repository
+    ``.env`` second, as :func:`aieng.advanced_rag.proxy.resolve_setting` does.
 
     A model outside every default set is accepted with an
     :class:`UnlistedModelWarning`, so you can try any model the proxy grants
@@ -774,7 +777,7 @@ def choose_models(
     choices: dict[Role, ModelChoice] = {}
     for role in ROLES:
         argument = overrides[role]
-        variable = os.environ.get(ROLE_ENV[role], "").strip()
+        variable = resolve_setting(ROLE_ENV[role])
         if argument:
             model, source = argument.strip(), "argument"
         elif variable:

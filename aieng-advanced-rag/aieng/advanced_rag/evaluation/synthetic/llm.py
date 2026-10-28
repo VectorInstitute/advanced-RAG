@@ -238,6 +238,15 @@ def proxy_model(
         params: dict[str, Any] = {"temperature": temperature, "max_tokens": max_tokens}
     else:
         params = request_params(name, max_tokens=max_tokens, temperature=temperature)
+        # request_params puts an OpenAI model's thinking switch at the top level,
+        # which suits the openai client. This path goes through LiteLLM, which
+        # refuses a top-level reasoning_effort for a model it does not list, such
+        # as gpt-6-luna (UnsupportedParamsError before any request). In the body
+        # the same field reaches the proxy.
+        if "reasoning_effort" in params:
+            body = dict(params.get("extra_body") or {})
+            body["reasoning_effort"] = params.pop("reasoning_effort")
+            params["extra_body"] = body
 
     def complete(system: str, prompt: str) -> str:
         outcome = batch.create(prompt, system=system, **params)

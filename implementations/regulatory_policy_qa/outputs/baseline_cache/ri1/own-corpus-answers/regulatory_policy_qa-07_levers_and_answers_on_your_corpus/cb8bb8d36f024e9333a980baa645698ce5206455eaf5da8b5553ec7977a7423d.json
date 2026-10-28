@@ -1,0 +1,358 @@
+{
+  "schema_version": 1,
+  "cache_key": "cb8bb8d36f024e9333a980baa645698ce5206455eaf5da8b5553ec7977a7423d",
+  "ri_id": "ri1",
+  "artifact_type": "own-corpus-answers",
+  "producer_id": "regulatory_policy_qa/07_levers_and_answers_on_your_corpus",
+  "config": {
+    "evidence_budget": 5,
+    "generation": "Qwen3_6-35B-A3B",
+    "grader": "heuristic",
+    "judging": "Qwen3_6-35B-A3B",
+    "policy": "single-shot",
+    "retriever": "bm25",
+    "set": "6204e405bea40daafb56160a27e6e1900271102d5003e9e449da143897a2c784",
+    "top_k": 10
+  },
+  "created_at": "2026-10-28T12:40:31.573168+00:00",
+  "value": {
+    "retriever": "bm25",
+    "models": {
+      "generation": "Qwen3_6-35B-A3B",
+      "judging": "Qwen3_6-35B-A3B"
+    },
+    "questions": 34,
+    "answerable": 27,
+    "null": 7,
+    "null_detection": {
+      "null_queries": 7,
+      "answerable_queries": 27,
+      "abstain_precision": 1.0,
+      "abstain_recall": 0.5714,
+      "false_answer_rate": 0.4286
+    },
+    "answerable_abstained": 0,
+    "judged": 27,
+    "correct": 25,
+    "grounded": 27,
+    "balanced_decision_accuracy": 0.7857,
+    "calls": {
+      "generation": {
+        "model": "Qwen3_6-35B-A3B",
+        "calls": 34
+      },
+      "judging": {
+        "model": "Qwen3_6-35B-A3B",
+        "calls": 27
+      }
+    },
+    "rows": [
+      {
+        "query_id": "sq-039f063041f1",
+        "kind": "single_hop",
+        "question": "Which paragraph's requirements must be satisfied before any legally compelled disclosure of Confidential Information is made?",
+        "answer": "The requirements of paragraph 6 must be satisfied before any legally compelled disclosure of Confidential Information is made.",
+        "abstained": false,
+        "correct": true,
+        "grounded": true
+      },
+      {
+        "query_id": "sq-377ecd5b3d0b",
+        "kind": "single_hop",
+        "question": "Do I need to send the original signed copies of the acknowledgements to the other party?",
+        "answer": "No, the Recipient shall provide the original signed copies of all of the Acknowledgements to the Discloser, not to the other party (Recipient).",
+        "abstained": false,
+        "correct": false,
+        "grounded": true
+      },
+      {
+        "query_id": "sq-07587f92d86f",
+        "kind": "single_hop",
+        "question": "What are the Recipient's immediate obligations upon discovering that Confidential Information has been disclosed to an unauthorized party?",
+        "answer": "The Recipient must notify the Discloser immediately upon discovery and cooperate with efforts by the Discloser to help regain possession of the Confidential Information and prevent its further unauthorized use.",
+        "abstained": false,
+        "correct": true,
+        "grounded": true
+      },
+      {
+        "query_id": "sq-1a130e9646f7",
+        "kind": "single_hop",
+        "question": "To whom does the Discloser have no liability for the use of Confidential Information?",
+        "answer": "The Recipient or the Representatives",
+        "abstained": false,
+        "correct": true,
+        "grounded": true
+      },
+      {
+        "query_id": "sq-9c21438e6f43",
+        "kind": "single_hop",
+        "question": "Does the definition of Confidential Information explicitly include software source and object code?",
+        "answer": "Yes, the definition of Confidential Information explicitly includes software source and object code.",
+        "abstained": false,
+        "correct": true,
+        "grounded": true
+      },
+      {
+        "query_id": "sq-797c0dc16b7e",
+        "kind": "single_hop",
+        "question": "If there's a dispute, do I have to go to court in Virginia?",
+        "answer": "Yes, all actions involving this Agreement shall be brought in the state or federal courts located in the Commonwealth of Virginia.",
+        "abstained": false,
+        "correct": true,
+        "grounded": true
+      },
+      {
+        "query_id": "sq-7f907f5c3fad",
+        "kind": "single_hop",
+        "question": "What specific costs is the Receiver obligated to reimburse VIDAR for if VIDAR has to enforce the Receiver's obligations?",
+        "answer": "all costs and expenses, including attorney’s fees",
+        "abstained": false,
+        "correct": true,
+        "grounded": true
+      },
+      {
+        "query_id": "sq-8465dc21d4c6",
+        "kind": "single_hop",
+        "question": "perpetual term",
+        "answer": "The agreement shall remain in force in perpetuity.",
+        "abstained": false,
+        "correct": true,
+        "grounded": true
+      },
+      {
+        "query_id": "sq-b8d54f439f70",
+        "kind": "single_hop",
+        "question": "What is the required amount for the good faith deposit if I proceed with the purchase, and is there a minimum threshold?",
+        "answer": "The required amount for the good faith deposit is 5% of the purchase price, subject to a minimum threshold of £5,000.",
+        "abstained": false,
+        "correct": true,
+        "grounded": true
+      },
+      {
+        "query_id": "sq-c28d3874a145",
+        "kind": "single_hop",
+        "question": "If I withdraw after the Heads of Terms are issued, do I have to pay an agent's fee?",
+        "answer": "Yes, if you withdraw for any reason once Heads of Terms or Memorandum of Sale has been prepared and issued, you will be charged an Agent's Fee of £695.00 plus VAT.",
+        "abstained": false,
+        "correct": true,
+        "grounded": true
+      },
+      {
+        "query_id": "sq-a04aab4f9a35",
+        "kind": "single_hop",
+        "question": "What is the required notice period for termination?",
+        "answer": "30 days prior written notice",
+        "abstained": false,
+        "correct": true,
+        "grounded": true
+      },
+      {
+        "query_id": "sq-e5de18958dc1",
+        "kind": "single_hop",
+        "question": "Under which state's laws is this agreement governed and construed?",
+        "answer": "State of Michigan",
+        "abstained": false,
+        "correct": true,
+        "grounded": true
+      },
+      {
+        "query_id": "sq-ab7344ebe739",
+        "kind": "single_hop",
+        "question": "Which specific sections of the agreement are expressly designated to survive termination?",
+        "answer": "Sections 1, 2, 3, 4, 5, 6, 17, 18, 19 and any sections (or parts thereof) which, by their nature, are intended to survive termination.",
+        "abstained": false,
+        "correct": true,
+        "grounded": true
+      },
+      {
+        "query_id": "sq-6258a1762d95",
+        "kind": "single_hop",
+        "question": "degree of care required for confidential information",
+        "answer": "The Receiving Party must keep the Confidential Information secret and confidential, using at least the same degree of care as it uses to protect its own confidential information, but no less than a reasonable degree of care.",
+        "abstained": false,
+        "correct": true,
+        "grounded": true
+      },
+      {
+        "query_id": "sq-616bebf7aa1d",
+        "kind": "single_hop",
+        "question": "Under what specific condition is the Receiving Party permitted to use or exploit the Confidential Information?",
+        "answer": "The Receiving Party is permitted to use or exploit the Confidential Information only for the Purpose.",
+        "abstained": false,
+        "correct": true,
+        "grounded": true
+      },
+      {
+        "query_id": "sq-c88032addca5",
+        "kind": "single_hop",
+        "question": "Which laws govern this agreement?",
+        "answer": "The laws of England and Wales govern this agreement.",
+        "abstained": false,
+        "correct": true,
+        "grounded": true
+      },
+      {
+        "query_id": "sq-94d5bffe2b0f",
+        "kind": "single_hop",
+        "question": "Which courts have exclusive jurisdiction over disputes arising from this Agreement?",
+        "answer": "The courts of England and Wales have exclusive jurisdiction to settle any dispute or claim arising out of or in connection with this Agreement or its subject matter or formation.",
+        "abstained": false,
+        "correct": true,
+        "grounded": true
+      },
+      {
+        "query_id": "sq-1f6d26aea135",
+        "kind": "single_hop",
+        "question": "Who are the two entities identified as the Parties to this NDA?",
+        "answer": "The Ministry of Defence of the Kingdom of Norway and Gripen International AB",
+        "abstained": false,
+        "correct": true,
+        "grounded": true
+      },
+      {
+        "query_id": "sq-02856e0fc4d6",
+        "kind": "single_hop",
+        "question": "Which entity is bound by the NDA terms as if it were a Party upon disclosure of information to GI?",
+        "answer": "Saab",
+        "abstained": false,
+        "correct": true,
+        "grounded": true
+      },
+      {
+        "query_id": "sq-9e4aea8c528e",
+        "kind": "single_hop",
+        "question": "How long is the NDA valid for?",
+        "answer": "The NDA is valid for a period of two years from the date of signatures, unless otherwise agreed in writing between the parties.",
+        "abstained": false,
+        "correct": true,
+        "grounded": true
+      },
+      {
+        "query_id": "sq-066da091b8d8",
+        "kind": "single_hop",
+        "question": "For how long do the confidentiality obligations and restrictions remain in effect after the NDA expires or is terminated?",
+        "answer": "five years",
+        "abstained": false,
+        "correct": true,
+        "grounded": true
+      },
+      {
+        "query_id": "sq-969a57aa1549",
+        "kind": "single_hop",
+        "question": "Under what circumstances is the Recipient permitted to use the Confidential Information for purposes other than the defined Purpose?",
+        "answer": "The Recipient is permitted to use the Confidential Information for purposes other than the defined Purpose under two circumstances: 1) if the Recipient first obtains the written agreement of the Discloser; and 2) if the disclosure is required by law or by any competent authority.",
+        "abstained": false,
+        "correct": false,
+        "grounded": true
+      },
+      {
+        "query_id": "sq-c884391310cf",
+        "kind": "single_hop",
+        "question": "public domain exception breach condition",
+        "answer": "The public domain exception does not apply if the information enters the public domain as a result of a breach of the Agreement.",
+        "abstained": false,
+        "correct": true,
+        "grounded": true
+      },
+      {
+        "query_id": "sq-3040887f442a",
+        "kind": "single_hop",
+        "question": "Who must return Confidential Information on request",
+        "answer": "The Recipient",
+        "abstained": false,
+        "correct": true,
+        "grounded": true
+      },
+      {
+        "query_id": "sq-35ee25cab6d5",
+        "kind": "single_hop",
+        "question": "How long do the obligations in clauses 2 and 3 last?",
+        "answer": "The obligations in clauses 2 and 3 will continue in force indefinitely.",
+        "abstained": false,
+        "correct": true,
+        "grounded": true
+      },
+      {
+        "query_id": "sq-33fa2964b120",
+        "kind": "single_hop",
+        "question": "What forms of disclosure are covered by the Recipient's non-disclosure obligation?",
+        "answer": "The Recipient's non-disclosure obligation covers Confidential Information as identified and reduced in writing, provided verbally, or in any other way not reduced in writing at the time of such disclosure. This includes information relating to security set-up, security architecture, lay-out, security processes and procedures, designs, drawings, software and hardware configuration, computer programs, algorithms, services, and customers.",
+        "abstained": false,
+        "correct": true,
+        "grounded": true
+      },
+      {
+        "query_id": "sq-3f7b3f4671a6",
+        "kind": "single_hop",
+        "question": "Who is permitted to conduct the audit if the Discloser suspects a violation?",
+        "answer": "The Discloser is permitted to carry out the audit by itself or by an authorized representative.",
+        "abstained": false,
+        "correct": true,
+        "grounded": true
+      },
+      {
+        "query_id": "sq-6d53b2b15910",
+        "kind": "near_miss_null",
+        "question": "How long do the obligations in clauses 4 and 5 last?",
+        "answer": "The undertakings in clauses 2 and 3 will continue in force indefinitely. Clauses 4 and 5 define exceptions to these undertakings and permissions for disclosure, respectively, but do not specify a separate duration for their own obligations; rather, they operate within the context of the indefinite obligations in clauses 2 and 3.",
+        "abstained": false,
+        "correct": null,
+        "grounded": null
+      },
+      {
+        "query_id": "sq-501e2f0f4169",
+        "kind": "near_miss_null",
+        "question": "Who is permitted to conduct the audit if the Recipient suspects a violation?",
+        "answer": "The Discloser is permitted to conduct the audit by itself or by an authorized representative.",
+        "abstained": false,
+        "correct": null,
+        "grounded": null
+      },
+      {
+        "query_id": "sq-61fff3bc0c3b",
+        "kind": "near_miss_null",
+        "question": "Do I need to send the original signed copies of the acknowledgements to a third-party auditor?",
+        "answer": "Not stated in the provided sources.",
+        "abstained": true,
+        "correct": null,
+        "grounded": null
+      },
+      {
+        "query_id": "sq-43ded0fa0499",
+        "kind": "near_miss_null",
+        "question": "For how long do the confidentiality obligations and restrictions remain in effect after the NDA expires or is terminated if the information is a trade secret?",
+        "answer": "five years",
+        "abstained": false,
+        "correct": null,
+        "grounded": null
+      },
+      {
+        "query_id": "sq-4f1279664f00",
+        "kind": "held_out_null",
+        "question": "Which specific Belgian law is cited regarding the supervision of the financial sector and insider dealing?",
+        "answer": "Not stated in the provided sources.",
+        "abstained": true,
+        "correct": null,
+        "grounded": null
+      },
+      {
+        "query_id": "sq-73add54b801e",
+        "kind": "held_out_null",
+        "question": "Which specific list of entities does the Receiving Party prohibit exporting technical data to?",
+        "answer": "Not stated in the provided sources.",
+        "abstained": true,
+        "correct": null,
+        "grounded": null
+      },
+      {
+        "query_id": "sq-b77a57893f5a",
+        "kind": "held_out_null",
+        "question": "Does the agreement count information from the Province's SAP Service Provider or its affiliates as confidential information?",
+        "answer": "Not stated in the provided sources.",
+        "abstained": true,
+        "correct": null,
+        "grounded": null
+      }
+    ]
+  }
+}

@@ -31,10 +31,13 @@ from aieng.advanced_rag.reasoning import THINKING_OFF, disable_thinking
 
 
 @pytest.fixture(autouse=True)
-def clean_environment(monkeypatch):
+def clean_environment(monkeypatch, tmp_path):
     monkeypatch.delenv(FAMILY_ENV, raising=False)
     for name in ROLE_ENV.values():
         monkeypatch.delenv(name, raising=False)
+    # A repository root of its own, so the settings never come from a real .env.
+    (tmp_path / ".git").mkdir()
+    monkeypatch.chdir(tmp_path)
 
 
 class TestTheDefaultTable:
@@ -128,6 +131,23 @@ class TestChooseModels:
     def test_an_argument_beats_the_environment(self, monkeypatch):
         monkeypatch.setenv(FAMILY_ENV, "openai")
         assert choose_models("onprem").family == "onprem"
+
+    def test_the_repository_env_file_picks_the_family(self, tmp_path):
+        # A notebook kernel does not load .env, and the guides say to set the
+        # family there.
+        (tmp_path / ".env").write_text(f"{FAMILY_ENV}=onprem\n")
+        assert choose_models().family == "onprem"
+
+    def test_an_exported_family_beats_the_env_file(self, monkeypatch, tmp_path):
+        (tmp_path / ".env").write_text(f"{FAMILY_ENV}=onprem\n")
+        monkeypatch.setenv(FAMILY_ENV, "openai")
+        assert choose_models().family == "openai"
+
+    def test_a_role_override_from_the_env_file(self, tmp_path):
+        (tmp_path / ".env").write_text(f"{ROLE_ENV['judging']}=Qwen3_8-27B\n")
+        chosen = choose_models("google")
+        assert chosen.judging.model == "Qwen3_8-27B"
+        assert chosen.judging.source == "environment"
 
     def test_a_role_override_from_an_argument(self):
         chosen = choose_models("anthropic", judging="claude-opus-5-5")

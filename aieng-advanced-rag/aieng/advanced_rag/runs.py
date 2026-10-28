@@ -42,6 +42,19 @@ budget is checked against the assumed budget from
 assumed, any step estimated at over :data:`ASSUMED_CONFIRM_USD` also stops for
 ``confirm=True``. Neither check runs for a cached or reference result, or with
 ``live`` off, so a replay never stops.
+
+The estimate is made before the run, from the reference build, so it cannot
+tell which of the step's calls the response cache will answer. A step whose
+every model call goes through a guarded client (``govern``, ``async_llm``, a
+metered client, :class:`~aieng.advanced_rag.batch.ProxyBatch`, or the ADK
+``GovernedLlmClient``) can say so with ``Step(guarded=True)``. Over the
+threshold, such a step runs while the response cache answers its calls, and
+each guarded client refuses the step's first paid cache miss before sending
+it, so a step whose every call is cached finishes without ``confirm=True``. A
+``ProxyBatch`` inside the step checks only its cache misses against the
+budget, so a partly cached batch is judged on what it would send. A step not
+marked guarded keeps the pre-run stop, because a client that runs no pre-call
+check could send a paid call before anything stopped it.
 """
 
 from __future__ import annotations
@@ -96,6 +109,115 @@ _STEP_CHECKED: contextvars.ContextVar[bool] = contextvars.ContextVar(
 )
 
 
+@dataclass
+class _Deferral:
+    """A confirmation stop held back until the first paid call misses the cache."""
+
+    reason: str
+    refused: str | None = None
+
+
+# The stop a live step's estimate called for, while the step runs on cached
+# responses. Read by step_checked, so a batch inside such a step makes its own
+# check on its cache misses instead of trusting a check that did not pass.
+_DEFERRED: contextvars.ContextVar[_Deferral | None] = contextvars.ContextVar(
+    "aieng_deferred_confirmation", default=None
+)
+
+# Set around the live part of a batch whose cache misses passed their own check,
+# so the deferred stop lets those calls through.
+_WAIVED: contextvars.ContextVar[bool] = contextvars.ContextVar(
+    "aieng_confirmation_waived", default=False
+)
+
+
+@contextlib.contextmanager
+def _waive_deferred_stop() -> Iterator[None]:
+    """Let the block's live calls past a guarded step's deferred stop.
+
+    :class:`aieng.advanced_rag.batch.ProxyBatch` wraps the live part of a batch
+    in this once its cache misses have passed their own budget check, or the
+    caller passed ``confirm=True`` to the batch.
+    """
+    token = _WAIVED.set(True)
+    try:
+        yield
+    finally:
+        _WAIVED.reset(token)
+
+
+@contextlib.contextmanager
+def _refuse_live_misses(reason: str) -> Iterator[None]:
+    """Run a guarded step on cached responses, refusing its first paid miss.
+
+    Every guarded client runs :func:`aieng.advanced_rag.metering.before_call`
+    after its cache misses and before sending, so the hook installed here
+    refuses the first paid miss before it leaves, and every later one the same
+    way. Calls on an on-prem model are free and go through. The hooks are
+    process-wide, so calls on worker threads are refused too. A post-call hook
+    raises on a paid call that reached the meter without the pre-call check,
+    which only a step wrongly marked guarded makes.
+
+    Raises
+    ------
+    ConfirmationRequiredError
+        At the first paid live call, and on leaving the block if code inside it
+        caught that error and carried on, so a step with a refused call is never
+        stored as finished.
+    """
+    deferral = _Deferral(reason)
+
+    def stop(model: str | None, sent: bool) -> None:
+        if _WAIVED.get() or (model is not None and not spend.is_paid(model)):
+            return
+        name = model or "the model"
+        if deferral.refused is None:
+            what = (
+                f"a call to {name} went through a client that runs no pre-call "
+                "check, so the step is not guarded and that call was sent"
+                if sent
+                else f"the first call to {name} that missed it was not sent"
+            )
+            deferral.refused = (
+                f"{reason.removesuffix(_PASS_CONFIRM)}. The estimate is made "
+                "before the run and cannot see the response cache, so the step "
+                f"ran while the cache answered its calls; {what}. Pass "
+                "confirm=True (with live=True, the notebook's RUN_EXPENSIVE) to "
+                "the call that ran this step to send the rest"
+            )
+        raise ConfirmationRequiredError(deferral.refused)
+
+    def before(model: str | None) -> None:
+        stop(model, sent=False)
+
+    def after(model: str | None, usage: metering.CallUsage) -> None:
+        stop(model, sent=True)
+
+    metering.add_pre_call_hook(before)
+    metering.add_call_hook(after)
+    token = _DEFERRED.set(deferral)
+    try:
+        yield
+    finally:
+        _DEFERRED.reset(token)
+        metering.remove_pre_call_hook(before)
+        metering.remove_call_hook(after)
+    if deferral.refused is not None:
+        raise ConfirmationRequiredError(deferral.refused)
+
+
+def _unguarded(reason: str) -> str:
+    """Return the pre-run stop's message for a step not marked guarded."""
+    return (
+        f"{reason.removesuffix(_PASS_CONFIRM)}; pass confirm=True (with "
+        "live=True, the notebook's RUN_EXPENSIVE) to run it. The estimate is "
+        "made before the run and cannot see the response cache. A step whose "
+        "every model call goes through govern, async_llm, a metered client, "
+        "ProxyBatch, or GovernedLlmClient can set Step(guarded=True) to run on "
+        "cached responses and stop only at its first paid cache miss"
+    )
+
+
 def step_checked() -> bool:
     """Return whether the current context runs a step ``load_or_run`` checked.
 
@@ -105,12 +227,16 @@ def step_checked() -> bool:
     that second stop would ask again for a decision already made, so the batch
     skips it.
 
+    Inside a guarded step whose estimate did not pass, which runs until its
+    first paid cache miss, the batch makes its own check on its cache misses.
+
     Returns
     -------
     bool
-        True inside the ``compute`` call of a live :func:`load_or_run` step.
+        True inside the ``compute`` call of a live :func:`load_or_run` step
+        whose estimate passed the check or was confirmed.
     """
-    return _STEP_CHECKED.get()
+    return _STEP_CHECKED.get() and _DEFERRED.get() is None
 
 
 @contextlib.contextmanager
@@ -127,11 +253,14 @@ class ReferenceMissingError(LookupError):
     """Neither your result nor the reference artifact is in the cache."""
 
 
-class ConfirmationRequiredError(RuntimeError):
+# The repository's mypy run sees sibling modules as Any, hence the ignore.
+class ConfirmationRequiredError(metering.RunStopped):  # type: ignore[misc]
     """A live step would spend more than 10% of the budget left.
 
     Also raised while the budget is assumed, for a step estimated at over
-    :data:`ASSUMED_CONFIRM_USD`.
+    :data:`ASSUMED_CONFIRM_USD`. A step is stopped at its first paid call that
+    misses the response cache, so a step the cache answers in full never
+    raises it.
     """
 
 
@@ -312,6 +441,16 @@ class Step:
         Defaults to the file that defines ``compute``. Name them when the
         step's logic lives in other files than the one that passes
         ``compute``. Not part of the cache key.
+    guarded : bool, optional
+        Every model call ``compute`` makes goes through a guarded client:
+        :func:`~aieng.advanced_rag.graphrag.proxy.govern`,
+        :func:`~aieng.advanced_rag.graphrag.proxy.async_llm`, a metered client,
+        :class:`~aieng.advanced_rag.batch.ProxyBatch`, or
+        :class:`~aieng.advanced_rag.agents.model.GovernedLlmClient`. Each runs
+        a pre-call check before a cache miss is sent, so a live step over the
+        confirmation threshold can run on cached responses and stop at its
+        first paid miss. False keeps the stop before the run. Not part of the
+        cache key.
     """
 
     ri_id: str
@@ -324,6 +463,7 @@ class Step:
     kind: Literal["json", "directory"] = "json"
     reference: Provenance | None = None
     code: tuple[object, ...] = ()
+    guarded: bool = False
 
     def code_hash(self, compute: Callable[..., Any]) -> str | None:
         """Return :func:`code_hash` of :attr:`code`, or of ``compute``'s file."""
@@ -636,7 +776,10 @@ def load_or_run(
         With ``live`` off, when neither your result nor the reference is cached.
     ConfirmationRequiredError
         With ``live`` on and ``confirm`` false, when the estimate is over 10%
-        of the budget left, or over $1 while the budget is assumed.
+        of the budget left, or over $1 while the budget is assumed. A step
+        marked ``guarded`` raises it at its first paid call the response cache
+        cannot answer, without sending that call; any other step raises it
+        before the run.
     """
     chosen = (models or REFERENCE_MODELS).for_role(step.role)
     reference = step.reference_choice
@@ -700,7 +843,7 @@ def load_or_run(
             )
         )
 
-    _guard(step, chosen, estimate, confirm, budget)
+    stop = _guard(step, chosen, estimate, confirm, budget)
     meter = UsageMeter()
     scratch: Path | None = None
     try:
@@ -710,6 +853,7 @@ def load_or_run(
             using(meter),
             meter.question(f"{step.ri_id}/{step.producer_id}"),
             _checked_step(),
+            _refuse_live_misses(stop) if stop else contextlib.nullcontext(),
         ):
             if step.kind == "json":
                 value = compute(chosen)
@@ -748,28 +892,43 @@ def _guard(
     estimate: tuple[int, float | None],
     confirm: bool,
     budget: spend.Budget | None,
-) -> None:
+) -> str | None:
+    """Print the estimate and return the stop a guarded step defers, if any.
+
+    A step not marked guarded raises :class:`ConfirmationRequiredError` here,
+    before the run.
+    """
     calls, dollars = estimate
     if dollars is None:
         reason = (
             "no reference build to scale" if not calls else "no price for this model"
         )
         print(f"{step.artifact_type} running on {chosen.model}: no estimate ({reason})")
-        return
+        return None
     print(
         f"{step.artifact_type} running on {chosen.model}: about {calls:,} calls, "
         f"est. ${dollars:,.2f}"
     )
     if dollars == 0:
-        return
+        return None
+    pad = " " * (len(step.artifact_type) + 1)
     known = (budget if budget is not None else spend.read_budget()).assuming()
     if known.assumed:
-        print(" " * (len(step.artifact_type) + 1) + known.line())
+        print(pad + known.line())
     if confirm:
-        return
+        return None
     stop = confirmation_needed(dollars, known)
+    if stop is not None and not step.guarded:
+        raise ConfirmationRequiredError(_unguarded(stop))
     if stop is not None:
-        raise ConfirmationRequiredError(stop)
+        print(
+            pad + "over the confirmation threshold: running on cached responses "
+            "and stopping before the first paid call the cache cannot answer"
+        )
+    return stop
+
+
+_PASS_CONFIRM = "; pass confirm=True to run it"
 
 
 def confirmation_needed(dollars: float, budget: spend.Budget) -> str | None:
@@ -802,12 +961,12 @@ def confirmation_needed(dollars: float, budget: spend.Budget) -> str | None:
     if left is not None and dollars > CONFIRM_SHARE * left:
         return (
             f"the estimate ${dollars:,.2f} is over {CONFIRM_SHARE:.0%} of the "
-            f"${left:,.2f} left on the key{assumed}; pass confirm=True to run it"
+            f"${left:,.2f} left on the key{assumed}{_PASS_CONFIRM}"
         )
     if known.assumed and dollars > ASSUMED_CONFIRM_USD:
         return (
             f"the estimate ${dollars:,.2f} is over ${ASSUMED_CONFIRM_USD:,.2f}"
-            f"{assumed}; pass confirm=True to run it"
+            f"{assumed}{_PASS_CONFIRM}"
         )
     return None
 

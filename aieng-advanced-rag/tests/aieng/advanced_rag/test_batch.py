@@ -3,6 +3,8 @@
 from __future__ import annotations
 
 import asyncio
+import contextlib
+import dataclasses
 import warnings
 
 import httpx
@@ -18,6 +20,7 @@ from aieng.advanced_rag.batch import (
     ProxyBatch,
     proxy_rpm,
 )
+from aieng.advanced_rag.cache import TieredResultCache
 from aieng.advanced_rag.graphrag.proxy import (
     CallLedger,
     RateLimiter,
@@ -26,6 +29,7 @@ from aieng.advanced_rag.graphrag.proxy import (
     request_key,
 )
 from aieng.advanced_rag.metering import UsageMeter, using
+from aieng.advanced_rag.models import choose_models
 from aieng.advanced_rag.spend import ModelPrice, SpendLimitReached, SpendSession
 
 
@@ -179,6 +183,43 @@ class TestRequests:
         assert "temperature" not in sent
         assert "chat_template_kwargs" not in sent.get("extra_body", {})
 
+    def test_a_top_level_switch_is_sent_as_the_caller_wrote_it(self, tmp_path, fake):
+        # The openai-client paths and RI #2's recorded requests send
+        # reasoning_effort at the top level; ProxyBatch passes it through.
+        with make(tmp_path) as batch:
+            batch.complete("a", reasoning_effort="low", **PARAMS)
+        assert fake.calls[0]["reasoning_effort"] == "low"
+
+    def test_the_synthetic_checker_on_gpt_6_luna_passes_litellm(
+        self, tmp_path, fake, monkeypatch
+    ):
+        # LiteLLM refuses a top-level reasoning_effort for gpt-6-luna, which is
+        # how the question builder's checker failed on the google family.
+        from litellm.utils import get_optional_params
+
+        from aieng.advanced_rag.evaluation.synthetic import proxy_model
+
+        monkeypatch.setenv("VECTOR_PROXY_API_KEY", "test-key")
+        monkeypatch.setenv("OPENAI_BASE_URL", PROXY)
+        checker = proxy_model("gpt-6-luna", cache_path=tmp_path / "responses.sqlite")
+        assert checker("system", "a").startswith("reply to")
+        sent = fake.calls[0]
+        assert "reasoning_effort" not in sent
+        assert sent["extra_body"] == {"reasoning_effort": "none"}
+        top = {
+            key: value
+            for key, value in sent.items()
+            if key in ("max_completion_tokens", "reasoning_effort", "temperature")
+        }
+        get_optional_params(model="gpt-6-luna", custom_llm_provider="openai", **top)
+        with pytest.raises(litellm.UnsupportedParamsError):
+            get_optional_params(
+                model="gpt-6-luna",
+                custom_llm_provider="openai",
+                reasoning_effort="none",
+                **top,
+            )
+
     def test_a_callers_extra_body_is_merged_with_the_switch(self, tmp_path, fake):
         with make(tmp_path) as batch:
             batch.complete("a", extra_body={"top_k": 5}, **PARAMS)
@@ -311,6 +352,11 @@ PRICED = {
     "claude-haiku-5-5": ModelPrice("claude-haiku-5-5", 1_000_000.0, 1_000_000.0),
 }
 
+# Prompts are free and each one-token reply is $0.60, so a batch's estimate is
+# $0.60 per request the cache cannot answer.
+PER_REPLY = {"claude-haiku-5-5": ModelPrice("claude-haiku-5-5", 0.0, 600_000.0)}
+ONE_TOKEN = {"max_tokens": 1, "temperature": 0.0}
+
 
 class TestGuards:
     def test_the_spend_limit_stops_a_batch(self, tmp_path, fake):
@@ -353,6 +399,53 @@ class TestGuards:
         finally:
             runs._STEP_CHECKED.reset(token)
         assert outcomes[0].ok
+
+    def test_a_fully_cached_batch_over_a_dollar_runs_without_confirm(
+        self, tmp_path, fake, capsys
+    ):
+        assumed = spend.Budget(None, 0.0)
+        with make(tmp_path, model="claude-haiku-5-5", table=PER_REPLY) as batch:
+            batch.complete_batch(["a", "b", "c"], confirm=True, **ONE_TOKEN)
+            capsys.readouterr()
+            # Three uncached replies would be $1.80, over the assumed-budget $1.
+            outcomes = batch.complete_batch(
+                ["a", "b", "c"], budget=assumed, **ONE_TOKEN
+            )
+        assert all(o.ok and o.cached for o in outcomes)
+        assert len(fake.calls) == 3
+        assert "est." not in capsys.readouterr().out
+
+    def test_a_partly_cached_batch_is_estimated_on_its_misses(
+        self, tmp_path, fake, capsys
+    ):
+        assumed = spend.Budget(None, 0.0)
+        with make(tmp_path, model="claude-haiku-5-5", table=PER_REPLY) as batch:
+            batch.complete_batch(["a", "b"], confirm=True, **ONE_TOKEN)
+            capsys.readouterr()
+            # One miss at $0.60 runs; all three would be $1.80.
+            outcomes = batch.complete_batch(
+                ["a", "b", "c"], budget=assumed, **ONE_TOKEN
+            )
+            assert [o.cached for o in outcomes] == [True, True, False]
+            assert "batch of 1 calls to claude-haiku-5-5: est. $0.60" in (
+                capsys.readouterr().out
+            )
+            # Two misses at $1.20 stop, and the message counts only those.
+            with pytest.raises(runs.ConfirmationRequiredError, match=r"\$1\.20"):
+                batch.complete_batch(
+                    ["a", "b", "c", "d", "e"], budget=assumed, **ONE_TOKEN
+                )
+        assert fake.prompts() == ["a", "b", "c"]
+
+    def test_an_uncached_batch_over_a_dollar_still_stops(self, tmp_path, fake):
+        with (
+            make(tmp_path, model="claude-haiku-5-5", table=PER_REPLY) as batch,
+            pytest.raises(runs.ConfirmationRequiredError, match="confirm=True"),
+        ):
+            batch.complete_batch(
+                ["a", "b"], budget=spend.Budget(None, 0.0), **ONE_TOKEN
+            )
+        assert fake.calls == []
 
     def test_an_onprem_batch_never_asks(self, tmp_path, fake):
         with make(tmp_path) as batch:
@@ -500,6 +593,44 @@ class TestBuilders:
         assert list(names) == ["acme"] and names["acme"].startswith("reply to")
         assert usage == {"calls": 1, "prompt_tokens": 10, "completion_tokens": 3}
 
+    def test_a_paid_contextual_batch_over_the_threshold_takes_confirm(
+        self, tmp_path, fake, monkeypatch
+    ):
+        from aieng.advanced_rag.retrieval.chunkers import fixed_chars
+        from aieng.advanced_rag.retrieval.contextual import (
+            generate_contexts,
+            name_documents,
+        )
+
+        monkeypatch.setattr(spend, "read_budget", lambda: spend.Budget(100.0, 0.0))
+        document = "MUTUAL NDA between Acme Ltd and Globex.\n\n" + "Agreed. " * 80
+        chunks = fixed_chars("acme", document, chunk_chars=300, overlap_chars=60)
+        with make(tmp_path, model="claude-haiku-5-5", table=PRICED) as batch:
+            with pytest.raises(runs.ConfirmationRequiredError):
+                generate_contexts(
+                    {"acme": document},
+                    chunks,
+                    batch,
+                    model="claude-haiku-5-5",
+                    cache_control=False,
+                    progress_every=0,
+                )
+            assert fake.calls == []
+            contexts = generate_contexts(
+                {"acme": document},
+                chunks,
+                batch,
+                model="claude-haiku-5-5",
+                cache_control=False,
+                progress_every=0,
+                confirm=True,
+            )
+            names, _ = name_documents(
+                {"acme": document}, batch, model="claude-haiku-5-5", confirm=True
+            )
+        assert set(contexts.records) == {c.chunk_id for c in chunks}
+        assert list(names) == ["acme"]
+
 
 class TestCallerKeysAndTextPayloads:
     """A cache with its own keys and text payloads, as older modules wrote them."""
@@ -619,3 +750,232 @@ class TestAsyncCreate:
 
         with pytest.raises(litellm.BadRequestError):
             asyncio.run(run())
+
+
+class TestStepOnCachedResponses:
+    """``load_or_run``'s stop waits for a paid call the response cache misses."""
+
+    # The reference build made three calls of one completion token each, so the
+    # step's pre-run estimate on claude-haiku-5-5 is $1.80, over the $1 that an
+    # assumed budget allows without confirm=True.
+    STEP = runs.Step(
+        ri_id="ri-test",
+        artifact_type="answers",
+        producer_id="batched",
+        config={"prompts": 3},
+        reference=runs.Provenance.for_model(
+            ONPREM,
+            usage={ONPREM: {"calls": 3, "prompt_tokens": 0, "completion_tokens": 3}},
+        ),
+        guarded=True,
+    )
+
+    @pytest.fixture(autouse=True)
+    def offline(self, monkeypatch):
+        monkeypatch.delenv(spend.KEY_BUDGET_ENV, raising=False)
+        spend.use_account(spend.ProxyAccount(None, PROXY))
+        yield
+        spend.use_account(None)
+
+    @staticmethod
+    def run(tmp_path, batch, prompts, **kwargs):
+        def compute(choice):
+            outcomes = batch.complete_batch(prompts, **ONE_TOKEN)
+            return [o.text for o in outcomes]
+
+        return runs.load_or_run(
+            TestStepOnCachedResponses.STEP,
+            compute,
+            models=choose_models("anthropic"),
+            live=True,
+            cache=TieredResultCache(
+                global_dir=tmp_path / "global", local_dir=tmp_path / "local"
+            ),
+            show=False,
+            table=PER_REPLY,
+            budget=spend.Budget(None, 0.0),
+            **kwargs,
+        )
+
+    def test_a_fully_cached_step_runs_without_confirm(self, tmp_path, fake, capsys):
+        with make(tmp_path, model="claude-haiku-5-5", table=PER_REPLY) as batch:
+            batch.complete_batch(["a", "b", "c"], confirm=True, **ONE_TOKEN)
+            result = self.run(tmp_path, batch, ["a", "b", "c"])
+        assert result.origin == "live"
+        assert result.value == ["reply to a", "reply to b", "reply to c"]
+        assert len(fake.calls) == 3
+        assert "est. $1.80" in capsys.readouterr().out
+
+    def test_a_partly_cached_step_is_judged_on_its_misses(self, tmp_path, fake):
+        with make(tmp_path, model="claude-haiku-5-5", table=PER_REPLY) as batch:
+            batch.complete_batch(["a", "b"], confirm=True, **ONE_TOKEN)
+            result = self.run(tmp_path, batch, ["a", "b", "c"])
+        assert result.origin == "live"
+        assert fake.prompts() == ["a", "b", "c"]
+
+    def test_an_uncached_step_stops_before_any_call(self, tmp_path, fake):
+        with make(tmp_path, model="claude-haiku-5-5", table=PER_REPLY) as batch:
+            with pytest.raises(runs.ConfirmationRequiredError, match="confirm=True"):
+                self.run(tmp_path, batch, ["a", "b", "c"])
+            assert fake.calls == []
+            # Nothing was stored, so confirming runs the step.
+            result = self.run(tmp_path, batch, ["a", "b", "c"], confirm=True)
+        assert result.origin == "live"
+        assert len(fake.calls) == 3
+
+    def test_a_single_call_that_misses_is_not_sent(self, tmp_path, fake):
+        with make(tmp_path, model="claude-haiku-5-5", table=PER_REPLY) as batch:
+            batch.complete("a", **ONE_TOKEN)
+
+            def compute(choice):
+                return [batch.complete(p, **ONE_TOKEN) for p in ("a", "b")]
+
+            with pytest.raises(runs.ConfirmationRequiredError) as raised:
+                runs.load_or_run(
+                    self.STEP,
+                    compute,
+                    models=choose_models("anthropic"),
+                    live=True,
+                    cache=TieredResultCache(
+                        global_dir=tmp_path / "g", local_dir=tmp_path / "l"
+                    ),
+                    show=False,
+                    table=PER_REPLY,
+                    budget=spend.Budget(None, 0.0),
+                )
+        message = str(raised.value)
+        assert "$1.80 is over $1.00" in message
+        assert "first call to claude-haiku-5-5 that missed it was not sent" in message
+        assert "confirm=True" in message
+        assert fake.prompts() == ["a"]
+
+    def test_a_caught_stop_still_fails_the_step(self, tmp_path, fake):
+        store = TieredResultCache(global_dir=tmp_path / "g", local_dir=tmp_path / "l")
+
+        def compute(choice):
+            with contextlib.suppress(runs.ConfirmationRequiredError):
+                batch.complete("b", **ONE_TOKEN)
+            return ["finished anyway"]
+
+        with (
+            make(tmp_path, model="claude-haiku-5-5", table=PER_REPLY) as batch,
+            pytest.raises(runs.ConfirmationRequiredError),
+        ):
+            runs.load_or_run(
+                self.STEP,
+                compute,
+                models=choose_models("anthropic"),
+                live=True,
+                cache=store,
+                show=False,
+                table=PER_REPLY,
+                budget=spend.Budget(None, 0.0),
+            )
+        assert fake.calls == []
+        assert store.get(self.STEP.key(choose_models("anthropic").generation)) is None
+
+
+class TestUnguardedAndSwallowingSteps:
+    """An unguarded step keeps the pre-run stop; a guarded pool stops at once."""
+
+    STEP = TestStepOnCachedResponses.STEP
+
+    @pytest.fixture(autouse=True)
+    def offline(self, monkeypatch):
+        monkeypatch.delenv(spend.KEY_BUDGET_ENV, raising=False)
+        spend.use_account(spend.ProxyAccount(None, PROXY))
+        yield
+        spend.use_account(None)
+
+    @staticmethod
+    def openai_client(sent: list[httpx.Request]):
+        from openai import OpenAI
+
+        def handler(request: httpx.Request) -> httpx.Response:
+            sent.append(request)
+            return httpx.Response(500, request=request)
+
+        return OpenAI(
+            base_url=PROXY,
+            api_key="test-key",
+            max_retries=0,
+            http_client=httpx.Client(transport=httpx.MockTransport(handler)),
+        )
+
+    def step(self, tmp_path, step, compute, **kwargs):
+        return runs.load_or_run(
+            step,
+            compute,
+            models=choose_models("anthropic"),
+            live=True,
+            cache=TieredResultCache(
+                global_dir=tmp_path / "global", local_dir=tmp_path / "local"
+            ),
+            show=False,
+            table=PER_REPLY,
+            budget=spend.Budget(None, 0.0),
+            **kwargs,
+        )
+
+    def test_a_step_with_an_unguarded_client_stops_before_running(self, tmp_path):
+        from aieng.advanced_rag.pipeline.generate import ChatCompleter
+
+        sent: list[httpx.Request] = []
+        complete = ChatCompleter(self.openai_client(sent), "claude-haiku-5-5")
+        ran: list[str] = []
+
+        def compute(choice):
+            ran.append(choice.model)
+            return [complete("a")]
+
+        unguarded = dataclasses.replace(self.STEP, guarded=False)
+        with pytest.raises(runs.ConfirmationRequiredError) as raised:
+            self.step(tmp_path, unguarded, compute)
+        assert ran == []
+        assert sent == []
+        message = str(raised.value)
+        assert "$1.80 is over $1.00" in message
+        assert "pass confirm=True" in message
+        assert "guarded=True" in message
+
+    def test_a_swallowing_thread_pool_stops_at_the_first_refused_call(self, tmp_path):
+        from aieng.advanced_rag.retrieval.contextual import generate_contexts
+        from aieng.advanced_rag.retrieval.corpus import Chunk
+
+        sent: list[httpx.Request] = []
+        client = govern(
+            self.openai_client(sent),
+            cache=ResponseCache(tmp_path / "responses.sqlite"),
+            limiter=RateLimiter(6000),
+        )
+        attempts: list[str] = []
+        create = client.chat.completions.create
+
+        def counted(**kwargs):
+            attempts.append(kwargs["messages"][-1]["content"])
+            return create(**kwargs)
+
+        client.chat.completions.create = counted
+        document = "One. Two. Three. Four."
+        chunks = [
+            Chunk(f"acme::{i:04d}", "acme", text, start, start + len(text))
+            for i, (text, start) in enumerate(
+                [("One.", 0), ("Two.", 5), ("Three.", 10), ("Four.", 17)]
+            )
+        ]
+
+        def compute(choice):
+            contexts = generate_contexts(
+                {"acme": document},
+                chunks,
+                client,
+                model="claude-haiku-5-5",
+                workers=1,
+                progress_every=0,
+            )
+            return sorted(contexts.records)
+
+        with pytest.raises(runs.ConfirmationRequiredError, match="was not sent"):
+            self.step(tmp_path, self.STEP, compute)
+        assert sent == []
+        assert len(attempts) == 1
