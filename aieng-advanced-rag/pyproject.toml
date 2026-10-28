@@ -48,7 +48,7 @@ retrieval = ["numpy>=1.26"]
 # is exact because quantization fields such as TurboQuant arrived in 1.19 and the
 # documentation and the client have disagreed on their names. In-process mode
 # (`:memory:` or a path) needs no server, so this extra is enough for every RI.
-qdrant = ["qdrant-client==1.19.1", "numpy>=1.26"]
+qdrant = ["qdrant-client==1.20.0", "numpy>=1.26"]
 # Token-budget chunking counts tokens with the embedding model's own tokenizer.
 chunking = ["transformers>=4.40", "numpy>=1.26"]
 # Cross-encoder reranking over first-stage candidates.
@@ -110,7 +110,7 @@ all = [
     "fastembed>=0.7",
     # Capped below 0.4 because the 502 retry sets a private LMClient attribute.
     "infermesh>=0.3.2,<0.4",
-    "qdrant-client==1.19.1",
+    "qdrant-client==1.20.0",
 ]
 
 [tool.hatch.build.targets.sdist]
