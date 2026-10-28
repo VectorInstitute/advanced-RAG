@@ -1,0 +1,51 @@
+{
+  "files": {
+    "22386e57b9ca8b174f4e1fc6dc1dcd28bf8ab1dd10fee9d946e656ef7072dab2.json": {
+      "model": "Qwen3_6-35B-A3B",
+      "response_models": [],
+      "family": "onprem",
+      "endpoint": "vector-cluster",
+      "producer": "regulatory_policy_qa/advanced_lab/common.py",
+      "note": "Cache envelope for the historical ragas measurement; names its chat model separately from the cache-format producer_id.",
+      "source": "regulatory_policy_qa/outputs/advanced/ragas.json"
+    },
+    "34229536eec46ed9370bdd775dda8026543ae6b475e4f7a7b7e335c0142b4475.json": {
+      "model": "Qwen3_6-35B-A3B",
+      "response_models": [],
+      "family": "onprem",
+      "endpoint": "vector-cluster",
+      "producer": "regulatory_policy_qa/advanced_lab/common.py",
+      "note": "Cache envelope for the historical policies measurement; names its chat model separately from the cache-format producer_id.",
+      "source": "regulatory_policy_qa/outputs/advanced/policies.json"
+    },
+    "6f51589ff18ed95bef179d14621d902acc1b4dbecd32f0e264df1e8078676265.json": {
+      "model": "Qwen3_6-35B-A3B",
+      "response_models": [],
+      "family": "onprem",
+      "endpoint": "vector-cluster",
+      "producer": "regulatory_policy_qa/advanced_lab/common.py",
+      "note": "Cache envelope for the historical agent measurement; names its chat model separately from the cache-format producer_id.",
+      "source": "regulatory_policy_qa/outputs/advanced/agent.json"
+    },
+    "812a34047aac19f16b065bb6329c47e890d0a55a8cbbe538ad59ce349662cfab.json": {
+      "model": null,
+      "response_models": [],
+      "family": null,
+      "endpoint": null,
+      "producer": "regulatory_policy_qa/advanced_lab/common.py",
+      "note": "Cached local-embedding retrieval-scope audit; no chat model was called.",
+      "source": "regulatory_policy_qa/outputs/advanced/scope.json",
+      "model_calls": 0
+    },
+    "d27a51e8599e504b2aa191d8d8fc07a9294c66200d8e8f37de6cfdd5774aeadb.json": {
+      "model": "Qwen3_6-35B-A3B",
+      "response_models": [],
+      "family": "onprem",
+      "endpoint": "vector-cluster",
+      "producer": "regulatory_policy_qa/advanced_lab/common.py",
+      "note": "Cache envelope for the historical regulatory measurement; names its chat model separately from the cache-format producer_id.",
+      "source": "regulatory_policy_qa/outputs/advanced/regulatory.json"
+    }
+  },
+  "note": "Provenance sidecar for immutable historical fixtures, cache envelopes and model-free artifacts. Measured payloads and cache keys are preserved; response model identifiers were not recorded in these historical runs."
+}

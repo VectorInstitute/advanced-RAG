@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "cache_key": "a2314da24a6e3a4f35d24f2f0933457b2ccb326674013964ecacb7603ca01e45",
+  "ri_id": "ri1",
+  "artifact_type": "vector-collection",
+  "producer_id": "bge-small-en-v1.5",
+  "config": {
+    "chunk_chars": 1200,
+    "corpus": "cuad",
+    "corpus_sha256": "007b6a40b0c65247f881627375c3d2e9b6aeeb5dfa89957494feed0765a1a073",
+    "max_documents": 20,
+    "model": "BAAI/bge-small-en-v1.5",
+    "overlap_chars": 200,
+    "scope": "contract",
+    "vectors": "chunks"
+  },
+  "created_at": "2026-10-20T23:06:25.723560+00:00",
+  "value": {
+    "artifact": {
+      "bytes": 1377649,
+      "media_type": "application/x-tar+gzip",
+      "sha256": "d714184e26dae64d8b260c55f3323d2a7edd2c5bec3c1fb809af589f7bd71e23"
+    },
+    "metadata": {
+      "files": 3,
+      "directories": 0,
+      "bytes": 1656553,
+      "tree_digest": "890079505a48846e2ed9b677df0d8dc3ddf61c1c16b164996de589c6f499d3d1"
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "files": {
+    "cache_status.json": {
+      "model": null,
+      "response_models": [],
+      "family": null,
+      "endpoint": null,
+      "producer": "regulatory_policy_qa/run_threshold_sweep.py",
+      "note": "Cache coverage audit only; no generation, grading, judging or full-split quality measurement.",
+      "source": "cache_status.json execution and new_model_calls",
+      "model_calls": 0
+    }
+  },
+  "note": "Provenance sidecar for immutable historical fixtures, cache envelopes and model-free artifacts. Measured payloads and cache keys are preserved; response model identifiers were not recorded in these historical runs."
+}

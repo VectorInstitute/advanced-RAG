@@ -1,0 +1,87 @@
+{
+ "acceptance_rate": 0.3497,
+ "accepted": 50,
+ "accepted_by_hops": {
+  "2": 25,
+  "3": 12,
+  "4": 13
+ },
+ "accepted_grep_zero_hits_11656": 4,
+ "accepted_grep_zero_hits_139416": 1,
+ "accepted_with_new_terms": 17,
+ "checker": "Qwen3_8-Flash-Next",
+ "funnel": {
+  "accepted": 50,
+  "rejected_at_null_check": 83,
+  "rejected_at_write": 10
+ },
+ "generator": "Qwen3_8-27B",
+ "models": [
+  {
+   "cache_hits": 0,
+   "call_seconds": 696.6,
+   "calls": 162,
+   "cold_completion_tokens": 13604,
+   "cold_prompt_tokens": 63748,
+   "cold_requests": 162,
+   "completion_tokens": 13604,
+   "empty_responses": 0,
+   "failed_attempts": 0,
+   "label": "Qwen3_8-27B",
+   "model": "Qwen3_8-27B",
+   "prompt_tokens": 63748,
+   "total_tokens": 77352
+  },
+  {
+   "cache_hits": 0,
+   "call_seconds": 414.9,
+   "calls": 152,
+   "cold_completion_tokens": 17199,
+   "cold_prompt_tokens": 421612,
+   "cold_requests": 152,
+   "completion_tokens": 17199,
+   "empty_responses": 0,
+   "failed_attempts": 0,
+   "label": "Qwen3_8-Flash-Next",
+   "model": "Qwen3_8-Flash-Next",
+   "prompt_tokens": 421612,
+   "total_tokens": 438811
+  }
+ ],
+ "null_check_verdicts_rejected": {
+  "partly": 18,
+  "yes": 65
+ },
+ "price_note": "On-prem models through the proxy carry no charge.",
+ "price_usd": 0.0,
+ "probe": "BM25 and bge-small-en-v1.5 top 10 each, plus up to 10 grep hits per new term",
+ "produced_by": {
+  "endpoint": "vector-cluster",
+  "family": "onprem",
+  "model": "Qwen3_8-27B",
+  "producer": "agent_native_retrieval/build_near_miss_nulls.py",
+  "usage": {
+   "Qwen3_8-27B": {
+    "calls": 162,
+    "cold_requests": 162
+   },
+   "Qwen3_8-Flash-Next": {
+    "calls": 152,
+    "cold_requests": 152
+   }
+  }
+ },
+ "quota_by_hops": {
+  "2": 25,
+  "3": 12,
+  "4": 13
+ },
+ "seconds": 4951.1,
+ "set": "musique_near_miss_nulls.jsonl",
+ "tried": 143,
+ "tried_by_hops": {
+  "2": 89,
+  "3": 21,
+  "4": 33
+ }
+}

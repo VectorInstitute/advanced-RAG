@@ -1,0 +1,53 @@
+{
+ "produced_by": {
+  "model": null,
+  "response_models": [],
+  "family": null,
+  "endpoint": null,
+  "producer": "graphrag_technical_support/graph_maintenance.py",
+  "usage": {},
+  "note": "Lists the atlas-rag methods that could change an index; no model call. rebuild_cost quotes the HippoRAG 2 MuSiQue index build, which ran on Qwen3_6-35B-A3B, from musique_hipporag2_index_cost.json.",
+  "model_calls": 0
+ },
+ "atlas_rag_version": "0.0.5.post1",
+ "modules": [
+  "atlas_rag.kg_construction.triple_extraction",
+  "atlas_rag.kg_construction.triple_config",
+  "atlas_rag.vectorstore.create_graph_index",
+  "atlas_rag.vectorstore.embedding_model",
+  "atlas_rag.retriever.hipporag2",
+  "atlas_rag.retriever.base"
+ ],
+ "searched_for": [
+  "delete",
+  "remove",
+  "update",
+  "upsert",
+  "incremental",
+  "merge",
+  "insert"
+ ],
+ "matches": [
+  "atlas_rag.kg_construction.triple_config:ProcessingConfig.remove_doc_spaces",
+  "atlas_rag.kg_construction.triple_extraction:ProcessingConfig.remove_doc_spaces",
+  "atlas_rag.kg_construction.triple_extraction:merge_csv_files",
+  "atlas_rag.retriever.hipporag2:InferenceConfig.remove_unnecessary_rel"
+ ],
+ "rebuild_cost": {
+  "model": "Qwen3_6-35B-A3B",
+  "passages": 11656,
+  "cost": {
+   "label": "",
+   "calls": 11285,
+   "prompt_tokens": 3088633,
+   "completion_tokens": 4334007,
+   "total_tokens": 7422640,
+   "cache_hits": 67,
+   "empty_responses": 0,
+   "failed_attempts": 6899,
+   "call_seconds": 146113.9
+  },
+  "calls_per_passage": 0.97,
+  "wall_seconds": 14144.5
+ }
+}

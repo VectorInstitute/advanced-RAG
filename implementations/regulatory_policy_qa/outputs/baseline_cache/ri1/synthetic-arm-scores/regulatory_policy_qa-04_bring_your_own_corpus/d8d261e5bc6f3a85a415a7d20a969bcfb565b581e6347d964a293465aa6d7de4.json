@@ -1,0 +1,102 @@
+{
+  "schema_version": 1,
+  "cache_key": "d8d261e5bc6f3a85a415a7d20a969bcfb565b581e6347d964a293465aa6d7de4",
+  "ri_id": "ri1",
+  "artifact_type": "synthetic-arm-scores",
+  "producer_id": "regulatory_policy_qa/04_bring_your_own_corpus",
+  "config": {
+    "arms": "ri1-eight",
+    "corpus_wide": false,
+    "embedder": "BAAI/bge-small-en-v1.5",
+    "reranker": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+    "set": "6204e405bea40daafb56160a27e6e1900271102d5003e9e449da143897a2c784"
+  },
+  "created_at": "2026-10-21T04:16:45.333834+00:00",
+  "value": {
+    "arms": [
+      "bm25@1200",
+      "dense@1200",
+      "hybrid-rrf-0.5@1200",
+      "hybrid-rrf-0.2@1200",
+      "dense+rerank@1200",
+      "shuffled-control@1200",
+      "bm25@600",
+      "dense@600"
+    ],
+    "questions": 27,
+    "documents_indexed": 8,
+    "corpus_wide": false,
+    "mean": {
+      "recall@3": {
+        "bm25@1200": 0.8457,
+        "dense@1200": 0.8272,
+        "hybrid-rrf-0.5@1200": 0.8827,
+        "hybrid-rrf-0.2@1200": 0.8827,
+        "dense+rerank@1200": 0.9198,
+        "shuffled-control@1200": 0.2346,
+        "bm25@600": 0.8395,
+        "dense@600": 0.7037
+      },
+      "ndcg@10": {
+        "bm25@1200": 0.8874,
+        "dense@1200": 0.8174,
+        "hybrid-rrf-0.5@1200": 0.8962,
+        "hybrid-rrf-0.2@1200": 0.8974,
+        "dense+rerank@1200": 0.9375,
+        "shuffled-control@1200": 0.3789,
+        "bm25@600": 0.8616,
+        "dense@600": 0.8258
+      },
+      "mrr": {
+        "bm25@1200": 0.8642,
+        "dense@1200": 0.8145,
+        "hybrid-rrf-0.5@1200": 0.8716,
+        "hybrid-rrf-0.2@1200": 0.8858,
+        "dense+rerank@1200": 0.9568,
+        "shuffled-control@1200": 0.2696,
+        "bm25@600": 0.8901,
+        "dense@600": 0.9025
+      }
+    },
+    "versus_best_ndcg@10": {
+      "best": "dense+rerank@1200",
+      "arms": {
+        "bm25@1200": {
+          "mean_difference": 0.0501,
+          "low": -0.0122,
+          "high": 0.1191
+        },
+        "dense@1200": {
+          "mean_difference": 0.1201,
+          "low": 0.0507,
+          "high": 0.2025
+        },
+        "hybrid-rrf-0.5@1200": {
+          "mean_difference": 0.0413,
+          "low": -0.0296,
+          "high": 0.113
+        },
+        "hybrid-rrf-0.2@1200": {
+          "mean_difference": 0.0401,
+          "low": -0.0251,
+          "high": 0.1102
+        },
+        "shuffled-control@1200": {
+          "mean_difference": 0.5586,
+          "low": 0.4691,
+          "high": 0.6449
+        },
+        "bm25@600": {
+          "mean_difference": 0.0758,
+          "low": -0.0017,
+          "high": 0.1469
+        },
+        "dense@600": {
+          "mean_difference": 0.1117,
+          "low": 0.0387,
+          "high": 0.1904
+        }
+      }
+    }
+  }
+}

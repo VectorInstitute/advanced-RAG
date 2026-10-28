@@ -1,0 +1,55 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Lint & Test
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+
+# Vscode
+.vscode
+
+# macos
+*.DS_Store
+
+# Local RI #1 null-arm evidence/model cache; contains licensed contract text.
+/Arm Store/
+/null-arm-store.tar.gz
+/unpacked/
+Arm Store.tar.gz
+
+# ipynb checkpoints
+**.ipynb_checkpoints
+
+.env
+
+# Local working files kept out of the repository.
+materials/
+references/
+scripts/reference-repos.local
+.plans/
+.claude/
+planning-docs/
+
+# Office binaries (decks and spreadsheets).
+*.pptx
+*.xlsx
+
+# RI #2 large local evaluation traces; source and tests remain reviewable.
+/implementations/cross_document_synthesis/docs/FULL_EVALUATION.md
+/implementations/cross_document_synthesis/outputs/full_evaluation/
+/implementations/cross_document_synthesis/outputs/decomposition/full.json
+
+# RI #2 local execution checks; retain corpus validation and method results.
+/implementations/cross_document_synthesis/outputs/notebook_validation.json
+/implementations/cross_document_synthesis/outputs/examples/decomposition/notebook_validation.json
+/implementations/cross_document_synthesis/outputs/validation/notebook_execution.json
+/implementations/cross_document_synthesis/outputs/validation/checkout_validation.json

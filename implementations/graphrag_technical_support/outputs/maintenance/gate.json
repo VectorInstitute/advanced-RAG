@@ -1,0 +1,345 @@
+{
+ "model": "Qwen3_8-27B",
+ "retracted": [
+  "q9708",
+  "q62411",
+  "q309357",
+  "q264595",
+  "q253313"
+ ],
+ "smoke_questions": {
+  "q9708": "What is the difference between a pem file, a .der file, and .pkcs12?",
+  "q62411": "Pipe du -h into sort so the largest directories come first",
+  "q309357": "Use nmap to check a tcp port when ping only speaks icmp",
+  "q264595": "Can scp -r copy a sourcedirectory, or do I send a .tar file?",
+  "q253313": "ssh says bad owner or permissions on ~/.ssh/config; which chmod fixes it?"
+ },
+ "smoke_before": {
+  "What is the difference between a pem file, a .der file, and .pkcs12?": {
+   "target": "q9708",
+   "rank_of_target": 2,
+   "documents": 8
+  },
+  "Pipe du -h into sort so the largest directories come first": {
+   "target": "q62411",
+   "rank_of_target": 1,
+   "documents": 9
+  },
+  "Use nmap to check a tcp port when ping only speaks icmp": {
+   "target": "q309357",
+   "rank_of_target": 2,
+   "documents": 10
+  },
+  "Can scp -r copy a sourcedirectory, or do I send a .tar file?": {
+   "target": "q264595",
+   "rank_of_target": 1,
+   "documents": 8
+  },
+  "ssh says bad owner or permissions on ~/.ssh/config; which chmod fixes it?": {
+   "target": "q253313",
+   "rank_of_target": 1,
+   "documents": 10
+  }
+ },
+ "graph_retriever_rank_of_target_at_50": {
+  "What is the difference between a pem file, a .der file, and .pkcs12?": 3,
+  "Pipe du -h into sort so the largest directories come first": 1,
+  "Use nmap to check a tcp port when ping only speaks icmp": 3,
+  "Can scp -r copy a sourcedirectory, or do I send a .tar file?": 1,
+  "ssh says bad owner or permissions on ~/.ssh/config; which chmod fixes it?": 1
+ },
+ "limits": {
+  "max_entity_loss_share": 0.01,
+  "max_isolated_increase_share": 0.005,
+  "max_largest_component_drop": 0.01,
+  "max_type_share_shift": 0.01
+ },
+ "provenance_retraction": {
+  "passed": true,
+  "checks": [
+   {
+    "name": "schema: validate()",
+    "passed": true,
+    "detail": "0 problems"
+   },
+   {
+    "name": "provenance: no fact cites a retracted document",
+    "passed": true,
+    "detail": "0 facts"
+   },
+   {
+    "name": "topology: entity loss",
+    "passed": true,
+    "detail": "24 removed, 0 expected, 0.038% unexpected"
+   },
+   {
+    "name": "topology: isolated entities",
+    "passed": true,
+    "detail": "-1 isolated"
+   },
+   {
+    "name": "topology: largest component",
+    "passed": true,
+    "detail": "share 0.7788 to 0.7787"
+   },
+   {
+    "name": "topology: type shares",
+    "passed": true,
+    "detail": "largest shift 0.0001"
+   },
+   {
+    "name": "smoke: What is the difference between a pem file, a .der file, and .pkcs12?",
+    "passed": true,
+    "detail": "cites 10 documents"
+   },
+   {
+    "name": "smoke: Pipe du -h into sort so the largest directories come first",
+    "passed": true,
+    "detail": "cites 10 documents"
+   },
+   {
+    "name": "smoke: Use nmap to check a tcp port when ping only speaks icmp",
+    "passed": true,
+    "detail": "cites 10 documents"
+   },
+   {
+    "name": "smoke: Can scp -r copy a sourcedirectory, or do I send a .tar file?",
+    "passed": true,
+    "detail": "cites 9 documents"
+   },
+   {
+    "name": "smoke: ssh says bad owner or permissions on ~/.ssh/config; which chmod fixes it?",
+    "passed": true,
+    "detail": "cites 10 documents"
+   }
+  ],
+  "report": {
+   "entities_removed": 24,
+   "entities_touched": 38,
+   "relations_removed": 39,
+   "relations_dangling": 0,
+   "relations_touched": 2,
+   "neighbourhood": 2944,
+   "descriptions_repaired": 7,
+   "descriptions_unverified": 0,
+   "types_changed": 7,
+   "remaining_citations": 0
+  }
+ },
+ "stale_serving_index": {
+  "passed": false,
+  "checks": [
+   {
+    "name": "schema: validate()",
+    "passed": true,
+    "detail": "0 problems"
+   },
+   {
+    "name": "provenance: no fact cites a retracted document",
+    "passed": true,
+    "detail": "0 facts"
+   },
+   {
+    "name": "topology: entity loss",
+    "passed": true,
+    "detail": "24 removed, 0 expected, 0.038% unexpected"
+   },
+   {
+    "name": "topology: isolated entities",
+    "passed": true,
+    "detail": "-1 isolated"
+   },
+   {
+    "name": "topology: largest component",
+    "passed": true,
+    "detail": "share 0.7788 to 0.7787"
+   },
+   {
+    "name": "topology: type shares",
+    "passed": true,
+    "detail": "largest shift 0.0001"
+   },
+   {
+    "name": "smoke: What is the difference between a pem file, a .der file, and .pkcs12?",
+    "passed": false,
+    "detail": "cites 8 documents, retracted: q9708"
+   },
+   {
+    "name": "smoke: Pipe du -h into sort so the largest directories come first",
+    "passed": false,
+    "detail": "cites 9 documents, retracted: q62411"
+   },
+   {
+    "name": "smoke: Use nmap to check a tcp port when ping only speaks icmp",
+    "passed": false,
+    "detail": "cites 10 documents, retracted: q309357"
+   },
+   {
+    "name": "smoke: Can scp -r copy a sourcedirectory, or do I send a .tar file?",
+    "passed": false,
+    "detail": "cites 8 documents, retracted: q264595"
+   },
+   {
+    "name": "smoke: ssh says bad owner or permissions on ~/.ssh/config; which chmod fixes it?",
+    "passed": false,
+    "detail": "cites 10 documents, retracted: q253313"
+   }
+  ]
+ },
+ "naive_delete": {
+  "passed": false,
+  "checks": [
+   {
+    "name": "schema: validate()",
+    "passed": false,
+    "detail": "4116 problems, first: relation puttygen -configures-> id_rsa has a dangling endpoint"
+   },
+   {
+    "name": "provenance: no fact cites a retracted document",
+    "passed": true,
+    "detail": "0 facts"
+   },
+   {
+    "name": "topology: entity loss",
+    "passed": true,
+    "detail": "62 removed, 0 expected, 0.098% unexpected"
+   },
+   {
+    "name": "topology: isolated entities",
+    "passed": true,
+    "detail": "-2 isolated"
+   },
+   {
+    "name": "topology: largest component",
+    "passed": false,
+    "detail": "share 0.7788 to 0.7611"
+   },
+   {
+    "name": "topology: type shares",
+    "passed": true,
+    "detail": "largest shift 0.0001"
+   },
+   {
+    "name": "smoke: What is the difference between a pem file, a .der file, and .pkcs12?",
+    "passed": true,
+    "detail": "cites 10 documents"
+   },
+   {
+    "name": "smoke: Pipe du -h into sort so the largest directories come first",
+    "passed": true,
+    "detail": "cites 10 documents"
+   },
+   {
+    "name": "smoke: Use nmap to check a tcp port when ping only speaks icmp",
+    "passed": true,
+    "detail": "cites 10 documents"
+   },
+   {
+    "name": "smoke: Can scp -r copy a sourcedirectory, or do I send a .tar file?",
+    "passed": true,
+    "detail": "cites 9 documents"
+   },
+   {
+    "name": "smoke: ssh says bad owner or permissions on ~/.ssh/config; which chmod fixes it?",
+    "passed": true,
+    "detail": "cites 9 documents"
+   }
+  ],
+  "entities_deleted": 62
+ },
+ "mentions_only": {
+  "passed": false,
+  "checks": [
+   {
+    "name": "schema: validate()",
+    "passed": false,
+    "detail": "63 problems, first: entity '.csr' cites nothing"
+   },
+   {
+    "name": "provenance: no fact cites a retracted document",
+    "passed": true,
+    "detail": "0 facts"
+   },
+   {
+    "name": "topology: entity loss",
+    "passed": true,
+    "detail": "0 removed, 0 expected, 0.000% unexpected"
+   },
+   {
+    "name": "topology: isolated entities",
+    "passed": true,
+    "detail": "+0 isolated"
+   },
+   {
+    "name": "topology: largest component",
+    "passed": true,
+    "detail": "share 0.7788 to 0.7788"
+   },
+   {
+    "name": "topology: type shares",
+    "passed": true,
+    "detail": "largest shift 0.0000"
+   },
+   {
+    "name": "smoke: What is the difference between a pem file, a .der file, and .pkcs12?",
+    "passed": true,
+    "detail": "cites 10 documents"
+   },
+   {
+    "name": "smoke: Pipe du -h into sort so the largest directories come first",
+    "passed": true,
+    "detail": "cites 10 documents"
+   },
+   {
+    "name": "smoke: Use nmap to check a tcp port when ping only speaks icmp",
+    "passed": true,
+    "detail": "cites 10 documents"
+   },
+   {
+    "name": "smoke: Can scp -r copy a sourcedirectory, or do I send a .tar file?",
+    "passed": true,
+    "detail": "cites 9 documents"
+   },
+   {
+    "name": "smoke: ssh says bad owner or permissions on ~/.ssh/config; which chmod fixes it?",
+    "passed": true,
+    "detail": "cites 10 documents"
+   }
+  ]
+ },
+ "dedup_merge": {
+  "passed": true,
+  "checks": [
+   {
+    "name": "schema: validate()",
+    "passed": true,
+    "detail": "0 problems"
+   },
+   {
+    "name": "provenance: no fact cites a retracted document",
+    "passed": true,
+    "detail": "0 facts"
+   },
+   {
+    "name": "topology: entity loss",
+    "passed": true,
+    "detail": "3,580 removed, 3,580 expected, 0.000% unexpected"
+   },
+   {
+    "name": "topology: isolated entities",
+    "passed": true,
+    "detail": "-390 isolated"
+   },
+   {
+    "name": "topology: largest component",
+    "passed": true,
+    "detail": "share 0.7788 to 0.7955"
+   },
+   {
+    "name": "topology: type shares",
+    "passed": true,
+    "detail": "largest shift 0.0068"
+   }
+  ]
+ }
+}

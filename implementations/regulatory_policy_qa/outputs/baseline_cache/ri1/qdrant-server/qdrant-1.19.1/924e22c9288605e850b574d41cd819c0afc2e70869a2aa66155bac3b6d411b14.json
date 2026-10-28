@@ -1,0 +1,211 @@
+{
+  "schema_version": 1,
+  "cache_key": "924e22c9288605e850b574d41cd819c0afc2e70869a2aa66155bac3b6d411b14",
+  "ri_id": "ri1",
+  "artifact_type": "qdrant-server",
+  "producer_id": "qdrant-1.19.1",
+  "config": {
+    "arms": {
+      "HNSW, hnsw_ef=16": {
+        "hnsw_ef": 16
+      },
+      "TurboQuant 1-bit, no rescore": {
+        "bits": 1,
+        "quantization": "turbo",
+        "rescore": false
+      },
+      "TurboQuant 1-bit, oversampling 4, rescore": {
+        "bits": 1,
+        "oversampling": 4,
+        "quantization": "turbo",
+        "rescore": true
+      },
+      "TurboQuant 2-bit, rescore": {
+        "bits": 2,
+        "quantization": "turbo",
+        "rescore": true
+      },
+      "binary 1-bit, no rescore": {
+        "bits": 1,
+        "quantization": "binary",
+        "rescore": false
+      },
+      "binary 1-bit, oversampling 4, rescore": {
+        "bits": 1,
+        "oversampling": 4,
+        "quantization": "binary",
+        "rescore": true
+      },
+      "exact": {}
+    },
+    "chunk_chars": 1200,
+    "corpus": "cuad",
+    "corpus_sha256": "007b6a40b0c65247f881627375c3d2e9b6aeeb5dfa89957494feed0765a1a073",
+    "max_documents": 20,
+    "model": "BAAI/bge-small-en-v1.5",
+    "overlap_chars": 200,
+    "scope": "contract"
+  },
+  "created_at": "2026-10-20T23:07:25.061879+00:00",
+  "value": {
+    "rows": {
+      "scoped | exact": {
+        "failure": 0.24,
+        "mrr": 0.4632,
+        "agreement_at_10": 1.0,
+        "top1_match": 1.0,
+        "median_ms": 6.74,
+        "ratio": null,
+        "search_paths": [
+          "filtered_plain"
+        ]
+      },
+      "scoped | HNSW, hnsw_ef=16": {
+        "failure": 0.24,
+        "mrr": 0.4633,
+        "agreement_at_10": 0.9976,
+        "top1_match": 1.0,
+        "median_ms": 6.43,
+        "ratio": null,
+        "search_paths": [
+          "filtered_large_cardinality",
+          "filtered_small_cardinality"
+        ]
+      },
+      "scoped | TurboQuant 2-bit, rescore": {
+        "failure": 0.24,
+        "mrr": 0.4632,
+        "agreement_at_10": 0.9968,
+        "top1_match": 1.0,
+        "median_ms": 6.98,
+        "ratio": 14.8,
+        "search_paths": [
+          "filtered_small_cardinality"
+        ]
+      },
+      "scoped | TurboQuant 1-bit, oversampling 4, rescore": {
+        "failure": 0.24,
+        "mrr": 0.4632,
+        "agreement_at_10": 1.0,
+        "top1_match": 1.0,
+        "median_ms": 5.36,
+        "ratio": 27.4,
+        "search_paths": [
+          "filtered_small_cardinality"
+        ]
+      },
+      "scoped | TurboQuant 1-bit, no rescore": {
+        "failure": 0.232,
+        "mrr": 0.4495,
+        "agreement_at_10": 0.72,
+        "top1_match": 0.58,
+        "median_ms": 7.22,
+        "ratio": 27.4,
+        "search_paths": [
+          "filtered_small_cardinality"
+        ]
+      },
+      "scoped | binary 1-bit, oversampling 4, rescore": {
+        "failure": 0.24,
+        "mrr": 0.4636,
+        "agreement_at_10": 0.9944,
+        "top1_match": 0.996,
+        "median_ms": 6.0,
+        "ratio": 32.0,
+        "search_paths": [
+          "filtered_small_cardinality"
+        ]
+      },
+      "scoped | binary 1-bit, no rescore": {
+        "failure": 0.276,
+        "mrr": 0.4248,
+        "agreement_at_10": 0.644,
+        "top1_match": 0.416,
+        "median_ms": 4.72,
+        "ratio": 32.0,
+        "search_paths": [
+          "filtered_small_cardinality"
+        ]
+      },
+      "unscoped | exact": {
+        "failure": 0.772,
+        "mrr": 0.0985,
+        "agreement_at_10": 1.0,
+        "top1_match": 1.0,
+        "median_ms": 7.63,
+        "ratio": null,
+        "search_paths": [
+          "unfiltered_plain"
+        ]
+      },
+      "unscoped | HNSW, hnsw_ef=16": {
+        "failure": 0.776,
+        "mrr": 0.0977,
+        "agreement_at_10": 0.9948,
+        "top1_match": 1.0,
+        "median_ms": 6.44,
+        "ratio": null,
+        "search_paths": [
+          "unfiltered_hnsw"
+        ]
+      },
+      "unscoped | TurboQuant 2-bit, rescore": {
+        "failure": 0.772,
+        "mrr": 0.0985,
+        "agreement_at_10": 1.0,
+        "top1_match": 1.0,
+        "median_ms": 5.06,
+        "ratio": 14.8,
+        "search_paths": [
+          "unfiltered_plain"
+        ]
+      },
+      "unscoped | TurboQuant 1-bit, oversampling 4, rescore": {
+        "failure": 0.772,
+        "mrr": 0.0985,
+        "agreement_at_10": 1.0,
+        "top1_match": 1.0,
+        "median_ms": 7.0,
+        "ratio": 27.4,
+        "search_paths": [
+          "unfiltered_plain"
+        ]
+      },
+      "unscoped | TurboQuant 1-bit, no rescore": {
+        "failure": 0.796,
+        "mrr": 0.0826,
+        "agreement_at_10": 0.4808,
+        "top1_match": 0.336,
+        "median_ms": 5.47,
+        "ratio": 27.4,
+        "search_paths": [
+          "unfiltered_plain"
+        ]
+      },
+      "unscoped | binary 1-bit, oversampling 4, rescore": {
+        "failure": 0.772,
+        "mrr": 0.0989,
+        "agreement_at_10": 0.9548,
+        "top1_match": 0.952,
+        "median_ms": 5.34,
+        "ratio": 32.0,
+        "search_paths": [
+          "unfiltered_plain"
+        ]
+      },
+      "unscoped | binary 1-bit, no rescore": {
+        "failure": 0.796,
+        "mrr": 0.0794,
+        "agreement_at_10": 0.3088,
+        "top1_match": 0.276,
+        "median_ms": 5.33,
+        "ratio": 32.0,
+        "search_paths": [
+          "unfiltered_plain"
+        ]
+      }
+    },
+    "server": "1.19.1",
+    "load_average": 75.0
+  }
+}

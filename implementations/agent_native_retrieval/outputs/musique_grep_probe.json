@@ -1,0 +1,5422 @@
+{
+ "shared-11656": {
+  "by_hop": {
+   "2": {
+    "questions": 150,
+    "first_hop": 0.833,
+    "bridge": 0.933,
+    "chain": 0.787
+   },
+   "3": {
+    "questions": 75,
+    "first_hop": 0.867,
+    "bridge": 0.827,
+    "chain": 0.653
+   },
+   "4": {
+    "questions": 75,
+    "first_hop": 0.733,
+    "bridge": 0.804,
+    "chain": 0.427
+   }
+  },
+  "rows": [
+   {
+    "question_id": "2hop__13548_13529",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__170823_120171",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__655505_110949",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__619265_45326",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__124412_402641",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__693444_220151",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__734582_71302",
+    "hops": 2,
+    "first_hop": false,
+    "bridges": [
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "2hop__84847_148696",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__998_25855",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__46862_68042",
+    "hops": 2,
+    "first_hop": false,
+    "bridges": [
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "2hop__802991_443552",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__81268_85407",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__391873_88622",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__668407_683671",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__56851_343058",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__68322_510545",
+    "hops": 2,
+    "first_hop": false,
+    "bridges": [
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "2hop__304852_758385",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__131455_11960",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__7855_7794",
+    "hops": 2,
+    "first_hop": false,
+    "bridges": [
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "2hop__494659_5385",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__575797_91104",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__207476_625987",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__135651_669373",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__815205_590407",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     false
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "2hop__9512_36630",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     false
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "2hop__226204_69048",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__31585_61048",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__203437_152093",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__636597_480615",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__778212_22458",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__21104_16334",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__835710_7298",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__77134_88165",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__149862_108549",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__685930_110949",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__819974_129669",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__258940_135844",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__545711_52835",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__167577_31122",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__50432_56873",
+    "hops": 2,
+    "first_hop": false,
+    "bridges": [
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "2hop__158010_58067",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__35137_22896",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__61318_362941",
+    "hops": 2,
+    "first_hop": false,
+    "bridges": [
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "2hop__96410_47902",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__695364_513121",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__488811_30078",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__144303_483189",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__161507_77849",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__157498_127908",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__551235_310309",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     false
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "2hop__765180_123956",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__29191_59955",
+    "hops": 2,
+    "first_hop": false,
+    "bridges": [
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "2hop__622308_61845",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__67660_81007",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__559076_55984",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__488811_30110",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__284789_52835",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__17455_21567",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__491195_265959",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__62369_84616",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__12039_11957",
+    "hops": 2,
+    "first_hop": false,
+    "bridges": [
+     false
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "2hop__351045_47134",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__53175_548781",
+    "hops": 2,
+    "first_hop": false,
+    "bridges": [
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "2hop__848156_130869",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__156085_436709",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__839126_472799",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__166820_52835",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__93230_319887",
+    "hops": 2,
+    "first_hop": false,
+    "bridges": [
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "2hop__35137_22940",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__235471_565925",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__403580_37168",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__76402_653666",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__77832_159673",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__367318_7292",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__169443_83769",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__10515_21567",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__683835_709167",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__40485_40502",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__460091_405771",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__59612_50883",
+    "hops": 2,
+    "first_hop": false,
+    "bridges": [
+     false
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "2hop__689472_52835",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__152052_141308",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__96411_159054",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__57638_615257",
+    "hops": 2,
+    "first_hop": false,
+    "bridges": [
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "2hop__245835_762148",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__21103_16254",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__678516_179720",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__128342_375952",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__128608_82341",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__785711_63853",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__227791_75487",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__817096_15463",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__519160_78303",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__504464_708278",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__170914_152093",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__595747_31270",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__71294_494136",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__433694_20273",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__51881_20590",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__496792_392646",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__708145_30351",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__123145_80420",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__43579_289940",
+    "hops": 2,
+    "first_hop": false,
+    "bridges": [
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "2hop__227031_144857",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__56806_7298",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__683203_72813",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__5658_25002",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__39063_212301",
+    "hops": 2,
+    "first_hop": false,
+    "bridges": [
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "2hop__461639_83837",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__252311_366220",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__475808_74481",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__435184_67370",
+    "hops": 2,
+    "first_hop": false,
+    "bridges": [
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "2hop__390947_232243",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__353836_80026",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__358582_189042",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__35173_17335",
+    "hops": 2,
+    "first_hop": false,
+    "bridges": [
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "2hop__475070_532404",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__83460_456238",
+    "hops": 2,
+    "first_hop": false,
+    "bridges": [
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "2hop__587048_621800",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__800166_156034",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__55129_80460",
+    "hops": 2,
+    "first_hop": false,
+    "bridges": [
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "2hop__64323_55840",
+    "hops": 2,
+    "first_hop": false,
+    "bridges": [
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "2hop__80546_75184",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     false
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "2hop__9285_42311",
+    "hops": 2,
+    "first_hop": false,
+    "bridges": [
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "2hop__503085_110222",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__768312_814677",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__517145_367341",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__194532_57594",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     false
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "2hop__142881_127399",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__846844_47134",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__135822_46621",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__799936_20273",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__47071_162399",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__455158_247871",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__9223_9237",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__25797_990",
+    "hops": 2,
+    "first_hop": false,
+    "bridges": [
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "2hop__73615_42173",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__61714_89309",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     false
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "2hop__16844_20510",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     false
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "2hop__665660_135481",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__449673_91104",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__818302_25719",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__13731_801817",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__67956_463572",
+    "hops": 2,
+    "first_hop": false,
+    "bridges": [
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "2hop__507528_139339",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__157376_643670",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__865828_377862",
+    "hops": 2,
+    "first_hop": false,
+    "bridges": [
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "2hop__273020_57594",
+    "hops": 2,
+    "first_hop": false,
+    "bridges": [
+     false
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "2hop__124592_402641",
+    "hops": 2,
+    "first_hop": false,
+    "bridges": [
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "2hop__757497_78606",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "3hop1__136129_87694_124169",
+    "hops": 3,
+    "first_hop": false,
+    "bridges": [
+     true,
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "3hop1__108833_720914_41132",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "3hop1__33845_42197_18397",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "3hop1__105837_160713_77246",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "3hop1__622497_160088_85460",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     true,
+     false
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "3hop1__321720_650651_7262",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "3hop2__89854_92991_76291",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     false,
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "3hop1__662618_339990_54675",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "3hop2__9951_20335_9331",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     false,
+     false
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "3hop1__831499_228453_10972",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     false,
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "3hop1__353661_629431_64412",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "3hop2__158279_71753_70784",
+    "hops": 3,
+    "first_hop": false,
+    "bridges": [
+     false,
+     false
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "3hop1__843207_755530_88011",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "3hop2__25177_19506_23299",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     false,
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "3hop1__21282_692112_236857",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "3hop1__640171_228453_86925",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     false,
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "3hop1__128554_39743_24526",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "3hop1__671542_651917_47686",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "3hop1__254856_400692_51423",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "3hop1__475351_160713_77246",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "3hop1__146155_131905_41948",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "3hop1__380590_831637_91775",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "3hop1__131829_39743_24526",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "3hop1__798544_514761_594810",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "3hop1__818422_160545_34754",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "3hop1__41865_55331_34700",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "3hop1__635099_131926_13165",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "3hop2__368986_89048_66294",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     false,
+     false
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "3hop1__568951_567566_84283",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "3hop1__103662_443779_52195",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "3hop2__222979_132477_40768",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     false,
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "3hop2__11282_57233_56883",
+    "hops": 3,
+    "first_hop": false,
+    "bridges": [
+     false,
+     false
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "3hop1__617062_127905_80286",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "3hop1__9285_5188_63702",
+    "hops": 3,
+    "first_hop": false,
+    "bridges": [
+     true,
+     false
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "3hop1__161433_33952_34099",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "3hop1__389069_132457_51423",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "3hop2__125104_90098_10557",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     false,
+     false
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "3hop1__847420_720378_15538",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "3hop1__390673_228453_86925",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     false,
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "3hop2__36852_613770_7713",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     false,
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "3hop2__668732_223623_162182",
+    "hops": 3,
+    "first_hop": false,
+    "bridges": [
+     true,
+     false
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "3hop1__865037_214799_259594",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     true,
+     false
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "3hop1__639955_834494_34088",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "3hop1__754160_831637_91775",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "3hop1__30885_160713_77246",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "3hop1__103254_214799_259594",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     true,
+     false
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "3hop1__147225_30587_83479",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "3hop1__79039_131926_87157",
+    "hops": 3,
+    "first_hop": false,
+    "bridges": [
+     true,
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "3hop1__243276_42197_18397",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "3hop1__90327_73181_68042",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "3hop2__14777_8533_9331",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     false,
+     false
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "3hop1__152880_131926_90707",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "3hop1__742464_15840_36014",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "3hop1__38738_78276_68042",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "3hop1__210639_147339_51423",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "3hop1__324448_831637_91775",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "3hop2__851134_326964_7713",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     false,
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "3hop1__579562_629431_64412",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "3hop1__377943_650651_7262",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "3hop1__418091_15840_36002",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "3hop1__140855_2053_52946",
+    "hops": 3,
+    "first_hop": false,
+    "bridges": [
+     true,
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "3hop1__140514_2053_5289",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "3hop1__136852_30587_83479",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "3hop1__145411_443779_52195",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "3hop1__79462_91850_685675",
+    "hops": 3,
+    "first_hop": false,
+    "bridges": [
+     true,
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "3hop1__140786_2053_52946",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "3hop1__742464_15840_36002",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "3hop1__579562_629431_124169",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "3hop1__635099_131926_90707",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "3hop1__801799_547811_80702",
+    "hops": 3,
+    "first_hop": false,
+    "bridges": [
+     true,
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "3hop1__92251_34179_23375",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     true,
+     false
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "3hop2__132957_51933_40768",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "3hop1__9285_5188_86687",
+    "hops": 3,
+    "first_hop": false,
+    "bridges": [
+     true,
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "3hop1__418091_15840_36014",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "3hop1__462125_538202_84283",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "4hop2__71753_648517_70784_79935",
+    "hops": 4,
+    "first_hop": true,
+    "bridges": [
+     false,
+     true,
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "4hop1__94201_642284_131926_89261",
+    "hops": 4,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "4hop1__726675_508773_85832_745702",
+    "hops": 4,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "4hop1__88342_75218_128008_48717",
+    "hops": 4,
+    "first_hop": false,
+    "bridges": [
+     false,
+     true,
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "4hop1__802394_153080_159767_81096",
+    "hops": 4,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "4hop1__131113_59747_211319_557671",
+    "hops": 4,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "4hop1__9007_698949_157828_162309",
+    "hops": 4,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "4hop1__342858_131850_33952_34099",
+    "hops": 4,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "4hop1__130623_32392_823060_610794",
+    "hops": 4,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "4hop1__638988_17130_70784_61381",
+    "hops": 4,
+    "first_hop": false,
+    "bridges": [
+     true,
+     false,
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "4hop1__749363_49925_13759_736921",
+    "hops": 4,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "4hop2__161602_426860_88460_63559",
+    "hops": 4,
+    "first_hop": false,
+    "bridges": [
+     false,
+     true,
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "4hop1__88342_49853_128008_80286",
+    "hops": 4,
+    "first_hop": true,
+    "bridges": [
+     false,
+     true,
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "4hop2__567956_39078_8987_8974",
+    "hops": 4,
+    "first_hop": true,
+    "bridges": [
+     false,
+     false,
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "4hop1__777217_32392_823060_610794",
+    "hops": 4,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "4hop1__72247_497223_15840_36014",
+    "hops": 4,
+    "first_hop": false,
+    "bridges": [
+     false,
+     true,
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "4hop1__88342_75218_128008_54974",
+    "hops": 4,
+    "first_hop": false,
+    "bridges": [
+     false,
+     true,
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "4hop3__746868_88460_30152_20999",
+    "hops": 4,
+    "first_hop": false,
+    "bridges": [
+     true,
+     false,
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "4hop1__178366_229349_66759_75165",
+    "hops": 4,
+    "first_hop": false,
+    "bridges": [
+     true,
+     false,
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "4hop1__752321_153080_33897_81096",
+    "hops": 4,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "4hop3__270458_88460_30152_20999",
+    "hops": 4,
+    "first_hop": true,
+    "bridges": [
+     true,
+     false,
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "4hop1__608132_508773_85832_745702",
+    "hops": 4,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "4hop1__58323_375563_161848_44231",
+    "hops": 4,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "4hop1__88342_49853_128008_86588",
+    "hops": 4,
+    "first_hop": false,
+    "bridges": [
+     false,
+     true,
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "4hop1__56635_49925_13759_736921",
+    "hops": 4,
+    "first_hop": false,
+    "bridges": [
+     true,
+     true,
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "4hop1__525129_315334_131926_90707",
+    "hops": 4,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "4hop1__145422_698949_157828_162309",
+    "hops": 4,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "4hop1__94201_642284_131926_13165",
+    "hops": 4,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "4hop3__324979_836463_161616_77103",
+    "hops": 4,
+    "first_hop": true,
+    "bridges": [
+     true,
+     false,
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "4hop1__343844_17130_70784_61381",
+    "hops": 4,
+    "first_hop": false,
+    "bridges": [
+     true,
+     false,
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "4hop3__700962_88460_30152_20999",
+    "hops": 4,
+    "first_hop": true,
+    "bridges": [
+     true,
+     false,
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "4hop1__342858_131850_33952_33939",
+    "hops": 4,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "4hop2__161324_14670_8987_8974",
+    "hops": 4,
+    "first_hop": false,
+    "bridges": [
+     false,
+     false,
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "4hop1__152146_5274_458768_33632",
+    "hops": 4,
+    "first_hop": true,
+    "bridges": [
+     true,
+     false,
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "4hop3__160230_470287_128875_72134",
+    "hops": 4,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "4hop1__344155_765799_282674_759393",
+    "hops": 4,
+    "first_hop": true,
+    "bridges": [
+     true,
+     false,
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "4hop1__436202_765799_282674_759393",
+    "hops": 4,
+    "first_hop": true,
+    "bridges": [
+     true,
+     false,
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "4hop1__58323_375563_161848_83118",
+    "hops": 4,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "4hop1__88342_75218_128008_80286",
+    "hops": 4,
+    "first_hop": true,
+    "bridges": [
+     false,
+     true,
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "4hop1__833841_378185_282674_759393",
+    "hops": 4,
+    "first_hop": true,
+    "bridges": [
+     true,
+     false,
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "4hop1__567737_141375_458768_33632",
+    "hops": 4,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "4hop1__463635_624859_355213_203322",
+    "hops": 4,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "4hop1__73810_32392_823060_610794",
+    "hops": 4,
+    "first_hop": false,
+    "bridges": [
+     true,
+     true,
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "4hop1__39871_314549_131976_56103",
+    "hops": 4,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "4hop2__161602_426860_88460_21074",
+    "hops": 4,
+    "first_hop": false,
+    "bridges": [
+     false,
+     true,
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "4hop1__443274_17130_70784_61381",
+    "hops": 4,
+    "first_hop": true,
+    "bridges": [
+     true,
+     false,
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "4hop1__130480_53706_795904_580996",
+    "hops": 4,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "4hop1__57467_53706_795904_580996",
+    "hops": 4,
+    "first_hop": false,
+    "bridges": [
+     true,
+     true,
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "4hop1__525129_315334_131926_87157",
+    "hops": 4,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "4hop3__316459_41402_145282_13584",
+    "hops": 4,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "4hop2__71753_648517_70784_61381",
+    "hops": 4,
+    "first_hop": true,
+    "bridges": [
+     false,
+     true,
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "4hop2__9988_729371_70784_61381",
+    "hops": 4,
+    "first_hop": true,
+    "bridges": [
+     false,
+     true,
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "4hop1__846600_153080_33897_81096",
+    "hops": 4,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "4hop1__152562_5274_458768_33637",
+    "hops": 4,
+    "first_hop": true,
+    "bridges": [
+     true,
+     false,
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "4hop1__343844_17130_70784_79935",
+    "hops": 4,
+    "first_hop": false,
+    "bridges": [
+     true,
+     false,
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "4hop1__129721_32392_823060_610794",
+    "hops": 4,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "4hop1__88342_75218_128008_80487",
+    "hops": 4,
+    "first_hop": true,
+    "bridges": [
+     false,
+     true,
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "4hop3__668721_132409_146285_35031",
+    "hops": 4,
+    "first_hop": true,
+    "bridges": [
+     true,
+     false,
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "4hop3__175072_88460_30152_20999",
+    "hops": 4,
+    "first_hop": false,
+    "bridges": [
+     true,
+     false,
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "4hop2__71753_73205_70784_79935",
+    "hops": 4,
+    "first_hop": true,
+    "bridges": [
+     false,
+     true,
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "4hop3__193820_466199_128875_72134",
+    "hops": 4,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "4hop1__473563_309800_355213_203322",
+    "hops": 4,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "4hop1__696484_49925_13759_736921",
+    "hops": 4,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "4hop1__46196_497223_15840_36002",
+    "hops": 4,
+    "first_hop": true,
+    "bridges": [
+     false,
+     true,
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "4hop1__88342_75218_128008_86588",
+    "hops": 4,
+    "first_hop": true,
+    "bridges": [
+     false,
+     true,
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "4hop1__88342_49853_128008_54974",
+    "hops": 4,
+    "first_hop": false,
+    "bridges": [
+     false,
+     true,
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "4hop3__524186_219173_862998_72134",
+    "hops": 4,
+    "first_hop": true,
+    "bridges": [
+     true,
+     false,
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "4hop2__161602_474028_88460_63559",
+    "hops": 4,
+    "first_hop": false,
+    "bridges": [
+     false,
+     true,
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "4hop2__161602_426860_88460_20988",
+    "hops": 4,
+    "first_hop": false,
+    "bridges": [
+     false,
+     true,
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "4hop1__163763_49925_13759_736921",
+    "hops": 4,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "4hop1__131632_32392_823060_610794",
+    "hops": 4,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "4hop2__160585_39078_8987_8974",
+    "hops": 4,
+    "first_hop": false,
+    "bridges": [
+     false,
+     false,
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "4hop3__710473_354093_254885_76356",
+    "hops": 4,
+    "first_hop": true,
+    "bridges": [
+     true,
+     false,
+     false
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "4hop1__46196_497223_15840_36014",
+    "hops": 4,
+    "first_hop": true,
+    "bridges": [
+     false,
+     true,
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "4hop1__788226_32392_823060_610794",
+    "hops": 4,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true,
+     true
+    ],
+    "chain": true
+   }
+  ],
+  "hit_sizes": {
+   "first_hop_median": 1,
+   "first_hop_p90": 46,
+   "bridge_median": 12,
+   "bridge_p90": 87
+  }
+ },
+ "ladder-11656": {
+  "by_hop": {
+   "2": {
+    "questions": 40,
+    "first_hop": 0.875,
+    "bridge": 0.95,
+    "chain": 0.825
+   },
+   "3": {
+    "questions": 40,
+    "first_hop": 0.9,
+    "bridge": 0.762,
+    "chain": 0.625
+   },
+   "4": {
+    "questions": 40,
+    "first_hop": 0.725,
+    "bridge": 0.808,
+    "chain": 0.45
+   }
+  },
+  "rows": [
+   {
+    "question_id": "2hop__13548_13529",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__170823_120171",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__655505_110949",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__619265_45326",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__124412_402641",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__693444_220151",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__734582_71302",
+    "hops": 2,
+    "first_hop": false,
+    "bridges": [
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "2hop__84847_148696",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__998_25855",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__46862_68042",
+    "hops": 2,
+    "first_hop": false,
+    "bridges": [
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "2hop__802991_443552",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__81268_85407",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__391873_88622",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__668407_683671",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__56851_343058",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__68322_510545",
+    "hops": 2,
+    "first_hop": false,
+    "bridges": [
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "2hop__304852_758385",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__131455_11960",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__7855_7794",
+    "hops": 2,
+    "first_hop": false,
+    "bridges": [
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "2hop__494659_5385",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__575797_91104",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__207476_625987",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__135651_669373",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__815205_590407",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     false
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "2hop__9512_36630",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     false
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "2hop__226204_69048",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__31585_61048",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__203437_152093",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__636597_480615",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__778212_22458",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__21104_16334",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__835710_7298",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__77134_88165",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__149862_108549",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__685930_110949",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__819974_129669",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__258940_135844",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__545711_52835",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__167577_31122",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__50432_56873",
+    "hops": 2,
+    "first_hop": false,
+    "bridges": [
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "3hop1__136129_87694_124169",
+    "hops": 3,
+    "first_hop": false,
+    "bridges": [
+     true,
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "3hop1__108833_720914_41132",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "3hop1__33845_42197_18397",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "3hop1__105837_160713_77246",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "3hop1__622497_160088_85460",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     true,
+     false
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "3hop1__321720_650651_7262",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "3hop2__89854_92991_76291",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     false,
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "3hop1__662618_339990_54675",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "3hop2__9951_20335_9331",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     false,
+     false
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "3hop1__831499_228453_10972",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     false,
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "3hop1__353661_629431_64412",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "3hop2__158279_71753_70784",
+    "hops": 3,
+    "first_hop": false,
+    "bridges": [
+     false,
+     false
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "3hop1__843207_755530_88011",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "3hop2__25177_19506_23299",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     false,
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "3hop1__21282_692112_236857",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "3hop1__640171_228453_86925",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     false,
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "3hop1__128554_39743_24526",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "3hop1__671542_651917_47686",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "3hop1__254856_400692_51423",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "3hop1__475351_160713_77246",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "3hop1__146155_131905_41948",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "3hop1__380590_831637_91775",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "3hop1__131829_39743_24526",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "3hop1__798544_514761_594810",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "3hop1__818422_160545_34754",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "3hop1__41865_55331_34700",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "3hop1__635099_131926_13165",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "3hop2__368986_89048_66294",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     false,
+     false
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "3hop1__568951_567566_84283",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "3hop1__103662_443779_52195",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "3hop2__222979_132477_40768",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     false,
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "3hop2__11282_57233_56883",
+    "hops": 3,
+    "first_hop": false,
+    "bridges": [
+     false,
+     false
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "3hop1__617062_127905_80286",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "3hop1__9285_5188_63702",
+    "hops": 3,
+    "first_hop": false,
+    "bridges": [
+     true,
+     false
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "3hop1__161433_33952_34099",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "3hop1__389069_132457_51423",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "3hop2__125104_90098_10557",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     false,
+     false
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "3hop1__847420_720378_15538",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "3hop1__390673_228453_86925",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     false,
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "3hop2__36852_613770_7713",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     false,
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "4hop2__71753_648517_70784_79935",
+    "hops": 4,
+    "first_hop": true,
+    "bridges": [
+     false,
+     true,
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "4hop1__94201_642284_131926_89261",
+    "hops": 4,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "4hop1__726675_508773_85832_745702",
+    "hops": 4,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "4hop1__88342_75218_128008_48717",
+    "hops": 4,
+    "first_hop": false,
+    "bridges": [
+     false,
+     true,
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "4hop1__802394_153080_159767_81096",
+    "hops": 4,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "4hop1__131113_59747_211319_557671",
+    "hops": 4,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "4hop1__9007_698949_157828_162309",
+    "hops": 4,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "4hop1__342858_131850_33952_34099",
+    "hops": 4,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "4hop1__130623_32392_823060_610794",
+    "hops": 4,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "4hop1__638988_17130_70784_61381",
+    "hops": 4,
+    "first_hop": false,
+    "bridges": [
+     true,
+     false,
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "4hop1__749363_49925_13759_736921",
+    "hops": 4,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "4hop2__161602_426860_88460_63559",
+    "hops": 4,
+    "first_hop": false,
+    "bridges": [
+     false,
+     true,
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "4hop1__88342_49853_128008_80286",
+    "hops": 4,
+    "first_hop": true,
+    "bridges": [
+     false,
+     true,
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "4hop2__567956_39078_8987_8974",
+    "hops": 4,
+    "first_hop": true,
+    "bridges": [
+     false,
+     false,
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "4hop1__777217_32392_823060_610794",
+    "hops": 4,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "4hop1__72247_497223_15840_36014",
+    "hops": 4,
+    "first_hop": false,
+    "bridges": [
+     false,
+     true,
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "4hop1__88342_75218_128008_54974",
+    "hops": 4,
+    "first_hop": false,
+    "bridges": [
+     false,
+     true,
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "4hop3__746868_88460_30152_20999",
+    "hops": 4,
+    "first_hop": false,
+    "bridges": [
+     true,
+     false,
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "4hop1__178366_229349_66759_75165",
+    "hops": 4,
+    "first_hop": false,
+    "bridges": [
+     true,
+     false,
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "4hop1__752321_153080_33897_81096",
+    "hops": 4,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "4hop3__270458_88460_30152_20999",
+    "hops": 4,
+    "first_hop": true,
+    "bridges": [
+     true,
+     false,
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "4hop1__608132_508773_85832_745702",
+    "hops": 4,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "4hop1__58323_375563_161848_44231",
+    "hops": 4,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "4hop1__88342_49853_128008_86588",
+    "hops": 4,
+    "first_hop": false,
+    "bridges": [
+     false,
+     true,
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "4hop1__56635_49925_13759_736921",
+    "hops": 4,
+    "first_hop": false,
+    "bridges": [
+     true,
+     true,
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "4hop1__525129_315334_131926_90707",
+    "hops": 4,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "4hop1__145422_698949_157828_162309",
+    "hops": 4,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "4hop1__94201_642284_131926_13165",
+    "hops": 4,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "4hop3__324979_836463_161616_77103",
+    "hops": 4,
+    "first_hop": true,
+    "bridges": [
+     true,
+     false,
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "4hop1__343844_17130_70784_61381",
+    "hops": 4,
+    "first_hop": false,
+    "bridges": [
+     true,
+     false,
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "4hop3__700962_88460_30152_20999",
+    "hops": 4,
+    "first_hop": true,
+    "bridges": [
+     true,
+     false,
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "4hop1__342858_131850_33952_33939",
+    "hops": 4,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "4hop2__161324_14670_8987_8974",
+    "hops": 4,
+    "first_hop": false,
+    "bridges": [
+     false,
+     false,
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "4hop1__152146_5274_458768_33632",
+    "hops": 4,
+    "first_hop": true,
+    "bridges": [
+     true,
+     false,
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "4hop3__160230_470287_128875_72134",
+    "hops": 4,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "4hop1__344155_765799_282674_759393",
+    "hops": 4,
+    "first_hop": true,
+    "bridges": [
+     true,
+     false,
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "4hop1__436202_765799_282674_759393",
+    "hops": 4,
+    "first_hop": true,
+    "bridges": [
+     true,
+     false,
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "4hop1__58323_375563_161848_83118",
+    "hops": 4,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "4hop1__88342_75218_128008_80286",
+    "hops": 4,
+    "first_hop": true,
+    "bridges": [
+     false,
+     true,
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "4hop1__833841_378185_282674_759393",
+    "hops": 4,
+    "first_hop": true,
+    "bridges": [
+     true,
+     false,
+     true
+    ],
+    "chain": false
+   }
+  ],
+  "hit_sizes": {
+   "first_hop_median": 2.0,
+   "first_hop_p90": 76,
+   "bridge_median": 13.0,
+   "bridge_p90": 87
+  }
+ },
+ "ladder-139416": {
+  "by_hop": {
+   "2": {
+    "questions": 40,
+    "first_hop": 0.875,
+    "bridge": 0.95,
+    "chain": 0.825
+   },
+   "3": {
+    "questions": 40,
+    "first_hop": 0.9,
+    "bridge": 0.762,
+    "chain": 0.625
+   },
+   "4": {
+    "questions": 40,
+    "first_hop": 0.725,
+    "bridge": 0.808,
+    "chain": 0.45
+   }
+  },
+  "rows": [
+   {
+    "question_id": "2hop__13548_13529",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__170823_120171",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__655505_110949",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__619265_45326",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__124412_402641",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__693444_220151",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__734582_71302",
+    "hops": 2,
+    "first_hop": false,
+    "bridges": [
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "2hop__84847_148696",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__998_25855",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__46862_68042",
+    "hops": 2,
+    "first_hop": false,
+    "bridges": [
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "2hop__802991_443552",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__81268_85407",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__391873_88622",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__668407_683671",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__56851_343058",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__68322_510545",
+    "hops": 2,
+    "first_hop": false,
+    "bridges": [
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "2hop__304852_758385",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__131455_11960",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__7855_7794",
+    "hops": 2,
+    "first_hop": false,
+    "bridges": [
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "2hop__494659_5385",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__575797_91104",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__207476_625987",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__135651_669373",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__815205_590407",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     false
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "2hop__9512_36630",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     false
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "2hop__226204_69048",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__31585_61048",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__203437_152093",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__636597_480615",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__778212_22458",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__21104_16334",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__835710_7298",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__77134_88165",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__149862_108549",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__685930_110949",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__819974_129669",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__258940_135844",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__545711_52835",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__167577_31122",
+    "hops": 2,
+    "first_hop": true,
+    "bridges": [
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "2hop__50432_56873",
+    "hops": 2,
+    "first_hop": false,
+    "bridges": [
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "3hop1__136129_87694_124169",
+    "hops": 3,
+    "first_hop": false,
+    "bridges": [
+     true,
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "3hop1__108833_720914_41132",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "3hop1__33845_42197_18397",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "3hop1__105837_160713_77246",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "3hop1__622497_160088_85460",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     true,
+     false
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "3hop1__321720_650651_7262",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "3hop2__89854_92991_76291",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     false,
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "3hop1__662618_339990_54675",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "3hop2__9951_20335_9331",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     false,
+     false
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "3hop1__831499_228453_10972",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     false,
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "3hop1__353661_629431_64412",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "3hop2__158279_71753_70784",
+    "hops": 3,
+    "first_hop": false,
+    "bridges": [
+     false,
+     false
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "3hop1__843207_755530_88011",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "3hop2__25177_19506_23299",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     false,
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "3hop1__21282_692112_236857",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "3hop1__640171_228453_86925",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     false,
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "3hop1__128554_39743_24526",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "3hop1__671542_651917_47686",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "3hop1__254856_400692_51423",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "3hop1__475351_160713_77246",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "3hop1__146155_131905_41948",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "3hop1__380590_831637_91775",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "3hop1__131829_39743_24526",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "3hop1__798544_514761_594810",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "3hop1__818422_160545_34754",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "3hop1__41865_55331_34700",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "3hop1__635099_131926_13165",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "3hop2__368986_89048_66294",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     false,
+     false
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "3hop1__568951_567566_84283",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "3hop1__103662_443779_52195",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "3hop2__222979_132477_40768",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     false,
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "3hop2__11282_57233_56883",
+    "hops": 3,
+    "first_hop": false,
+    "bridges": [
+     false,
+     false
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "3hop1__617062_127905_80286",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "3hop1__9285_5188_63702",
+    "hops": 3,
+    "first_hop": false,
+    "bridges": [
+     true,
+     false
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "3hop1__161433_33952_34099",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "3hop1__389069_132457_51423",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "3hop2__125104_90098_10557",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     false,
+     false
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "3hop1__847420_720378_15538",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "3hop1__390673_228453_86925",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     false,
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "3hop2__36852_613770_7713",
+    "hops": 3,
+    "first_hop": true,
+    "bridges": [
+     false,
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "4hop2__71753_648517_70784_79935",
+    "hops": 4,
+    "first_hop": true,
+    "bridges": [
+     false,
+     true,
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "4hop1__94201_642284_131926_89261",
+    "hops": 4,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "4hop1__726675_508773_85832_745702",
+    "hops": 4,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "4hop1__88342_75218_128008_48717",
+    "hops": 4,
+    "first_hop": false,
+    "bridges": [
+     false,
+     true,
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "4hop1__802394_153080_159767_81096",
+    "hops": 4,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "4hop1__131113_59747_211319_557671",
+    "hops": 4,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "4hop1__9007_698949_157828_162309",
+    "hops": 4,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "4hop1__342858_131850_33952_34099",
+    "hops": 4,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "4hop1__130623_32392_823060_610794",
+    "hops": 4,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "4hop1__638988_17130_70784_61381",
+    "hops": 4,
+    "first_hop": false,
+    "bridges": [
+     true,
+     false,
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "4hop1__749363_49925_13759_736921",
+    "hops": 4,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "4hop2__161602_426860_88460_63559",
+    "hops": 4,
+    "first_hop": false,
+    "bridges": [
+     false,
+     true,
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "4hop1__88342_49853_128008_80286",
+    "hops": 4,
+    "first_hop": true,
+    "bridges": [
+     false,
+     true,
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "4hop2__567956_39078_8987_8974",
+    "hops": 4,
+    "first_hop": true,
+    "bridges": [
+     false,
+     false,
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "4hop1__777217_32392_823060_610794",
+    "hops": 4,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "4hop1__72247_497223_15840_36014",
+    "hops": 4,
+    "first_hop": false,
+    "bridges": [
+     false,
+     true,
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "4hop1__88342_75218_128008_54974",
+    "hops": 4,
+    "first_hop": false,
+    "bridges": [
+     false,
+     true,
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "4hop3__746868_88460_30152_20999",
+    "hops": 4,
+    "first_hop": false,
+    "bridges": [
+     true,
+     false,
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "4hop1__178366_229349_66759_75165",
+    "hops": 4,
+    "first_hop": false,
+    "bridges": [
+     true,
+     false,
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "4hop1__752321_153080_33897_81096",
+    "hops": 4,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "4hop3__270458_88460_30152_20999",
+    "hops": 4,
+    "first_hop": true,
+    "bridges": [
+     true,
+     false,
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "4hop1__608132_508773_85832_745702",
+    "hops": 4,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "4hop1__58323_375563_161848_44231",
+    "hops": 4,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "4hop1__88342_49853_128008_86588",
+    "hops": 4,
+    "first_hop": false,
+    "bridges": [
+     false,
+     true,
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "4hop1__56635_49925_13759_736921",
+    "hops": 4,
+    "first_hop": false,
+    "bridges": [
+     true,
+     true,
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "4hop1__525129_315334_131926_90707",
+    "hops": 4,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "4hop1__145422_698949_157828_162309",
+    "hops": 4,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "4hop1__94201_642284_131926_13165",
+    "hops": 4,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "4hop3__324979_836463_161616_77103",
+    "hops": 4,
+    "first_hop": true,
+    "bridges": [
+     true,
+     false,
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "4hop1__343844_17130_70784_61381",
+    "hops": 4,
+    "first_hop": false,
+    "bridges": [
+     true,
+     false,
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "4hop3__700962_88460_30152_20999",
+    "hops": 4,
+    "first_hop": true,
+    "bridges": [
+     true,
+     false,
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "4hop1__342858_131850_33952_33939",
+    "hops": 4,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "4hop2__161324_14670_8987_8974",
+    "hops": 4,
+    "first_hop": false,
+    "bridges": [
+     false,
+     false,
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "4hop1__152146_5274_458768_33632",
+    "hops": 4,
+    "first_hop": true,
+    "bridges": [
+     true,
+     false,
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "4hop3__160230_470287_128875_72134",
+    "hops": 4,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "4hop1__344155_765799_282674_759393",
+    "hops": 4,
+    "first_hop": true,
+    "bridges": [
+     true,
+     false,
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "4hop1__436202_765799_282674_759393",
+    "hops": 4,
+    "first_hop": true,
+    "bridges": [
+     true,
+     false,
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "4hop1__58323_375563_161848_83118",
+    "hops": 4,
+    "first_hop": true,
+    "bridges": [
+     true,
+     true,
+     true
+    ],
+    "chain": true
+   },
+   {
+    "question_id": "4hop1__88342_75218_128008_80286",
+    "hops": 4,
+    "first_hop": true,
+    "bridges": [
+     false,
+     true,
+     true
+    ],
+    "chain": false
+   },
+   {
+    "question_id": "4hop1__833841_378185_282674_759393",
+    "hops": 4,
+    "first_hop": true,
+    "bridges": [
+     true,
+     false,
+     true
+    ],
+    "chain": false
+   }
+  ],
+  "hit_sizes": {
+   "first_hop_median": 2.5,
+   "first_hop_p90": 687,
+   "bridge_median": 88.0,
+   "bridge_p90": 848
+  }
+ },
+ "produced_by": {
+  "model": null,
+  "model_calls": 0,
+  "producer": "grep_probe.py"
+ }
+}

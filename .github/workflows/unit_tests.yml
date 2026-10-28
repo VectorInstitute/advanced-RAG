@@ -1,0 +1,101 @@
+name: unit tests
+permissions:
+  contents: read
+  pull-requests: write
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - .pre-commit-config.yaml
+      - .github/workflows/code_checks.yml
+      - .github/workflows/docs.yml
+      - .github/workflows/unit_tests.yml
+      - '**.py'
+      - '**.ipynb'
+      - uv.lock
+      - pyproject.toml
+      - '**.rst'
+      - '**.md'
+  pull_request:
+    branches:
+      - main
+    paths:
+      - .pre-commit-config.yaml
+      - .github/workflows/code_checks.yml
+      - .github/workflows/docs.yml
+      - .github/workflows/unit_tests.yml
+      - '**.py'
+      - '**.ipynb'
+      - uv.lock
+      - pyproject.toml
+      - '**.rst'
+      - '**.md'
+
+jobs:
+  unit-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7.0.1
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@07a047e608db84b3d8c06cd9a7c7dcc9c355c18e
+        with:
+          # Install a specific version of uv.
+          version: "0.9.11"
+          enable-cache: true
+
+      - name: "Set up Python"
+        uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0
+        with:
+          python-version-file: ".python-version"
+
+      - name: Install dependencies
+        run: |
+          uv venv .venv
+          source .venv/bin/activate
+          uv sync --all-packages --all-extras --dev
+
+      # The published-figure guards re-measure retrieval on the CUAD test split
+      # with a local embedding model, and they fail here when either is missing.
+      # The key changes when the loader's pin or the fetch script does, so the
+      # model snapshot is otherwise kept, which is what keeps a measured figure
+      # from drifting with upstream.
+      - name: Restore the guard data
+        uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: |
+            ~/.cache/aieng-advanced-rag/corpora
+            ~/.cache/huggingface
+          key: guard-data-${{ hashFiles('aieng-advanced-rag/aieng/advanced_rag/corpora/cuad.py', 'aieng-advanced-rag/aieng/advanced_rag/corpora/download.py', 'scripts/fetch_test_data.py') }}
+
+      - name: Fetch the guard data
+        run: |
+          source .venv/bin/activate
+          python scripts/fetch_test_data.py
+
+      - name: Package tests
+        run: |
+          source .venv/bin/activate
+          cd aieng-advanced-rag
+          pytest -rs -m "not integration_test" tests
+
+      # Run from the repository root: the implementations are not workspace
+      # members, so a run from inside one cannot find the package.
+      #
+      # Every directory named tests under implementations/ runs, at any depth,
+      # so a new implementation or special topic needs no edit here. The pytest
+      # run is shared, so two test modules with the same file name in different
+      # tests/ directories fail collection unless those directories have an
+      # __init__.py.
+      - name: Implementation tests
+        run: |
+          source .venv/bin/activate
+          mapfile -t test_dirs < <(find implementations -type d -name tests -not -path '*/.*' -prune | sort)
+          if [ "${#test_dirs[@]}" -eq 0 ]; then
+            echo "No tests directory found under implementations/" >&2
+            exit 1
+          fi
+          printf 'Collecting %s\n' "${test_dirs[@]}"
+          pytest -rs "${test_dirs[@]}"

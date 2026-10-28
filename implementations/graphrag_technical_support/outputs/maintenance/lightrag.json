@@ -1,0 +1,134 @@
+{
+ "lightrag_version": "1.5.6",
+ "model": "Qwen3_6-35B-A3B",
+ "index": "graphrag/musique/lightrag-5, copied before any change",
+ "steps": [
+  {
+   "operation": "adelete_by_doc_id(musique::00004)",
+   "result": "success",
+   "model_calls": 0,
+   "tokens": 0,
+   "seconds": 2.4,
+   "nodes": [
+    61,
+    60
+   ],
+   "edges": [
+    65,
+    63
+   ],
+   "chunks": [
+    6,
+    5
+   ],
+   "documents": [
+    5,
+    4
+   ],
+   "nodes_removed": [
+    "Jesús Aranguren"
+   ],
+   "nodes_added": [],
+   "descriptions_rewritten": [
+    "Athletic Bilbao",
+    "Copa del Rey"
+   ],
+   "edges_removed": 2,
+   "edges_added": 0
+  },
+  {
+   "operation": "amerge_entities(['Barcelona', 'FC Barcelona'] -> FC Barcelona)",
+   "result": "ok",
+   "model_calls": 0,
+   "tokens": 0,
+   "seconds": 11.0,
+   "nodes": [
+    60,
+    59
+   ],
+   "edges": [
+    63,
+    61
+   ],
+   "chunks": [
+    5,
+    5
+   ],
+   "documents": [
+    4,
+    4
+   ],
+   "nodes_removed": [
+    "Barcelona"
+   ],
+   "nodes_added": [],
+   "descriptions_rewritten": [
+    "FC Barcelona"
+   ],
+   "edges_removed": 5,
+   "edges_added": 3
+  },
+  {
+   "operation": "edit musique::00002: adelete_by_doc_id then ainsert",
+   "result": "ok",
+   "model_calls": 2,
+   "tokens": 6291,
+   "seconds": 24.9,
+   "nodes": [
+    59,
+    60
+   ],
+   "edges": [
+    61,
+    59
+   ],
+   "chunks": [
+    5,
+    5
+   ],
+   "documents": [
+    4,
+    4
+   ],
+   "nodes_removed": [],
+   "nodes_added": [
+    "Diego Armando Maradona"
+   ],
+   "descriptions_rewritten": [
+    "Bernd Schuster",
+    "Boca Juniors",
+    "Copa del Rey",
+    "Diego Maradona",
+    "European Cup",
+    "FC Barcelona",
+    "La Liga",
+    "Luis",
+    "Napoli",
+    "Real Madrid"
+   ],
+   "edges_removed": 5,
+   "edges_added": 3
+  }
+ ],
+ "smoke": {
+  "question": "Which club did Jesús Aranguren spend his whole professional career with?",
+  "cites": [
+   "musique::00000",
+   "musique::00001",
+   "musique::00002",
+   "musique::00003"
+  ],
+  "cites_deleted": false
+ },
+ "cost": {
+  "label": "lightrag-maintenance",
+  "calls": 3,
+  "prompt_tokens": 5992,
+  "completion_tokens": 1012,
+  "total_tokens": 7004,
+  "cache_hits": 0,
+  "empty_responses": 0,
+  "failed_attempts": 0,
+  "call_seconds": 14.5
+ }
+}

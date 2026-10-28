@@ -1,0 +1,27 @@
+{
+  "validation_date": "2026-10-07",
+  "revision": "5ec05b38deecc3318bb432c69865959c56058990",
+  "files": {
+    "musique.json": {
+      "url": "https://huggingface.co/datasets/osunlp/HippoRAG_2/resolve/5ec05b38deecc3318bb432c69865959c56058990/musique.json",
+      "bytes": 12543629,
+      "sha256": "98ed4e21d3076532f6388d42320fb809599c63a0d8dffca8ece5e41922be6b46"
+    },
+    "musique_corpus.json": {
+      "url": "https://huggingface.co/datasets/osunlp/HippoRAG_2/resolve/5ec05b38deecc3318bb432c69865959c56058990/musique_corpus.json",
+      "bytes": 6239261,
+      "sha256": "73157a03ce3f0b1a5673dd5dc12bb970c24976dbffc688af9eecdd758c97ffcb"
+    }
+  },
+  "passages": 11656,
+  "questions": 1000,
+  "questions_by_hop_count": {
+    "2": 518,
+    "3": 316,
+    "4": 166
+  },
+  "supporting_passage_occurrences": 2648,
+  "dependency_edges": 1648,
+  "connected_acyclic_question_graphs": 1000,
+  "all_supports_resolve": true
+}

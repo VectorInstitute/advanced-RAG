@@ -1,0 +1,20 @@
+{
+  "method": "hipporag2",
+  "model": "Qwen3_6-35B-A3B",
+  "passages": 11656,
+  "wall_seconds": 14144.5,
+  "cost": {
+    "label": "",
+    "calls": 11285,
+    "prompt_tokens": 3088633,
+    "completion_tokens": 4334007,
+    "total_tokens": 7422640,
+    "cache_hits": 67,
+    "empty_responses": 0,
+    "failed_attempts": 6899,
+    "call_seconds": 146113.9
+  },
+  "calls_per_passage": 0.97,
+  "tokens_per_passage": 636.8,
+  "projected_for_all_passages": null
+}

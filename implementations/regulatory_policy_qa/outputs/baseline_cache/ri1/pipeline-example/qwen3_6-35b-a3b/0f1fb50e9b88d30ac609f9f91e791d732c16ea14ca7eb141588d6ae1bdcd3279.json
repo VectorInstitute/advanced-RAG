@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "cache_key": "0f1fb50e9b88d30ac609f9f91e791d732c16ea14ca7eb141588d6ae1bdcd3279",
+  "ri_id": "ri1",
+  "artifact_type": "pipeline-example",
+  "producer_id": "Qwen3_6-35B-A3B",
+  "config": {
+    "chunk_chars": 1200,
+    "corpus_sha256": "460267b56052a2dc5aead98eb35eadef9e6734d5723d37b4a9790e410f812387",
+    "evidence_budget": 5,
+    "grader": "HeuristicGrader",
+    "max_attempts": 1,
+    "max_documents": 20,
+    "max_tokens": 512,
+    "overlap_chars": 200,
+    "policy": "SingleShotPolicy",
+    "query_id": "1::nda-16",
+    "require_citations": true,
+    "retriever": "bm25",
+    "scope": "contract",
+    "temperature": 0.0,
+    "thinking": false,
+    "top_k": 10
+  },
+  "created_at": "2026-10-06T21:51:06.290674+00:00",
+  "value": {
+    "corpus": "ContractNLI",
+    "query_id": "1::nda-16",
+    "abstained": false,
+    "citations": 3,
+    "attempts": 1,
+    "usage": {
+      "questions": 1,
+      "calls": 1,
+      "prompt_tokens": 1350,
+      "completion_tokens": 131,
+      "total_tokens": 1481,
+      "tool_calls": 0,
+      "cache_hits": 0,
+      "empty_responses": 0,
+      "calls_missing_usage": 0,
+      "service_seconds": 5.972
+    }
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "note": "Provenance sidecar for immutable historical fixtures, cache envelopes and model-free artifacts. Measured payloads and cache keys are preserved; response model identifiers were not recorded in these historical runs.",
+  "files": {
+    "traces_contract-nli_heuristic.json": {
+      "model": "Qwen3_6-35B-A3B",
+      "response_models": [],
+      "family": "onprem",
+      "endpoint": "vector-cluster",
+      "producer": "regulatory_policy_qa/run_threshold_sweep.py",
+      "usage": {},
+      "note": "Harvested traces for the heuristic grader on contract-nli; the paired sweep_contract-nli.json holds the call counts. HeuristicGrader is model-free; generation uses the model.",
+      "source": "THRESHOLDS.md (grading and generation through Qwen3_6-35B-A3B with reasoning disabled) and sweep_lab.proxy.DEFAULT_MODEL in the code that wrote this file",
+      "request": {
+        "max_tokens": 512,
+        "temperature": 0,
+        "thinking": "disabled"
+      }
+    },
+    "traces_contract-nli_llm.json": {
+      "model": "Qwen3_6-35B-A3B",
+      "response_models": [],
+      "family": "onprem",
+      "endpoint": "vector-cluster",
+      "producer": "regulatory_policy_qa/run_threshold_sweep.py",
+      "usage": {},
+      "note": "Harvested traces for the llm grader on contract-nli; the paired sweep_contract-nli.json holds the call counts.",
+      "source": "THRESHOLDS.md (grading and generation through Qwen3_6-35B-A3B with reasoning disabled) and sweep_lab.proxy.DEFAULT_MODEL in the code that wrote this file",
+      "request": {
+        "max_tokens": 512,
+        "temperature": 0,
+        "thinking": "disabled"
+      }
+    },
+    "traces_cuad_heuristic.json": {
+      "model": "Qwen3_6-35B-A3B",
+      "response_models": [],
+      "family": "onprem",
+      "endpoint": "vector-cluster",
+      "producer": "regulatory_policy_qa/run_threshold_sweep.py",
+      "usage": {},
+      "note": "Harvested traces for the heuristic grader on cuad; the paired sweep_cuad.json holds the call counts. HeuristicGrader is model-free; generation uses the model.",
+      "source": "THRESHOLDS.md (grading and generation through Qwen3_6-35B-A3B with reasoning disabled) and sweep_lab.proxy.DEFAULT_MODEL in the code that wrote this file",
+      "request": {
+        "max_tokens": 512,
+        "temperature": 0,
+        "thinking": "disabled"
+      }
+    },
+    "traces_cuad_llm.json": {
+      "model": "Qwen3_6-35B-A3B",
+      "response_models": [],
+      "family": "onprem",
+      "endpoint": "vector-cluster",
+      "producer": "regulatory_policy_qa/run_threshold_sweep.py",
+      "usage": {},
+      "note": "Harvested traces for the llm grader on cuad; the paired sweep_cuad.json holds the call counts.",
+      "source": "THRESHOLDS.md (grading and generation through Qwen3_6-35B-A3B with reasoning disabled) and sweep_lab.proxy.DEFAULT_MODEL in the code that wrote this file",
+      "request": {
+        "max_tokens": 512,
+        "temperature": 0,
+        "thinking": "disabled"
+      }
+    },
+    "traces_multihop-null_heuristic.json": {
+      "model": "Qwen3_6-35B-A3B",
+      "response_models": [],
+      "family": "onprem",
+      "endpoint": "vector-cluster",
+      "producer": "regulatory_policy_qa/run_threshold_sweep.py",
+      "usage": {},
+      "note": "Harvested traces for the heuristic grader on multihop-null; the paired sweep_multihop-null.json holds the call counts. HeuristicGrader is model-free; generation uses the model.",
+      "source": "THRESHOLDS.md (grading and generation through Qwen3_6-35B-A3B with reasoning disabled) and sweep_lab.proxy.DEFAULT_MODEL in the code that wrote this file",
+      "request": {
+        "max_tokens": 512,
+        "temperature": 0,
+        "thinking": "disabled"
+      }
+    },
+    "traces_multihop-null_llm.json": {
+      "model": "Qwen3_6-35B-A3B",
+      "response_models": [],
+      "family": "onprem",
+      "endpoint": "vector-cluster",
+      "producer": "regulatory_policy_qa/run_threshold_sweep.py",
+      "usage": {},
+      "note": "Harvested traces for the llm grader on multihop-null; the paired sweep_multihop-null.json holds the call counts.",
+      "source": "THRESHOLDS.md (grading and generation through Qwen3_6-35B-A3B with reasoning disabled) and sweep_lab.proxy.DEFAULT_MODEL in the code that wrote this file",
+      "request": {
+        "max_tokens": 512,
+        "temperature": 0,
+        "thinking": "disabled"
+      }
+    },
+    "integration_validation.json": {
+      "model": null,
+      "response_models": [],
+      "family": null,
+      "endpoint": null,
+      "producer": "RI1 integration validation",
+      "note": "Offline tests, static checks, notebook reference replay and cached-result verification; no new chat model calls.",
+      "source": "integration_validation.json scope, new_model_calls and latest_code_checks",
+      "model_calls": 0
+    }
+  }
+}

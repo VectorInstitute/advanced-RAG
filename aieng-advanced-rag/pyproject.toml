@@ -1,0 +1,230 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = [
+    "codecov>=2.1.13",
+    "mypy>=2.2.0",
+    "nbqa>=1.9.1",
+    "pip-audit>=2.7.3",
+    "pre-commit>=4.1.0",
+    "pytest>=8.3.4",
+    "pytest-asyncio>=0.25.2",
+    "pytest-cov>=6.0.0",
+    "pytest-mock>=3.14.0",
+    "ruff>=0.15.21",
+]
+
+[project]
+name = "aieng-advanced-rag"
+version = "0.1.1"
+description = "Shared library for the Advanced RAG Bootcamp"
+authors = [{name = "Vector AI Engineering", email = "ai_engineering@vectorinstitute.ai"}]
+requires-python = ">=3.11,<4.0"
+readme = "README.md"
+license = "MIT"
+# The base install stays empty on purpose: the corpus loader, the metrics, the
+# chunkers, and BM25 need nothing, so a participant can score a retriever
+# without pulling a model or a GraphRAG framework. Everything heavier is an
+# extra, including the dense retriever's vector store (`qdrant`).
+dependencies = []
+
+[project.optional-dependencies]
+# The default GraphRAG method for the bootcamp.
+lightrag = ["lightrag-hku>=1.5", "sentence-transformers>=3.0"]
+# HippoRAG 2 via atlas-rag (AutoSchemaKG). Deliberately NOT the `hipporag`
+# package, which pins vllm, torch==2.5.1 and fourteen CUDA packages and will not
+# run in a CPU container.
+hipporag = ["atlas-rag>=0.0.5", "sentence-transformers>=3.0", "faiss-cpu>=1.8"]
+# Microsoft GraphRAG. Not yet exercised.
+graphrag = ["graphrag>=3.0"]
+# Local CPU embeddings for the dense arm. A pipeline built on this library can
+# use a hosted embedding API instead.
+local = ["sentence-transformers>=3.0"]
+# The numpy dense index and semantic chunking.
+retrieval = ["numpy>=1.26"]
+# Qdrant as the vector store behind `QdrantStore` and `QdrantRetriever`. The pin
+# is exact because quantization fields such as TurboQuant arrived in 1.19 and the
+# documentation and the client have disagreed on their names. In-process mode
+# (`:memory:` or a path) needs no server, so this extra is enough for every RI.
+qdrant = ["qdrant-client==1.19.1", "numpy>=1.26"]
+# Token-budget chunking counts tokens with the embedding model's own tokenizer.
+chunking = ["transformers>=4.40", "numpy>=1.26"]
+# Cross-encoder reranking over first-stage candidates.
+rerank = ["sentence-transformers>=3.0"]
+# Table-aware chunking reads a converted document's table cells.
+filings = ["docling-core>=2.0"]
+# The Docling converter itself, for the ingestion harness's `convert` callable. The
+# harness takes the converter as an argument and is tested without this extra.
+# torchvision arrives through docling's layout models anyway. It is named here
+# so the workspace's `[tool.uv.sources]` entry, which reaches direct
+# dependencies only, routes it to the same CPU wheel index as torch. A PyPI
+# torchvision against a CPU torch fails on import with "operator
+# torchvision::nms does not exist".
+docling = ["docling>=2.0", "docling-core>=2.0", "torchvision>=0.20"]
+# Late chunking needs token-level output from a long-context encoder.
+late = ["torch>=2.2", "transformers>=4.40", "numpy>=1.26"]
+# The ADK agent loop. ADK's own 23 core dependencies carry no numpy, no torch,
+# and no LiteLLM, so this extra is light for what it does. LiteLLM is ADK's
+# `extensions` extra rather than a core dependency and ADK's documentation tells
+# you to install it yourself, so it is named here at ADK's own floor. The pin is
+# exact because the 2.x line ships breaking changes every few weeks: 2.6.0
+# namespaced artifacts, 2.7.0 moved pyarrow, and 2.10.0 changed session
+# behaviour the loop depends on.
+agents = ["google-adk==2.10.0", "litellm>=1.84"]
+# Langfuse tracing. Every third-party import in `tracing` is function-local
+# behind `try/except ImportError`, so the module imports and soft-fails without
+# this extra. The OpenInference instrumentors are deliberately absent: the ADK
+# one has to be checked against the exact `google-adk` pin above before it is
+# offered, and the LangChain and LlamaIndex ones instrument frameworks this
+# package does not depend on.
+tracing = ["langfuse>=4.5.1"]
+# The batch layer in `aieng.advanced_rag.batch`: infermesh, Vector's batching
+# client on LiteLLM, for bulk builds such as graph extraction, synthetic
+# questions, judges, and contextual chunking. It brings LiteLLM with it.
+# infermesh needs Python 3.12, the version the workspace already requires.
+# Capped below 0.4 because the 502 retry sets a private LMClient attribute.
+batch = ["infermesh>=0.3.2,<0.4"]
+# SPLADE and ColBERT retrieval through fastembed's ONNX runtime, which needs no
+# torch. 0.7 is the floor because fastembed's late-interaction query path, which
+# applies ColBERT's [MASK] augmentation, is what `ColbertRetriever` relies on.
+representations = ["fastembed>=0.7", "numpy>=1.26"]
+# No Docling converter here on purpose. `ingestion` takes the converter as a
+# callable, the way the pipeline takes retrieval, so the harness is testable
+# with a fake and a participant who only reads already-converted documents
+# never installs a PDF stack. `filings` above carries the document types the
+# harness annotates against.
+all = [
+    "lightrag-hku>=1.5",
+    "atlas-rag>=0.0.5",
+    "sentence-transformers>=3.0",
+    "faiss-cpu>=1.8",
+    "numpy>=1.26",
+    "transformers>=4.40",
+    "torch>=2.2",
+    "docling-core>=2.0",
+    "docling>=2.0",
+    "torchvision>=0.20",
+    "langfuse>=4.5.1",
+    "fastembed>=0.7",
+    # Capped below 0.4 because the 502 retry sets a private LMClient attribute.
+    "infermesh>=0.3.2,<0.4",
+    "qdrant-client==1.19.1",
+]
+
+[tool.hatch.build.targets.sdist]
+include = ["aieng/"]
+
+[tool.hatch.build.targets.wheel]
+include = ["aieng/"]
+
+[tool.mypy]
+ignore_missing_imports = true
+install_types = true
+pretty = true
+namespace_packages = true
+explicit_package_bases = true
+non_interactive = true
+warn_unused_configs = true
+allow_any_generics = false
+allow_subclassing_any = false
+allow_untyped_calls = false
+allow_untyped_defs = false
+allow_incomplete_defs = false
+check_untyped_defs = true
+allow_untyped_decorators = false
+warn_redundant_casts = true
+warn_unused_ignores = true
+warn_return_any = true
+implicit_reexport = false
+strict_equality = true
+extra_checks = true
+
+# ADK is an optional extra, so mypy normally type-checks this repository without
+# `google-adk` installed, and `BaseToolset` resolves to `Any`. Subclassing it is
+# the documented way to build a toolset, so the check is relaxed for that one
+# module rather than silenced with an ignore comment, which would itself become
+# an error once the extra is installed.
+
+# docling-core ships py.typed but binds its public names without `__all__`, so
+# strict re-export checking rejects `from docling_core.types.doc.document import
+# TableItem` for a name the module exposes at runtime. The gap is in the
+# package's typing, so it is relaxed for that package alone.
+[[tool.mypy.overrides]]
+module = "docling_core.*"
+implicit_reexport = true
+
+[[tool.mypy.overrides]]
+module = ["*.agents.toolset"]
+disallow_subclassing_any = false
+
+[tool.ruff]
+include = ["*.py", "pyproject.toml", "*.ipynb"]
+line-length = 88
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+docstring-code-format = true
+
+[tool.ruff.lint]
+select = [
+    "A", # flake8-builtins
+    "B", # flake8-bugbear
+    "COM", # flake8-commas
+    "C4", # flake8-comprehensions
+    "RET", # flake8-return
+    "SIM", # flake8-simplify
+    "ICN", # flake8-import-conventions
+    "Q", # flake8-quotes
+    "RSE", # flake8-raise
+    "D", # pydocstyle
+    "E", # pycodestyle
+    "F", # pyflakes
+    "I", # isort
+    "W", # pycodestyle
+    "N", # pep8-naming
+    "ERA", # eradicate
+    "PL", # pylint
+]
+fixable = ["A", "B", "COM", "C4", "RET", "SIM", "ICN", "Q", "RSE", "D", "E", "F", "I", "W", "N", "ERA", "PL"]
+ignore = [
+    "B905", # `zip()` without an explicit `strict=` parameter
+    "E501", # line too long
+    "D203", # 1 blank line required before class docstring
+    "D213", # Multi-line docstring summary should start at the second line
+    "PLR2004", # Replace magic number with named constant
+    "PLR0913", # Too many arguments
+    "COM812", # Missing trailing comma
+    # Every heavy dependency is an optional extra, so an adapter has to import
+    # it inside the function that needs it. Importing at module level would make
+    # the base install unusable, which is the opposite of what the extras are for.
+    "PLC0415", # `import` should be at the top-level of a file
+]
+
+# Ignore import violations in all `__init__.py` files.
+[tool.ruff.lint.per-file-ignores]
+"__init__.py" = ["E402", "F401", "F403", "F811"]
+# Test names here are full sentences ("test_a_hit_on_a_chunk_the_adapter_never_
+# saw_is_dropped"), so a per-test docstring would restate the name. D100 stays
+# on, so every test module still says what it covers. This matches the
+# per-file-ignores the rag_cache package already sets for its own tests.
+"tests/**" = ["D101", "D102", "D103", "D104", "D105"]
+
+[tool.ruff.lint.pep8-naming]
+ignore-names = ["X*", "setUp"]
+
+[tool.ruff.lint.isort]
+lines-after-imports = 2
+
+[tool.ruff.lint.pydocstyle]
+convention = "numpy"
+
+[tool.ruff.lint.pycodestyle]
+max-doc-length = 88
+
+[tool.pytest.ini_options]
+markers = [
+    "integration_test: marks tests as integration tests",
+]

@@ -1,0 +1,21 @@
+{
+  "files": {
+    "answers.json": {
+      "model": "Qwen3_6-35B-A3B",
+      "source": "answer_model"
+    },
+    "rankings.json": {
+      "model": null,
+      "model_calls": 0,
+      "embedding_model": "BAAI/bge-small-en-v1.5",
+      "note": "Local dense retrieval only; no chat model is called."
+    },
+    "retrieval.json": {
+      "model": null,
+      "model_calls": 0,
+      "embedding_model": "BAAI/bge-small-en-v1.5",
+      "note": "Local dense retrieval only; no chat model is called."
+    }
+  },
+  "note": "The 1,000 cited answers ship in RI #2's reference release as the dense-predictions artifact, with its own produced_by block."
+}

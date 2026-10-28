@@ -1,0 +1,16 @@
+{
+  "calls": 41,
+  "prompt_tokens": 28957,
+  "completion_tokens": 3213,
+  "total_tokens": 32170,
+  "cache_hits": null,
+  "wall_seconds": null,
+  "questions": 205,
+  "documents": 5,
+  "evidence_sha256": "ae6ad898f80d61d79cbe3c9654b366e4c3db1ca6a7c635847c10bd563947b986",
+  "recovery": {
+    "method": "41 unique completed keyword response rows form final cache suffix before any generation",
+    "cache_sha256_before_generation": "b092ad12b4d4bbb61bf85e8c64c25e1098c6863edf55631fb04e45bcfa90d9ff",
+    "limitation": "Completed unique requests are a lower bound; retry billing, cache hits and timing were not persisted."
+  }
+}

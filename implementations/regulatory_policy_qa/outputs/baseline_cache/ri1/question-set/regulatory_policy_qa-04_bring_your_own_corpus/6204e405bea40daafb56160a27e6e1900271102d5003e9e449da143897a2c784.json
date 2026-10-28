@@ -1,0 +1,1665 @@
+{
+  "schema_version": 1,
+  "cache_key": "6204e405bea40daafb56160a27e6e1900271102d5003e9e449da143897a2c784",
+  "ri_id": "ri1",
+  "artifact_type": "question-set",
+  "producer_id": "regulatory_policy_qa/04_bring_your_own_corpus",
+  "config": {
+    "checker": "Qwen3_6-35B-A3B",
+    "config": {
+      "boilerplate_cosine": 0.95,
+      "dedup_cosine": 0.92,
+      "domain": "non-disclosure agreements between companies",
+      "extra": {},
+      "few_shot": [],
+      "held_out_minimum": 2,
+      "held_out_passages": 4,
+      "held_out_share": 0.1,
+      "near_miss_share": 0.5,
+      "null_check_k": 10,
+      "null_share": 0.2,
+      "paraphrase": false,
+      "passage_chars": 1200,
+      "passages_per_document": 2,
+      "phrasings": [
+        {
+          "description": "A complete, natural question, as typed into a chat box.",
+          "name": "natural",
+          "weight": 3.0
+        },
+        {
+          "description": "A terse search-engine style query of a few words.",
+          "name": "keywords",
+          "weight": 1.0
+        }
+      ],
+      "probe_chunk_chars": 1200,
+      "probe_overlap_chars": 200,
+      "questions": [
+        {
+          "description": "A question with a short answer: a name, number, period, or party.",
+          "name": "factoid",
+          "weight": 2.0
+        },
+        {
+          "description": "A question answered yes or no, with the condition that decides it.",
+          "name": "yes_no",
+          "weight": 1.0
+        },
+        {
+          "description": "A question about when something applies, or what is excluded from it.",
+          "name": "condition_or_exception",
+          "weight": 1.5
+        },
+        {
+          "description": "A question about what someone has to do, and how or when.",
+          "name": "procedure",
+          "weight": 1.0
+        }
+      ],
+      "scope": "document",
+      "seed": 0,
+      "statements_per_passage": 2,
+      "uniqueness_k": 5,
+      "users": [
+        {
+          "description": "A lawyer reviewing the agreement, who uses contract vocabulary and asks precise questions.",
+          "name": "in_house_counsel",
+          "weight": 2.0
+        },
+        {
+          "description": "A manager about to share information under the agreement, who asks in plain words what they may or may not do.",
+          "name": "business_manager",
+          "weight": 1.0
+        }
+      ],
+      "workers": 12
+    },
+    "corpus": "9faae1c6ae1520d865ef904bccb231e867bef40893f18ff315e702b0938b476f",
+    "documents": 10,
+    "endpoint": "vector-cluster",
+    "judge": "Qwen3_8-Flash-Next",
+    "model": "Qwen3_8-27B",
+    "prompts": "1a59f40641deca2a"
+  },
+  "created_at": "2026-10-21T04:15:13.268540+00:00",
+  "value": {
+    "result": {
+      "questions": [
+        {
+          "query_id": "sq-039f063041f1",
+          "question": "Which paragraph's requirements must be satisfied before any legally compelled disclosure of Confidential Information is made?",
+          "reference": "paragraph 6",
+          "evidence": [
+            {
+              "doc_id": "1.txt",
+              "start": 4622,
+              "end": 4901,
+              "quote": "Confidential Information shall not include information required to be disclosed in a judicial or administrative proceeding, or otherwise required to be disclosed by law or regulation, although the requirements of paragraph 6 hereof shall apply prior to any disclosure being made.",
+              "role": "gold"
+            },
+            {
+              "doc_id": "1.txt",
+              "start": 10188,
+              "end": 10240,
+              "quote": "6. Compelled Disclosure of Confidential Information.",
+              "role": "equivalent"
+            }
+          ],
+          "kind": "single_hop",
+          "scope": "1.txt",
+          "group_id": "sq-039f063041f1",
+          "variant": "plain",
+          "labels": {
+            "question_chars": 125,
+            "hops": 1,
+            "spans": 2,
+            "bm25_rank": 1,
+            "dense_rank": 1,
+            "gold_cosine": 0.8161,
+            "leaked_terms": [
+              "paragraph",
+              "requirements"
+            ],
+            "leak_count": 2
+          },
+          "provenance": {
+            "user_category": "in_house_counsel",
+            "question_category": "factoid",
+            "phrasing": "natural",
+            "generator": "Qwen3_8-27B",
+            "checker": "Qwen3_6-35B-A3B",
+            "judge": "Qwen3_8-Flash-Next",
+            "round_trip_answer": "paragraph 6",
+            "uniqueness": "equivalent",
+            "claimed_quote": "Confidential Information shall not include information required to be disclosed in a judicial or administrative proceeding, or otherwise required to be disclosed by law or regulation, although the requirements of paragraph 6 hereof shall apply prior to any disclosure being made."
+          }
+        },
+        {
+          "query_id": "sq-377ecd5b3d0b",
+          "question": "Do I need to send the original signed copies of the acknowledgements to the other party?",
+          "reference": "Yes, the Recipient shall provide the Discloser with original signed copies of all of the Acknowledgements.",
+          "evidence": [
+            {
+              "doc_id": "1.txt",
+              "start": 5562,
+              "end": 5702,
+              "quote": "The Recipient shall provide the Discloser with original signed copies of all of the Acknowledgements required under the preceding paragraph.",
+              "role": "gold"
+            }
+          ],
+          "kind": "single_hop",
+          "scope": "1.txt",
+          "group_id": "sq-377ecd5b3d0b",
+          "variant": "plain",
+          "labels": {
+            "question_chars": 88,
+            "hops": 1,
+            "spans": 1,
+            "bm25_rank": 1,
+            "dense_rank": 3,
+            "gold_cosine": 0.7895,
+            "leaked_terms": [
+              "acknowledgements",
+              "original"
+            ],
+            "leak_count": 2
+          },
+          "provenance": {
+            "user_category": "business_manager",
+            "question_category": "yes_no",
+            "phrasing": "natural",
+            "generator": "Qwen3_8-27B",
+            "checker": "Qwen3_6-35B-A3B",
+            "judge": "Qwen3_8-Flash-Next",
+            "round_trip_answer": "Yes, the Recipient shall provide the Discloser with original signed copies of all of the Acknowledgements required under the preceding paragraph.",
+            "uniqueness": "unique",
+            "claimed_quote": "The Recipient shall provide the Discloser with original signed copies of all of the Acknowledgements required under the preceding paragraph."
+          }
+        },
+        {
+          "query_id": "sq-07587f92d86f",
+          "question": "What are the Recipient's immediate obligations upon discovering that Confidential Information has been disclosed to an unauthorized party?",
+          "reference": "Notify the Discloser immediately and cooperate with efforts to regain possession and prevent further unauthorized use.",
+          "evidence": [
+            {
+              "doc_id": "1.txt",
+              "start": 13824,
+              "end": 14158,
+              "quote": "The Recipient shall notify the Discloser immediately upon discovery that any Confidential Information has been communicated or distributed to any unauthorized person or entity and will cooperate with efforts by the Discloser to help the Discloser regain possession of Confidential Information and prevent its further unauthorized use.",
+              "role": "gold"
+            }
+          ],
+          "kind": "single_hop",
+          "scope": "1.txt",
+          "group_id": "sq-07587f92d86f",
+          "variant": "plain",
+          "labels": {
+            "question_chars": 138,
+            "hops": 1,
+            "spans": 1,
+            "bm25_rank": 1,
+            "dense_rank": 8,
+            "gold_cosine": 0.8379,
+            "leaked_terms": [
+              "recipient"
+            ],
+            "leak_count": 1
+          },
+          "provenance": {
+            "user_category": "in_house_counsel",
+            "question_category": "procedure",
+            "phrasing": "natural",
+            "generator": "Qwen3_8-27B",
+            "checker": "Qwen3_6-35B-A3B",
+            "judge": "Qwen3_8-Flash-Next",
+            "round_trip_answer": "The Recipient shall notify the Discloser immediately upon discovery that any Confidential Information has been communicated or distributed to any unauthorized person or entity and will cooperate with efforts by the Discloser to help the Discloser regain possession of Confidential Information and prevent its further unauthorized use.",
+            "uniqueness": "unique",
+            "claimed_quote": "The Recipient shall notify the Discloser immediately upon discovery that any Confidential Information has been communicated or distributed to any unauthorized person or entity and will cooperate with efforts by the Discloser to help the Discloser regain possession of Confidential Information and prevent its further unauthorized use."
+          }
+        },
+        {
+          "query_id": "sq-1a130e9646f7",
+          "question": "To whom does the Discloser have no liability for the use of Confidential Information?",
+          "reference": "the Recipient or the Representatives",
+          "evidence": [
+            {
+              "doc_id": "1.txt",
+              "start": 14176,
+              "end": 14309,
+              "quote": "The Discloser shall have no liability to the Recipient or the Representatives resulting from any use of the Confidential Information.",
+              "role": "gold"
+            }
+          ],
+          "kind": "single_hop",
+          "scope": "1.txt",
+          "group_id": "sq-1a130e9646f7",
+          "variant": "plain",
+          "labels": {
+            "question_chars": 85,
+            "hops": 1,
+            "spans": 1,
+            "bm25_rank": 2,
+            "dense_rank": 1,
+            "gold_cosine": 0.8404,
+            "leaked_terms": [
+              "discloser",
+              "liability"
+            ],
+            "leak_count": 2
+          },
+          "provenance": {
+            "user_category": "in_house_counsel",
+            "question_category": "factoid",
+            "phrasing": "natural",
+            "generator": "Qwen3_8-27B",
+            "checker": "Qwen3_6-35B-A3B",
+            "judge": "Qwen3_8-Flash-Next",
+            "round_trip_answer": "the Recipient or the Representatives",
+            "uniqueness": "unique",
+            "claimed_quote": "The Discloser shall have no liability to the Recipient or the Representatives resulting from any use of the Confidential Information."
+          }
+        },
+        {
+          "query_id": "sq-9c21438e6f43",
+          "question": "Does the definition of Confidential Information explicitly include software source and object code?",
+          "reference": "yes",
+          "evidence": [
+            {
+              "doc_id": "11.txt",
+              "start": 1212,
+              "end": 2551,
+              "quote": "The term “Confidential Information” means any and all tangible and intangible information disclosed to Receiver in oral, written, graphic, recorded, photographic, any machine-readable or in any other medium or form relating to the intellectual property, management, operations, products, inventions, suppliers, customers, financials of VIDAR or any present or contemplated project, contract or relationship between VIDAR and Receiver, including without limitation, any and all plans, Intellectual Property (defined below), know-how, computer programs, software (source and object code), algorithms, computer processing systems, techniques, methodologies, formulae, compilations of information, designs, drawings, schematics, analyses, evaluations, formulations, ingredients, samples, processes, machines, prototypes, mock-ups, product performance data, proposals, job notes, reports, records, specifications, manuals, supplier and customer lists and information, licenses, the prices it obtains or has obtained for the licensing of its software products and services, purchase and sales records, marketing information or any other information concerning the business and goodwill of VIDAR and any information which is identified as being of a confidential or proprietary nature or should be considered confidential under the circumstances.",
+              "role": "gold"
+            },
+            {
+              "doc_id": "11.txt",
+              "start": 465,
+              "end": 783,
+              "quote": "WHEREAS, in the course of its activities with VIDAR, Receiver will receive confidential information about VIDAR, including but not limited to VIDAR’s products (hardware, software and firmware) and its design, engineering, research, development, software, marketing, manufacturing processes, pricing and business plans.",
+              "role": "equivalent"
+            }
+          ],
+          "kind": "single_hop",
+          "scope": "11.txt",
+          "group_id": "sq-9c21438e6f43",
+          "variant": "plain",
+          "labels": {
+            "question_chars": 99,
+            "hops": 1,
+            "spans": 2,
+            "bm25_rank": 1,
+            "dense_rank": 1,
+            "gold_cosine": 0.7578,
+            "leaked_terms": [
+              "object",
+              "source",
+              "code",
+              "software"
+            ],
+            "leak_count": 4
+          },
+          "provenance": {
+            "user_category": "in_house_counsel",
+            "question_category": "yes_no",
+            "phrasing": "natural",
+            "generator": "Qwen3_8-27B",
+            "checker": "Qwen3_6-35B-A3B",
+            "judge": "Qwen3_8-Flash-Next",
+            "round_trip_answer": "Yes",
+            "uniqueness": "equivalent",
+            "claimed_quote": "The term “Confidential Information” means any and all tangible and intangible information disclosed to Receiver in oral, written, graphic, recorded, photographic, any machine-readable or in any other medium or form relating to the intellectual property, management, operations, products, inventions, suppliers, customers, financials of VIDAR or any present or contemplated project, contract or relationship between VIDAR and Receiver, including without limitation, any and all plans, Intellectual Property (defined below), know-how, computer programs, software (source and object code), algorithms, computer processing systems, techniques, methodologies, formulae, compilations of information, designs, drawings, schematics, analyses, evaluations, formulations, ingredients, samples, processes, machines, prototypes, mock-ups, product performance data, proposals, job notes, reports, records, specifications, manuals, supplier and customer lists and information, licenses, the prices it obtains or has obtained for the licensing of its software products and services, purchase and sales records, marketing information or any other information concerning the business and goodwill of VIDAR and any information which is identified as being of a confidential or proprietary nature or should be considered confidential under the circumstances."
+          }
+        },
+        {
+          "query_id": "sq-797c0dc16b7e",
+          "question": "If there's a dispute, do I have to go to court in Virginia?",
+          "reference": "Yes, all actions shall be brought in the state or federal courts located in the Commonwealth of Virginia.",
+          "evidence": [
+            {
+              "doc_id": "11.txt",
+              "start": 9261,
+              "end": 9548,
+              "quote": "This Agreement shall be governed by, and construed in accordance with, the laws of the Commonwealth of Virginia and all actions involving this Agreement shall be brought in the state or federal courts located in the Commonwealth of Virginia, to which the parties consent to jurisdiction.",
+              "role": "gold"
+            }
+          ],
+          "kind": "single_hop",
+          "scope": "11.txt",
+          "group_id": "sq-797c0dc16b7e",
+          "variant": "plain",
+          "labels": {
+            "question_chars": 59,
+            "hops": 1,
+            "spans": 1,
+            "bm25_rank": 1,
+            "dense_rank": 1,
+            "gold_cosine": 0.6406,
+            "leaked_terms": [
+              "virginia"
+            ],
+            "leak_count": 1
+          },
+          "provenance": {
+            "user_category": "business_manager",
+            "question_category": "yes_no",
+            "phrasing": "natural",
+            "generator": "Qwen3_8-27B",
+            "checker": "Qwen3_6-35B-A3B",
+            "judge": "Qwen3_8-Flash-Next",
+            "round_trip_answer": "Yes, all actions involving this Agreement shall be brought in the state or federal courts located in the Commonwealth of Virginia.",
+            "uniqueness": "unique",
+            "claimed_quote": "This Agreement shall be governed by, and construed in accordance with, the laws of the Commonwealth of Virginia and all actions involving this Agreement shall be brought in the state or federal courts located in the Commonwealth of Virginia, to which the parties consent to jurisdiction."
+          }
+        },
+        {
+          "query_id": "sq-7f907f5c3fad",
+          "question": "What specific costs is the Receiver obligated to reimburse VIDAR for if VIDAR has to enforce the Receiver's obligations?",
+          "reference": "all costs and expenses, including attorney’s fees",
+          "evidence": [
+            {
+              "doc_id": "11.txt",
+              "start": 9103,
+              "end": 9248,
+              "quote": "Receiver shall reimburse VIDAR for all costs and expenses, including attorney’s fees, incurred by VIDAR in enforcing the obligations of Receiver.",
+              "role": "gold"
+            }
+          ],
+          "kind": "single_hop",
+          "scope": "11.txt",
+          "group_id": "sq-7f907f5c3fad",
+          "variant": "plain",
+          "labels": {
+            "question_chars": 120,
+            "hops": 1,
+            "spans": 1,
+            "bm25_rank": 1,
+            "dense_rank": 2,
+            "gold_cosine": 0.8312,
+            "leaked_terms": [
+              "receiver",
+              "reimburse",
+              "vidar",
+              "costs"
+            ],
+            "leak_count": 4
+          },
+          "provenance": {
+            "user_category": "in_house_counsel",
+            "question_category": "condition_or_exception",
+            "phrasing": "natural",
+            "generator": "Qwen3_8-27B",
+            "checker": "Qwen3_6-35B-A3B",
+            "judge": "Qwen3_8-Flash-Next",
+            "round_trip_answer": "all costs and expenses, including attorney’s fees",
+            "uniqueness": "unique",
+            "claimed_quote": "Receiver shall reimburse VIDAR for all costs and expenses, including attorney’s fees, incurred by VIDAR in enforcing the obligations of Receiver."
+          }
+        },
+        {
+          "query_id": "sq-8465dc21d4c6",
+          "question": "perpetual term",
+          "reference": "yes",
+          "evidence": [
+            {
+              "doc_id": "18.txt",
+              "start": 2380,
+              "end": 2450,
+              "quote": "I acknowledge that this Agreement shall remain in force in perpetuity.",
+              "role": "gold"
+            }
+          ],
+          "kind": "single_hop",
+          "scope": "18.txt",
+          "group_id": "sq-8465dc21d4c6",
+          "variant": "plain",
+          "labels": {
+            "question_chars": 14,
+            "hops": 1,
+            "spans": 1,
+            "bm25_rank": 3,
+            "dense_rank": 3,
+            "gold_cosine": 0.4925,
+            "leaked_terms": [],
+            "leak_count": 0
+          },
+          "provenance": {
+            "user_category": "in_house_counsel",
+            "question_category": "yes_no",
+            "phrasing": "keywords",
+            "generator": "Qwen3_8-27B",
+            "checker": "Qwen3_6-35B-A3B",
+            "judge": "Qwen3_8-Flash-Next",
+            "round_trip_answer": "I acknowledge that this Agreement shall remain in force in perpetuity.",
+            "uniqueness": "unique",
+            "claimed_quote": "I acknowledge that this Agreement shall remain in force in perpetuity."
+          }
+        },
+        {
+          "query_id": "sq-b8d54f439f70",
+          "question": "What is the required amount for the good faith deposit if I proceed with the purchase, and is there a minimum threshold?",
+          "reference": "5% of the purchase price but subject to a minimum of £5,000",
+          "evidence": [
+            {
+              "doc_id": "18.txt",
+              "start": 4028,
+              "end": 4222,
+              "quote": "That in the event of agreeing to purchase the Business and/or Property will pay to TBP a deposit as a sign of good faith amounting to 5% of the purchase price but subject to a minimum of £5,000.",
+              "role": "gold"
+            }
+          ],
+          "kind": "single_hop",
+          "scope": "18.txt",
+          "group_id": "sq-b8d54f439f70",
+          "variant": "plain",
+          "labels": {
+            "question_chars": 120,
+            "hops": 1,
+            "spans": 1,
+            "bm25_rank": 1,
+            "dense_rank": 1,
+            "gold_cosine": 0.761,
+            "leaked_terms": [
+              "deposit",
+              "faith",
+              "minimum",
+              "purchase",
+              "good"
+            ],
+            "leak_count": 5
+          },
+          "provenance": {
+            "user_category": "in_house_counsel",
+            "question_category": "procedure",
+            "phrasing": "natural",
+            "generator": "Qwen3_8-27B",
+            "checker": "Qwen3_6-35B-A3B",
+            "judge": "Qwen3_8-Flash-Next",
+            "round_trip_answer": "The required amount for the good faith deposit is 5% of the purchase price, subject to a minimum threshold of £5,000.",
+            "uniqueness": "unique",
+            "claimed_quote": "That in the event of agreeing to purchase the Business and/or Property will pay to TBP a deposit as a sign of good faith amounting to 5% of the purchase price but subject to a minimum of £5,000."
+          }
+        },
+        {
+          "query_id": "sq-c28d3874a145",
+          "question": "If I withdraw after the Heads of Terms are issued, do I have to pay an agent's fee?",
+          "reference": "Yes, you will be charged an Agents Fee of £695.00 plus VAT.",
+          "evidence": [
+            {
+              "doc_id": "18.txt",
+              "start": 4788,
+              "end": 4949,
+              "quote": "That if you withdraw for any reason once Heads of Terms or Memorandum of Sale has been prepared and issued you will be charged an Agents Fee of £695.00 plus VAT.",
+              "role": "gold"
+            }
+          ],
+          "kind": "single_hop",
+          "scope": "18.txt",
+          "group_id": "sq-c28d3874a145",
+          "variant": "plain",
+          "labels": {
+            "question_chars": 83,
+            "hops": 1,
+            "spans": 1,
+            "bm25_rank": 1,
+            "dense_rank": 1,
+            "gold_cosine": 0.8379,
+            "leaked_terms": [
+              "heads",
+              "issued",
+              "withdraw"
+            ],
+            "leak_count": 3
+          },
+          "provenance": {
+            "user_category": "business_manager",
+            "question_category": "yes_no",
+            "phrasing": "natural",
+            "generator": "Qwen3_8-27B",
+            "checker": "Qwen3_6-35B-A3B",
+            "judge": "Qwen3_8-Flash-Next",
+            "round_trip_answer": "Yes, you will be charged an Agents Fee of £695.00 plus VAT.",
+            "uniqueness": "unique",
+            "claimed_quote": "That if you withdraw for any reason once Heads of Terms or Memorandum of Sale has been prepared and issued you will be charged an Agents Fee of £695.00 plus VAT."
+          }
+        },
+        {
+          "query_id": "sq-a04aab4f9a35",
+          "question": "What is the required notice period for termination?",
+          "reference": "30 days",
+          "evidence": [
+            {
+              "doc_id": "2.txt",
+              "start": 4095,
+              "end": 4171,
+              "quote": "Either party may terminate this Agreement upon 30 days prior written notice.",
+              "role": "gold"
+            }
+          ],
+          "kind": "single_hop",
+          "scope": "2.txt",
+          "group_id": "sq-a04aab4f9a35",
+          "variant": "plain",
+          "labels": {
+            "question_chars": 51,
+            "hops": 1,
+            "spans": 1,
+            "bm25_rank": 1,
+            "dense_rank": 1,
+            "gold_cosine": 0.702,
+            "leaked_terms": [
+              "notice"
+            ],
+            "leak_count": 1
+          },
+          "provenance": {
+            "user_category": "in_house_counsel",
+            "question_category": "factoid",
+            "phrasing": "natural",
+            "generator": "Qwen3_8-27B",
+            "checker": "Qwen3_6-35B-A3B",
+            "judge": "Qwen3_8-Flash-Next",
+            "round_trip_answer": "30 days prior written notice",
+            "uniqueness": "unique",
+            "claimed_quote": "Either party may terminate this Agreement upon 30 days prior written notice."
+          }
+        },
+        {
+          "query_id": "sq-e5de18958dc1",
+          "question": "Under which state's laws is this agreement governed and construed?",
+          "reference": "the laws of the State of Michigan",
+          "evidence": [
+            {
+              "doc_id": "2.txt",
+              "start": 13188,
+              "end": 13342,
+              "quote": "This Agreement is governed and construed in accordance with the laws of the State of Michigan, without regard to principles of conflict or choice of laws.",
+              "role": "gold"
+            }
+          ],
+          "kind": "single_hop",
+          "scope": "2.txt",
+          "group_id": "sq-e5de18958dc1",
+          "variant": "plain",
+          "labels": {
+            "question_chars": 66,
+            "hops": 1,
+            "spans": 1,
+            "bm25_rank": 1,
+            "dense_rank": 1,
+            "gold_cosine": 0.7555,
+            "leaked_terms": [
+              "state"
+            ],
+            "leak_count": 1
+          },
+          "provenance": {
+            "user_category": "in_house_counsel",
+            "question_category": "procedure",
+            "phrasing": "natural",
+            "generator": "Qwen3_8-27B",
+            "checker": "Qwen3_6-35B-A3B",
+            "judge": "Qwen3_8-Flash-Next",
+            "round_trip_answer": "State of Michigan",
+            "uniqueness": "unique",
+            "claimed_quote": "This Agreement is governed and construed in accordance with the laws of the State of Michigan, without regard to principles of conflict or choice of laws."
+          }
+        },
+        {
+          "query_id": "sq-ab7344ebe739",
+          "question": "Which specific sections of the agreement are expressly designated to survive termination?",
+          "reference": "Sections 1, 2, 3, 4, 5, 6, 17, 18, and 19",
+          "evidence": [
+            {
+              "doc_id": "2.txt",
+              "start": 13512,
+              "end": 13690,
+              "quote": "Sections 1, 2, 3, 4, 5, 6, 17, 18, 19 and any sections (or parts thereof) which, by their nature, are intended to survive termination shall survive termination of this Agreement.",
+              "role": "gold"
+            }
+          ],
+          "kind": "single_hop",
+          "scope": "2.txt",
+          "group_id": "sq-ab7344ebe739",
+          "variant": "plain",
+          "labels": {
+            "question_chars": 89,
+            "hops": 1,
+            "spans": 1,
+            "bm25_rank": 1,
+            "dense_rank": 1,
+            "gold_cosine": 0.8555,
+            "leaked_terms": [
+              "sections",
+              "survive"
+            ],
+            "leak_count": 2
+          },
+          "provenance": {
+            "user_category": "in_house_counsel",
+            "question_category": "condition_or_exception",
+            "phrasing": "natural",
+            "generator": "Qwen3_8-27B",
+            "checker": "Qwen3_6-35B-A3B",
+            "judge": "Qwen3_8-Flash-Next",
+            "round_trip_answer": "Sections 1, 2, 3, 4, 5, 6, 17, 18, 19 and any sections (or parts thereof) which, by their nature, are intended to survive termination",
+            "uniqueness": "unique",
+            "claimed_quote": "Sections 1, 2, 3, 4, 5, 6, 17, 18, 19 and any sections (or parts thereof) which, by their nature, are intended to survive termination shall survive termination of this Agreement."
+          }
+        },
+        {
+          "query_id": "sq-6258a1762d95",
+          "question": "degree of care required for confidential information",
+          "reference": "at least the same degree of care as its uses to protect its own confidential information but no less than a reasonable degree of care",
+          "evidence": [
+            {
+              "doc_id": "21.txt",
+              "start": 3475,
+              "end": 3677,
+              "quote": "a) keep the Confidential Information secret and confidential, using at least the same degree of care as its uses to protect its own confidential information but no less than a reasonable degree of care;",
+              "role": "gold"
+            }
+          ],
+          "kind": "single_hop",
+          "scope": "21.txt",
+          "group_id": "sq-6258a1762d95",
+          "variant": "plain",
+          "labels": {
+            "question_chars": 52,
+            "hops": 1,
+            "spans": 1,
+            "bm25_rank": 1,
+            "dense_rank": 2,
+            "gold_cosine": 0.7671,
+            "leaked_terms": [
+              "degree"
+            ],
+            "leak_count": 1
+          },
+          "provenance": {
+            "user_category": "in_house_counsel",
+            "question_category": "procedure",
+            "phrasing": "keywords",
+            "generator": "Qwen3_8-27B",
+            "checker": "Qwen3_6-35B-A3B",
+            "judge": "Qwen3_8-Flash-Next",
+            "round_trip_answer": "at least the same degree of care as its uses to protect its own confidential information but no less than a reasonable degree of care",
+            "uniqueness": "unique",
+            "claimed_quote": "a) keep the Confidential Information secret and confidential, using at least the same degree of care as its uses to protect its own confidential information but no less than a reasonable degree of care;"
+          }
+        },
+        {
+          "query_id": "sq-616bebf7aa1d",
+          "question": "Under what specific condition is the Receiving Party permitted to use or exploit the Confidential Information?",
+          "reference": "except for the Purpose",
+          "evidence": [
+            {
+              "doc_id": "21.txt",
+              "start": 3678,
+              "end": 3763,
+              "quote": "b) not use or exploit the Confidential Information in any way except for the Purpose;",
+              "role": "gold"
+            }
+          ],
+          "kind": "single_hop",
+          "scope": "21.txt",
+          "group_id": "sq-616bebf7aa1d",
+          "variant": "plain",
+          "labels": {
+            "question_chars": 110,
+            "hops": 1,
+            "spans": 1,
+            "bm25_rank": 1,
+            "dense_rank": 5,
+            "gold_cosine": 0.7388,
+            "leaked_terms": [
+              "exploit"
+            ],
+            "leak_count": 1
+          },
+          "provenance": {
+            "user_category": "in_house_counsel",
+            "question_category": "condition_or_exception",
+            "phrasing": "natural",
+            "generator": "Qwen3_8-27B",
+            "checker": "Qwen3_6-35B-A3B",
+            "judge": "Qwen3_8-Flash-Next",
+            "round_trip_answer": "for the Purpose",
+            "uniqueness": "unique",
+            "claimed_quote": "b) not use or exploit the Confidential Information in any way except for the Purpose;"
+          }
+        },
+        {
+          "query_id": "sq-c88032addca5",
+          "question": "Which laws govern this agreement?",
+          "reference": "the laws of England and Wales",
+          "evidence": [
+            {
+              "doc_id": "21.txt",
+              "start": 11341,
+              "end": 11587,
+              "quote": "This Agreement and any dispute or claim (including non-contractual disputes or claims) arising out of or in connection with it or its subject matter or formation shall be governed by and construed in accordance with the laws of England and Wales.",
+              "role": "gold"
+            }
+          ],
+          "kind": "single_hop",
+          "scope": "21.txt",
+          "group_id": "sq-c88032addca5",
+          "variant": "plain",
+          "labels": {
+            "question_chars": 33,
+            "hops": 1,
+            "spans": 1,
+            "bm25_rank": 1,
+            "dense_rank": 2,
+            "gold_cosine": 0.7289,
+            "leaked_terms": [],
+            "leak_count": 0
+          },
+          "provenance": {
+            "user_category": "business_manager",
+            "question_category": "factoid",
+            "phrasing": "natural",
+            "generator": "Qwen3_8-27B",
+            "checker": "Qwen3_6-35B-A3B",
+            "judge": "Qwen3_8-Flash-Next",
+            "round_trip_answer": "the laws of England and Wales",
+            "uniqueness": "unique",
+            "claimed_quote": "This Agreement and any dispute or claim (including non-contractual disputes or claims) arising out of or in connection with it or its subject matter or formation shall be governed by and construed in accordance with the laws of England and Wales."
+          }
+        },
+        {
+          "query_id": "sq-94d5bffe2b0f",
+          "question": "Which courts have exclusive jurisdiction over disputes arising from this Agreement?",
+          "reference": "the courts of England and Wales",
+          "evidence": [
+            {
+              "doc_id": "21.txt",
+              "start": 11608,
+              "end": 11874,
+              "quote": "Each Party irrevocable agrees that the courts of England and Wales shall have exclusive jurisdiction to settle any dispute or claim (including non-contractual disputes or claims) arising out of or in connection with this Agreement or its subject matter or formation.",
+              "role": "gold"
+            }
+          ],
+          "kind": "single_hop",
+          "scope": "21.txt",
+          "group_id": "sq-94d5bffe2b0f",
+          "variant": "plain",
+          "labels": {
+            "question_chars": 83,
+            "hops": 1,
+            "spans": 1,
+            "bm25_rank": 1,
+            "dense_rank": 1,
+            "gold_cosine": 0.795,
+            "leaked_terms": [
+              "disputes",
+              "exclusive"
+            ],
+            "leak_count": 2
+          },
+          "provenance": {
+            "user_category": "in_house_counsel",
+            "question_category": "factoid",
+            "phrasing": "natural",
+            "generator": "Qwen3_8-27B",
+            "checker": "Qwen3_6-35B-A3B",
+            "judge": "Qwen3_8-Flash-Next",
+            "round_trip_answer": "the courts of England and Wales",
+            "uniqueness": "unique",
+            "claimed_quote": "Each Party irrevocable agrees that the courts of England and Wales shall have exclusive jurisdiction to settle any dispute or claim (including non-contractual disputes or claims) arising out of or in connection with this Agreement or its subject matter or formation."
+          }
+        },
+        {
+          "query_id": "sq-1f6d26aea135",
+          "question": "Who are the two entities identified as the Parties to this NDA?",
+          "reference": "the Ministry of Defence of the Kingdom of Norway and Gripen International AB",
+          "evidence": [
+            {
+              "doc_id": "22.txt",
+              "start": 46,
+              "end": 329,
+              "quote": "This Non Disclosure Agreement (the \"NDA\") is made by and between the Ministry of Defence of the Kingdom of Norway (\"NMOD\") and Gripen International AB (\"GI\"), a business unit of Saab AB (publ), hereinafter jointly referred to as the \"Parties\" and individually referred to as \"Party\".",
+              "role": "gold"
+            },
+            {
+              "doc_id": "22.txt",
+              "start": 7499,
+              "end": 7579,
+              "quote": "For The Ministry of Defence For Gripen International AB\nof the Kingdom of Norway",
+              "role": "equivalent"
+            }
+          ],
+          "kind": "single_hop",
+          "scope": "22.txt",
+          "group_id": "sq-1f6d26aea135",
+          "variant": "plain",
+          "labels": {
+            "question_chars": 63,
+            "hops": 1,
+            "spans": 2,
+            "bm25_rank": 4,
+            "dense_rank": 1,
+            "gold_cosine": 0.7186,
+            "leaked_terms": [],
+            "leak_count": 0
+          },
+          "provenance": {
+            "user_category": "in_house_counsel",
+            "question_category": "factoid",
+            "phrasing": "natural",
+            "generator": "Qwen3_8-27B",
+            "checker": "Qwen3_6-35B-A3B",
+            "judge": "Qwen3_8-Flash-Next",
+            "round_trip_answer": "The Ministry of Defence of the Kingdom of Norway (\"NMOD\") and Gripen International AB (\"GI\")",
+            "uniqueness": "equivalent",
+            "claimed_quote": "This Non Disclosure Agreement (the \"NDA\") is made by and between the Ministry of Defence of the Kingdom of Norway (\"NMOD\") and Gripen International AB (\"GI\"), a business unit of Saab AB (publ), hereinafter jointly referred to as the \"Parties\" and individually referred to as \"Party\"."
+          }
+        },
+        {
+          "query_id": "sq-02856e0fc4d6",
+          "question": "Which entity is bound by the NDA terms as if it were a Party upon disclosure of information to GI?",
+          "reference": "Saab",
+          "evidence": [
+            {
+              "doc_id": "22.txt",
+              "start": 976,
+              "end": 1207,
+              "quote": "noting that exchanging information with GI shall also include exchanging information with Saab and upon such disclosure Saab shall confirm and be bound of the terms and conditions contained herein as if Saab was a Party to the NDA;",
+              "role": "gold"
+            }
+          ],
+          "kind": "single_hop",
+          "scope": "22.txt",
+          "group_id": "sq-02856e0fc4d6",
+          "variant": "plain",
+          "labels": {
+            "question_chars": 98,
+            "hops": 1,
+            "spans": 1,
+            "bm25_rank": 1,
+            "dense_rank": 1,
+            "gold_cosine": 0.7296,
+            "leaked_terms": [
+              "bound"
+            ],
+            "leak_count": 1
+          },
+          "provenance": {
+            "user_category": "in_house_counsel",
+            "question_category": "factoid",
+            "phrasing": "natural",
+            "generator": "Qwen3_8-27B",
+            "checker": "Qwen3_6-35B-A3B",
+            "judge": "Qwen3_8-Flash-Next",
+            "round_trip_answer": "Saab",
+            "uniqueness": "unique",
+            "claimed_quote": "noting that exchanging information with GI shall also include exchanging information with Saab and upon such disclosure Saab shall confirm and be bound of the terms and conditions contained herein as if Saab was a Party to the NDA;"
+          }
+        },
+        {
+          "query_id": "sq-9e4aea8c528e",
+          "question": "How long is the NDA valid for?",
+          "reference": "two years",
+          "evidence": [
+            {
+              "doc_id": "22.txt",
+              "start": 6596,
+              "end": 6812,
+              "quote": "The NDA shall become effective on the date on the date of signatures and shall be valid for a period of two years thereafter, when it shall automatically expire\nunless otherwise agreed in writing between the parties.",
+              "role": "gold"
+            }
+          ],
+          "kind": "single_hop",
+          "scope": "22.txt",
+          "group_id": "sq-9e4aea8c528e",
+          "variant": "plain",
+          "labels": {
+            "question_chars": 30,
+            "hops": 1,
+            "spans": 1,
+            "bm25_rank": 2,
+            "dense_rank": 2,
+            "gold_cosine": 0.7517,
+            "leaked_terms": [
+              "valid"
+            ],
+            "leak_count": 1
+          },
+          "provenance": {
+            "user_category": "business_manager",
+            "question_category": "factoid",
+            "phrasing": "natural",
+            "generator": "Qwen3_8-27B",
+            "checker": "Qwen3_6-35B-A3B",
+            "judge": "Qwen3_8-Flash-Next",
+            "round_trip_answer": "two years",
+            "uniqueness": "unique",
+            "claimed_quote": "The NDA shall become effective on the date on the date of signatures and shall be valid for a period of two years thereafter, when it shall automatically expire unless otherwise agreed in writing between the parties."
+          }
+        },
+        {
+          "query_id": "sq-066da091b8d8",
+          "question": "For how long do the confidentiality obligations and restrictions remain in effect after the NDA expires or is terminated?",
+          "reference": "for a period of five years",
+          "evidence": [
+            {
+              "doc_id": "22.txt",
+              "start": 6813,
+              "end": 7090,
+              "quote": "However, all Confidential Information exchanged during the validity hereof shall be subject to the obligations and restrictions under the NDA (including the undertakings in Clause 13 and 14 below) for a period of five years following expiration or other termination of the NDA.",
+              "role": "gold"
+            }
+          ],
+          "kind": "single_hop",
+          "scope": "22.txt",
+          "group_id": "sq-066da091b8d8",
+          "variant": "plain",
+          "labels": {
+            "question_chars": 121,
+            "hops": 1,
+            "spans": 1,
+            "bm25_rank": 4,
+            "dense_rank": 1,
+            "gold_cosine": 0.7659,
+            "leaked_terms": [
+              "restrictions"
+            ],
+            "leak_count": 1
+          },
+          "provenance": {
+            "user_category": "in_house_counsel",
+            "question_category": "procedure",
+            "phrasing": "natural",
+            "generator": "Qwen3_8-27B",
+            "checker": "Qwen3_6-35B-A3B",
+            "judge": "Qwen3_8-Flash-Next",
+            "round_trip_answer": "five years",
+            "uniqueness": "unique",
+            "claimed_quote": "However, all Confidential Information exchanged during the validity hereof shall be subject to the obligations and restrictions under the NDA (including the undertakings in Clause 13 and 14 below) for a period of five years following expiration or other termination of the NDA."
+          }
+        },
+        {
+          "query_id": "sq-969a57aa1549",
+          "question": "Under what circumstances is the Recipient permitted to use the Confidential Information for purposes other than the defined Purpose?",
+          "reference": "Without first obtaining the written agreement of the Discloser",
+          "evidence": [
+            {
+              "doc_id": "4.txt",
+              "start": 447,
+              "end": 611,
+              "quote": "The Recipient undertakes not to use the Confidential Information for any purpose except the Purpose, without first obtaining the written agreement of the Discloser.",
+              "role": "gold"
+            }
+          ],
+          "kind": "single_hop",
+          "scope": "4.txt",
+          "group_id": "sq-969a57aa1549",
+          "variant": "plain",
+          "labels": {
+            "question_chars": 132,
+            "hops": 1,
+            "spans": 1,
+            "bm25_rank": 1,
+            "dense_rank": 1,
+            "gold_cosine": 0.7725,
+            "leaked_terms": [
+              "recipient"
+            ],
+            "leak_count": 1
+          },
+          "provenance": {
+            "user_category": "in_house_counsel",
+            "question_category": "condition_or_exception",
+            "phrasing": "natural",
+            "generator": "Qwen3_8-27B",
+            "checker": "Qwen3_6-35B-A3B",
+            "judge": "Qwen3_8-Flash-Next",
+            "round_trip_answer": "The Recipient is permitted to use the Confidential Information for purposes other than the defined Purpose only after first obtaining the written agreement of the Discloser.",
+            "uniqueness": "unique",
+            "claimed_quote": "The Recipient undertakes not to use the Confidential Information for any purpose except the Purpose, without first obtaining the written agreement of the Discloser."
+          }
+        },
+        {
+          "query_id": "sq-c884391310cf",
+          "question": "public domain exception breach condition",
+          "reference": "unless as a result of the breach of this Agreement",
+          "evidence": [
+            {
+              "doc_id": "4.txt",
+              "start": 945,
+              "end": 1068,
+              "quote": "any information which is or in future comes into the public domain (unless as a result of the breach of this Agreement); or",
+              "role": "gold"
+            }
+          ],
+          "kind": "single_hop",
+          "scope": "4.txt",
+          "group_id": "sq-c884391310cf",
+          "variant": "plain",
+          "labels": {
+            "question_chars": 40,
+            "hops": 1,
+            "spans": 1,
+            "bm25_rank": 1,
+            "dense_rank": 1,
+            "gold_cosine": 0.7283,
+            "leaked_terms": [
+              "domain"
+            ],
+            "leak_count": 1
+          },
+          "provenance": {
+            "user_category": "in_house_counsel",
+            "question_category": "factoid",
+            "phrasing": "keywords",
+            "generator": "Qwen3_8-27B",
+            "checker": "Qwen3_6-35B-A3B",
+            "judge": "Qwen3_8-Flash-Next",
+            "round_trip_answer": "any information which is or in future comes into the public domain (unless as a result of the breach of this Agreement)",
+            "uniqueness": "unique",
+            "claimed_quote": "any information which is or in future comes into the public domain (unless as a result of the breach of this Agreement); or"
+          }
+        },
+        {
+          "query_id": "sq-3040887f442a",
+          "question": "Who must return Confidential Information on request",
+          "reference": "The Recipient",
+          "evidence": [
+            {
+              "doc_id": "4.txt",
+              "start": 1410,
+              "end": 1614,
+              "quote": "The Recipient will, on request from the Discloser, return all copies and records of the Confidential Information to the Discloser and will not retain any copies or records of the Confidential Information.",
+              "role": "gold"
+            }
+          ],
+          "kind": "single_hop",
+          "scope": "4.txt",
+          "group_id": "sq-3040887f442a",
+          "variant": "plain",
+          "labels": {
+            "question_chars": 51,
+            "hops": 1,
+            "spans": 1,
+            "bm25_rank": 1,
+            "dense_rank": 1,
+            "gold_cosine": 0.7654,
+            "leaked_terms": [],
+            "leak_count": 0
+          },
+          "provenance": {
+            "user_category": "in_house_counsel",
+            "question_category": "factoid",
+            "phrasing": "keywords",
+            "generator": "Qwen3_8-27B",
+            "checker": "Qwen3_6-35B-A3B",
+            "judge": "Qwen3_8-Flash-Next",
+            "round_trip_answer": "The Recipient",
+            "uniqueness": "unique",
+            "claimed_quote": "The Recipient will, on request from the Discloser, return all copies and records of the Confidential Information to the Discloser and will not retain any copies or records of the Confidential Information."
+          }
+        },
+        {
+          "query_id": "sq-35ee25cab6d5",
+          "question": "How long do the obligations in clauses 2 and 3 last?",
+          "reference": "indefinitely",
+          "evidence": [
+            {
+              "doc_id": "4.txt",
+              "start": 1872,
+              "end": 1944,
+              "quote": "The undertakings in clauses 2 and 3 will continue in force indefinitely.",
+              "role": "gold"
+            }
+          ],
+          "kind": "single_hop",
+          "scope": "4.txt",
+          "group_id": "sq-35ee25cab6d5",
+          "variant": "plain",
+          "labels": {
+            "question_chars": 52,
+            "hops": 1,
+            "spans": 1,
+            "bm25_rank": 2,
+            "dense_rank": 1,
+            "gold_cosine": 0.7487,
+            "leaked_terms": [
+              "clauses"
+            ],
+            "leak_count": 1
+          },
+          "provenance": {
+            "user_category": "business_manager",
+            "question_category": "factoid",
+            "phrasing": "natural",
+            "generator": "Qwen3_8-27B",
+            "checker": "Qwen3_6-35B-A3B",
+            "judge": "Qwen3_8-Flash-Next",
+            "round_trip_answer": "indefinitely",
+            "uniqueness": "unique",
+            "claimed_quote": "The undertakings in clauses 2 and 3 will continue in force indefinitely."
+          }
+        },
+        {
+          "query_id": "sq-33fa2964b120",
+          "question": "What forms of disclosure are covered by the Recipient's non-disclosure obligation?",
+          "reference": "identified and reduced in writing or provided verbally or in any other way not reduced in writing",
+          "evidence": [
+            {
+              "doc_id": "8.txt",
+              "start": 1100,
+              "end": 1378,
+              "quote": "Recipient agrees not to disclose and the Discloser agrees to let the Recipient have the access to the Confidential Information as identified and reduced in writing or provided verbally or in any other way not reduced in writing at the time of such disclosure of the information.",
+              "role": "gold"
+            }
+          ],
+          "kind": "single_hop",
+          "scope": "8.txt",
+          "group_id": "sq-33fa2964b120",
+          "variant": "plain",
+          "labels": {
+            "question_chars": 82,
+            "hops": 1,
+            "spans": 1,
+            "bm25_rank": 1,
+            "dense_rank": 1,
+            "gold_cosine": 0.7558,
+            "leaked_terms": [
+              "recipient"
+            ],
+            "leak_count": 1
+          },
+          "provenance": {
+            "user_category": "in_house_counsel",
+            "question_category": "condition_or_exception",
+            "phrasing": "natural",
+            "generator": "Qwen3_8-27B",
+            "checker": "Qwen3_6-35B-A3B",
+            "judge": "Qwen3_8-Flash-Next",
+            "round_trip_answer": "Confidential Information as identified and reduced in writing or provided verbally or in any other way not reduced in writing at the time of such disclosure of the information.",
+            "uniqueness": "unique",
+            "claimed_quote": "Recipient agrees not to disclose and the Discloser agrees to let the Recipient have the access to the Confidential Information as identified and reduced in writing or provided verbally or in any other way not reduced in writing at the time of such disclosure of the information."
+          }
+        },
+        {
+          "query_id": "sq-3f7b3f4671a6",
+          "question": "Who is permitted to conduct the audit if the Discloser suspects a violation?",
+          "reference": "the Discloser or an authorized representative",
+          "evidence": [
+            {
+              "doc_id": "8.txt",
+              "start": 3849,
+              "end": 4065,
+              "quote": "In case the Discloser suspects any violation of this Agreement, upon reasonable notice, it shall be binding for the Recipient to allow the Discloser to carry out an Audit by itself or by an authorized representative.",
+              "role": "gold"
+            }
+          ],
+          "kind": "single_hop",
+          "scope": "8.txt",
+          "group_id": "sq-3f7b3f4671a6",
+          "variant": "plain",
+          "labels": {
+            "question_chars": 76,
+            "hops": 1,
+            "spans": 1,
+            "bm25_rank": 1,
+            "dense_rank": 1,
+            "gold_cosine": 0.7771,
+            "leaked_terms": [
+              "audit",
+              "suspects",
+              "discloser",
+              "violation"
+            ],
+            "leak_count": 4
+          },
+          "provenance": {
+            "user_category": "in_house_counsel",
+            "question_category": "factoid",
+            "phrasing": "natural",
+            "generator": "Qwen3_8-27B",
+            "checker": "Qwen3_6-35B-A3B",
+            "judge": "Qwen3_8-Flash-Next",
+            "round_trip_answer": "the Discloser or an authorized representative",
+            "uniqueness": "unique",
+            "claimed_quote": "In case the Discloser suspects any violation of this Agreement, upon reasonable notice, it shall be binding for the Recipient to allow the Discloser to carry out an Audit by itself or by an authorized representative."
+          }
+        },
+        {
+          "query_id": "sq-6d53b2b15910",
+          "question": "How long do the obligations in clauses 4 and 5 last?",
+          "reference": "Not stated in the documents.",
+          "evidence": [],
+          "kind": "near_miss_null",
+          "scope": "4.txt",
+          "group_id": "sq-6d53b2b15910",
+          "variant": "plain",
+          "labels": {
+            "question_chars": 52
+          },
+          "provenance": {
+            "source_question": "sq-35ee25cab6d5",
+            "changed": "clause numbers",
+            "generator": "Qwen3_8-27B",
+            "checker": "Qwen3_6-35B-A3B",
+            "null_check_passages": 3
+          }
+        },
+        {
+          "query_id": "sq-501e2f0f4169",
+          "question": "Who is permitted to conduct the audit if the Recipient suspects a violation?",
+          "reference": "Not stated in the documents.",
+          "evidence": [],
+          "kind": "near_miss_null",
+          "scope": "8.txt",
+          "group_id": "sq-501e2f0f4169",
+          "variant": "plain",
+          "labels": {
+            "question_chars": 76
+          },
+          "provenance": {
+            "source_question": "sq-3f7b3f4671a6",
+            "changed": "changed the party suspecting the violation from Discloser to Recipient",
+            "generator": "Qwen3_8-27B",
+            "checker": "Qwen3_6-35B-A3B",
+            "null_check_passages": 6
+          }
+        },
+        {
+          "query_id": "sq-61fff3bc0c3b",
+          "question": "Do I need to send the original signed copies of the acknowledgements to a third-party auditor?",
+          "reference": "Not stated in the documents.",
+          "evidence": [],
+          "kind": "near_miss_null",
+          "scope": "1.txt",
+          "group_id": "sq-61fff3bc0c3b",
+          "variant": "plain",
+          "labels": {
+            "question_chars": 94
+          },
+          "provenance": {
+            "source_question": "sq-377ecd5b3d0b",
+            "changed": "changed the recipient of the copies",
+            "generator": "Qwen3_8-27B",
+            "checker": "Qwen3_6-35B-A3B",
+            "null_check_passages": 13
+          }
+        },
+        {
+          "query_id": "sq-43ded0fa0499",
+          "question": "For how long do the confidentiality obligations and restrictions remain in effect after the NDA expires or is terminated if the information is a trade secret?",
+          "reference": "Not stated in the documents.",
+          "evidence": [],
+          "kind": "near_miss_null",
+          "scope": "22.txt",
+          "group_id": "sq-43ded0fa0499",
+          "variant": "plain",
+          "labels": {
+            "question_chars": 158
+          },
+          "provenance": {
+            "source_question": "sq-066da091b8d8",
+            "changed": "type of information",
+            "generator": "Qwen3_8-27B",
+            "checker": "Qwen3_6-35B-A3B",
+            "null_check_passages": 8
+          }
+        },
+        {
+          "query_id": "sq-4f1279664f00",
+          "question": "Which specific Belgian law is cited regarding the supervision of the financial sector and insider dealing?",
+          "reference": "Not stated in the documents.",
+          "evidence": [],
+          "kind": "held_out_null",
+          "scope": "11.txt",
+          "group_id": "sq-4f1279664f00",
+          "variant": "plain",
+          "labels": {
+            "question_chars": 106
+          },
+          "provenance": {
+            "held_out_document": "5.txt",
+            "user_category": "in_house_counsel",
+            "question_category": "factoid",
+            "phrasing": "natural",
+            "generator": "Qwen3_8-27B",
+            "checker": "Qwen3_6-35B-A3B",
+            "null_check_passages": 12
+          }
+        },
+        {
+          "query_id": "sq-73add54b801e",
+          "question": "Which specific list of entities does the Receiving Party prohibit exporting technical data to?",
+          "reference": "Not stated in the documents.",
+          "evidence": [],
+          "kind": "held_out_null",
+          "scope": "21.txt",
+          "group_id": "sq-73add54b801e",
+          "variant": "plain",
+          "labels": {
+            "question_chars": 94
+          },
+          "provenance": {
+            "held_out_document": "6.txt",
+            "user_category": "in_house_counsel",
+            "question_category": "factoid",
+            "phrasing": "natural",
+            "generator": "Qwen3_8-27B",
+            "checker": "Qwen3_6-35B-A3B",
+            "null_check_passages": 10
+          }
+        },
+        {
+          "query_id": "sq-b77a57893f5a",
+          "question": "Does the agreement count information from the Province's SAP Service Provider or its affiliates as confidential information?",
+          "reference": "Not stated in the documents.",
+          "evidence": [],
+          "kind": "held_out_null",
+          "scope": "8.txt",
+          "group_id": "sq-b77a57893f5a",
+          "variant": "plain",
+          "labels": {
+            "question_chars": 124
+          },
+          "provenance": {
+            "held_out_document": "6.txt",
+            "user_category": "business_manager",
+            "question_category": "procedure",
+            "phrasing": "natural",
+            "generator": "Qwen3_8-27B",
+            "checker": "Qwen3_6-35B-A3B",
+            "null_check_passages": 6
+          }
+        }
+      ],
+      "funnel": {
+        "stages": [
+          {
+            "kind": "single_hop",
+            "stage": "quote_located",
+            "entered": 31,
+            "passed": 29,
+            "acceptance_rate": 0.9355
+          },
+          {
+            "kind": "single_hop",
+            "stage": "question_written",
+            "entered": 29,
+            "passed": 29,
+            "acceptance_rate": 1.0
+          },
+          {
+            "kind": "single_hop",
+            "stage": "round_trip",
+            "entered": 29,
+            "passed": 29,
+            "acceptance_rate": 1.0
+          },
+          {
+            "kind": "single_hop",
+            "stage": "uniqueness",
+            "entered": 29,
+            "passed": 27,
+            "acceptance_rate": 0.931
+          },
+          {
+            "kind": "single_hop",
+            "stage": "deduplicated",
+            "entered": 27,
+            "passed": 27,
+            "acceptance_rate": 1.0
+          },
+          {
+            "kind": "near_miss_null",
+            "stage": "null_written",
+            "entered": 8,
+            "passed": 8,
+            "acceptance_rate": 1.0
+          },
+          {
+            "kind": "near_miss_null",
+            "stage": "null_check",
+            "entered": 8,
+            "passed": 4,
+            "acceptance_rate": 0.5
+          },
+          {
+            "kind": "held_out_null",
+            "stage": "quote_located",
+            "entered": 14,
+            "passed": 14,
+            "acceptance_rate": 1.0
+          },
+          {
+            "kind": "held_out_null",
+            "stage": "null_written",
+            "entered": 6,
+            "passed": 5,
+            "acceptance_rate": 0.8333
+          },
+          {
+            "kind": "held_out_null",
+            "stage": "null_check",
+            "entered": 5,
+            "passed": 3,
+            "acceptance_rate": 0.6
+          },
+          {
+            "kind": "near_miss_null",
+            "stage": "deduplicated",
+            "entered": 4,
+            "passed": 4,
+            "acceptance_rate": 1.0
+          },
+          {
+            "kind": "held_out_null",
+            "stage": "deduplicated",
+            "entered": 3,
+            "passed": 3,
+            "acceptance_rate": 1.0
+          }
+        ],
+        "outcomes": {
+          "held_out_null": {
+            "accepted": 3,
+            "rejected": 1,
+            "filtered": 2
+          },
+          "near_miss_null": {
+            "filtered": 4,
+            "accepted": 4
+          },
+          "single_hop": {
+            "accepted": 27,
+            "filtered": 4
+          }
+        },
+        "candidates": 45,
+        "accepted": 34,
+        "drop_reasons": {
+          "null_check: corpus answers it (yes)": 6,
+          "uniqueness: another passage gives a different answer": 2,
+          "quote_located: quote not found in the document": 2,
+          "null_written: The statement only provides a registered office address and does not contain any information about obligations, actions, or timing required of the user, so it cannot answer a question about what someone has to do.": 1
+        }
+      },
+      "meta": {
+        "models": {
+          "generator": "Qwen3_8-27B",
+          "checker": "Qwen3_6-35B-A3B",
+          "judge": "Qwen3_8-Flash-Next"
+        },
+        "same_family": {
+          "generator_checker": true,
+          "generator_judge": true
+        },
+        "config": {
+          "domain": "non-disclosure agreements between companies",
+          "users": [
+            {
+              "name": "in_house_counsel",
+              "description": "A lawyer reviewing the agreement, who uses contract vocabulary and asks precise questions.",
+              "weight": 2.0
+            },
+            {
+              "name": "business_manager",
+              "description": "A manager about to share information under the agreement, who asks in plain words what they may or may not do.",
+              "weight": 1.0
+            }
+          ],
+          "questions": [
+            {
+              "name": "factoid",
+              "description": "A question with a short answer: a name, number, period, or party.",
+              "weight": 2.0
+            },
+            {
+              "name": "yes_no",
+              "description": "A question answered yes or no, with the condition that decides it.",
+              "weight": 1.0
+            },
+            {
+              "name": "condition_or_exception",
+              "description": "A question about when something applies, or what is excluded from it.",
+              "weight": 1.5
+            },
+            {
+              "name": "procedure",
+              "description": "A question about what someone has to do, and how or when.",
+              "weight": 1.0
+            }
+          ],
+          "phrasings": [
+            {
+              "name": "natural",
+              "description": "A complete, natural question, as typed into a chat box.",
+              "weight": 3.0
+            },
+            {
+              "name": "keywords",
+              "description": "A terse search-engine style query of a few words.",
+              "weight": 1.0
+            }
+          ],
+          "few_shot": [],
+          "passages_per_document": 2,
+          "statements_per_passage": 2,
+          "passage_chars": 1200,
+          "null_share": 0.2,
+          "near_miss_share": 0.5,
+          "held_out_share": 0.1,
+          "held_out_minimum": 2,
+          "held_out_passages": 4,
+          "scope": "document",
+          "uniqueness_k": 5,
+          "null_check_k": 10,
+          "dedup_cosine": 0.92,
+          "boilerplate_cosine": 0.95,
+          "paraphrase": false,
+          "probe_chunk_chars": 1200,
+          "probe_overlap_chars": 200,
+          "seed": 0,
+          "workers": 12,
+          "extra": {}
+        },
+        "documents": {
+          "indexed": [
+            "1.txt",
+            "11.txt",
+            "18.txt",
+            "2.txt",
+            "21.txt",
+            "22.txt",
+            "4.txt",
+            "8.txt"
+          ],
+          "held_out": [
+            "5.txt",
+            "6.txt"
+          ]
+        },
+        "sampling": {
+          "documents": 8,
+          "passages_seen": 56,
+          "passages_drawn": 16,
+          "skipped_as_boilerplate": 0
+        },
+        "statements_located": 29,
+        "usage": [
+          {
+            "model": "Qwen3_8-27B",
+            "label": "Qwen3_8-27B",
+            "calls": 0,
+            "prompt_tokens": 0,
+            "completion_tokens": 0,
+            "total_tokens": 0,
+            "cache_hits": 67,
+            "empty_responses": 0,
+            "failed_attempts": 0,
+            "call_seconds": 0.0,
+            "cold_requests": 67,
+            "cold_prompt_tokens": 36488,
+            "cold_completion_tokens": 5513
+          },
+          {
+            "model": "Qwen3_6-35B-A3B",
+            "label": "Qwen3_6-35B-A3B",
+            "calls": 0,
+            "prompt_tokens": 0,
+            "completion_tokens": 0,
+            "total_tokens": 0,
+            "cache_hits": 71,
+            "empty_responses": 0,
+            "failed_attempts": 0,
+            "call_seconds": 0.0,
+            "cold_requests": 71,
+            "cold_prompt_tokens": 71859,
+            "cold_completion_tokens": 2134
+          },
+          {
+            "model": "Qwen3_8-Flash-Next",
+            "label": "Qwen3_8-Flash-Next",
+            "calls": 0,
+            "prompt_tokens": 0,
+            "completion_tokens": 0,
+            "total_tokens": 0,
+            "cache_hits": 29,
+            "empty_responses": 0,
+            "failed_attempts": 0,
+            "call_seconds": 0.0,
+            "cold_requests": 29,
+            "cold_prompt_tokens": 5198,
+            "cold_completion_tokens": 1015
+          }
+        ],
+        "seconds": 60.5
+      }
+    },
+    "produced_by": {
+      "model": "Qwen3_8-27B",
+      "response_models": [],
+      "family": "onprem",
+      "endpoint": "vector-cluster",
+      "producer": "ri1/regulatory_policy_qa/04_bring_your_own_corpus",
+      "usage": {
+        "Qwen3_8-27B": {
+          "calls": 67,
+          "prompt_tokens": 36488,
+          "completion_tokens": 5513
+        },
+        "Qwen3_6-35B-A3B": {
+          "calls": 71,
+          "prompt_tokens": 71859,
+          "completion_tokens": 2134
+        },
+        "Qwen3_8-Flash-Next": {
+          "calls": 29,
+          "prompt_tokens": 5198,
+          "completion_tokens": 1015
+        }
+      },
+      "note": ""
+    }
+  }
+}

@@ -1,0 +1,1241 @@
+{
+  "artifacts": [
+    {
+      "key": {
+        "artifact_type": "citation-judgements",
+        "config": {
+          "endpoint": "vector-proxy-paid",
+          "model": "claude-haiku-5-5",
+          "prompt": "6567394dc45a1f9d",
+          "upstream": {
+            "answers": "f73f47a2eb71bc35fcee9bcfb8526d74fbbb36fae0e567a32ad3f49680097ac3"
+          },
+          "version": 1,
+          "which": "subset"
+        },
+        "producer_id": "judge_citations/answer",
+        "ri_id": "citations"
+      },
+      "sha256": "28d0048e5dad4be318c8b8afa059af40363cc73a750bed8319ee745e986dfbdd",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-citations-82d0f0e6be9c/citations.citation-judgements.judge_citations-answer.0946839c667ce40a4f0beac2f14b1740917100af5d50016c3008695531f811b0.json"
+    },
+    {
+      "key": {
+        "artifact_type": "citation-judgements",
+        "config": {
+          "endpoint": "vector-cluster",
+          "model": "Qwen3_6-35B-A3B",
+          "prompt": "6567394dc45a1f9d",
+          "upstream": {
+            "answers": "4c65f149dd0ffb95bedc09143670f2ed7a4f3218e838dba3a623d0da87a4dfbb"
+          },
+          "version": 1,
+          "which": "subset"
+        },
+        "producer_id": "judge_citations/answer",
+        "ri_id": "citations"
+      },
+      "sha256": "906580eaf92a960924742f60e21bc980404ea49d11b5cdf65b3eb4182327e2d3",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-citations-82d0f0e6be9c/citations.citation-judgements.judge_citations-answer.12c69fdf0ae1ae9d9b6a47c8aac619f5a93cf987f5daaf2f439a595e9a84371c.json"
+    },
+    {
+      "key": {
+        "artifact_type": "citation-judgements",
+        "config": {
+          "endpoint": "vector-cluster",
+          "model": "Qwen3_6-35B-A3B",
+          "prompt": "6567394dc45a1f9d",
+          "upstream": {
+            "answers": "74149fa23f158c5118dc3fe69bdbde6dddc2c432d218c3ef355560455a55f2e0"
+          },
+          "version": 1,
+          "which": "all"
+        },
+        "producer_id": "judge_citations/answer",
+        "ri_id": "citations"
+      },
+      "sha256": "d28904715c2130c112d5dfaeeba8710bdb4fe0ae9be9037cff34390c8f9dcc38",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-citations-82d0f0e6be9c/citations.citation-judgements.judge_citations-answer.97bcce238e97a25ccf5815fa27a868a5255afbbc156d54528498642e03f05280.json"
+    },
+    {
+      "key": {
+        "artifact_type": "citation-judgements",
+        "config": {
+          "endpoint": "vector-cluster",
+          "model": "Qwen3_6-35B-A3B",
+          "prompt": "6567394dc45a1f9d",
+          "upstream": {
+            "answers": "fd35541583d5c43aeb6ba0b52c3b45e5fa348603ce87c386bd81be7b274b72c3"
+          },
+          "version": 1,
+          "which": "all"
+        },
+        "producer_id": "judge_citations/fulldoc",
+        "ri_id": "citations"
+      },
+      "sha256": "84965cfda33e3e90cffcaedc4101e3b377eab761b09b7ffb17c4a7be420c8481",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-citations-82d0f0e6be9c/citations.citation-judgements.judge_citations-fulldoc.207aa1d09936f8923e7134509c776d495fe771049f5f661828a1fc9ff12225f5.json"
+    },
+    {
+      "key": {
+        "artifact_type": "citation-judgements",
+        "config": {
+          "endpoint": "vector-proxy-paid",
+          "model": "claude-haiku-5-5",
+          "prompt": "6567394dc45a1f9d",
+          "upstream": {
+            "answers": "3ba448f748f827d4c4fb252422ac71a57e95387309ac72b3e859891dfc767e9b"
+          },
+          "version": 1,
+          "which": "subset"
+        },
+        "producer_id": "judge_citations/fulldoc",
+        "ri_id": "citations"
+      },
+      "sha256": "a81dbfacba7be9556559b2ec422c82aaa6befcd3cbf418aa2e761cea23af0c8d",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-citations-82d0f0e6be9c/citations.citation-judgements.judge_citations-fulldoc.7b5095228cf1b307dbbe4062eb20c4226179cadd520b209625d12b0cf339e4f1.json"
+    },
+    {
+      "key": {
+        "artifact_type": "citation-judgements",
+        "config": {
+          "endpoint": "vector-cluster",
+          "model": "Qwen3_6-35B-A3B",
+          "prompt": "6567394dc45a1f9d",
+          "upstream": {
+            "answers": "b691ec1085573b46740d3d8f1fe649ed24e7ce70d51b85a05ae45902c9b43064"
+          },
+          "version": 1,
+          "which": "subset"
+        },
+        "producer_id": "judge_citations/fulldoc",
+        "ri_id": "citations"
+      },
+      "sha256": "6e4947bcf156600db09442776cda4e8eb0cf8f926ac6249504bc691cf5775270",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-citations-82d0f0e6be9c/citations.citation-judgements.judge_citations-fulldoc.9622ac4f3ba2016568094173df32f006bad373775461ec9ce1da0869ce9f060c.json"
+    },
+    {
+      "key": {
+        "artifact_type": "citation-judgements",
+        "config": {
+          "endpoint": "vector-cluster",
+          "model": "Qwen3_6-35B-A3B",
+          "prompt": "6567394dc45a1f9d",
+          "upstream": {
+            "answers": "3e874aba5657facba5138ec9a25c3ad40be90fb1ca9269ade3b4ec5dc654f7b4"
+          },
+          "version": 1,
+          "which": "all"
+        },
+        "producer_id": "judge_citations/fulldoc-check",
+        "ri_id": "citations"
+      },
+      "sha256": "c0ee9e42cfd8ed759615a064f3e0510574a86212e4d02d3fe12e8ebc18507ec9",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-citations-82d0f0e6be9c/citations.citation-judgements.judge_citations-fulldoc-check.63fb5d1ffddb36dd915f1264157deecd9ed08c50f8cd5bcc3ed57f193a90de24.json"
+    },
+    {
+      "key": {
+        "artifact_type": "citation-judgements",
+        "config": {
+          "endpoint": "vector-cluster",
+          "model": "Qwen3_6-35B-A3B",
+          "prompt": "6567394dc45a1f9d",
+          "upstream": {
+            "answers": "f1ff500e1327bab66a134ab4ca21e9cdca5bdfc60426cd16c67bced5fed49c38"
+          },
+          "version": 1,
+          "which": "all"
+        },
+        "producer_id": "judge_citations/fulldoc-extract",
+        "ri_id": "citations"
+      },
+      "sha256": "d026859be5441afcb210f66f46097d7786bddc869875aa43143584c62890572a",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-citations-82d0f0e6be9c/citations.citation-judgements.judge_citations-fulldoc-extract.0e913add26a3b02b1275e607d4f734cbbedadaf27321d9271cfff78a77072d84.json"
+    },
+    {
+      "key": {
+        "artifact_type": "citation-judgements",
+        "config": {
+          "endpoint": "vector-cluster",
+          "model": "Qwen3_6-35B-A3B",
+          "prompt": "6567394dc45a1f9d",
+          "upstream": {
+            "answers": "d2410c6faaa3e6d0c0322955cef628949e1009a74e50443ca90f3e4309dd4e9e"
+          },
+          "version": 1,
+          "which": "all"
+        },
+        "producer_id": "judge_citations/fulldoc-sentinel",
+        "ri_id": "citations"
+      },
+      "sha256": "702f04a9d9c6a4d1e8aad4f3477e13dcfb0e8227aa977d7e8bd60eeca587861d",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-citations-82d0f0e6be9c/citations.citation-judgements.judge_citations-fulldoc-sentinel.fd606327b1c25337e53fabe5f1b39730bb3634751663145c3006474b340825cb.json"
+    },
+    {
+      "key": {
+        "artifact_type": "citation-judgements",
+        "config": {
+          "endpoint": "vector-proxy-paid",
+          "model": "claude-haiku-5-5",
+          "prompt": "6567394dc45a1f9d",
+          "upstream": {
+            "answers": "143261fc228d0a8b73240011e111369c9a4b51ded42431d9433e8de77803f9d4"
+          },
+          "version": 1,
+          "which": "subset"
+        },
+        "producer_id": "judge_citations/inline",
+        "ri_id": "citations"
+      },
+      "sha256": "dec215538d3cabf98b40a1f0c43034bc128e7c5dca381858a1b05c0724396eb5",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-citations-82d0f0e6be9c/citations.citation-judgements.judge_citations-inline.5bd6a435a04463f4751b4da2fe95da33a3eda87b7fdb1aa962018fa7b196f9f8.json"
+    },
+    {
+      "key": {
+        "artifact_type": "citation-judgements",
+        "config": {
+          "endpoint": "vector-cluster",
+          "model": "Qwen3_6-35B-A3B",
+          "prompt": "6567394dc45a1f9d",
+          "upstream": {
+            "answers": "f47bac9f82adb166a99fe29d59fb74caf46db94d4b278b126bcdc3c0130f8cc0"
+          },
+          "version": 1,
+          "which": "subset"
+        },
+        "producer_id": "judge_citations/inline",
+        "ri_id": "citations"
+      },
+      "sha256": "39ac5232ed963de42c32bc27726f9a278a644439b946d0797bef114e2ce86a28",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-citations-82d0f0e6be9c/citations.citation-judgements.judge_citations-inline.97003a97c4effe87ea25ceb376973efe1d1c0fc5efb004a09be357091c8a920f.json"
+    },
+    {
+      "key": {
+        "artifact_type": "citation-judgements",
+        "config": {
+          "endpoint": "vector-cluster",
+          "model": "Qwen3_6-35B-A3B",
+          "prompt": "6567394dc45a1f9d",
+          "upstream": {
+            "answers": "469cb8e3d82f7d9bda6bafdb1948a2ba4fd51f18328c797d0b63e55da7cbd17b"
+          },
+          "version": 1,
+          "which": "all"
+        },
+        "producer_id": "judge_citations/inline",
+        "ri_id": "citations"
+      },
+      "sha256": "97722ed6e5517820c00d10e2557c868c77ed9993ab68acd1673b9c61e7d8f2c0",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-citations-82d0f0e6be9c/citations.citation-judgements.judge_citations-inline.d769634c5f0d830d2c0b31881615aa187d72d61052ac9fa3c6539ef658da0fab.json"
+    },
+    {
+      "key": {
+        "artifact_type": "citation-judgements",
+        "config": {
+          "endpoint": "vector-cluster",
+          "model": "Qwen3_6-35B-A3B",
+          "prompt": "6567394dc45a1f9d",
+          "upstream": {
+            "answers": "ed0ad7ed5bb159c5"
+          },
+          "version": 1,
+          "which": "subset"
+        },
+        "producer_id": "judge_citations/posthoc",
+        "ri_id": "citations"
+      },
+      "sha256": "071ac28176242c404e5f1d9e993a48dfbcab54b9aa8df406e414d60c404b0460",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-citations-82d0f0e6be9c/citations.citation-judgements.judge_citations-posthoc.66bca847f69316b136e4ce63599325341eadbdfb1bb7aa067e981af04dd45403.json"
+    },
+    {
+      "key": {
+        "artifact_type": "citation-judgements",
+        "config": {
+          "endpoint": "vector-cluster",
+          "model": "Qwen3_6-35B-A3B",
+          "prompt": "6567394dc45a1f9d",
+          "upstream": {
+            "answers": "8a3b430058d77725"
+          },
+          "version": 1,
+          "which": "all"
+        },
+        "producer_id": "judge_citations/posthoc",
+        "ri_id": "citations"
+      },
+      "sha256": "16b41f0d041910ad3a0741ef6df65bdde0b35b9987ff0dcaa0b1bf515722a52a",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-citations-82d0f0e6be9c/citations.citation-judgements.judge_citations-posthoc.8a84f0d4aed03d105b4b9ddce039ff54ecff526500da89bc9575cf13ec1f8ceb.json"
+    },
+    {
+      "key": {
+        "artifact_type": "citation-judgements",
+        "config": {
+          "endpoint": "vector-cluster",
+          "model": "Qwen3_6-35B-A3B",
+          "prompt": "6567394dc45a1f9d",
+          "upstream": {
+            "answers": "3b07e9aca7ea1bf2ceb0f398566100d719d312be6a24ff11c57f4883bfd4c7c7"
+          },
+          "version": 1,
+          "which": "all"
+        },
+        "producer_id": "judge_citations/quotes",
+        "ri_id": "citations"
+      },
+      "sha256": "28175586f5e726614df67aaaac9855a333fed8b266ec32900c42f9540eb420c8",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-citations-82d0f0e6be9c/citations.citation-judgements.judge_citations-quotes.2a67b11e501cf9511cf29b44dabbd1e17e34fbf4393c7dac85b923ca66b73afb.json"
+    },
+    {
+      "key": {
+        "artifact_type": "citation-judgements",
+        "config": {
+          "endpoint": "vector-cluster",
+          "model": "Qwen3_6-35B-A3B",
+          "prompt": "6567394dc45a1f9d",
+          "upstream": {
+            "answers": "ea0a212345955c43d1fecaef7d6eb50f1d72d6913fab47cb23c91aca3ad65632"
+          },
+          "version": 1,
+          "which": "subset"
+        },
+        "producer_id": "judge_citations/quotes",
+        "ri_id": "citations"
+      },
+      "sha256": "17fab6d4fb58e40c4101c12f7c2f4b0f9924cb6c2db45e055faca751591b17a0",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-citations-82d0f0e6be9c/citations.citation-judgements.judge_citations-quotes.6fb01c5b017368b3fe1c4e5f3919daacfbf911370532cbb8a0e7f2c9bdc74aca.json"
+    },
+    {
+      "key": {
+        "artifact_type": "citation-judgements",
+        "config": {
+          "endpoint": "vector-proxy-paid",
+          "model": "claude-haiku-5-5",
+          "prompt": "6567394dc45a1f9d",
+          "upstream": {
+            "answers": "132bd5ddbd268d4a5a47c46a78dd887def81274d7b0250a9a9f493b418454f9f"
+          },
+          "version": 1,
+          "which": "subset"
+        },
+        "producer_id": "judge_citations/quotes",
+        "ri_id": "citations"
+      },
+      "sha256": "2b106d999711dd505a2b7f6858fb4e05b3f6e7ba1773beb7dd3abb896583ba8e",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-citations-82d0f0e6be9c/citations.citation-judgements.judge_citations-quotes.faa2408ad47dcdb443ad815f01611f996f59885aca5137640a98606e30a74024.json"
+    },
+    {
+      "key": {
+        "artifact_type": "citation-judgements",
+        "config": {
+          "endpoint": "vector-cluster",
+          "model": "Qwen3_6-35B-A3B",
+          "prompt": "6567394dc45a1f9d",
+          "upstream": {
+            "answers": "c3c9aa2635e7e1b5"
+          },
+          "version": 1,
+          "which": "all"
+        },
+        "producer_id": "judge_citations/rank1",
+        "ri_id": "citations"
+      },
+      "sha256": "3cfb418e8a659b1733f521dd11dffbac904762f626a53aaedcd53da88085eb15",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-citations-82d0f0e6be9c/citations.citation-judgements.judge_citations-rank1.5acd36c0a23c03afd70ed074a83e26682383b24d3311b0c46d503ef6541d25fe.json"
+    },
+    {
+      "key": {
+        "artifact_type": "citation-judgements",
+        "config": {
+          "endpoint": "vector-cluster",
+          "model": "Qwen3_6-35B-A3B",
+          "prompt": "6567394dc45a1f9d",
+          "upstream": {
+            "answers": "02d5f3babec1226f"
+          },
+          "version": 1,
+          "which": "subset"
+        },
+        "producer_id": "judge_citations/rank1",
+        "ri_id": "citations"
+      },
+      "sha256": "2e8316e4f5e6c96acb06f93c3d60d5c0847fe9fb16b767db85e85fe4a656ad19",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-citations-82d0f0e6be9c/citations.citation-judgements.judge_citations-rank1.5f1100e1b040ae5a9a021e9eeb27f8228acfb7cee2d6fe530f4fc46708027c9c.json"
+    },
+    {
+      "key": {
+        "artifact_type": "citation-judgements",
+        "config": {
+          "endpoint": "vector-proxy-paid",
+          "model": "claude-haiku-5-5",
+          "prompt": "6567394dc45a1f9d",
+          "upstream": {
+            "answers": "35ac070fac508505"
+          },
+          "version": 1,
+          "which": "subset"
+        },
+        "producer_id": "judge_citations/rank1",
+        "ri_id": "citations"
+      },
+      "sha256": "84fb01a51a2fcabc19a42740b864d6c4a4319512db187c97a98b9e334f000d62",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-citations-82d0f0e6be9c/citations.citation-judgements.judge_citations-rank1.96b91e1aeeec2bc000e4e6986febe7a5b1d0aa94797178337339e749b1d51b60.json"
+    },
+    {
+      "key": {
+        "artifact_type": "citation-judgements",
+        "config": {
+          "endpoint": "vector-cluster",
+          "model": "Qwen3_6-35B-A3B",
+          "prompt": "6567394dc45a1f9d",
+          "upstream": {
+            "answers": "b02ba50c6203d556"
+          },
+          "version": 1,
+          "which": "all"
+        },
+        "producer_id": "judge_citations/shuffled",
+        "ri_id": "citations"
+      },
+      "sha256": "a9ac112254b69a9afe057124e3c8d0d57bad5aa8613fbea114c844786d5aa4b3",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-citations-82d0f0e6be9c/citations.citation-judgements.judge_citations-shuffled.0872cc2ce4c7ebbed64fbed8cd1f6da42c0a6e0515c95c3747ee6f343e596e71.json"
+    },
+    {
+      "key": {
+        "artifact_type": "citation-judgements",
+        "config": {
+          "endpoint": "vector-proxy-paid",
+          "model": "claude-haiku-5-5",
+          "prompt": "6567394dc45a1f9d",
+          "upstream": {
+            "answers": "5effe91e25686feb"
+          },
+          "version": 1,
+          "which": "subset"
+        },
+        "producer_id": "judge_citations/shuffled",
+        "ri_id": "citations"
+      },
+      "sha256": "e7b01bd3d92a7fc797213686801fcabcfe4d6a9f92fd092ecbd3d498cb950151",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-citations-82d0f0e6be9c/citations.citation-judgements.judge_citations-shuffled.11f249d2a06a9053d4b12959df33fc66d8c2852a9567f805ef5e838ab6d4aac0.json"
+    },
+    {
+      "key": {
+        "artifact_type": "citation-judgements",
+        "config": {
+          "endpoint": "vector-cluster",
+          "model": "Qwen3_6-35B-A3B",
+          "prompt": "6567394dc45a1f9d",
+          "upstream": {
+            "answers": "8d314c59e8673bb8"
+          },
+          "version": 1,
+          "which": "subset"
+        },
+        "producer_id": "judge_citations/shuffled",
+        "ri_id": "citations"
+      },
+      "sha256": "c403e3c147a5d27403ac138b2040b5c522f1493efde193493313dc6e6920a818",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-citations-82d0f0e6be9c/citations.citation-judgements.judge_citations-shuffled.b1ad05c06633e64e4b071203963fffe3a85c68b4852ff14abf7a7613afc31f14.json"
+    },
+    {
+      "key": {
+        "artifact_type": "citation-judgements-minicheck",
+        "config": {
+          "answers": "74149fa23f158c5118dc3fe69bdbde6dddc2c432d218c3ef355560455a55f2e0",
+          "model": "lytang/MiniCheck-Flan-T5-Large",
+          "threshold": 0.5,
+          "version": 1
+        },
+        "producer_id": "minicheck/answer",
+        "ri_id": "citations"
+      },
+      "sha256": "3160958d3ac9eacd8138e800a2ab6e1e6ba216833e2e11c180fbb676e4a41b32",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-citations-82d0f0e6be9c/citations.citation-judgements-minicheck.minicheck-answer.5ce6b91677e386ff6dc709d92c4157bfe8d1c9dee5e903be4d21adcb988770c8.json"
+    },
+    {
+      "key": {
+        "artifact_type": "citation-judgements-minicheck",
+        "config": {
+          "answers": "74149fa23f158c5118dc3fe69bdbde6dddc2c432d218c3ef355560455a55f2e0",
+          "model": "lytang/MiniCheck-Flan-T5-Large",
+          "question_in_claim": "2d756dce1cc95319",
+          "threshold": 0.5,
+          "version": 1
+        },
+        "producer_id": "minicheck/answer",
+        "ri_id": "citations"
+      },
+      "sha256": "b4f64237d33a1e528e7ca5e42d6995c1173adeba91c999b52c80129b5dc16180",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-citations-82d0f0e6be9c/citations.citation-judgements-minicheck.minicheck-answer.b1b2d7c106e70c31fbbef2551ea583099a15f8e41ba73c9fded2ddf2d609f920.json"
+    },
+    {
+      "key": {
+        "artifact_type": "citation-judgements-minicheck",
+        "config": {
+          "answers": "4c65f149dd0ffb95bedc09143670f2ed7a4f3218e838dba3a623d0da87a4dfbb",
+          "model": "lytang/MiniCheck-Flan-T5-Large",
+          "threshold": 0.5,
+          "version": 1
+        },
+        "producer_id": "minicheck/answer",
+        "ri_id": "citations"
+      },
+      "sha256": "dbfa118a386ff14e362918c475a98de52f730e9fa9d197799d750cb3b7e6f630",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-citations-82d0f0e6be9c/citations.citation-judgements-minicheck.minicheck-answer.d1a1246aa66eec0d7acf1641abdbd397f3977358502de7f98c8603c6d2aa18ed.json"
+    },
+    {
+      "key": {
+        "artifact_type": "citation-judgements-minicheck",
+        "config": {
+          "answers": "17ded53b7eac6021210e7b9e8852ab52535ceeefe5cb238e8266763ef9361ada",
+          "model": "lytang/MiniCheck-Flan-T5-Large",
+          "threshold": 0.5,
+          "version": 1
+        },
+        "producer_id": "minicheck/answer-standalone",
+        "ri_id": "citations"
+      },
+      "sha256": "320c0276447d06d352a51f27715c4420c3f359bbae6935291aa373f736b4c166",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-citations-82d0f0e6be9c/citations.citation-judgements-minicheck.minicheck-answer-standalone.6ecc9f577a1650b527496192132b00407db0c6263d64d2805cab8e2c3c3939f7.json"
+    },
+    {
+      "key": {
+        "artifact_type": "citation-judgements-minicheck",
+        "config": {
+          "answers": "fd35541583d5c43aeb6ba0b52c3b45e5fa348603ce87c386bd81be7b274b72c3",
+          "model": "lytang/MiniCheck-Flan-T5-Large",
+          "question_in_claim": "2d756dce1cc95319",
+          "threshold": 0.5,
+          "version": 1
+        },
+        "producer_id": "minicheck/fulldoc",
+        "ri_id": "citations"
+      },
+      "sha256": "783a7843625c4c0572f03349af1e002f96af9ba5a18d27ee0fc1d24282a23b10",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-citations-82d0f0e6be9c/citations.citation-judgements-minicheck.minicheck-fulldoc.00c933ca17a1116be828b33d2b3f0d1fe515c6307276bc43e65f5eb7eeb72279.json"
+    },
+    {
+      "key": {
+        "artifact_type": "citation-judgements-minicheck",
+        "config": {
+          "answers": "fd35541583d5c43aeb6ba0b52c3b45e5fa348603ce87c386bd81be7b274b72c3",
+          "model": "lytang/MiniCheck-Flan-T5-Large",
+          "threshold": 0.5,
+          "version": 1
+        },
+        "producer_id": "minicheck/fulldoc",
+        "ri_id": "citations"
+      },
+      "sha256": "c176b596390bf70885e177e386438cbf58b921de9cc2cd1f77aff2357815476c",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-citations-82d0f0e6be9c/citations.citation-judgements-minicheck.minicheck-fulldoc.23805d94b4caf73de5c9ce1ebcf5af7115f6a71c6c22e5533457e8ffebf64f4e.json"
+    },
+    {
+      "key": {
+        "artifact_type": "citation-judgements-minicheck",
+        "config": {
+          "answers": "b691ec1085573b46740d3d8f1fe649ed24e7ce70d51b85a05ae45902c9b43064",
+          "model": "lytang/MiniCheck-Flan-T5-Large",
+          "threshold": 0.5,
+          "version": 1
+        },
+        "producer_id": "minicheck/fulldoc",
+        "ri_id": "citations"
+      },
+      "sha256": "f485a489ee05d3149b261c83f8eb9562ac9f896e9ec0d3166c3ceb17973ffa60",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-citations-82d0f0e6be9c/citations.citation-judgements-minicheck.minicheck-fulldoc.ae69cdcd5c7de2520bfd20aa78ed9bd08b49ef6de2dadd1afb213d9adca5690f.json"
+    },
+    {
+      "key": {
+        "artifact_type": "citation-judgements-minicheck",
+        "config": {
+          "answers": "f47bac9f82adb166a99fe29d59fb74caf46db94d4b278b126bcdc3c0130f8cc0",
+          "model": "lytang/MiniCheck-Flan-T5-Large",
+          "threshold": 0.5,
+          "version": 1
+        },
+        "producer_id": "minicheck/inline",
+        "ri_id": "citations"
+      },
+      "sha256": "45d6a3c87c77c6ab978545530d09339dc7d899faa3f8bcfc9f9d9cf05caeecf6",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-citations-82d0f0e6be9c/citations.citation-judgements-minicheck.minicheck-inline.1ab52310f6cb9c273ca083d3737bb34c517f5ee37ae41d955426bcd9c7b55243.json"
+    },
+    {
+      "key": {
+        "artifact_type": "citation-judgements-minicheck",
+        "config": {
+          "answers": "469cb8e3d82f7d9bda6bafdb1948a2ba4fd51f18328c797d0b63e55da7cbd17b",
+          "model": "lytang/MiniCheck-Flan-T5-Large",
+          "threshold": 0.5,
+          "version": 1
+        },
+        "producer_id": "minicheck/inline",
+        "ri_id": "citations"
+      },
+      "sha256": "962ee2c660efe29e0968d8ac40efca502a0ae97a9879973fc471cbe89c1d2b12",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-citations-82d0f0e6be9c/citations.citation-judgements-minicheck.minicheck-inline.853e55b396ccb82212797dfbcbb97cee270250cdeeda7dea15b304b3eeb1268e.json"
+    },
+    {
+      "key": {
+        "artifact_type": "citation-judgements-minicheck",
+        "config": {
+          "answers": "469cb8e3d82f7d9bda6bafdb1948a2ba4fd51f18328c797d0b63e55da7cbd17b",
+          "model": "lytang/MiniCheck-Flan-T5-Large",
+          "question_in_claim": "2d756dce1cc95319",
+          "threshold": 0.5,
+          "version": 1
+        },
+        "producer_id": "minicheck/inline",
+        "ri_id": "citations"
+      },
+      "sha256": "26c41d5fa2089391d7729c7dfb79ad193feaeb0ae3185f1eb297ff9c1b03f19b",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-citations-82d0f0e6be9c/citations.citation-judgements-minicheck.minicheck-inline.abfbd2bff806f2605ea5dee38e5aecf7318f8589429bd82d6c6ccbb0f93ae282.json"
+    },
+    {
+      "key": {
+        "artifact_type": "citation-judgements-minicheck",
+        "config": {
+          "answers": "8a3b430058d77725",
+          "model": "lytang/MiniCheck-Flan-T5-Large",
+          "threshold": 0.5,
+          "version": 1
+        },
+        "producer_id": "minicheck/posthoc",
+        "ri_id": "citations"
+      },
+      "sha256": "3baf88daf7b80bfd8b1b5cde090a1cf57753e404c1929e4594769b294b3368aa",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-citations-82d0f0e6be9c/citations.citation-judgements-minicheck.minicheck-posthoc.3190bbfd58a1aca49b9a0536d27c20a9076ca24e4b7fb69c36304ade42a7c891.json"
+    },
+    {
+      "key": {
+        "artifact_type": "citation-judgements-minicheck",
+        "config": {
+          "answers": "ed0ad7ed5bb159c5",
+          "model": "lytang/MiniCheck-Flan-T5-Large",
+          "threshold": 0.5,
+          "version": 1
+        },
+        "producer_id": "minicheck/posthoc",
+        "ri_id": "citations"
+      },
+      "sha256": "ea37fc25bb519678e4e59246769362cae2ba2ef8ddd6e389d7c2df320cdbe73c",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-citations-82d0f0e6be9c/citations.citation-judgements-minicheck.minicheck-posthoc.fe9530ed250782ebd5203d2e842c3b6e147847309ec10d3b4eea00f0af498c81.json"
+    },
+    {
+      "key": {
+        "artifact_type": "citation-judgements-minicheck",
+        "config": {
+          "answers": "3b07e9aca7ea1bf2ceb0f398566100d719d312be6a24ff11c57f4883bfd4c7c7",
+          "model": "lytang/MiniCheck-Flan-T5-Large",
+          "question_in_claim": "2d756dce1cc95319",
+          "threshold": 0.5,
+          "version": 1
+        },
+        "producer_id": "minicheck/quotes",
+        "ri_id": "citations"
+      },
+      "sha256": "4cd716fd2e40c97da960557e06a21b05f993d445610952667d9778905a96c004",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-citations-82d0f0e6be9c/citations.citation-judgements-minicheck.minicheck-quotes.1edc40c9c611bf9af0e5fb52c05be102d355937387bd780e88b0c8dbc253ef94.json"
+    },
+    {
+      "key": {
+        "artifact_type": "citation-judgements-minicheck",
+        "config": {
+          "answers": "3b07e9aca7ea1bf2ceb0f398566100d719d312be6a24ff11c57f4883bfd4c7c7",
+          "model": "lytang/MiniCheck-Flan-T5-Large",
+          "threshold": 0.5,
+          "version": 1
+        },
+        "producer_id": "minicheck/quotes",
+        "ri_id": "citations"
+      },
+      "sha256": "77ee3c6088914a247ca2e17698df6a32a83b1082cf11daa9f523f992038d0d65",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-citations-82d0f0e6be9c/citations.citation-judgements-minicheck.minicheck-quotes.49b0863b41baabfaa0638a3e577c3a4fd7fe6a597dd49c8043e2b1770a728b89.json"
+    },
+    {
+      "key": {
+        "artifact_type": "citation-judgements-minicheck",
+        "config": {
+          "answers": "ea0a212345955c43d1fecaef7d6eb50f1d72d6913fab47cb23c91aca3ad65632",
+          "model": "lytang/MiniCheck-Flan-T5-Large",
+          "threshold": 0.5,
+          "version": 1
+        },
+        "producer_id": "minicheck/quotes",
+        "ri_id": "citations"
+      },
+      "sha256": "94acfaf1ee469f0b49eab81687e2e59521938d7943760174f04978e3dbc4269e",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-citations-82d0f0e6be9c/citations.citation-judgements-minicheck.minicheck-quotes.8bfab3a287b1517837db7c96539e29e93a5c34f2b0acbc34799f468b8d04a236.json"
+    },
+    {
+      "key": {
+        "artifact_type": "citation-judgements-minicheck",
+        "config": {
+          "answers": "02d5f3babec1226f",
+          "model": "lytang/MiniCheck-Flan-T5-Large",
+          "threshold": 0.5,
+          "version": 1
+        },
+        "producer_id": "minicheck/rank1",
+        "ri_id": "citations"
+      },
+      "sha256": "81da876f51e8bc81e580b920b9c1c527be553e62499496b04d3c5920289efbd2",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-citations-82d0f0e6be9c/citations.citation-judgements-minicheck.minicheck-rank1.6f07ddee868103ab2e6cffbe6537a5b3661b1238f88a7e75b73c2ce2a31e528e.json"
+    },
+    {
+      "key": {
+        "artifact_type": "citation-judgements-minicheck",
+        "config": {
+          "answers": "c3c9aa2635e7e1b5",
+          "model": "lytang/MiniCheck-Flan-T5-Large",
+          "threshold": 0.5,
+          "version": 1
+        },
+        "producer_id": "minicheck/rank1",
+        "ri_id": "citations"
+      },
+      "sha256": "bb5f363897442da6c0a1c0fc1086f1affc3679f31d38b2e1b90ad90d84902734",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-citations-82d0f0e6be9c/citations.citation-judgements-minicheck.minicheck-rank1.7cd73419bcf6bb0d303be84a971bbdab5136636d0f35c9f1a56e75942e3a32c7.json"
+    },
+    {
+      "key": {
+        "artifact_type": "citation-judgements-minicheck",
+        "config": {
+          "answers": "b02ba50c6203d556",
+          "model": "lytang/MiniCheck-Flan-T5-Large",
+          "threshold": 0.5,
+          "version": 1
+        },
+        "producer_id": "minicheck/shuffled",
+        "ri_id": "citations"
+      },
+      "sha256": "174dbaa0c68fe276986ed90648ec512bbed598ccaaf0dd952e26ab5e3f9e964c",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-citations-82d0f0e6be9c/citations.citation-judgements-minicheck.minicheck-shuffled.d4ec82b52c90e4f94290135b0c8d6b3c81ea1f8d970a53ed7465917b725e9328.json"
+    },
+    {
+      "key": {
+        "artifact_type": "citation-judgements-minicheck",
+        "config": {
+          "answers": "8d314c59e8673bb8",
+          "model": "lytang/MiniCheck-Flan-T5-Large",
+          "threshold": 0.5,
+          "version": 1
+        },
+        "producer_id": "minicheck/shuffled",
+        "ri_id": "citations"
+      },
+      "sha256": "ce747b3616ae930dc102dbd7b2c23912f49cde5bd6e8953136e4cfd126a80391",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-citations-82d0f0e6be9c/citations.citation-judgements-minicheck.minicheck-shuffled.ff30ee98d9b43ac12947300bf90976bd36db937bfc2fc9fdf2ca4a02711b272e.json"
+    },
+    {
+      "key": {
+        "artifact_type": "cited-answers",
+        "config": {
+          "chunk_chars": 1200,
+          "documents": 24,
+          "endpoint": "vector-cluster",
+          "k": 5,
+          "max_chars": 1200,
+          "max_tokens": 700,
+          "model": "Qwen3_6-35B-A3B",
+          "nulls_per_document": 2,
+          "overlap_chars": 200,
+          "question": "Does the agreement say that {hypothesis}? Begin the answer with Yes if it does, or No if it says the opposite. If the agreement does not address this, say it is not stated.",
+          "seed": 0,
+          "split": "460267b56052a2dc5aead98eb35eadef9e6734d5723d37b4a9790e410f812387",
+          "style": "answer",
+          "template": "01d0d1b74cc7fd43",
+          "version": 1,
+          "which": "subset"
+        },
+        "producer_id": "generate_cited/answer",
+        "ri_id": "citations"
+      },
+      "sha256": "edf4a50608d70a2a830d8b6ec0d25dc221215dbd9b037a750ea51302aa20d8cf",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-citations-82d0f0e6be9c/citations.cited-answers.generate_cited-answer.4c65f149dd0ffb95bedc09143670f2ed7a4f3218e838dba3a623d0da87a4dfbb.json"
+    },
+    {
+      "key": {
+        "artifact_type": "cited-answers",
+        "config": {
+          "chunk_chars": 1200,
+          "documents": 24,
+          "endpoint": "vector-cluster",
+          "k": 5,
+          "max_chars": 1200,
+          "max_tokens": 700,
+          "model": "Qwen3_6-35B-A3B",
+          "nulls_per_document": 2,
+          "overlap_chars": 200,
+          "question": "Does the agreement say that {hypothesis}? Begin the answer with Yes if it does, or No if it says the opposite. If the agreement does not address this, say it is not stated.",
+          "seed": 0,
+          "split": "460267b56052a2dc5aead98eb35eadef9e6734d5723d37b4a9790e410f812387",
+          "style": "answer",
+          "template": "01d0d1b74cc7fd43",
+          "version": 1,
+          "which": "all"
+        },
+        "producer_id": "generate_cited/answer",
+        "ri_id": "citations"
+      },
+      "sha256": "9eb50a06846d3fc973fda2b78eecbbfc23f2e46ae348adbcb76009d900d0ab57",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-citations-82d0f0e6be9c/citations.cited-answers.generate_cited-answer.74149fa23f158c5118dc3fe69bdbde6dddc2c432d218c3ef355560455a55f2e0.json"
+    },
+    {
+      "key": {
+        "artifact_type": "cited-answers",
+        "config": {
+          "chunk_chars": 1200,
+          "documents": 24,
+          "endpoint": "vector-proxy-paid",
+          "k": 5,
+          "max_chars": 1200,
+          "max_tokens": 700,
+          "model": "gpt-6-luna",
+          "nulls_per_document": 2,
+          "overlap_chars": 200,
+          "question": "Does the agreement say that {hypothesis}? Begin the answer with Yes if it does, or No if it says the opposite. If the agreement does not address this, say it is not stated.",
+          "seed": 0,
+          "split": "460267b56052a2dc5aead98eb35eadef9e6734d5723d37b4a9790e410f812387",
+          "style": "answer",
+          "template": "01d0d1b74cc7fd43",
+          "version": 1,
+          "which": "subset"
+        },
+        "producer_id": "generate_cited/answer",
+        "ri_id": "citations"
+      },
+      "sha256": "4b56fe3f89e27b42aae42a89eefadc15822116191b5a23b956d50e38645f160d",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-citations-82d0f0e6be9c/citations.cited-answers.generate_cited-answer.f73f47a2eb71bc35fcee9bcfb8526d74fbbb36fae0e567a32ad3f49680097ac3.json"
+    },
+    {
+      "key": {
+        "artifact_type": "cited-answers",
+        "config": {
+          "chunk_chars": 1200,
+          "context": "document",
+          "documents": 24,
+          "endpoint": "vector-proxy-paid",
+          "k": 5,
+          "max_chars": 1200,
+          "max_tokens": 700,
+          "model": "gpt-6-luna",
+          "nulls_per_document": 2,
+          "overlap_chars": 200,
+          "question": "Does the agreement say that {hypothesis}? Begin the answer with Yes if it does, or No if it says the opposite. If the agreement does not address this, say it is not stated.",
+          "seed": 0,
+          "split": "460267b56052a2dc5aead98eb35eadef9e6734d5723d37b4a9790e410f812387",
+          "style": "quotes",
+          "template": "ee514ff0eba38680",
+          "version": 1,
+          "which": "subset"
+        },
+        "producer_id": "generate_cited/fulldoc",
+        "ri_id": "citations"
+      },
+      "sha256": "7ec0dcdfa24a3202345562438f460fc9dcceff6b7445248cb3f3aad95c4ff28c",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-citations-82d0f0e6be9c/citations.cited-answers.generate_cited-fulldoc.3ba448f748f827d4c4fb252422ac71a57e95387309ac72b3e859891dfc767e9b.json"
+    },
+    {
+      "key": {
+        "artifact_type": "cited-answers",
+        "config": {
+          "chunk_chars": 1200,
+          "context": "document",
+          "documents": 24,
+          "endpoint": "vector-cluster",
+          "k": 5,
+          "max_chars": 1200,
+          "max_tokens": 700,
+          "model": "Qwen3_6-35B-A3B",
+          "nulls_per_document": 2,
+          "overlap_chars": 200,
+          "question": "Does the agreement say that {hypothesis}? Begin the answer with Yes if it does, or No if it says the opposite. If the agreement does not address this, say it is not stated.",
+          "seed": 0,
+          "split": "460267b56052a2dc5aead98eb35eadef9e6734d5723d37b4a9790e410f812387",
+          "style": "quotes",
+          "template": "ee514ff0eba38680",
+          "version": 1,
+          "which": "subset"
+        },
+        "producer_id": "generate_cited/fulldoc",
+        "ri_id": "citations"
+      },
+      "sha256": "28dbfd64e7945854e96faacd496bb83c02bc37e625df8c6c8561effb1f2fbe6e",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-citations-82d0f0e6be9c/citations.cited-answers.generate_cited-fulldoc.b691ec1085573b46740d3d8f1fe649ed24e7ce70d51b85a05ae45902c9b43064.json"
+    },
+    {
+      "key": {
+        "artifact_type": "cited-answers",
+        "config": {
+          "chunk_chars": 1200,
+          "context": "document",
+          "documents": 24,
+          "endpoint": "vector-cluster",
+          "k": 5,
+          "max_chars": 1200,
+          "max_tokens": 700,
+          "model": "Qwen3_6-35B-A3B",
+          "nulls_per_document": 2,
+          "overlap_chars": 200,
+          "question": "Does the agreement say that {hypothesis}? Begin the answer with Yes if it does, or No if it says the opposite. If the agreement does not address this, say it is not stated.",
+          "seed": 0,
+          "split": "460267b56052a2dc5aead98eb35eadef9e6734d5723d37b4a9790e410f812387",
+          "style": "quotes",
+          "template": "ee514ff0eba38680",
+          "version": 1,
+          "which": "all"
+        },
+        "producer_id": "generate_cited/fulldoc",
+        "ri_id": "citations"
+      },
+      "sha256": "32b8f2d896f1c954655506830684f6b66c3a18e8b67df953555824ea6dfd94fe",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-citations-82d0f0e6be9c/citations.cited-answers.generate_cited-fulldoc.fd35541583d5c43aeb6ba0b52c3b45e5fa348603ce87c386bd81be7b274b72c3.json"
+    },
+    {
+      "key": {
+        "artifact_type": "cited-answers",
+        "config": {
+          "chunk_chars": 1200,
+          "documents": 24,
+          "endpoint": "vector-proxy-paid",
+          "k": 5,
+          "max_chars": 1200,
+          "max_tokens": 700,
+          "model": "gpt-6-luna",
+          "nulls_per_document": 2,
+          "overlap_chars": 200,
+          "question": "Does the agreement say that {hypothesis}? Begin the answer with Yes if it does, or No if it says the opposite. If the agreement does not address this, say it is not stated.",
+          "seed": 0,
+          "split": "460267b56052a2dc5aead98eb35eadef9e6734d5723d37b4a9790e410f812387",
+          "style": "inline",
+          "template": "4f29f963a7bc0cbb",
+          "version": 1,
+          "which": "subset"
+        },
+        "producer_id": "generate_cited/inline",
+        "ri_id": "citations"
+      },
+      "sha256": "202784d9ea99b0ca428a4ea559b7a7ba90c0d10c180b8e107f739cbbea8f0d45",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-citations-82d0f0e6be9c/citations.cited-answers.generate_cited-inline.143261fc228d0a8b73240011e111369c9a4b51ded42431d9433e8de77803f9d4.json"
+    },
+    {
+      "key": {
+        "artifact_type": "cited-answers",
+        "config": {
+          "chunk_chars": 1200,
+          "documents": 24,
+          "endpoint": "vector-cluster",
+          "k": 5,
+          "max_chars": 1200,
+          "max_tokens": 700,
+          "model": "Qwen3_6-35B-A3B",
+          "nulls_per_document": 2,
+          "overlap_chars": 200,
+          "question": "Does the agreement say that {hypothesis}? Begin the answer with Yes if it does, or No if it says the opposite. If the agreement does not address this, say it is not stated.",
+          "seed": 0,
+          "split": "460267b56052a2dc5aead98eb35eadef9e6734d5723d37b4a9790e410f812387",
+          "style": "inline",
+          "template": "4f29f963a7bc0cbb",
+          "version": 1,
+          "which": "all"
+        },
+        "producer_id": "generate_cited/inline",
+        "ri_id": "citations"
+      },
+      "sha256": "9cbfd3668b280c714c643299f513e43a23de3593e04604e80f93866d7a93d69b",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-citations-82d0f0e6be9c/citations.cited-answers.generate_cited-inline.469cb8e3d82f7d9bda6bafdb1948a2ba4fd51f18328c797d0b63e55da7cbd17b.json"
+    },
+    {
+      "key": {
+        "artifact_type": "cited-answers",
+        "config": {
+          "chunk_chars": 1200,
+          "documents": 24,
+          "endpoint": "vector-cluster",
+          "k": 5,
+          "max_chars": 1200,
+          "max_tokens": 700,
+          "model": "Qwen3_6-35B-A3B",
+          "nulls_per_document": 2,
+          "overlap_chars": 200,
+          "question": "Does the agreement say that {hypothesis}? Begin the answer with Yes if it does, or No if it says the opposite. If the agreement does not address this, say it is not stated.",
+          "seed": 0,
+          "split": "460267b56052a2dc5aead98eb35eadef9e6734d5723d37b4a9790e410f812387",
+          "style": "inline",
+          "template": "4f29f963a7bc0cbb",
+          "version": 1,
+          "which": "subset"
+        },
+        "producer_id": "generate_cited/inline",
+        "ri_id": "citations"
+      },
+      "sha256": "464fe9e07a1afcee6ca67b4cbbce037c9c4d34a9a194947d6de3b766ef8d1fd4",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-citations-82d0f0e6be9c/citations.cited-answers.generate_cited-inline.f47bac9f82adb166a99fe29d59fb74caf46db94d4b278b126bcdc3c0130f8cc0.json"
+    },
+    {
+      "key": {
+        "artifact_type": "cited-answers",
+        "config": {
+          "chunk_chars": 1200,
+          "documents": 24,
+          "endpoint": "vector-proxy-paid",
+          "k": 5,
+          "max_chars": 1200,
+          "max_tokens": 700,
+          "model": "gpt-6-luna",
+          "nulls_per_document": 2,
+          "overlap_chars": 200,
+          "question": "Does the agreement say that {hypothesis}? Begin the answer with Yes if it does, or No if it says the opposite. If the agreement does not address this, say it is not stated.",
+          "seed": 0,
+          "split": "460267b56052a2dc5aead98eb35eadef9e6734d5723d37b4a9790e410f812387",
+          "style": "quotes",
+          "template": "ee514ff0eba38680",
+          "version": 1,
+          "which": "subset"
+        },
+        "producer_id": "generate_cited/quotes",
+        "ri_id": "citations"
+      },
+      "sha256": "7cfcb4ec2ba895fe9b0e62663ce91ed9b0cfe6223bd97c1f1fafdd97b5dbc498",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-citations-82d0f0e6be9c/citations.cited-answers.generate_cited-quotes.132bd5ddbd268d4a5a47c46a78dd887def81274d7b0250a9a9f493b418454f9f.json"
+    },
+    {
+      "key": {
+        "artifact_type": "cited-answers",
+        "config": {
+          "chunk_chars": 1200,
+          "documents": 24,
+          "endpoint": "vector-cluster",
+          "k": 5,
+          "max_chars": 1200,
+          "max_tokens": 700,
+          "model": "Qwen3_6-35B-A3B",
+          "nulls_per_document": 2,
+          "overlap_chars": 200,
+          "question": "Does the agreement say that {hypothesis}? Begin the answer with Yes if it does, or No if it says the opposite. If the agreement does not address this, say it is not stated.",
+          "seed": 0,
+          "split": "460267b56052a2dc5aead98eb35eadef9e6734d5723d37b4a9790e410f812387",
+          "style": "quotes",
+          "template": "ee514ff0eba38680",
+          "version": 1,
+          "which": "all"
+        },
+        "producer_id": "generate_cited/quotes",
+        "ri_id": "citations"
+      },
+      "sha256": "292c9386a5b4a0a5caffdbb534d1a82d0797888573aa2aaa419d106ca7432fc6",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-citations-82d0f0e6be9c/citations.cited-answers.generate_cited-quotes.3b07e9aca7ea1bf2ceb0f398566100d719d312be6a24ff11c57f4883bfd4c7c7.json"
+    },
+    {
+      "key": {
+        "artifact_type": "cited-answers",
+        "config": {
+          "chunk_chars": 1200,
+          "documents": 24,
+          "endpoint": "vector-cluster",
+          "k": 5,
+          "max_chars": 1200,
+          "max_tokens": 700,
+          "model": "Qwen3_6-35B-A3B",
+          "nulls_per_document": 2,
+          "overlap_chars": 200,
+          "question": "Does the agreement say that {hypothesis}? Begin the answer with Yes if it does, or No if it says the opposite. If the agreement does not address this, say it is not stated.",
+          "seed": 0,
+          "split": "460267b56052a2dc5aead98eb35eadef9e6734d5723d37b4a9790e410f812387",
+          "style": "quotes",
+          "template": "ee514ff0eba38680",
+          "version": 1,
+          "which": "subset"
+        },
+        "producer_id": "generate_cited/quotes",
+        "ri_id": "citations"
+      },
+      "sha256": "4f076045713d64d89cb54b489c32df281ff1b2761f449db435d87cf124e50720",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-citations-82d0f0e6be9c/citations.cited-answers.generate_cited-quotes.ea0a212345955c43d1fecaef7d6eb50f1d72d6913fab47cb23c91aca3ad65632.json"
+    },
+    {
+      "key": {
+        "artifact_type": "cited-answers",
+        "config": {
+          "answers": "469cb8e3d82f7d9bda6bafdb1948a2ba4fd51f18328c797d0b63e55da7cbd17b",
+          "model": "lytang/MiniCheck-Flan-T5-Large",
+          "threshold": 0.5,
+          "version": 1
+        },
+        "producer_id": "posthoc/minicheck",
+        "ri_id": "citations"
+      },
+      "sha256": "376c8f84799029693acd7f0b8d8c091960ea55ae1a785fab442e0f8209b2a9a0",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-citations-82d0f0e6be9c/citations.cited-answers.posthoc-minicheck.aec0fe301d1354d0c13bf9c2cf3b67b4b9fa5213448061940d5f460798f69031.json"
+    },
+    {
+      "key": {
+        "artifact_type": "cited-answers",
+        "config": {
+          "answers": "f47bac9f82adb166a99fe29d59fb74caf46db94d4b278b126bcdc3c0130f8cc0",
+          "model": "lytang/MiniCheck-Flan-T5-Large",
+          "threshold": 0.5,
+          "version": 1
+        },
+        "producer_id": "posthoc/minicheck",
+        "ri_id": "citations"
+      },
+      "sha256": "4d8935362eb1cd12b4c85132c64c59ca8adc7b9511b80cbed49561a8ffeb221c",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-citations-82d0f0e6be9c/citations.cited-answers.posthoc-minicheck.c3711c99d38918318efa77082cdae64cf64c796f792243214b52b718d192efff.json"
+    },
+    {
+      "key": {
+        "artifact_type": "cited-answers-explore",
+        "config": {
+          "chunk_chars": 1200,
+          "documents": 24,
+          "endpoint": "vector-cluster",
+          "k": 5,
+          "max_chars": 1200,
+          "max_tokens": 1200,
+          "model": "Qwen3_6-35B-A3B",
+          "nulls_per_document": 2,
+          "overlap_chars": 200,
+          "question": "Does the agreement say that {hypothesis}? Begin the answer with Yes if it does, or No if it says the opposite. If the agreement does not address this, say it is not stated.",
+          "seed": 0,
+          "split": "460267b56052a2dc5aead98eb35eadef9e6734d5723d37b4a9790e410f812387",
+          "template": "edb202b99100e3dd",
+          "upstream": {
+            "answers": "74149fa23f158c5118dc3fe69bdbde6dddc2c432d218c3ef355560455a55f2e0"
+          },
+          "version": 1,
+          "which": "all"
+        },
+        "producer_id": "explore/answer-standalone",
+        "ri_id": "citations"
+      },
+      "sha256": "9b53aca073d82edcaa7dec3bf47c35f89639a4881b58ef512da4c8dadc87db10",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-citations-82d0f0e6be9c/citations.cited-answers-explore.explore-answer-standalone.17ded53b7eac6021210e7b9e8852ab52535ceeefe5cb238e8266763ef9361ada.json"
+    },
+    {
+      "key": {
+        "artifact_type": "cited-answers-explore",
+        "config": {
+          "chunk_chars": 1200,
+          "documents": 24,
+          "endpoint": "vector-cluster",
+          "k": 5,
+          "max_chars": 1200,
+          "max_tokens": 1200,
+          "model": "Qwen3_6-35B-A3B",
+          "nulls_per_document": 2,
+          "overlap_chars": 200,
+          "question": "Does the agreement say that {hypothesis}? Begin the answer with Yes if it does, or No if it says the opposite. If the agreement does not address this, say it is not stated.",
+          "seed": 0,
+          "split": "460267b56052a2dc5aead98eb35eadef9e6734d5723d37b4a9790e410f812387",
+          "template": "f426824c0735de42",
+          "upstream": {
+            "answers": "fd35541583d5c43aeb6ba0b52c3b45e5fa348603ce87c386bd81be7b274b72c3"
+          },
+          "version": 1,
+          "which": "all"
+        },
+        "producer_id": "explore/fulldoc-check",
+        "ri_id": "citations"
+      },
+      "sha256": "672a3b478e8a6e769706e78d4ace35f7ac4a66d1bf47d06ea07472c4e62a4759",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-citations-82d0f0e6be9c/citations.cited-answers-explore.explore-fulldoc-check.3e874aba5657facba5138ec9a25c3ad40be90fb1ca9269ade3b4ec5dc654f7b4.json"
+    },
+    {
+      "key": {
+        "artifact_type": "cited-answers-explore",
+        "config": {
+          "chunk_chars": 1200,
+          "documents": 24,
+          "endpoint": "vector-cluster",
+          "k": 5,
+          "max_chars": 1200,
+          "max_tokens": 1200,
+          "model": "Qwen3_6-35B-A3B",
+          "nulls_per_document": 2,
+          "overlap_chars": 200,
+          "question": "Does the agreement say that {hypothesis}? Begin the answer with Yes if it does, or No if it says the opposite. If the agreement does not address this, say it is not stated.",
+          "seed": 0,
+          "split": "460267b56052a2dc5aead98eb35eadef9e6734d5723d37b4a9790e410f812387",
+          "template": "0cd23e1ed9c58e92",
+          "version": 1,
+          "which": "all"
+        },
+        "producer_id": "explore/fulldoc-extract",
+        "ri_id": "citations"
+      },
+      "sha256": "25978dd749eaaa411a10bfb32d0c5f16b5acb800315a2a94e2d9d860a025fb75",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-citations-82d0f0e6be9c/citations.cited-answers-explore.explore-fulldoc-extract.f1ff500e1327bab66a134ab4ca21e9cdca5bdfc60426cd16c67bced5fed49c38.json"
+    },
+    {
+      "key": {
+        "artifact_type": "cited-answers-explore",
+        "config": {
+          "chunk_chars": 1200,
+          "documents": 24,
+          "endpoint": "vector-cluster",
+          "k": 5,
+          "max_chars": 1200,
+          "max_tokens": 1200,
+          "model": "Qwen3_6-35B-A3B",
+          "nulls_per_document": 2,
+          "overlap_chars": 200,
+          "question": "Does the agreement say that {hypothesis}? Begin the answer with Yes if it does, or No if it says the opposite. If the agreement does not address this, say it is not stated.",
+          "seed": 0,
+          "split": "460267b56052a2dc5aead98eb35eadef9e6734d5723d37b4a9790e410f812387",
+          "template": "dbb19428155d436f",
+          "version": 1,
+          "which": "all"
+        },
+        "producer_id": "explore/fulldoc-sentinel",
+        "ri_id": "citations"
+      },
+      "sha256": "0f2c65071f855d486ff4b1f418de1cc1836272da0c62c3b535cfdd7ffcb86a93",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-citations-82d0f0e6be9c/citations.cited-answers-explore.explore-fulldoc-sentinel.d2410c6faaa3e6d0c0322955cef628949e1009a74e50443ca90f3e4309dd4e9e.json"
+    },
+    {
+      "key": {
+        "artifact_type": "rankings",
+        "config": {
+          "chunk_chars": 1200,
+          "documents": 24,
+          "embedder": "BAAI/bge-small-en-v1.5",
+          "k": 5,
+          "max_chars": 1200,
+          "nulls_per_document": 2,
+          "overlap_chars": 200,
+          "question": "Does the agreement say that {hypothesis}? Begin the answer with Yes if it does, or No if it says the opposite. If the agreement does not address this, say it is not stated.",
+          "seed": 0,
+          "split": "460267b56052a2dc5aead98eb35eadef9e6734d5723d37b4a9790e410f812387",
+          "version": 1
+        },
+        "producer_id": "dense",
+        "ri_id": "citations"
+      },
+      "sha256": "783726dfbedbc9540484537c175eea96cae241d8644750fd7eb003dd6851436b",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-citations-82d0f0e6be9c/citations.rankings.dense.0083f356fb1623e5be2dadfed76425ec59b377c54f6f14ba5981adc1de4709c8.json"
+    },
+    {
+      "key": {
+        "artifact_type": "rankings",
+        "config": {
+          "chunk_chars": 1200,
+          "documents": 24,
+          "embedder": "BAAI/bge-small-en-v1.5",
+          "k": 5,
+          "max_chars": 1200,
+          "nulls_per_document": 2,
+          "overlap_chars": 200,
+          "question": "Does the agreement say that {hypothesis}? Begin the answer with Yes or No.",
+          "seed": 0,
+          "split": "460267b56052a2dc5aead98eb35eadef9e6734d5723d37b4a9790e410f812387",
+          "version": 1
+        },
+        "producer_id": "dense",
+        "ri_id": "citations"
+      },
+      "sha256": "b90acd8511ba63f9916941d378ba6f41136e28005b7b271735e3c5329ceed9c4",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-citations-82d0f0e6be9c/citations.rankings.dense.e5effe6de07e15420c22a35e3c766cfa089011ec2cac0ffbfb453872a6a229ee.json"
+    }
+  ]
+}

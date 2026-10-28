@@ -1,0 +1,1303 @@
+{
+ "produced_by": {
+  "model": "Qwen3_6-35B-A3B",
+  "judge": "Qwen3_6-35B-A3B",
+  "embeddings": "BAAI/bge-small-en-v1.5 (local)",
+  "endpoint": "vector-cluster",
+  "producer": "implementations/special_topics/mixed_source_routing/build_reference.py",
+  "mode": "explore: one run, sampling seed 0",
+  "rate_per_minute": 20
+ },
+ "route_sets": {
+  "sql_plain": {
+   "prose": "prose",
+   "table": "table",
+   "both": "both"
+  },
+  "table_chunks": {
+   "prose": "prose",
+   "table": "table_vec",
+   "both": "both_vec"
+  },
+  "sql_linked": {
+   "prose": "prose",
+   "table": "table_sql2",
+   "both": "both_sql2"
+  }
+ },
+ "arms": {
+  "RE": "embedding router, the hand-written examples",
+  "REm": "embedding router, company names, years, and form types masked",
+  "REl": "embedding router, leave-one-out over the labelled questions",
+  "RL": "LLM router",
+  "B": "no router: both",
+  "O": "oracle router"
+ },
+ "results": {
+  "sql_plain": {
+   "arms": [
+    {
+     "arm": "RE",
+     "questions": 60,
+     "correct": 5,
+     "accuracy": 0.0833,
+     "calls": 2.5,
+     "prompt_tokens": 1822,
+     "completion_tokens": 224,
+     "by_type": {
+      "prose": {
+       "questions": 20,
+       "accuracy": 0.1,
+       "calls": 2.5,
+       "prompt_tokens": 1996
+      },
+      "table": {
+       "questions": 20,
+       "accuracy": 0.15,
+       "calls": 2.7,
+       "prompt_tokens": 1623
+      },
+      "both": {
+       "questions": 20,
+       "accuracy": 0.0,
+       "calls": 2.3,
+       "prompt_tokens": 1847
+      }
+     },
+     "routes": {
+      "table": 52,
+      "prose": 1,
+      "both": 7
+     },
+     "routing": {
+      "confusion": {
+       "prose": {
+        "table": 16,
+        "prose": 1,
+        "both": 3
+       },
+       "table": {
+        "table": 18,
+        "both": 2
+       },
+       "both": {
+        "table": 18,
+        "both": 2
+       }
+      },
+      "mismatches": 39,
+      "costly": 15,
+      "rescued": 0,
+      "questions": 60,
+      "agreement": 0.35
+     },
+     "label": "embedding router, the hand-written examples"
+    },
+    {
+     "arm": "REm",
+     "questions": 60,
+     "correct": 7,
+     "accuracy": 0.1167,
+     "calls": 2.4,
+     "prompt_tokens": 1793,
+     "completion_tokens": 213,
+     "by_type": {
+      "prose": {
+       "questions": 20,
+       "accuracy": 0.2,
+       "calls": 2.2,
+       "prompt_tokens": 1797
+      },
+      "table": {
+       "questions": 20,
+       "accuracy": 0.15,
+       "calls": 2.7,
+       "prompt_tokens": 1623
+      },
+      "both": {
+       "questions": 20,
+       "accuracy": 0.0,
+       "calls": 2.3,
+       "prompt_tokens": 1958
+      }
+     },
+     "routes": {
+      "table": 45,
+      "prose": 5,
+      "both": 10
+     },
+     "routing": {
+      "confusion": {
+       "prose": {
+        "table": 11,
+        "prose": 5,
+        "both": 4
+       },
+       "table": {
+        "table": 18,
+        "both": 2
+       },
+       "both": {
+        "table": 16,
+        "both": 4
+       }
+      },
+      "mismatches": 33,
+      "costly": 13,
+      "rescued": 0,
+      "questions": 60,
+      "agreement": 0.45
+     },
+     "label": "embedding router, company names, years, and form types masked"
+    },
+    {
+     "arm": "REl",
+     "questions": 60,
+     "correct": 20,
+     "accuracy": 0.3333,
+     "calls": 2.4,
+     "prompt_tokens": 2263,
+     "completion_tokens": 216,
+     "by_type": {
+      "prose": {
+       "questions": 20,
+       "accuracy": 0.65,
+       "calls": 2.3,
+       "prompt_tokens": 2444
+      },
+      "table": {
+       "questions": 20,
+       "accuracy": 0.2,
+       "calls": 2.6,
+       "prompt_tokens": 2053
+      },
+      "both": {
+       "questions": 20,
+       "accuracy": 0.15,
+       "calls": 2.3,
+       "prompt_tokens": 2292
+      }
+     },
+     "routes": {
+      "both": 39,
+      "prose": 5,
+      "table": 16
+     },
+     "routing": {
+      "confusion": {
+       "prose": {
+        "both": 15,
+        "prose": 4,
+        "table": 1
+       },
+       "table": {
+        "both": 12,
+        "table": 7,
+        "prose": 1
+       },
+       "both": {
+        "both": 12,
+        "table": 8
+       }
+      },
+      "mismatches": 37,
+      "costly": 1,
+      "rescued": 1,
+      "questions": 60,
+      "agreement": 0.3833
+     },
+     "label": "embedding router, leave-one-out over the labelled questions"
+    },
+    {
+     "arm": "RL",
+     "questions": 60,
+     "correct": 20,
+     "accuracy": 0.3333,
+     "calls": 3.07,
+     "prompt_tokens": 2037,
+     "completion_tokens": 211,
+     "by_type": {
+      "prose": {
+       "questions": 20,
+       "accuracy": 0.65,
+       "calls": 2.2,
+       "prompt_tokens": 1289
+      },
+      "table": {
+       "questions": 20,
+       "accuracy": 0.15,
+       "calls": 3.7,
+       "prompt_tokens": 1835
+      },
+      "both": {
+       "questions": 20,
+       "accuracy": 0.2,
+       "calls": 3.3,
+       "prompt_tokens": 2987
+      }
+     },
+     "routes": {
+      "prose": 17,
+      "table": 21,
+      "both": 22
+     },
+     "routing": {
+      "confusion": {
+       "prose": {
+        "prose": 17,
+        "table": 2,
+        "both": 1
+       },
+       "table": {
+        "table": 19,
+        "both": 1
+       },
+       "both": {
+        "both": 20
+       }
+      },
+      "mismatches": 4,
+      "costly": 0,
+      "rescued": 0,
+      "questions": 60,
+      "agreement": 0.9333
+     },
+     "label": "LLM router"
+    },
+    {
+     "arm": "B",
+     "questions": 60,
+     "correct": 21,
+     "accuracy": 0.35,
+     "calls": 2.53,
+     "prompt_tokens": 2684,
+     "completion_tokens": 233,
+     "by_type": {
+      "prose": {
+       "questions": 20,
+       "accuracy": 0.65,
+       "calls": 2.6,
+       "prompt_tokens": 2830
+      },
+      "table": {
+       "questions": 20,
+       "accuracy": 0.2,
+       "calls": 2.7,
+       "prompt_tokens": 2491
+      },
+      "both": {
+       "questions": 20,
+       "accuracy": 0.2,
+       "calls": 2.3,
+       "prompt_tokens": 2732
+      }
+     },
+     "routes": {
+      "both": 60
+     },
+     "routing": null,
+     "label": "no router: both"
+    },
+    {
+     "arm": "O",
+     "questions": 60,
+     "correct": 20,
+     "accuracy": 0.3333,
+     "calls": 2.0,
+     "prompt_tokens": 1754,
+     "completion_tokens": 165,
+     "by_type": {
+      "prose": {
+       "questions": 20,
+       "accuracy": 0.65,
+       "calls": 1.0,
+       "prompt_tokens": 987
+      },
+      "table": {
+       "questions": 20,
+       "accuracy": 0.15,
+       "calls": 2.7,
+       "prompt_tokens": 1542
+      },
+      "both": {
+       "questions": 20,
+       "accuracy": 0.2,
+       "calls": 2.3,
+       "prompt_tokens": 2732
+      }
+     },
+     "routes": {
+      "prose": 20,
+      "table": 20,
+      "both": 20
+     },
+     "routing": null,
+     "label": "oracle router"
+    }
+   ],
+   "route_accuracy": {
+    "prose": {
+     "prose": 0.65,
+     "table": 0.0,
+     "both": 0.65
+    },
+    "table": {
+     "prose": 0.05,
+     "table": 0.15,
+     "both": 0.2
+    },
+    "both": {
+     "prose": 0.05,
+     "table": 0.0,
+     "both": 0.2
+    }
+   }
+  },
+  "table_chunks": {
+   "arms": [
+    {
+     "arm": "RE",
+     "questions": 60,
+     "correct": 16,
+     "accuracy": 0.2667,
+     "calls": 1.0,
+     "prompt_tokens": 2065,
+     "completion_tokens": 10,
+     "by_type": {
+      "prose": {
+       "questions": 20,
+       "accuracy": 0.1,
+       "calls": 1.0,
+       "prompt_tokens": 2072
+      },
+      "table": {
+       "questions": 20,
+       "accuracy": 0.6,
+       "calls": 1.0,
+       "prompt_tokens": 1953
+      },
+      "both": {
+       "questions": 20,
+       "accuracy": 0.1,
+       "calls": 1.0,
+       "prompt_tokens": 2170
+      }
+     },
+     "routes": {
+      "table": 52,
+      "prose": 1,
+      "both": 7
+     },
+     "routing": {
+      "confusion": {
+       "prose": {
+        "table": 16,
+        "prose": 1,
+        "both": 3
+       },
+       "table": {
+        "table": 18,
+        "both": 2
+       },
+       "both": {
+        "table": 18,
+        "both": 2
+       }
+      },
+      "mismatches": 39,
+      "costly": 15,
+      "rescued": 0,
+      "questions": 60,
+      "agreement": 0.35
+     },
+     "label": "embedding router, the hand-written examples"
+    },
+    {
+     "arm": "REm",
+     "questions": 60,
+     "correct": 18,
+     "accuracy": 0.3,
+     "calls": 1.0,
+     "prompt_tokens": 2064,
+     "completion_tokens": 11,
+     "by_type": {
+      "prose": {
+       "questions": 20,
+       "accuracy": 0.2,
+       "calls": 1.0,
+       "prompt_tokens": 1959
+      },
+      "table": {
+       "questions": 20,
+       "accuracy": 0.6,
+       "calls": 1.0,
+       "prompt_tokens": 1953
+      },
+      "both": {
+       "questions": 20,
+       "accuracy": 0.1,
+       "calls": 1.0,
+       "prompt_tokens": 2281
+      }
+     },
+     "routes": {
+      "table": 45,
+      "prose": 5,
+      "both": 10
+     },
+     "routing": {
+      "confusion": {
+       "prose": {
+        "table": 11,
+        "prose": 5,
+        "both": 4
+       },
+       "table": {
+        "table": 18,
+        "both": 2
+       },
+       "both": {
+        "table": 16,
+        "both": 4
+       }
+      },
+      "mismatches": 33,
+      "costly": 13,
+      "rescued": 0,
+      "questions": 60,
+      "agreement": 0.45
+     },
+     "label": "embedding router, company names, years, and form types masked"
+    },
+    {
+     "arm": "REl",
+     "questions": 60,
+     "correct": 29,
+     "accuracy": 0.4833,
+     "calls": 1.0,
+     "prompt_tokens": 2479,
+     "completion_tokens": 13,
+     "by_type": {
+      "prose": {
+       "questions": 20,
+       "accuracy": 0.65,
+       "calls": 1.0,
+       "prompt_tokens": 2505
+      },
+      "table": {
+       "questions": 20,
+       "accuracy": 0.55,
+       "calls": 1.0,
+       "prompt_tokens": 2320
+      },
+      "both": {
+       "questions": 20,
+       "accuracy": 0.25,
+       "calls": 1.0,
+       "prompt_tokens": 2612
+      }
+     },
+     "routes": {
+      "both": 39,
+      "prose": 5,
+      "table": 16
+     },
+     "routing": {
+      "confusion": {
+       "prose": {
+        "both": 15,
+        "prose": 4,
+        "table": 1
+       },
+       "table": {
+        "both": 12,
+        "table": 7,
+        "prose": 1
+       },
+       "both": {
+        "both": 12,
+        "table": 8
+       }
+      },
+      "mismatches": 37,
+      "costly": 2,
+      "rescued": 0,
+      "questions": 60,
+      "agreement": 0.3833
+     },
+     "label": "embedding router, leave-one-out over the labelled questions"
+    },
+    {
+     "arm": "RL",
+     "questions": 60,
+     "correct": 31,
+     "accuracy": 0.5167,
+     "calls": 2.0,
+     "prompt_tokens": 2329,
+     "completion_tokens": 51,
+     "by_type": {
+      "prose": {
+       "questions": 20,
+       "accuracy": 0.65,
+       "calls": 2.0,
+       "prompt_tokens": 1517
+      },
+      "table": {
+       "questions": 20,
+       "accuracy": 0.6,
+       "calls": 2.0,
+       "prompt_tokens": 2165
+      },
+      "both": {
+       "questions": 20,
+       "accuracy": 0.3,
+       "calls": 2.0,
+       "prompt_tokens": 3304
+      }
+     },
+     "routes": {
+      "prose": 17,
+      "table": 21,
+      "both": 22
+     },
+     "routing": {
+      "confusion": {
+       "prose": {
+        "prose": 17,
+        "table": 2,
+        "both": 1
+       },
+       "table": {
+        "table": 19,
+        "both": 1
+       },
+       "both": {
+        "both": 20
+       }
+      },
+      "mismatches": 4,
+      "costly": 0,
+      "rescued": 0,
+      "questions": 60,
+      "agreement": 0.9333
+     },
+     "label": "LLM router"
+    },
+    {
+     "arm": "B",
+     "questions": 60,
+     "correct": 31,
+     "accuracy": 0.5167,
+     "calls": 1.0,
+     "prompt_tokens": 2932,
+     "completion_tokens": 14,
+     "by_type": {
+      "prose": {
+       "questions": 20,
+       "accuracy": 0.65,
+       "calls": 1.0,
+       "prompt_tokens": 2931
+      },
+      "table": {
+       "questions": 20,
+       "accuracy": 0.6,
+       "calls": 1.0,
+       "prompt_tokens": 2815
+      },
+      "both": {
+       "questions": 20,
+       "accuracy": 0.3,
+       "calls": 1.0,
+       "prompt_tokens": 3049
+      }
+     },
+     "routes": {
+      "both": 60
+     },
+     "routing": null,
+     "label": "no router: both"
+    },
+    {
+     "arm": "O",
+     "questions": 60,
+     "correct": 31,
+     "accuracy": 0.5167,
+     "calls": 1.0,
+     "prompt_tokens": 1970,
+     "completion_tokens": 13,
+     "by_type": {
+      "prose": {
+       "questions": 20,
+       "accuracy": 0.65,
+       "calls": 1.0,
+       "prompt_tokens": 987
+      },
+      "table": {
+       "questions": 20,
+       "accuracy": 0.6,
+       "calls": 1.0,
+       "prompt_tokens": 1873
+      },
+      "both": {
+       "questions": 20,
+       "accuracy": 0.3,
+       "calls": 1.0,
+       "prompt_tokens": 3049
+      }
+     },
+     "routes": {
+      "prose": 20,
+      "table": 20,
+      "both": 20
+     },
+     "routing": null,
+     "label": "oracle router"
+    }
+   ],
+   "route_accuracy": {
+    "prose": {
+     "prose": 0.65,
+     "table": 0.05,
+     "both": 0.65
+    },
+    "table": {
+     "prose": 0.05,
+     "table": 0.6,
+     "both": 0.6
+    },
+    "both": {
+     "prose": 0.05,
+     "table": 0.1,
+     "both": 0.3
+    }
+   }
+  },
+  "sql_linked": {
+   "arms": [
+    {
+     "arm": "RE",
+     "questions": 60,
+     "correct": 18,
+     "accuracy": 0.3,
+     "calls": 2.2,
+     "prompt_tokens": 4693,
+     "completion_tokens": 205,
+     "by_type": {
+      "prose": {
+       "questions": 20,
+       "accuracy": 0.1,
+       "calls": 2.55,
+       "prompt_tokens": 5697
+      },
+      "table": {
+       "questions": 20,
+       "accuracy": 0.7,
+       "calls": 2.0,
+       "prompt_tokens": 4079
+      },
+      "both": {
+       "questions": 20,
+       "accuracy": 0.1,
+       "calls": 2.05,
+       "prompt_tokens": 4304
+      }
+     },
+     "routes": {
+      "table": 52,
+      "prose": 1,
+      "both": 7
+     },
+     "routing": {
+      "confusion": {
+       "prose": {
+        "table": 16,
+        "prose": 1,
+        "both": 3
+       },
+       "table": {
+        "table": 18,
+        "both": 2
+       },
+       "both": {
+        "table": 18,
+        "both": 2
+       }
+      },
+      "mismatches": 39,
+      "costly": 15,
+      "rescued": 0,
+      "questions": 60,
+      "agreement": 0.35
+     },
+     "label": "embedding router, the hand-written examples"
+    },
+    {
+     "arm": "REm",
+     "questions": 60,
+     "correct": 20,
+     "accuracy": 0.3333,
+     "calls": 2.07,
+     "prompt_tokens": 4379,
+     "completion_tokens": 188,
+     "by_type": {
+      "prose": {
+       "questions": 20,
+       "accuracy": 0.2,
+       "calls": 2.15,
+       "prompt_tokens": 4642
+      },
+      "table": {
+       "questions": 20,
+       "accuracy": 0.7,
+       "calls": 2.0,
+       "prompt_tokens": 4079
+      },
+      "both": {
+       "questions": 20,
+       "accuracy": 0.1,
+       "calls": 2.05,
+       "prompt_tokens": 4415
+      }
+     },
+     "routes": {
+      "table": 45,
+      "prose": 5,
+      "both": 10
+     },
+     "routing": {
+      "confusion": {
+       "prose": {
+        "table": 11,
+        "prose": 5,
+        "both": 4
+       },
+       "table": {
+        "table": 18,
+        "both": 2
+       },
+       "both": {
+        "table": 16,
+        "both": 4
+       }
+      },
+      "mismatches": 33,
+      "costly": 13,
+      "rescued": 0,
+      "questions": 60,
+      "agreement": 0.45
+     },
+     "label": "embedding router, company names, years, and form types masked"
+    },
+    {
+     "arm": "REl",
+     "questions": 60,
+     "correct": 30,
+     "accuracy": 0.5,
+     "calls": 2.1,
+     "prompt_tokens": 4917,
+     "completion_tokens": 196,
+     "by_type": {
+      "prose": {
+       "questions": 20,
+       "accuracy": 0.65,
+       "calls": 2.3,
+       "prompt_tokens": 5590
+      },
+      "table": {
+       "questions": 20,
+       "accuracy": 0.65,
+       "calls": 1.95,
+       "prompt_tokens": 4413
+      },
+      "both": {
+       "questions": 20,
+       "accuracy": 0.2,
+       "calls": 2.05,
+       "prompt_tokens": 4749
+      }
+     },
+     "routes": {
+      "both": 39,
+      "prose": 5,
+      "table": 16
+     },
+     "routing": {
+      "confusion": {
+       "prose": {
+        "both": 15,
+        "prose": 4,
+        "table": 1
+       },
+       "table": {
+        "both": 12,
+        "table": 7,
+        "prose": 1
+       },
+       "both": {
+        "both": 12,
+        "table": 8
+       }
+      },
+      "mismatches": 37,
+      "costly": 3,
+      "rescued": 0,
+      "questions": 60,
+      "agreement": 0.3833
+     },
+     "label": "embedding router, leave-one-out over the labelled questions"
+    },
+    {
+     "arm": "RL",
+     "questions": 60,
+     "correct": 33,
+     "accuracy": 0.55,
+     "calls": 2.73,
+     "prompt_tokens": 3848,
+     "completion_tokens": 177,
+     "by_type": {
+      "prose": {
+       "questions": 20,
+       "accuracy": 0.65,
+       "calls": 2.15,
+       "prompt_tokens": 1808
+      },
+      "table": {
+       "questions": 20,
+       "accuracy": 0.7,
+       "calls": 3.0,
+       "prompt_tokens": 4291
+      },
+      "both": {
+       "questions": 20,
+       "accuracy": 0.3,
+       "calls": 3.05,
+       "prompt_tokens": 5444
+      }
+     },
+     "routes": {
+      "prose": 17,
+      "table": 21,
+      "both": 22
+     },
+     "routing": {
+      "confusion": {
+       "prose": {
+        "prose": 17,
+        "table": 2,
+        "both": 1
+       },
+       "table": {
+        "table": 19,
+        "both": 1
+       },
+       "both": {
+        "both": 20
+       }
+      },
+      "mismatches": 4,
+      "costly": 0,
+      "rescued": 0,
+      "questions": 60,
+      "agreement": 0.9333
+     },
+     "label": "LLM router"
+    },
+    {
+     "arm": "B",
+     "questions": 60,
+     "correct": 33,
+     "accuracy": 0.55,
+     "calls": 2.22,
+     "prompt_tokens": 5584,
+     "completion_tokens": 213,
+     "by_type": {
+      "prose": {
+       "questions": 20,
+       "accuracy": 0.65,
+       "calls": 2.6,
+       "prompt_tokens": 6616
+      },
+      "table": {
+       "questions": 20,
+       "accuracy": 0.7,
+       "calls": 2.0,
+       "prompt_tokens": 4947
+      },
+      "both": {
+       "questions": 20,
+       "accuracy": 0.3,
+       "calls": 2.05,
+       "prompt_tokens": 5189
+      }
+     },
+     "routes": {
+      "both": 60
+     },
+     "routing": null,
+     "label": "no router: both"
+    },
+    {
+     "arm": "O",
+     "questions": 60,
+     "correct": 33,
+     "accuracy": 0.55,
+     "calls": 1.68,
+     "prompt_tokens": 3391,
+     "completion_tokens": 132,
+     "by_type": {
+      "prose": {
+       "questions": 20,
+       "accuracy": 0.65,
+       "calls": 1.0,
+       "prompt_tokens": 987
+      },
+      "table": {
+       "questions": 20,
+       "accuracy": 0.7,
+       "calls": 2.0,
+       "prompt_tokens": 3998
+      },
+      "both": {
+       "questions": 20,
+       "accuracy": 0.3,
+       "calls": 2.05,
+       "prompt_tokens": 5189
+      }
+     },
+     "routes": {
+      "prose": 20,
+      "table": 20,
+      "both": 20
+     },
+     "routing": null,
+     "label": "oracle router"
+    }
+   ],
+   "route_accuracy": {
+    "prose": {
+     "prose": 0.65,
+     "table": 0.0,
+     "both": 0.65
+    },
+    "table": {
+     "prose": 0.05,
+     "table": 0.7,
+     "both": 0.7
+    },
+    "both": {
+     "prose": 0.05,
+     "table": 0.1,
+     "both": 0.3
+    }
+   }
+  }
+ },
+ "sql_linked_attempts": [
+  {
+   "qid": "msr-0b14a49ceb",
+   "attempts": 2,
+   "rows": 0
+  },
+  {
+   "qid": "msr-1534cde60f",
+   "attempts": 1,
+   "rows": 10
+  },
+  {
+   "qid": "msr-1dc2252cce",
+   "attempts": 2,
+   "rows": 0
+  },
+  {
+   "qid": "msr-1e19c705b3",
+   "attempts": 1,
+   "rows": 30
+  },
+  {
+   "qid": "msr-3d4abba649",
+   "attempts": 1,
+   "rows": 30
+  },
+  {
+   "qid": "msr-3f8df358e0",
+   "attempts": 2,
+   "rows": 13
+  },
+  {
+   "qid": "msr-4055654a4a",
+   "attempts": 2,
+   "rows": 0
+  },
+  {
+   "qid": "msr-4cebe14ba2",
+   "attempts": 1,
+   "rows": 19
+  },
+  {
+   "qid": "msr-58c8933aca",
+   "attempts": 2,
+   "rows": 0
+  },
+  {
+   "qid": "msr-5915f0bcce",
+   "attempts": 1,
+   "rows": 5
+  },
+  {
+   "qid": "msr-5fce25ffc0",
+   "attempts": 2,
+   "rows": 0
+  },
+  {
+   "qid": "msr-671b43325b",
+   "attempts": 2,
+   "rows": 0
+  },
+  {
+   "qid": "msr-85815e2451",
+   "attempts": 2,
+   "rows": 0
+  },
+  {
+   "qid": "msr-895e3196e6",
+   "attempts": 1,
+   "rows": 9
+  },
+  {
+   "qid": "msr-a3d3ce2c36",
+   "attempts": 1,
+   "rows": 2
+  },
+  {
+   "qid": "msr-a68e68fc13",
+   "attempts": 1,
+   "rows": 30
+  },
+  {
+   "qid": "msr-ac2dae6cc3",
+   "attempts": 2,
+   "rows": 0
+  },
+  {
+   "qid": "msr-b547c35a7f",
+   "attempts": 2,
+   "rows": 0
+  },
+  {
+   "qid": "msr-cb66844d0e",
+   "attempts": 2,
+   "rows": 0
+  },
+  {
+   "qid": "msr-f22cf1d1e6",
+   "attempts": 2,
+   "rows": 22
+  },
+  {
+   "qid": "msr-019ad37acd",
+   "attempts": 1,
+   "rows": 3
+  },
+  {
+   "qid": "msr-06f4457eb6",
+   "attempts": 1,
+   "rows": 18
+  },
+  {
+   "qid": "msr-0ed9b7956f",
+   "attempts": 1,
+   "rows": 12
+  },
+  {
+   "qid": "msr-1a155d5a06",
+   "attempts": 1,
+   "rows": 7
+  },
+  {
+   "qid": "msr-1ad23bcc73",
+   "attempts": 1,
+   "rows": 1
+  },
+  {
+   "qid": "msr-22f4816d43",
+   "attempts": 1,
+   "rows": 30
+  },
+  {
+   "qid": "msr-339e1a3000",
+   "attempts": 1,
+   "rows": 30
+  },
+  {
+   "qid": "msr-48de9ba6d3",
+   "attempts": 1,
+   "rows": 8
+  },
+  {
+   "qid": "msr-529631c2d0",
+   "attempts": 1,
+   "rows": 3
+  },
+  {
+   "qid": "msr-57120e40a3",
+   "attempts": 1,
+   "rows": 30
+  },
+  {
+   "qid": "msr-72a63617be",
+   "attempts": 1,
+   "rows": 1
+  },
+  {
+   "qid": "msr-8ba217f2a6",
+   "attempts": 1,
+   "rows": 21
+  },
+  {
+   "qid": "msr-8c236c709a",
+   "attempts": 1,
+   "rows": 1
+  },
+  {
+   "qid": "msr-9a084d4f8f",
+   "attempts": 1,
+   "rows": 1
+  },
+  {
+   "qid": "msr-a6b79067a6",
+   "attempts": 1,
+   "rows": 3
+  },
+  {
+   "qid": "msr-bb96e5c1aa",
+   "attempts": 1,
+   "rows": 1
+  },
+  {
+   "qid": "msr-c8dcaab591",
+   "attempts": 1,
+   "rows": 2
+  },
+  {
+   "qid": "msr-e32c09ec84",
+   "attempts": 1,
+   "rows": 30
+  },
+  {
+   "qid": "msr-e6f42064a2",
+   "attempts": 1,
+   "rows": 30
+  },
+  {
+   "qid": "msr-e8ca7b0bec",
+   "attempts": 1,
+   "rows": 25
+  },
+  {
+   "qid": "msr-02c7cb5626",
+   "attempts": 1,
+   "rows": 1
+  },
+  {
+   "qid": "msr-115da7e0da",
+   "attempts": 1,
+   "rows": 27
+  },
+  {
+   "qid": "msr-13cc312bc9",
+   "attempts": 1,
+   "rows": 18
+  },
+  {
+   "qid": "msr-31561abafe",
+   "attempts": 1,
+   "rows": 30
+  },
+  {
+   "qid": "msr-31db0fe619",
+   "attempts": 1,
+   "rows": 5
+  },
+  {
+   "qid": "msr-39111b94b0",
+   "attempts": 1,
+   "rows": 1
+  },
+  {
+   "qid": "msr-3fdcad9161",
+   "attempts": 1,
+   "rows": 4
+  },
+  {
+   "qid": "msr-5ae882fcdb",
+   "attempts": 1,
+   "rows": 5
+  },
+  {
+   "qid": "msr-65060a41ea",
+   "attempts": 1,
+   "rows": 18
+  },
+  {
+   "qid": "msr-6ad991cbc2",
+   "attempts": 1,
+   "rows": 5
+  },
+  {
+   "qid": "msr-74ff178634",
+   "attempts": 1,
+   "rows": 14
+  },
+  {
+   "qid": "msr-8270b6f8d3",
+   "attempts": 1,
+   "rows": 18
+  },
+  {
+   "qid": "msr-865149271d",
+   "attempts": 1,
+   "rows": 1
+  },
+  {
+   "qid": "msr-88f0788975",
+   "attempts": 1,
+   "rows": 30
+  },
+  {
+   "qid": "msr-8928cd5258",
+   "attempts": 1,
+   "rows": 4
+  },
+  {
+   "qid": "msr-a27de6e288",
+   "attempts": 1,
+   "rows": 1
+  },
+  {
+   "qid": "msr-db326db9c6",
+   "attempts": 2,
+   "rows": 0
+  },
+  {
+   "qid": "msr-dfe7a32517",
+   "attempts": 1,
+   "rows": 27
+  },
+  {
+   "qid": "msr-e8b44f77a8",
+   "attempts": 1,
+   "rows": 30
+  },
+  {
+   "qid": "msr-f8e310075f",
+   "attempts": 1,
+   "rows": 13
+  }
+ ],
+ "prose_gold_chunk_recall": {
+  "questions": 20,
+  "prose_top5": 11,
+  "all_top5": 10,
+  "all_top10": 10
+ }
+}

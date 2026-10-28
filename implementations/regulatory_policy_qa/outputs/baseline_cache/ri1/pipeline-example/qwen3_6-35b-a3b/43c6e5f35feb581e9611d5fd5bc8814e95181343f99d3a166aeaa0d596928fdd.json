@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "cache_key": "43c6e5f35feb581e9611d5fd5bc8814e95181343f99d3a166aeaa0d596928fdd",
+  "ri_id": "ri1",
+  "artifact_type": "pipeline-example",
+  "producer_id": "Qwen3_6-35B-A3B",
+  "config": {
+    "chunk_chars": 1200,
+    "corpus_sha256": "007b6a40b0c65247f881627375c3d2e9b6aeeb5dfa89957494feed0765a1a073",
+    "evidence_budget": 5,
+    "grader": "HeuristicGrader",
+    "max_attempts": 1,
+    "max_documents": 20,
+    "max_tokens": 512,
+    "overlap_chars": 200,
+    "policy": "SingleShotPolicy",
+    "query_id": "LohaCompanyltd_20191209_F-1_EX-10.16_11917878_EX-10.16_Supply Agreement__Document Name",
+    "require_citations": true,
+    "retriever": "bm25",
+    "scope": "contract",
+    "temperature": 0.0,
+    "thinking": false,
+    "top_k": 10
+  },
+  "created_at": "2026-10-06T21:50:57.191916+00:00",
+  "value": {
+    "corpus": "CUAD",
+    "query_id": "LohaCompanyltd_20191209_F-1_EX-10.16_11917878_EX-10.16_Supply Agreement__Document Name",
+    "abstained": true,
+    "citations": 0,
+    "attempts": 1,
+    "usage": {
+      "questions": 1,
+      "calls": 1,
+      "prompt_tokens": 1764,
+      "completion_tokens": 95,
+      "total_tokens": 1859,
+      "tool_calls": 0,
+      "cache_hits": 0,
+      "empty_responses": 0,
+      "calls_missing_usage": 0,
+      "service_seconds": 2.508
+    }
+  }
+}

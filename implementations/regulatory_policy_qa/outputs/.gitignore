@@ -1,0 +1,5 @@
+# The response cache holds whole prompts, so it carries corpus text. The
+# corpora are CC BY 4.0 and ODC-BY, so redistributing it would be permitted
+# with attribution, but a SQLite blob is not a reviewable artifact and it is
+# rebuilt by re-running the harvest. The JSON results next to it are.
+responses.sqlite

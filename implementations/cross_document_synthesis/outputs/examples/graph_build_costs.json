@@ -1,0 +1,27 @@
+{
+  "status": "producer records; not verified RI2 artifact or query results",
+  "producer_revision": "e2994b28de0914ee4b066edc482a2b2ab3adf0e0",
+  "note": "Recorded construction usage belongs to RI4 producer builds. LightRAG has no single elapsed build time across resumed sessions. Artifact identity and RI2 query performance remain unverified. These totals are not complete billing estimates.",
+  "records": [
+    {
+      "backend": "hipporag2",
+      "implementation": "atlas-rag variant",
+      "model": "Qwen3_6-35B-A3B",
+      "passages": 11656,
+      "calls": 11285,
+      "total_tokens": 7422640,
+      "wall_seconds": 14144.5,
+      "source_url": "https://github.com/VectorInstitute/advanced-RAG/blob/e2994b28de0914ee4b066edc482a2b2ab3adf0e0/implementations/graphrag_technical_support/outputs/musique_hipporag2_index_cost.json"
+    },
+    {
+      "backend": "lightrag",
+      "implementation": "LightRAG",
+      "model": "Qwen3_6-35B-A3B",
+      "passages": 11656,
+      "calls": 28198,
+      "total_tokens": 78734144,
+      "wall_seconds": null,
+      "source_url": "https://github.com/VectorInstitute/advanced-RAG/blob/e2994b28de0914ee4b066edc482a2b2ab3adf0e0/implementations/graphrag_technical_support/outputs/musique_lightrag_index_cost.json"
+    }
+  ]
+}

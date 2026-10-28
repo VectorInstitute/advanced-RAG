@@ -1,0 +1,85 @@
+{
+ "acceptance_rate": 0.1597,
+ "accepted": 50,
+ "accepted_by_hops": {
+  "3": 29,
+  "4": 21
+ },
+ "attempts_per_question": 4,
+ "checker": "Qwen3_8-Flash-Next",
+ "first_hop_grep_reaches_gold_after": 8,
+ "first_hop_grep_reaches_gold_before": 33,
+ "funnel": {
+  "accepted": 50,
+  "rejected_at_rewrite": 206,
+  "rejected_at_round_trip": 57
+ },
+ "generator": "Qwen3_8-27B",
+ "judge": "Qwen3_8-Flash-Next",
+ "models": [
+  {
+   "cache_hits": 886,
+   "call_seconds": 1198.2,
+   "calls": 164,
+   "cold_completion_tokens": 255984,
+   "cold_prompt_tokens": 526070,
+   "cold_requests": 1050,
+   "completion_tokens": 33721,
+   "empty_responses": 0,
+   "failed_attempts": 0,
+   "label": "Qwen3_8-27B",
+   "model": "Qwen3_8-27B",
+   "prompt_tokens": 75404,
+   "total_tokens": 109125
+  },
+  {
+   "cache_hits": 570,
+   "call_seconds": 114.7,
+   "calls": 143,
+   "cold_completion_tokens": 23300,
+   "cold_prompt_tokens": 326176,
+   "cold_requests": 713,
+   "completion_tokens": 4757,
+   "empty_responses": 0,
+   "failed_attempts": 0,
+   "label": "Qwen3_8-Flash-Next",
+   "model": "Qwen3_8-Flash-Next",
+   "prompt_tokens": 60164,
+   "total_tokens": 64921
+  }
+ ],
+ "original_round_trip_match_rate_tried": 0.5335,
+ "price_note": "On-prem models through the proxy carry no charge.",
+ "price_usd": 0.0,
+ "produced_by": {
+  "endpoint": "vector-cluster",
+  "family": "onprem",
+  "model": "Qwen3_8-27B",
+  "producer": "agent_native_retrieval/build_paraphrase_control.py",
+  "usage": {
+   "Qwen3_8-27B": {
+    "calls": 164,
+    "cold_requests": 1050
+   },
+   "Qwen3_8-Flash-Next": {
+    "calls": 143,
+    "cold_requests": 713
+   }
+  }
+ },
+ "rejected_rewrite_gives_answer": 12,
+ "rejected_rewrite_names_a_source": 8,
+ "rejected_rewrite_still_leaks": 200,
+ "rejected_round_trip_verdicts": {
+  "mismatch": 6,
+  "partial": 2,
+  "unanswerable": 49
+ },
+ "seconds": 692.9,
+ "set": "musique_paraphrase_control.jsonl",
+ "tried": 313,
+ "tried_by_hops": {
+  "3": 147,
+  "4": 166
+ }
+}

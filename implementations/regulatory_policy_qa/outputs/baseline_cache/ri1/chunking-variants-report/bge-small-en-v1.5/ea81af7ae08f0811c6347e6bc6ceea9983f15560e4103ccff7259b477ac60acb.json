@@ -1,0 +1,492 @@
+{
+  "schema_version": 1,
+  "cache_key": "ea81af7ae08f0811c6347e6bc6ceea9983f15560e4103ccff7259b477ac60acb",
+  "ri_id": "ri1",
+  "artifact_type": "chunking-variants-report",
+  "producer_id": "bge-small-en-v1.5",
+  "config": {
+    "budgets": [
+      "plain@3",
+      "plain@10"
+    ],
+    "chunk_chars": 1200,
+    "context_model": "Qwen3_6-35B-A3B",
+    "contexts": {
+      "full-document-named-v1": "2466ffb6c290565d472929f6bed74aec99ec3296a89f8ba0a39a9b2298484f9a",
+      "full-document-v1": "bbe0a38fc4a082f70f59810e12dc13919a0dfd183e4028aee37eb0ce6cacc9e5",
+      "head-neighbourhood-v1": "bcd1b434ccf0d899f49b2cf19cb5622405e5e262aa7bba93c18c2f39e52c6fd6"
+    },
+    "corpus_sha256": "460267b56052a2dc5aead98eb35eadef9e6734d5723d37b4a9790e410f812387",
+    "embedder": "BAAI/bge-small-en-v1.5",
+    "header": {
+      "head_chars": 200,
+      "section": true,
+      "source_name": true
+    },
+    "hierarchy": {
+      "child_chars": 600,
+      "headings": true,
+      "overlap_chars": 100,
+      "parent_chars": 3000
+    },
+    "k": 10,
+    "names": "913a6c24f146be321cedefd9c6fb4921cea42f42da44d41382d89a8cce0cec1d",
+    "overlap_chars": 200,
+    "query_prompt": "bge default",
+    "query_template": "In {name}: {question}"
+  },
+  "created_at": "2026-10-20T21:26:56.076288+00:00",
+  "value": {
+    "results": {
+      "scoped": {
+        "plain": {
+          "fixed": {
+            "k": 10,
+            "failure": 0.0093,
+            "mrr": 0.7286,
+            "ndcg": 0.7518,
+            "queries": 1188,
+            "chars": 9985,
+            "document_hit": 1.0
+          },
+          "budgets": {
+            "plain@3": {
+              "k": 3,
+              "failure": 0.1465,
+              "mrr": 0.7012,
+              "ndcg": 0.6207,
+              "queries": 1188,
+              "chars": 3564,
+              "document_hit": 1.0
+            },
+            "plain@10": {
+              "k": 10,
+              "failure": 0.0093,
+              "mrr": 0.7286,
+              "ndcg": 0.7518,
+              "queries": 1188,
+              "chars": 9985,
+              "document_hit": 1.0
+            }
+          },
+          "gold_units_per_query": 1.94
+        },
+        "hierarchical": {
+          "fixed": {
+            "k": 10,
+            "failure": 0.0017,
+            "mrr": 0.8056,
+            "ndcg": 0.8476,
+            "queries": 1188,
+            "chars": 11311,
+            "document_hit": 1.0
+          },
+          "budgets": {
+            "plain@3": {
+              "k": 1,
+              "failure": 0.33,
+              "mrr": 0.67,
+              "ndcg": 0.67,
+              "queries": 1188,
+              "chars": 3014,
+              "document_hit": 1.0
+            },
+            "plain@10": {
+              "k": 6,
+              "failure": 0.0135,
+              "mrr": 0.8041,
+              "ndcg": 0.8411,
+              "queries": 1188,
+              "chars": 9823,
+              "document_hit": 1.0
+            }
+          },
+          "gold_units_per_query": 1.2
+        },
+        "metadata header": {
+          "fixed": {
+            "k": 10,
+            "failure": 0.021,
+            "mrr": 0.6406,
+            "ndcg": 0.6885,
+            "queries": 1188,
+            "chars": 9992,
+            "document_hit": 1.0
+          },
+          "budgets": {
+            "plain@3": {
+              "k": 3,
+              "failure": 0.2113,
+              "mrr": 0.6035,
+              "ndcg": 0.5376,
+              "queries": 1188,
+              "chars": 3563,
+              "document_hit": 1.0
+            },
+            "plain@10": {
+              "k": 10,
+              "failure": 0.021,
+              "mrr": 0.6406,
+              "ndcg": 0.6885,
+              "queries": 1188,
+              "chars": 9992,
+              "document_hit": 1.0
+            }
+          },
+          "gold_units_per_query": 1.94
+        },
+        "contextual, head + neighbourhood": {
+          "fixed": {
+            "k": 10,
+            "failure": 0.0143,
+            "mrr": 0.7203,
+            "ndcg": 0.7505,
+            "queries": 1188,
+            "chars": 9994,
+            "document_hit": 1.0
+          },
+          "budgets": {
+            "plain@3": {
+              "k": 3,
+              "failure": 0.1406,
+              "mrr": 0.6956,
+              "ndcg": 0.6233,
+              "queries": 1188,
+              "chars": 3567,
+              "document_hit": 1.0
+            },
+            "plain@10": {
+              "k": 10,
+              "failure": 0.0143,
+              "mrr": 0.7203,
+              "ndcg": 0.7505,
+              "queries": 1188,
+              "chars": 9994,
+              "document_hit": 1.0
+            }
+          },
+          "gold_units_per_query": 1.94
+        },
+        "contextual, full document": {
+          "fixed": {
+            "k": 10,
+            "failure": 0.0126,
+            "mrr": 0.7118,
+            "ndcg": 0.7455,
+            "queries": 1188,
+            "chars": 9982,
+            "document_hit": 1.0
+          },
+          "budgets": {
+            "plain@3": {
+              "k": 3,
+              "failure": 0.1625,
+              "mrr": 0.682,
+              "ndcg": 0.6123,
+              "queries": 1188,
+              "chars": 3562,
+              "document_hit": 1.0
+            },
+            "plain@10": {
+              "k": 10,
+              "failure": 0.0126,
+              "mrr": 0.7118,
+              "ndcg": 0.7455,
+              "queries": 1188,
+              "chars": 9982,
+              "document_hit": 1.0
+            }
+          },
+          "gold_units_per_query": 1.94
+        },
+        "follow-up: full document, named": {
+          "fixed": {
+            "k": 10,
+            "failure": 0.0143,
+            "mrr": 0.7251,
+            "ndcg": 0.7518,
+            "queries": 1188,
+            "chars": 9992,
+            "document_hit": 1.0
+          },
+          "budgets": {
+            "plain@3": {
+              "k": 3,
+              "failure": 0.1473,
+              "mrr": 0.6988,
+              "ndcg": 0.6205,
+              "queries": 1188,
+              "chars": 3566,
+              "document_hit": 1.0
+            },
+            "plain@10": {
+              "k": 10,
+              "failure": 0.0143,
+              "mrr": 0.7251,
+              "ndcg": 0.7518,
+              "queries": 1188,
+              "chars": 9992,
+              "document_hit": 1.0
+            }
+          },
+          "gold_units_per_query": 1.94
+        }
+      },
+      "unscoped, named": {
+        "plain": {
+          "fixed": {
+            "k": 10,
+            "failure": 0.6473,
+            "mrr": 0.2247,
+            "ndcg": 0.1822,
+            "queries": 1188,
+            "chars": 11880,
+            "document_hit": 0.8502
+          },
+          "budgets": {
+            "plain@3": {
+              "k": 3,
+              "failure": 0.7441,
+              "mrr": 0.2079,
+              "ndcg": 0.1519,
+              "queries": 1188,
+              "chars": 3542,
+              "document_hit": 0.771
+            },
+            "plain@10": {
+              "k": 10,
+              "failure": 0.6473,
+              "mrr": 0.2247,
+              "ndcg": 0.1822,
+              "queries": 1188,
+              "chars": 11880,
+              "document_hit": 0.8502
+            }
+          },
+          "gold_units_per_query": 1.94
+        },
+        "hierarchical": {
+          "fixed": {
+            "k": 10,
+            "failure": 0.5732,
+            "mrr": 0.2659,
+            "ndcg": 0.2847,
+            "queries": 1188,
+            "chars": 26800,
+            "document_hit": 0.8249
+          },
+          "budgets": {
+            "plain@3": {
+              "k": 1,
+              "failure": 0.8022,
+              "mrr": 0.1978,
+              "ndcg": 0.1978,
+              "queries": 1188,
+              "chars": 3133,
+              "document_hit": 0.5429
+            },
+            "plain@10": {
+              "k": 4,
+              "failure": 0.6684,
+              "mrr": 0.2515,
+              "ndcg": 0.254,
+              "queries": 1188,
+              "chars": 11193,
+              "document_hit": 0.7357
+            }
+          },
+          "gold_units_per_query": 1.2
+        },
+        "metadata header": {
+          "fixed": {
+            "k": 10,
+            "failure": 0.1936,
+            "mrr": 0.4402,
+            "ndcg": 0.4863,
+            "queries": 1188,
+            "chars": 11687,
+            "document_hit": 0.9327
+          },
+          "budgets": {
+            "plain@3": {
+              "k": 3,
+              "failure": 0.4604,
+              "mrr": 0.3911,
+              "ndcg": 0.345,
+              "queries": 1188,
+              "chars": 3528,
+              "document_hit": 0.8401
+            },
+            "plain@10": {
+              "k": 10,
+              "failure": 0.1936,
+              "mrr": 0.4402,
+              "ndcg": 0.4863,
+              "queries": 1188,
+              "chars": 11687,
+              "document_hit": 0.9327
+            }
+          },
+          "gold_units_per_query": 1.94
+        },
+        "contextual, head + neighbourhood": {
+          "fixed": {
+            "k": 10,
+            "failure": 0.1187,
+            "mrr": 0.5442,
+            "ndcg": 0.5743,
+            "queries": 1188,
+            "chars": 11828,
+            "document_hit": 0.9638
+          },
+          "budgets": {
+            "plain@3": {
+              "k": 3,
+              "failure": 0.3258,
+              "mrr": 0.5052,
+              "ndcg": 0.4477,
+              "queries": 1188,
+              "chars": 3568,
+              "document_hit": 0.9082
+            },
+            "plain@10": {
+              "k": 10,
+              "failure": 0.1187,
+              "mrr": 0.5442,
+              "ndcg": 0.5743,
+              "queries": 1188,
+              "chars": 11828,
+              "document_hit": 0.9638
+            }
+          },
+          "gold_units_per_query": 1.94
+        },
+        "contextual, full document": {
+          "fixed": {
+            "k": 10,
+            "failure": 0.3695,
+            "mrr": 0.3843,
+            "ndcg": 0.3625,
+            "queries": 1188,
+            "chars": 11841,
+            "document_hit": 0.9301
+          },
+          "budgets": {
+            "plain@3": {
+              "k": 3,
+              "failure": 0.516,
+              "mrr": 0.3569,
+              "ndcg": 0.2961,
+              "queries": 1188,
+              "chars": 3554,
+              "document_hit": 0.8687
+            },
+            "plain@10": {
+              "k": 10,
+              "failure": 0.3695,
+              "mrr": 0.3843,
+              "ndcg": 0.3625,
+              "queries": 1188,
+              "chars": 11841,
+              "document_hit": 0.9301
+            }
+          },
+          "gold_units_per_query": 1.94
+        },
+        "follow-up: full document, named": {
+          "fixed": {
+            "k": 10,
+            "failure": 0.1288,
+            "mrr": 0.5379,
+            "ndcg": 0.5646,
+            "queries": 1188,
+            "chars": 11849,
+            "document_hit": 0.9512
+          },
+          "budgets": {
+            "plain@3": {
+              "k": 3,
+              "failure": 0.3274,
+              "mrr": 0.5003,
+              "ndcg": 0.4384,
+              "queries": 1188,
+              "chars": 3564,
+              "document_hit": 0.9133
+            },
+            "plain@10": {
+              "k": 10,
+              "failure": 0.1288,
+              "mrr": 0.5379,
+              "ndcg": 0.5646,
+              "queries": 1188,
+              "chars": 11849,
+              "document_hit": 0.9512
+            }
+          },
+          "gold_units_per_query": 1.94
+        }
+      },
+      "unscoped, templated": {
+        "plain": {
+          "fixed": {
+            "k": 10,
+            "failure": 0.9276,
+            "mrr": 0.0225,
+            "ndcg": 0.0221,
+            "queries": 1188,
+            "chars": 11930,
+            "document_hit": 0.1002
+          },
+          "budgets": {
+            "plain@3": {
+              "k": 3,
+              "failure": 0.9756,
+              "mrr": 0.015,
+              "ndcg": 0.0108,
+              "queries": 1188,
+              "chars": 3600,
+              "document_hit": 0.0345
+            },
+            "plain@10": {
+              "k": 10,
+              "failure": 0.9276,
+              "mrr": 0.0225,
+              "ndcg": 0.0221,
+              "queries": 1188,
+              "chars": 11930,
+              "document_hit": 0.1002
+            }
+          },
+          "gold_units_per_query": 1.94
+        }
+      }
+    },
+    "budget_chars": {
+      "scoped": {
+        "plain@3": 3564,
+        "plain@10": 9985
+      },
+      "unscoped, named": {
+        "plain@3": 3542,
+        "plain@10": 11880
+      },
+      "unscoped, templated": {
+        "plain@3": 3600,
+        "plain@10": 11930
+      }
+    },
+    "embedder": {
+      "hf_id": "BAAI/bge-small-en-v1.5",
+      "label": "bge-small-en-v1.5",
+      "params_millions": 33,
+      "dimension": 384,
+      "pooling": "cls",
+      "max_seq_length": 512,
+      "truncate_dim": null,
+      "query_prompt": "Represent this sentence for searching relevant passages: ",
+      "document_prompt": "",
+      "note": "the bootcamp default: 384 dimensions, comfortable on CPU"
+    },
+    "context_model": "Qwen3_6-35B-A3B"
+  }
+}

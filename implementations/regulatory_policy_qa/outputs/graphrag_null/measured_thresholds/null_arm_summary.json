@@ -1,0 +1,181 @@
+{
+  "generated_at": "2026-10-06T21:46:59+00:00",
+  "model": "Qwen3_6-35B-A3B",
+  "embedding_model": "BAAI/bge-small-en-v1.5",
+  "reasoning": "disabled on every call",
+  "corpus": {
+    "name": "ContractNLI test split",
+    "licence": "CC BY 4.0",
+    "attribution": "ContractNLI: A Dataset for Document-level Natural Language Inference for Contracts, Koreeda and Manning, Findings of EMNLP 2021, (c) Hitachi America, Ltd., licensed CC BY 4.0. https://stanfordnlp.github.io/contract-nli/",
+    "contracts": 20,
+    "chunks": 214,
+    "queries": 340,
+    "answerable_queries": 179,
+    "null_queries": 161,
+    "null_rate": 0.4735,
+    "mean_gold_chunks": 1.8
+  },
+  "pipeline": {
+    "top_k": 10,
+    "evidence_budget": 5,
+    "max_attempts": 2,
+    "require_citations": true,
+    "sufficient": 0.6,
+    "insufficient": 0.0,
+    "grader": "LLMGrader",
+    "rewriter": null,
+    "thresholds_note": "measured on ContractNLI; the sweep is in THRESHOLDS.md. insufficient ships at 0.0 because 0.3 caught 20 more of 322 null questions and refused 43 more of 358 answerable ones. sufficient was flat from 0.2 to 1.0 within sampling error and stays at 0.6"
+  },
+  "cost": {
+    "pipeline": {
+      "calls": 406,
+      "prompt_tokens": 534088,
+      "completion_tokens": 19437,
+      "total_tokens": 553525,
+      "cache_hits": 3521,
+      "empty_responses": 0,
+      "call_seconds": 964.1,
+      "by_phase": {
+        "pipeline:dense": {
+          "calls": 204,
+          "prompt_tokens": 269050,
+          "completion_tokens": 10490,
+          "total_tokens": 279540,
+          "cache_hits": 1768,
+          "empty_responses": 0,
+          "call_seconds": 497.8
+        },
+        "pipeline:lightrag-mix": {
+          "calls": 202,
+          "prompt_tokens": 265038,
+          "completion_tokens": 8947,
+          "total_tokens": 273985,
+          "cache_hits": 1753,
+          "empty_responses": 0,
+          "call_seconds": 466.2
+        }
+      }
+    }
+  },
+  "arms": [
+    {
+      "arm": "dense",
+      "queries": 340,
+      "null_detection": {
+        "null_queries": 161,
+        "answerable_queries": 179,
+        "abstain_precision": 0.7241,
+        "abstain_recall": 0.7826,
+        "false_answer_rate": 0.2174
+      },
+      "answerable": {
+        "answerable_queries": 179,
+        "abstained_on_answerable": 48,
+        "answerable_abstention_rate": 0.2682,
+        "span_reached": 151,
+        "span_reach_rate": 0.8436,
+        "answered_with_span": 117,
+        "grounded_answer_rate": 0.6536
+      },
+      "abstention_reasons": {
+        "the model reported the sources do not answer the question": 154,
+        "the answer cited no usable source": 20
+      },
+      "span_rule_check": {
+        "answerable_queries": 179,
+        "qrels_hit_rate": 0.933,
+        "span_reach_rate": 0.8436,
+        "agreement": 0.9106
+      },
+      "cost": {
+        "calls": 204,
+        "prompt_tokens": 269050,
+        "completion_tokens": 10490,
+        "total_tokens": 279540,
+        "cache_hits": 1768,
+        "empty_responses": 0,
+        "call_seconds": 497.8,
+        "wall_seconds": 131.1
+      }
+    },
+    {
+      "arm": "lightrag-mix",
+      "queries": 340,
+      "null_detection": {
+        "null_queries": 161,
+        "answerable_queries": 179,
+        "abstain_precision": 0.6872,
+        "abstain_recall": 0.8323,
+        "false_answer_rate": 0.1677
+      },
+      "answerable": {
+        "answerable_queries": 179,
+        "abstained_on_answerable": 61,
+        "answerable_abstention_rate": 0.3408,
+        "span_reached": 133,
+        "span_reach_rate": 0.743,
+        "answered_with_span": 99,
+        "grounded_answer_rate": 0.5531
+      },
+      "abstention_reasons": {
+        "the model reported the sources do not answer the question": 168,
+        "the answer cited no usable source": 27
+      },
+      "cost": {
+        "calls": 202,
+        "prompt_tokens": 265038,
+        "completion_tokens": 8947,
+        "total_tokens": 273985,
+        "cache_hits": 1753,
+        "empty_responses": 0,
+        "call_seconds": 466.2,
+        "wall_seconds": 128.5
+      }
+    },
+    {
+      "arm": "always-abstain",
+      "queries": 340,
+      "null_detection": {
+        "null_queries": 161,
+        "answerable_queries": 179,
+        "abstain_precision": 0.4735,
+        "abstain_recall": 1.0,
+        "false_answer_rate": 0.0
+      },
+      "answerable": {
+        "answerable_queries": 179,
+        "abstained_on_answerable": 179,
+        "answerable_abstention_rate": 1.0,
+        "span_reached": 0,
+        "span_reach_rate": 0.0,
+        "answered_with_span": 0,
+        "grounded_answer_rate": 0.0
+      },
+      "abstention_reasons": {
+        "control": 340
+      }
+    },
+    {
+      "arm": "always-answer",
+      "queries": 340,
+      "null_detection": {
+        "null_queries": 161,
+        "answerable_queries": 179,
+        "abstain_precision": 0.0,
+        "abstain_recall": 0.0,
+        "false_answer_rate": 1.0
+      },
+      "answerable": {
+        "answerable_queries": 179,
+        "abstained_on_answerable": 0,
+        "answerable_abstention_rate": 0.0,
+        "span_reached": 0,
+        "span_reach_rate": 0.0,
+        "answered_with_span": 0,
+        "grounded_answer_rate": 0.0
+      },
+      "abstention_reasons": {}
+    }
+  ],
+  "span_reach_definition": "gold-span containment in the first five passages, truncated to the generator's 1200 characters per passage; not answer correctness"
+}

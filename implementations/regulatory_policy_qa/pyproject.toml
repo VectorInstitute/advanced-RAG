@@ -1,0 +1,28 @@
+[project]
+name = "regulatory-policy-qa-sweep"
+version = "0.1.0"
+description = "RI #1 experiment runners: retrieval, answering policies, null detection and evaluation"
+requires-python = ">=3.12"
+# The slicing, the cost estimate, and the reporting are pure Python over the
+# shared library, so the tests run with no model, no API key and no network.
+# Everything that needs a model is an extra.
+dependencies = ["aieng-advanced-rag"]
+
+[project.optional-dependencies]
+local = ["sentence-transformers>=3.0"]
+proxy = ["openai>=1.40"]
+evaluation = [
+    "ragas==0.4.1", "sentence-transformers>=3.0", "openai>=1.40",
+    "langchain==0.3.27", "langchain-community==0.3.31", "langchain-openai==0.3.35",
+]
+dev = ["pytest>=8.0"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["sweep_lab", "advanced_lab", "graphrag_null"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

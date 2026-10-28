@@ -1,0 +1,43 @@
+{
+  "generated_at": "2026-10-20T19:20:51.987210+00:00",
+  "compute_node": "bn100",
+  "slurm_job_id": "411410",
+  "model": null,
+  "embedding_model": "BAAI/bge-small-en-v1.5",
+  "reasoning": false,
+  "temperature": 0,
+  "requested_model": "Qwen3_6-35B-A3B",
+  "execution": "cache-only coverage audit; no new measurement",
+  "corpus": {
+    "contracts": 123,
+    "chunks": 1418,
+    "queries": 2091,
+    "answerable_queries": 1188,
+    "null_queries": 903,
+    "null_rate": 0.4319,
+    "mean_gold_chunks": 1.94
+  },
+  "threshold_trace_coverage": {
+    "heuristic": {
+      "cached_queries": 680,
+      "missing_queries": 1411,
+      "unexpected_queries": 0,
+      "duplicate_rows": 0,
+      "trace_sha256": "2cae5d63cfd0109e84b0496463ef6d92c95e0c545e98506e0f9a293402866692"
+    },
+    "llm": {
+      "cached_queries": 680,
+      "missing_queries": 1411,
+      "unexpected_queries": 0,
+      "duplicate_rows": 0,
+      "trace_sha256": "7ae98bcdac58747fab21e77d4de50bf9eef709ca57fd4ba03242afe1ed5ffa8d"
+    }
+  },
+  "existing_dense_evidence_queries": 340,
+  "dense_evidence_sha256": "1eb55eb890e5cc260920fcaf5614d069d732b4889adee39edb2dd289c2d293db",
+  "full_split_measurement_complete": false,
+  "new_model_calls": 0,
+  "source_trace_model_provenance": "Legacy trace files have no per-trace model metadata. Replay preserves source outcomes and does not relabel their model.",
+  "reason": "Coverage is not quality scoring or cache validation. Complete ID, question, answerability, and qrel validation occurs during replay; no partial full-split quality figures are inferred.",
+  "corpus_sha256": "460267b56052a2dc5aead98eb35eadef9e6734d5723d37b4a9790e410f812387"
+}

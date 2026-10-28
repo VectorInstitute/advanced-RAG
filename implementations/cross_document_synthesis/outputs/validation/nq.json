@@ -1,0 +1,35 @@
+{
+  "corpus": "nq",
+  "questions": 1000,
+  "passages": 9633,
+  "support_occurrences": 3794,
+  "support_counts": {
+    "1": 211,
+    "6": 80,
+    "3": 163,
+    "7": 69,
+    "5": 103,
+    "2": 159,
+    "8": 39,
+    "4": 126,
+    "9": 18,
+    "10": 32
+  },
+  "provenance": {
+    "revision": "5ec05b38deecc3318bb432c69865959c56058990",
+    "questions_sha256": "8acadaeff625790e8e10764d660d9ec46de6ac24eb241ac584c0171deca1d9cd",
+    "corpus_sha256": "c672a7c1813f1a3e1e7a0b1a29784bf7c5cf2d7a2934cb3ffc3b347843b42864"
+  },
+  "vector_shape": [
+    9633,
+    384
+  ],
+  "vector_sha256": "9310417595d6d327fa3fb20784e3413a453f78b682b7208bd2884ee80b4b8080",
+  "checks": [
+    "file digests",
+    "counts",
+    "support mapping",
+    "aliases",
+    "finite vectors"
+  ]
+}

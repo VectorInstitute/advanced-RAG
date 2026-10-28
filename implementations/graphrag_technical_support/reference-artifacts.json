@@ -1,0 +1,68 @@
+{
+  "artifacts": [
+    {
+      "key": {
+        "artifact_type": "graph-index",
+        "config": {
+          "corpus_passages": 11656,
+          "dataset_revision": "5ec05b38deecc3318bb432c69865959c56058990",
+          "encoder": "BAAI/bge-small-en-v1.5",
+          "include_concept": false,
+          "include_events": false,
+          "keyword": "musique",
+          "method": "hipporag2",
+          "model": "Qwen3_6-35B-A3B",
+          "passages": 11656,
+          "stages": "entity_relation"
+        },
+        "producer_id": "hipporag2",
+        "ri_id": "ri4"
+      },
+      "payload_sha256": "bca72c067940681d22176c02b846be11e28fd3991b259c9a75e5b97fff9cab3e",
+      "payload_url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-ri4-bd05f7bb16c6/ri4.graph-index.hipporag2.ccd372ca76bb838d549f8f9292ada8da47221296a1bb50bd09d1ff414e64c6cd.artifact",
+      "sha256": "c38b9130a0adfa8b618395c1ffc183390d3722d964e19d7652aeed4189a71dab",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-ri4-bd05f7bb16c6/ri4.graph-index.hipporag2.ccd372ca76bb838d549f8f9292ada8da47221296a1bb50bd09d1ff414e64c6cd.json"
+    },
+    {
+      "key": {
+        "artifact_type": "graph-index",
+        "config": {
+          "chunk_tokens": 300,
+          "corpus_passages": 11656,
+          "dataset_revision": "5ec05b38deecc3318bb432c69865959c56058990",
+          "encoder": "BAAI/bge-small-en-v1.5",
+          "gleaning": "default",
+          "method": "lightrag",
+          "model": "Qwen3_6-35B-A3B",
+          "overlap": 50,
+          "passages": 11656
+        },
+        "producer_id": "lightrag",
+        "ri_id": "ri4"
+      },
+      "payload_sha256": "31b4656e2e74ec5bc7d88aa512fa9accad194fcf02fe5cfe18da8784f4df2a39",
+      "payload_url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-ri4-bd05f7bb16c6/ri4.graph-index.lightrag.93d5ddddf5f3c26978b0315d9a435adb0c249ff2624fc51f5c388621080ab03c.artifact",
+      "sha256": "62dfee541b66ed07a18ed09962dddebcceccea774a0fbfbeb61a71a18df4d4fd",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-ri4-bd05f7bb16c6/ri4.graph-index.lightrag.93d5ddddf5f3c26978b0315d9a435adb0c249ff2624fc51f5c388621080ab03c.json"
+    },
+    {
+      "key": {
+        "artifact_type": "knowledge-graph",
+        "config": {
+          "documents": 9999,
+          "dump_md5": "1b075d4c7ae7396da965874f156e0fdf",
+          "max_tokens": 2000,
+          "model": "Qwen3_8-27B",
+          "prompt": "033fc0a67eacd811",
+          "slice_sha256": "7bfb51e583bd9a245cc389afaa7244293ab335f496e6c397353a3b91c9d1dd36"
+        },
+        "producer_id": "direct-extraction",
+        "ri_id": "ri4"
+      },
+      "payload_sha256": "87bdd13b6ca18ea31966bfc7a21ba573d925e0bd56dcae1d33c1faf740b1893f",
+      "payload_url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-ri4-bd05f7bb16c6/ri4.knowledge-graph.direct-extraction.689904fbd48d4fc7a22d18d609f0a3e42ee0b85218ee9515295c7c8ee20de309.artifact",
+      "sha256": "60e1f9234ba995556c6266d087e65049e762c7d9be9977c335eef1cf92d675ad",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-ri4-bd05f7bb16c6/ri4.knowledge-graph.direct-extraction.689904fbd48d4fc7a22d18d609f0a3e42ee0b85218ee9515295c7c8ee20de309.json"
+    }
+  ]
+}

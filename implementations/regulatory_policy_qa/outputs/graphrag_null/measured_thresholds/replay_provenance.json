@@ -1,0 +1,88 @@
+{
+  "score_only": true,
+  "indexing_performed": false,
+  "retrieval_performed": false,
+  "store_manifest_sha256": "35c5526f5ac1c9ded2f126156a269812ee74af08358d87a572adf32d4836e1e5",
+  "verified_store_files": [
+    {
+      "path": "evidence/dense-unscoped.json",
+      "bytes": 4614283,
+      "sha256": "239788b3768ad2982bc47d638552498962b46274e952fd80e53bc9ce26e3329b"
+    },
+    {
+      "path": "evidence/dense.json",
+      "bytes": 3696712,
+      "sha256": "1eb55eb890e5cc260920fcaf5614d069d732b4889adee39edb2dd289c2d293db"
+    },
+    {
+      "path": "evidence/lightrag-mix.json",
+      "bytes": 4218540,
+      "sha256": "e91c167c97afe03c275ff6d8bc7af68a9b31e9c3a5098a835e64e09421900ae3"
+    },
+    {
+      "path": "evidence/no-retrieval.json",
+      "bytes": 5879,
+      "sha256": "5a137bcb8410a5b97e37aa4c874aa74cf7e5eaf7fbbcd4ff5f12dd4a6c21c52f"
+    },
+    {
+      "path": "evidence/shuffled.json",
+      "bytes": 3652583,
+      "sha256": "867ee777fc747634bd4e77276b2dc72d6d4e8dcfb6172ae969a1715e19df561e"
+    },
+    {
+      "path": "proxy_cache.sqlite",
+      "bytes": 2408448,
+      "sha256": "4e81383c8490984ff4105c2b81f3dc605f19c48734e7d482d63536c0ba2b052a"
+    }
+  ],
+  "retrieval_model": "BAAI/bge-small-en-v1.5",
+  "original_answering_model": "Qwen3_6-35B-A3B",
+  "answering_model": "Qwen3_6-35B-A3B",
+  "original_thresholds": {
+    "sufficient": 0.6,
+    "insufficient": 0.3
+  },
+  "rerun_thresholds": {
+    "sufficient": 0.6,
+    "insufficient": 0.0
+  },
+  "command": "python implementations/regulatory_policy_qa/graphrag_null/run_null_arm.py --store ./unpacked --out implementations/regulatory_policy_qa/outputs/graphrag_null/measured_thresholds --score-only --workers 8 --arms dense lightrag-mix --model Qwen3_6-35B-A3B",
+  "comparison_limit": "The model identifier matches the original experiment. Backend portability and cached versus new calls still limit reproducibility.",
+  "visibility_metric_correction": {
+    "at": "2026-10-06T23:05:39.220034+00:00",
+    "changed_query_ids": {
+      "dense": [],
+      "lightrag-mix": [
+        "2::nda-19",
+        "2::nda-12",
+        "2::nda-8",
+        "2::nda-5",
+        "6::nda-2",
+        "6::nda-19",
+        "6::nda-7",
+        "6::nda-17",
+        "6::nda-5",
+        "8::nda-1",
+        "8::nda-3",
+        "11::nda-15",
+        "18::nda-2",
+        "18::nda-3",
+        "23::nda-1",
+        "25::nda-19",
+        "30::nda-5",
+        "31::nda-7",
+        "36::nda-19",
+        "38::nda-1",
+        "38::nda-19",
+        "41::nda-4"
+      ]
+    },
+    "before_outcome_sha256": {
+      "outcomes_dense.json": "9e3c6dbf281913d8db0fd65c5cf08870cfbd2df03c0c8ae1449495028e7b1ed2",
+      "outcomes_lightrag-mix.json": "e87c23c9c69c7aa1ce930db4aa7c9baf76f59f26508be87cc16d7fccc34e151c"
+    },
+    "new_model_calls": 0,
+    "answers_and_abstention_decisions_unchanged": true,
+    "runner_sha256": "7fb5e26764cd43c387faee26862e52fb473f552896eccd3b548cdb1cdcf5b04b"
+  }
+}

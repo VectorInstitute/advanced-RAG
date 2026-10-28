@@ -1,0 +1,19 @@
+{
+  "files": {
+    "musique.json": {
+      "model": null,
+      "model_calls": 0,
+      "note": "Corpus integrity and annotation validation; no chat model is called."
+    },
+    "nq.json": {
+      "model": null,
+      "model_calls": 0,
+      "note": "Corpus integrity and annotation validation; no chat model is called."
+    },
+    "graph_release.json": {
+      "model": null,
+      "model_calls": 0,
+      "note": "Release checksum, corpus mapping, chunk and vector-store integrity audit; no chat model is called."
+    }
+  }
+}

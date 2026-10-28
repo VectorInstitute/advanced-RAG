@@ -1,0 +1,26 @@
+{
+  "files": {
+    "corrective.json": {
+      "model": "Qwen3_6-35B-A3B",
+      "source": "spec.model",
+      "note": "Executed 2026-10-24 with Qwen3_6-35B-A3B for generation, extraction, and grading, on the shared 300 MuSiQue questions (stratified_test_set) in one response-cache namespace; replaying scores makes no new model calls.",
+      "producer": "run_benchmark.py --shared-300, then export_results.py"
+    },
+    "dense.json": {
+      "model": "Qwen3_6-35B-A3B",
+      "source": "spec.model",
+      "note": "Executed 2026-10-24 with Qwen3_6-35B-A3B for generation, extraction, and grading, on the shared 300 MuSiQue questions (stratified_test_set) in one response-cache namespace; replaying scores makes no new model calls.",
+      "producer": "run_benchmark.py --shared-300, then export_results.py"
+    },
+    "graded-single-pass.json": {
+      "model": "Qwen3_6-35B-A3B",
+      "source": "spec.model",
+      "note": "Executed 2026-10-24 with Qwen3_6-35B-A3B for generation, extraction, and grading, on the shared 300 MuSiQue questions (stratified_test_set) in one response-cache namespace; replaying scores makes no new model calls.",
+      "producer": "run_benchmark.py --shared-300, then export_results.py"
+    },
+    "summary.json": {
+      "model": "Qwen3_6-35B-A3B",
+      "note": "Derived from the three cohort reports by run_evaluation.py; summarization makes no new model calls."
+    }
+  }
+}

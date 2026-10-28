@@ -1,0 +1,582 @@
+{
+ "produced_by": {
+  "model": "Qwen3_6-35B-A3B",
+  "judge": "Qwen3_6-35B-A3B",
+  "embeddings": "BAAI/bge-small-en-v1.5 (local)",
+  "endpoint": "vector-cluster",
+  "producer": "implementations/special_topics/mixed_source_routing/build_reference.py",
+  "mode": "explore: one run, sampling seed 0",
+  "question_writer": "Qwen3_6-35B-A3B",
+  "question_checker": "Qwen3_8-27B"
+ },
+ "counts": {
+  "prose": 20,
+  "table": 20,
+  "both": 20
+ },
+ "filings": 31,
+ "funnel": [
+  {
+   "kind": "table",
+   "stage": "filing has a table-only cell",
+   "entered": 36,
+   "passed": 35
+  },
+  {
+   "kind": "prose",
+   "stage": "filing has running text",
+   "entered": 36,
+   "passed": 36
+  },
+  {
+   "kind": "table",
+   "stage": "question written",
+   "entered": 70,
+   "passed": 70
+  },
+  {
+   "kind": "table",
+   "stage": "question names the column's year",
+   "entered": 70,
+   "passed": 69
+  },
+  {
+   "kind": "prose",
+   "stage": "question written",
+   "entered": 72,
+   "passed": 72
+  },
+  {
+   "kind": "prose",
+   "stage": "answer copied from the passage",
+   "entered": 72,
+   "passed": 70
+  },
+  {
+   "kind": "prose",
+   "stage": "answer absent from the filing's tables",
+   "entered": 70,
+   "passed": 59
+  },
+  {
+   "kind": "table",
+   "stage": "checker answers from the source alone",
+   "entered": 69,
+   "passed": 68
+  },
+  {
+   "kind": "prose",
+   "stage": "checker answers from the source alone",
+   "entered": 59,
+   "passed": 57
+  },
+  {
+   "kind": "both",
+   "stage": "questions merged, years kept",
+   "entered": 20,
+   "passed": 20
+  }
+ ],
+ "questions": [
+  {
+   "qid": "msr-0b14a49ceb",
+   "qtype": "prose",
+   "filing": "ADOBE_2015_10K",
+   "sources": [
+    "ADOBE_2015_10K::0247"
+   ]
+  },
+  {
+   "qid": "msr-1534cde60f",
+   "qtype": "prose",
+   "filing": "CORNING_2021_10K",
+   "sources": [
+    "CORNING_2021_10K::0088"
+   ]
+  },
+  {
+   "qid": "msr-1dc2252cce",
+   "qtype": "prose",
+   "filing": "NIKE_2021_10K",
+   "sources": [
+    "NIKE_2021_10K::0512"
+   ]
+  },
+  {
+   "qid": "msr-1e19c705b3",
+   "qtype": "prose",
+   "filing": "CVSHEALTH_2018_10K",
+   "sources": [
+    "CVSHEALTH_2018_10K::0626"
+   ]
+  },
+  {
+   "qid": "msr-3d4abba649",
+   "qtype": "prose",
+   "filing": "JPMORGAN_2021Q1_10Q",
+   "sources": [
+    "JPMORGAN_2021Q1_10Q::0198"
+   ]
+  },
+  {
+   "qid": "msr-3f8df358e0",
+   "qtype": "prose",
+   "filing": "AMCOR_2023Q4_EARNINGS",
+   "sources": [
+    "AMCOR_2023Q4_EARNINGS::0033"
+   ]
+  },
+  {
+   "qid": "msr-4055654a4a",
+   "qtype": "prose",
+   "filing": "ULTABEAUTY_2023Q4_EARNINGS",
+   "sources": [
+    "ULTABEAUTY_2023Q4_EARNINGS::0011"
+   ]
+  },
+  {
+   "qid": "msr-4cebe14ba2",
+   "qtype": "prose",
+   "filing": "MGMRESORTS_2018_10K",
+   "sources": [
+    "MGMRESORTS_2018_10K::0209"
+   ]
+  },
+  {
+   "qid": "msr-58c8933aca",
+   "qtype": "prose",
+   "filing": "LOCKHEEDMARTIN_2022_10K",
+   "sources": [
+    "LOCKHEEDMARTIN_2022_10K::0341"
+   ]
+  },
+  {
+   "qid": "msr-5915f0bcce",
+   "qtype": "prose",
+   "filing": "3M_2022_10K",
+   "sources": [
+    "3M_2022_10K::0317"
+   ]
+  },
+  {
+   "qid": "msr-5fce25ffc0",
+   "qtype": "prose",
+   "filing": "PEPSICO_2023_8K_dated-2023-05-30",
+   "sources": [
+    "PEPSICO_2023_8K_dated-2023-05-30::0427"
+   ]
+  },
+  {
+   "qid": "msr-671b43325b",
+   "qtype": "prose",
+   "filing": "AMAZON_2019_10K",
+   "sources": [
+    "AMAZON_2019_10K::0030"
+   ]
+  },
+  {
+   "qid": "msr-85815e2451",
+   "qtype": "prose",
+   "filing": "MGMRESORTS_2023Q2_10Q",
+   "sources": [
+    "MGMRESORTS_2023Q2_10Q::0218"
+   ]
+  },
+  {
+   "qid": "msr-895e3196e6",
+   "qtype": "prose",
+   "filing": "NETFLIX_2015_10K",
+   "sources": [
+    "NETFLIX_2015_10K::0018"
+   ]
+  },
+  {
+   "qid": "msr-a3d3ce2c36",
+   "qtype": "prose",
+   "filing": "Pfizer_2023Q2_10Q",
+   "sources": [
+    "Pfizer_2023Q2_10Q::0089"
+   ]
+  },
+  {
+   "qid": "msr-a68e68fc13",
+   "qtype": "prose",
+   "filing": "JOHNSON_JOHNSON_2023Q2_EARNINGS",
+   "sources": [
+    "JOHNSON_JOHNSON_2023Q2_EARNINGS::0038"
+   ]
+  },
+  {
+   "qid": "msr-ac2dae6cc3",
+   "qtype": "prose",
+   "filing": "3M_2023Q2_10Q",
+   "sources": [
+    "3M_2023Q2_10Q::0233"
+   ]
+  },
+  {
+   "qid": "msr-b547c35a7f",
+   "qtype": "prose",
+   "filing": "PFIZER_2021_10K",
+   "sources": [
+    "PFIZER_2021_10K::0091"
+   ]
+  },
+  {
+   "qid": "msr-cb66844d0e",
+   "qtype": "prose",
+   "filing": "WALMART_2019_10K",
+   "sources": [
+    "WALMART_2019_10K::0109"
+   ]
+  },
+  {
+   "qid": "msr-f22cf1d1e6",
+   "qtype": "prose",
+   "filing": "ADOBE_2022_10K",
+   "sources": [
+    "ADOBE_2022_10K::0251"
+   ]
+  },
+  {
+   "qid": "msr-019ad37acd",
+   "qtype": "table",
+   "filing": "ADOBE_2022_10K",
+   "sources": [
+    "ADOBE_2022_10K#i0720@r15c2"
+   ]
+  },
+  {
+   "qid": "msr-06f4457eb6",
+   "qtype": "table",
+   "filing": "3M_2023Q2_10Q",
+   "sources": [
+    "3M_2023Q2_10Q#i0516@r5c5"
+   ]
+  },
+  {
+   "qid": "msr-0ed9b7956f",
+   "qtype": "table",
+   "filing": "AMERICANWATERWORKS_2020_10K",
+   "sources": [
+    "AMERICANWATERWORKS_2020_10K#i0608@r7c1"
+   ]
+  },
+  {
+   "qid": "msr-1a155d5a06",
+   "qtype": "table",
+   "filing": "AMCOR_2023Q4_EARNINGS",
+   "sources": [
+    "AMCOR_2023Q4_EARNINGS#i0149@r11c5"
+   ]
+  },
+  {
+   "qid": "msr-1ad23bcc73",
+   "qtype": "table",
+   "filing": "PAYPAL_2022_10K",
+   "sources": [
+    "PAYPAL_2022_10K#i1130@r4c2"
+   ]
+  },
+  {
+   "qid": "msr-22f4816d43",
+   "qtype": "table",
+   "filing": "NIKE_2019_10K",
+   "sources": [
+    "NIKE_2019_10K#i0759@r3c1"
+   ]
+  },
+  {
+   "qid": "msr-339e1a3000",
+   "qtype": "table",
+   "filing": "CORNING_2021_10K",
+   "sources": [
+    "CORNING_2021_10K#i1340@r3c1"
+   ]
+  },
+  {
+   "qid": "msr-48de9ba6d3",
+   "qtype": "table",
+   "filing": "GENERALMILLS_2019_10K",
+   "sources": [
+    "GENERALMILLS_2019_10K#i0416@r10c2"
+   ]
+  },
+  {
+   "qid": "msr-529631c2d0",
+   "qtype": "table",
+   "filing": "AMERICANWATERWORKS_2020_10K",
+   "sources": [
+    "AMERICANWATERWORKS_2020_10K#i0509@r11c2"
+   ]
+  },
+  {
+   "qid": "msr-57120e40a3",
+   "qtype": "table",
+   "filing": "ADOBE_2015_10K",
+   "sources": [
+    "ADOBE_2015_10K#i1183@r10c3"
+   ]
+  },
+  {
+   "qid": "msr-72a63617be",
+   "qtype": "table",
+   "filing": "BOEING_2022_10K",
+   "sources": [
+    "BOEING_2022_10K#i0489@r20c2"
+   ]
+  },
+  {
+   "qid": "msr-8ba217f2a6",
+   "qtype": "table",
+   "filing": "BLOCK_2016_10K",
+   "sources": [
+    "BLOCK_2016_10K#i0532@r28c1"
+   ]
+  },
+  {
+   "qid": "msr-8c236c709a",
+   "qtype": "table",
+   "filing": "CVSHEALTH_2018_10K",
+   "sources": [
+    "CVSHEALTH_2018_10K#i3298@r8c1"
+   ]
+  },
+  {
+   "qid": "msr-9a084d4f8f",
+   "qtype": "table",
+   "filing": "BESTBUY_2019_10K",
+   "sources": [
+    "BESTBUY_2019_10K#i0481@r29c1"
+   ]
+  },
+  {
+   "qid": "msr-a6b79067a6",
+   "qtype": "table",
+   "filing": "MGMRESORTS_2018_10K",
+   "sources": [
+    "MGMRESORTS_2018_10K#i0915@r26c5"
+   ]
+  },
+  {
+   "qid": "msr-bb96e5c1aa",
+   "qtype": "table",
+   "filing": "AMAZON_2019_10K",
+   "sources": [
+    "AMAZON_2019_10K#i0629@r7c1"
+   ]
+  },
+  {
+   "qid": "msr-c8dcaab591",
+   "qtype": "table",
+   "filing": "JOHNSON_JOHNSON_2023Q2_EARNINGS",
+   "sources": [
+    "JOHNSON_JOHNSON_2023Q2_EARNINGS#i0071@r21c3"
+   ]
+  },
+  {
+   "qid": "msr-e32c09ec84",
+   "qtype": "table",
+   "filing": "LOCKHEEDMARTIN_2022_10K",
+   "sources": [
+    "LOCKHEEDMARTIN_2022_10K#i0418@r16c2"
+   ]
+  },
+  {
+   "qid": "msr-e6f42064a2",
+   "qtype": "table",
+   "filing": "JPMORGAN_2022_10K",
+   "sources": [
+    "JPMORGAN_2022_10K#i1085@r4c4"
+   ]
+  },
+  {
+   "qid": "msr-e8ca7b0bec",
+   "qtype": "table",
+   "filing": "AMCOR_2020_10K",
+   "sources": [
+    "AMCOR_2020_10K#i0776@r6c1"
+   ]
+  },
+  {
+   "qid": "msr-02c7cb5626",
+   "qtype": "both",
+   "filing": "ADOBE_2022_10K",
+   "sources": [
+    "ADOBE_2022_10K#i0705@r12c3",
+    "ADOBE_2022_10K::0370"
+   ]
+  },
+  {
+   "qid": "msr-115da7e0da",
+   "qtype": "both",
+   "filing": "NETFLIX_2015_10K",
+   "sources": [
+    "NETFLIX_2015_10K#i0589@r12c1",
+    "NETFLIX_2015_10K::0031"
+   ]
+  },
+  {
+   "qid": "msr-13cc312bc9",
+   "qtype": "both",
+   "filing": "NIKE_2019_10K",
+   "sources": [
+    "NIKE_2019_10K#i0267@r4c4",
+    "NIKE_2019_10K::0301"
+   ]
+  },
+  {
+   "qid": "msr-31561abafe",
+   "qtype": "both",
+   "filing": "JOHNSON_JOHNSON_2023Q2_EARNINGS",
+   "sources": [
+    "JOHNSON_JOHNSON_2023Q2_EARNINGS#i0056@r24c1",
+    "JOHNSON_JOHNSON_2023Q2_EARNINGS::0020"
+   ]
+  },
+  {
+   "qid": "msr-31db0fe619",
+   "qtype": "both",
+   "filing": "AMCOR_2020_10K",
+   "sources": [
+    "AMCOR_2020_10K#i0756@r7c2",
+    "AMCOR_2020_10K::0656"
+   ]
+  },
+  {
+   "qid": "msr-39111b94b0",
+   "qtype": "both",
+   "filing": "NIKE_2021_10K",
+   "sources": [
+    "NIKE_2021_10K#i0633@r8c2",
+    "NIKE_2021_10K::0369"
+   ]
+  },
+  {
+   "qid": "msr-3fdcad9161",
+   "qtype": "both",
+   "filing": "AMAZON_2019_10K",
+   "sources": [
+    "AMAZON_2019_10K#i0575@r2c3",
+    "AMAZON_2019_10K::0070"
+   ]
+  },
+  {
+   "qid": "msr-5ae882fcdb",
+   "qtype": "both",
+   "filing": "ADOBE_2015_10K",
+   "sources": [
+    "ADOBE_2015_10K#i0409@r5c3",
+    "ADOBE_2015_10K::0061"
+   ]
+  },
+  {
+   "qid": "msr-65060a41ea",
+   "qtype": "both",
+   "filing": "BLOCK_2016_10K",
+   "sources": [
+    "BLOCK_2016_10K#i0532@r13c5",
+    "BLOCK_2016_10K::0021"
+   ]
+  },
+  {
+   "qid": "msr-6ad991cbc2",
+   "qtype": "both",
+   "filing": "PAYPAL_2022_10K",
+   "sources": [
+    "PAYPAL_2022_10K#i0576@r32c1",
+    "PAYPAL_2022_10K::0573"
+   ]
+  },
+  {
+   "qid": "msr-74ff178634",
+   "qtype": "both",
+   "filing": "MGMRESORTS_2023Q2_10Q",
+   "sources": [
+    "MGMRESORTS_2023Q2_10Q#i0099@r3c3",
+    "MGMRESORTS_2023Q2_10Q::0118"
+   ]
+  },
+  {
+   "qid": "msr-8270b6f8d3",
+   "qtype": "both",
+   "filing": "GENERALMILLS_2019_10K",
+   "sources": [
+    "GENERALMILLS_2019_10K#i1015@r4c1",
+    "GENERALMILLS_2019_10K::0064"
+   ]
+  },
+  {
+   "qid": "msr-865149271d",
+   "qtype": "both",
+   "filing": "3M_2023Q2_10Q",
+   "sources": [
+    "3M_2023Q2_10Q#i0044@r26c2",
+    "3M_2023Q2_10Q::0388"
+   ]
+  },
+  {
+   "qid": "msr-88f0788975",
+   "qtype": "both",
+   "filing": "AMCOR_2023Q4_EARNINGS",
+   "sources": [
+    "AMCOR_2023Q4_EARNINGS#i0129@r8c3",
+    "AMCOR_2023Q4_EARNINGS::0032"
+   ]
+  },
+  {
+   "qid": "msr-8928cd5258",
+   "qtype": "both",
+   "filing": "WALMART_2019_10K",
+   "sources": [
+    "WALMART_2019_10K#i0388@r11c5",
+    "WALMART_2019_10K::0248"
+   ]
+  },
+  {
+   "qid": "msr-a27de6e288",
+   "qtype": "both",
+   "filing": "CVSHEALTH_2018_10K",
+   "sources": [
+    "CVSHEALTH_2018_10K#i2867@r29c3",
+    "CVSHEALTH_2018_10K::0674"
+   ]
+  },
+  {
+   "qid": "msr-db326db9c6",
+   "qtype": "both",
+   "filing": "PEPSICO_2021_10K",
+   "sources": [
+    "PEPSICO_2021_10K#i0899@r15c2",
+    "PEPSICO_2021_10K::0935"
+   ]
+  },
+  {
+   "qid": "msr-dfe7a32517",
+   "qtype": "both",
+   "filing": "BESTBUY_2019_10K",
+   "sources": [
+    "BESTBUY_2019_10K#i0322@r6c5",
+    "BESTBUY_2019_10K::0154"
+   ]
+  },
+  {
+   "qid": "msr-e8b44f77a8",
+   "qtype": "both",
+   "filing": "3M_2022_10K",
+   "sources": [
+    "3M_2022_10K#i0732@r9c2",
+    "3M_2022_10K::0324"
+   ]
+  },
+  {
+   "qid": "msr-f8e310075f",
+   "qtype": "both",
+   "filing": "JOHNSON_JOHNSON_2023_8K_dated-2023-08-30",
+   "sources": [
+    "JOHNSON_JOHNSON_2023_8K_dated-2023-08-30#i0092@r19c3",
+    "JOHNSON_JOHNSON_2023_8K_dated-2023-08-30::0007"
+   ]
+  }
+ ]
+}

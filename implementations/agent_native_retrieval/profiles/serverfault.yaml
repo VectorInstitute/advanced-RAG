@@ -1,0 +1,56 @@
+# Data profile for the ServerFault 10,000-question slice, as
+# `describe_your_data.py prepare serverfault` writes it: one Markdown file per
+# post and two tables of post metadata.
+name: serverfault
+description: >-
+  ServerFault questions about running servers and networks, each with its accepted answer.
+  Posts are written by administrators and quote commands, configuration lines, file paths,
+  and error messages exactly as they appeared.
+
+files:
+  - glob: "posts/*.md"
+    kind: document
+    sections: markdown
+
+identifiers:
+  - name: unix_path
+    pattern: '(?<![\w/.~-])/(?:etc|var|usr|opt|proc|sys|dev|home|srv|tmp|lib|boot|root|run|bin|sbin)(?:/[\w.+@-]+)+'
+    description: a file-system path under a standard Unix folder
+    examples: [/etc/nginx/nginx.conf, /var/log/messages]
+  - name: constant
+    pattern: '\b[A-Z][A-Z0-9]*_[A-Z0-9_]{2,}\b'
+    description: an upper-case name with underscores, such as a socket state, registry hive, or variable
+    examples: [TIME_WAIT, HKEY_LOCAL_MACHINE, SCRIPT_FILENAME]
+  - name: hex_code
+    pattern: '\b0x[0-9A-Fa-f]{8}\b'
+    description: an eight-digit hexadecimal status or error code
+    examples: ["0x80070005"]
+    ignore_case: true
+  - name: kb_article
+    pattern: '\bKB\d{6,7}\b'
+    description: a Microsoft knowledge-base article number
+    examples: [KB926642]
+
+tables:
+  - name: posts
+    file: posts.csv
+    description: one row per post (question plus accepted answer)
+    doc_column: doc_id
+    columns:
+      - {name: doc_id, type: text, description: "the post's document, such as posts/q9708.md"}
+      - {name: question_id, type: integer, description: "the ServerFault question number"}
+      - {name: title, type: text, description: "the question title"}
+      - {name: tags, type: text, description: "tags joined by '|', such as nginx|ssl"}
+      - {name: score, type: integer, description: "the question's vote score"}
+      - {name: answer_score, type: integer, description: "the accepted answer's vote score"}
+      - {name: views, type: integer, description: "view count"}
+      - {name: answers, type: integer, description: "number of answers the question received"}
+      - {name: year, type: integer, description: "year the question was asked"}
+      - {name: link, type: text, description: "the question's URL"}
+  - name: post_tags
+    file: post_tags.csv
+    description: one row per post and tag; join to posts on doc_id
+    doc_column: doc_id
+    columns:
+      - {name: doc_id, type: text, description: "the post's document"}
+      - {name: tag, type: text, description: "one tag, lower case, such as iis-7"}

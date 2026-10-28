@@ -1,0 +1,147 @@
+{
+  "comment": "Licence policy for scripts/publish_artifacts.py. Each rule says which corpora an artifact derives from and whether its payload holds corpus text (passages, chunks, transcripts, or model text written from them). The first rule that matches wins, and an artifact no rule matches is refused. Text under a CC BY-NC or CC BY-SA licence is refused unless an allowlist entry matches it and gives a reason. FinanceBench (CC BY-NC) has no allowlist entry. ServerFault (CC BY-SA) has entries, and a release holding its text carries a per-post attribution file. Corpora the package pins take their licence from aieng.advanced_rag.corpora; the licences below cover the rest.",
+  "licences": {
+    "click": {
+      "name": "BSD-3-Clause",
+      "url": "https://github.com/pallets/click/blob/8.1.8/LICENSE.txt",
+      "attribution": "Click 8.1.8, Copyright 2014 Pallets, BSD-3-Clause. https://github.com/pallets/click"
+    },
+    "repository": {
+      "name": "Vector Institute License",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/blob/main/LICENSE.md",
+      "attribution": "Files from the VectorInstitute/advanced-RAG repository, under its LICENSE.md."
+    }
+  },
+  "rules": [
+    {
+      "match": {"ri_id": "ri1"},
+      "corpora": ["contract_nli", "cuad"],
+      "corpus_text": true,
+      "note": "RI #1 collections and examples hold contract text."
+    },
+    {
+      "match": {"ri_id": "citations"},
+      "corpora": ["contract_nli"],
+      "corpus_text": true,
+      "note": "Cited answers, rankings, and judgements over ContractNLI agreements, with answer and statement text written from them."
+    },
+    {
+      "match": {"ri_id": "ri2", "config": {"corpus_revision": "5ec05b38deecc3318bb432c69865959c56058990"}},
+      "corpora": ["musique"],
+      "corpus_text": true,
+      "note": "RI #2's worked examples over MuSiQue: question text, gold answers, model answers, decomposition plans, and agent traces with facts written from the passages."
+    },
+    {
+      "match": {"ri_id": "ri3", "artifact_type": "table-retrieval-scores"},
+      "corpora": ["financebench"],
+      "corpus_text": false,
+      "note": "Counts and scores per strategy, with no filing text."
+    },
+    {
+      "match": {"ri_id": "ri3"},
+      "corpora": ["financebench"],
+      "corpus_text": true,
+      "note": "Docling ingestion of the FinanceBench filings: chunks and tables."
+    },
+    {
+      "match": {"ri_id": "ri4", "artifact_type": "knowledge-graph"},
+      "corpora": ["serverfault"],
+      "corpus_text": true,
+      "note": "Entities and relations extracted from ServerFault posts, with descriptions written from the post text."
+    },
+    {
+      "match": {"ri_id": "ri4", "artifact_type": "graph-index*", "config": {"dataset_revision": "5ec05b38deecc3318bb432c69865959c56058990"}},
+      "corpora": ["musique"],
+      "corpus_text": true,
+      "note": "LightRAG and HippoRAG 2 indexes over the 11,656 MuSiQue passages; they store the passages."
+    },
+    {
+      "match": {"ri_id": "ri5", "config": {"corpus": "musique-*"}},
+      "corpora": ["musique"],
+      "corpus_text": true,
+      "note": "Agent transcripts quote the passages the tools returned."
+    },
+    {
+      "match": {"ri_id": "ri5", "config": {"corpus": "serverfault*"}},
+      "corpora": ["serverfault"],
+      "corpus_text": true,
+      "note": "Agent transcripts quote ServerFault posts."
+    },
+    {
+      "match": {"ri_id": "ri5", "config": {"corpus": "financebench*"}},
+      "corpora": ["financebench"],
+      "corpus_text": true,
+      "note": "Agent transcripts quote FinanceBench filings."
+    },
+    {
+      "match": {"ri_id": "ri5", "config": {"corpus": "click"}},
+      "corpora": ["click"],
+      "corpus_text": true,
+      "note": "Agent transcripts quote the Click 8.1.8 source and docs."
+    },
+    {
+      "match": {"ri_id": "ri5", "config": {"corpus": "folder-docs"}},
+      "corpora": ["repository"],
+      "corpus_text": true,
+      "note": "The starter notebook's agent over this repository's docs/ folder."
+    },
+    {
+      "match": {"ri_id": "visual-documents", "artifact_type": "answer-verdicts"},
+      "corpora": ["financebench"],
+      "corpus_text": false,
+      "note": "A verdict and a method per question identifier."
+    },
+    {
+      "match": {"ri_id": "visual-documents", "artifact_type": "cpu-probe"},
+      "corpora": [],
+      "corpus_text": false,
+      "note": "Timings and cosine checks."
+    },
+    {
+      "match": {"ri_id": "visual-documents", "artifact_type": "page-elements"},
+      "corpora": ["financebench"],
+      "corpus_text": false,
+      "note": "Element identifiers, kinds, and bounding boxes."
+    },
+    {
+      "match": {"ri_id": "visual-documents", "artifact_type": "page-index"},
+      "corpora": ["financebench"],
+      "corpus_text": false,
+      "note": "ColModernVBERT page vectors and page identifiers."
+    },
+    {
+      "match": {"ri_id": "visual-documents", "artifact_type": "page-universe"},
+      "corpora": ["financebench"],
+      "corpus_text": false,
+      "note": "Page identifiers per stratum."
+    },
+    {
+      "match": {"ri_id": "visual-documents", "artifact_type": "visual-rankings"},
+      "corpora": ["financebench"],
+      "corpus_text": false,
+      "note": "Ranked page identifiers per question."
+    },
+    {
+      "match": {"ri_id": "visual-documents"},
+      "corpora": ["financebench"],
+      "corpus_text": true,
+      "note": "Page text, model descriptions of FinanceBench figures and tables, questions written from them, and answers."
+    },
+    {
+      "match": {"ri_id": "visual-documents-own"},
+      "corpora": ["repository"],
+      "corpus_text": true,
+      "note": "The demo PDF committed under implementations/special_topics/visual_documents/demo/."
+    }
+  ],
+  "allowlist": [
+    {
+      "match": {"ri_id": "ri4", "artifact_type": "knowledge-graph"},
+      "reason": "ServerFault posts, CC BY-SA, redistributed with attribution. The release ships ATTRIBUTION-serverfault.md."
+    },
+    {
+      "match": {"ri_id": "ri5", "config": {"corpus": "serverfault*"}},
+      "reason": "ServerFault posts, CC BY-SA, redistributed with attribution. The release ships ATTRIBUTION-serverfault.md."
+    }
+  ]
+}

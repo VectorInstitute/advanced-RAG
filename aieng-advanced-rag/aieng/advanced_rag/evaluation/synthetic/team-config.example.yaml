@@ -1,0 +1,76 @@
+# Synthetic question set settings for one team corpus.
+#
+# Copy this file, edit the categories and the few-shot questions, and load it
+# with aieng.advanced_rag.evaluation.synthetic.load_config. Every key is
+# optional; a missing key keeps the default in config.py.
+
+# One line naming your documents. It goes into every generation prompt.
+domain: "loan agreements between a lender and small businesses"
+
+# Who asks. The weight is relative, so 2 is twice as likely as 1.
+users:
+  - name: credit_analyst
+    description: >-
+      Works with these agreements daily and uses their vocabulary. Asks short,
+      precise questions.
+    weight: 2
+  - name: borrower
+    description: >-
+      A business owner who describes what they want in everyday words and does
+      not know the agreement's defined terms.
+    weight: 1
+
+# What they ask. Each category is a different kind of lookup.
+questions:
+  - name: factoid
+    description: "A short answer: a rate, an amount, a date, a party."
+    weight: 2
+  - name: condition_or_exception
+    description: "When a term applies, or what is excluded from it."
+    weight: 1.5
+  - name: yes_no
+    description: "A yes-or-no question, with the condition that decides it."
+    weight: 1
+  - name: procedure
+    description: "What someone has to do, and how or by when."
+    weight: 1
+
+# Surface form, sampled independently of the category.
+phrasings:
+  - name: natural
+    description: "A complete, natural question, as typed into a chat box."
+    weight: 3
+  - name: keywords
+    description: "A terse search-engine style query of a few words."
+    weight: 1
+
+# Real questions your users have asked, eight or so. The generator copies their
+# style, not their content. Leave the list empty if you have none.
+few_shot:
+  - "what happens if we miss a payment by a few days"
+  - "Is there a prepayment penalty on the term loan?"
+  - "who has to sign off on a change of ownership"
+
+# How many candidates to draw. On ContractNLI, 3 passages per document and 2
+# statements per passage gave 4.4 accepted answerable questions per document.
+passages_per_document: 3
+statements_per_passage: 2
+
+# Share of null questions in the accepted set, and how they are made: by
+# changing one detail of an answerable question (near miss), or from documents
+# kept out of the index (held out).
+null_share: 0.2
+near_miss_share: 0.5
+held_out_share: 0.1
+
+# "corpus" searches every document. Use "document" only when each question
+# belongs to one known document, as in per-contract review.
+scope: corpus
+
+# Two questions above this cosine (BGE-small) count as duplicates.
+dedup_cosine: 0.92
+
+# Also write a reworded variant of each answerable question.
+paraphrase: true
+
+seed: 0

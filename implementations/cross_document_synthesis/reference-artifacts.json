@@ -1,0 +1,149 @@
+{
+  "artifacts": [
+    {
+      "key": {
+        "artifact_type": "agent-lab",
+        "config": {
+          "corpus_revision": "5ec05b38deecc3318bb432c69865959c56058990",
+          "encoder": [
+            "BAAI/bge-small-en-v1.5",
+            "5c38ec7c405ec4b44b94cc5a9bb96e735b38267a"
+          ],
+          "endpoint": "vector-cluster",
+          "instruction_sha256": "3727132334ba2075fd6bed7ac2ebe0c0ea962a8f2af9a9c4abf763c1ae6091bd",
+          "max_model_calls": 10,
+          "max_searches": 3,
+          "model": "Qwen3_6-35B-A3B",
+          "selection": "first question per hop count in pinned file order"
+        },
+        "producer_id": "run_agent_lab",
+        "ri_id": "ri2"
+      },
+      "sha256": "341e56fbd3d781462755e44a24cba4ced090c9a26103cd4cd9250860fb1a9676",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-ri2-35b43b26a35a/ri2.agent-lab.run_agent_lab.955a26388af28190033f8d554084f3d58665e9335d24478b74b9d1d1e085d204.json"
+    },
+    {
+      "key": {
+        "artifact_type": "decomposition-example",
+        "config": {
+          "answer_prompt_sha256": "517c503f1380aa40f6d20b1fc0b8f6538bbf367601e79d4bca0d316cea6eea0f",
+          "corpus_revision": "5ec05b38deecc3318bb432c69865959c56058990",
+          "encoder": [
+            "BAAI/bge-small-en-v1.5",
+            "5c38ec7c405ec4b44b94cc5a9bb96e735b38267a"
+          ],
+          "endpoint": "vector-cluster",
+          "evidence_budget": 5,
+          "max_subquestions": 4,
+          "model": "Qwen3_6-35B-A3B",
+          "per_hop": 10,
+          "planning_prompt_sha256": "3d6e45c221269e4308898dc8ffdb6507e7dece887900c69b88e502cce8d08a03",
+          "retrieval_depth": 20,
+          "selection": "first 10 questions per hop count in pinned file order"
+        },
+        "producer_id": "run_decomposition",
+        "ri_id": "ri2"
+      },
+      "sha256": "410f513619f76a6a77a0f9ca5fdd8086f3e50c48fb2a6d6b09585ac44292237a",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-ri2-35b43b26a35a/ri2.decomposition-example.run_decomposition.3da58b1823d0b48f57e322ef4c476aa934c177bf312a1755b5a0d1ed8cd6f5ce.json"
+    },
+    {
+      "key": {
+        "artifact_type": "dense-predictions",
+        "config": {
+          "answer_prompt_sha256": "517c503f1380aa40f6d20b1fc0b8f6538bbf367601e79d4bca0d316cea6eea0f",
+          "corpus_revision": "5ec05b38deecc3318bb432c69865959c56058990",
+          "encoder": [
+            "BAAI/bge-small-en-v1.5",
+            "5c38ec7c405ec4b44b94cc5a9bb96e735b38267a"
+          ],
+          "endpoint": "vector-cluster",
+          "evidence_budget": 5,
+          "model": "Qwen3_6-35B-A3B",
+          "questions": 1000,
+          "retrieval_depth": 20
+        },
+        "producer_id": "run_dense_baseline",
+        "ri_id": "ri2"
+      },
+      "sha256": "22ce82f1de74717f3ab79d09d12a22f983bcaff404e799636e8a1997ab3d858e",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-ri2-35b43b26a35a/ri2.dense-predictions.run_dense_baseline.ace96d86c95c2e61bbf1f55f9e61258ea06816da6f8ff4680a423af25cea2a21.json"
+    },
+    {
+      "key": {
+        "artifact_type": "graph-examples",
+        "config": {
+          "answer_prompt_sha256": "517c503f1380aa40f6d20b1fc0b8f6538bbf367601e79d4bca0d316cea6eea0f",
+          "corpus_revision": "5ec05b38deecc3318bb432c69865959c56058990",
+          "encoder": [
+            "BAAI/bge-small-en-v1.5",
+            "5c38ec7c405ec4b44b94cc5a9bb96e735b38267a"
+          ],
+          "endpoint": "vector-cluster",
+          "generation_passages": 5,
+          "model": "Qwen3_6-35B-A3B",
+          "per_hop": 1,
+          "retrieval_depth": 20,
+          "selection": "first 1 questions per hop category in pinned file order",
+          "upstream": {
+            "index": "c38b9130a0adfa8b618395c1ffc183390d3722d964e19d7652aeed4189a71dab"
+          }
+        },
+        "producer_id": "run_graph_comparison/hipporag2",
+        "ri_id": "ri2"
+      },
+      "sha256": "2ac8ace683b17f04f84198d7da65d3a230a0b7cc2b258113de54e6bc1c068dbb",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-ri2-35b43b26a35a/ri2.graph-examples.run_graph_comparison-hipporag2.f72aded37ecd3f75d46a6891be2e031c6ce376761707c8d21e8bd6a2a863ab0c.json"
+    },
+    {
+      "key": {
+        "artifact_type": "ircot-examples",
+        "config": {
+          "answer_prompt_sha256": "517c503f1380aa40f6d20b1fc0b8f6538bbf367601e79d4bca0d316cea6eea0f",
+          "corpus_revision": "5ec05b38deecc3318bb432c69865959c56058990",
+          "encoder": [
+            "BAAI/bge-small-en-v1.5",
+            "5c38ec7c405ec4b44b94cc5a9bb96e735b38267a"
+          ],
+          "endpoint": "vector-cluster",
+          "exposed_per_round": 5,
+          "instruction_sha256": "f47625dbd8f9c709b1a7036df1ded327b827e6b3c88da81c939b4c7efe22dd8b",
+          "model": "Qwen3_6-35B-A3B",
+          "model_calls": 10,
+          "rounds": 4,
+          "selection": "first question per hop category in pinned file order"
+        },
+        "producer_id": "run_benchmark/ircot",
+        "ri_id": "ri2"
+      },
+      "sha256": "06c02d12bf8c5f52b76c043e54484d1b6d8b22991566b7d82ff74083dea6a695",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-ri2-35b43b26a35a/ri2.ircot-examples.run_benchmark-ircot.8cf78288cf18904339dcbb8cbd5ee0301833fc1512d1582be87b09859593618d.json"
+    },
+    {
+      "key": {
+        "artifact_type": "starter-agent",
+        "config": {
+          "answer_prompt_sha256": "517c503f1380aa40f6d20b1fc0b8f6538bbf367601e79d4bca0d316cea6eea0f",
+          "config": {
+            "exposed": 5,
+            "model_calls": 10,
+            "rounds": 4
+          },
+          "corpus_revision": "5ec05b38deecc3318bb432c69865959c56058990",
+          "encoder": [
+            "BAAI/bge-small-en-v1.5",
+            "5c38ec7c405ec4b44b94cc5a9bb96e735b38267a"
+          ],
+          "endpoint": "vector-cluster",
+          "instruction_sha256": "f47625dbd8f9c709b1a7036df1ded327b827e6b3c88da81c939b4c7efe22dd8b",
+          "model": "Qwen3_6-35B-A3B",
+          "question_id": "2hop__13548_13529"
+        },
+        "producer_id": "99_starter_agent",
+        "ri_id": "ri2"
+      },
+      "sha256": "67ad18b9f52bf5a42ef71ac753db6b2a55a3d89b2c4d79445d3fc890ce5991e5",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-ri2-35b43b26a35a/ri2.starter-agent.99_starter_agent.032f18300a02514bbf20e8104eb758c3a4202acb1403acf2fccae92969a38187.json"
+    }
+  ]
+}

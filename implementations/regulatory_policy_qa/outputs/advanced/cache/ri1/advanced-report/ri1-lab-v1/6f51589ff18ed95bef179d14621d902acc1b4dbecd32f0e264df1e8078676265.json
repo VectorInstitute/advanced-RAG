@@ -1,0 +1,331 @@
+{
+  "schema_version": 1,
+  "cache_key": "6f51589ff18ed95bef179d14621d902acc1b4dbecd32f0e264df1e8078676265",
+  "ri_id": "ri1",
+  "artifact_type": "advanced-report",
+  "producer_id": "ri1-lab-v1",
+  "config": {
+    "name": "agent",
+    "report_sha256": "35b08308bbd7f48c42f72f72aa684492167b44c77c293973d39ce0d371bb513f"
+  },
+  "created_at": "2026-10-20T18:57:57.094787+00:00",
+  "value": {
+    "generated_at": "2026-10-20T18:56:30.430333+00:00",
+    "compute_node": "bn100",
+    "slurm_job_id": "411410",
+    "model": "Qwen3_6-35B-A3B",
+    "embedding_model": "BAAI/bge-small-en-v1.5",
+    "reasoning": false,
+    "temperature": 0,
+    "pattern": "shared AgentLoop plus retrieval_tools; fixed scope and bounded model calls",
+    "max_model_calls": 6,
+    "results": [
+      {
+        "query_id": "1::nda-11",
+        "doc_id": "1",
+        "is_null": true,
+        "answer": "The provided contract does not explicitly state that the \"Receiving Party shall not reverse engineer any objects which embody Disclosing Party's Confidential Information.\"\n\nHowever, it does contain a related restriction under section 4.a. \"No Use,\" which states: \"The Receiving Party agrees not to use the Confidential Information in any way, or to manufacture or test any product embodying Confidential Information, except for the purpose set forth above.\" [Citation: 1]",
+        "tool_calls": [
+          "search_corpus",
+          "fetch_passages"
+        ],
+        "model_calls": 3,
+        "stop_reason": "completed",
+        "empty_final_answer": false,
+        "tool_trace": [
+          {
+            "tool": "search_corpus",
+            "arguments": {
+              "question": "Receiving Party shall not reverse engineer any objects which embody Disclosing Party's Confidential Information."
+            },
+            "returned_chunk_ids": [
+              "1::0007",
+              "1::0004",
+              "1::0006",
+              "1::0008",
+              "1::0005"
+            ]
+          },
+          {
+            "tool": "fetch_passages",
+            "arguments": {
+              "chunk_ids": [
+                "1::0007"
+              ]
+            },
+            "returned_chunk_ids": [
+              "1::0007"
+            ]
+          }
+        ],
+        "scope_enforcement": "physically isolated per-contract index; both search and fetch are restricted"
+      },
+      {
+        "query_id": "1::nda-16",
+        "doc_id": "1",
+        "is_null": false,
+        "answer": "Based on the provided contract, the Receiving Party is required to return or destroy Confidential Information upon the termination of the Agreement.\n\nSpecifically, the contract states:\n*   **Return of Information:** \"on a Party's request, the other Party shall return all Confidential Information of the requesting Party... The Confidential Information retained by the returning Party... will be held by the returning Party and kept subject to the terms of this Agreement or destroyed.\" (Citation: 1)\n*   **Termination:** The obligation to return or destroy applies upon \"the completion or termination of the dealings between the parties contemplated hereunder; or II. the termination of this Agreement\" (Citation: 1). The Recipient may also destroy the information with written consent from JEA. (Citation: 1)",
+        "tool_calls": [
+          "search_corpus",
+          "fetch_passages"
+        ],
+        "model_calls": 3,
+        "stop_reason": "completed",
+        "empty_final_answer": false,
+        "tool_trace": [
+          {
+            "tool": "search_corpus",
+            "arguments": {
+              "question": "Receiving Party shall destroy or return some Confidential Information upon the termination of Agreement"
+            },
+            "returned_chunk_ids": [
+              "1::0007",
+              "1::0013",
+              "1::0008",
+              "1::0009",
+              "1::0011"
+            ]
+          },
+          {
+            "tool": "fetch_passages",
+            "arguments": {
+              "chunk_ids": [
+                "1::0013",
+                "1::0008"
+              ]
+            },
+            "returned_chunk_ids": [
+              "1::0013",
+              "1::0008"
+            ]
+          }
+        ],
+        "scope_enforcement": "physically isolated per-contract index; both search and fetch are restricted"
+      },
+      {
+        "query_id": "2::nda-11",
+        "doc_id": "2",
+        "is_null": false,
+        "answer": "The contract states that the Recipient shall not reverse engineer, disassemble, or decompile any prototypes, software, or other objects which embody the Disclosing Party’s Confidential Information to obtain access to the Disclosing Party’s trade secrets without the Disclosing Party’s prior written consent. [2::0003]",
+        "tool_calls": [
+          "search_corpus",
+          "fetch_passages"
+        ],
+        "model_calls": 3,
+        "stop_reason": "completed",
+        "empty_final_answer": false,
+        "tool_trace": [
+          {
+            "tool": "search_corpus",
+            "arguments": {
+              "question": "Receiving Party shall not reverse engineer any objects which embody Disclosing Party's Confidential Information."
+            },
+            "returned_chunk_ids": [
+              "2::0003",
+              "2::0007",
+              "2::0009",
+              "2::0010",
+              "2::0001"
+            ]
+          },
+          {
+            "tool": "fetch_passages",
+            "arguments": {
+              "chunk_ids": [
+                "2::0003"
+              ]
+            },
+            "returned_chunk_ids": [
+              "2::0003"
+            ]
+          }
+        ],
+        "scope_enforcement": "physically isolated per-contract index; both search and fetch are restricted"
+      },
+      {
+        "query_id": "2::nda-10",
+        "doc_id": "2",
+        "is_null": true,
+        "answer": null,
+        "stop_reason": "model_call_limit",
+        "model_calls": 6,
+        "tool_trace": [
+          {
+            "tool": "search_corpus",
+            "arguments": {
+              "question": "Receiving Party shall not disclose the fact that Agreement was agreed or negotiated"
+            },
+            "returned_chunk_ids": [
+              "2::0003",
+              "2::0010",
+              "2::0007",
+              "2::0011",
+              "2::0008"
+            ]
+          },
+          {
+            "tool": "fetch_passages",
+            "arguments": {
+              "chunk_ids": [
+                "2::0003",
+                "2::0010",
+                "2::0007",
+                "2::0011",
+                "2::0008"
+              ]
+            },
+            "returned_chunk_ids": [
+              "2::0003",
+              "2::0010",
+              "2::0007",
+              "2::0011",
+              "2::0008"
+            ]
+          },
+          {
+            "tool": "search_corpus",
+            "arguments": {
+              "question": "Receiving Party shall not disclose the fact that Agreement was agreed or negotiated"
+            },
+            "returned_chunk_ids": [
+              "2::0003",
+              "2::0010",
+              "2::0007",
+              "2::0011",
+              "2::0008"
+            ]
+          },
+          {
+            "tool": "search_corpus",
+            "arguments": {
+              "question": "non-disclosure of agreement existence negotiation"
+            },
+            "returned_chunk_ids": [
+              "2::0000",
+              "2::0010",
+              "2::0011",
+              "2::0002",
+              "2::0003"
+            ]
+          },
+          {
+            "tool": "fetch_passages",
+            "arguments": {
+              "chunk_ids": [
+                "2::0000",
+                "2::0010",
+                "2::0011",
+                "2::0002",
+                "2::0003"
+              ]
+            },
+            "returned_chunk_ids": [
+              "2::0000",
+              "2::0010",
+              "2::0011",
+              "2::0002",
+              "2::0003"
+            ]
+          },
+          {
+            "tool": "search_corpus",
+            "arguments": {
+              "question": "confidentiality obligations survive termination"
+            },
+            "returned_chunk_ids": [
+              "2::0004",
+              "2::0003",
+              "2::0006",
+              "2::0002",
+              "2::0007"
+            ]
+          }
+        ],
+        "scope_enforcement": "physically isolated per-contract index; both search and fetch are restricted"
+      }
+    ],
+    "limitations": [
+      "Four deterministic starter examples, not an agent accuracy benchmark.",
+      "Uses the current shared agent interfaces; no unavailable future notebook template is claimed as a dependency."
+    ],
+    "usage": {
+      "run": {
+        "questions": 4,
+        "calls": 15,
+        "prompt_tokens": 38347,
+        "completion_tokens": 843,
+        "total_tokens": 39190,
+        "tool_calls": 12,
+        "cache_hits": 0,
+        "empty_responses": 0,
+        "calls_missing_usage": 0,
+        "service_seconds": 86.399
+      },
+      "unattributed": {
+        "calls": 0,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "tool_calls": 0,
+        "cache_hits": 0,
+        "empty_responses": 0,
+        "calls_missing_usage": 0,
+        "service_seconds": 0.0
+      },
+      "questions": {
+        "1::nda-11": {
+          "question_id": "1::nda-11",
+          "calls": 3,
+          "prompt_tokens": 4707,
+          "completion_tokens": 173,
+          "total_tokens": 4880,
+          "tool_calls": 2,
+          "cache_hits": 0,
+          "empty_responses": 0,
+          "calls_missing_usage": 0,
+          "service_seconds": 24.815,
+          "elapsed_seconds": 24.911
+        },
+        "1::nda-16": {
+          "question_id": "1::nda-16",
+          "calls": 3,
+          "prompt_tokens": 5074,
+          "completion_tokens": 249,
+          "total_tokens": 5323,
+          "tool_calls": 2,
+          "cache_hits": 0,
+          "empty_responses": 0,
+          "calls_missing_usage": 0,
+          "service_seconds": 21.859,
+          "elapsed_seconds": 21.862
+        },
+        "2::nda-11": {
+          "question_id": "2::nda-11",
+          "calls": 3,
+          "prompt_tokens": 4734,
+          "completion_tokens": 144,
+          "total_tokens": 4878,
+          "tool_calls": 2,
+          "cache_hits": 0,
+          "empty_responses": 0,
+          "calls_missing_usage": 0,
+          "service_seconds": 14.209,
+          "elapsed_seconds": 14.212
+        },
+        "2::nda-10": {
+          "question_id": "2::nda-10",
+          "calls": 6,
+          "prompt_tokens": 23832,
+          "completion_tokens": 277,
+          "total_tokens": 24109,
+          "tool_calls": 6,
+          "cache_hits": 0,
+          "empty_responses": 0,
+          "calls_missing_usage": 0,
+          "service_seconds": 25.516,
+          "elapsed_seconds": 25.611
+        }
+      }
+    }
+  }
+}

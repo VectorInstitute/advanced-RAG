@@ -1,0 +1,225 @@
+{
+ "produced_by": {
+  "model": "Qwen3_8-27B",
+  "reader": "Qwen3_8-27B",
+  "enrichment": "Qwen3_8-27B",
+  "question_generator": "Qwen3_8-27B",
+  "question_checker": "Qwen3_8-Flash-Next",
+  "judge": "Qwen3_6-35B-A3B",
+  "endpoint": "vector-cluster",
+  "embeddings": "BAAI/bge-small-en-v1.5 (local)",
+  "page_embeddings": "Qdrant/colmodernvbert (local)",
+  "producer": "implementations/special_topics/visual_documents/build_reference.py",
+  "mode": "explore: one run, no seeds beyond the fixed sampling seed 0"
+ },
+ "selection": {
+  "pages": 1000,
+  "pictures": 144,
+  "pictures_described": 117,
+  "tables": 823,
+  "tables_summarised": 530
+ },
+ "enrichment": {
+  "e1-pictures": {
+   "elements": 117,
+   "prompt_tokens_per_element": 621.0,
+   "completion_tokens_per_element": 176.0,
+   "seconds_per_element": 48.52,
+   "empty": 0
+  },
+  "e2-pictures": {
+   "elements": 117,
+   "prompt_tokens_per_element": 852.1,
+   "completion_tokens_per_element": 331.4,
+   "seconds_per_element": 36.14,
+   "empty": 0
+  },
+  "e2-tables": {
+   "elements": 530,
+   "prompt_tokens_per_element": 867.2,
+   "completion_tokens_per_element": 188.1,
+   "seconds_per_element": 47.66,
+   "empty": 0
+  }
+ },
+ "page_index": {
+  "pages": 1000,
+  "megabytes_float16": 286.5,
+  "vectors_per_page": 1119.3,
+  "seconds_per_page_gpu": 0.795,
+  "hardware": "NVIDIA GeForce RTX 4090",
+  "query_seconds_gpu": 0.4443,
+  "maxsim_seconds_per_query_cpu": 0.2438,
+  "cpu_seconds_per_page": 18.14,
+  "cpu_seconds_per_query": 45.99,
+  "cpu_page_vector_cosine": 0.99999,
+  "cpu_query_vector_cosine": 1.0,
+  "cpu_cpus": 32,
+  "cpu_load_average": 51.0
+ },
+ "text_index": {
+  "chunks": {
+   "T": 4595,
+   "E1": 4682,
+   "E2": 4980,
+   "L": 4980
+  },
+  "seconds": {
+   "T_index": 836.7,
+   "T_query_total": 7.68,
+   "E1_index": 396.6,
+   "E1_query_total": 3.05,
+   "E2_index": 629.0,
+   "E2_query_total": 21.24,
+   "L_index": 706.3,
+   "L_query_total": 83.52
+  },
+  "megabytes_float32": {
+   "T": 7.06,
+   "E1": 7.19,
+   "E2": 7.65,
+   "L": 7.65
+  }
+ },
+ "reader_tokens_per_question": {
+  "T": {
+   "prompt_tokens": 1505.1,
+   "completion_tokens": 12.3,
+   "images": 0
+  },
+  "E1": {
+   "prompt_tokens": 1531.9,
+   "completion_tokens": 14.9,
+   "images": 0
+  },
+  "E2": {
+   "prompt_tokens": 1418.2,
+   "completion_tokens": 14.3,
+   "images": 0
+  },
+  "L": {
+   "prompt_tokens": 1628.4,
+   "completion_tokens": 17.3,
+   "images": 0
+  },
+  "VT": {
+   "prompt_tokens": 3349.8,
+   "completion_tokens": 21.5,
+   "images": 0
+  },
+  "VV": {
+   "prompt_tokens": 3392.6,
+   "completion_tokens": 35.6,
+   "images": 3
+  },
+  "TV": {
+   "prompt_tokens": 3400.8,
+   "completion_tokens": 36.4,
+   "images": 3
+  },
+  "H": {
+   "prompt_tokens": 6758.9,
+   "completion_tokens": 46.7,
+   "images": 3
+  },
+  "O-text": {
+   "prompt_tokens": 940.1,
+   "completion_tokens": 19.2,
+   "images": 0
+  },
+  "O-enriched": {
+   "prompt_tokens": 1246.9,
+   "completion_tokens": 24.1,
+   "images": 0
+  },
+  "O-image": {
+   "prompt_tokens": 1251.2,
+   "completion_tokens": 31.0,
+   "images": 1.05
+  },
+  "O-both": {
+   "prompt_tokens": 2406.6,
+   "completion_tokens": 28.7,
+   "images": 1.05
+  }
+ },
+ "paid_reader_usd_per_1000_questions": {
+  "T": {
+   "claude-haiku-5-5": 0.157,
+   "gemini-3.5-flash-lite": 0.482,
+   "gpt-6-luna": 0.157
+  },
+  "E1": {
+   "claude-haiku-5-5": 0.161,
+   "gemini-3.5-flash-lite": 0.497,
+   "gpt-6-luna": 0.161
+  },
+  "E2": {
+   "claude-haiku-5-5": 0.149,
+   "gemini-3.5-flash-lite": 0.461,
+   "gpt-6-luna": 0.149
+  },
+  "L": {
+   "claude-haiku-5-5": 0.171,
+   "gemini-3.5-flash-lite": 0.532,
+   "gpt-6-luna": 0.171
+  },
+  "VT": {
+   "claude-haiku-5-5": 0.346,
+   "gemini-3.5-flash-lite": 1.059,
+   "gpt-6-luna": 0.346
+  },
+  "VV": {
+   "claude-haiku-5-5": 0.357,
+   "gemini-3.5-flash-lite": 1.107,
+   "gpt-6-luna": 0.357
+  },
+  "TV": {
+   "claude-haiku-5-5": 0.358,
+   "gemini-3.5-flash-lite": 1.111,
+   "gpt-6-luna": 0.358
+  },
+  "H": {
+   "claude-haiku-5-5": 0.699,
+   "gemini-3.5-flash-lite": 2.144,
+   "gpt-6-luna": 0.699
+  },
+  "O-text": {
+   "claude-haiku-5-5": 0.104,
+   "gemini-3.5-flash-lite": 0.33,
+   "gpt-6-luna": 0.104
+  },
+  "O-enriched": {
+   "claude-haiku-5-5": 0.137,
+   "gemini-3.5-flash-lite": 0.434,
+   "gpt-6-luna": 0.137
+  },
+  "O-image": {
+   "claude-haiku-5-5": 0.141,
+   "gemini-3.5-flash-lite": 0.453,
+   "gpt-6-luna": 0.141
+  },
+  "O-both": {
+   "claude-haiku-5-5": 0.255,
+   "gemini-3.5-flash-lite": 0.794,
+   "gpt-6-luna": 0.255
+  }
+ },
+ "paid_enrichment_usd_per_1000_elements": {
+  "e1-pictures": {
+   "claude-haiku-5-5": 0.15,
+   "gemini-3.5-flash-lite": 0.626,
+   "gpt-6-luna": 0.15
+  },
+  "e2-pictures": {
+   "claude-haiku-5-5": 0.251,
+   "gemini-3.5-flash-lite": 1.084,
+   "gpt-6-luna": 0.251
+  },
+  "e2-tables": {
+   "claude-haiku-5-5": 0.181,
+   "gemini-3.5-flash-lite": 0.73,
+   "gpt-6-luna": 0.181
+  }
+ }
+}

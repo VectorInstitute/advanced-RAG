@@ -1,0 +1,3189 @@
+{
+ "produced_by": {
+  "model": "Qwen3_8-27B",
+  "reader": "Qwen3_8-27B",
+  "enrichment": "Qwen3_8-27B",
+  "question_generator": "Qwen3_8-27B",
+  "question_checker": "Qwen3_8-Flash-Next",
+  "judge": "Qwen3_6-35B-A3B",
+  "endpoint": "vector-cluster",
+  "embeddings": "BAAI/bge-small-en-v1.5 (local)",
+  "page_embeddings": "Qdrant/colmodernvbert (local)",
+  "producer": "implementations/special_topics/visual_documents/build_reference.py",
+  "mode": "explore: one run, no seeds beyond the fixed sampling seed 0"
+ },
+ "counts": {
+  "figure-only": 76,
+  "duplicated": 44,
+  "table": 60,
+  "control": 40,
+  "null": 26
+ },
+ "table_split": 16,
+ "funnel": [
+  {
+   "kind": "figure",
+   "stage": "page yields a chart question",
+   "entered": 103,
+   "passed": 97
+  },
+  {
+   "kind": "figure",
+   "stage": "one numeric answer",
+   "entered": 148,
+   "passed": 148
+  },
+  {
+   "kind": "figure",
+   "stage": "chart element named on the page",
+   "entered": 148,
+   "passed": 137
+  },
+  {
+   "kind": "figure",
+   "stage": "checker answers from the page image",
+   "entered": 137,
+   "passed": 122
+  },
+  {
+   "kind": "figure",
+   "stage": "figure-only (text alone fails)",
+   "entered": 122,
+   "passed": 78
+  },
+  {
+   "kind": "table",
+   "stage": "numeric cell with header and row label",
+   "entered": 100,
+   "passed": 96
+  },
+  {
+   "kind": "table",
+   "stage": "question written",
+   "entered": 96,
+   "passed": 96
+  },
+  {
+   "kind": "table",
+   "stage": "checker answers from the page text",
+   "entered": 96,
+   "passed": 88
+  },
+  {
+   "kind": "null",
+   "stage": "near-miss written",
+   "entered": 50,
+   "passed": 50
+  },
+  {
+   "kind": "null",
+   "stage": "gold page image does not answer",
+   "entered": 50,
+   "passed": 34
+  },
+  {
+   "kind": "null",
+   "stage": "top retrieved pages do not answer",
+   "entered": 34,
+   "passed": 26
+  }
+ ],
+ "subset": [
+  "ctl-0000",
+  "ctl-0009",
+  "ctl-0013",
+  "ctl-0016",
+  "ctl-0019",
+  "ctl-0023",
+  "ctl-0024",
+  "ctl-0030",
+  "ctl-0032",
+  "ctl-0033",
+  "fig-0002",
+  "fig-0016",
+  "fig-0026",
+  "fig-0028",
+  "fig-0031",
+  "fig-0032",
+  "fig-0035",
+  "fig-0040",
+  "fig-0044",
+  "fig-0048",
+  "fig-0053",
+  "fig-0057",
+  "fig-0063",
+  "fig-0068",
+  "fig-0069",
+  "fig-0071",
+  "fig-0077",
+  "fig-0079",
+  "fig-0081",
+  "fig-0085",
+  "fig-0088",
+  "fig-0090",
+  "fig-0094",
+  "fig-0096",
+  "fig-0106",
+  "fig-0107",
+  "fig-0112",
+  "fig-0114",
+  "fig-0117",
+  "fig-0119",
+  "nul-0002",
+  "nul-0006",
+  "nul-0007",
+  "nul-0008",
+  "nul-0017",
+  "nul-0021",
+  "tab-0001",
+  "tab-0003",
+  "tab-0005",
+  "tab-0006",
+  "tab-0020",
+  "tab-0032",
+  "tab-0033",
+  "tab-0036",
+  "tab-0038",
+  "tab-0043",
+  "tab-0044",
+  "tab-0049",
+  "tab-0050",
+  "tab-0051",
+  "tab-0053"
+ ],
+ "questions": [
+  {
+   "query_id": "fig-0000",
+   "group": "figure",
+   "subgroup": "figure-only",
+   "gold_pages": [
+    "ACTIVISIONBLIZZARD_2019_10K#p027"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "ACTIVISIONBLIZZARD_2019_10K|#/pictures/1"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "fig-0001",
+   "group": "figure",
+   "subgroup": "duplicated",
+   "gold_pages": [
+    "ADOBE_2015_10K#p115"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "ADOBE_2015_10K|#/pictures/0"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "fig-0002",
+   "group": "figure",
+   "subgroup": "figure-only",
+   "gold_pages": [
+    "AES_2022_10K#p006"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "AES_2022_10K|#/pictures/1"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "fig-0003",
+   "group": "figure",
+   "subgroup": "figure-only",
+   "gold_pages": [
+    "AES_2022_10K#p011"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "AES_2022_10K|#/pictures/2"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "fig-0004",
+   "group": "figure",
+   "subgroup": "figure-only",
+   "gold_pages": [
+    "AES_2022_10K#p011"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "AES_2022_10K|#/pictures/2"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "fig-0005",
+   "group": "figure",
+   "subgroup": "figure-only",
+   "gold_pages": [
+    "AES_2022_10K#p037"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "AES_2022_10K|#/pictures/22"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "fig-0006",
+   "group": "figure",
+   "subgroup": "duplicated",
+   "gold_pages": [
+    "AES_2022_10K#p039"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "AES_2022_10K|#/pictures/25"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "fig-0007",
+   "group": "figure",
+   "subgroup": "figure-only",
+   "gold_pages": [
+    "AES_2022_10K#p043"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "AES_2022_10K|#/pictures/26"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "fig-0008",
+   "group": "figure",
+   "subgroup": "figure-only",
+   "gold_pages": [
+    "AES_2022_10K#p043"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "AES_2022_10K|#/pictures/26"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "fig-0009",
+   "group": "figure",
+   "subgroup": "figure-only",
+   "gold_pages": [
+    "AES_2022_10K#p048"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "AES_2022_10K|#/pictures/29"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "fig-0010",
+   "group": "figure",
+   "subgroup": "figure-only",
+   "gold_pages": [
+    "AES_2022_10K#p082"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "AES_2022_10K|#/pictures/31"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "fig-0011",
+   "group": "figure",
+   "subgroup": "figure-only",
+   "gold_pages": [
+    "AES_2022_10K#p086"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "AES_2022_10K|#/pictures/32",
+    "AES_2022_10K|#/pictures/33"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "fig-0012",
+   "group": "figure",
+   "subgroup": "figure-only",
+   "gold_pages": [
+    "AES_2022_10K#p086"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "AES_2022_10K|#/pictures/32",
+    "AES_2022_10K|#/pictures/33"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "fig-0013",
+   "group": "figure",
+   "subgroup": "figure-only",
+   "gold_pages": [
+    "AES_2022_10K#p087"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "AES_2022_10K|#/pictures/34"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "fig-0014",
+   "group": "figure",
+   "subgroup": "figure-only",
+   "gold_pages": [
+    "AES_2022_10K#p088"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "AES_2022_10K|#/pictures/35"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "fig-0015",
+   "group": "figure",
+   "subgroup": "figure-only",
+   "gold_pages": [
+    "AES_2022_10K#p110"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "AES_2022_10K|#/pictures/38",
+    "AES_2022_10K|#/pictures/39"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "fig-0016",
+   "group": "figure",
+   "subgroup": "figure-only",
+   "gold_pages": [
+    "AES_2022_10K#p111"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "AES_2022_10K|#/pictures/40"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "fig-0017",
+   "group": "figure",
+   "subgroup": "figure-only",
+   "gold_pages": [
+    "AES_2022_10K#p112"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "AES_2022_10K|#/pictures/42",
+    "AES_2022_10K|#/pictures/41"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "fig-0018",
+   "group": "figure",
+   "subgroup": "figure-only",
+   "gold_pages": [
+    "AES_2022_10K#p112"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "AES_2022_10K|#/pictures/42",
+    "AES_2022_10K|#/pictures/41"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "fig-0019",
+   "group": "figure",
+   "subgroup": "figure-only",
+   "gold_pages": [
+    "AES_2022_10K#p113"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "AES_2022_10K|#/pictures/43"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "fig-0020",
+   "group": "figure",
+   "subgroup": "figure-only",
+   "gold_pages": [
+    "AES_2022_10K#p113"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "AES_2022_10K|#/pictures/43"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "fig-0021",
+   "group": "figure",
+   "subgroup": "figure-only",
+   "gold_pages": [
+    "AES_2022_10K#p114"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "AES_2022_10K|#/pictures/44"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "fig-0022",
+   "group": "figure",
+   "subgroup": "figure-only",
+   "gold_pages": [
+    "AES_2022_10K#p115"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "AES_2022_10K|#/pictures/45"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "fig-0023",
+   "group": "figure",
+   "subgroup": "duplicated",
+   "gold_pages": [
+    "AMCOR_2023_10K#p026"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "AMCOR_2023_10K|#/pictures/1"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "fig-0024",
+   "group": "figure",
+   "subgroup": "duplicated",
+   "gold_pages": [
+    "AMCOR_2023_10K#p026"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "AMCOR_2023_10K|#/pictures/1"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "fig-0025",
+   "group": "figure",
+   "subgroup": "duplicated",
+   "gold_pages": [
+    "AMD_2015_10K#p032"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "AMD_2015_10K|#/pictures/0"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "fig-0026",
+   "group": "figure",
+   "subgroup": "duplicated",
+   "gold_pages": [
+    "AMD_2015_10K#p032"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "AMD_2015_10K|#/pictures/0"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "fig-0027",
+   "group": "figure",
+   "subgroup": "duplicated",
+   "gold_pages": [
+    "AMD_2022_10K#p041"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "AMD_2022_10K|#/pictures/1"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "fig-0028",
+   "group": "figure",
+   "subgroup": "figure-only",
+   "gold_pages": [
+    "AMERICANEXPRESS_2022_10K#p005"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "AMERICANEXPRESS_2022_10K|#/pictures/2"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "fig-0029",
+   "group": "figure",
+   "subgroup": "duplicated",
+   "gold_pages": [
+    "AMERICANEXPRESS_2022_10K#p040"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "AMERICANEXPRESS_2022_10K|#/pictures/3"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "fig-0030",
+   "group": "figure",
+   "subgroup": "figure-only",
+   "gold_pages": [
+    "AMERICANWATERWORKS_2020_10K#p006"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "AMERICANWATERWORKS_2020_10K|#/pictures/0"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "fig-0031",
+   "group": "figure",
+   "subgroup": "figure-only",
+   "gold_pages": [
+    "AMERICANWATERWORKS_2020_10K#p012"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "AMERICANWATERWORKS_2020_10K|#/pictures/1"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "fig-0032",
+   "group": "figure",
+   "subgroup": "figure-only",
+   "gold_pages": [
+    "AMERICANWATERWORKS_2020_10K#p021"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "AMERICANWATERWORKS_2020_10K|#/pictures/2"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "fig-0033",
+   "group": "figure",
+   "subgroup": "figure-only",
+   "gold_pages": [
+    "AMERICANWATERWORKS_2020_10K#p021"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "AMERICANWATERWORKS_2020_10K|#/pictures/2"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "fig-0034",
+   "group": "figure",
+   "subgroup": "figure-only",
+   "gold_pages": [
+    "AMERICANWATERWORKS_2020_10K#p053"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "AMERICANWATERWORKS_2020_10K|#/pictures/3"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "fig-0035",
+   "group": "figure",
+   "subgroup": "figure-only",
+   "gold_pages": [
+    "AMERICANWATERWORKS_2020_10K#p053"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "AMERICANWATERWORKS_2020_10K|#/pictures/3"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "fig-0036",
+   "group": "figure",
+   "subgroup": "figure-only",
+   "gold_pages": [
+    "AMERICANWATERWORKS_2021_10K#p007"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "AMERICANWATERWORKS_2021_10K|#/pictures/0"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "fig-0037",
+   "group": "figure",
+   "subgroup": "figure-only",
+   "gold_pages": [
+    "AMERICANWATERWORKS_2021_10K#p012"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "AMERICANWATERWORKS_2021_10K|#/pictures/1"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "fig-0038",
+   "group": "figure",
+   "subgroup": "figure-only",
+   "gold_pages": [
+    "AMERICANWATERWORKS_2021_10K#p056"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "AMERICANWATERWORKS_2021_10K|#/pictures/3"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "fig-0039",
+   "group": "figure",
+   "subgroup": "figure-only",
+   "gold_pages": [
+    "AMERICANWATERWORKS_2022_10K#p006"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "AMERICANWATERWORKS_2022_10K|#/pictures/0"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "fig-0040",
+   "group": "figure",
+   "subgroup": "figure-only",
+   "gold_pages": [
+    "AMERICANWATERWORKS_2022_10K#p011"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "AMERICANWATERWORKS_2022_10K|#/pictures/1"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "fig-0041",
+   "group": "figure",
+   "subgroup": "figure-only",
+   "gold_pages": [
+    "AMERICANWATERWORKS_2022_10K#p011"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "AMERICANWATERWORKS_2022_10K|#/pictures/1"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "fig-0042",
+   "group": "figure",
+   "subgroup": "figure-only",
+   "gold_pages": [
+    "AMERICANWATERWORKS_2022_10K#p051"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "AMERICANWATERWORKS_2022_10K|#/pictures/2"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "fig-0043",
+   "group": "figure",
+   "subgroup": "duplicated",
+   "gold_pages": [
+    "BESTBUY_2017_10K#p024"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "BESTBUY_2017_10K|#/pictures/1"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "fig-0044",
+   "group": "figure",
+   "subgroup": "duplicated",
+   "gold_pages": [
+    "BESTBUY_2017_10K#p024"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "BESTBUY_2017_10K|#/pictures/1"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "fig-0045",
+   "group": "figure",
+   "subgroup": "duplicated",
+   "gold_pages": [
+    "BESTBUY_2019_10K#p024"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "BESTBUY_2019_10K|#/pictures/1"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "fig-0046",
+   "group": "figure",
+   "subgroup": "duplicated",
+   "gold_pages": [
+    "BESTBUY_2019_10K#p024"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "BESTBUY_2019_10K|#/pictures/1"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "fig-0047",
+   "group": "figure",
+   "subgroup": "duplicated",
+   "gold_pages": [
+    "BESTBUY_2023_10K#p021"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "BESTBUY_2023_10K|#/pictures/1"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "fig-0048",
+   "group": "figure",
+   "subgroup": "figure-only",
+   "gold_pages": [
+    "BLOCK_2016_10K#p037"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "BLOCK_2016_10K|#/pictures/2"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "fig-0049",
+   "group": "figure",
+   "subgroup": "figure-only",
+   "gold_pages": [
+    "BLOCK_2020_10K#p004"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "BLOCK_2020_10K|#/pictures/0"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "fig-0050",
+   "group": "figure",
+   "subgroup": "figure-only",
+   "gold_pages": [
+    "BLOCK_2020_10K#p006"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "BLOCK_2020_10K|#/pictures/1"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "fig-0051",
+   "group": "figure",
+   "subgroup": "figure-only",
+   "gold_pages": [
+    "BLOCK_2020_10K#p006"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "BLOCK_2020_10K|#/pictures/1"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "fig-0052",
+   "group": "figure",
+   "subgroup": "duplicated",
+   "gold_pages": [
+    "BLOCK_2020_10K#p050"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "BLOCK_2020_10K|#/pictures/2"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "fig-0053",
+   "group": "figure",
+   "subgroup": "duplicated",
+   "gold_pages": [
+    "BLOCK_2020_10K#p050"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "BLOCK_2020_10K|#/pictures/2"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "fig-0054",
+   "group": "figure",
+   "subgroup": "duplicated",
+   "gold_pages": [
+    "BOEING_2018_10K#p030"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "BOEING_2018_10K|#/pictures/1"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "fig-0055",
+   "group": "figure",
+   "subgroup": "duplicated",
+   "gold_pages": [
+    "COCACOLA_2017_10K#p028"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "COCACOLA_2017_10K|#/pictures/1"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "fig-0056",
+   "group": "figure",
+   "subgroup": "duplicated",
+   "gold_pages": [
+    "COCACOLA_2017_10K#p028"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "COCACOLA_2017_10K|#/pictures/1"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "fig-0057",
+   "group": "figure",
+   "subgroup": "duplicated",
+   "gold_pages": [
+    "COCACOLA_2021_10K#p032"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "COCACOLA_2021_10K|#/pictures/1"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "fig-0058",
+   "group": "figure",
+   "subgroup": "duplicated",
+   "gold_pages": [
+    "COCACOLA_2021_10K#p032"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "COCACOLA_2021_10K|#/pictures/1"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "fig-0059",
+   "group": "figure",
+   "subgroup": "duplicated",
+   "gold_pages": [
+    "COCACOLA_2022_10K#p033"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "COCACOLA_2022_10K|#/pictures/1"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "fig-0060",
+   "group": "figure",
+   "subgroup": "duplicated",
+   "gold_pages": [
+    "COCACOLA_2022_10K#p033"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "COCACOLA_2022_10K|#/pictures/1"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "fig-0061",
+   "group": "figure",
+   "subgroup": "figure-only",
+   "gold_pages": [
+    "CORNING_2020_10K#p021"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "CORNING_2020_10K|#/pictures/0"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "fig-0062",
+   "group": "figure",
+   "subgroup": "figure-only",
+   "gold_pages": [
+    "CORNING_2021_10K#p021"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "CORNING_2021_10K|#/pictures/0"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "fig-0063",
+   "group": "figure",
+   "subgroup": "figure-only",
+   "gold_pages": [
+    "CORNING_2022_10K#p020"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "CORNING_2022_10K|#/pictures/0"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "fig-0064",
+   "group": "figure",
+   "subgroup": "figure-only",
+   "gold_pages": [
+    "COSTCO_2021_10K#p020"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "COSTCO_2021_10K|#/pictures/0"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "fig-0065",
+   "group": "figure",
+   "subgroup": "figure-only",
+   "gold_pages": [
+    "JOHNSON_JOHNSON_2022_10K#p027"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "JOHNSON_JOHNSON_2022_10K|#/pictures/2"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "fig-0066",
+   "group": "figure",
+   "subgroup": "figure-only",
+   "gold_pages": [
+    "JOHNSON_JOHNSON_2022_10K#p027"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "JOHNSON_JOHNSON_2022_10K|#/pictures/2"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "fig-0067",
+   "group": "figure",
+   "subgroup": "duplicated",
+   "gold_pages": [
+    "JOHNSON_JOHNSON_2022_10K#p112"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "JOHNSON_JOHNSON_2022_10K|#/pictures/6",
+    "JOHNSON_JOHNSON_2022_10K|#/pictures/5"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "fig-0068",
+   "group": "figure",
+   "subgroup": "duplicated",
+   "gold_pages": [
+    "JPMORGAN_2021Q1_10Q#p067"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "JPMORGAN_2021Q1_10Q|#/pictures/2",
+    "JPMORGAN_2021Q1_10Q|#/pictures/1"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "fig-0069",
+   "group": "figure",
+   "subgroup": "figure-only",
+   "gold_pages": [
+    "JPMORGAN_2022Q2_10Q#p075"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "JPMORGAN_2022Q2_10Q|#/pictures/1"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "fig-0070",
+   "group": "figure",
+   "subgroup": "figure-only",
+   "gold_pages": [
+    "JPMORGAN_2022Q2_10Q#p076"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "JPMORGAN_2022Q2_10Q|#/pictures/2"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "fig-0071",
+   "group": "figure",
+   "subgroup": "figure-only",
+   "gold_pages": [
+    "JPMORGAN_2022Q2_10Q#p076"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "JPMORGAN_2022Q2_10Q|#/pictures/2"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "fig-0072",
+   "group": "figure",
+   "subgroup": "duplicated",
+   "gold_pages": [
+    "JPMORGAN_2022_10K#p046"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "JPMORGAN_2022_10K|#/pictures/0"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "fig-0073",
+   "group": "figure",
+   "subgroup": "duplicated",
+   "gold_pages": [
+    "JPMORGAN_2022_10K#p046"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "JPMORGAN_2022_10K|#/pictures/0"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "fig-0074",
+   "group": "figure",
+   "subgroup": "figure-only",
+   "gold_pages": [
+    "JPMORGAN_2022_10K#p090"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "JPMORGAN_2022_10K|#/pictures/3"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "fig-0075",
+   "group": "figure",
+   "subgroup": "figure-only",
+   "gold_pages": [
+    "JPMORGAN_2022_10K#p135"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "JPMORGAN_2022_10K|#/pictures/6"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "fig-0076",
+   "group": "figure",
+   "subgroup": "duplicated",
+   "gold_pages": [
+    "JPMORGAN_2022_10K#p136"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "JPMORGAN_2022_10K|#/pictures/7"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "fig-0077",
+   "group": "figure",
+   "subgroup": "figure-only",
+   "gold_pages": [
+    "JPMORGAN_2022_10K#p136"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "JPMORGAN_2022_10K|#/pictures/7"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "fig-0078",
+   "group": "figure",
+   "subgroup": "duplicated",
+   "gold_pages": [
+    "JPMORGAN_2023Q2_10Q#p085"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "JPMORGAN_2023Q2_10Q|#/pictures/2"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "fig-0079",
+   "group": "figure",
+   "subgroup": "figure-only",
+   "gold_pages": [
+    "JPMORGAN_2023Q2_10Q#p085"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "JPMORGAN_2023Q2_10Q|#/pictures/2"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "fig-0080",
+   "group": "figure",
+   "subgroup": "duplicated",
+   "gold_pages": [
+    "KRAFTHEINZ_2019_10K#p024"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "KRAFTHEINZ_2019_10K|#/pictures/1"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "fig-0081",
+   "group": "figure",
+   "subgroup": "duplicated",
+   "gold_pages": [
+    "KRAFTHEINZ_2019_10K#p024"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "KRAFTHEINZ_2019_10K|#/pictures/1"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "fig-0082",
+   "group": "figure",
+   "subgroup": "figure-only",
+   "gold_pages": [
+    "LOCKHEEDMARTIN_2020_10K#p027"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "LOCKHEEDMARTIN_2020_10K|#/pictures/0"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "fig-0083",
+   "group": "figure",
+   "subgroup": "figure-only",
+   "gold_pages": [
+    "LOCKHEEDMARTIN_2022_10K#p025"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "LOCKHEEDMARTIN_2022_10K|#/pictures/0"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "fig-0084",
+   "group": "figure",
+   "subgroup": "figure-only",
+   "gold_pages": [
+    "LOCKHEEDMARTIN_2022_10K#p025"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "LOCKHEEDMARTIN_2022_10K|#/pictures/0"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "fig-0085",
+   "group": "figure",
+   "subgroup": "figure-only",
+   "gold_pages": [
+    "MGMRESORTS_2020_10K#p036"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "MGMRESORTS_2020_10K|#/pictures/0"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "fig-0086",
+   "group": "figure",
+   "subgroup": "figure-only",
+   "gold_pages": [
+    "MGMRESORTS_2020_10K#p036"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "MGMRESORTS_2020_10K|#/pictures/0"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "fig-0087",
+   "group": "figure",
+   "subgroup": "duplicated",
+   "gold_pages": [
+    "MGMRESORTS_2022_10K#p032"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "MGMRESORTS_2022_10K|#/pictures/0"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "fig-0088",
+   "group": "figure",
+   "subgroup": "duplicated",
+   "gold_pages": [
+    "MGMRESORTS_2022_10K#p032"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "MGMRESORTS_2022_10K|#/pictures/0"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "fig-0089",
+   "group": "figure",
+   "subgroup": "duplicated",
+   "gold_pages": [
+    "NETFLIX_2015_10K#p021"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "NETFLIX_2015_10K|#/pictures/1"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "fig-0090",
+   "group": "figure",
+   "subgroup": "figure-only",
+   "gold_pages": [
+    "NIKE_2019_10K#p029"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "NIKE_2019_10K|#/pictures/11"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "fig-0091",
+   "group": "figure",
+   "subgroup": "figure-only",
+   "gold_pages": [
+    "NIKE_2019_10K#p029"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "NIKE_2019_10K|#/pictures/11"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "fig-0092",
+   "group": "figure",
+   "subgroup": "figure-only",
+   "gold_pages": [
+    "NIKE_2021_10K#p034"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "NIKE_2021_10K|#/pictures/10"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "fig-0093",
+   "group": "figure",
+   "subgroup": "figure-only",
+   "gold_pages": [
+    "NIKE_2021_10K#p034"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "NIKE_2021_10K|#/pictures/10"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "fig-0094",
+   "group": "figure",
+   "subgroup": "figure-only",
+   "gold_pages": [
+    "NIKE_2023_10K#p029"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "NIKE_2023_10K|#/pictures/8"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "fig-0095",
+   "group": "figure",
+   "subgroup": "figure-only",
+   "gold_pages": [
+    "NIKE_2023_10K#p036"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "NIKE_2023_10K|#/pictures/9"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "fig-0096",
+   "group": "figure",
+   "subgroup": "figure-only",
+   "gold_pages": [
+    "NIKE_2023_10K#p036"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "NIKE_2023_10K|#/pictures/9"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "fig-0097",
+   "group": "figure",
+   "subgroup": "figure-only",
+   "gold_pages": [
+    "NIKE_2023_10K#p037"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "NIKE_2023_10K|#/pictures/10"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "fig-0098",
+   "group": "figure",
+   "subgroup": "figure-only",
+   "gold_pages": [
+    "PAYPAL_2022_10K#p004"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "PAYPAL_2022_10K|#/pictures/2"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "fig-0099",
+   "group": "figure",
+   "subgroup": "figure-only",
+   "gold_pages": [
+    "PAYPAL_2022_10K#p005"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "PAYPAL_2022_10K|#/pictures/4"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "fig-0100",
+   "group": "figure",
+   "subgroup": "figure-only",
+   "gold_pages": [
+    "PAYPAL_2022_10K#p013"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "PAYPAL_2022_10K|#/pictures/14"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "fig-0101",
+   "group": "figure",
+   "subgroup": "duplicated",
+   "gold_pages": [
+    "PAYPAL_2022_10K#p037"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "PAYPAL_2022_10K|#/pictures/40"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "fig-0102",
+   "group": "figure",
+   "subgroup": "figure-only",
+   "gold_pages": [
+    "PAYPAL_2022_10K#p037"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "PAYPAL_2022_10K|#/pictures/40"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "fig-0103",
+   "group": "figure",
+   "subgroup": "duplicated",
+   "gold_pages": [
+    "PFIZER_2021_10K#p030"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "PFIZER_2021_10K|#/pictures/5"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "fig-0104",
+   "group": "figure",
+   "subgroup": "figure-only",
+   "gold_pages": [
+    "PFIZER_2021_10K#p031"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "PFIZER_2021_10K|#/pictures/6"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "fig-0105",
+   "group": "figure",
+   "subgroup": "duplicated",
+   "gold_pages": [
+    "PFIZER_2021_10K#p032"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "PFIZER_2021_10K|#/pictures/7"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "fig-0106",
+   "group": "figure",
+   "subgroup": "duplicated",
+   "gold_pages": [
+    "PFIZER_2021_10K#p032"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "PFIZER_2021_10K|#/pictures/7"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "fig-0107",
+   "group": "figure",
+   "subgroup": "duplicated",
+   "gold_pages": [
+    "ULTABEAUTY_2023_10K#p032"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "ULTABEAUTY_2023_10K|#/pictures/0"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "fig-0108",
+   "group": "figure",
+   "subgroup": "duplicated",
+   "gold_pages": [
+    "VERIZON_2021_10K#p018"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "VERIZON_2021_10K|#/pictures/0"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "fig-0109",
+   "group": "figure",
+   "subgroup": "duplicated",
+   "gold_pages": [
+    "VERIZON_2021_10K#p018"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "VERIZON_2021_10K|#/pictures/0"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "fig-0110",
+   "group": "figure",
+   "subgroup": "figure-only",
+   "gold_pages": [
+    "VERIZON_2021_10K#p019"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "VERIZON_2021_10K|#/pictures/1"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "fig-0111",
+   "group": "figure",
+   "subgroup": "figure-only",
+   "gold_pages": [
+    "VERIZON_2021_10K#p020"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "VERIZON_2021_10K|#/pictures/2"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "fig-0112",
+   "group": "figure",
+   "subgroup": "figure-only",
+   "gold_pages": [
+    "VERIZON_2021_10K#p020"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "VERIZON_2021_10K|#/pictures/2"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "fig-0113",
+   "group": "figure",
+   "subgroup": "duplicated",
+   "gold_pages": [
+    "VERIZON_2022_10K#p019"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "VERIZON_2022_10K|#/pictures/0"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "fig-0114",
+   "group": "figure",
+   "subgroup": "duplicated",
+   "gold_pages": [
+    "VERIZON_2022_10K#p019"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "VERIZON_2022_10K|#/pictures/0"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "fig-0115",
+   "group": "figure",
+   "subgroup": "figure-only",
+   "gold_pages": [
+    "VERIZON_2022_10K#p020"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "VERIZON_2022_10K|#/pictures/1"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "fig-0116",
+   "group": "figure",
+   "subgroup": "figure-only",
+   "gold_pages": [
+    "VERIZON_2022_10K#p021"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "VERIZON_2022_10K|#/pictures/2"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "fig-0117",
+   "group": "figure",
+   "subgroup": "figure-only",
+   "gold_pages": [
+    "VERIZON_2022_10K#p021"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "VERIZON_2022_10K|#/pictures/2"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "fig-0118",
+   "group": "figure",
+   "subgroup": "duplicated",
+   "gold_pages": [
+    "WALMART_2018_10K#p033"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "WALMART_2018_10K|#/pictures/1"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "fig-0119",
+   "group": "figure",
+   "subgroup": "duplicated",
+   "gold_pages": [
+    "WALMART_2020_10K#p028"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "WALMART_2020_10K|#/pictures/1"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "tab-0000",
+   "group": "table",
+   "subgroup": "split",
+   "gold_pages": [
+    "ADOBE_2015_10K#p112"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "ADOBE_2015_10K|#/tables/88"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "tab-0001",
+   "group": "table",
+   "subgroup": "split",
+   "gold_pages": [
+    "AES_2022_10K#p152"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "AES_2022_10K|#/tables/53"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "tab-0002",
+   "group": "table",
+   "subgroup": "whole",
+   "gold_pages": [
+    "AMCOR_2023_10K#p071"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "AMCOR_2023_10K|#/tables/35"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "tab-0003",
+   "group": "table",
+   "subgroup": "whole",
+   "gold_pages": [
+    "AMCOR_2023_10K#p086"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "AMCOR_2023_10K|#/tables/63"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "tab-0004",
+   "group": "table",
+   "subgroup": "whole",
+   "gold_pages": [
+    "AMCOR_2023_10K#p107"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "AMCOR_2023_10K|#/tables/94"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "tab-0005",
+   "group": "table",
+   "subgroup": "whole",
+   "gold_pages": [
+    "AMD_2015_10K#p057"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "AMD_2015_10K|#/tables/18"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "tab-0006",
+   "group": "table",
+   "subgroup": "whole",
+   "gold_pages": [
+    "AMERICANEXPRESS_2022_10K#p135"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "AMERICANEXPRESS_2022_10K|#/tables/68"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "tab-0007",
+   "group": "table",
+   "subgroup": "whole",
+   "gold_pages": [
+    "AMERICANWATERWORKS_2021_10K#p108"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "AMERICANWATERWORKS_2021_10K|#/tables/57"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "tab-0008",
+   "group": "table",
+   "subgroup": "whole",
+   "gold_pages": [
+    "AMERICANWATERWORKS_2022_10K#p073"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "AMERICANWATERWORKS_2022_10K|#/tables/32"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "tab-0009",
+   "group": "table",
+   "subgroup": "whole",
+   "gold_pages": [
+    "AMERICANWATERWORKS_2022_10K#p109"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "AMERICANWATERWORKS_2022_10K|#/tables/65"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "tab-0010",
+   "group": "table",
+   "subgroup": "whole",
+   "gold_pages": [
+    "AMERICANWATERWORKS_2022_10K#p122"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "AMERICANWATERWORKS_2022_10K|#/tables/87"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "tab-0011",
+   "group": "table",
+   "subgroup": "whole",
+   "gold_pages": [
+    "BESTBUY_2017_10K#p018"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "BESTBUY_2017_10K|#/tables/5"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "tab-0012",
+   "group": "table",
+   "subgroup": "whole",
+   "gold_pages": [
+    "BESTBUY_2017_10K#p075"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "BESTBUY_2017_10K|#/tables/60"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "tab-0013",
+   "group": "table",
+   "subgroup": "whole",
+   "gold_pages": [
+    "BESTBUY_2019_10K#p035"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "BESTBUY_2019_10K|#/tables/25"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "tab-0014",
+   "group": "table",
+   "subgroup": "whole",
+   "gold_pages": [
+    "BESTBUY_2019_10K#p043"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "BESTBUY_2019_10K|#/tables/35"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "tab-0015",
+   "group": "table",
+   "subgroup": "split",
+   "gold_pages": [
+    "BESTBUY_2023_10K#p042"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "BESTBUY_2023_10K|#/tables/27"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "tab-0016",
+   "group": "table",
+   "subgroup": "split",
+   "gold_pages": [
+    "BLOCK_2016_10K#p072"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "BLOCK_2016_10K|#/tables/37"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "tab-0017",
+   "group": "table",
+   "subgroup": "whole",
+   "gold_pages": [
+    "BLOCK_2020_10K#p115"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "BLOCK_2020_10K|#/tables/60"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "tab-0018",
+   "group": "table",
+   "subgroup": "whole",
+   "gold_pages": [
+    "BOEING_2018_10K#p109"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "BOEING_2018_10K|#/tables/100"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "tab-0019",
+   "group": "table",
+   "subgroup": "whole",
+   "gold_pages": [
+    "BOEING_2018_10K#p116"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "BOEING_2018_10K|#/tables/111"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "tab-0020",
+   "group": "table",
+   "subgroup": "whole",
+   "gold_pages": [
+    "COCACOLA_2021_10K#p045"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "COCACOLA_2021_10K|#/tables/10"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "tab-0021",
+   "group": "table",
+   "subgroup": "whole",
+   "gold_pages": [
+    "COCACOLA_2022_10K#p084"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "COCACOLA_2022_10K|#/tables/43"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "tab-0022",
+   "group": "table",
+   "subgroup": "whole",
+   "gold_pages": [
+    "COCACOLA_2022_10K#p112"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "COCACOLA_2022_10K|#/tables/89"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "tab-0023",
+   "group": "table",
+   "subgroup": "whole",
+   "gold_pages": [
+    "COCACOLA_2022_10K#p118"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "COCACOLA_2022_10K|#/tables/94"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "tab-0024",
+   "group": "table",
+   "subgroup": "split",
+   "gold_pages": [
+    "CORNING_2020_10K#p072"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "CORNING_2020_10K|#/tables/44"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "tab-0025",
+   "group": "table",
+   "subgroup": "split",
+   "gold_pages": [
+    "CORNING_2020_10K#p114"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "CORNING_2020_10K|#/tables/92"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "tab-0026",
+   "group": "table",
+   "subgroup": "whole",
+   "gold_pages": [
+    "CORNING_2022_10K#p076"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "CORNING_2022_10K|#/tables/48"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "tab-0027",
+   "group": "table",
+   "subgroup": "split",
+   "gold_pages": [
+    "CORNING_2022_10K#p095"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "CORNING_2022_10K|#/tables/77"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "tab-0028",
+   "group": "table",
+   "subgroup": "whole",
+   "gold_pages": [
+    "CORNING_2022_10K#p102"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "CORNING_2022_10K|#/tables/87"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "tab-0029",
+   "group": "table",
+   "subgroup": "split",
+   "gold_pages": [
+    "COSTCO_2021_10K#p038"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "COSTCO_2021_10K|#/tables/19"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "tab-0030",
+   "group": "table",
+   "subgroup": "whole",
+   "gold_pages": [
+    "JOHNSON_JOHNSON_2022_10K#p069"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "JOHNSON_JOHNSON_2022_10K|#/tables/52"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "tab-0031",
+   "group": "table",
+   "subgroup": "whole",
+   "gold_pages": [
+    "JPMORGAN_2021Q1_10Q#p025"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "JPMORGAN_2021Q1_10Q|#/tables/27"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "tab-0032",
+   "group": "table",
+   "subgroup": "split",
+   "gold_pages": [
+    "JPMORGAN_2021Q1_10Q#p143"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "JPMORGAN_2021Q1_10Q|#/tables/193"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "tab-0033",
+   "group": "table",
+   "subgroup": "whole",
+   "gold_pages": [
+    "JPMORGAN_2022_10K#p288"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "JPMORGAN_2022_10K|#/tables/270"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "tab-0034",
+   "group": "table",
+   "subgroup": "whole",
+   "gold_pages": [
+    "JPMORGAN_2023Q2_10Q#p074"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "JPMORGAN_2023Q2_10Q|#/tables/83"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "tab-0035",
+   "group": "table",
+   "subgroup": "split",
+   "gold_pages": [
+    "JPMORGAN_2023Q2_10Q#p184"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "JPMORGAN_2023Q2_10Q|#/tables/244"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "tab-0036",
+   "group": "table",
+   "subgroup": "whole",
+   "gold_pages": [
+    "JPMORGAN_2023Q2_10Q#p185"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "JPMORGAN_2023Q2_10Q|#/tables/245"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "tab-0037",
+   "group": "table",
+   "subgroup": "split",
+   "gold_pages": [
+    "KRAFTHEINZ_2019_10K#p052"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "KRAFTHEINZ_2019_10K|#/tables/38"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "tab-0038",
+   "group": "table",
+   "subgroup": "whole",
+   "gold_pages": [
+    "KRAFTHEINZ_2019_10K#p118"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "KRAFTHEINZ_2019_10K|#/tables/132"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "tab-0039",
+   "group": "table",
+   "subgroup": "whole",
+   "gold_pages": [
+    "LOCKHEEDMARTIN_2020_10K#p052"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "LOCKHEEDMARTIN_2020_10K|#/tables/15"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "tab-0040",
+   "group": "table",
+   "subgroup": "whole",
+   "gold_pages": [
+    "LOCKHEEDMARTIN_2020_10K#p105"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "LOCKHEEDMARTIN_2020_10K|#/tables/51"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "tab-0041",
+   "group": "table",
+   "subgroup": "split",
+   "gold_pages": [
+    "LOCKHEEDMARTIN_2021_10K#p069"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "LOCKHEEDMARTIN_2021_10K|#/tables/22"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "tab-0042",
+   "group": "table",
+   "subgroup": "whole",
+   "gold_pages": [
+    "LOCKHEEDMARTIN_2021_10K#p086"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "LOCKHEEDMARTIN_2021_10K|#/tables/34"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "tab-0043",
+   "group": "table",
+   "subgroup": "whole",
+   "gold_pages": [
+    "LOCKHEEDMARTIN_2021_10K#p087"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "LOCKHEEDMARTIN_2021_10K|#/tables/36"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "tab-0044",
+   "group": "table",
+   "subgroup": "split",
+   "gold_pages": [
+    "MGMRESORTS_2018_10K#p060"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "MGMRESORTS_2018_10K|#/tables/32"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "tab-0045",
+   "group": "table",
+   "subgroup": "whole",
+   "gold_pages": [
+    "MGMRESORTS_2020_10K#p055"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "MGMRESORTS_2020_10K|#/tables/21"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "tab-0046",
+   "group": "table",
+   "subgroup": "split",
+   "gold_pages": [
+    "MGMRESORTS_2020_10K#p067"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "MGMRESORTS_2020_10K|#/tables/28"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "tab-0047",
+   "group": "table",
+   "subgroup": "whole",
+   "gold_pages": [
+    "MGMRESORTS_2022_10K#p045"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "MGMRESORTS_2022_10K|#/tables/18"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "tab-0048",
+   "group": "table",
+   "subgroup": "whole",
+   "gold_pages": [
+    "MGMRESORTS_2022_10K#p087"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "MGMRESORTS_2022_10K|#/tables/57"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "tab-0049",
+   "group": "table",
+   "subgroup": "split",
+   "gold_pages": [
+    "NETFLIX_2017_10K#p018"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "NETFLIX_2017_10K|#/tables/2"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "tab-0050",
+   "group": "table",
+   "subgroup": "whole",
+   "gold_pages": [
+    "NIKE_2019_10K#p075"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "NIKE_2019_10K|#/tables/51"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "tab-0051",
+   "group": "table",
+   "subgroup": "whole",
+   "gold_pages": [
+    "NIKE_2021_10K#p001"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "NIKE_2021_10K|#/tables/0"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "tab-0052",
+   "group": "table",
+   "subgroup": "whole",
+   "gold_pages": [
+    "NIKE_2021_10K#p036"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "NIKE_2021_10K|#/tables/10"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "tab-0053",
+   "group": "table",
+   "subgroup": "whole",
+   "gold_pages": [
+    "NIKE_2021_10K#p072"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "NIKE_2021_10K|#/tables/34"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "tab-0054",
+   "group": "table",
+   "subgroup": "split",
+   "gold_pages": [
+    "NIKE_2023_10K#p082"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "NIKE_2023_10K|#/tables/52"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "tab-0055",
+   "group": "table",
+   "subgroup": "whole",
+   "gold_pages": [
+    "ULTABEAUTY_2023_10K#p007"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "ULTABEAUTY_2023_10K|#/tables/1"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "tab-0056",
+   "group": "table",
+   "subgroup": "whole",
+   "gold_pages": [
+    "VERIZON_2021_10K#p091"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "VERIZON_2021_10K|#/tables/85"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "tab-0057",
+   "group": "table",
+   "subgroup": "whole",
+   "gold_pages": [
+    "VERIZON_2022_10K#p023"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "VERIZON_2022_10K|#/tables/9"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "tab-0058",
+   "group": "table",
+   "subgroup": "whole",
+   "gold_pages": [
+    "VERIZON_2022_10K#p087"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "VERIZON_2022_10K|#/tables/67"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "tab-0059",
+   "group": "table",
+   "subgroup": "whole",
+   "gold_pages": [
+    "WALMART_2018_10K#p042"
+   ],
+   "rewritten_from": null,
+   "element_ids": [
+    "WALMART_2018_10K|#/tables/31"
+   ],
+   "source": null
+  },
+  {
+   "query_id": "ctl-0000",
+   "group": "control",
+   "subgroup": "domain-relevant",
+   "gold_pages": [
+    "CORNING_2022_10K#p059"
+   ],
+   "rewritten_from": null,
+   "element_ids": [],
+   "source": "financebench_id_00005"
+  },
+  {
+   "query_id": "ctl-0001",
+   "group": "control",
+   "subgroup": "domain-relevant",
+   "gold_pages": [
+    "AMERICANWATERWORKS_2022_10K#p080",
+    "AMERICANWATERWORKS_2022_10K#p081"
+   ],
+   "rewritten_from": null,
+   "element_ids": [],
+   "source": "financebench_id_00070"
+  },
+  {
+   "query_id": "ctl-0002",
+   "group": "control",
+   "subgroup": "domain-relevant",
+   "gold_pages": [
+    "PAYPAL_2022_10K#p060"
+   ],
+   "rewritten_from": null,
+   "element_ids": [],
+   "source": "financebench_id_00080"
+  },
+  {
+   "query_id": "ctl-0003",
+   "group": "control",
+   "subgroup": "domain-relevant",
+   "gold_pages": [
+    "JPMORGAN_2022_10K#p002"
+   ],
+   "rewritten_from": null,
+   "element_ids": [],
+   "source": "financebench_id_00206"
+  },
+  {
+   "query_id": "ctl-0004",
+   "group": "control",
+   "subgroup": "domain-relevant",
+   "gold_pages": [
+    "VERIZON_2022_10K#p022",
+    "VERIZON_2022_10K#p055"
+   ],
+   "rewritten_from": null,
+   "element_ids": [],
+   "source": "financebench_id_00215"
+  },
+  {
+   "query_id": "ctl-0005",
+   "group": "control",
+   "subgroup": "novel-generated",
+   "gold_pages": [
+    "JPMORGAN_2021Q1_10Q#p018"
+   ],
+   "rewritten_from": null,
+   "element_ids": [],
+   "source": "financebench_id_00299"
+  },
+  {
+   "query_id": "ctl-0006",
+   "group": "control",
+   "subgroup": "novel-generated",
+   "gold_pages": [
+    "JPMORGAN_2022Q2_10Q#p020"
+   ],
+   "rewritten_from": null,
+   "element_ids": [],
+   "source": "financebench_id_00394"
+  },
+  {
+   "query_id": "ctl-0007",
+   "group": "control",
+   "subgroup": "domain-relevant",
+   "gold_pages": [
+    "AMERICANEXPRESS_2022_10K#p000"
+   ],
+   "rewritten_from": null,
+   "element_ids": [],
+   "source": "financebench_id_00476"
+  },
+  {
+   "query_id": "ctl-0008",
+   "group": "control",
+   "subgroup": "domain-relevant",
+   "gold_pages": [
+    "AES_2022_10K#p129",
+    "AES_2022_10K#p131"
+   ],
+   "rewritten_from": null,
+   "element_ids": [],
+   "source": "financebench_id_00540"
+  },
+  {
+   "query_id": "ctl-0009",
+   "group": "control",
+   "subgroup": "novel-generated",
+   "gold_pages": [
+    "AMD_2022_10K#p047"
+   ],
+   "rewritten_from": null,
+   "element_ids": [],
+   "source": "financebench_id_00563"
+  },
+  {
+   "query_id": "ctl-0010",
+   "group": "control",
+   "subgroup": "domain-relevant",
+   "gold_pages": [
+    "JOHNSON_JOHNSON_2022_10K#p033"
+   ],
+   "rewritten_from": null,
+   "element_ids": [],
+   "source": "financebench_id_00669"
+  },
+  {
+   "query_id": "ctl-0011",
+   "group": "control",
+   "subgroup": "domain-relevant",
+   "gold_pages": [
+    "BESTBUY_2023_10K#p039"
+   ],
+   "rewritten_from": null,
+   "element_ids": [],
+   "source": "financebench_id_00685"
+  },
+  {
+   "query_id": "ctl-0012",
+   "group": "control",
+   "subgroup": "novel-generated",
+   "gold_pages": [
+    "PFIZER_2021_10K#p056"
+   ],
+   "rewritten_from": null,
+   "element_ids": [],
+   "source": "financebench_id_00702"
+  },
+  {
+   "query_id": "ctl-0013",
+   "group": "control",
+   "subgroup": "domain-relevant",
+   "gold_pages": [
+    "AMERICANEXPRESS_2022_10K#p095"
+   ],
+   "rewritten_from": null,
+   "element_ids": [],
+   "source": "financebench_id_00720"
+  },
+  {
+   "query_id": "ctl-0014",
+   "group": "control",
+   "subgroup": "domain-relevant",
+   "gold_pages": [
+    "AMERICANEXPRESS_2022_10K#p095"
+   ],
+   "rewritten_from": null,
+   "element_ids": [],
+   "source": "financebench_id_00723"
+  },
+  {
+   "query_id": "ctl-0015",
+   "group": "control",
+   "subgroup": "novel-generated",
+   "gold_pages": [
+    "AMD_2022_10K#p011"
+   ],
+   "rewritten_from": null,
+   "element_ids": [],
+   "source": "financebench_id_00757"
+  },
+  {
+   "query_id": "ctl-0016",
+   "group": "control",
+   "subgroup": "domain-relevant",
+   "gold_pages": [
+    "CVSHEALTH_2022_10K#p107",
+    "CVSHEALTH_2022_10K#p109"
+   ],
+   "rewritten_from": null,
+   "element_ids": [],
+   "source": "financebench_id_00790"
+  },
+  {
+   "query_id": "ctl-0017",
+   "group": "control",
+   "subgroup": "domain-relevant",
+   "gold_pages": [
+    "AMCOR_2023_10K#p051"
+   ],
+   "rewritten_from": null,
+   "element_ids": [],
+   "source": "financebench_id_00799"
+  },
+  {
+   "query_id": "ctl-0018",
+   "group": "control",
+   "subgroup": "domain-relevant",
+   "gold_pages": [
+    "AMD_2022_10K#p003"
+   ],
+   "rewritten_from": null,
+   "element_ids": [],
+   "source": "financebench_id_00995"
+  },
+  {
+   "query_id": "ctl-0019",
+   "group": "control",
+   "subgroup": "domain-relevant",
+   "gold_pages": [
+    "CVSHEALTH_2022_10K#p172",
+    "CVSHEALTH_2022_10K#p173"
+   ],
+   "rewritten_from": null,
+   "element_ids": [],
+   "source": "financebench_id_01107"
+  },
+  {
+   "query_id": "ctl-0020",
+   "group": "control",
+   "subgroup": "domain-relevant",
+   "gold_pages": [
+    "AMD_2022_10K#p042"
+   ],
+   "rewritten_from": null,
+   "element_ids": [],
+   "source": "financebench_id_01198"
+  },
+  {
+   "query_id": "ctl-0021",
+   "group": "control",
+   "subgroup": "domain-relevant",
+   "gold_pages": [
+    "MGMRESORTS_2022_10K#p031"
+   ],
+   "rewritten_from": null,
+   "element_ids": [],
+   "source": "financebench_id_01254"
+  },
+  {
+   "query_id": "ctl-0022",
+   "group": "control",
+   "subgroup": "domain-relevant",
+   "gold_pages": [
+    "BESTBUY_2023_10K#p041"
+   ],
+   "rewritten_from": null,
+   "element_ids": [],
+   "source": "financebench_id_01275"
+  },
+  {
+   "query_id": "ctl-0023",
+   "group": "control",
+   "subgroup": "domain-relevant",
+   "gold_pages": [
+    "AMERICANEXPRESS_2022_10K#p043"
+   ],
+   "rewritten_from": null,
+   "element_ids": [],
+   "source": "financebench_id_01351"
+  },
+  {
+   "query_id": "ctl-0024",
+   "group": "control",
+   "subgroup": "novel-generated",
+   "gold_pages": [
+    "VERIZON_2021_10K#p062",
+    "VERIZON_2021_10K#p093"
+   ],
+   "rewritten_from": null,
+   "element_ids": [],
+   "source": "financebench_id_02024"
+  },
+  {
+   "query_id": "ctl-0025",
+   "group": "control",
+   "subgroup": "novel-generated",
+   "gold_pages": [
+    "JPMORGAN_2023Q2_10Q#p084"
+   ],
+   "rewritten_from": null,
+   "element_ids": [],
+   "source": "financebench_id_02049"
+  },
+  {
+   "query_id": "ctl-0026",
+   "group": "control",
+   "subgroup": "metrics-generated",
+   "gold_pages": [
+    "BESTBUY_2017_10K#p055"
+   ],
+   "rewritten_from": null,
+   "element_ids": [],
+   "source": "financebench_id_02608"
+  },
+  {
+   "query_id": "ctl-0027",
+   "group": "control",
+   "subgroup": "metrics-generated",
+   "gold_pages": [
+    "LOCKHEEDMARTIN_2021_10K#p067"
+   ],
+   "rewritten_from": null,
+   "element_ids": [],
+   "source": "financebench_id_03031"
+  },
+  {
+   "query_id": "ctl-0028",
+   "group": "control",
+   "subgroup": "metrics-generated",
+   "gold_pages": [
+    "NETFLIX_2017_10K#p044"
+   ],
+   "rewritten_from": null,
+   "element_ids": [],
+   "source": "financebench_id_03282"
+  },
+  {
+   "query_id": "ctl-0029",
+   "group": "control",
+   "subgroup": "metrics-generated",
+   "gold_pages": [
+    "MGMRESORTS_2020_10K#p064",
+    "MGMRESORTS_2020_10K#p066"
+   ],
+   "rewritten_from": null,
+   "element_ids": [],
+   "source": "financebench_id_03849"
+  },
+  {
+   "query_id": "ctl-0030",
+   "group": "control",
+   "subgroup": "metrics-generated",
+   "gold_pages": [
+    "NIKE_2018_10K#p045"
+   ],
+   "rewritten_from": null,
+   "element_ids": [],
+   "source": "financebench_id_04302"
+  },
+  {
+   "query_id": "ctl-0031",
+   "group": "control",
+   "subgroup": "metrics-generated",
+   "gold_pages": [
+    "LOCKHEEDMARTIN_2020_10K#p066",
+    "LOCKHEEDMARTIN_2020_10K#p068"
+   ],
+   "rewritten_from": null,
+   "element_ids": [],
+   "source": "financebench_id_04412"
+  },
+  {
+   "query_id": "ctl-0032",
+   "group": "control",
+   "subgroup": "metrics-generated",
+   "gold_pages": [
+    "NETFLIX_2015_10K#p039",
+    "NETFLIX_2015_10K#p041"
+   ],
+   "rewritten_from": null,
+   "element_ids": [],
+   "source": "financebench_id_04458"
+  },
+  {
+   "query_id": "ctl-0033",
+   "group": "control",
+   "subgroup": "metrics-generated",
+   "gold_pages": [
+    "BLOCK_2016_10K#p067"
+   ],
+   "rewritten_from": null,
+   "element_ids": [],
+   "source": "financebench_id_04660"
+  },
+  {
+   "query_id": "ctl-0034",
+   "group": "control",
+   "subgroup": "metrics-generated",
+   "gold_pages": [
+    "COCACOLA_2022_10K#p062",
+    "COCACOLA_2022_10K#p065"
+   ],
+   "rewritten_from": null,
+   "element_ids": [],
+   "source": "financebench_id_06272"
+  },
+  {
+   "query_id": "ctl-0035",
+   "group": "control",
+   "subgroup": "metrics-generated",
+   "gold_pages": [
+    "BLOCK_2020_10K#p089"
+   ],
+   "rewritten_from": null,
+   "element_ids": [],
+   "source": "financebench_id_07661"
+  },
+  {
+   "query_id": "ctl-0036",
+   "group": "control",
+   "subgroup": "metrics-generated",
+   "gold_pages": [
+    "COCACOLA_2021_10K#p061"
+   ],
+   "rewritten_from": null,
+   "element_ids": [],
+   "source": "financebench_id_09724"
+  },
+  {
+   "query_id": "ctl-0037",
+   "group": "control",
+   "subgroup": "metrics-generated",
+   "gold_pages": [
+    "CORNING_2020_10K#p069",
+    "CORNING_2020_10K#p071"
+   ],
+   "rewritten_from": null,
+   "element_ids": [],
+   "source": "financebench_id_10130"
+  },
+  {
+   "query_id": "ctl-0038",
+   "group": "control",
+   "subgroup": "metrics-generated",
+   "gold_pages": [
+    "BOEING_2018_10K#p051"
+   ],
+   "rewritten_from": null,
+   "element_ids": [],
+   "source": "financebench_id_10285"
+  },
+  {
+   "query_id": "ctl-0039",
+   "group": "control",
+   "subgroup": "metrics-generated",
+   "gold_pages": [
+    "AES_2022_10K#p129",
+    "AES_2022_10K#p131"
+   ],
+   "rewritten_from": null,
+   "element_ids": [],
+   "source": "financebench_id_10420"
+  },
+  {
+   "query_id": "nul-0000",
+   "group": "null",
+   "subgroup": "near-miss figure",
+   "gold_pages": [],
+   "rewritten_from": "VERIZON_2021_10K#p018",
+   "element_ids": [],
+   "source": null
+  },
+  {
+   "query_id": "nul-0001",
+   "group": "null",
+   "subgroup": "near-miss figure",
+   "gold_pages": [],
+   "rewritten_from": "BLOCK_2020_10K#p004",
+   "element_ids": [],
+   "source": null
+  },
+  {
+   "query_id": "nul-0002",
+   "group": "null",
+   "subgroup": "near-miss figure",
+   "gold_pages": [],
+   "rewritten_from": "NIKE_2023_10K#p037",
+   "element_ids": [],
+   "source": null
+  },
+  {
+   "query_id": "nul-0003",
+   "group": "null",
+   "subgroup": "near-miss figure",
+   "gold_pages": [],
+   "rewritten_from": "BLOCK_2020_10K#p050",
+   "element_ids": [],
+   "source": null
+  },
+  {
+   "query_id": "nul-0004",
+   "group": "null",
+   "subgroup": "near-miss figure",
+   "gold_pages": [],
+   "rewritten_from": "AES_2022_10K#p037",
+   "element_ids": [],
+   "source": null
+  },
+  {
+   "query_id": "nul-0005",
+   "group": "null",
+   "subgroup": "near-miss figure",
+   "gold_pages": [],
+   "rewritten_from": "AMERICANWATERWORKS_2020_10K#p021",
+   "element_ids": [],
+   "source": null
+  },
+  {
+   "query_id": "nul-0006",
+   "group": "null",
+   "subgroup": "near-miss figure",
+   "gold_pages": [],
+   "rewritten_from": "JOHNSON_JOHNSON_2022_10K#p027",
+   "element_ids": [],
+   "source": null
+  },
+  {
+   "query_id": "nul-0007",
+   "group": "null",
+   "subgroup": "near-miss figure",
+   "gold_pages": [],
+   "rewritten_from": "BLOCK_2020_10K#p006",
+   "element_ids": [],
+   "source": null
+  },
+  {
+   "query_id": "nul-0008",
+   "group": "null",
+   "subgroup": "near-miss figure",
+   "gold_pages": [],
+   "rewritten_from": "PAYPAL_2022_10K#p013",
+   "element_ids": [],
+   "source": null
+  },
+  {
+   "query_id": "nul-0009",
+   "group": "null",
+   "subgroup": "near-miss figure",
+   "gold_pages": [],
+   "rewritten_from": "AMERICANWATERWORKS_2021_10K#p056",
+   "element_ids": [],
+   "source": null
+  },
+  {
+   "query_id": "nul-0010",
+   "group": "null",
+   "subgroup": "near-miss figure",
+   "gold_pages": [],
+   "rewritten_from": "COSTCO_2021_10K#p020",
+   "element_ids": [],
+   "source": null
+  },
+  {
+   "query_id": "nul-0011",
+   "group": "null",
+   "subgroup": "near-miss figure",
+   "gold_pages": [],
+   "rewritten_from": "PAYPAL_2022_10K#p037",
+   "element_ids": [],
+   "source": null
+  },
+  {
+   "query_id": "nul-0012",
+   "group": "null",
+   "subgroup": "near-miss figure",
+   "gold_pages": [],
+   "rewritten_from": "NIKE_2023_10K#p036",
+   "element_ids": [],
+   "source": null
+  },
+  {
+   "query_id": "nul-0013",
+   "group": "null",
+   "subgroup": "near-miss figure",
+   "gold_pages": [],
+   "rewritten_from": "JPMORGAN_2023Q2_10Q#p085",
+   "element_ids": [],
+   "source": null
+  },
+  {
+   "query_id": "nul-0014",
+   "group": "null",
+   "subgroup": "near-miss figure",
+   "gold_pages": [],
+   "rewritten_from": "AMERICANWATERWORKS_2020_10K#p021",
+   "element_ids": [],
+   "source": null
+  },
+  {
+   "query_id": "nul-0015",
+   "group": "null",
+   "subgroup": "near-miss figure",
+   "gold_pages": [],
+   "rewritten_from": "JPMORGAN_2021Q1_10Q#p067",
+   "element_ids": [],
+   "source": null
+  },
+  {
+   "query_id": "nul-0016",
+   "group": "null",
+   "subgroup": "near-miss figure",
+   "gold_pages": [],
+   "rewritten_from": "JPMORGAN_2022_10K#p136",
+   "element_ids": [],
+   "source": null
+  },
+  {
+   "query_id": "nul-0017",
+   "group": "null",
+   "subgroup": "near-miss table",
+   "gold_pages": [],
+   "rewritten_from": "NIKE_2023_10K#p082",
+   "element_ids": [],
+   "source": null
+  },
+  {
+   "query_id": "nul-0018",
+   "group": "null",
+   "subgroup": "near-miss table",
+   "gold_pages": [],
+   "rewritten_from": "COCACOLA_2022_10K#p084",
+   "element_ids": [],
+   "source": null
+  },
+  {
+   "query_id": "nul-0019",
+   "group": "null",
+   "subgroup": "near-miss table",
+   "gold_pages": [],
+   "rewritten_from": "JPMORGAN_2023Q2_10Q#p184",
+   "element_ids": [],
+   "source": null
+  },
+  {
+   "query_id": "nul-0020",
+   "group": "null",
+   "subgroup": "near-miss table",
+   "gold_pages": [],
+   "rewritten_from": "COCACOLA_2022_10K#p112",
+   "element_ids": [],
+   "source": null
+  },
+  {
+   "query_id": "nul-0021",
+   "group": "null",
+   "subgroup": "near-miss table",
+   "gold_pages": [],
+   "rewritten_from": "COCACOLA_2021_10K#p045",
+   "element_ids": [],
+   "source": null
+  },
+  {
+   "query_id": "nul-0022",
+   "group": "null",
+   "subgroup": "near-miss table",
+   "gold_pages": [],
+   "rewritten_from": "LOCKHEEDMARTIN_2020_10K#p052",
+   "element_ids": [],
+   "source": null
+  },
+  {
+   "query_id": "nul-0023",
+   "group": "null",
+   "subgroup": "near-miss table",
+   "gold_pages": [],
+   "rewritten_from": "LOCKHEEDMARTIN_2020_10K#p105",
+   "element_ids": [],
+   "source": null
+  },
+  {
+   "query_id": "nul-0024",
+   "group": "null",
+   "subgroup": "near-miss table",
+   "gold_pages": [],
+   "rewritten_from": "NIKE_2021_10K#p036",
+   "element_ids": [],
+   "source": null
+  },
+  {
+   "query_id": "nul-0025",
+   "group": "null",
+   "subgroup": "near-miss table",
+   "gold_pages": [],
+   "rewritten_from": "BLOCK_2016_10K#p072",
+   "element_ids": [],
+   "source": null
+  }
+ ]
+}

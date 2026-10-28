@@ -1,0 +1,33 @@
+{
+  "files": {
+    "comparison.json": {
+      "model": "Qwen3_6-35B-A3B",
+      "note": "Derived from recorded Qwen3_6-35B-A3B executions; summarization makes no new model calls."
+    },
+    "corrective.json": {
+      "model": "Qwen3_6-35B-A3B",
+      "source": "spec.model",
+      "note": "Recorded execution model; replaying scores makes no new model calls."
+    },
+    "decomposition.json": {
+      "model": "Qwen3_6-35B-A3B",
+      "source": "spec.model",
+      "note": "Recorded execution model; replaying scores makes no new model calls."
+    },
+    "dense.json": {
+      "model": "Qwen3_6-35B-A3B",
+      "source": "spec.model",
+      "note": "Recorded execution model; replaying scores makes no new model calls."
+    },
+    "graded-single-pass.json": {
+      "model": "Qwen3_6-35B-A3B",
+      "source": "spec.model",
+      "note": "Recorded execution model; replaying scores makes no new model calls."
+    },
+    "ircot.json": {
+      "model": "Qwen3_6-35B-A3B",
+      "source": "spec.model",
+      "note": "Recorded execution model; replaying scores makes no new model calls."
+    }
+  }
+}

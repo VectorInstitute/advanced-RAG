@@ -1,0 +1,2421 @@
+{
+  "grid": [
+    {
+      "corpus": "musique",
+      "corpus_structure": "Wikipedia passages",
+      "complexity": "2-hop",
+      "method": "dense",
+      "status": "measured",
+      "questions": 518,
+      "metrics": {
+        "exact_match": 0.2471042471042471,
+        "token_f1": 0.322278205731667,
+        "generation_recall": 0.6052123552123552,
+        "generation_all_supports": 0.29922779922779924,
+        "abstained": 0.3474903474903475,
+        "failure": 0.0,
+        "answered_with_valid_citations": 0.6525096525096525,
+        "recall_at_5": 0.6052123552123552,
+        "all_supports_at_5": 0.29922779922779924,
+        "recall_at_10": 0.666023166023166,
+        "all_supports_at_10": 0.38223938223938225,
+        "recall_at_20": 0.7355212355212355,
+        "all_supports_at_20": 0.49613899613899615
+      },
+      "usage": {
+        "calls": 0,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "tool_calls": 0,
+        "cache_hits": 518,
+        "service_seconds": 0.0,
+        "calls_missing_usage": 0
+      },
+      "spec_sha256": "40044ef66097a00af9d062567b74309de692c301c73ea0355ccdb6d3ff7ca620",
+      "cost_note": "Usage is actual execution usage. Cache hits are not cold-run cost; original service cost is unknown unless recorded separately."
+    },
+    {
+      "corpus": "musique",
+      "corpus_structure": "Wikipedia passages",
+      "complexity": "2-hop",
+      "method": "decomposition",
+      "status": "measured",
+      "questions": 518,
+      "metrics": {
+        "exact_match": 0.24324324324324326,
+        "token_f1": 0.3120469041071765,
+        "generation_recall": 0.6264478764478765,
+        "generation_all_supports": 0.3127413127413127,
+        "abstained": 0.3745173745173745,
+        "failure": 0.0,
+        "answered_with_valid_citations": 0.6254826254826255,
+        "recall_at_5": 0.6264478764478765,
+        "all_supports_at_5": 0.3127413127413127,
+        "recall_at_10": 0.6862934362934363,
+        "all_supports_at_10": 0.41505791505791506,
+        "recall_at_20": 0.7442084942084942,
+        "all_supports_at_20": 0.5038610038610039
+      },
+      "usage": {
+        "calls": 0,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "tool_calls": 0,
+        "cache_hits": 1036,
+        "service_seconds": 0.0,
+        "calls_missing_usage": 0
+      },
+      "spec_sha256": "6c8175bab7bb1e15d697a428c871962ada80456d210ba69e01fb9b535283753f",
+      "cost_note": "Usage is actual execution usage. Cache hits are not cold-run cost; original service cost is unknown unless recorded separately."
+    },
+    {
+      "corpus": "musique",
+      "corpus_structure": "Wikipedia passages",
+      "complexity": "2-hop",
+      "method": "ircot",
+      "status": "measured",
+      "questions": 518,
+      "metrics": {
+        "exact_match": 0.49034749034749037,
+        "token_f1": 0.5738116492310548,
+        "generation_recall": 0.7133204633204633,
+        "generation_all_supports": 0.640926640926641,
+        "abstained": 0.21621621621621623,
+        "failure": 0.0,
+        "answered_with_valid_citations": 0.7837837837837838,
+        "recall_at_5": 0.8088803088803089,
+        "all_supports_at_5": 0.6776061776061776,
+        "recall_at_10": 0.8716216216216216,
+        "all_supports_at_10": 0.7799227799227799,
+        "recall_at_20": 0.9063706563706564,
+        "all_supports_at_20": 0.833976833976834
+      },
+      "usage": {
+        "calls": 2914,
+        "prompt_tokens": 6478798,
+        "completion_tokens": 241928,
+        "total_tokens": 6720726,
+        "tool_calls": 2043,
+        "cache_hits": 50,
+        "service_seconds": 24013.227,
+        "calls_missing_usage": 0
+      },
+      "spec_sha256": "2ab467122a55d4121b792da8135a5ba7eeaf5e4397c52e9209d9ae1bde63cdc6",
+      "cost_note": "Usage is actual execution usage. Cache hits are not cold-run cost; original service cost is unknown unless recorded separately. Resumed after the allocation ended; unrecorded in-flight work from an interrupted session has unknown additional usage."
+    },
+    {
+      "corpus": "musique",
+      "corpus_structure": "Wikipedia passages",
+      "complexity": "2-hop",
+      "method": "hipporag2",
+      "status": "pending",
+      "reason": "verified RI #4 index handoff required"
+    },
+    {
+      "corpus": "musique",
+      "corpus_structure": "Wikipedia passages",
+      "complexity": "2-hop",
+      "method": "lightrag",
+      "status": "pending",
+      "reason": "verified RI #4 index handoff required"
+    },
+    {
+      "corpus": "musique",
+      "corpus_structure": "Wikipedia passages",
+      "complexity": "2-hop",
+      "method": "corrective",
+      "status": "pending",
+      "reason": "matched evaluation not yet available"
+    },
+    {
+      "corpus": "musique",
+      "corpus_structure": "Wikipedia passages",
+      "complexity": "3-hop",
+      "method": "dense",
+      "status": "measured",
+      "questions": 316,
+      "metrics": {
+        "exact_match": 0.17405063291139242,
+        "token_f1": 0.2457699166164356,
+        "generation_recall": 0.46835443037974683,
+        "generation_all_supports": 0.05063291139240506,
+        "abstained": 0.40822784810126583,
+        "failure": 0.0,
+        "answered_with_valid_citations": 0.5917721518987342,
+        "recall_at_5": 0.46835443037974683,
+        "all_supports_at_5": 0.05063291139240506,
+        "recall_at_10": 0.5654008438818565,
+        "all_supports_at_10": 0.1518987341772152,
+        "recall_at_20": 0.6413502109704641,
+        "all_supports_at_20": 0.24050632911392406
+      },
+      "usage": {
+        "calls": 0,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "tool_calls": 0,
+        "cache_hits": 316,
+        "service_seconds": 0.0,
+        "calls_missing_usage": 0
+      },
+      "spec_sha256": "40044ef66097a00af9d062567b74309de692c301c73ea0355ccdb6d3ff7ca620",
+      "cost_note": "Usage is actual execution usage. Cache hits are not cold-run cost; original service cost is unknown unless recorded separately."
+    },
+    {
+      "corpus": "musique",
+      "corpus_structure": "Wikipedia passages",
+      "complexity": "3-hop",
+      "method": "decomposition",
+      "status": "measured",
+      "questions": 316,
+      "metrics": {
+        "exact_match": 0.189873417721519,
+        "token_f1": 0.27696026722925454,
+        "generation_recall": 0.5443037974683544,
+        "generation_all_supports": 0.08227848101265822,
+        "abstained": 0.3670886075949367,
+        "failure": 0.0,
+        "answered_with_valid_citations": 0.6329113924050633,
+        "recall_at_5": 0.5443037974683544,
+        "all_supports_at_5": 0.08227848101265822,
+        "recall_at_10": 0.610759493670886,
+        "all_supports_at_10": 0.1930379746835443,
+        "recall_at_20": 0.6824894514767932,
+        "all_supports_at_20": 0.27531645569620256
+      },
+      "usage": {
+        "calls": 0,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "tool_calls": 0,
+        "cache_hits": 632,
+        "service_seconds": 0.0,
+        "calls_missing_usage": 0
+      },
+      "spec_sha256": "6c8175bab7bb1e15d697a428c871962ada80456d210ba69e01fb9b535283753f",
+      "cost_note": "Usage is actual execution usage. Cache hits are not cold-run cost; original service cost is unknown unless recorded separately."
+    },
+    {
+      "corpus": "musique",
+      "corpus_structure": "Wikipedia passages",
+      "complexity": "3-hop",
+      "method": "ircot",
+      "status": "measured_with_failures",
+      "questions": 316,
+      "metrics": {
+        "exact_match": 0.36075949367088606,
+        "token_f1": 0.43430352668179334,
+        "generation_recall": 0.5474683544303798,
+        "generation_all_supports": 0.27531645569620256,
+        "abstained": 0.30063291139240506,
+        "failure": 0.012658227848101266,
+        "answered_with_valid_citations": 0.6993670886075949,
+        "recall_at_5": 0.6244725738396625,
+        "all_supports_at_5": 0.24367088607594936,
+        "recall_at_10": 0.7331223628691983,
+        "all_supports_at_10": 0.4462025316455696,
+        "recall_at_20": 0.8143459915611814,
+        "all_supports_at_20": 0.5854430379746836
+      },
+      "usage": {
+        "calls": 2011,
+        "prompt_tokens": 5009261,
+        "completion_tokens": 194144,
+        "total_tokens": 5203405,
+        "tool_calls": 1481,
+        "cache_hits": 14,
+        "service_seconds": 19440.618,
+        "calls_missing_usage": 0
+      },
+      "spec_sha256": "2ab467122a55d4121b792da8135a5ba7eeaf5e4397c52e9209d9ae1bde63cdc6",
+      "cost_note": "Usage is actual execution usage. Cache hits are not cold-run cost; original service cost is unknown unless recorded separately. Resumed after the allocation ended; unrecorded in-flight work from an interrupted session has unknown additional usage."
+    },
+    {
+      "corpus": "musique",
+      "corpus_structure": "Wikipedia passages",
+      "complexity": "3-hop",
+      "method": "hipporag2",
+      "status": "pending",
+      "reason": "verified RI #4 index handoff required"
+    },
+    {
+      "corpus": "musique",
+      "corpus_structure": "Wikipedia passages",
+      "complexity": "3-hop",
+      "method": "lightrag",
+      "status": "pending",
+      "reason": "verified RI #4 index handoff required"
+    },
+    {
+      "corpus": "musique",
+      "corpus_structure": "Wikipedia passages",
+      "complexity": "3-hop",
+      "method": "corrective",
+      "status": "pending",
+      "reason": "matched evaluation not yet available"
+    },
+    {
+      "corpus": "musique",
+      "corpus_structure": "Wikipedia passages",
+      "complexity": "4-hop",
+      "method": "dense",
+      "status": "measured",
+      "questions": 166,
+      "metrics": {
+        "exact_match": 0.10843373493975904,
+        "token_f1": 0.1726764199655766,
+        "generation_recall": 0.2680722891566265,
+        "generation_all_supports": 0.0,
+        "abstained": 0.5843373493975904,
+        "failure": 0.0,
+        "answered_with_valid_citations": 0.41566265060240964,
+        "recall_at_5": 0.2680722891566265,
+        "all_supports_at_5": 0.0,
+        "recall_at_10": 0.3358433734939759,
+        "all_supports_at_10": 0.0,
+        "recall_at_20": 0.4457831325301205,
+        "all_supports_at_20": 0.012048192771084338
+      },
+      "usage": {
+        "calls": 0,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "tool_calls": 0,
+        "cache_hits": 166,
+        "service_seconds": 0.0,
+        "calls_missing_usage": 0
+      },
+      "spec_sha256": "40044ef66097a00af9d062567b74309de692c301c73ea0355ccdb6d3ff7ca620",
+      "cost_note": "Usage is actual execution usage. Cache hits are not cold-run cost; original service cost is unknown unless recorded separately."
+    },
+    {
+      "corpus": "musique",
+      "corpus_structure": "Wikipedia passages",
+      "complexity": "4-hop",
+      "method": "decomposition",
+      "status": "measured",
+      "questions": 166,
+      "metrics": {
+        "exact_match": 0.12048192771084337,
+        "token_f1": 0.1886617900172117,
+        "generation_recall": 0.3463855421686747,
+        "generation_all_supports": 0.0,
+        "abstained": 0.4397590361445783,
+        "failure": 0.0,
+        "answered_with_valid_citations": 0.5602409638554217,
+        "recall_at_5": 0.3463855421686747,
+        "all_supports_at_5": 0.0,
+        "recall_at_10": 0.40963855421686746,
+        "all_supports_at_10": 0.0,
+        "recall_at_20": 0.46536144578313254,
+        "all_supports_at_20": 0.012048192771084338
+      },
+      "usage": {
+        "calls": 0,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "tool_calls": 0,
+        "cache_hits": 332,
+        "service_seconds": 0.0,
+        "calls_missing_usage": 0
+      },
+      "spec_sha256": "6c8175bab7bb1e15d697a428c871962ada80456d210ba69e01fb9b535283753f",
+      "cost_note": "Usage is actual execution usage. Cache hits are not cold-run cost; original service cost is unknown unless recorded separately."
+    },
+    {
+      "corpus": "musique",
+      "corpus_structure": "Wikipedia passages",
+      "complexity": "4-hop",
+      "method": "ircot",
+      "status": "measured_with_failures",
+      "questions": 166,
+      "metrics": {
+        "exact_match": 0.2469879518072289,
+        "token_f1": 0.3070615796519411,
+        "generation_recall": 0.3433734939759036,
+        "generation_all_supports": 0.06626506024096386,
+        "abstained": 0.4397590361445783,
+        "failure": 0.030120481927710843,
+        "answered_with_valid_citations": 0.5602409638554217,
+        "recall_at_5": 0.39759036144578314,
+        "all_supports_at_5": 0.05421686746987952,
+        "recall_at_10": 0.5015060240963856,
+        "all_supports_at_10": 0.10843373493975904,
+        "recall_at_20": 0.5963855421686747,
+        "all_supports_at_20": 0.1746987951807229
+      },
+      "usage": {
+        "calls": 1337,
+        "prompt_tokens": 3794506,
+        "completion_tokens": 136182,
+        "total_tokens": 3930688,
+        "tool_calls": 1097,
+        "cache_hits": 9,
+        "service_seconds": 13705.333,
+        "calls_missing_usage": 0
+      },
+      "spec_sha256": "2ab467122a55d4121b792da8135a5ba7eeaf5e4397c52e9209d9ae1bde63cdc6",
+      "cost_note": "Usage is actual execution usage. Cache hits are not cold-run cost; original service cost is unknown unless recorded separately. Resumed after the allocation ended; unrecorded in-flight work from an interrupted session has unknown additional usage."
+    },
+    {
+      "corpus": "musique",
+      "corpus_structure": "Wikipedia passages",
+      "complexity": "4-hop",
+      "method": "hipporag2",
+      "status": "pending",
+      "reason": "verified RI #4 index handoff required"
+    },
+    {
+      "corpus": "musique",
+      "corpus_structure": "Wikipedia passages",
+      "complexity": "4-hop",
+      "method": "lightrag",
+      "status": "pending",
+      "reason": "verified RI #4 index handoff required"
+    },
+    {
+      "corpus": "musique",
+      "corpus_structure": "Wikipedia passages",
+      "complexity": "4-hop",
+      "method": "corrective",
+      "status": "pending",
+      "reason": "matched evaluation not yet available"
+    },
+    {
+      "corpus": "nq",
+      "corpus_structure": "Wikipedia passages",
+      "complexity": "single-hop",
+      "method": "dense",
+      "status": "measured",
+      "questions": 1000,
+      "metrics": {
+        "exact_match": 0.507,
+        "token_f1": 0.6301704190718123,
+        "generation_recall": 0.6823900793650793,
+        "generation_all_supports": 0.351,
+        "abstained": 0.065,
+        "failure": 0.0,
+        "answered_with_valid_citations": 0.935,
+        "recall_at_5": 0.6823900793650793,
+        "all_supports_at_5": 0.351,
+        "recall_at_10": 0.9342876984126984,
+        "all_supports_at_10": 0.81,
+        "recall_at_20": 0.9811468253968254,
+        "all_supports_at_20": 0.948
+      },
+      "usage": {
+        "calls": 1000,
+        "prompt_tokens": 916481,
+        "completion_tokens": 33104,
+        "total_tokens": 949585,
+        "tool_calls": 0,
+        "cache_hits": 0,
+        "service_seconds": 4375.31,
+        "calls_missing_usage": 0
+      },
+      "spec_sha256": "964f639eb01a8e99c2fb1305b9bd5b12802ac9cf419b1ab2a0708439abda2c71",
+      "cost_note": "Usage is actual execution usage. Cache hits are not cold-run cost; original service cost is unknown unless recorded separately."
+    },
+    {
+      "corpus": "nq",
+      "corpus_structure": "Wikipedia passages",
+      "complexity": "single-hop",
+      "method": "decomposition",
+      "status": "measured",
+      "questions": 1000,
+      "metrics": {
+        "exact_match": 0.501,
+        "token_f1": 0.6249015295402911,
+        "generation_recall": 0.6739301587301587,
+        "generation_all_supports": 0.344,
+        "abstained": 0.069,
+        "failure": 0.0,
+        "answered_with_valid_citations": 0.931,
+        "recall_at_5": 0.6739301587301587,
+        "all_supports_at_5": 0.344,
+        "recall_at_10": 0.927836507936508,
+        "all_supports_at_10": 0.794,
+        "recall_at_20": 0.9804718253968254,
+        "all_supports_at_20": 0.947
+      },
+      "usage": {
+        "calls": 1261,
+        "prompt_tokens": 381304,
+        "completion_tokens": 36633,
+        "total_tokens": 417937,
+        "tool_calls": 0,
+        "cache_hits": 739,
+        "service_seconds": 3234.85,
+        "calls_missing_usage": 0
+      },
+      "spec_sha256": "3adadd43b061204879fda2f8da5806fa6f07e71559c4f86524bacb08e8924edd",
+      "cost_note": "Usage is actual execution usage. Cache hits are not cold-run cost; original service cost is unknown unless recorded separately."
+    },
+    {
+      "corpus": "nq",
+      "corpus_structure": "Wikipedia passages",
+      "complexity": "single-hop",
+      "method": "ircot",
+      "status": "measured_with_failures",
+      "questions": 1000,
+      "metrics": {
+        "exact_match": 0.484,
+        "token_f1": 0.6035608252995714,
+        "generation_recall": 0.6314003968253968,
+        "generation_all_supports": 0.323,
+        "abstained": 0.124,
+        "failure": 0.006,
+        "answered_with_valid_citations": 0.876,
+        "recall_at_5": 0.6812357142857143,
+        "all_supports_at_5": 0.354,
+        "recall_at_10": 0.9225583333333334,
+        "all_supports_at_10": 0.792,
+        "recall_at_20": 0.9727123015873016,
+        "all_supports_at_20": 0.936
+      },
+      "usage": {
+        "calls": 4444,
+        "prompt_tokens": 9487187,
+        "completion_tokens": 428356,
+        "total_tokens": 9915543,
+        "tool_calls": 2783,
+        "cache_hits": 220,
+        "service_seconds": 44772.166,
+        "calls_missing_usage": 0
+      },
+      "spec_sha256": "a29ed026ecc1d1a4e37e67f3c54801506d8ba4141a4f91174ea240a1195da1fb",
+      "cost_note": "Usage is actual execution usage. Cache hits are not cold-run cost; original service cost is unknown unless recorded separately. Resumed after the allocation ended; unrecorded in-flight work from an interrupted session has unknown additional usage."
+    },
+    {
+      "corpus": "multihop-rag",
+      "corpus_structure": "Full publisher articles",
+      "complexity": "inference_query",
+      "method": "dense",
+      "status": "pending",
+      "reason": "article ruling and validated loader execution required"
+    },
+    {
+      "corpus": "multihop-rag",
+      "corpus_structure": "Full publisher articles",
+      "complexity": "inference_query",
+      "method": "decomposition",
+      "status": "pending",
+      "reason": "article ruling and validated loader execution required"
+    },
+    {
+      "corpus": "multihop-rag",
+      "corpus_structure": "Full publisher articles",
+      "complexity": "inference_query",
+      "method": "ircot",
+      "status": "pending",
+      "reason": "article ruling and validated loader execution required"
+    },
+    {
+      "corpus": "multihop-rag",
+      "corpus_structure": "Full publisher articles",
+      "complexity": "comparison_query",
+      "method": "dense",
+      "status": "pending",
+      "reason": "article ruling and validated loader execution required"
+    },
+    {
+      "corpus": "multihop-rag",
+      "corpus_structure": "Full publisher articles",
+      "complexity": "comparison_query",
+      "method": "decomposition",
+      "status": "pending",
+      "reason": "article ruling and validated loader execution required"
+    },
+    {
+      "corpus": "multihop-rag",
+      "corpus_structure": "Full publisher articles",
+      "complexity": "comparison_query",
+      "method": "ircot",
+      "status": "pending",
+      "reason": "article ruling and validated loader execution required"
+    },
+    {
+      "corpus": "multihop-rag",
+      "corpus_structure": "Full publisher articles",
+      "complexity": "temporal_query",
+      "method": "dense",
+      "status": "pending",
+      "reason": "article ruling and validated loader execution required"
+    },
+    {
+      "corpus": "multihop-rag",
+      "corpus_structure": "Full publisher articles",
+      "complexity": "temporal_query",
+      "method": "decomposition",
+      "status": "pending",
+      "reason": "article ruling and validated loader execution required"
+    },
+    {
+      "corpus": "multihop-rag",
+      "corpus_structure": "Full publisher articles",
+      "complexity": "temporal_query",
+      "method": "ircot",
+      "status": "pending",
+      "reason": "article ruling and validated loader execution required"
+    }
+  ],
+  "comparisons": [
+    {
+      "corpus": "musique",
+      "method": "decomposition",
+      "control": "dense",
+      "questions": 1000,
+      "original_ids": 1000,
+      "samples": 5000,
+      "interval": "paired cluster percentile 95%",
+      "differences": {
+        "exact_match": {
+          "mean": 0.005,
+          "low": -0.014,
+          "high": 0.025
+        },
+        "token_f1": {
+          "mean": 0.007209907980736157,
+          "low": -0.012703248439726767,
+          "high": 0.027211134788564538
+        },
+        "recall_at_5": {
+          "mean": 0.048,
+          "low": 0.03533333333333333,
+          "high": 0.06033333333333333
+        },
+        "generation_all_supports": {
+          "mean": 0.017,
+          "low": -0.002,
+          "high": 0.036
+        }
+      },
+      "quality_improvement_supported": false,
+      "added_calls": 0,
+      "added_calls_plus_cache_hits": 1000,
+      "cost_note": "Added calls are observed live responses. Compare cache hits separately; differing cache warmth is not a cold-cost saving."
+    },
+    {
+      "corpus": "musique",
+      "method": "ircot",
+      "control": "dense",
+      "questions": 1000,
+      "original_ids": 1000,
+      "samples": 5000,
+      "interval": "paired cluster percentile 95%",
+      "differences": {
+        "exact_match": {
+          "mean": 0.208,
+          "low": 0.179,
+          "high": 0.237
+        },
+        "token_f1": {
+          "mean": 0.21217888102127241,
+          "low": 0.18278471673961297,
+          "high": 0.24175754844585873
+        },
+        "recall_at_5": {
+          "mean": 0.17633333333333331,
+          "low": 0.15966666666666668,
+          "high": 0.19291666666666668
+        },
+        "generation_all_supports": {
+          "mean": 0.259,
+          "low": 0.228,
+          "high": 0.289
+        }
+      },
+      "quality_improvement_supported": true,
+      "added_calls": 6262,
+      "added_calls_plus_cache_hits": 5335,
+      "cost_note": "Added calls are observed live responses. Compare cache hits separately; differing cache warmth is not a cold-cost saving."
+    },
+    {
+      "corpus": "nq",
+      "method": "decomposition",
+      "control": "dense",
+      "questions": 1000,
+      "original_ids": 1000,
+      "samples": 5000,
+      "interval": "paired cluster percentile 95%",
+      "differences": {
+        "exact_match": {
+          "mean": -0.006,
+          "low": -0.016,
+          "high": 0.003
+        },
+        "token_f1": {
+          "mean": -0.00526888953152111,
+          "low": -0.014945149366715156,
+          "high": 0.0035853239633173795
+        },
+        "recall_at_5": {
+          "mean": -0.008459920634920636,
+          "low": -0.015003462301587302,
+          "high": -0.0026467063492063513
+        },
+        "generation_all_supports": {
+          "mean": -0.007,
+          "low": -0.016,
+          "high": 0.002
+        }
+      },
+      "quality_improvement_supported": false,
+      "added_calls": 261,
+      "added_calls_plus_cache_hits": 1000,
+      "cost_note": "Added calls are observed live responses. Compare cache hits separately; differing cache warmth is not a cold-cost saving."
+    },
+    {
+      "corpus": "nq",
+      "method": "ircot",
+      "control": "dense",
+      "questions": 1000,
+      "original_ids": 1000,
+      "samples": 5000,
+      "interval": "paired cluster percentile 95%",
+      "differences": {
+        "exact_match": {
+          "mean": -0.023,
+          "low": -0.038,
+          "high": -0.007
+        },
+        "token_f1": {
+          "mean": -0.026609593772240828,
+          "low": -0.0415134188502416,
+          "high": -0.011487260139671135
+        },
+        "recall_at_5": {
+          "mean": -0.0011543650793650777,
+          "low": -0.011780148809523808,
+          "high": 0.00998522817460317
+        },
+        "generation_all_supports": {
+          "mean": -0.028,
+          "low": -0.046,
+          "high": -0.01
+        }
+      },
+      "quality_improvement_supported": false,
+      "added_calls": 3444,
+      "added_calls_plus_cache_hits": 3664,
+      "cost_note": "Added calls are observed live responses. Compare cache hits separately; differing cache warmth is not a cold-cost saving."
+    }
+  ],
+  "wording_comparisons": [],
+  "reports": [
+    {
+      "spec_sha256": "40044ef66097a00af9d062567b74309de692c301c73ea0355ccdb6d3ff7ca620",
+      "method": "dense",
+      "corpus": "musique",
+      "provenance": {
+        "revision": "5ec05b38deecc3318bb432c69865959c56058990",
+        "questions_sha256": "98ed4e21d3076532f6388d42320fb809599c63a0d8dffca8ece5e41922be6b46",
+        "corpus_sha256": "73157a03ce3f0b1a5673dd5dc12bb970c24976dbffc688af9eecdd758c97ffcb"
+      },
+      "scores": {
+        "overall": {
+          "questions": 1000,
+          "metrics": {
+            "exact_match": 0.201,
+            "token_f1": 0.27326768993408285,
+            "generation_recall": 0.506,
+            "generation_all_supports": 0.171,
+            "abstained": 0.406,
+            "failure": 0.0,
+            "answered_with_valid_citations": 0.594,
+            "recall_at_5": 0.506,
+            "all_supports_at_5": 0.171,
+            "recall_at_10": 0.5794166666666667,
+            "all_supports_at_10": 0.246,
+            "recall_at_20": 0.6576666666666666,
+            "all_supports_at_20": 0.335
+          },
+          "usage": {
+            "calls": 0,
+            "prompt_tokens": 0,
+            "completion_tokens": 0,
+            "total_tokens": 0,
+            "tool_calls": 0,
+            "cache_hits": 1000,
+            "service_seconds": 0.0,
+            "calls_missing_usage": 0
+          },
+          "stop_reasons": {
+            "answered": 594,
+            "the model reported the sources do not answer the question": 376,
+            "the answer cited no usable source": 30
+          },
+          "summed_question_wall_seconds": 370.98122897627763
+        },
+        "2-hop": {
+          "questions": 518,
+          "metrics": {
+            "exact_match": 0.2471042471042471,
+            "token_f1": 0.322278205731667,
+            "generation_recall": 0.6052123552123552,
+            "generation_all_supports": 0.29922779922779924,
+            "abstained": 0.3474903474903475,
+            "failure": 0.0,
+            "answered_with_valid_citations": 0.6525096525096525,
+            "recall_at_5": 0.6052123552123552,
+            "all_supports_at_5": 0.29922779922779924,
+            "recall_at_10": 0.666023166023166,
+            "all_supports_at_10": 0.38223938223938225,
+            "recall_at_20": 0.7355212355212355,
+            "all_supports_at_20": 0.49613899613899615
+          },
+          "usage": {
+            "calls": 0,
+            "prompt_tokens": 0,
+            "completion_tokens": 0,
+            "total_tokens": 0,
+            "tool_calls": 0,
+            "cache_hits": 518,
+            "service_seconds": 0.0,
+            "calls_missing_usage": 0
+          },
+          "stop_reasons": {
+            "answered": 338,
+            "the model reported the sources do not answer the question": 171,
+            "the answer cited no usable source": 9
+          },
+          "summed_question_wall_seconds": 190.13732477766462
+        },
+        "3-hop": {
+          "questions": 316,
+          "metrics": {
+            "exact_match": 0.17405063291139242,
+            "token_f1": 0.2457699166164356,
+            "generation_recall": 0.46835443037974683,
+            "generation_all_supports": 0.05063291139240506,
+            "abstained": 0.40822784810126583,
+            "failure": 0.0,
+            "answered_with_valid_citations": 0.5917721518987342,
+            "recall_at_5": 0.46835443037974683,
+            "all_supports_at_5": 0.05063291139240506,
+            "recall_at_10": 0.5654008438818565,
+            "all_supports_at_10": 0.1518987341772152,
+            "recall_at_20": 0.6413502109704641,
+            "all_supports_at_20": 0.24050632911392406
+          },
+          "usage": {
+            "calls": 0,
+            "prompt_tokens": 0,
+            "completion_tokens": 0,
+            "total_tokens": 0,
+            "tool_calls": 0,
+            "cache_hits": 316,
+            "service_seconds": 0.0,
+            "calls_missing_usage": 0
+          },
+          "stop_reasons": {
+            "the model reported the sources do not answer the question": 121,
+            "answered": 187,
+            "the answer cited no usable source": 8
+          },
+          "summed_question_wall_seconds": 119.57710232003592
+        },
+        "4-hop": {
+          "questions": 166,
+          "metrics": {
+            "exact_match": 0.10843373493975904,
+            "token_f1": 0.1726764199655766,
+            "generation_recall": 0.2680722891566265,
+            "generation_all_supports": 0.0,
+            "abstained": 0.5843373493975904,
+            "failure": 0.0,
+            "answered_with_valid_citations": 0.41566265060240964,
+            "recall_at_5": 0.2680722891566265,
+            "all_supports_at_5": 0.0,
+            "recall_at_10": 0.3358433734939759,
+            "all_supports_at_10": 0.0,
+            "recall_at_20": 0.4457831325301205,
+            "all_supports_at_20": 0.012048192771084338
+          },
+          "usage": {
+            "calls": 0,
+            "prompt_tokens": 0,
+            "completion_tokens": 0,
+            "total_tokens": 0,
+            "tool_calls": 0,
+            "cache_hits": 166,
+            "service_seconds": 0.0,
+            "calls_missing_usage": 0
+          },
+          "stop_reasons": {
+            "the answer cited no usable source": 13,
+            "answered": 69,
+            "the model reported the sources do not answer the question": 84
+          },
+          "summed_question_wall_seconds": 61.2668018785771
+        }
+      },
+      "cost_note": "Usage is actual execution usage. Cache hits are not cold-run cost; original service cost is unknown unless recorded separately.",
+      "execution_success": true,
+      "workers": null,
+      "execution_wall_seconds": null
+    },
+    {
+      "spec_sha256": "6c8175bab7bb1e15d697a428c871962ada80456d210ba69e01fb9b535283753f",
+      "method": "decomposition",
+      "corpus": "musique",
+      "provenance": {
+        "revision": "5ec05b38deecc3318bb432c69865959c56058990",
+        "questions_sha256": "98ed4e21d3076532f6388d42320fb809599c63a0d8dffca8ece5e41922be6b46",
+        "corpus_sha256": "73157a03ce3f0b1a5673dd5dc12bb970c24976dbffc688af9eecdd758c97ffcb"
+      },
+      "scores": {
+        "overall": {
+          "questions": 1000,
+          "metrics": {
+            "exact_match": 0.206,
+            "token_f1": 0.280477597914819,
+            "generation_recall": 0.5539999999999999,
+            "generation_all_supports": 0.188,
+            "abstained": 0.383,
+            "failure": 0.0,
+            "answered_with_valid_citations": 0.617,
+            "recall_at_5": 0.5539999999999999,
+            "all_supports_at_5": 0.188,
+            "recall_at_10": 0.6165,
+            "all_supports_at_10": 0.276,
+            "recall_at_20": 0.6784166666666667,
+            "all_supports_at_20": 0.35
+          },
+          "usage": {
+            "calls": 0,
+            "prompt_tokens": 0,
+            "completion_tokens": 0,
+            "total_tokens": 0,
+            "tool_calls": 0,
+            "cache_hits": 2000,
+            "service_seconds": 0.0,
+            "calls_missing_usage": 0
+          },
+          "stop_reasons": {
+            "answered": 617,
+            "the model reported the sources do not answer the question": 366,
+            "the answer cited no usable source": 17
+          },
+          "summed_question_wall_seconds": 809.0273004868068
+        },
+        "2-hop": {
+          "questions": 518,
+          "metrics": {
+            "exact_match": 0.24324324324324326,
+            "token_f1": 0.3120469041071765,
+            "generation_recall": 0.6264478764478765,
+            "generation_all_supports": 0.3127413127413127,
+            "abstained": 0.3745173745173745,
+            "failure": 0.0,
+            "answered_with_valid_citations": 0.6254826254826255,
+            "recall_at_5": 0.6264478764478765,
+            "all_supports_at_5": 0.3127413127413127,
+            "recall_at_10": 0.6862934362934363,
+            "all_supports_at_10": 0.41505791505791506,
+            "recall_at_20": 0.7442084942084942,
+            "all_supports_at_20": 0.5038610038610039
+          },
+          "usage": {
+            "calls": 0,
+            "prompt_tokens": 0,
+            "completion_tokens": 0,
+            "total_tokens": 0,
+            "tool_calls": 0,
+            "cache_hits": 1036,
+            "service_seconds": 0.0,
+            "calls_missing_usage": 0
+          },
+          "stop_reasons": {
+            "answered": 324,
+            "the model reported the sources do not answer the question": 190,
+            "the answer cited no usable source": 4
+          },
+          "summed_question_wall_seconds": 412.67063540103845
+        },
+        "3-hop": {
+          "questions": 316,
+          "metrics": {
+            "exact_match": 0.189873417721519,
+            "token_f1": 0.27696026722925454,
+            "generation_recall": 0.5443037974683544,
+            "generation_all_supports": 0.08227848101265822,
+            "abstained": 0.3670886075949367,
+            "failure": 0.0,
+            "answered_with_valid_citations": 0.6329113924050633,
+            "recall_at_5": 0.5443037974683544,
+            "all_supports_at_5": 0.08227848101265822,
+            "recall_at_10": 0.610759493670886,
+            "all_supports_at_10": 0.1930379746835443,
+            "recall_at_20": 0.6824894514767932,
+            "all_supports_at_20": 0.27531645569620256
+          },
+          "usage": {
+            "calls": 0,
+            "prompt_tokens": 0,
+            "completion_tokens": 0,
+            "total_tokens": 0,
+            "tool_calls": 0,
+            "cache_hits": 632,
+            "service_seconds": 0.0,
+            "calls_missing_usage": 0
+          },
+          "stop_reasons": {
+            "the model reported the sources do not answer the question": 110,
+            "answered": 200,
+            "the answer cited no usable source": 6
+          },
+          "summed_question_wall_seconds": 260.3817383374553
+        },
+        "4-hop": {
+          "questions": 166,
+          "metrics": {
+            "exact_match": 0.12048192771084337,
+            "token_f1": 0.1886617900172117,
+            "generation_recall": 0.3463855421686747,
+            "generation_all_supports": 0.0,
+            "abstained": 0.4397590361445783,
+            "failure": 0.0,
+            "answered_with_valid_citations": 0.5602409638554217,
+            "recall_at_5": 0.3463855421686747,
+            "all_supports_at_5": 0.0,
+            "recall_at_10": 0.40963855421686746,
+            "all_supports_at_10": 0.0,
+            "recall_at_20": 0.46536144578313254,
+            "all_supports_at_20": 0.012048192771084338
+          },
+          "usage": {
+            "calls": 0,
+            "prompt_tokens": 0,
+            "completion_tokens": 0,
+            "total_tokens": 0,
+            "tool_calls": 0,
+            "cache_hits": 332,
+            "service_seconds": 0.0,
+            "calls_missing_usage": 0
+          },
+          "stop_reasons": {
+            "the answer cited no usable source": 7,
+            "answered": 93,
+            "the model reported the sources do not answer the question": 66
+          },
+          "summed_question_wall_seconds": 135.974926748313
+        }
+      },
+      "cost_note": "Usage is actual execution usage. Cache hits are not cold-run cost; original service cost is unknown unless recorded separately.",
+      "execution_success": true,
+      "workers": null,
+      "execution_wall_seconds": null
+    },
+    {
+      "spec_sha256": "2ab467122a55d4121b792da8135a5ba7eeaf5e4397c52e9209d9ae1bde63cdc6",
+      "method": "ircot",
+      "corpus": "musique",
+      "provenance": {
+        "revision": "5ec05b38deecc3318bb432c69865959c56058990",
+        "questions_sha256": "98ed4e21d3076532f6388d42320fb809599c63a0d8dffca8ece5e41922be6b46",
+        "corpus_sha256": "73157a03ce3f0b1a5673dd5dc12bb970c24976dbffc688af9eecdd758c97ffcb"
+      },
+      "scores": {
+        "overall": {
+          "questions": 1000,
+          "metrics": {
+            "exact_match": 0.409,
+            "token_f1": 0.48544657095535526,
+            "generation_recall": 0.5995,
+            "generation_all_supports": 0.43,
+            "abstained": 0.28,
+            "failure": 0.009,
+            "answered_with_valid_citations": 0.72,
+            "recall_at_5": 0.6823333333333333,
+            "all_supports_at_5": 0.437,
+            "recall_at_10": 0.7664166666666666,
+            "all_supports_at_10": 0.563,
+            "recall_at_20": 0.8258333333333333,
+            "all_supports_at_20": 0.646
+          },
+          "usage": {
+            "calls": 6262,
+            "prompt_tokens": 15282565,
+            "completion_tokens": 572254,
+            "total_tokens": 15854819,
+            "tool_calls": 4621,
+            "cache_hits": 73,
+            "service_seconds": 57159.178,
+            "calls_missing_usage": 0
+          },
+          "stop_reasons": {
+            "sufficient": 703,
+            "insufficient": 208,
+            "model_call_limit": 54,
+            "incomplete_update": 6,
+            "repeated_query": 3,
+            "retrieval_limit": 17,
+            "execution_failure": 9
+          },
+          "summed_question_wall_seconds": 57415.0072440349
+        },
+        "2-hop": {
+          "questions": 518,
+          "metrics": {
+            "exact_match": 0.49034749034749037,
+            "token_f1": 0.5738116492310548,
+            "generation_recall": 0.7133204633204633,
+            "generation_all_supports": 0.640926640926641,
+            "abstained": 0.21621621621621623,
+            "failure": 0.0,
+            "answered_with_valid_citations": 0.7837837837837838,
+            "recall_at_5": 0.8088803088803089,
+            "all_supports_at_5": 0.6776061776061776,
+            "recall_at_10": 0.8716216216216216,
+            "all_supports_at_10": 0.7799227799227799,
+            "recall_at_20": 0.9063706563706564,
+            "all_supports_at_20": 0.833976833976834
+          },
+          "usage": {
+            "calls": 2914,
+            "prompt_tokens": 6478798,
+            "completion_tokens": 241928,
+            "total_tokens": 6720726,
+            "tool_calls": 2043,
+            "cache_hits": 50,
+            "service_seconds": 24013.227,
+            "calls_missing_usage": 0
+          },
+          "stop_reasons": {
+            "sufficient": 395,
+            "insufficient": 97,
+            "repeated_query": 3,
+            "model_call_limit": 18,
+            "retrieval_limit": 5
+          },
+          "summed_question_wall_seconds": 24035.396155245602
+        },
+        "3-hop": {
+          "questions": 316,
+          "metrics": {
+            "exact_match": 0.36075949367088606,
+            "token_f1": 0.43430352668179334,
+            "generation_recall": 0.5474683544303798,
+            "generation_all_supports": 0.27531645569620256,
+            "abstained": 0.30063291139240506,
+            "failure": 0.012658227848101266,
+            "answered_with_valid_citations": 0.6993670886075949,
+            "recall_at_5": 0.6244725738396625,
+            "all_supports_at_5": 0.24367088607594936,
+            "recall_at_10": 0.7331223628691983,
+            "all_supports_at_10": 0.4462025316455696,
+            "recall_at_20": 0.8143459915611814,
+            "all_supports_at_20": 0.5854430379746836
+          },
+          "usage": {
+            "calls": 2011,
+            "prompt_tokens": 5009261,
+            "completion_tokens": 194144,
+            "total_tokens": 5203405,
+            "tool_calls": 1481,
+            "cache_hits": 14,
+            "service_seconds": 19440.618,
+            "calls_missing_usage": 0
+          },
+          "stop_reasons": {
+            "sufficient": 230,
+            "incomplete_update": 4,
+            "insufficient": 67,
+            "model_call_limit": 9,
+            "execution_failure": 4,
+            "retrieval_limit": 2
+          },
+          "summed_question_wall_seconds": 19530.77269397606
+        },
+        "4-hop": {
+          "questions": 166,
+          "metrics": {
+            "exact_match": 0.2469879518072289,
+            "token_f1": 0.3070615796519411,
+            "generation_recall": 0.3433734939759036,
+            "generation_all_supports": 0.06626506024096386,
+            "abstained": 0.4397590361445783,
+            "failure": 0.030120481927710843,
+            "answered_with_valid_citations": 0.5602409638554217,
+            "recall_at_5": 0.39759036144578314,
+            "all_supports_at_5": 0.05421686746987952,
+            "recall_at_10": 0.5015060240963856,
+            "all_supports_at_10": 0.10843373493975904,
+            "recall_at_20": 0.5963855421686747,
+            "all_supports_at_20": 0.1746987951807229
+          },
+          "usage": {
+            "calls": 1337,
+            "prompt_tokens": 3794506,
+            "completion_tokens": 136182,
+            "total_tokens": 3930688,
+            "tool_calls": 1097,
+            "cache_hits": 9,
+            "service_seconds": 13705.333,
+            "calls_missing_usage": 0
+          },
+          "stop_reasons": {
+            "insufficient": 44,
+            "model_call_limit": 27,
+            "sufficient": 78,
+            "retrieval_limit": 10,
+            "incomplete_update": 2,
+            "execution_failure": 5
+          },
+          "summed_question_wall_seconds": 13848.83839481324
+        }
+      },
+      "cost_note": "Usage is actual execution usage. Cache hits are not cold-run cost; original service cost is unknown unless recorded separately. Resumed after the allocation ended; unrecorded in-flight work from an interrupted session has unknown additional usage.",
+      "execution_success": false,
+      "workers": null,
+      "execution_wall_seconds": null
+    },
+    {
+      "spec_sha256": "964f639eb01a8e99c2fb1305b9bd5b12802ac9cf419b1ab2a0708439abda2c71",
+      "method": "dense",
+      "corpus": "nq",
+      "provenance": {
+        "revision": "5ec05b38deecc3318bb432c69865959c56058990",
+        "questions_sha256": "8acadaeff625790e8e10764d660d9ec46de6ac24eb241ac584c0171deca1d9cd",
+        "corpus_sha256": "c672a7c1813f1a3e1e7a0b1a29784bf7c5cf2d7a2934cb3ffc3b347843b42864"
+      },
+      "scores": {
+        "overall": {
+          "questions": 1000,
+          "metrics": {
+            "exact_match": 0.507,
+            "token_f1": 0.6301704190718123,
+            "generation_recall": 0.6823900793650793,
+            "generation_all_supports": 0.351,
+            "abstained": 0.065,
+            "failure": 0.0,
+            "answered_with_valid_citations": 0.935,
+            "recall_at_5": 0.6823900793650793,
+            "all_supports_at_5": 0.351,
+            "recall_at_10": 0.9342876984126984,
+            "all_supports_at_10": 0.81,
+            "recall_at_20": 0.9811468253968254,
+            "all_supports_at_20": 0.948
+          },
+          "usage": {
+            "calls": 1000,
+            "prompt_tokens": 916481,
+            "completion_tokens": 33104,
+            "total_tokens": 949585,
+            "tool_calls": 0,
+            "cache_hits": 0,
+            "service_seconds": 4375.31,
+            "calls_missing_usage": 0
+          },
+          "stop_reasons": {
+            "answered": 935,
+            "the model reported the sources do not answer the question": 64,
+            "the answer cited no usable source": 1
+          },
+          "summed_question_wall_seconds": 4427.661874976242
+        },
+        "single-hop": {
+          "questions": 1000,
+          "metrics": {
+            "exact_match": 0.507,
+            "token_f1": 0.6301704190718123,
+            "generation_recall": 0.6823900793650793,
+            "generation_all_supports": 0.351,
+            "abstained": 0.065,
+            "failure": 0.0,
+            "answered_with_valid_citations": 0.935,
+            "recall_at_5": 0.6823900793650793,
+            "all_supports_at_5": 0.351,
+            "recall_at_10": 0.9342876984126984,
+            "all_supports_at_10": 0.81,
+            "recall_at_20": 0.9811468253968254,
+            "all_supports_at_20": 0.948
+          },
+          "usage": {
+            "calls": 1000,
+            "prompt_tokens": 916481,
+            "completion_tokens": 33104,
+            "total_tokens": 949585,
+            "tool_calls": 0,
+            "cache_hits": 0,
+            "service_seconds": 4375.31,
+            "calls_missing_usage": 0
+          },
+          "stop_reasons": {
+            "answered": 935,
+            "the model reported the sources do not answer the question": 64,
+            "the answer cited no usable source": 1
+          },
+          "summed_question_wall_seconds": 4427.661874976242
+        }
+      },
+      "cost_note": "Usage is actual execution usage. Cache hits are not cold-run cost; original service cost is unknown unless recorded separately.",
+      "execution_success": true,
+      "workers": null,
+      "execution_wall_seconds": null
+    },
+    {
+      "spec_sha256": "3adadd43b061204879fda2f8da5806fa6f07e71559c4f86524bacb08e8924edd",
+      "method": "decomposition",
+      "corpus": "nq",
+      "provenance": {
+        "revision": "5ec05b38deecc3318bb432c69865959c56058990",
+        "questions_sha256": "8acadaeff625790e8e10764d660d9ec46de6ac24eb241ac584c0171deca1d9cd",
+        "corpus_sha256": "c672a7c1813f1a3e1e7a0b1a29784bf7c5cf2d7a2934cb3ffc3b347843b42864"
+      },
+      "scores": {
+        "overall": {
+          "questions": 1000,
+          "metrics": {
+            "exact_match": 0.501,
+            "token_f1": 0.6249015295402911,
+            "generation_recall": 0.6739301587301587,
+            "generation_all_supports": 0.344,
+            "abstained": 0.069,
+            "failure": 0.0,
+            "answered_with_valid_citations": 0.931,
+            "recall_at_5": 0.6739301587301587,
+            "all_supports_at_5": 0.344,
+            "recall_at_10": 0.927836507936508,
+            "all_supports_at_10": 0.794,
+            "recall_at_20": 0.9804718253968254,
+            "all_supports_at_20": 0.947
+          },
+          "usage": {
+            "calls": 1261,
+            "prompt_tokens": 381304,
+            "completion_tokens": 36633,
+            "total_tokens": 417937,
+            "tool_calls": 0,
+            "cache_hits": 739,
+            "service_seconds": 3234.85,
+            "calls_missing_usage": 0
+          },
+          "stop_reasons": {
+            "answered": 931,
+            "the model reported the sources do not answer the question": 67,
+            "the answer cited no usable source": 2
+          },
+          "summed_question_wall_seconds": 4020.5550087315496
+        },
+        "single-hop": {
+          "questions": 1000,
+          "metrics": {
+            "exact_match": 0.501,
+            "token_f1": 0.6249015295402911,
+            "generation_recall": 0.6739301587301587,
+            "generation_all_supports": 0.344,
+            "abstained": 0.069,
+            "failure": 0.0,
+            "answered_with_valid_citations": 0.931,
+            "recall_at_5": 0.6739301587301587,
+            "all_supports_at_5": 0.344,
+            "recall_at_10": 0.927836507936508,
+            "all_supports_at_10": 0.794,
+            "recall_at_20": 0.9804718253968254,
+            "all_supports_at_20": 0.947
+          },
+          "usage": {
+            "calls": 1261,
+            "prompt_tokens": 381304,
+            "completion_tokens": 36633,
+            "total_tokens": 417937,
+            "tool_calls": 0,
+            "cache_hits": 739,
+            "service_seconds": 3234.85,
+            "calls_missing_usage": 0
+          },
+          "stop_reasons": {
+            "answered": 931,
+            "the model reported the sources do not answer the question": 67,
+            "the answer cited no usable source": 2
+          },
+          "summed_question_wall_seconds": 4020.5550087315496
+        }
+      },
+      "cost_note": "Usage is actual execution usage. Cache hits are not cold-run cost; original service cost is unknown unless recorded separately.",
+      "execution_success": true,
+      "workers": null,
+      "execution_wall_seconds": null
+    },
+    {
+      "spec_sha256": "a29ed026ecc1d1a4e37e67f3c54801506d8ba4141a4f91174ea240a1195da1fb",
+      "method": "ircot",
+      "corpus": "nq",
+      "provenance": {
+        "revision": "5ec05b38deecc3318bb432c69865959c56058990",
+        "questions_sha256": "8acadaeff625790e8e10764d660d9ec46de6ac24eb241ac584c0171deca1d9cd",
+        "corpus_sha256": "c672a7c1813f1a3e1e7a0b1a29784bf7c5cf2d7a2934cb3ffc3b347843b42864"
+      },
+      "scores": {
+        "overall": {
+          "questions": 1000,
+          "metrics": {
+            "exact_match": 0.484,
+            "token_f1": 0.6035608252995714,
+            "generation_recall": 0.6314003968253968,
+            "generation_all_supports": 0.323,
+            "abstained": 0.124,
+            "failure": 0.006,
+            "answered_with_valid_citations": 0.876,
+            "recall_at_5": 0.6812357142857143,
+            "all_supports_at_5": 0.354,
+            "recall_at_10": 0.9225583333333334,
+            "all_supports_at_10": 0.792,
+            "recall_at_20": 0.9727123015873016,
+            "all_supports_at_20": 0.936
+          },
+          "usage": {
+            "calls": 4444,
+            "prompt_tokens": 9487187,
+            "completion_tokens": 428356,
+            "total_tokens": 9915543,
+            "tool_calls": 2783,
+            "cache_hits": 220,
+            "service_seconds": 44772.166,
+            "calls_missing_usage": 0
+          },
+          "stop_reasons": {
+            "sufficient": 873,
+            "insufficient": 92,
+            "execution_failure": 6,
+            "repeated_query": 12,
+            "model_call_limit": 15,
+            "retrieval_limit": 2
+          },
+          "summed_question_wall_seconds": 44947.60508141294
+        },
+        "single-hop": {
+          "questions": 1000,
+          "metrics": {
+            "exact_match": 0.484,
+            "token_f1": 0.6035608252995714,
+            "generation_recall": 0.6314003968253968,
+            "generation_all_supports": 0.323,
+            "abstained": 0.124,
+            "failure": 0.006,
+            "answered_with_valid_citations": 0.876,
+            "recall_at_5": 0.6812357142857143,
+            "all_supports_at_5": 0.354,
+            "recall_at_10": 0.9225583333333334,
+            "all_supports_at_10": 0.792,
+            "recall_at_20": 0.9727123015873016,
+            "all_supports_at_20": 0.936
+          },
+          "usage": {
+            "calls": 4444,
+            "prompt_tokens": 9487187,
+            "completion_tokens": 428356,
+            "total_tokens": 9915543,
+            "tool_calls": 2783,
+            "cache_hits": 220,
+            "service_seconds": 44772.166,
+            "calls_missing_usage": 0
+          },
+          "stop_reasons": {
+            "sufficient": 873,
+            "insufficient": 92,
+            "execution_failure": 6,
+            "repeated_query": 12,
+            "model_call_limit": 15,
+            "retrieval_limit": 2
+          },
+          "summed_question_wall_seconds": 44947.60508141294
+        }
+      },
+      "cost_note": "Usage is actual execution usage. Cache hits are not cold-run cost; original service cost is unknown unless recorded separately. Resumed after the allocation ended; unrecorded in-flight work from an interrupted session has unknown additional usage.",
+      "execution_success": false,
+      "workers": null,
+      "execution_wall_seconds": null
+    }
+  ],
+  "corrective_cohort": {
+    "grid": [
+      {
+        "corpus": "musique",
+        "corpus_structure": "Wikipedia passages",
+        "complexity": "2-hop",
+        "method": "dense",
+        "status": "measured",
+        "questions": 150,
+        "metrics": {
+          "exact_match": 0.26,
+          "token_f1": 0.325747505368195,
+          "generation_recall": 0.5833333333333334,
+          "generation_all_supports": 0.28,
+          "abstained": 0.38666666666666666,
+          "failure": 0.0,
+          "answered_with_valid_citations": 0.6133333333333333,
+          "recall_at_5": 0.5833333333333334,
+          "all_supports_at_5": 0.28,
+          "recall_at_10": 0.6666666666666666,
+          "all_supports_at_10": 0.38666666666666666,
+          "recall_at_20": 0.7333333333333333,
+          "all_supports_at_20": 0.49333333333333335
+        },
+        "usage": {
+          "calls": 150,
+          "prompt_tokens": 126204,
+          "completion_tokens": 4225,
+          "total_tokens": 130429,
+          "tool_calls": 0,
+          "cache_hits": 0,
+          "service_seconds": 451.1,
+          "calls_missing_usage": 0
+        },
+        "spec_sha256": "8e1ae1d9f73f0a41a22519c172669cdedb77dd90194125b0e77559daa3ae1e04",
+        "cost_note": "Usage is actual execution usage. Cache hits are not cold-run cost; original service cost is unknown unless recorded separately."
+      },
+      {
+        "corpus": "musique",
+        "corpus_structure": "Wikipedia passages",
+        "complexity": "2-hop",
+        "method": "decomposition",
+        "status": "pending",
+        "reason": "matched evaluation not yet available"
+      },
+      {
+        "corpus": "musique",
+        "corpus_structure": "Wikipedia passages",
+        "complexity": "2-hop",
+        "method": "ircot",
+        "status": "pending",
+        "reason": "matched evaluation not yet available"
+      },
+      {
+        "corpus": "musique",
+        "corpus_structure": "Wikipedia passages",
+        "complexity": "2-hop",
+        "method": "hipporag2",
+        "status": "pending",
+        "reason": "verified RI #4 index handoff required"
+      },
+      {
+        "corpus": "musique",
+        "corpus_structure": "Wikipedia passages",
+        "complexity": "2-hop",
+        "method": "lightrag",
+        "status": "pending",
+        "reason": "verified RI #4 index handoff required"
+      },
+      {
+        "corpus": "musique",
+        "corpus_structure": "Wikipedia passages",
+        "complexity": "2-hop",
+        "method": "corrective",
+        "status": "measured",
+        "questions": 150,
+        "metrics": {
+          "exact_match": 0.26666666666666666,
+          "token_f1": 0.33815491277560245,
+          "generation_recall": 0.5866666666666667,
+          "generation_all_supports": 0.28,
+          "abstained": 0.3466666666666667,
+          "failure": 0.0,
+          "answered_with_valid_citations": 0.6533333333333333,
+          "recall_at_5": 0.5866666666666667,
+          "all_supports_at_5": 0.28,
+          "recall_at_10": 0.6966666666666667,
+          "all_supports_at_10": 0.46,
+          "recall_at_20": 0.7466666666666667,
+          "all_supports_at_20": 0.54
+        },
+        "usage": {
+          "calls": 840,
+          "prompt_tokens": 299978,
+          "completion_tokens": 23533,
+          "total_tokens": 323511,
+          "tool_calls": 0,
+          "cache_hits": 781,
+          "service_seconds": 1328.471,
+          "calls_missing_usage": 0
+        },
+        "spec_sha256": "7007f5d59f4e562500d368bb726153453fb01a13c79374c5c41d2154c0104e2f",
+        "cost_note": "Usage is actual execution usage. Cache hits are not cold-run cost; original service cost is unknown unless recorded separately."
+      },
+      {
+        "corpus": "musique",
+        "corpus_structure": "Wikipedia passages",
+        "complexity": "3-hop",
+        "method": "dense",
+        "status": "measured",
+        "questions": 75,
+        "metrics": {
+          "exact_match": 0.16,
+          "token_f1": 0.23415608465608465,
+          "generation_recall": 0.44,
+          "generation_all_supports": 0.09333333333333334,
+          "abstained": 0.3466666666666667,
+          "failure": 0.0,
+          "answered_with_valid_citations": 0.6533333333333333,
+          "recall_at_5": 0.44,
+          "all_supports_at_5": 0.09333333333333334,
+          "recall_at_10": 0.5377777777777778,
+          "all_supports_at_10": 0.17333333333333334,
+          "recall_at_20": 0.6,
+          "all_supports_at_20": 0.21333333333333335
+        },
+        "usage": {
+          "calls": 75,
+          "prompt_tokens": 65739,
+          "completion_tokens": 2207,
+          "total_tokens": 67946,
+          "tool_calls": 0,
+          "cache_hits": 0,
+          "service_seconds": 229.178,
+          "calls_missing_usage": 0
+        },
+        "spec_sha256": "8e1ae1d9f73f0a41a22519c172669cdedb77dd90194125b0e77559daa3ae1e04",
+        "cost_note": "Usage is actual execution usage. Cache hits are not cold-run cost; original service cost is unknown unless recorded separately."
+      },
+      {
+        "corpus": "musique",
+        "corpus_structure": "Wikipedia passages",
+        "complexity": "3-hop",
+        "method": "decomposition",
+        "status": "pending",
+        "reason": "matched evaluation not yet available"
+      },
+      {
+        "corpus": "musique",
+        "corpus_structure": "Wikipedia passages",
+        "complexity": "3-hop",
+        "method": "ircot",
+        "status": "pending",
+        "reason": "matched evaluation not yet available"
+      },
+      {
+        "corpus": "musique",
+        "corpus_structure": "Wikipedia passages",
+        "complexity": "3-hop",
+        "method": "hipporag2",
+        "status": "pending",
+        "reason": "verified RI #4 index handoff required"
+      },
+      {
+        "corpus": "musique",
+        "corpus_structure": "Wikipedia passages",
+        "complexity": "3-hop",
+        "method": "lightrag",
+        "status": "pending",
+        "reason": "verified RI #4 index handoff required"
+      },
+      {
+        "corpus": "musique",
+        "corpus_structure": "Wikipedia passages",
+        "complexity": "3-hop",
+        "method": "corrective",
+        "status": "measured_with_failures",
+        "questions": 75,
+        "metrics": {
+          "exact_match": 0.18666666666666668,
+          "token_f1": 0.24983722377840026,
+          "generation_recall": 0.4222222222222222,
+          "generation_all_supports": 0.04,
+          "abstained": 0.3466666666666667,
+          "failure": 0.013333333333333334,
+          "answered_with_valid_citations": 0.6533333333333333,
+          "recall_at_5": 0.4222222222222222,
+          "all_supports_at_5": 0.04,
+          "recall_at_10": 0.48,
+          "all_supports_at_10": 0.10666666666666667,
+          "recall_at_20": 0.5733333333333334,
+          "all_supports_at_20": 0.18666666666666668
+        },
+        "usage": {
+          "calls": 482,
+          "prompt_tokens": 172430,
+          "completion_tokens": 14336,
+          "total_tokens": 186766,
+          "tool_calls": 0,
+          "cache_hits": 384,
+          "service_seconds": 701.597,
+          "calls_missing_usage": 0
+        },
+        "spec_sha256": "7007f5d59f4e562500d368bb726153453fb01a13c79374c5c41d2154c0104e2f",
+        "cost_note": "Usage is actual execution usage. Cache hits are not cold-run cost; original service cost is unknown unless recorded separately."
+      },
+      {
+        "corpus": "musique",
+        "corpus_structure": "Wikipedia passages",
+        "complexity": "4-hop",
+        "method": "dense",
+        "status": "measured",
+        "questions": 75,
+        "metrics": {
+          "exact_match": 0.12,
+          "token_f1": 0.21095238095238095,
+          "generation_recall": 0.27,
+          "generation_all_supports": 0.0,
+          "abstained": 0.5866666666666667,
+          "failure": 0.0,
+          "answered_with_valid_citations": 0.41333333333333333,
+          "recall_at_5": 0.27,
+          "all_supports_at_5": 0.0,
+          "recall_at_10": 0.32,
+          "all_supports_at_10": 0.0,
+          "recall_at_20": 0.44333333333333336,
+          "all_supports_at_20": 0.013333333333333334
+        },
+        "usage": {
+          "calls": 75,
+          "prompt_tokens": 68786,
+          "completion_tokens": 1956,
+          "total_tokens": 70742,
+          "tool_calls": 0,
+          "cache_hits": 0,
+          "service_seconds": 219.344,
+          "calls_missing_usage": 0
+        },
+        "spec_sha256": "8e1ae1d9f73f0a41a22519c172669cdedb77dd90194125b0e77559daa3ae1e04",
+        "cost_note": "Usage is actual execution usage. Cache hits are not cold-run cost; original service cost is unknown unless recorded separately."
+      },
+      {
+        "corpus": "musique",
+        "corpus_structure": "Wikipedia passages",
+        "complexity": "4-hop",
+        "method": "decomposition",
+        "status": "pending",
+        "reason": "matched evaluation not yet available"
+      },
+      {
+        "corpus": "musique",
+        "corpus_structure": "Wikipedia passages",
+        "complexity": "4-hop",
+        "method": "ircot",
+        "status": "pending",
+        "reason": "matched evaluation not yet available"
+      },
+      {
+        "corpus": "musique",
+        "corpus_structure": "Wikipedia passages",
+        "complexity": "4-hop",
+        "method": "hipporag2",
+        "status": "pending",
+        "reason": "verified RI #4 index handoff required"
+      },
+      {
+        "corpus": "musique",
+        "corpus_structure": "Wikipedia passages",
+        "complexity": "4-hop",
+        "method": "lightrag",
+        "status": "pending",
+        "reason": "verified RI #4 index handoff required"
+      },
+      {
+        "corpus": "musique",
+        "corpus_structure": "Wikipedia passages",
+        "complexity": "4-hop",
+        "method": "corrective",
+        "status": "measured",
+        "questions": 75,
+        "metrics": {
+          "exact_match": 0.17333333333333334,
+          "token_f1": 0.2573968253968254,
+          "generation_recall": 0.25666666666666665,
+          "generation_all_supports": 0.0,
+          "abstained": 0.4533333333333333,
+          "failure": 0.0,
+          "answered_with_valid_citations": 0.5466666666666666,
+          "recall_at_5": 0.25666666666666665,
+          "all_supports_at_5": 0.0,
+          "recall_at_10": 0.34,
+          "all_supports_at_10": 0.0,
+          "recall_at_20": 0.43333333333333335,
+          "all_supports_at_20": 0.04
+        },
+        "usage": {
+          "calls": 510,
+          "prompt_tokens": 189268,
+          "completion_tokens": 15492,
+          "total_tokens": 204760,
+          "tool_calls": 0,
+          "cache_hits": 379,
+          "service_seconds": 779.134,
+          "calls_missing_usage": 0
+        },
+        "spec_sha256": "7007f5d59f4e562500d368bb726153453fb01a13c79374c5c41d2154c0104e2f",
+        "cost_note": "Usage is actual execution usage. Cache hits are not cold-run cost; original service cost is unknown unless recorded separately."
+      },
+      {
+        "corpus": "nq",
+        "corpus_structure": "Wikipedia passages",
+        "complexity": "single-hop",
+        "method": "dense",
+        "status": "pending",
+        "reason": "matched evaluation not yet available"
+      },
+      {
+        "corpus": "nq",
+        "corpus_structure": "Wikipedia passages",
+        "complexity": "single-hop",
+        "method": "decomposition",
+        "status": "pending",
+        "reason": "matched evaluation not yet available"
+      },
+      {
+        "corpus": "nq",
+        "corpus_structure": "Wikipedia passages",
+        "complexity": "single-hop",
+        "method": "ircot",
+        "status": "pending",
+        "reason": "matched evaluation not yet available"
+      },
+      {
+        "corpus": "multihop-rag",
+        "corpus_structure": "Full publisher articles",
+        "complexity": "inference_query",
+        "method": "dense",
+        "status": "pending",
+        "reason": "article ruling and validated loader execution required"
+      },
+      {
+        "corpus": "multihop-rag",
+        "corpus_structure": "Full publisher articles",
+        "complexity": "inference_query",
+        "method": "decomposition",
+        "status": "pending",
+        "reason": "article ruling and validated loader execution required"
+      },
+      {
+        "corpus": "multihop-rag",
+        "corpus_structure": "Full publisher articles",
+        "complexity": "inference_query",
+        "method": "ircot",
+        "status": "pending",
+        "reason": "article ruling and validated loader execution required"
+      },
+      {
+        "corpus": "multihop-rag",
+        "corpus_structure": "Full publisher articles",
+        "complexity": "comparison_query",
+        "method": "dense",
+        "status": "pending",
+        "reason": "article ruling and validated loader execution required"
+      },
+      {
+        "corpus": "multihop-rag",
+        "corpus_structure": "Full publisher articles",
+        "complexity": "comparison_query",
+        "method": "decomposition",
+        "status": "pending",
+        "reason": "article ruling and validated loader execution required"
+      },
+      {
+        "corpus": "multihop-rag",
+        "corpus_structure": "Full publisher articles",
+        "complexity": "comparison_query",
+        "method": "ircot",
+        "status": "pending",
+        "reason": "article ruling and validated loader execution required"
+      },
+      {
+        "corpus": "multihop-rag",
+        "corpus_structure": "Full publisher articles",
+        "complexity": "temporal_query",
+        "method": "dense",
+        "status": "pending",
+        "reason": "article ruling and validated loader execution required"
+      },
+      {
+        "corpus": "multihop-rag",
+        "corpus_structure": "Full publisher articles",
+        "complexity": "temporal_query",
+        "method": "decomposition",
+        "status": "pending",
+        "reason": "article ruling and validated loader execution required"
+      },
+      {
+        "corpus": "multihop-rag",
+        "corpus_structure": "Full publisher articles",
+        "complexity": "temporal_query",
+        "method": "ircot",
+        "status": "pending",
+        "reason": "article ruling and validated loader execution required"
+      }
+    ],
+    "comparisons": [
+      {
+        "corpus": "musique",
+        "method": "graded-single-pass",
+        "control": "dense",
+        "questions": 300,
+        "original_ids": 300,
+        "samples": 5000,
+        "interval": "paired cluster percentile 95%",
+        "differences": {
+          "exact_match": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "token_f1": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "recall_at_5": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          },
+          "generation_all_supports": {
+            "mean": 0.0,
+            "low": 0.0,
+            "high": 0.0
+          }
+        },
+        "quality_improvement_supported": false,
+        "added_calls": 1200,
+        "added_calls_plus_cache_hits": 1500,
+        "cost_note": "Added calls are observed live responses. Compare cache hits separately; differing cache warmth is not a cold-cost saving."
+      },
+      {
+        "corpus": "musique",
+        "method": "corrective",
+        "control": "dense",
+        "questions": 300,
+        "original_ids": 300,
+        "samples": 5000,
+        "interval": "paired cluster percentile 95%",
+        "differences": {
+          "exact_match": {
+            "mean": 0.023333333333333334,
+            "low": -0.0033333333333333335,
+            "high": 0.05333333333333334
+          },
+          "token_f1": {
+            "mean": 0.021735099595393714,
+            "low": -0.009192232726423902,
+            "high": 0.0526167386399004
+          },
+          "recall_at_5": {
+            "mean": -0.0061111111111111106,
+            "low": -0.025833333333333333,
+            "high": 0.014166666666666664
+          },
+          "generation_all_supports": {
+            "mean": -0.013333333333333334,
+            "low": -0.04,
+            "high": 0.013333333333333334
+          }
+        },
+        "quality_improvement_supported": false,
+        "added_calls": 1532,
+        "added_calls_plus_cache_hits": 3076,
+        "cost_note": "Added calls are observed live responses. Compare cache hits separately; differing cache warmth is not a cold-cost saving."
+      },
+      {
+        "corpus": "musique",
+        "method": "corrective",
+        "control": "graded-single-pass",
+        "questions": 300,
+        "original_ids": 300,
+        "samples": 5000,
+        "interval": "paired cluster percentile 95%",
+        "differences": {
+          "exact_match": {
+            "mean": 0.023333333333333334,
+            "low": -0.0033333333333333335,
+            "high": 0.05333333333333334
+          },
+          "token_f1": {
+            "mean": 0.021735099595393714,
+            "low": -0.009192232726423902,
+            "high": 0.0526167386399004
+          },
+          "recall_at_5": {
+            "mean": -0.0061111111111111106,
+            "low": -0.025833333333333333,
+            "high": 0.014166666666666664
+          },
+          "generation_all_supports": {
+            "mean": -0.013333333333333334,
+            "low": -0.04,
+            "high": 0.013333333333333334
+          }
+        },
+        "quality_improvement_supported": false,
+        "added_calls": 332,
+        "added_calls_plus_cache_hits": 1576,
+        "cost_note": "Added calls are observed live responses. Compare cache hits separately; differing cache warmth is not a cold-cost saving."
+      }
+    ],
+    "wording_comparisons": [],
+    "reports": [
+      {
+        "spec_sha256": "8e1ae1d9f73f0a41a22519c172669cdedb77dd90194125b0e77559daa3ae1e04",
+        "method": "dense",
+        "corpus": "musique",
+        "provenance": {
+          "revision": "5ec05b38deecc3318bb432c69865959c56058990",
+          "questions_sha256": "98ed4e21d3076532f6388d42320fb809599c63a0d8dffca8ece5e41922be6b46",
+          "corpus_sha256": "73157a03ce3f0b1a5673dd5dc12bb970c24976dbffc688af9eecdd758c97ffcb"
+        },
+        "scores": {
+          "overall": {
+            "questions": 300,
+            "metrics": {
+              "exact_match": 0.2,
+              "token_f1": 0.2741508690862139,
+              "generation_recall": 0.4691666666666667,
+              "generation_all_supports": 0.16333333333333333,
+              "abstained": 0.4266666666666667,
+              "failure": 0.0,
+              "answered_with_valid_citations": 0.5733333333333334,
+              "recall_at_5": 0.4691666666666667,
+              "all_supports_at_5": 0.16333333333333333,
+              "recall_at_10": 0.5477777777777778,
+              "all_supports_at_10": 0.23666666666666666,
+              "recall_at_20": 0.6275,
+              "all_supports_at_20": 0.30333333333333334
+            },
+            "usage": {
+              "calls": 300,
+              "prompt_tokens": 260729,
+              "completion_tokens": 8388,
+              "total_tokens": 269117,
+              "tool_calls": 0,
+              "cache_hits": 0,
+              "service_seconds": 899.622,
+              "calls_missing_usage": 0
+            },
+            "stop_reasons": {
+              "answered": 172,
+              "the answer cited no usable source": 6,
+              "the model reported the sources do not answer the question": 122
+            },
+            "summed_question_wall_seconds": 1277.8230982985115
+          },
+          "2-hop": {
+            "questions": 150,
+            "metrics": {
+              "exact_match": 0.26,
+              "token_f1": 0.325747505368195,
+              "generation_recall": 0.5833333333333334,
+              "generation_all_supports": 0.28,
+              "abstained": 0.38666666666666666,
+              "failure": 0.0,
+              "answered_with_valid_citations": 0.6133333333333333,
+              "recall_at_5": 0.5833333333333334,
+              "all_supports_at_5": 0.28,
+              "recall_at_10": 0.6666666666666666,
+              "all_supports_at_10": 0.38666666666666666,
+              "recall_at_20": 0.7333333333333333,
+              "all_supports_at_20": 0.49333333333333335
+            },
+            "usage": {
+              "calls": 150,
+              "prompt_tokens": 126204,
+              "completion_tokens": 4225,
+              "total_tokens": 130429,
+              "tool_calls": 0,
+              "cache_hits": 0,
+              "service_seconds": 451.1,
+              "calls_missing_usage": 0
+            },
+            "stop_reasons": {
+              "answered": 92,
+              "the model reported the sources do not answer the question": 56,
+              "the answer cited no usable source": 2
+            },
+            "summed_question_wall_seconds": 656.906932527665
+          },
+          "3-hop": {
+            "questions": 75,
+            "metrics": {
+              "exact_match": 0.16,
+              "token_f1": 0.23415608465608465,
+              "generation_recall": 0.44,
+              "generation_all_supports": 0.09333333333333334,
+              "abstained": 0.3466666666666667,
+              "failure": 0.0,
+              "answered_with_valid_citations": 0.6533333333333333,
+              "recall_at_5": 0.44,
+              "all_supports_at_5": 0.09333333333333334,
+              "recall_at_10": 0.5377777777777778,
+              "all_supports_at_10": 0.17333333333333334,
+              "recall_at_20": 0.6,
+              "all_supports_at_20": 0.21333333333333335
+            },
+            "usage": {
+              "calls": 75,
+              "prompt_tokens": 65739,
+              "completion_tokens": 2207,
+              "total_tokens": 67946,
+              "tool_calls": 0,
+              "cache_hits": 0,
+              "service_seconds": 229.178,
+              "calls_missing_usage": 0
+            },
+            "stop_reasons": {
+              "answered": 49,
+              "the model reported the sources do not answer the question": 26
+            },
+            "summed_question_wall_seconds": 330.35333922842983
+          },
+          "4-hop": {
+            "questions": 75,
+            "metrics": {
+              "exact_match": 0.12,
+              "token_f1": 0.21095238095238095,
+              "generation_recall": 0.27,
+              "generation_all_supports": 0.0,
+              "abstained": 0.5866666666666667,
+              "failure": 0.0,
+              "answered_with_valid_citations": 0.41333333333333333,
+              "recall_at_5": 0.27,
+              "all_supports_at_5": 0.0,
+              "recall_at_10": 0.32,
+              "all_supports_at_10": 0.0,
+              "recall_at_20": 0.44333333333333336,
+              "all_supports_at_20": 0.013333333333333334
+            },
+            "usage": {
+              "calls": 75,
+              "prompt_tokens": 68786,
+              "completion_tokens": 1956,
+              "total_tokens": 70742,
+              "tool_calls": 0,
+              "cache_hits": 0,
+              "service_seconds": 219.344,
+              "calls_missing_usage": 0
+            },
+            "stop_reasons": {
+              "the answer cited no usable source": 4,
+              "answered": 31,
+              "the model reported the sources do not answer the question": 40
+            },
+            "summed_question_wall_seconds": 290.5628265424166
+          }
+        },
+        "cost_note": "Usage is actual execution usage. Cache hits are not cold-run cost; original service cost is unknown unless recorded separately.",
+        "execution_success": true,
+        "workers": 6,
+        "execution_wall_seconds": 215.40963994699996
+      },
+      {
+        "spec_sha256": "2fda7136c9aa9a1137bd4e535f32a7896c5f5e0f4380ff5478bf31fc0ec79e36",
+        "method": "graded-single-pass",
+        "corpus": "musique",
+        "provenance": {
+          "revision": "5ec05b38deecc3318bb432c69865959c56058990",
+          "questions_sha256": "98ed4e21d3076532f6388d42320fb809599c63a0d8dffca8ece5e41922be6b46",
+          "corpus_sha256": "73157a03ce3f0b1a5673dd5dc12bb970c24976dbffc688af9eecdd758c97ffcb"
+        },
+        "scores": {
+          "overall": {
+            "questions": 300,
+            "metrics": {
+              "exact_match": 0.2,
+              "token_f1": 0.2741508690862139,
+              "generation_recall": 0.4691666666666667,
+              "generation_all_supports": 0.16333333333333333,
+              "abstained": 0.4266666666666667,
+              "failure": 0.0,
+              "answered_with_valid_citations": 0.5733333333333334,
+              "recall_at_5": 0.4691666666666667,
+              "all_supports_at_5": 0.16333333333333333,
+              "recall_at_10": 0.5477777777777778,
+              "all_supports_at_10": 0.23666666666666666,
+              "recall_at_20": 0.6275,
+              "all_supports_at_20": 0.30333333333333334
+            },
+            "usage": {
+              "calls": 1500,
+              "prompt_tokens": 466128,
+              "completion_tokens": 48159,
+              "total_tokens": 514287,
+              "tool_calls": 0,
+              "cache_hits": 300,
+              "service_seconds": 3929.125,
+              "calls_missing_usage": 0
+            },
+            "stop_reasons": {
+              "answered": 172,
+              "the answer cited no usable source": 6,
+              "the model reported the sources do not answer the question": 122
+            },
+            "summed_question_wall_seconds": 6717.587964964099
+          },
+          "2-hop": {
+            "questions": 150,
+            "metrics": {
+              "exact_match": 0.26,
+              "token_f1": 0.325747505368195,
+              "generation_recall": 0.5833333333333334,
+              "generation_all_supports": 0.28,
+              "abstained": 0.38666666666666666,
+              "failure": 0.0,
+              "answered_with_valid_citations": 0.6133333333333333,
+              "recall_at_5": 0.5833333333333334,
+              "all_supports_at_5": 0.28,
+              "recall_at_10": 0.6666666666666666,
+              "all_supports_at_10": 0.38666666666666666,
+              "recall_at_20": 0.7333333333333333,
+              "all_supports_at_20": 0.49333333333333335
+            },
+            "usage": {
+              "calls": 750,
+              "prompt_tokens": 226062,
+              "completion_tokens": 23396,
+              "total_tokens": 249458,
+              "tool_calls": 0,
+              "cache_hits": 150,
+              "service_seconds": 1898.93,
+              "calls_missing_usage": 0
+            },
+            "stop_reasons": {
+              "answered": 92,
+              "the model reported the sources do not answer the question": 56,
+              "the answer cited no usable source": 2
+            },
+            "summed_question_wall_seconds": 3373.7805553936632
+          },
+          "3-hop": {
+            "questions": 75,
+            "metrics": {
+              "exact_match": 0.16,
+              "token_f1": 0.23415608465608465,
+              "generation_recall": 0.44,
+              "generation_all_supports": 0.09333333333333334,
+              "abstained": 0.3466666666666667,
+              "failure": 0.0,
+              "answered_with_valid_citations": 0.6533333333333333,
+              "recall_at_5": 0.44,
+              "all_supports_at_5": 0.09333333333333334,
+              "recall_at_10": 0.5377777777777778,
+              "all_supports_at_10": 0.17333333333333334,
+              "recall_at_20": 0.6,
+              "all_supports_at_20": 0.21333333333333335
+            },
+            "usage": {
+              "calls": 375,
+              "prompt_tokens": 118038,
+              "completion_tokens": 12289,
+              "total_tokens": 130327,
+              "tool_calls": 0,
+              "cache_hits": 75,
+              "service_seconds": 1003.402,
+              "calls_missing_usage": 0
+            },
+            "stop_reasons": {
+              "answered": 49,
+              "the model reported the sources do not answer the question": 26
+            },
+            "summed_question_wall_seconds": 1679.9043900953839
+          },
+          "4-hop": {
+            "questions": 75,
+            "metrics": {
+              "exact_match": 0.12,
+              "token_f1": 0.21095238095238095,
+              "generation_recall": 0.27,
+              "generation_all_supports": 0.0,
+              "abstained": 0.5866666666666667,
+              "failure": 0.0,
+              "answered_with_valid_citations": 0.41333333333333333,
+              "recall_at_5": 0.27,
+              "all_supports_at_5": 0.0,
+              "recall_at_10": 0.32,
+              "all_supports_at_10": 0.0,
+              "recall_at_20": 0.44333333333333336,
+              "all_supports_at_20": 0.013333333333333334
+            },
+            "usage": {
+              "calls": 375,
+              "prompt_tokens": 122028,
+              "completion_tokens": 12474,
+              "total_tokens": 134502,
+              "tool_calls": 0,
+              "cache_hits": 75,
+              "service_seconds": 1026.793,
+              "calls_missing_usage": 0
+            },
+            "stop_reasons": {
+              "the answer cited no usable source": 4,
+              "answered": 31,
+              "the model reported the sources do not answer the question": 40
+            },
+            "summed_question_wall_seconds": 1663.9030194750521
+          }
+        },
+        "cost_note": "Usage is actual execution usage. Cache hits are not cold-run cost; original service cost is unknown unless recorded separately.",
+        "execution_success": true,
+        "workers": 6,
+        "execution_wall_seconds": 1124.000815180014
+      },
+      {
+        "spec_sha256": "7007f5d59f4e562500d368bb726153453fb01a13c79374c5c41d2154c0104e2f",
+        "method": "corrective",
+        "corpus": "musique",
+        "provenance": {
+          "revision": "5ec05b38deecc3318bb432c69865959c56058990",
+          "questions_sha256": "98ed4e21d3076532f6388d42320fb809599c63a0d8dffca8ece5e41922be6b46",
+          "corpus_sha256": "73157a03ce3f0b1a5673dd5dc12bb970c24976dbffc688af9eecdd758c97ffcb"
+        },
+        "scores": {
+          "overall": {
+            "questions": 300,
+            "metrics": {
+              "exact_match": 0.22333333333333333,
+              "token_f1": 0.2958859686816076,
+              "generation_recall": 0.46305555555555555,
+              "generation_all_supports": 0.15,
+              "abstained": 0.37333333333333335,
+              "failure": 0.0033333333333333335,
+              "answered_with_valid_citations": 0.6266666666666667,
+              "recall_at_5": 0.46305555555555555,
+              "all_supports_at_5": 0.15,
+              "recall_at_10": 0.5533333333333333,
+              "all_supports_at_10": 0.25666666666666665,
+              "recall_at_20": 0.625,
+              "all_supports_at_20": 0.32666666666666666
+            },
+            "usage": {
+              "calls": 1832,
+              "prompt_tokens": 661676,
+              "completion_tokens": 53361,
+              "total_tokens": 715037,
+              "tool_calls": 0,
+              "cache_hits": 1544,
+              "service_seconds": 2809.2019999999998,
+              "calls_missing_usage": 0
+            },
+            "stop_reasons": {
+              "answered": 188,
+              "the model reported the sources do not answer the question": 101,
+              "the answer cited no usable source": 9,
+              "the answer reads as a refusal": 1,
+              "execution_failure": 1
+            },
+            "summed_question_wall_seconds": 6108.304153893841
+          },
+          "2-hop": {
+            "questions": 150,
+            "metrics": {
+              "exact_match": 0.26666666666666666,
+              "token_f1": 0.33815491277560245,
+              "generation_recall": 0.5866666666666667,
+              "generation_all_supports": 0.28,
+              "abstained": 0.3466666666666667,
+              "failure": 0.0,
+              "answered_with_valid_citations": 0.6533333333333333,
+              "recall_at_5": 0.5866666666666667,
+              "all_supports_at_5": 0.28,
+              "recall_at_10": 0.6966666666666667,
+              "all_supports_at_10": 0.46,
+              "recall_at_20": 0.7466666666666667,
+              "all_supports_at_20": 0.54
+            },
+            "usage": {
+              "calls": 840,
+              "prompt_tokens": 299978,
+              "completion_tokens": 23533,
+              "total_tokens": 323511,
+              "tool_calls": 0,
+              "cache_hits": 781,
+              "service_seconds": 1328.471,
+              "calls_missing_usage": 0
+            },
+            "stop_reasons": {
+              "answered": 98,
+              "the model reported the sources do not answer the question": 47,
+              "the answer cited no usable source": 5
+            },
+            "summed_question_wall_seconds": 2839.571914749453
+          },
+          "3-hop": {
+            "questions": 75,
+            "metrics": {
+              "exact_match": 0.18666666666666668,
+              "token_f1": 0.24983722377840026,
+              "generation_recall": 0.4222222222222222,
+              "generation_all_supports": 0.04,
+              "abstained": 0.3466666666666667,
+              "failure": 0.013333333333333334,
+              "answered_with_valid_citations": 0.6533333333333333,
+              "recall_at_5": 0.4222222222222222,
+              "all_supports_at_5": 0.04,
+              "recall_at_10": 0.48,
+              "all_supports_at_10": 0.10666666666666667,
+              "recall_at_20": 0.5733333333333334,
+              "all_supports_at_20": 0.18666666666666668
+            },
+            "usage": {
+              "calls": 482,
+              "prompt_tokens": 172430,
+              "completion_tokens": 14336,
+              "total_tokens": 186766,
+              "tool_calls": 0,
+              "cache_hits": 384,
+              "service_seconds": 701.597,
+              "calls_missing_usage": 0
+            },
+            "stop_reasons": {
+              "answered": 49,
+              "the model reported the sources do not answer the question": 24,
+              "execution_failure": 1,
+              "the answer cited no usable source": 1
+            },
+            "summed_question_wall_seconds": 1561.5835865875706
+          },
+          "4-hop": {
+            "questions": 75,
+            "metrics": {
+              "exact_match": 0.17333333333333334,
+              "token_f1": 0.2573968253968254,
+              "generation_recall": 0.25666666666666665,
+              "generation_all_supports": 0.0,
+              "abstained": 0.4533333333333333,
+              "failure": 0.0,
+              "answered_with_valid_citations": 0.5466666666666666,
+              "recall_at_5": 0.25666666666666665,
+              "all_supports_at_5": 0.0,
+              "recall_at_10": 0.34,
+              "all_supports_at_10": 0.0,
+              "recall_at_20": 0.43333333333333335,
+              "all_supports_at_20": 0.04
+            },
+            "usage": {
+              "calls": 510,
+              "prompt_tokens": 189268,
+              "completion_tokens": 15492,
+              "total_tokens": 204760,
+              "tool_calls": 0,
+              "cache_hits": 379,
+              "service_seconds": 779.134,
+              "calls_missing_usage": 0
+            },
+            "stop_reasons": {
+              "answered": 41,
+              "the answer cited no usable source": 3,
+              "the model reported the sources do not answer the question": 30,
+              "the answer reads as a refusal": 1
+            },
+            "summed_question_wall_seconds": 1707.148652556818
+          }
+        },
+        "cost_note": "Usage is actual execution usage. Cache hits are not cold-run cost; original service cost is unknown unless recorded separately.",
+        "execution_success": false,
+        "workers": 6,
+        "execution_wall_seconds": 1025.198331897962
+      }
+    ],
+    "selection": null,
+    "full_corpus_coverage": false
+  },
+  "produced_by": {
+    "model": "Qwen3_6-35B-A3B",
+    "endpoint": "vector-cluster",
+    "producer": "build_summaries.py",
+    "note": "Replay and paired comparison of recorded executions; summary creation makes no model calls."
+  }
+}

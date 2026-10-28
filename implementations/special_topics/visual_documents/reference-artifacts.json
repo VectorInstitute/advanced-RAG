@@ -1,0 +1,816 @@
+{
+  "artifacts": [
+    {
+      "key": {
+        "artifact_type": "answer-verdicts",
+        "config": {
+          "endpoint": "vector-cluster",
+          "judge_prompt": "evaluation.answers.JUDGE_PROMPT",
+          "model": "Qwen3_6-35B-A3B",
+          "questions": "subset",
+          "tolerance": 0.01,
+          "upstream": {
+            "answers": "b00f01b94066fee54bc4171ed66c24ccd635ccd82f3d3f9997309143f9ac2d63"
+          }
+        },
+        "producer_id": "row-E1",
+        "ri_id": "visual-documents"
+      },
+      "sha256": "eb61ef4b88894c1c1c0bb95022dd7c7f6ab78598355383ffa2243da42697bb3a",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-visual-documents-d33b16f93350/visual-documents.answer-verdicts.row-e1.b14a1a6c3360577e90eef6019e7f8cd7cd54bffc45fb70f0a741b67b99b3ffc4.json"
+    },
+    {
+      "key": {
+        "artifact_type": "answer-verdicts",
+        "config": {
+          "endpoint": "vector-cluster",
+          "judge_prompt": "evaluation.answers.JUDGE_PROMPT",
+          "model": "Qwen3_6-35B-A3B",
+          "questions": "all",
+          "tolerance": 0.01,
+          "upstream": {
+            "answers": "50dcb84e72f3ef861adfc510d67338d7ab571fa490697cb2391e340aec997a40"
+          }
+        },
+        "producer_id": "row-E1",
+        "ri_id": "visual-documents"
+      },
+      "sha256": "3102c773a8007b4621a0cefdcfdca5ce77e342bc321049140a654cc08435f0cd",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-visual-documents-d33b16f93350/visual-documents.answer-verdicts.row-e1.ff4b801118e74dae04ff12cd4a54fa5b346ffa2d33dfc3c861357a8ffc64ce18.json"
+    },
+    {
+      "key": {
+        "artifact_type": "answer-verdicts",
+        "config": {
+          "endpoint": "vector-cluster",
+          "judge_prompt": "evaluation.answers.JUDGE_PROMPT",
+          "model": "Qwen3_6-35B-A3B",
+          "questions": "all",
+          "tolerance": 0.01,
+          "upstream": {
+            "answers": "06416c3ab2588bf1cb9ba382ea7a036b6d685b244432d782eb26059932348d10"
+          }
+        },
+        "producer_id": "row-E2",
+        "ri_id": "visual-documents"
+      },
+      "sha256": "e5789dad807d69ee7f5ccfef874791f8f968d77a2a5c935d317035ee7f2cd263",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-visual-documents-d33b16f93350/visual-documents.answer-verdicts.row-e2.72ec9b6aa8b3a3069849577396edb54ab00ee2a62492d8f1ccff40223846a56e.json"
+    },
+    {
+      "key": {
+        "artifact_type": "answer-verdicts",
+        "config": {
+          "endpoint": "vector-cluster",
+          "judge_prompt": "evaluation.answers.JUDGE_PROMPT",
+          "model": "Qwen3_6-35B-A3B",
+          "questions": "subset",
+          "tolerance": 0.01,
+          "upstream": {
+            "answers": "8ad85adc67e9b58ea079922b7d3c66dc8f06b8ba91c5a2409f9c8a3418838e73"
+          }
+        },
+        "producer_id": "row-E2",
+        "ri_id": "visual-documents"
+      },
+      "sha256": "3da4fa8cd35803ff2c307477f8698e4c59d06817d42f10c506511e91b36e55af",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-visual-documents-d33b16f93350/visual-documents.answer-verdicts.row-e2.e8b7505159a35ca925361a873b5c506e179b86cc3f0a8402f0966bfed9a70720.json"
+    },
+    {
+      "key": {
+        "artifact_type": "answer-verdicts",
+        "config": {
+          "endpoint": "vector-cluster",
+          "judge_prompt": "evaluation.answers.JUDGE_PROMPT",
+          "model": "Qwen3_6-35B-A3B",
+          "questions": "subset",
+          "tolerance": 0.01,
+          "upstream": {
+            "answers": "9d64db7698c8c0be0a9e17cb0538d9cf011c93647473e1de8627a2d9c4e10fcf"
+          }
+        },
+        "producer_id": "row-H",
+        "ri_id": "visual-documents"
+      },
+      "sha256": "9caf5343125575c7ff82c81a07ed8206f18fc171cb394258a7402054d600c05b",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-visual-documents-d33b16f93350/visual-documents.answer-verdicts.row-h.6eea1fa56978abfe0d52933cb4059059af52005894788ac789e7e4bb436cba9e.json"
+    },
+    {
+      "key": {
+        "artifact_type": "answer-verdicts",
+        "config": {
+          "endpoint": "vector-cluster",
+          "judge_prompt": "evaluation.answers.JUDGE_PROMPT",
+          "model": "Qwen3_6-35B-A3B",
+          "questions": "all",
+          "tolerance": 0.01,
+          "upstream": {
+            "answers": "95ce2d5dc8a5cd7a37dda7aba017d45feb5dfba4c1a50f3c14290f8bc12f9a8b"
+          }
+        },
+        "producer_id": "row-H",
+        "ri_id": "visual-documents"
+      },
+      "sha256": "ed37893f9b9df952317676aba50c1a734f5335aac73ff7fa909f109cda11fe10",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-visual-documents-d33b16f93350/visual-documents.answer-verdicts.row-h.9823287bf4b97897f092ef2d0bb29e37ee0088592d7ac74b74ee5851e934483d.json"
+    },
+    {
+      "key": {
+        "artifact_type": "answer-verdicts",
+        "config": {
+          "endpoint": "vector-cluster",
+          "judge_prompt": "evaluation.answers.JUDGE_PROMPT",
+          "model": "Qwen3_6-35B-A3B",
+          "questions": "subset",
+          "tolerance": 0.01,
+          "upstream": {
+            "answers": "8a26da16ece6a526df867e9ed341affa93055d11a8ada6792dc44c366d427d19"
+          }
+        },
+        "producer_id": "row-L",
+        "ri_id": "visual-documents"
+      },
+      "sha256": "c7b9c2c9a4c6bdc9c36f65d471b2df139e3b035d6482c243e0b5d4c06cb3e2ee",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-visual-documents-d33b16f93350/visual-documents.answer-verdicts.row-l.ab555ab1902e2453f64f36f38b1756c31d05f639f8f8cc5dfdca5985c21f8454.json"
+    },
+    {
+      "key": {
+        "artifact_type": "answer-verdicts",
+        "config": {
+          "endpoint": "vector-cluster",
+          "judge_prompt": "evaluation.answers.JUDGE_PROMPT",
+          "model": "Qwen3_6-35B-A3B",
+          "questions": "all",
+          "tolerance": 0.01,
+          "upstream": {
+            "answers": "354c3091b336b095af1ea6724c86d60f44a0cb6b937ab78cd407e6649244c2b2"
+          }
+        },
+        "producer_id": "row-L",
+        "ri_id": "visual-documents"
+      },
+      "sha256": "8db20822e5968ed70a180950551d3f2993d4ebdc6567a2967f520a37c026885e",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-visual-documents-d33b16f93350/visual-documents.answer-verdicts.row-l.d448c490c28f617c5c470f3e787a689c01c70303fbbad8e1cae888214504fd9d.json"
+    },
+    {
+      "key": {
+        "artifact_type": "answer-verdicts",
+        "config": {
+          "endpoint": "vector-cluster",
+          "judge_prompt": "evaluation.answers.JUDGE_PROMPT",
+          "model": "Qwen3_6-35B-A3B",
+          "questions": "subset",
+          "tolerance": 0.01,
+          "upstream": {
+            "answers": "fd34b6a7137a677a40b5ab1fad28a95399113d914522580c2def125550f80665"
+          }
+        },
+        "producer_id": "row-O-both",
+        "ri_id": "visual-documents"
+      },
+      "sha256": "ddf8cd228b688e8f6a6c9ef4acfb926036206577556ec9ed0dc2e098690b6959",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-visual-documents-d33b16f93350/visual-documents.answer-verdicts.row-o-both.51082b71c1461c64fc5991668f419247c017f559092e46e862cfe43f719974db.json"
+    },
+    {
+      "key": {
+        "artifact_type": "answer-verdicts",
+        "config": {
+          "endpoint": "vector-cluster",
+          "judge_prompt": "evaluation.answers.JUDGE_PROMPT",
+          "model": "Qwen3_6-35B-A3B",
+          "questions": "all",
+          "tolerance": 0.01,
+          "upstream": {
+            "answers": "e9d57581b25b2a49dffb3a46f6051bced4c9419bc8f26c950aab967dd7a172cc"
+          }
+        },
+        "producer_id": "row-O-both",
+        "ri_id": "visual-documents"
+      },
+      "sha256": "4bb7d6eb28c6ddcc046eb082cc5764c6bc42d0126379447d16679a705d8580f3",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-visual-documents-d33b16f93350/visual-documents.answer-verdicts.row-o-both.cd716347fc8fe4efdd50f596ad81aa533f43fb9d7145a4de98591a7d7365862a.json"
+    },
+    {
+      "key": {
+        "artifact_type": "answer-verdicts",
+        "config": {
+          "endpoint": "vector-cluster",
+          "judge_prompt": "evaluation.answers.JUDGE_PROMPT",
+          "model": "Qwen3_6-35B-A3B",
+          "questions": "all",
+          "tolerance": 0.01,
+          "upstream": {
+            "answers": "0d580d32a0a292663e7e9aa03f97fc7346e51de6fe6147ffb8ab9905c484c9ed"
+          }
+        },
+        "producer_id": "row-O-enriched",
+        "ri_id": "visual-documents"
+      },
+      "sha256": "d6b1aaa5a6fd1ca6f0b6f0bd0c14b12b8d4deab7878959008acdab581eedfd72",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-visual-documents-d33b16f93350/visual-documents.answer-verdicts.row-o-enriched.3fbb6b3e43c33b604a2f141cb5a34b4ff237c75de4d9b9e25e2bd5929ffa88b5.json"
+    },
+    {
+      "key": {
+        "artifact_type": "answer-verdicts",
+        "config": {
+          "endpoint": "vector-cluster",
+          "judge_prompt": "evaluation.answers.JUDGE_PROMPT",
+          "model": "Qwen3_6-35B-A3B",
+          "questions": "subset",
+          "tolerance": 0.01,
+          "upstream": {
+            "answers": "5b79b95ebc12c585cf4935c8d90d06258a3d46e53a84b645af659aa1e9cb2556"
+          }
+        },
+        "producer_id": "row-O-enriched",
+        "ri_id": "visual-documents"
+      },
+      "sha256": "aacdd24f2a59ee5794d0619ba691e0006c27af62324d57042623ef70f3df2195",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-visual-documents-d33b16f93350/visual-documents.answer-verdicts.row-o-enriched.e27107555b2919146a0cacab82e12c98e4259447d6f889d7d6abb3411431a185.json"
+    },
+    {
+      "key": {
+        "artifact_type": "answer-verdicts",
+        "config": {
+          "endpoint": "vector-cluster",
+          "judge_prompt": "evaluation.answers.JUDGE_PROMPT",
+          "model": "Qwen3_6-35B-A3B",
+          "questions": "all",
+          "tolerance": 0.01,
+          "upstream": {
+            "answers": "302201d15c8c1651b420af061ea8388f4d465d542c543b342ed5918fa82f1183"
+          }
+        },
+        "producer_id": "row-O-image",
+        "ri_id": "visual-documents"
+      },
+      "sha256": "fb4f2f8481d650a25521c2e4ad2468922d0c1dcabc0b99f00b2076895b83c3d9",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-visual-documents-d33b16f93350/visual-documents.answer-verdicts.row-o-image.36fa8a272bd8fc8f559e5fa9ab210a65694d16f5bc0209d69042249b2c013669.json"
+    },
+    {
+      "key": {
+        "artifact_type": "answer-verdicts",
+        "config": {
+          "endpoint": "vector-cluster",
+          "judge_prompt": "evaluation.answers.JUDGE_PROMPT",
+          "model": "Qwen3_6-35B-A3B",
+          "questions": "subset",
+          "tolerance": 0.01,
+          "upstream": {
+            "answers": "0506862c65aa00593a9e92280ebe71dbc1e4410d23adf1cce9d2b2bc98ecb70b"
+          }
+        },
+        "producer_id": "row-O-image",
+        "ri_id": "visual-documents"
+      },
+      "sha256": "5831e33156a2235d3cc506a394b238eb87815560e37a224959eb58849b39a5c8",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-visual-documents-d33b16f93350/visual-documents.answer-verdicts.row-o-image.66cdc8b6b7626d986ecbbfecd1ac13394dafabeda75f600717225e33debfb3fa.json"
+    },
+    {
+      "key": {
+        "artifact_type": "answer-verdicts",
+        "config": {
+          "endpoint": "vector-cluster",
+          "judge_prompt": "evaluation.answers.JUDGE_PROMPT",
+          "model": "Qwen3_6-35B-A3B",
+          "questions": "all",
+          "tolerance": 0.01,
+          "upstream": {
+            "answers": "f34bc1973257e01219a969c68e682eff8e4d2bc0f6d8f20fcc1aff32aa91527d"
+          }
+        },
+        "producer_id": "row-O-text",
+        "ri_id": "visual-documents"
+      },
+      "sha256": "f4b238c0582646b14985fb584b1e519e61b2a12cced6b32587d18a840d6f7e1f",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-visual-documents-d33b16f93350/visual-documents.answer-verdicts.row-o-text.2c7cdc1b61523a98cb20833835396196200bcfccfe21174ada8b3dc85ba618cb.json"
+    },
+    {
+      "key": {
+        "artifact_type": "answer-verdicts",
+        "config": {
+          "endpoint": "vector-cluster",
+          "judge_prompt": "evaluation.answers.JUDGE_PROMPT",
+          "model": "Qwen3_6-35B-A3B",
+          "questions": "subset",
+          "tolerance": 0.01,
+          "upstream": {
+            "answers": "e59742f763f727fa81a2a8a9273c8e4060a1f2cbe401dd1244ba45327124a1ef"
+          }
+        },
+        "producer_id": "row-O-text",
+        "ri_id": "visual-documents"
+      },
+      "sha256": "7a4ad996ec33bd7b3c818f8d25b2a01c1cb780c30b0b42f355a983d6678f5a6e",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-visual-documents-d33b16f93350/visual-documents.answer-verdicts.row-o-text.dcc670daeaccaef40d5362eeef7b95db0d22597a0648afa91b3347cae4295a3a.json"
+    },
+    {
+      "key": {
+        "artifact_type": "answer-verdicts",
+        "config": {
+          "endpoint": "vector-cluster",
+          "judge_prompt": "evaluation.answers.JUDGE_PROMPT",
+          "model": "Qwen3_6-35B-A3B",
+          "questions": "subset",
+          "tolerance": 0.01,
+          "upstream": {
+            "answers": "e267f38a4e0562c28c7c2b001c7fa4792f4bcd1d8afdb5ccceaf0bd0da14f71d"
+          }
+        },
+        "producer_id": "row-T",
+        "ri_id": "visual-documents"
+      },
+      "sha256": "6886c71b63679bc254e6e78662bf203e95ddeb420235c01606a3f76317cb0c64",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-visual-documents-d33b16f93350/visual-documents.answer-verdicts.row-t.45b6e60d62ba27f208a6b64d6e22d77f58efffd21cd8787d9780cc129a94bbfc.json"
+    },
+    {
+      "key": {
+        "artifact_type": "answer-verdicts",
+        "config": {
+          "endpoint": "vector-cluster",
+          "judge_prompt": "evaluation.answers.JUDGE_PROMPT",
+          "model": "Qwen3_6-35B-A3B",
+          "questions": "all",
+          "tolerance": 0.01,
+          "upstream": {
+            "answers": "e68bfceee19f5247539f344cbea51006699161eaa07a878541f8bfa5ebc1a5ac"
+          }
+        },
+        "producer_id": "row-T",
+        "ri_id": "visual-documents"
+      },
+      "sha256": "db109bcec1a1f0c44d4ceec7b0e0ed33df35d47d0b63e4a75647277eee269437",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-visual-documents-d33b16f93350/visual-documents.answer-verdicts.row-t.c9703dbde144b77db68852008b5c2591b5058ffcbc7ab98009b3c68af811d006.json"
+    },
+    {
+      "key": {
+        "artifact_type": "answer-verdicts",
+        "config": {
+          "endpoint": "vector-cluster",
+          "judge_prompt": "evaluation.answers.JUDGE_PROMPT",
+          "model": "Qwen3_6-35B-A3B",
+          "questions": "subset",
+          "tolerance": 0.01,
+          "upstream": {
+            "answers": "62d353c665964e71b009cb01e1ecb35c988c2a3dd975f533e7fe699e8be40e48"
+          }
+        },
+        "producer_id": "row-TV",
+        "ri_id": "visual-documents"
+      },
+      "sha256": "8e599033719c1fc47a8b0c9249ec5a2afdaa5aa24f76feb82013842999ee7566",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-visual-documents-d33b16f93350/visual-documents.answer-verdicts.row-tv.7cca765e252e81c8046931de9ecf59fe97b9a375087171765d921e978b67e370.json"
+    },
+    {
+      "key": {
+        "artifact_type": "answer-verdicts",
+        "config": {
+          "endpoint": "vector-cluster",
+          "judge_prompt": "evaluation.answers.JUDGE_PROMPT",
+          "model": "Qwen3_6-35B-A3B",
+          "questions": "all",
+          "tolerance": 0.01,
+          "upstream": {
+            "answers": "d29d8af64391058d9929ec97705d97a4ca39029e211a001d888a990f074926ff"
+          }
+        },
+        "producer_id": "row-TV",
+        "ri_id": "visual-documents"
+      },
+      "sha256": "edc43bf47422f676a93dcfd6cd3c4ab39fe81aef39d9ccce062f7c3f3892d33c",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-visual-documents-d33b16f93350/visual-documents.answer-verdicts.row-tv.c1e5f73122078614d7a12d053fd373a489af7802eac8b95bdfbc3af88ec4b508.json"
+    },
+    {
+      "key": {
+        "artifact_type": "answer-verdicts",
+        "config": {
+          "endpoint": "vector-cluster",
+          "judge_prompt": "evaluation.answers.JUDGE_PROMPT",
+          "model": "Qwen3_6-35B-A3B",
+          "questions": "subset",
+          "tolerance": 0.01,
+          "upstream": {
+            "answers": "5529feffb103b61234b19975ab853d04ee5d1e037c6951048c31003d9ea8f397"
+          }
+        },
+        "producer_id": "row-VT",
+        "ri_id": "visual-documents"
+      },
+      "sha256": "0dc34dbe1676eb2cbf369b263ac29e4d4726550bda4fd5dbcb1f027f25f7fa56",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-visual-documents-d33b16f93350/visual-documents.answer-verdicts.row-vt.bc11f7232ba7c24a1d88ae4ee374750e29e2e5e978bb810780d3a808dcf2940f.json"
+    },
+    {
+      "key": {
+        "artifact_type": "answer-verdicts",
+        "config": {
+          "endpoint": "vector-cluster",
+          "judge_prompt": "evaluation.answers.JUDGE_PROMPT",
+          "model": "Qwen3_6-35B-A3B",
+          "questions": "all",
+          "tolerance": 0.01,
+          "upstream": {
+            "answers": "4d95bba96f12e696d7d89613e31dd1735d36db20c1679960aa29d4f08932ba61"
+          }
+        },
+        "producer_id": "row-VT",
+        "ri_id": "visual-documents"
+      },
+      "sha256": "bd8464262d4e5e4d0d923753c901b1e3a7c26f5d4af12a24cffff2eee7e76589",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-visual-documents-d33b16f93350/visual-documents.answer-verdicts.row-vt.dbd904c93607cdd6e74cf7011bc65d208864447f49739272931cd97ac45d13f4.json"
+    },
+    {
+      "key": {
+        "artifact_type": "answer-verdicts",
+        "config": {
+          "endpoint": "vector-cluster",
+          "judge_prompt": "evaluation.answers.JUDGE_PROMPT",
+          "model": "Qwen3_6-35B-A3B",
+          "questions": "all",
+          "tolerance": 0.01,
+          "upstream": {
+            "answers": "2567078a813dd720a8c2c3e4f66de45a82f5685393fa4c329ecab54cc1ea6f55"
+          }
+        },
+        "producer_id": "row-VV",
+        "ri_id": "visual-documents"
+      },
+      "sha256": "36c613812b62c7b0df98f7ab1186d13692bbf63ee28461781cceac5d4c86b272",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-visual-documents-d33b16f93350/visual-documents.answer-verdicts.row-vv.9e182c49c2e3b13d2aaad53885684b9e60ad422b43a42db595c054060466ddaf.json"
+    },
+    {
+      "key": {
+        "artifact_type": "answer-verdicts",
+        "config": {
+          "endpoint": "vector-cluster",
+          "judge_prompt": "evaluation.answers.JUDGE_PROMPT",
+          "model": "Qwen3_6-35B-A3B",
+          "questions": "subset",
+          "tolerance": 0.01,
+          "upstream": {
+            "answers": "8e14cdd56060dd14c00bf01089cffa9b7fbdb565e78975b534074b24268053ed"
+          }
+        },
+        "producer_id": "row-VV",
+        "ri_id": "visual-documents"
+      },
+      "sha256": "5fb21d2b119357a2fa24c574ddbe7cc4d1e1cde33328de5a259dc614cb2d1d0e",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-visual-documents-d33b16f93350/visual-documents.answer-verdicts.row-vv.ab103464e1ec6d00498ae6789c35ab533b28c1ec6fc8237e232c8e41c7749b39.json"
+    },
+    {
+      "key": {
+        "artifact_type": "cpu-probe",
+        "config": {
+          "index": "7bbda9be1d74f2eb53a75295c215f5a096f37bb334aea09997526d775485810b",
+          "pages": 4,
+          "queries": "d2541c3832e7778db155a40d0154d506f97253075a6f62698b7ebc6ffe75bbd5"
+        },
+        "producer_id": "colmodernvbert",
+        "ri_id": "visual-documents"
+      },
+      "sha256": "5de57efd627b11c1c42b17693d4b98646bd1cf2b1acf3771aeb88305059282e0",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-visual-documents-d33b16f93350/visual-documents.cpu-probe.colmodernvbert.86482fa7d22603945ac524cd2e362fcbb41445e10d96465d230f62bfa96b1551.json"
+    },
+    {
+      "key": {
+        "artifact_type": "page-elements",
+        "config": {
+          "universe": "4865d0595cb815a359ef8d57dfb68a460c58631670cf8da1e702480f9ac1414c",
+          "version": 1
+        },
+        "producer_id": "docling",
+        "ri_id": "visual-documents"
+      },
+      "sha256": "31b984c3ef6c032daf74823479a0f1c12e3b79fc2271a95fcd60e42601c94fcf",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-visual-documents-d33b16f93350/visual-documents.page-elements.docling.34ca15c48506cbed84cc6962757026473941489800c23443efde213e693d8a5c.json"
+    },
+    {
+      "key": {
+        "artifact_type": "page-index",
+        "config": {
+          "dtype": "float16",
+          "model": "Qdrant/colmodernvbert",
+          "scale": 1.5,
+          "universe": "4865d0595cb815a359ef8d57dfb68a460c58631670cf8da1e702480f9ac1414c"
+        },
+        "producer_id": "colmodernvbert",
+        "ri_id": "visual-documents"
+      },
+      "payload_sha256": "598336ea632f1c51f5ec17e9a2ca52b7f1e775c69c26678f45407f21f3373150",
+      "payload_url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-visual-documents-d33b16f93350/visual-documents.page-index.colmodernvbert.7bbda9be1d74f2eb53a75295c215f5a096f37bb334aea09997526d775485810b.artifact",
+      "sha256": "5bf24e8c97336c141eab51758c9c718d9de0f3fc038128d9924db394613d69d5",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-visual-documents-d33b16f93350/visual-documents.page-index.colmodernvbert.7bbda9be1d74f2eb53a75295c215f5a096f37bb334aea09997526d775485810b.json"
+    },
+    {
+      "key": {
+        "artifact_type": "page-universe",
+        "config": {
+          "financebench_commit": "cc39aeb4afdf33909ee1412188bf89035950c2eb",
+          "seed": 0,
+          "size": 1000,
+          "version": 1
+        },
+        "producer_id": "select_universe",
+        "ri_id": "visual-documents"
+      },
+      "sha256": "f1cb5a077b564d0b805e804a5911899df1a5060ad4caaa1ef0af49ba8c8a43de",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-visual-documents-d33b16f93350/visual-documents.page-universe.select_universe.4865d0595cb815a359ef8d57dfb68a460c58631670cf8da1e702480f9ac1414c.json"
+    },
+    {
+      "key": {
+        "artifact_type": "visual-rankings",
+        "config": {
+          "index": "7bbda9be1d74f2eb53a75295c215f5a096f37bb334aea09997526d775485810b",
+          "queries": "d2541c3832e7778db155a40d0154d506f97253075a6f62698b7ebc6ffe75bbd5",
+          "rrf_k": 60,
+          "text": "adeec3acbe386d8ee4d5671a0b2fbea0743a3df83c36ae67f52613669186b7fb"
+        },
+        "producer_id": "maxsim",
+        "ri_id": "visual-documents"
+      },
+      "sha256": "bb9c3eb8f2c8ce5981d4634f46c8330e2523276d2cc01a19ab0e039a1140cb1c",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-visual-documents-d33b16f93350/visual-documents.visual-rankings.maxsim.94f1d27cb0ccf2696f1a0ee90e0a3bb007bab139442b3cbbb8c2b06dc68059a3.json"
+    },
+    {
+      "key": {
+        "artifact_type": "answer-verdicts",
+        "config": {
+          "endpoint": "vector-cluster",
+          "model": "Qwen3_6-35B-A3B",
+          "tolerance": 0.01,
+          "upstream": {
+            "answers": "66a4932c61fb59670fde80c2ebe1a5c9e8a5b20f5035e29418176152a9879219"
+          }
+        },
+        "producer_id": "row-E2",
+        "ri_id": "visual-documents-own"
+      },
+      "sha256": "7ab05a012ed1e059d5483fc394b2ccc5f7d4536f61d1bc6ed94be2cb1e3fe942",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-visual-documents-d33b16f93350/visual-documents-own.answer-verdicts.row-e2.45a69f47d16338fdfd2edd6e75aa6b476c39b13ca73b8adf3f5b2c127aa86e9e.json"
+    },
+    {
+      "key": {
+        "artifact_type": "answer-verdicts",
+        "config": {
+          "endpoint": "vector-cluster",
+          "model": "Qwen3_6-35B-A3B",
+          "tolerance": 0.01,
+          "upstream": {
+            "answers": "74ecd05e733422b6ec56f30adedb02bf82be753e9831b2e866946fc853369dff"
+          }
+        },
+        "producer_id": "row-E2",
+        "ri_id": "visual-documents-own"
+      },
+      "sha256": "4404a47d8f0349401f7a23f4a1ee7b86351211be4a37da92cf259600b537aefc",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-visual-documents-d33b16f93350/visual-documents-own.answer-verdicts.row-e2.46c9e34858baae40727905d98efb64cc9d8c2137e355cd98d320429c724bf865.json"
+    },
+    {
+      "key": {
+        "artifact_type": "answer-verdicts",
+        "config": {
+          "endpoint": "vector-cluster",
+          "model": "Qwen3_6-35B-A3B",
+          "tolerance": 0.01,
+          "upstream": {
+            "answers": "e00465347524d361e5cda0d761b4d9bd71059d99149a5c22721e44c5b4c06ffd"
+          }
+        },
+        "producer_id": "row-T",
+        "ri_id": "visual-documents-own"
+      },
+      "sha256": "d620f29348441810033097a50d66200278607da2acbc897ee2c04f2e2a7cb85c",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-visual-documents-d33b16f93350/visual-documents-own.answer-verdicts.row-t.39ef48d9fda17aa69957c326243d7839bda617c33dca8fac44299da24af8e00b.json"
+    },
+    {
+      "key": {
+        "artifact_type": "answer-verdicts",
+        "config": {
+          "endpoint": "vector-cluster",
+          "model": "Qwen3_6-35B-A3B",
+          "tolerance": 0.01,
+          "upstream": {
+            "answers": "5b2a97ae730fea2e5a394bdb3b9f2d0a3eb03e43d8974213c1d4fad727262ef5"
+          }
+        },
+        "producer_id": "row-T",
+        "ri_id": "visual-documents-own"
+      },
+      "sha256": "8ba7f9058dbac92f58e879e3d2bc72856344db4d7b5dbacbd95518696cbab196",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-visual-documents-d33b16f93350/visual-documents-own.answer-verdicts.row-t.ab149617fca17c69100a0879e9150b0d0fed35739e872b681ddf182a97e2b5df.json"
+    },
+    {
+      "key": {
+        "artifact_type": "answer-verdicts",
+        "config": {
+          "endpoint": "vector-cluster",
+          "model": "Qwen3_6-35B-A3B",
+          "tolerance": 0.01,
+          "upstream": {
+            "answers": "af565da29615e2d35d7f7ed5686f3e7872971e7c98fa2e60d46f2f0f266f51ce"
+          }
+        },
+        "producer_id": "row-VV",
+        "ri_id": "visual-documents-own"
+      },
+      "sha256": "bda0935a0544889ab16653a175e95ff2fe807c2213ddeb8e685f22f3f6af8ee4",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-visual-documents-d33b16f93350/visual-documents-own.answer-verdicts.row-vv.b27561507b1ec8db1bd0977be2d95a2bcd5c4bebe8e3eb9c1f82fa08af443a40.json"
+    },
+    {
+      "key": {
+        "artifact_type": "answer-verdicts",
+        "config": {
+          "endpoint": "vector-cluster",
+          "model": "Qwen3_6-35B-A3B",
+          "tolerance": 0.01,
+          "upstream": {
+            "answers": "850fb649ec910ff15f4d08856ab382060e07b3c746925650d31aa01ed646d85f"
+          }
+        },
+        "producer_id": "row-VV",
+        "ri_id": "visual-documents-own"
+      },
+      "sha256": "ad525cc9b00a907cad719323f1f69d41e613aebef3b2b12e6d297b4dcb77d63c",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-visual-documents-d33b16f93350/visual-documents-own.answer-verdicts.row-vv.bb92899a2e1c16b36da841b18e97dc279a1c5d7a59493f519305a8e5f3d63f08.json"
+    },
+    {
+      "key": {
+        "artifact_type": "docling-ingestion",
+        "config": {
+          "doc_id": "larkspur_freight_review",
+          "max_chars": 1200,
+          "parser_version": 1,
+          "source_sha256": "44224edd224c33a3d0cdec56406d5647dc1c636e1c49d63ca16a678cd978f616",
+          "table_storage": "markdown"
+        },
+        "producer_id": "docling",
+        "ri_id": "visual-documents-own"
+      },
+      "payload_sha256": "dc277f9a907288ec8caef9ff3de0c220316ceb3598056b7fde9d05483461c847",
+      "payload_url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-visual-documents-d33b16f93350/visual-documents-own.docling-ingestion.docling.293c946339109697eda7ac7de641be07ece89a931456eefe4887a3bb5ab93c6a.artifact",
+      "sha256": "75563da200ec9b26fcf213208f3fc5288e65c0f9bdf46ad96f2e77b0d2747b93",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-visual-documents-d33b16f93350/visual-documents-own.docling-ingestion.docling.293c946339109697eda7ac7de641be07ece89a931456eefe4887a3bb5ab93c6a.json"
+    },
+    {
+      "key": {
+        "artifact_type": "enrichment",
+        "config": {
+          "endpoint": "vector-cluster",
+          "model": "Qwen3_8-27B",
+          "pdfs": "82edcc68a24108de",
+          "prompt": "dc076b7902b6c2b6"
+        },
+        "producer_id": "domain-prompt",
+        "ri_id": "visual-documents-own"
+      },
+      "sha256": "5e85637777be22d05aad07b2677ae0eeb07e2f1ba0ba8b63293f475b9fdf461e",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-visual-documents-d33b16f93350/visual-documents-own.enrichment.domain-prompt.aaa858f6143074ae79a06b2f744d181737e8af1ebaa5b55c0e569aa5faec0a9c.json"
+    },
+    {
+      "key": {
+        "artifact_type": "figure-only-test",
+        "config": {
+          "endpoint": "vector-cluster",
+          "model": "Qwen3_8-27B",
+          "pdfs": "82edcc68a24108de",
+          "prompt": "fec59e8c0a63e401",
+          "questions": "f5cc1beeca4ea8d2"
+        },
+        "producer_id": "text-and-image",
+        "ri_id": "visual-documents-own"
+      },
+      "sha256": "37dbcdf11477b38594e0ea714772ddabb5083d137f3ff4e9b9f5f6601364078f",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-visual-documents-d33b16f93350/visual-documents-own.figure-only-test.text-and-image.0d8cb1a1bb2de04c4bbfe1dc4a46894d9f824e8808ca76a120bd50f422f0a836.json"
+    },
+    {
+      "key": {
+        "artifact_type": "own-visual-rankings",
+        "config": {
+          "model": "Qdrant/colmodernvbert",
+          "pdfs": "82edcc68a24108de",
+          "questions": "f5cc1beeca4ea8d2"
+        },
+        "producer_id": "colmodernvbert",
+        "ri_id": "visual-documents-own"
+      },
+      "sha256": "6d894d0fe4c0b46966d2562c3ebb6cf2ce75848cd05729c1ec7c48ab52590acd",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-visual-documents-d33b16f93350/visual-documents-own.own-visual-rankings.colmodernvbert.663dff89809a2656da956d786c55ecc91030880dcbdd51a46533443ded729e5d.json"
+    },
+    {
+      "key": {
+        "artifact_type": "reader-answers",
+        "config": {
+          "endpoint": "vector-cluster",
+          "model": "Qwen3_8-27B",
+          "pdfs": "82edcc68a24108de",
+          "prompt": "fec59e8c0a63e401",
+          "questions": "f5cc1beeca4ea8d2",
+          "upstream": {
+            "enrichment": "aaa858f6143074ae79a06b2f744d181737e8af1ebaa5b55c0e569aa5faec0a9c"
+          }
+        },
+        "producer_id": "row-E2",
+        "ri_id": "visual-documents-own"
+      },
+      "sha256": "b13d362cdafb7005a00d88e5702d56a62a11703d13f2354b961046d6fb6d0d9a",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-visual-documents-d33b16f93350/visual-documents-own.reader-answers.row-e2.66a4932c61fb59670fde80c2ebe1a5c9e8a5b20f5035e29418176152a9879219.json"
+    },
+    {
+      "key": {
+        "artifact_type": "reader-answers",
+        "config": {
+          "chunking": "per-page",
+          "endpoint": "vector-cluster",
+          "model": "Qwen3_8-27B",
+          "pdfs": "82edcc68a24108de",
+          "prompt": "fec59e8c0a63e401",
+          "questions": "f5cc1beeca4ea8d2",
+          "upstream": {
+            "enrichment": "aaa858f6143074ae79a06b2f744d181737e8af1ebaa5b55c0e569aa5faec0a9c"
+          }
+        },
+        "producer_id": "row-E2",
+        "ri_id": "visual-documents-own"
+      },
+      "sha256": "92f2f4865e9a282a3471050a73a10168fac01c9687b07e035e7a84bedcfdba18",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-visual-documents-d33b16f93350/visual-documents-own.reader-answers.row-e2.74ecd05e733422b6ec56f30adedb02bf82be753e9831b2e866946fc853369dff.json"
+    },
+    {
+      "key": {
+        "artifact_type": "reader-answers",
+        "config": {
+          "chunking": "per-page",
+          "endpoint": "vector-cluster",
+          "model": "Qwen3_8-27B",
+          "pdfs": "82edcc68a24108de",
+          "prompt": "fec59e8c0a63e401",
+          "questions": "f5cc1beeca4ea8d2",
+          "upstream": {
+            "enrichment": "aaa858f6143074ae79a06b2f744d181737e8af1ebaa5b55c0e569aa5faec0a9c"
+          }
+        },
+        "producer_id": "row-T",
+        "ri_id": "visual-documents-own"
+      },
+      "sha256": "2633585c58e233e1e7b0a84766d2cfe87c92c3969061d8bfb0f426871e83185e",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-visual-documents-d33b16f93350/visual-documents-own.reader-answers.row-t.5b2a97ae730fea2e5a394bdb3b9f2d0a3eb03e43d8974213c1d4fad727262ef5.json"
+    },
+    {
+      "key": {
+        "artifact_type": "reader-answers",
+        "config": {
+          "endpoint": "vector-cluster",
+          "model": "Qwen3_8-27B",
+          "pdfs": "82edcc68a24108de",
+          "prompt": "fec59e8c0a63e401",
+          "questions": "f5cc1beeca4ea8d2",
+          "upstream": {
+            "enrichment": "aaa858f6143074ae79a06b2f744d181737e8af1ebaa5b55c0e569aa5faec0a9c"
+          }
+        },
+        "producer_id": "row-T",
+        "ri_id": "visual-documents-own"
+      },
+      "sha256": "daf16bf93bacfc477a41e4d6968a46bef7e00dd90fe973817990cd7aaeacf1e5",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-visual-documents-d33b16f93350/visual-documents-own.reader-answers.row-t.e00465347524d361e5cda0d761b4d9bd71059d99149a5c22721e44c5b4c06ffd.json"
+    },
+    {
+      "key": {
+        "artifact_type": "reader-answers",
+        "config": {
+          "chunking": "per-page",
+          "endpoint": "vector-cluster",
+          "model": "Qwen3_8-27B",
+          "pdfs": "82edcc68a24108de",
+          "prompt": "fec59e8c0a63e401",
+          "questions": "f5cc1beeca4ea8d2",
+          "upstream": {
+            "enrichment": "aaa858f6143074ae79a06b2f744d181737e8af1ebaa5b55c0e569aa5faec0a9c"
+          }
+        },
+        "producer_id": "row-VV",
+        "ri_id": "visual-documents-own"
+      },
+      "sha256": "5558879d4de6ebdc7ff1046920a8d7a185eeb8b79455bf225edbe5070ab2e319",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-visual-documents-d33b16f93350/visual-documents-own.reader-answers.row-vv.850fb649ec910ff15f4d08856ab382060e07b3c746925650d31aa01ed646d85f.json"
+    },
+    {
+      "key": {
+        "artifact_type": "reader-answers",
+        "config": {
+          "endpoint": "vector-cluster",
+          "model": "Qwen3_8-27B",
+          "pdfs": "82edcc68a24108de",
+          "prompt": "fec59e8c0a63e401",
+          "questions": "f5cc1beeca4ea8d2",
+          "upstream": {
+            "enrichment": "aaa858f6143074ae79a06b2f744d181737e8af1ebaa5b55c0e569aa5faec0a9c"
+          }
+        },
+        "producer_id": "row-VV",
+        "ri_id": "visual-documents-own"
+      },
+      "sha256": "c8a1b565f74a35ad20956530253ed2aec1439d55bcf44a0fd02e69fc4b56c0df",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-visual-documents-d33b16f93350/visual-documents-own.reader-answers.row-vv.af565da29615e2d35d7f7ed5686f3e7872971e7c98fa2e60d46f2f0f266f51ce.json"
+    }
+  ]
+}

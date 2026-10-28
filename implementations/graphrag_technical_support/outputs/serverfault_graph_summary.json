@@ -1,0 +1,55 @@
+{
+  "model": "Qwen3_8-27B",
+  "documents": 9999,
+  "wall_seconds": 29230.4,
+  "cost": {
+    "label": "",
+    "calls": 20077,
+    "prompt_tokens": 10959527,
+    "completion_tokens": 15172735,
+    "total_tokens": 26132262,
+    "cache_hits": 48,
+    "empty_responses": 0,
+    "failed_attempts": 3689,
+    "call_seconds": 708545.1
+  },
+  "calls_per_document": 2.01,
+  "tokens_per_document": 2613.5,
+  "graph": {
+    "entities": 63436,
+    "relations": 86644,
+    "entity_types": {
+      "Concept": 12574,
+      "Software": 10507,
+      "ConfigItem": 17916,
+      "Protocol": 1546,
+      "Command": 8841,
+      "ErrorOrSymptom": 7027,
+      "Hardware": 5025
+    },
+    "relation_types": {
+      "configures": 24790,
+      "depends_on": 16701,
+      "part_of": 17628,
+      "fixes": 4533,
+      "alternative_to": 6641,
+      "diagnoses": 6336,
+      "causes": 10015
+    },
+    "isolated_entities": 4686,
+    "cross_document_entities": 11465,
+    "mentions": 229623,
+    "located_mentions": 216203,
+    "schema_report": {
+      "entity_types_mapped": 138057,
+      "entity_types_coerced": 60,
+      "relations_mapped": 91506,
+      "relations_rejected": 62,
+      "relations_dangling": 271,
+      "quotes_located": 216203,
+      "quotes_unlocated": 13420,
+      "calls_failed": 215
+    }
+  },
+  "projected_for_all_documents": null
+}

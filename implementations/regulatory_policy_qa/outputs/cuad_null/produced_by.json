@@ -1,0 +1,89 @@
+{
+  "files": {
+    "outcomes_dense.json": {
+      "model": "Qwen3_6-35B-A3B",
+      "response_models": [],
+      "family": "onprem",
+      "endpoint": "vector-cluster",
+      "producer": "regulatory_policy_qa/graphrag_null/run_null_arm.py",
+      "note": "CUAD dense grading and generation with reasoning disabled; usage is recorded in null_arm_summary.json.",
+      "source": "null_arm_summary.json model and pipeline"
+    },
+    "answer_judgements_dense.json": {
+      "model": "Qwen3_6-35B-A3B",
+      "response_models": [],
+      "family": "onprem",
+      "endpoint": "vector-cluster",
+      "producer": "regulatory_policy_qa/graphrag_null/judge_null_arm.py",
+      "note": "Separate correctness and grounding passes on every answerable, including abstentions; generation model is recorded separately in the judging summary.",
+      "source": "answer_judging_summary.json judge.model and generation_model"
+    },
+    "outcomes_lightrag-mix.json": {
+      "model": "Qwen3_6-35B-A3B",
+      "response_models": [],
+      "family": "onprem",
+      "endpoint": "vector-cluster",
+      "producer": "regulatory_policy_qa/graphrag_null/run_null_arm.py",
+      "note": "CUAD lightrag-mix grading and generation with reasoning disabled; usage is recorded in null_arm_summary.json.",
+      "source": "null_arm_summary.json model and pipeline"
+    },
+    "answer_judgements_lightrag-mix.json": {
+      "model": "Qwen3_6-35B-A3B",
+      "response_models": [],
+      "family": "onprem",
+      "endpoint": "vector-cluster",
+      "producer": "regulatory_policy_qa/graphrag_null/judge_null_arm.py",
+      "note": "Separate correctness and grounding passes on every answerable, including abstentions; generation model is recorded separately in the judging summary.",
+      "source": "answer_judging_summary.json judge.model and generation_model"
+    },
+    "outcomes_always-answer.json": {
+      "model": null,
+      "response_models": [],
+      "family": null,
+      "endpoint": null,
+      "producer": "regulatory_policy_qa/graphrag_null/run_null_arm.py",
+      "note": "Deterministic always-answer decision control; no chat model is called to construct the control.",
+      "source": "null_arm_summary.json arms",
+      "model_calls": 0
+    },
+    "outcomes_always-abstain.json": {
+      "model": null,
+      "response_models": [],
+      "family": null,
+      "endpoint": null,
+      "producer": "regulatory_policy_qa/graphrag_null/run_null_arm.py",
+      "note": "Deterministic always-abstain decision control; no chat model is called to construct the control.",
+      "source": "null_arm_summary.json arms",
+      "model_calls": 0
+    },
+    "lightrag_index_cost.json": {
+      "model": "Qwen3_6-35B-A3B",
+      "response_models": [],
+      "family": "onprem",
+      "endpoint": "vector-cluster",
+      "producer": "regulatory_policy_qa/graphrag_null/run_null_arm.py",
+      "note": "Historical LightRAG index usage; observed counts and recovery limitations remain in the cost report and paired comparison. No new experiment was performed to add this label.",
+      "source": "null_arm_summary.json model; paired_comparison.json graph_query_cost, prior_index_run and observed_index_cost_across_runs"
+    },
+    "lightrag_query_cost.json": {
+      "model": "Qwen3_6-35B-A3B",
+      "response_models": [],
+      "family": "onprem",
+      "endpoint": "vector-cluster",
+      "producer": "regulatory_policy_qa/graphrag_null/run_null_arm.py",
+      "note": "Historical LightRAG query usage; observed counts and recovery limitations remain in the cost report and paired comparison. No new experiment was performed to add this label.",
+      "source": "null_arm_summary.json model; paired_comparison.json graph_query_cost, prior_index_run and observed_index_cost_across_runs"
+    },
+    "scope_restoration.json": {
+      "model": null,
+      "response_models": [],
+      "family": null,
+      "endpoint": null,
+      "producer": "regulatory_policy_qa/graphrag_null/run_null_arm.py",
+      "note": "Deterministic restoration of an exact stripped contract identifier; evidence text and rank are unchanged and no chat model is called.",
+      "source": "scope_restoration.json reason and evidence_sha256",
+      "model_calls": 0
+    }
+  },
+  "note": "Provenance sidecar for immutable historical fixtures, cache envelopes and model-free artifacts. Measured payloads and cache keys are preserved; response model identifiers were not recorded in these historical runs."
+}

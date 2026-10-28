@@ -1,0 +1,7 @@
+{
+  "reason": "LightRAG stripped trailing whitespace from one CUAD document ID; restored only exact stripped matches in its per-contract workspace",
+  "passages_restored": 410,
+  "text_and_ranking_unchanged": true,
+  "original_evidence_sha256": "ed3cc9cdf53af4ac545473bc909a38b9c89e987d5f574d8179fd50443c8fa635",
+  "evidence_sha256": "ae6ad898f80d61d79cbe3c9654b366e4c3db1ca6a7c635847c10bd563947b986"
+}

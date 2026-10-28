@@ -1,0 +1,8 @@
+{
+  "files": {
+    "contract_nli_validation.json": {
+      "model": "Qwen3_8-27B",
+      "role": "generator; checker Qwen3_6-35B-A3B, judge Qwen3_8-Flash-Next, as the file's models block records"
+    }
+  }
+}

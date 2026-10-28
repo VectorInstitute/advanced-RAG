@@ -1,0 +1,87 @@
+{
+  "plain": {
+    "strategy": "plain",
+    "filings": 84,
+    "chunks": 41401,
+    "queries_scored": 150,
+    "uncovered": [],
+    "attachment": {
+      "numeric_cells": 192919,
+      "scored_cells": 189040,
+      "chunk_cell_pairs": 247675,
+      "attached_pairs": 127011,
+      "header_only_pairs": 7351,
+      "label_only_pairs": 98209,
+      "neither_pairs": 15104,
+      "cells_covered": 189040,
+      "cells_ever_complete": 118138,
+      "cells_never_complete": 70902,
+      "attachment_rate": 0.5128,
+      "cell_recoverable_rate": 0.6249
+    },
+    "retrieval": {
+      "bm25": {
+        "k": 10,
+        "queries": 150,
+        "retrieval_failure_rate": 0.6267,
+        "hit_rate": 0.3733,
+        "recall_at_10": 0.1666,
+        "mrr": 0.1965,
+        "ndcg_at_10": 0.1456
+      },
+      "dense": {
+        "k": 10,
+        "queries": 150,
+        "retrieval_failure_rate": 0.34,
+        "hit_rate": 0.66,
+        "recall_at_10": 0.2932,
+        "mrr": 0.3459,
+        "ndcg_at_10": 0.2452
+      }
+    },
+    "seconds": 2265.8
+  },
+  "table_aware": {
+    "strategy": "table_aware",
+    "filings": 84,
+    "chunks": 53715,
+    "queries_scored": 150,
+    "uncovered": [],
+    "attachment": {
+      "numeric_cells": 192919,
+      "scored_cells": 189040,
+      "chunk_cell_pairs": 204664,
+      "attached_pairs": 193628,
+      "header_only_pairs": 11036,
+      "label_only_pairs": 0,
+      "neither_pairs": 0,
+      "cells_covered": 189040,
+      "cells_ever_complete": 188923,
+      "cells_never_complete": 117,
+      "attachment_rate": 0.9461,
+      "cell_recoverable_rate": 0.9994
+    },
+    "retrieval": {
+      "bm25": {
+        "k": 10,
+        "queries": 150,
+        "retrieval_failure_rate": 0.66,
+        "hit_rate": 0.34,
+        "recall_at_10": 0.136,
+        "mrr": 0.1677,
+        "ndcg_at_10": 0.1188
+      },
+      "dense": {
+        "k": 10,
+        "queries": 150,
+        "retrieval_failure_rate": 0.4,
+        "hit_rate": 0.6,
+        "recall_at_10": 0.2306,
+        "mrr": 0.3542,
+        "ndcg_at_10": 0.2225
+      }
+    },
+    "seconds": 2249.5
+  },
+  "cache_hit": false
+}

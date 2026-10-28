@@ -1,0 +1,1744 @@
+{
+ "test": {
+  "questions": 30,
+  "corpus": "serverfault-10k",
+  "model": "Qwen3_6-35B-A3B"
+ },
+ "produced_by": {
+  "model": "Qwen3_6-35B-A3B",
+  "endpoint": "vector-cluster",
+  "producer": "run_agent_arms.py",
+  "model_calls": 194,
+  "label": "reference trajectories"
+ },
+ "arms": {
+  "C0": {
+   "model": "Qwen3_6-35B-A3B",
+   "questions": 30,
+   "gold_read": 0.6333,
+   "gold_seen": 1.0,
+   "calls_per_question": 3.4,
+   "tokens_per_question": 17918.4,
+   "seconds_per_question": 27.86,
+   "exhaustion_rate": 0.0
+  },
+  "C5": {
+   "model": "Qwen3_6-35B-A3B",
+   "questions": 30,
+   "gold_read": 1.0,
+   "gold_seen": 1.0,
+   "calls_per_question": 3.07,
+   "tokens_per_question": 4191.6,
+   "seconds_per_question": 9.81,
+   "exhaustion_rate": 0.0
+  }
+ },
+ "rows": {
+  "C0": [
+   {
+    "question_id": "sf-err-001",
+    "hops": 1,
+    "em": 0.0,
+    "f1": 0.0,
+    "model_calls": 2,
+    "tool_calls": 1,
+    "prompt_tokens": 3752,
+    "completion_tokens": 147,
+    "seconds": 19.285,
+    "exhausted": false,
+    "nudged": false,
+    "read_ids": [
+     "q107608",
+     "q128069",
+     "q162362"
+    ],
+    "seen_ids": [
+     "q107608",
+     "q128069",
+     "q362014",
+     "q677371",
+     "q162362"
+    ],
+    "tools": {
+     "search": 1
+    },
+    "zero_hit_greps": 0
+   },
+   {
+    "question_id": "sf-err-002",
+    "hops": 1,
+    "em": 0.0,
+    "f1": 0.0,
+    "model_calls": 7,
+    "tool_calls": 6,
+    "prompt_tokens": 67483,
+    "completion_tokens": 237,
+    "seconds": 48.221,
+    "exhausted": false,
+    "nudged": false,
+    "read_ids": [
+     "q259988",
+     "q807883",
+     "q785290",
+     "q472683",
+     "q1025805",
+     "q232705"
+    ],
+    "seen_ids": [
+     "q233962",
+     "q671878",
+     "q259988",
+     "q305806",
+     "q807883",
+     "q158151",
+     "q785290",
+     "q344295",
+     "q941421",
+     "q325277",
+     "q472683",
+     "q516373",
+     "q1025805",
+     "q232705",
+     "q10503",
+     "q644622"
+    ],
+    "tools": {
+     "search": 6
+    },
+    "zero_hit_greps": 0
+   },
+   {
+    "question_id": "sf-err-003",
+    "hops": 1,
+    "em": 0.0,
+    "f1": 0.0,
+    "model_calls": 2,
+    "tool_calls": 1,
+    "prompt_tokens": 4069,
+    "completion_tokens": 119,
+    "seconds": 18.439,
+    "exhausted": false,
+    "nudged": false,
+    "read_ids": [
+     "q963529",
+     "q427091",
+     "q73051"
+    ],
+    "seen_ids": [
+     "q482173",
+     "q817751",
+     "q963529",
+     "q427091",
+     "q73051"
+    ],
+    "tools": {
+     "search": 1
+    },
+    "zero_hit_greps": 0
+   },
+   {
+    "question_id": "sf-err-004",
+    "hops": 1,
+    "em": 0.0,
+    "f1": 0.0,
+    "model_calls": 2,
+    "tool_calls": 1,
+    "prompt_tokens": 4733,
+    "completion_tokens": 359,
+    "seconds": 22.519,
+    "exhausted": false,
+    "nudged": false,
+    "read_ids": [
+     "q749385",
+     "q763815",
+     "q892685"
+    ],
+    "seen_ids": [
+     "q749385",
+     "q763815",
+     "q909909",
+     "q571720",
+     "q892685"
+    ],
+    "tools": {
+     "search": 1
+    },
+    "zero_hit_greps": 0
+   },
+   {
+    "question_id": "sf-err-005",
+    "hops": 1,
+    "em": 0.0,
+    "f1": 0.0,
+    "model_calls": 4,
+    "tool_calls": 3,
+    "prompt_tokens": 17318,
+    "completion_tokens": 151,
+    "seconds": 35.293,
+    "exhausted": false,
+    "nudged": false,
+    "read_ids": [
+     "q318232",
+     "q630753",
+     "q1014754",
+     "q6367",
+     "q213647",
+     "q304125",
+     "q466651"
+    ],
+    "seen_ids": [
+     "q425589",
+     "q318232",
+     "q690639",
+     "q630753",
+     "q1014754",
+     "q570837",
+     "q6367",
+     "q213647",
+     "q304125",
+     "q466651"
+    ],
+    "tools": {
+     "search": 3
+    },
+    "zero_hit_greps": 0
+   },
+   {
+    "question_id": "sf-err-006",
+    "hops": 1,
+    "em": 0.0,
+    "f1": 0.0,
+    "model_calls": 6,
+    "tool_calls": 5,
+    "prompt_tokens": 46405,
+    "completion_tokens": 764,
+    "seconds": 59.126,
+    "exhausted": false,
+    "nudged": false,
+    "read_ids": [
+     "q393989",
+     "q676431",
+     "q194654"
+    ],
+    "seen_ids": [
+     "q540004",
+     "q110298",
+     "q393989",
+     "q783082",
+     "q890012",
+     "q739431",
+     "q62093",
+     "q676431",
+     "q194654",
+     "q697109",
+     "q598058"
+    ],
+    "tools": {
+     "search": 5
+    },
+    "zero_hit_greps": 0
+   },
+   {
+    "question_id": "sf-err-007",
+    "hops": 1,
+    "em": 0.0,
+    "f1": 0.0,
+    "model_calls": 6,
+    "tool_calls": 5,
+    "prompt_tokens": 40573,
+    "completion_tokens": 533,
+    "seconds": 55.74,
+    "exhausted": false,
+    "nudged": false,
+    "read_ids": [
+     "q534449",
+     "q516324",
+     "q824975",
+     "q579555",
+     "q8449",
+     "q714592",
+     "q540492",
+     "q255521",
+     "q478946",
+     "q110250",
+     "q365186"
+    ],
+    "seen_ids": [
+     "q411307",
+     "q534449",
+     "q44257",
+     "q516324",
+     "q824975",
+     "q579555",
+     "q8449",
+     "q714592",
+     "q412114",
+     "q540492",
+     "q255521",
+     "q478946",
+     "q110250",
+     "q365186"
+    ],
+    "tools": {
+     "search": 5
+    },
+    "zero_hit_greps": 0
+   },
+   {
+    "question_id": "sf-err-008",
+    "hops": 1,
+    "em": 0.0,
+    "f1": 0.0,
+    "model_calls": 2,
+    "tool_calls": 1,
+    "prompt_tokens": 2819,
+    "completion_tokens": 71,
+    "seconds": 11.134,
+    "exhausted": false,
+    "nudged": false,
+    "read_ids": [
+     "q273847",
+     "q422908",
+     "q425346",
+     "q747913"
+    ],
+    "seen_ids": [
+     "q273847",
+     "q422908",
+     "q425346",
+     "q347228",
+     "q747913"
+    ],
+    "tools": {
+     "search": 1
+    },
+    "zero_hit_greps": 0
+   },
+   {
+    "question_id": "sf-err-009",
+    "hops": 1,
+    "em": 0.0,
+    "f1": 0.0,
+    "model_calls": 2,
+    "tool_calls": 1,
+    "prompt_tokens": 2823,
+    "completion_tokens": 77,
+    "seconds": 17.848,
+    "exhausted": false,
+    "nudged": false,
+    "read_ids": [
+     "q67504",
+     "q517694",
+     "q490397",
+     "q641255"
+    ],
+    "seen_ids": [
+     "q67504",
+     "q747223",
+     "q517694",
+     "q490397",
+     "q641255"
+    ],
+    "tools": {
+     "search": 1
+    },
+    "zero_hit_greps": 0
+   },
+   {
+    "question_id": "sf-err-010",
+    "hops": 1,
+    "em": 0.0,
+    "f1": 0.0,
+    "model_calls": 2,
+    "tool_calls": 1,
+    "prompt_tokens": 4496,
+    "completion_tokens": 110,
+    "seconds": 18.573,
+    "exhausted": false,
+    "nudged": false,
+    "read_ids": [
+     "q1064046",
+     "q666282",
+     "q622796"
+    ],
+    "seen_ids": [
+     "q1064046",
+     "q911811",
+     "q666282",
+     "q586461",
+     "q622796"
+    ],
+    "tools": {
+     "search": 1
+    },
+    "zero_hit_greps": 0
+   },
+   {
+    "question_id": "sf-err-011",
+    "hops": 1,
+    "em": 0.0,
+    "f1": 0.0,
+    "model_calls": 2,
+    "tool_calls": 1,
+    "prompt_tokens": 2935,
+    "completion_tokens": 82,
+    "seconds": 17.999,
+    "exhausted": false,
+    "nudged": false,
+    "read_ids": [
+     "q175041",
+     "q297976",
+     "q560081",
+     "q217256",
+     "q263032"
+    ],
+    "seen_ids": [
+     "q175041",
+     "q297976",
+     "q560081",
+     "q217256",
+     "q263032"
+    ],
+    "tools": {
+     "search": 1
+    },
+    "zero_hit_greps": 0
+   },
+   {
+    "question_id": "sf-err-012",
+    "hops": 1,
+    "em": 0.0,
+    "f1": 0.0,
+    "model_calls": 3,
+    "tool_calls": 2,
+    "prompt_tokens": 10457,
+    "completion_tokens": 331,
+    "seconds": 43.738,
+    "exhausted": false,
+    "nudged": false,
+    "read_ids": [
+     "q16016",
+     "q202978",
+     "q506462"
+    ],
+    "seen_ids": [
+     "q602399",
+     "q16016",
+     "q642981",
+     "q745108",
+     "q770896",
+     "q202978",
+     "q659135",
+     "q506462"
+    ],
+    "tools": {
+     "search": 2
+    },
+    "zero_hit_greps": 0
+   },
+   {
+    "question_id": "sf-err-013",
+    "hops": 1,
+    "em": 0.0,
+    "f1": 0.0,
+    "model_calls": 2,
+    "tool_calls": 1,
+    "prompt_tokens": 2921,
+    "completion_tokens": 61,
+    "seconds": 11.054,
+    "exhausted": false,
+    "nudged": false,
+    "read_ids": [
+     "q500803",
+     "q430974",
+     "q302592",
+     "q216252"
+    ],
+    "seen_ids": [
+     "q500803",
+     "q430974",
+     "q302592",
+     "q216252",
+     "q155113"
+    ],
+    "tools": {
+     "search": 1
+    },
+    "zero_hit_greps": 0
+   },
+   {
+    "question_id": "sf-err-014",
+    "hops": 1,
+    "em": 0.0,
+    "f1": 0.0,
+    "model_calls": 2,
+    "tool_calls": 1,
+    "prompt_tokens": 3484,
+    "completion_tokens": 410,
+    "seconds": 22.836,
+    "exhausted": false,
+    "nudged": false,
+    "read_ids": [
+     "q284722",
+     "q33308",
+     "q195005"
+    ],
+    "seen_ids": [
+     "q284722",
+     "q128242",
+     "q522646",
+     "q33308",
+     "q195005"
+    ],
+    "tools": {
+     "search": 1
+    },
+    "zero_hit_greps": 0
+   },
+   {
+    "question_id": "sf-err-015",
+    "hops": 1,
+    "em": 0.0,
+    "f1": 0.0,
+    "model_calls": 2,
+    "tool_calls": 1,
+    "prompt_tokens": 3880,
+    "completion_tokens": 101,
+    "seconds": 17.909,
+    "exhausted": false,
+    "nudged": false,
+    "read_ids": [
+     "q391041",
+     "q283405"
+    ],
+    "seen_ids": [
+     "q391041",
+     "q385879",
+     "q279414",
+     "q135396",
+     "q283405"
+    ],
+    "tools": {
+     "search": 1
+    },
+    "zero_hit_greps": 0
+   },
+   {
+    "question_id": "sf-err-016",
+    "hops": 1,
+    "em": 0.0,
+    "f1": 0.0,
+    "model_calls": 6,
+    "tool_calls": 5,
+    "prompt_tokens": 44511,
+    "completion_tokens": 253,
+    "seconds": 36.647,
+    "exhausted": false,
+    "nudged": false,
+    "read_ids": [
+     "q185331",
+     "q63641",
+     "q458863",
+     "q108829",
+     "q905805"
+    ],
+    "seen_ids": [
+     "q185331",
+     "q332935",
+     "q63641",
+     "q301520",
+     "q867996",
+     "q458863",
+     "q458759",
+     "q108829",
+     "q891302",
+     "q905805",
+     "q381012",
+     "q797269",
+     "q517138"
+    ],
+    "tools": {
+     "search": 5
+    },
+    "zero_hit_greps": 0
+   },
+   {
+    "question_id": "sf-err-017",
+    "hops": 1,
+    "em": 0.0,
+    "f1": 0.0,
+    "model_calls": 2,
+    "tool_calls": 1,
+    "prompt_tokens": 4551,
+    "completion_tokens": 78,
+    "seconds": 17.376,
+    "exhausted": false,
+    "nudged": false,
+    "read_ids": [
+     "q137135",
+     "q17946",
+     "q277375"
+    ],
+    "seen_ids": [
+     "q137135",
+     "q639061",
+     "q531112",
+     "q17946",
+     "q277375"
+    ],
+    "tools": {
+     "search": 1
+    },
+    "zero_hit_greps": 0
+   },
+   {
+    "question_id": "sf-err-018",
+    "hops": 1,
+    "em": 0.0,
+    "f1": 0.0,
+    "model_calls": 6,
+    "tool_calls": 5,
+    "prompt_tokens": 47107,
+    "completion_tokens": 530,
+    "seconds": 56.101,
+    "exhausted": false,
+    "nudged": false,
+    "read_ids": [
+     "q489129",
+     "q347122",
+     "q686422"
+    ],
+    "seen_ids": [
+     "q633787",
+     "q664222",
+     "q489129",
+     "q316907",
+     "q347122",
+     "q806141",
+     "q686422",
+     "q889631"
+    ],
+    "tools": {
+     "search": 5
+    },
+    "zero_hit_greps": 0
+   },
+   {
+    "question_id": "sf-err-019",
+    "hops": 1,
+    "em": 0.0,
+    "f1": 0.0,
+    "model_calls": 2,
+    "tool_calls": 1,
+    "prompt_tokens": 2457,
+    "completion_tokens": 53,
+    "seconds": 15.393,
+    "exhausted": false,
+    "nudged": false,
+    "read_ids": [
+     "q708805",
+     "q816412",
+     "q540815",
+     "q533986"
+    ],
+    "seen_ids": [
+     "q708805",
+     "q816412",
+     "q540815",
+     "q533986",
+     "q310679"
+    ],
+    "tools": {
+     "search": 1
+    },
+    "zero_hit_greps": 0
+   },
+   {
+    "question_id": "sf-err-020",
+    "hops": 1,
+    "em": 0.0,
+    "f1": 0.0,
+    "model_calls": 2,
+    "tool_calls": 1,
+    "prompt_tokens": 3303,
+    "completion_tokens": 372,
+    "seconds": 22.547,
+    "exhausted": false,
+    "nudged": false,
+    "read_ids": [
+     "q956613",
+     "q537343",
+     "q63641",
+     "q622796"
+    ],
+    "seen_ids": [
+     "q956613",
+     "q537343",
+     "q63641",
+     "q1007807",
+     "q622796"
+    ],
+    "tools": {
+     "search": 1
+    },
+    "zero_hit_greps": 0
+   },
+   {
+    "question_id": "sf-err-021",
+    "hops": 1,
+    "em": 0.0,
+    "f1": 0.0,
+    "model_calls": 8,
+    "tool_calls": 7,
+    "prompt_tokens": 81518,
+    "completion_tokens": 650,
+    "seconds": 58.372,
+    "exhausted": false,
+    "nudged": false,
+    "read_ids": [
+     "q354129",
+     "q486220",
+     "q637207",
+     "q52199",
+     "q455450",
+     "q415112",
+     "q871501",
+     "q316516"
+    ],
+    "seen_ids": [
+     "q712808",
+     "q911590",
+     "q1069102",
+     "q354129",
+     "q486220",
+     "q637207",
+     "q52199",
+     "q825423",
+     "q455450",
+     "q415112",
+     "q880804",
+     "q485006",
+     "q871501",
+     "q62093",
+     "q384204",
+     "q316516",
+     "q693241"
+    ],
+    "tools": {
+     "search": 7
+    },
+    "zero_hit_greps": 0
+   },
+   {
+    "question_id": "sf-err-022",
+    "hops": 1,
+    "em": 0.0,
+    "f1": 0.0,
+    "model_calls": 2,
+    "tool_calls": 1,
+    "prompt_tokens": 3860,
+    "completion_tokens": 95,
+    "seconds": 18.168,
+    "exhausted": false,
+    "nudged": false,
+    "read_ids": [
+     "q423075",
+     "q78159",
+     "q619296",
+     "q296587"
+    ],
+    "seen_ids": [
+     "q954586",
+     "q423075",
+     "q78159",
+     "q619296",
+     "q296587"
+    ],
+    "tools": {
+     "search": 1
+    },
+    "zero_hit_greps": 0
+   },
+   {
+    "question_id": "sf-err-023",
+    "hops": 1,
+    "em": 0.0,
+    "f1": 0.0,
+    "model_calls": 2,
+    "tool_calls": 1,
+    "prompt_tokens": 4326,
+    "completion_tokens": 138,
+    "seconds": 18.908,
+    "exhausted": false,
+    "nudged": false,
+    "read_ids": [
+     "q57596"
+    ],
+    "seen_ids": [
+     "q57596",
+     "q616666",
+     "q447808",
+     "q870568",
+     "q592793"
+    ],
+    "tools": {
+     "search": 1
+    },
+    "zero_hit_greps": 0
+   },
+   {
+    "question_id": "sf-err-024",
+    "hops": 1,
+    "em": 0.0,
+    "f1": 0.0,
+    "model_calls": 2,
+    "tool_calls": 1,
+    "prompt_tokens": 3880,
+    "completion_tokens": 82,
+    "seconds": 17.637,
+    "exhausted": false,
+    "nudged": false,
+    "read_ids": [
+     "q256136",
+     "q336617"
+    ],
+    "seen_ids": [
+     "q256136",
+     "q797007",
+     "q697109",
+     "q62093",
+     "q336617"
+    ],
+    "tools": {
+     "search": 1
+    },
+    "zero_hit_greps": 0
+   },
+   {
+    "question_id": "sf-err-025",
+    "hops": 1,
+    "em": 0.0,
+    "f1": 0.0,
+    "model_calls": 5,
+    "tool_calls": 4,
+    "prompt_tokens": 32158,
+    "completion_tokens": 305,
+    "seconds": 35.009,
+    "exhausted": false,
+    "nudged": false,
+    "read_ids": [
+     "q120475",
+     "q372733",
+     "q485063",
+     "q361220",
+     "q271124"
+    ],
+    "seen_ids": [
+     "q516373",
+     "q585089",
+     "q120475",
+     "q520195",
+     "q372733",
+     "q454421",
+     "q485063",
+     "q361220",
+     "q544171",
+     "q644622",
+     "q271124",
+     "q58097",
+     "q133561",
+     "q684424"
+    ],
+    "tools": {
+     "search": 4
+    },
+    "zero_hit_greps": 0
+   },
+   {
+    "question_id": "sf-err-026",
+    "hops": 1,
+    "em": 0.0,
+    "f1": 0.0,
+    "model_calls": 4,
+    "tool_calls": 3,
+    "prompt_tokens": 18993,
+    "completion_tokens": 132,
+    "seconds": 23.518,
+    "exhausted": false,
+    "nudged": false,
+    "read_ids": [
+     "q146605",
+     "q749503",
+     "q185331"
+    ],
+    "seen_ids": [
+     "q265244",
+     "q146605",
+     "q543999",
+     "q749503",
+     "q163787",
+     "q880804",
+     "q712808",
+     "q185331"
+    ],
+    "tools": {
+     "search": 3
+    },
+    "zero_hit_greps": 0
+   },
+   {
+    "question_id": "sf-err-027",
+    "hops": 1,
+    "em": 0.0,
+    "f1": 0.0,
+    "model_calls": 2,
+    "tool_calls": 1,
+    "prompt_tokens": 3248,
+    "completion_tokens": 76,
+    "seconds": 15.134,
+    "exhausted": false,
+    "nudged": false,
+    "read_ids": [
+     "q869418",
+     "q490638",
+     "q351108"
+    ],
+    "seen_ids": [
+     "q869418",
+     "q74067",
+     "q490638",
+     "q418810",
+     "q351108"
+    ],
+    "tools": {
+     "search": 1
+    },
+    "zero_hit_greps": 0
+   },
+   {
+    "question_id": "sf-err-028",
+    "hops": 1,
+    "em": 0.0,
+    "f1": 0.0,
+    "model_calls": 7,
+    "tool_calls": 6,
+    "prompt_tokens": 43206,
+    "completion_tokens": 257,
+    "seconds": 34.529,
+    "exhausted": false,
+    "nudged": false,
+    "read_ids": [
+     "q206610",
+     "q26303",
+     "q578710",
+     "q993278",
+     "q817441",
+     "q302941",
+     "q269359",
+     "q548537"
+    ],
+    "seen_ids": [
+     "q251213",
+     "q206610",
+     "q26303",
+     "q362014",
+     "q578710",
+     "q993278",
+     "q817441",
+     "q302941",
+     "q269359",
+     "q548537"
+    ],
+    "tools": {
+     "search": 6
+    },
+    "zero_hit_greps": 0
+   },
+   {
+    "question_id": "sf-err-029",
+    "hops": 1,
+    "em": 0.0,
+    "f1": 0.0,
+    "model_calls": 4,
+    "tool_calls": 3,
+    "prompt_tokens": 15938,
+    "completion_tokens": 161,
+    "seconds": 25.526,
+    "exhausted": false,
+    "nudged": false,
+    "read_ids": [
+     "q81609",
+     "q312853",
+     "q23788",
+     "q115099",
+     "q259"
+    ],
+    "seen_ids": [
+     "q125139",
+     "q81609",
+     "q312853",
+     "q23788",
+     "q543009",
+     "q115099",
+     "q259",
+     "q255849"
+    ],
+    "tools": {
+     "search": 3
+    },
+    "zero_hit_greps": 0
+   },
+   {
+    "question_id": "sf-err-030",
+    "hops": 1,
+    "em": 0.0,
+    "f1": 0.0,
+    "model_calls": 2,
+    "tool_calls": 1,
+    "prompt_tokens": 3481,
+    "completion_tokens": 131,
+    "seconds": 21.142,
+    "exhausted": false,
+    "nudged": false,
+    "read_ids": [
+     "q17946",
+     "q159972",
+     "q104154"
+    ],
+    "seen_ids": [
+     "q17946",
+     "q159972",
+     "q842492",
+     "q531112",
+     "q104154"
+    ],
+    "tools": {
+     "search": 1
+    },
+    "zero_hit_greps": 0
+   }
+  ],
+  "C5": [
+   {
+    "question_id": "sf-err-001",
+    "hops": 1,
+    "em": 0.0,
+    "f1": 0.0,
+    "model_calls": 3,
+    "tool_calls": 2,
+    "prompt_tokens": 3568,
+    "completion_tokens": 131,
+    "seconds": 5.218,
+    "exhausted": false,
+    "nudged": false,
+    "read_ids": [
+     "q107608"
+    ],
+    "seen_ids": [
+     "q107608"
+    ],
+    "tools": {
+     "grep": 1,
+     "open": 1
+    },
+    "zero_hit_greps": 0
+   },
+   {
+    "question_id": "sf-err-002",
+    "hops": 1,
+    "em": 0.0,
+    "f1": 0.0,
+    "model_calls": 3,
+    "tool_calls": 2,
+    "prompt_tokens": 5156,
+    "completion_tokens": 107,
+    "seconds": 11.402,
+    "exhausted": false,
+    "nudged": false,
+    "read_ids": [
+     "q233962"
+    ],
+    "seen_ids": [
+     "q233962"
+    ],
+    "tools": {
+     "grep": 1,
+     "open": 1
+    },
+    "zero_hit_greps": 0
+   },
+   {
+    "question_id": "sf-err-003",
+    "hops": 1,
+    "em": 0.0,
+    "f1": 0.0,
+    "model_calls": 3,
+    "tool_calls": 2,
+    "prompt_tokens": 3655,
+    "completion_tokens": 147,
+    "seconds": 13.86,
+    "exhausted": false,
+    "nudged": false,
+    "read_ids": [
+     "q963529"
+    ],
+    "seen_ids": [
+     "q963529"
+    ],
+    "tools": {
+     "grep": 1,
+     "open": 1
+    },
+    "zero_hit_greps": 0
+   },
+   {
+    "question_id": "sf-err-004",
+    "hops": 1,
+    "em": 0.0,
+    "f1": 0.0,
+    "model_calls": 3,
+    "tool_calls": 2,
+    "prompt_tokens": 3539,
+    "completion_tokens": 120,
+    "seconds": 9.596,
+    "exhausted": false,
+    "nudged": false,
+    "read_ids": [
+     "q749385"
+    ],
+    "seen_ids": [
+     "q749385"
+    ],
+    "tools": {
+     "grep": 1,
+     "open": 1
+    },
+    "zero_hit_greps": 0
+   },
+   {
+    "question_id": "sf-err-005",
+    "hops": 1,
+    "em": 0.0,
+    "f1": 0.0,
+    "model_calls": 3,
+    "tool_calls": 2,
+    "prompt_tokens": 4050,
+    "completion_tokens": 152,
+    "seconds": 13.89,
+    "exhausted": false,
+    "nudged": false,
+    "read_ids": [
+     "q425589"
+    ],
+    "seen_ids": [
+     "q425589"
+    ],
+    "tools": {
+     "grep": 1,
+     "open": 1
+    },
+    "zero_hit_greps": 0
+   },
+   {
+    "question_id": "sf-err-006",
+    "hops": 1,
+    "em": 0.0,
+    "f1": 0.0,
+    "model_calls": 3,
+    "tool_calls": 2,
+    "prompt_tokens": 4152,
+    "completion_tokens": 110,
+    "seconds": 9.886,
+    "exhausted": false,
+    "nudged": false,
+    "read_ids": [
+     "q540004"
+    ],
+    "seen_ids": [
+     "q540004"
+    ],
+    "tools": {
+     "grep": 1,
+     "open": 1
+    },
+    "zero_hit_greps": 0
+   },
+   {
+    "question_id": "sf-err-007",
+    "hops": 1,
+    "em": 0.0,
+    "f1": 0.0,
+    "model_calls": 3,
+    "tool_calls": 2,
+    "prompt_tokens": 4569,
+    "completion_tokens": 143,
+    "seconds": 5.294,
+    "exhausted": false,
+    "nudged": false,
+    "read_ids": [
+     "q411307"
+    ],
+    "seen_ids": [
+     "q411307"
+    ],
+    "tools": {
+     "grep": 1,
+     "open": 1
+    },
+    "zero_hit_greps": 0
+   },
+   {
+    "question_id": "sf-err-008",
+    "hops": 1,
+    "em": 0.0,
+    "f1": 0.0,
+    "model_calls": 3,
+    "tool_calls": 2,
+    "prompt_tokens": 3538,
+    "completion_tokens": 117,
+    "seconds": 9.758,
+    "exhausted": false,
+    "nudged": false,
+    "read_ids": [
+     "q273847"
+    ],
+    "seen_ids": [
+     "q273847"
+    ],
+    "tools": {
+     "grep": 1,
+     "open": 1
+    },
+    "zero_hit_greps": 0
+   },
+   {
+    "question_id": "sf-err-009",
+    "hops": 1,
+    "em": 0.0,
+    "f1": 0.0,
+    "model_calls": 3,
+    "tool_calls": 2,
+    "prompt_tokens": 3368,
+    "completion_tokens": 134,
+    "seconds": 5.495,
+    "exhausted": false,
+    "nudged": false,
+    "read_ids": [
+     "q517694"
+    ],
+    "seen_ids": [
+     "q517694"
+    ],
+    "tools": {
+     "grep": 1,
+     "open": 1
+    },
+    "zero_hit_greps": 0
+   },
+   {
+    "question_id": "sf-err-010",
+    "hops": 1,
+    "em": 0.0,
+    "f1": 0.0,
+    "model_calls": 3,
+    "tool_calls": 2,
+    "prompt_tokens": 3510,
+    "completion_tokens": 119,
+    "seconds": 12.401,
+    "exhausted": false,
+    "nudged": false,
+    "read_ids": [
+     "q1064046"
+    ],
+    "seen_ids": [
+     "q1064046"
+    ],
+    "tools": {
+     "grep": 1,
+     "open": 1
+    },
+    "zero_hit_greps": 0
+   },
+   {
+    "question_id": "sf-err-011",
+    "hops": 1,
+    "em": 0.0,
+    "f1": 0.0,
+    "model_calls": 3,
+    "tool_calls": 2,
+    "prompt_tokens": 3636,
+    "completion_tokens": 133,
+    "seconds": 12.457,
+    "exhausted": false,
+    "nudged": false,
+    "read_ids": [
+     "q175041"
+    ],
+    "seen_ids": [
+     "q175041"
+    ],
+    "tools": {
+     "grep": 1,
+     "open": 1
+    },
+    "zero_hit_greps": 0
+   },
+   {
+    "question_id": "sf-err-012",
+    "hops": 1,
+    "em": 0.0,
+    "f1": 0.0,
+    "model_calls": 3,
+    "tool_calls": 2,
+    "prompt_tokens": 3642,
+    "completion_tokens": 150,
+    "seconds": 5.2,
+    "exhausted": false,
+    "nudged": false,
+    "read_ids": [
+     "q602399"
+    ],
+    "seen_ids": [
+     "q602399"
+    ],
+    "tools": {
+     "grep": 1,
+     "open": 1
+    },
+    "zero_hit_greps": 0
+   },
+   {
+    "question_id": "sf-err-013",
+    "hops": 1,
+    "em": 0.0,
+    "f1": 0.0,
+    "model_calls": 3,
+    "tool_calls": 2,
+    "prompt_tokens": 3463,
+    "completion_tokens": 120,
+    "seconds": 13.17,
+    "exhausted": false,
+    "nudged": false,
+    "read_ids": [
+     "q500803"
+    ],
+    "seen_ids": [
+     "q500803"
+    ],
+    "tools": {
+     "grep": 1,
+     "open": 1
+    },
+    "zero_hit_greps": 0
+   },
+   {
+    "question_id": "sf-err-014",
+    "hops": 1,
+    "em": 0.0,
+    "f1": 0.0,
+    "model_calls": 3,
+    "tool_calls": 2,
+    "prompt_tokens": 3528,
+    "completion_tokens": 194,
+    "seconds": 10.712,
+    "exhausted": false,
+    "nudged": false,
+    "read_ids": [
+     "q284722"
+    ],
+    "seen_ids": [
+     "q284722"
+    ],
+    "tools": {
+     "grep": 1,
+     "open": 1
+    },
+    "zero_hit_greps": 0
+   },
+   {
+    "question_id": "sf-err-015",
+    "hops": 1,
+    "em": 0.0,
+    "f1": 0.0,
+    "model_calls": 3,
+    "tool_calls": 2,
+    "prompt_tokens": 3567,
+    "completion_tokens": 132,
+    "seconds": 9.489,
+    "exhausted": false,
+    "nudged": false,
+    "read_ids": [
+     "q391041"
+    ],
+    "seen_ids": [
+     "q391041"
+    ],
+    "tools": {
+     "grep": 1,
+     "open": 1
+    },
+    "zero_hit_greps": 0
+   },
+   {
+    "question_id": "sf-err-016",
+    "hops": 1,
+    "em": 0.0,
+    "f1": 0.0,
+    "model_calls": 4,
+    "tool_calls": 2,
+    "prompt_tokens": 7808,
+    "completion_tokens": 122,
+    "seconds": 12.483,
+    "exhausted": false,
+    "nudged": true,
+    "read_ids": [
+     "q517138"
+    ],
+    "seen_ids": [
+     "q517138"
+    ],
+    "tools": {
+     "grep": 1,
+     "open": 1
+    },
+    "zero_hit_greps": 0
+   },
+   {
+    "question_id": "sf-err-017",
+    "hops": 1,
+    "em": 0.0,
+    "f1": 0.0,
+    "model_calls": 3,
+    "tool_calls": 2,
+    "prompt_tokens": 3483,
+    "completion_tokens": 129,
+    "seconds": 5.816,
+    "exhausted": false,
+    "nudged": false,
+    "read_ids": [
+     "q137135"
+    ],
+    "seen_ids": [
+     "q137135"
+    ],
+    "tools": {
+     "grep": 1,
+     "open": 1
+    },
+    "zero_hit_greps": 0
+   },
+   {
+    "question_id": "sf-err-018",
+    "hops": 1,
+    "em": 0.0,
+    "f1": 0.0,
+    "model_calls": 3,
+    "tool_calls": 2,
+    "prompt_tokens": 4256,
+    "completion_tokens": 87,
+    "seconds": 8.467,
+    "exhausted": false,
+    "nudged": false,
+    "read_ids": [
+     "q633787"
+    ],
+    "seen_ids": [
+     "q633787"
+    ],
+    "tools": {
+     "grep": 1,
+     "open": 1
+    },
+    "zero_hit_greps": 0
+   },
+   {
+    "question_id": "sf-err-019",
+    "hops": 1,
+    "em": 0.0,
+    "f1": 0.0,
+    "model_calls": 3,
+    "tool_calls": 2,
+    "prompt_tokens": 3191,
+    "completion_tokens": 101,
+    "seconds": 4.23,
+    "exhausted": false,
+    "nudged": false,
+    "read_ids": [
+     "q708805"
+    ],
+    "seen_ids": [
+     "q708805"
+    ],
+    "tools": {
+     "grep": 1,
+     "open": 1
+    },
+    "zero_hit_greps": 0
+   },
+   {
+    "question_id": "sf-err-020",
+    "hops": 1,
+    "em": 0.0,
+    "f1": 0.0,
+    "model_calls": 3,
+    "tool_calls": 2,
+    "prompt_tokens": 3502,
+    "completion_tokens": 149,
+    "seconds": 13.024,
+    "exhausted": false,
+    "nudged": false,
+    "read_ids": [
+     "q956613"
+    ],
+    "seen_ids": [
+     "q956613"
+    ],
+    "tools": {
+     "grep": 1,
+     "open": 1
+    },
+    "zero_hit_greps": 0
+   },
+   {
+    "question_id": "sf-err-021",
+    "hops": 1,
+    "em": 0.0,
+    "f1": 0.0,
+    "model_calls": 3,
+    "tool_calls": 2,
+    "prompt_tokens": 7642,
+    "completion_tokens": 180,
+    "seconds": 13.241,
+    "exhausted": false,
+    "nudged": false,
+    "read_ids": [
+     "q712808"
+    ],
+    "seen_ids": [
+     "q712808"
+    ],
+    "tools": {
+     "grep": 1,
+     "open": 1
+    },
+    "zero_hit_greps": 0
+   },
+   {
+    "question_id": "sf-err-022",
+    "hops": 1,
+    "em": 0.0,
+    "f1": 0.0,
+    "model_calls": 3,
+    "tool_calls": 2,
+    "prompt_tokens": 4038,
+    "completion_tokens": 136,
+    "seconds": 12.312,
+    "exhausted": false,
+    "nudged": false,
+    "read_ids": [
+     "q954586"
+    ],
+    "seen_ids": [
+     "q954586"
+    ],
+    "tools": {
+     "grep": 1,
+     "open": 1
+    },
+    "zero_hit_greps": 0
+   },
+   {
+    "question_id": "sf-err-023",
+    "hops": 1,
+    "em": 0.0,
+    "f1": 0.0,
+    "model_calls": 3,
+    "tool_calls": 2,
+    "prompt_tokens": 3606,
+    "completion_tokens": 115,
+    "seconds": 12.701,
+    "exhausted": false,
+    "nudged": false,
+    "read_ids": [
+     "q57596"
+    ],
+    "seen_ids": [
+     "q57596"
+    ],
+    "tools": {
+     "grep": 1,
+     "open": 1
+    },
+    "zero_hit_greps": 0
+   },
+   {
+    "question_id": "sf-err-024",
+    "hops": 1,
+    "em": 0.0,
+    "f1": 0.0,
+    "model_calls": 3,
+    "tool_calls": 2,
+    "prompt_tokens": 3473,
+    "completion_tokens": 163,
+    "seconds": 9.997,
+    "exhausted": false,
+    "nudged": false,
+    "read_ids": [
+     "q256136"
+    ],
+    "seen_ids": [
+     "q256136"
+    ],
+    "tools": {
+     "grep": 1,
+     "open": 1
+    },
+    "zero_hit_greps": 0
+   },
+   {
+    "question_id": "sf-err-025",
+    "hops": 1,
+    "em": 0.0,
+    "f1": 0.0,
+    "model_calls": 3,
+    "tool_calls": 2,
+    "prompt_tokens": 4618,
+    "completion_tokens": 182,
+    "seconds": 8.087,
+    "exhausted": false,
+    "nudged": false,
+    "read_ids": [
+     "q516373"
+    ],
+    "seen_ids": [
+     "q516373"
+    ],
+    "tools": {
+     "grep": 1,
+     "open": 1
+    },
+    "zero_hit_greps": 0
+   },
+   {
+    "question_id": "sf-err-026",
+    "hops": 1,
+    "em": 0.0,
+    "f1": 0.0,
+    "model_calls": 3,
+    "tool_calls": 2,
+    "prompt_tokens": 3714,
+    "completion_tokens": 179,
+    "seconds": 9.592,
+    "exhausted": false,
+    "nudged": false,
+    "read_ids": [
+     "q749503"
+    ],
+    "seen_ids": [
+     "q749503"
+    ],
+    "tools": {
+     "grep": 1,
+     "open": 1
+    },
+    "zero_hit_greps": 0
+   },
+   {
+    "question_id": "sf-err-027",
+    "hops": 1,
+    "em": 0.0,
+    "f1": 0.0,
+    "model_calls": 3,
+    "tool_calls": 2,
+    "prompt_tokens": 3431,
+    "completion_tokens": 135,
+    "seconds": 6.969,
+    "exhausted": false,
+    "nudged": false,
+    "read_ids": [
+     "q869418"
+    ],
+    "seen_ids": [
+     "q869418"
+    ],
+    "tools": {
+     "grep": 1,
+     "open": 1
+    },
+    "zero_hit_greps": 0
+   },
+   {
+    "question_id": "sf-err-028",
+    "hops": 1,
+    "em": 0.0,
+    "f1": 0.0,
+    "model_calls": 4,
+    "tool_calls": 2,
+    "prompt_tokens": 4255,
+    "completion_tokens": 98,
+    "seconds": 8.023,
+    "exhausted": false,
+    "nudged": true,
+    "read_ids": [
+     "q548537"
+    ],
+    "seen_ids": [
+     "q548537"
+    ],
+    "tools": {
+     "grep": 1,
+     "open": 1
+    },
+    "zero_hit_greps": 0
+   },
+   {
+    "question_id": "sf-err-029",
+    "hops": 1,
+    "em": 0.0,
+    "f1": 0.0,
+    "model_calls": 3,
+    "tool_calls": 2,
+    "prompt_tokens": 4186,
+    "completion_tokens": 118,
+    "seconds": 11.882,
+    "exhausted": false,
+    "nudged": false,
+    "read_ids": [
+     "q125139"
+    ],
+    "seen_ids": [
+     "q125139"
+    ],
+    "tools": {
+     "grep": 1,
+     "open": 1
+    },
+    "zero_hit_greps": 0
+   },
+   {
+    "question_id": "sf-err-030",
+    "hops": 1,
+    "em": 0.0,
+    "f1": 0.0,
+    "model_calls": 3,
+    "tool_calls": 2,
+    "prompt_tokens": 3527,
+    "completion_tokens": 173,
+    "seconds": 9.514,
+    "exhausted": false,
+    "nudged": false,
+    "read_ids": [
+     "q17946"
+    ],
+    "seen_ids": [
+     "q17946"
+    ],
+    "tools": {
+     "grep": 1,
+     "open": 1
+    },
+    "zero_hit_greps": 0
+   }
+  ]
+ }
+}

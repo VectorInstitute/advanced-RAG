@@ -1,0 +1,28 @@
+# Data profile for the click library at commit d4ecb8a8 (release 8.1.8),
+# extracted by `describe_your_data.py prepare click`: source, docs, and tests.
+name: click
+description: >-
+  The source repository of click, a Python package for building command-line interfaces:
+  the package under src/click, its reStructuredText documentation under docs, its tests,
+  and the changelog.
+
+files:
+  - glob: "src/click/*.py"
+    kind: code
+    language: python
+  - glob: "tests/*.py"
+    kind: code
+    language: python
+  - glob: "docs/*.rst"
+    kind: document
+    sections: rst
+  - glob: "*.rst"
+    kind: document
+    sections: rst
+  - glob: "*.md"
+    kind: document
+    sections: markdown
+
+code:
+  language: python
+  package_root: src

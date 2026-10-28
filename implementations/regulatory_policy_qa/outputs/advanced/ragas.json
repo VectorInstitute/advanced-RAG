@@ -1,0 +1,80 @@
+{
+  "generated_at": "2026-10-20T18:49:48.531905+00:00",
+  "compute_node": "bn100",
+  "slurm_job_id": "411410",
+  "model": "Qwen3_6-35B-A3B",
+  "embedding_model": "BAAI/bge-small-en-v1.5",
+  "reasoning": false,
+  "temperature": 0,
+  "ragas_version": "0.4.1",
+  "local_embedding_model": "BAAI/bge-small-en-v1.5",
+  "hosted_embedding_calls": 0,
+  "answerable_rows": 6,
+  "metrics": [
+    {
+      "row": 0,
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.0,
+      "semantic_similarity": 0.7974313407024959
+    },
+    {
+      "row": 1,
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.911192869880053,
+      "semantic_similarity": 0.8149314143575666
+    },
+    {
+      "row": 2,
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.9763277325666341,
+      "semantic_similarity": 0.8640207956414867
+    },
+    {
+      "row": 3,
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.4384294251746923,
+      "semantic_similarity": 0.6307389960586198
+    },
+    {
+      "row": 4,
+      "faithfulness": 0.0,
+      "answer_relevancy": 0.9192119626495088,
+      "semantic_similarity": 0.8697287200526211
+    },
+    {
+      "row": 5,
+      "faithfulness": 0.0,
+      "answer_relevancy": 0.0,
+      "semantic_similarity": 0.5403957488268588
+    }
+  ],
+  "means": {
+    "faithfulness": 0.6666666666666666,
+    "answer_relevancy": 0.5408603317118147,
+    "semantic_similarity": 0.7528745026066082
+  },
+  "usage": {
+    "calls": 18,
+    "prompt_tokens": 17618,
+    "completion_tokens": 2818,
+    "total_tokens": 20436,
+    "cache_hits": 12,
+    "empty_responses": 0,
+    "call_seconds": 303.8,
+    "by_phase": {
+      "unassigned": {
+        "calls": 18,
+        "prompt_tokens": 17618,
+        "completion_tokens": 2818,
+        "total_tokens": 20436,
+        "cache_hits": 12,
+        "empty_responses": 0,
+        "call_seconds": 303.8
+      }
+    }
+  },
+  "limitations": [
+    "Synthetic references and shared generator/judge model; scores are not independently adjudicated accuracy.",
+    "Null controls are excluded from answer relevance/similarity and reported in the regulatory experiment."
+  ]
+}

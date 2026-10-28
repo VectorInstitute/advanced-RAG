@@ -1,0 +1,1155 @@
+{
+ "model": "Qwen3_8-27B",
+ "rule": "fold_name: case, separators, dots inside a word, trailing (), plural s; other punctuation never folds",
+ "groups": 3008,
+ "entities_in_groups": 6588,
+ "group_size": {
+  "mean": 2.19,
+  "median": 2.0,
+  "max": 6
+ },
+ "groups_with_type_disagreement": 1044,
+ "largest_groups": [
+  [
+   "access_log",
+   "access.log",
+   "access logs",
+   "access log",
+   "accesslog",
+   "access_logs"
+  ],
+  [
+   "brute force attacks",
+   "brute force attack",
+   "brute-force attacks",
+   "bruteforce attacks",
+   "brute-force-attacks",
+   "brute-force attack"
+  ],
+  [
+   "cron job",
+   "cronjob",
+   "cron jobs",
+   "cronjobs",
+   "cron-job",
+   "cron.jobs"
+  ],
+  [
+   "log files",
+   "log file",
+   "logfile",
+   "log-files",
+   "logfiles",
+   "log-file"
+  ],
+  [
+   "ntp server",
+   "ntp servers",
+   "ntpservers",
+   "ntpserver",
+   "ntp-server",
+   "ntp-servers"
+  ],
+  [
+   "web server",
+   "webserver",
+   "web servers",
+   "web-server",
+   "webservers",
+   "web-servers"
+  ],
+  [
+   "backend",
+   "back end",
+   "back-end",
+   "backends",
+   "back ends"
+  ],
+  [
+   "command line",
+   "command-line",
+   "commandline",
+   "command_line",
+   "command lines"
+  ],
+  [
+   "datacenter",
+   "data center",
+   "datacenters",
+   "data centers",
+   "data-center"
+  ],
+  [
+   "environment variables",
+   "environment variable",
+   "environmentvariable",
+   "environment-variables",
+   "environments variables"
+  ]
+ ],
+ "label_sample": [
+  {
+   "group": [
+    "local system account",
+    "localsystem account"
+   ],
+   "types": [
+    "Concept",
+    "ConfigItem"
+   ],
+   "mentions": [
+    3,
+    1
+   ]
+  },
+  {
+   "group": [
+    "monitor",
+    "monitors"
+   ],
+   "types": [
+    "Concept",
+    "Hardware"
+   ],
+   "mentions": [
+    7,
+    1
+   ]
+  },
+  {
+   "group": [
+    "dhcp client",
+    "dhcp clients",
+    "dhcp-client"
+   ],
+   "types": [
+    "Software",
+    "Software",
+    "Software"
+   ],
+   "mentions": [
+    3,
+    3,
+    1
+   ]
+  },
+  {
+   "group": [
+    "docker-machine",
+    "docker machine"
+   ],
+   "types": [
+    "Software",
+    "Software"
+   ],
+   "mentions": [
+    2,
+    1
+   ]
+  },
+  {
+   "group": [
+    "puppet server",
+    "puppet-server"
+   ],
+   "types": [
+    "Software",
+    "Software"
+   ],
+   "mentions": [
+    2,
+    1
+   ]
+  },
+  {
+   "group": [
+    "physical machine",
+    "physical machines"
+   ],
+   "types": [
+    "Hardware",
+    "Hardware"
+   ],
+   "mentions": [
+    5,
+    2
+   ]
+  },
+  {
+   "group": [
+    "man",
+    "mans"
+   ],
+   "types": [
+    "Command",
+    "Command"
+   ],
+   "mentions": [
+    8,
+    1
+   ]
+  },
+  {
+   "group": [
+    "get request",
+    "get requests"
+   ],
+   "types": [
+    "Concept",
+    "Protocol"
+   ],
+   "mentions": [
+    2,
+    2
+   ]
+  },
+  {
+   "group": [
+    "per second billing",
+    "per-second billing"
+   ],
+   "types": [
+    "Concept",
+    "Concept"
+   ],
+   "mentions": [
+    1,
+    1
+   ]
+  },
+  {
+   "group": [
+    "jail",
+    "jails"
+   ],
+   "types": [
+    "Concept",
+    "Software"
+   ],
+   "mentions": [
+    9,
+    5
+   ]
+  },
+  {
+   "group": [
+    "server3",
+    "server 3"
+   ],
+   "types": [
+    "Hardware",
+    "Hardware"
+   ],
+   "mentions": [
+    1,
+    1
+   ]
+  },
+  {
+   "group": [
+    "copy-on-write",
+    "copy on write"
+   ],
+   "types": [
+    "Concept",
+    "Concept"
+   ],
+   "mentions": [
+    5,
+    3
+   ]
+  },
+  {
+   "group": [
+    "production server",
+    "production servers"
+   ],
+   "types": [
+    "Hardware",
+    "Hardware"
+   ],
+   "mentions": [
+    12,
+    3
+   ]
+  },
+  {
+   "group": [
+    "amazon ec2 instance",
+    "amazon ec2 instances"
+   ],
+   "types": [
+    "Hardware",
+    "Hardware"
+   ],
+   "mentions": [
+    13,
+    2
+   ]
+  },
+  {
+   "group": [
+    "exchange 2007",
+    "exchange-2007"
+   ],
+   "types": [
+    "Software",
+    "Software"
+   ],
+   "mentions": [
+    14,
+    2
+   ]
+  },
+  {
+   "group": [
+    "amazon elasticip",
+    "amazon elastic ip"
+   ],
+   "types": [
+    "ConfigItem",
+    "Software"
+   ],
+   "mentions": [
+    1,
+    1
+   ]
+  },
+  {
+   "group": [
+    "subjectaltname",
+    "subjectaltnames",
+    "subject alt name"
+   ],
+   "types": [
+    "ConfigItem",
+    "ConfigItem",
+    "Concept"
+   ],
+   "mentions": [
+    3,
+    1,
+    1
+   ]
+  },
+  {
+   "group": [
+    "ssh private key",
+    "ssh private keys"
+   ],
+   "types": [
+    "ConfigItem",
+    "Concept"
+   ],
+   "mentions": [
+    5,
+    1
+   ]
+  },
+  {
+   "group": [
+    "distinguishedname",
+    "distinguished name"
+   ],
+   "types": [
+    "ConfigItem",
+    "Concept"
+   ],
+   "mentions": [
+    4,
+    2
+   ]
+  },
+  {
+   "group": [
+    "registry key",
+    "registry keys"
+   ],
+   "types": [
+    "ConfigItem",
+    "ConfigItem"
+   ],
+   "mentions": [
+    12,
+    3
+   ]
+  },
+  {
+   "group": [
+    "warning",
+    "warnings"
+   ],
+   "types": [
+    "ErrorOrSymptom",
+    "ErrorOrSymptom"
+   ],
+   "mentions": [
+    21,
+    6
+   ]
+  },
+  {
+   "group": [
+    "smtpd_relay_restrictions",
+    "smtpd_relay_restriction"
+   ],
+   "types": [
+    "ConfigItem",
+    "ConfigItem"
+   ],
+   "mentions": [
+    2,
+    1
+   ]
+  },
+  {
+   "group": [
+    "apparmor",
+    "app-armor"
+   ],
+   "types": [
+    "Software",
+    "Software"
+   ],
+   "mentions": [
+    10,
+    1
+   ]
+  },
+  {
+   "group": [
+    "grain table",
+    "grain tables"
+   ],
+   "types": [
+    "Concept",
+    "Concept"
+   ],
+   "mentions": [
+    1,
+    1
+   ]
+  },
+  {
+   "group": [
+    "template_file",
+    "template file",
+    "template files"
+   ],
+   "types": [
+    "ConfigItem",
+    "ConfigItem",
+    "Concept"
+   ],
+   "mentions": [
+    2,
+    1,
+    1
+   ]
+  },
+  {
+   "group": [
+    "xenserver",
+    "xen server"
+   ],
+   "types": [
+    "Software",
+    "Hardware"
+   ],
+   "mentions": [
+    5,
+    3
+   ]
+  },
+  {
+   "group": [
+    "proxy_pass",
+    "proxypass",
+    "proxy pass"
+   ],
+   "types": [
+    "Command",
+    "ConfigItem",
+    "ConfigItem"
+   ],
+   "mentions": [
+    124,
+    46,
+    1
+   ]
+  },
+  {
+   "group": [
+    "user id",
+    "user_id"
+   ],
+   "types": [
+    "Concept",
+    "Concept"
+   ],
+   "mentions": [
+    1,
+    1
+   ]
+  },
+  {
+   "group": [
+    "http redirect response",
+    "http redirect responses"
+   ],
+   "types": [
+    "Concept",
+    "Protocol"
+   ],
+   "mentions": [
+    2,
+    1
+   ]
+  },
+  {
+   "group": [
+    "passwordless login",
+    "password-less login"
+   ],
+   "types": [
+    "ConfigItem",
+    "Concept"
+   ],
+   "mentions": [
+    1,
+    1
+   ]
+  },
+  {
+   "group": [
+    "ruby on rails",
+    "ruby-on-rails"
+   ],
+   "types": [
+    "Software",
+    "Software"
+   ],
+   "mentions": [
+    9,
+    3
+   ]
+  },
+  {
+   "group": [
+    "txt record",
+    "txt records",
+    "txt-record"
+   ],
+   "types": [
+    "Concept",
+    "Concept",
+    "ConfigItem"
+   ],
+   "mentions": [
+    30,
+    10,
+    1
+   ]
+  },
+  {
+   "group": [
+    "ip-routing",
+    "ip routing"
+   ],
+   "types": [
+    "Concept",
+    "Concept"
+   ],
+   "mentions": [
+    2,
+    1
+   ]
+  },
+  {
+   "group": [
+    "named volume",
+    "named volumes"
+   ],
+   "types": [
+    "Concept",
+    "Concept"
+   ],
+   "mentions": [
+    4,
+    2
+   ]
+  },
+  {
+   "group": [
+    "harddisk load",
+    "hard disk load"
+   ],
+   "types": [
+    "Concept",
+    "Concept"
+   ],
+   "mentions": [
+    1,
+    1
+   ]
+  },
+  {
+   "group": [
+    "split horizon",
+    "split-horizon"
+   ],
+   "types": [
+    "Concept",
+    "Concept"
+   ],
+   "mentions": [
+    1,
+    1
+   ]
+  },
+  {
+   "group": [
+    "system restore",
+    "system-restore"
+   ],
+   "types": [
+    "ErrorOrSymptom",
+    "Concept"
+   ],
+   "mentions": [
+    3,
+    2
+   ]
+  },
+  {
+   "group": [
+    "colocation",
+    "co-location"
+   ],
+   "types": [
+    "Concept",
+    "Concept"
+   ],
+   "mentions": [
+    3,
+    1
+   ]
+  },
+  {
+   "group": [
+    "rollback",
+    "roll back"
+   ],
+   "types": [
+    "Concept",
+    "Concept"
+   ],
+   "mentions": [
+    5,
+    2
+   ]
+  },
+  {
+   "group": [
+    "percent sign",
+    "percent signs"
+   ],
+   "types": [
+    "Concept",
+    "Concept"
+   ],
+   "mentions": [
+    1,
+    1
+   ]
+  },
+  {
+   "group": [
+    "new",
+    "news"
+   ],
+   "types": [
+    "Concept",
+    "Software"
+   ],
+   "mentions": [
+    3,
+    1
+   ]
+  },
+  {
+   "group": [
+    "rdp connection",
+    "rdp connections"
+   ],
+   "types": [
+    "Protocol",
+    "Protocol"
+   ],
+   "mentions": [
+    1,
+    1
+   ]
+  },
+  {
+   "group": [
+    "domain backordering service",
+    "domain backordering services"
+   ],
+   "types": [
+    "Software",
+    "Software"
+   ],
+   "mentions": [
+    1,
+    1
+   ]
+  },
+  {
+   "group": [
+    "mod_security",
+    "modsecurity",
+    "mod-security"
+   ],
+   "types": [
+    "Software",
+    "Software",
+    "Software"
+   ],
+   "mentions": [
+    11,
+    2,
+    1
+   ]
+  },
+  {
+   "group": [
+    "rhel 4",
+    "rhel4"
+   ],
+   "types": [
+    "Software",
+    "Software"
+   ],
+   "mentions": [
+    5,
+    2
+   ]
+  },
+  {
+   "group": [
+    "mail server",
+    "mail servers",
+    "mailserver",
+    "mailservers"
+   ],
+   "types": [
+    "Software",
+    "Software",
+    "Software",
+    "Hardware"
+   ],
+   "mentions": [
+    28,
+    12,
+    3,
+    1
+   ]
+  },
+  {
+   "group": [
+    "static files",
+    "static file",
+    "staticfile"
+   ],
+   "types": [
+    "Concept",
+    "Concept",
+    "ConfigItem"
+   ],
+   "mentions": [
+    16,
+    2,
+    1
+   ]
+  },
+  {
+   "group": [
+    "windows update service",
+    "windows update services"
+   ],
+   "types": [
+    "Software",
+    "Software"
+   ],
+   "mentions": [
+    2,
+    1
+   ]
+  },
+  {
+   "group": [
+    "mac address table",
+    "mac-address table"
+   ],
+   "types": [
+    "ConfigItem",
+    "ConfigItem"
+   ],
+   "mentions": [
+    4,
+    1
+   ]
+  },
+  {
+   "group": [
+    "wildcard cert",
+    "wildcard certs"
+   ],
+   "types": [
+    "Concept",
+    "Concept"
+   ],
+   "mentions": [
+    4,
+    2
+   ]
+  },
+  {
+   "group": [
+    "type 1 hypervisor",
+    "type-1 hypervisors"
+   ],
+   "types": [
+    "Concept",
+    "Concept"
+   ],
+   "mentions": [
+    1,
+    1
+   ]
+  },
+  {
+   "group": [
+    "start parameter",
+    "start parameters"
+   ],
+   "types": [
+    "ConfigItem",
+    "ConfigItem"
+   ],
+   "mentions": [
+    1,
+    1
+   ]
+  },
+  {
+   "group": [
+    "ntp server",
+    "ntp servers",
+    "ntpservers",
+    "ntpserver",
+    "ntp-server",
+    "ntp-servers"
+   ],
+   "types": [
+    "Software",
+    "Software",
+    "Concept",
+    "ConfigItem",
+    "ConfigItem",
+    "ConfigItem"
+   ],
+   "mentions": [
+    6,
+    3,
+    2,
+    1,
+    1,
+    1
+   ]
+  },
+  {
+   "group": [
+    "spot instances",
+    "spot instance"
+   ],
+   "types": [
+    "Concept",
+    "Concept"
+   ],
+   "mentions": [
+    4,
+    2
+   ]
+  },
+  {
+   "group": [
+    "postgresql-9.5",
+    "postgresql 9.5"
+   ],
+   "types": [
+    "Software",
+    "Software"
+   ],
+   "mentions": [
+    2,
+    1
+   ]
+  },
+  {
+   "group": [
+    "hyper-v server 2008 r2",
+    "hyper-v-server-2008-r2"
+   ],
+   "types": [
+    "Software",
+    "Software"
+   ],
+   "mentions": [
+    1,
+    1
+   ]
+  },
+  {
+   "group": [
+    "diff",
+    "diffs"
+   ],
+   "types": [
+    "Command",
+    "Concept"
+   ],
+   "mentions": [
+    20,
+    2
+   ]
+  },
+  {
+   "group": [
+    "xserve",
+    "xserves"
+   ],
+   "types": [
+    "Hardware",
+    "Hardware"
+   ],
+   "mentions": [
+    1,
+    1
+   ]
+  },
+  {
+   "group": [
+    "hosted zone",
+    "hostedzone"
+   ],
+   "types": [
+    "ConfigItem",
+    "ConfigItem"
+   ],
+   "mentions": [
+    7,
+    2
+   ]
+  },
+  {
+   "group": [
+    "vswitch",
+    "v switch"
+   ],
+   "types": [
+    "ConfigItem",
+    "ConfigItem"
+   ],
+   "mentions": [
+    3,
+    1
+   ]
+  }
+ ],
+ "merge": {
+  "entities_before": 63436,
+  "entities_after": 59856,
+  "relations_before": 86644,
+  "relations_after": 86121,
+  "relations_rewired": 9145,
+  "relations_collapsed": 491,
+  "self_loops_dropped": 32,
+  "types_changed": 7,
+  "cross_document_entities_before": 11465,
+  "cross_document_entities_after": 11241,
+  "validation_problems_after": 0,
+  "topology_before": {
+   "entities": 63436,
+   "relations": 86644,
+   "isolated_entities": 4686,
+   "single_document_entities": 51971,
+   "components": 8142,
+   "largest_component_share": 0.7788,
+   "degree_mean": 2.732,
+   "degree_median": 1.0,
+   "degree_max": 1018,
+   "hubs": [
+    [
+     "nginx",
+     1018
+    ],
+    [
+     "ssh",
+     990
+    ],
+    [
+     "linux",
+     730
+    ],
+    [
+     "apache",
+     686
+    ],
+    [
+     "windows",
+     499
+    ],
+    [
+     "iptables",
+     467
+    ],
+    [
+     "mysql",
+     457
+    ],
+    [
+     "rsync",
+     417
+    ],
+    [
+     "dns",
+     378
+    ],
+    [
+     "postfix",
+     374
+    ]
+   ],
+   "entity_type_shares": {
+    "Command": 0.1394,
+    "Concept": 0.1982,
+    "ConfigItem": 0.2824,
+    "ErrorOrSymptom": 0.1108,
+    "Hardware": 0.0792,
+    "Protocol": 0.0244,
+    "Software": 0.1656
+   },
+   "relation_type_shares": {
+    "alternative_to": 0.0766,
+    "causes": 0.1156,
+    "configures": 0.2861,
+    "depends_on": 0.1928,
+    "diagnoses": 0.0731,
+    "fixes": 0.0523,
+    "part_of": 0.2035
+   }
+  },
+  "topology_after": {
+   "entities": 59856,
+   "relations": 86121,
+   "isolated_entities": 4296,
+   "single_document_entities": 48615,
+   "components": 7262,
+   "largest_component_share": 0.7955,
+   "degree_mean": 2.878,
+   "degree_median": 1.0,
+   "degree_max": 994,
+   "hubs": [
+    [
+     "nginx",
+     994
+    ],
+    [
+     "ssh",
+     976
+    ],
+    [
+     "linux",
+     721
+    ],
+    [
+     "apache",
+     666
+    ],
+    [
+     "windows",
+     491
+    ],
+    [
+     "iptables",
+     467
+    ],
+    [
+     "mysql",
+     455
+    ],
+    [
+     "rsync",
+     416
+    ],
+    [
+     "server",
+     378
+    ],
+    [
+     "postfix",
+     371
+    ]
+   ],
+   "entity_type_shares": {
+    "Command": 0.145,
+    "Concept": 0.1914,
+    "ConfigItem": 0.2858,
+    "ErrorOrSymptom": 0.113,
+    "Hardware": 0.0767,
+    "Protocol": 0.0235,
+    "Software": 0.1645
+   },
+   "relation_type_shares": {
+    "alternative_to": 0.0766,
+    "causes": 0.1161,
+    "configures": 0.2862,
+    "depends_on": 0.1928,
+    "diagnoses": 0.0733,
+    "fixes": 0.0525,
+    "part_of": 0.2025
+   }
+  },
+  "topology_delta": {
+   "entities": -3580,
+   "relations": -523,
+   "isolated_entities": -390,
+   "single_document_entities": -3356,
+   "components": -880,
+   "largest_component_share": 0.0167,
+   "degree_mean": 0.146,
+   "degree_median": 0.0,
+   "degree_max": -24,
+   "entity_type_shares": {
+    "Command": 0.0056,
+    "Concept": -0.0068,
+    "ConfigItem": 0.0034,
+    "ErrorOrSymptom": 0.0022,
+    "Hardware": -0.0025,
+    "Protocol": -0.0009,
+    "Software": -0.0011
+   },
+   "relation_type_shares": {
+    "alternative_to": 0.0,
+    "causes": 0.0005,
+    "configures": 0.0001,
+    "depends_on": 0.0,
+    "diagnoses": 0.0002,
+    "fixes": 0.0002,
+    "part_of": -0.001
+   }
+  }
+ }
+}

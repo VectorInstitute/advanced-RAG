@@ -1,0 +1,55 @@
+{
+  "produced_by": {
+    "model": "Qwen3_6-35B-A3B",
+    "response_models": [],
+    "family": "onprem",
+    "endpoint": "vector-cluster",
+    "producer": "regulatory_policy_qa/paired_corrective_loop.py",
+    "usage": {},
+    "note": "Computed offline from the recorded traces; no model calls of its own.",
+    "source": "derived from traces_contract-nli_llm.json and sweep_contract-nli.json",
+    "model_calls": 0
+  },
+  "corpus": "ContractNLI test, LLMGrader traces",
+  "control": "no grader: one retrieval, one generation",
+  "loop": {
+    "label": "0.20 / 0.00",
+    "sufficient": 0.2,
+    "insufficient": 0.0,
+    "max_attempts": 2,
+    "model_calls": 6259
+  },
+  "balanced_accuracy": {
+    "loop": 0.7883,
+    "control": 0.7799
+  },
+  "mcnemar": {
+    "null": {
+      "questions": 322,
+      "loop_only_right": 1,
+      "control_only_right": 1,
+      "mcnemar_exact_two_sided_p": 1.0
+    },
+    "answerable": {
+      "questions": 358,
+      "loop_only_right": 12,
+      "control_only_right": 6,
+      "mcnemar_exact_two_sided_p": 0.2379
+    },
+    "all": {
+      "questions": 680,
+      "loop_only_right": 13,
+      "control_only_right": 7,
+      "mcnemar_exact_two_sided_p": 0.2632
+    }
+  },
+  "paired_bootstrap": {
+    "statistic": "balanced-accuracy gain, loop minus control",
+    "mean_difference": 0.0084,
+    "low": -0.004,
+    "high": 0.0209,
+    "confidence": 0.95,
+    "samples": 10000,
+    "seed": 0
+  }
+}

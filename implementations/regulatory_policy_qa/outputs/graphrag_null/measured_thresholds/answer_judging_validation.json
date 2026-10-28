@@ -1,0 +1,41 @@
+{
+  "produced_by": {
+    "model": "Qwen3_6-35B-A3B",
+    "response_models": [],
+    "family": "onprem",
+    "endpoint": "vector-cluster",
+    "producer": "regulatory_policy_qa/graphrag_null/judge_null_arm.py",
+    "usage": {},
+    "note": "A cached reproduction of the judging run; it made no new model calls.",
+    "source": "answer_judging_summary.json in this directory (judge.model, generation_model)",
+    "model_calls": 0
+  },
+  "cached_reproduction": {
+    "judgements": 358,
+    "new_model_calls": 0,
+    "reports_identical": true
+  },
+  "identical_answer_correctness": {
+    "identical_answer_pairs": 48,
+    "correctness_disagreements": 0
+  },
+  "private_cache_distinct_requests": {
+    "requests": 693,
+    "prompt_tokens": 659342,
+    "completion_tokens": 34816,
+    "total_tokens": 694158,
+    "invalid_responses_retried": 25,
+    "note": "Distinct cached requests this protocol used, including validation retries; not a per-arm cold cost or a server retry bill."
+  },
+  "source_sha256": {
+    "runner": "0e855a25c70147ca5240d4ac2ae3714d15cc4796ae8cbbd8cef5aeba199a27d5",
+    "shared_judge": "c3fade2d2efc62d6d437240ab1f69bb29bdbb546e4d465fc2e17c5e027ac5939"
+  },
+  "offline_tests": {
+    "full_suite_passed": 1690,
+    "final_added_regressions_passed": 5,
+    "distinct_tests_passed": 1695,
+    "skipped": 2,
+    "integration_tests_deselected": 2
+  }
+}

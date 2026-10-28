@@ -1,0 +1,15 @@
+{
+  "files": {
+    "regulatory_source.json": {
+      "model": null,
+      "response_models": [],
+      "family": null,
+      "endpoint": null,
+      "producer": "regulatory_policy_qa/advanced_lab/answering.py",
+      "note": "Digest-checked federal statutory text snapshot; source extraction and storage call no chat model.",
+      "source": "regulatory_source.json source_url, html_sha256 and text_sha256",
+      "model_calls": 0
+    }
+  },
+  "note": "Provenance sidecar for immutable historical fixtures, cache envelopes and model-free artifacts. Measured payloads and cache keys are preserved; response model identifiers were not recorded in these historical runs."
+}

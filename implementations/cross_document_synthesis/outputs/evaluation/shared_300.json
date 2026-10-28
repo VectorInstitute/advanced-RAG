@@ -1,0 +1,303 @@
+{
+  "produced_by": {
+    "model": "Qwen3_6-35B-A3B",
+    "endpoint": "vector-cluster",
+    "producer": "run_shared_300.py",
+    "label": "recorded predictions, rescored",
+    "judge": null,
+    "note": "Core and graph arms are selected from the committed 1,000-question records; the correction cohort ran on the shared 300. Rescoring makes no model calls."
+  },
+  "test": {
+    "questions": 300,
+    "per_hop": {
+      "2": 150,
+      "3": 75,
+      "4": 75
+    },
+    "seed": 20261006,
+    "selection": "aieng.advanced_rag.corpora.musique.stratified_test_set",
+    "scoring": "Lexical exact match and token F1 against every accepted alias; failures score zero."
+  },
+  "arms": {
+    "dense": {
+      "reader_model": "Qwen3_6-35B-A3B",
+      "planner_model": null,
+      "grader_model": null,
+      "judge_model": null,
+      "generation_passages": 5,
+      "exact_match": 0.2,
+      "f1": 0.2745,
+      "f1_by_hops": {
+        "2-hop": 0.3333,
+        "3-hop": 0.2259,
+        "4-hop": 0.2056
+      },
+      "supporting_recall_at_5": 0.4692,
+      "generation_all_supports": 0.1633,
+      "calls_per_question": 1.0,
+      "live_calls_per_question": 0.0
+    },
+    "decomposition": {
+      "reader_model": "Qwen3_6-35B-A3B",
+      "planner_model": "Qwen3_6-35B-A3B",
+      "grader_model": null,
+      "judge_model": null,
+      "generation_passages": 5,
+      "exact_match": 0.2267,
+      "f1": 0.2939,
+      "f1_by_hops": {
+        "2-hop": 0.3324,
+        "3-hop": 0.2743,
+        "4-hop": 0.2367
+      },
+      "supporting_recall_at_5": 0.5125,
+      "generation_all_supports": 0.1833,
+      "calls_per_question": 2.0,
+      "live_calls_per_question": 0.0
+    },
+    "ircot": {
+      "reader_model": "Qwen3_6-35B-A3B",
+      "planner_model": "Qwen3_6-35B-A3B",
+      "grader_model": null,
+      "judge_model": null,
+      "generation_passages": 5,
+      "exact_match": 0.42,
+      "f1": 0.5088,
+      "f1_by_hops": {
+        "2-hop": 0.5963,
+        "3-hop": 0.4169,
+        "4-hop": 0.4258
+      },
+      "supporting_recall_at_5": 0.6461,
+      "generation_all_supports": 0.4067,
+      "calls_per_question": 6.58,
+      "live_calls_per_question": 6.48
+    },
+    "hipporag2": {
+      "reader_model": "Qwen3_6-35B-A3B",
+      "planner_model": null,
+      "grader_model": null,
+      "judge_model": null,
+      "generation_passages": 5,
+      "exact_match": 0.32,
+      "f1": 0.4179,
+      "f1_by_hops": {
+        "2-hop": 0.5241,
+        "3-hop": 0.3628,
+        "4-hop": 0.2605
+      },
+      "supporting_recall_at_5": 0.6156,
+      "generation_all_supports": 0.33,
+      "calls_per_question": 2.0,
+      "live_calls_per_question": 2.0,
+      "note": "atlas-rag variant over RI #4's released index, entity-relation stage only."
+    },
+    "lightrag": {
+      "reader_model": "Qwen3_6-35B-A3B",
+      "planner_model": null,
+      "grader_model": null,
+      "judge_model": null,
+      "generation_passages": 5,
+      "exact_match": 0.2133,
+      "f1": 0.2842,
+      "f1_by_hops": {
+        "2-hop": 0.3164,
+        "3-hop": 0.2495,
+        "4-hop": 0.2547
+      },
+      "supporting_recall_at_5": 0.4394,
+      "generation_all_supports": 0.1267,
+      "calls_per_question": 2.0,
+      "live_calls_per_question": 2.0,
+      "note": "Mix mode over RI #4's release reference-ri4-bd05f7bb16c6, which indexes all 11,656 passages."
+    },
+    "correction_dense": {
+      "reader_model": "Qwen3_6-35B-A3B",
+      "planner_model": null,
+      "grader_model": null,
+      "judge_model": null,
+      "generation_passages": 5,
+      "exact_match": 0.2,
+      "f1": 0.2742,
+      "f1_by_hops": {
+        "2-hop": 0.3257,
+        "3-hop": 0.2342,
+        "4-hop": 0.211
+      },
+      "supporting_recall_at_5": 0.4692,
+      "generation_all_supports": 0.1633,
+      "calls_per_question": 1.0,
+      "live_calls_per_question": 1.0,
+      "note": "Dense control of the correction cohort, run in that cohort's response-cache namespace."
+    },
+    "graded_single_pass": {
+      "reader_model": "Qwen3_6-35B-A3B",
+      "planner_model": null,
+      "grader_model": "Qwen3_6-35B-A3B",
+      "judge_model": null,
+      "generation_passages": 5,
+      "exact_match": 0.2,
+      "f1": 0.2742,
+      "f1_by_hops": {
+        "2-hop": 0.3257,
+        "3-hop": 0.2342,
+        "4-hop": 0.211
+      },
+      "supporting_recall_at_5": 0.4692,
+      "generation_all_supports": 0.1633,
+      "calls_per_question": 6.0,
+      "live_calls_per_question": 5.0,
+      "note": "Grades the first five passages and answers once; isolates grading from the retry."
+    },
+    "corrective": {
+      "reader_model": "Qwen3_6-35B-A3B",
+      "planner_model": "Qwen3_6-35B-A3B",
+      "grader_model": "Qwen3_6-35B-A3B",
+      "judge_model": null,
+      "generation_passages": 5,
+      "exact_match": 0.2233,
+      "f1": 0.2959,
+      "f1_by_hops": {
+        "2-hop": 0.3382,
+        "3-hop": 0.2498,
+        "4-hop": 0.2574
+      },
+      "supporting_recall_at_5": 0.4631,
+      "generation_all_supports": 0.15,
+      "calls_per_question": 11.25,
+      "live_calls_per_question": 6.11,
+      "note": "Grades five passages, rewrites once on a borderline grade, and allows two retrieval attempts."
+    }
+  },
+  "comparisons_with_dense": {
+    "decomposition_minus_dense": {
+      "exact_match": {
+        "mean": 0.0267,
+        "low": -0.0067,
+        "high": 0.0633
+      },
+      "token_f1": {
+        "mean": 0.0194,
+        "low": -0.0134,
+        "high": 0.0527
+      },
+      "samples": 5000,
+      "interval": "paired cluster percentile 95%"
+    },
+    "ircot_minus_dense": {
+      "exact_match": {
+        "mean": 0.22,
+        "low": 0.17,
+        "high": 0.27
+      },
+      "token_f1": {
+        "mean": 0.2343,
+        "low": 0.1839,
+        "high": 0.2839
+      },
+      "samples": 5000,
+      "interval": "paired cluster percentile 95%"
+    },
+    "hipporag2_minus_dense": {
+      "exact_match": {
+        "mean": 0.12,
+        "low": 0.0733,
+        "high": 0.1667
+      },
+      "token_f1": {
+        "mean": 0.1433,
+        "low": 0.0975,
+        "high": 0.1889
+      },
+      "samples": 5000,
+      "interval": "paired cluster percentile 95%"
+    },
+    "lightrag_minus_dense": {
+      "exact_match": {
+        "mean": 0.0133,
+        "low": -0.0133,
+        "high": 0.0433
+      },
+      "token_f1": {
+        "mean": 0.0097,
+        "low": -0.016,
+        "high": 0.036
+      },
+      "samples": 5000,
+      "interval": "paired cluster percentile 95%"
+    }
+  },
+  "correction_comparisons": {
+    "corrective_minus_correction_dense": {
+      "exact_match": {
+        "mean": 0.0233,
+        "low": -0.0033,
+        "high": 0.0533
+      },
+      "token_f1": {
+        "mean": 0.0217,
+        "low": -0.0093,
+        "high": 0.0519
+      },
+      "samples": 5000,
+      "interval": "paired cluster percentile 95%"
+    },
+    "corrective_minus_graded_single_pass": {
+      "exact_match": {
+        "mean": 0.0233,
+        "low": -0.0033,
+        "high": 0.0533
+      },
+      "token_f1": {
+        "mean": 0.0217,
+        "low": -0.0093,
+        "high": 0.0519
+      },
+      "samples": 5000,
+      "interval": "paired cluster percentile 95%"
+    },
+    "graded_single_pass_minus_correction_dense": {
+      "exact_match": {
+        "mean": 0.0,
+        "low": 0.0,
+        "high": 0.0
+      },
+      "token_f1": {
+        "mean": 0.0,
+        "low": 0.0,
+        "high": 0.0
+      },
+      "samples": 5000,
+      "interval": "paired cluster percentile 95%"
+    },
+    "correction_dense_minus_dense": {
+      "exact_match": {
+        "mean": 0.0,
+        "low": -0.0133,
+        "high": 0.0133
+      },
+      "token_f1": {
+        "mean": -0.0004,
+        "low": -0.0118,
+        "high": 0.0097
+      },
+      "samples": 5000,
+      "interval": "paired cluster percentile 95%"
+    }
+  },
+  "ri4_reference": {
+    "source": "implementations/graphrag_technical_support/outputs/musique_graph_test.json",
+    "reader_model": "Qwen3_6-35B-A3B",
+    "judge_model": "gemini-3.8-flash",
+    "answer_passages": 5,
+    "rank_depth": 10,
+    "f1": {
+      "dense": 0.25,
+      "dense-iterative": 0.2969,
+      "hipporag2": 0.3901,
+      "lightrag": 0.2525,
+      "hybrid": 0.2813
+    },
+    "note": "Same questions and reader model; RI #4 uses its own answer prompt and a rank depth of 10, so its rows are not paired with RI #2's."
+  }
+}

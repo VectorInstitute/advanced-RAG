@@ -1,0 +1,1325 @@
+{
+  "generated_at": "2026-10-20T19:19:22.539559+00:00",
+  "compute_node": "bn100",
+  "slurm_job_id": "411410",
+  "model": "Qwen3_6-35B-A3B",
+  "embedding_model": "BAAI/bge-small-en-v1.5",
+  "reasoning": false,
+  "temperature": 0,
+  "corpus_sha256": "460267b56052a2dc5aead98eb35eadef9e6734d5723d37b4a9790e410f812387",
+  "questions": 40,
+  "answerable_questions": 20,
+  "k": 10,
+  "arms": {
+    "scoped": {
+      "retrieval": {
+        "retrieval_failure": 0.0,
+        "mrr": 0.72
+      },
+      "cross_contract_hits": 0,
+      "queries_with_cross_contract_hits": 0,
+      "outcomes": [
+        {
+          "query_id": "1::nda-11",
+          "expected_doc_id": "1",
+          "retrieved_doc_ids": [
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1"
+          ],
+          "cross_contract_hits": 0
+        },
+        {
+          "query_id": "1::nda-16",
+          "expected_doc_id": "1",
+          "retrieved_doc_ids": [
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1"
+          ],
+          "cross_contract_hits": 0
+        },
+        {
+          "query_id": "2::nda-11",
+          "expected_doc_id": "2",
+          "retrieved_doc_ids": [
+            "2",
+            "2",
+            "2",
+            "2",
+            "2",
+            "2",
+            "2",
+            "2",
+            "2",
+            "2"
+          ],
+          "cross_contract_hits": 0
+        },
+        {
+          "query_id": "2::nda-10",
+          "expected_doc_id": "2",
+          "retrieved_doc_ids": [
+            "2",
+            "2",
+            "2",
+            "2",
+            "2",
+            "2",
+            "2",
+            "2",
+            "2",
+            "2"
+          ],
+          "cross_contract_hits": 0
+        },
+        {
+          "query_id": "4::nda-11",
+          "expected_doc_id": "4",
+          "retrieved_doc_ids": [
+            "4",
+            "4",
+            "4"
+          ],
+          "cross_contract_hits": 0
+        },
+        {
+          "query_id": "4::nda-15",
+          "expected_doc_id": "4",
+          "retrieved_doc_ids": [
+            "4",
+            "4",
+            "4"
+          ],
+          "cross_contract_hits": 0
+        },
+        {
+          "query_id": "5::nda-11",
+          "expected_doc_id": "5",
+          "retrieved_doc_ids": [
+            "5",
+            "5",
+            "5",
+            "5",
+            "5",
+            "5",
+            "5"
+          ],
+          "cross_contract_hits": 0
+        },
+        {
+          "query_id": "5::nda-10",
+          "expected_doc_id": "5",
+          "retrieved_doc_ids": [
+            "5",
+            "5",
+            "5",
+            "5",
+            "5",
+            "5",
+            "5"
+          ],
+          "cross_contract_hits": 0
+        },
+        {
+          "query_id": "6::nda-11",
+          "expected_doc_id": "6",
+          "retrieved_doc_ids": [
+            "6",
+            "6",
+            "6",
+            "6",
+            "6",
+            "6",
+            "6",
+            "6",
+            "6"
+          ],
+          "cross_contract_hits": 0
+        },
+        {
+          "query_id": "6::nda-16",
+          "expected_doc_id": "6",
+          "retrieved_doc_ids": [
+            "6",
+            "6",
+            "6",
+            "6",
+            "6",
+            "6",
+            "6",
+            "6",
+            "6"
+          ],
+          "cross_contract_hits": 0
+        },
+        {
+          "query_id": "8::nda-11",
+          "expected_doc_id": "8",
+          "retrieved_doc_ids": [
+            "8",
+            "8",
+            "8",
+            "8",
+            "8",
+            "8"
+          ],
+          "cross_contract_hits": 0
+        },
+        {
+          "query_id": "8::nda-2",
+          "expected_doc_id": "8",
+          "retrieved_doc_ids": [
+            "8",
+            "8",
+            "8",
+            "8",
+            "8",
+            "8"
+          ],
+          "cross_contract_hits": 0
+        },
+        {
+          "query_id": "11::nda-11",
+          "expected_doc_id": "11",
+          "retrieved_doc_ids": [
+            "11",
+            "11",
+            "11",
+            "11",
+            "11",
+            "11",
+            "11",
+            "11",
+            "11",
+            "11"
+          ],
+          "cross_contract_hits": 0
+        },
+        {
+          "query_id": "11::nda-16",
+          "expected_doc_id": "11",
+          "retrieved_doc_ids": [
+            "11",
+            "11",
+            "11",
+            "11",
+            "11",
+            "11",
+            "11",
+            "11",
+            "11",
+            "11"
+          ],
+          "cross_contract_hits": 0
+        },
+        {
+          "query_id": "18::nda-11",
+          "expected_doc_id": "18",
+          "retrieved_doc_ids": [
+            "18",
+            "18",
+            "18",
+            "18",
+            "18",
+            "18",
+            "18"
+          ],
+          "cross_contract_hits": 0
+        },
+        {
+          "query_id": "18::nda-2",
+          "expected_doc_id": "18",
+          "retrieved_doc_ids": [
+            "18",
+            "18",
+            "18",
+            "18",
+            "18",
+            "18",
+            "18"
+          ],
+          "cross_contract_hits": 0
+        },
+        {
+          "query_id": "21::nda-11",
+          "expected_doc_id": "21",
+          "retrieved_doc_ids": [
+            "21",
+            "21",
+            "21",
+            "21",
+            "21",
+            "21",
+            "21",
+            "21",
+            "21",
+            "21"
+          ],
+          "cross_contract_hits": 0
+        },
+        {
+          "query_id": "21::nda-15",
+          "expected_doc_id": "21",
+          "retrieved_doc_ids": [
+            "21",
+            "21",
+            "21",
+            "21",
+            "21",
+            "21",
+            "21",
+            "21",
+            "21",
+            "21"
+          ],
+          "cross_contract_hits": 0
+        },
+        {
+          "query_id": "22::nda-11",
+          "expected_doc_id": "22",
+          "retrieved_doc_ids": [
+            "22",
+            "22",
+            "22",
+            "22",
+            "22",
+            "22",
+            "22",
+            "22"
+          ],
+          "cross_contract_hits": 0
+        },
+        {
+          "query_id": "22::nda-15",
+          "expected_doc_id": "22",
+          "retrieved_doc_ids": [
+            "22",
+            "22",
+            "22",
+            "22",
+            "22",
+            "22",
+            "22",
+            "22"
+          ],
+          "cross_contract_hits": 0
+        },
+        {
+          "query_id": "23::nda-11",
+          "expected_doc_id": "23",
+          "retrieved_doc_ids": [
+            "23",
+            "23",
+            "23",
+            "23",
+            "23",
+            "23",
+            "23",
+            "23",
+            "23",
+            "23"
+          ],
+          "cross_contract_hits": 0
+        },
+        {
+          "query_id": "23::nda-15",
+          "expected_doc_id": "23",
+          "retrieved_doc_ids": [
+            "23",
+            "23",
+            "23",
+            "23",
+            "23",
+            "23",
+            "23",
+            "23",
+            "23",
+            "23"
+          ],
+          "cross_contract_hits": 0
+        },
+        {
+          "query_id": "24::nda-11",
+          "expected_doc_id": "24",
+          "retrieved_doc_ids": [
+            "24",
+            "24",
+            "24",
+            "24",
+            "24",
+            "24",
+            "24",
+            "24",
+            "24",
+            "24"
+          ],
+          "cross_contract_hits": 0
+        },
+        {
+          "query_id": "24::nda-15",
+          "expected_doc_id": "24",
+          "retrieved_doc_ids": [
+            "24",
+            "24",
+            "24",
+            "24",
+            "24",
+            "24",
+            "24",
+            "24",
+            "24",
+            "24"
+          ],
+          "cross_contract_hits": 0
+        },
+        {
+          "query_id": "25::nda-11",
+          "expected_doc_id": "25",
+          "retrieved_doc_ids": [
+            "25",
+            "25",
+            "25",
+            "25",
+            "25",
+            "25"
+          ],
+          "cross_contract_hits": 0
+        },
+        {
+          "query_id": "25::nda-15",
+          "expected_doc_id": "25",
+          "retrieved_doc_ids": [
+            "25",
+            "25",
+            "25",
+            "25",
+            "25",
+            "25"
+          ],
+          "cross_contract_hits": 0
+        },
+        {
+          "query_id": "26::nda-11",
+          "expected_doc_id": "26",
+          "retrieved_doc_ids": [
+            "26",
+            "26",
+            "26",
+            "26",
+            "26",
+            "26",
+            "26",
+            "26",
+            "26"
+          ],
+          "cross_contract_hits": 0
+        },
+        {
+          "query_id": "26::nda-15",
+          "expected_doc_id": "26",
+          "retrieved_doc_ids": [
+            "26",
+            "26",
+            "26",
+            "26",
+            "26",
+            "26",
+            "26",
+            "26",
+            "26"
+          ],
+          "cross_contract_hits": 0
+        },
+        {
+          "query_id": "30::nda-11",
+          "expected_doc_id": "30",
+          "retrieved_doc_ids": [
+            "30",
+            "30",
+            "30",
+            "30",
+            "30",
+            "30",
+            "30",
+            "30",
+            "30",
+            "30"
+          ],
+          "cross_contract_hits": 0
+        },
+        {
+          "query_id": "30::nda-15",
+          "expected_doc_id": "30",
+          "retrieved_doc_ids": [
+            "30",
+            "30",
+            "30",
+            "30",
+            "30",
+            "30",
+            "30",
+            "30",
+            "30",
+            "30"
+          ],
+          "cross_contract_hits": 0
+        },
+        {
+          "query_id": "31::nda-11",
+          "expected_doc_id": "31",
+          "retrieved_doc_ids": [
+            "31",
+            "31",
+            "31",
+            "31",
+            "31",
+            "31"
+          ],
+          "cross_contract_hits": 0
+        },
+        {
+          "query_id": "31::nda-12",
+          "expected_doc_id": "31",
+          "retrieved_doc_ids": [
+            "31",
+            "31",
+            "31",
+            "31",
+            "31",
+            "31"
+          ],
+          "cross_contract_hits": 0
+        },
+        {
+          "query_id": "36::nda-11",
+          "expected_doc_id": "36",
+          "retrieved_doc_ids": [
+            "36",
+            "36",
+            "36",
+            "36",
+            "36",
+            "36",
+            "36",
+            "36",
+            "36",
+            "36"
+          ],
+          "cross_contract_hits": 0
+        },
+        {
+          "query_id": "36::nda-15",
+          "expected_doc_id": "36",
+          "retrieved_doc_ids": [
+            "36",
+            "36",
+            "36",
+            "36",
+            "36",
+            "36",
+            "36",
+            "36",
+            "36",
+            "36"
+          ],
+          "cross_contract_hits": 0
+        },
+        {
+          "query_id": "38::nda-11",
+          "expected_doc_id": "38",
+          "retrieved_doc_ids": [
+            "38",
+            "38",
+            "38",
+            "38",
+            "38",
+            "38",
+            "38",
+            "38",
+            "38",
+            "38"
+          ],
+          "cross_contract_hits": 0
+        },
+        {
+          "query_id": "38::nda-15",
+          "expected_doc_id": "38",
+          "retrieved_doc_ids": [
+            "38",
+            "38",
+            "38",
+            "38",
+            "38",
+            "38",
+            "38",
+            "38",
+            "38",
+            "38"
+          ],
+          "cross_contract_hits": 0
+        },
+        {
+          "query_id": "40::nda-11",
+          "expected_doc_id": "40",
+          "retrieved_doc_ids": [
+            "40",
+            "40",
+            "40"
+          ],
+          "cross_contract_hits": 0
+        },
+        {
+          "query_id": "40::nda-2",
+          "expected_doc_id": "40",
+          "retrieved_doc_ids": [
+            "40",
+            "40",
+            "40"
+          ],
+          "cross_contract_hits": 0
+        },
+        {
+          "query_id": "41::nda-11",
+          "expected_doc_id": "41",
+          "retrieved_doc_ids": [
+            "41",
+            "41",
+            "41",
+            "41",
+            "41",
+            "41",
+            "41",
+            "41",
+            "41",
+            "41"
+          ],
+          "cross_contract_hits": 0
+        },
+        {
+          "query_id": "41::nda-16",
+          "expected_doc_id": "41",
+          "retrieved_doc_ids": [
+            "41",
+            "41",
+            "41",
+            "41",
+            "41",
+            "41",
+            "41",
+            "41",
+            "41",
+            "41"
+          ],
+          "cross_contract_hits": 0
+        }
+      ]
+    },
+    "unscoped": {
+      "retrieval": {
+        "retrieval_failure": 0.75,
+        "mrr": 0.1133
+      },
+      "cross_contract_hits": 379,
+      "queries_with_cross_contract_hits": 40,
+      "outcomes": [
+        {
+          "query_id": "1::nda-11",
+          "expected_doc_id": "1",
+          "retrieved_doc_ids": [
+            "2",
+            "1",
+            "26",
+            "36",
+            "1",
+            "22",
+            "38",
+            "24",
+            "21",
+            "25"
+          ],
+          "cross_contract_hits": 8
+        },
+        {
+          "query_id": "1::nda-16",
+          "expected_doc_id": "1",
+          "retrieved_doc_ids": [
+            "21",
+            "30",
+            "30",
+            "2",
+            "24",
+            "26",
+            "24",
+            "1",
+            "22",
+            "6"
+          ],
+          "cross_contract_hits": 9
+        },
+        {
+          "query_id": "2::nda-11",
+          "expected_doc_id": "2",
+          "retrieved_doc_ids": [
+            "2",
+            "1",
+            "26",
+            "36",
+            "1",
+            "22",
+            "38",
+            "24",
+            "21",
+            "25"
+          ],
+          "cross_contract_hits": 9
+        },
+        {
+          "query_id": "2::nda-10",
+          "expected_doc_id": "2",
+          "retrieved_doc_ids": [
+            "24",
+            "30",
+            "25",
+            "1",
+            "8",
+            "24",
+            "6",
+            "22",
+            "24",
+            "36"
+          ],
+          "cross_contract_hits": 10
+        },
+        {
+          "query_id": "4::nda-11",
+          "expected_doc_id": "4",
+          "retrieved_doc_ids": [
+            "2",
+            "1",
+            "26",
+            "36",
+            "1",
+            "22",
+            "38",
+            "24",
+            "21",
+            "25"
+          ],
+          "cross_contract_hits": 10
+        },
+        {
+          "query_id": "4::nda-15",
+          "expected_doc_id": "4",
+          "retrieved_doc_ids": [
+            "1",
+            "21",
+            "30",
+            "30",
+            "22",
+            "6",
+            "25",
+            "38",
+            "36",
+            "30"
+          ],
+          "cross_contract_hits": 10
+        },
+        {
+          "query_id": "5::nda-11",
+          "expected_doc_id": "5",
+          "retrieved_doc_ids": [
+            "2",
+            "1",
+            "26",
+            "36",
+            "1",
+            "22",
+            "38",
+            "24",
+            "21",
+            "25"
+          ],
+          "cross_contract_hits": 10
+        },
+        {
+          "query_id": "5::nda-10",
+          "expected_doc_id": "5",
+          "retrieved_doc_ids": [
+            "24",
+            "30",
+            "25",
+            "1",
+            "8",
+            "24",
+            "6",
+            "22",
+            "24",
+            "36"
+          ],
+          "cross_contract_hits": 10
+        },
+        {
+          "query_id": "6::nda-11",
+          "expected_doc_id": "6",
+          "retrieved_doc_ids": [
+            "2",
+            "1",
+            "26",
+            "36",
+            "1",
+            "22",
+            "38",
+            "24",
+            "21",
+            "25"
+          ],
+          "cross_contract_hits": 10
+        },
+        {
+          "query_id": "6::nda-16",
+          "expected_doc_id": "6",
+          "retrieved_doc_ids": [
+            "21",
+            "30",
+            "30",
+            "2",
+            "24",
+            "26",
+            "24",
+            "1",
+            "22",
+            "6"
+          ],
+          "cross_contract_hits": 9
+        },
+        {
+          "query_id": "8::nda-11",
+          "expected_doc_id": "8",
+          "retrieved_doc_ids": [
+            "2",
+            "1",
+            "26",
+            "36",
+            "1",
+            "22",
+            "38",
+            "24",
+            "21",
+            "25"
+          ],
+          "cross_contract_hits": 10
+        },
+        {
+          "query_id": "8::nda-2",
+          "expected_doc_id": "8",
+          "retrieved_doc_ids": [
+            "1",
+            "2",
+            "40",
+            "38",
+            "38",
+            "1",
+            "11",
+            "38",
+            "11",
+            "2"
+          ],
+          "cross_contract_hits": 10
+        },
+        {
+          "query_id": "11::nda-11",
+          "expected_doc_id": "11",
+          "retrieved_doc_ids": [
+            "2",
+            "1",
+            "26",
+            "36",
+            "1",
+            "22",
+            "38",
+            "24",
+            "21",
+            "25"
+          ],
+          "cross_contract_hits": 10
+        },
+        {
+          "query_id": "11::nda-16",
+          "expected_doc_id": "11",
+          "retrieved_doc_ids": [
+            "21",
+            "30",
+            "30",
+            "2",
+            "24",
+            "26",
+            "24",
+            "1",
+            "22",
+            "6"
+          ],
+          "cross_contract_hits": 10
+        },
+        {
+          "query_id": "18::nda-11",
+          "expected_doc_id": "18",
+          "retrieved_doc_ids": [
+            "2",
+            "1",
+            "26",
+            "36",
+            "1",
+            "22",
+            "38",
+            "24",
+            "21",
+            "25"
+          ],
+          "cross_contract_hits": 10
+        },
+        {
+          "query_id": "18::nda-2",
+          "expected_doc_id": "18",
+          "retrieved_doc_ids": [
+            "1",
+            "2",
+            "40",
+            "38",
+            "38",
+            "1",
+            "11",
+            "38",
+            "11",
+            "2"
+          ],
+          "cross_contract_hits": 10
+        },
+        {
+          "query_id": "21::nda-11",
+          "expected_doc_id": "21",
+          "retrieved_doc_ids": [
+            "2",
+            "1",
+            "26",
+            "36",
+            "1",
+            "22",
+            "38",
+            "24",
+            "21",
+            "25"
+          ],
+          "cross_contract_hits": 9
+        },
+        {
+          "query_id": "21::nda-15",
+          "expected_doc_id": "21",
+          "retrieved_doc_ids": [
+            "1",
+            "21",
+            "30",
+            "30",
+            "22",
+            "6",
+            "25",
+            "38",
+            "36",
+            "30"
+          ],
+          "cross_contract_hits": 9
+        },
+        {
+          "query_id": "22::nda-11",
+          "expected_doc_id": "22",
+          "retrieved_doc_ids": [
+            "2",
+            "1",
+            "26",
+            "36",
+            "1",
+            "22",
+            "38",
+            "24",
+            "21",
+            "25"
+          ],
+          "cross_contract_hits": 9
+        },
+        {
+          "query_id": "22::nda-15",
+          "expected_doc_id": "22",
+          "retrieved_doc_ids": [
+            "1",
+            "21",
+            "30",
+            "30",
+            "22",
+            "6",
+            "25",
+            "38",
+            "36",
+            "30"
+          ],
+          "cross_contract_hits": 9
+        },
+        {
+          "query_id": "23::nda-11",
+          "expected_doc_id": "23",
+          "retrieved_doc_ids": [
+            "2",
+            "1",
+            "26",
+            "36",
+            "1",
+            "22",
+            "38",
+            "24",
+            "21",
+            "25"
+          ],
+          "cross_contract_hits": 10
+        },
+        {
+          "query_id": "23::nda-15",
+          "expected_doc_id": "23",
+          "retrieved_doc_ids": [
+            "1",
+            "21",
+            "30",
+            "30",
+            "22",
+            "6",
+            "25",
+            "38",
+            "36",
+            "30"
+          ],
+          "cross_contract_hits": 10
+        },
+        {
+          "query_id": "24::nda-11",
+          "expected_doc_id": "24",
+          "retrieved_doc_ids": [
+            "2",
+            "1",
+            "26",
+            "36",
+            "1",
+            "22",
+            "38",
+            "24",
+            "21",
+            "25"
+          ],
+          "cross_contract_hits": 9
+        },
+        {
+          "query_id": "24::nda-15",
+          "expected_doc_id": "24",
+          "retrieved_doc_ids": [
+            "1",
+            "21",
+            "30",
+            "30",
+            "22",
+            "6",
+            "25",
+            "38",
+            "36",
+            "30"
+          ],
+          "cross_contract_hits": 10
+        },
+        {
+          "query_id": "25::nda-11",
+          "expected_doc_id": "25",
+          "retrieved_doc_ids": [
+            "2",
+            "1",
+            "26",
+            "36",
+            "1",
+            "22",
+            "38",
+            "24",
+            "21",
+            "25"
+          ],
+          "cross_contract_hits": 9
+        },
+        {
+          "query_id": "25::nda-15",
+          "expected_doc_id": "25",
+          "retrieved_doc_ids": [
+            "1",
+            "21",
+            "30",
+            "30",
+            "22",
+            "6",
+            "25",
+            "38",
+            "36",
+            "30"
+          ],
+          "cross_contract_hits": 9
+        },
+        {
+          "query_id": "26::nda-11",
+          "expected_doc_id": "26",
+          "retrieved_doc_ids": [
+            "2",
+            "1",
+            "26",
+            "36",
+            "1",
+            "22",
+            "38",
+            "24",
+            "21",
+            "25"
+          ],
+          "cross_contract_hits": 9
+        },
+        {
+          "query_id": "26::nda-15",
+          "expected_doc_id": "26",
+          "retrieved_doc_ids": [
+            "1",
+            "21",
+            "30",
+            "30",
+            "22",
+            "6",
+            "25",
+            "38",
+            "36",
+            "30"
+          ],
+          "cross_contract_hits": 10
+        },
+        {
+          "query_id": "30::nda-11",
+          "expected_doc_id": "30",
+          "retrieved_doc_ids": [
+            "2",
+            "1",
+            "26",
+            "36",
+            "1",
+            "22",
+            "38",
+            "24",
+            "21",
+            "25"
+          ],
+          "cross_contract_hits": 10
+        },
+        {
+          "query_id": "30::nda-15",
+          "expected_doc_id": "30",
+          "retrieved_doc_ids": [
+            "1",
+            "21",
+            "30",
+            "30",
+            "22",
+            "6",
+            "25",
+            "38",
+            "36",
+            "30"
+          ],
+          "cross_contract_hits": 7
+        },
+        {
+          "query_id": "31::nda-11",
+          "expected_doc_id": "31",
+          "retrieved_doc_ids": [
+            "2",
+            "1",
+            "26",
+            "36",
+            "1",
+            "22",
+            "38",
+            "24",
+            "21",
+            "25"
+          ],
+          "cross_contract_hits": 10
+        },
+        {
+          "query_id": "31::nda-12",
+          "expected_doc_id": "31",
+          "retrieved_doc_ids": [
+            "25",
+            "6",
+            "1",
+            "22",
+            "30",
+            "25",
+            "2",
+            "23",
+            "36",
+            "36"
+          ],
+          "cross_contract_hits": 10
+        },
+        {
+          "query_id": "36::nda-11",
+          "expected_doc_id": "36",
+          "retrieved_doc_ids": [
+            "2",
+            "1",
+            "26",
+            "36",
+            "1",
+            "22",
+            "38",
+            "24",
+            "21",
+            "25"
+          ],
+          "cross_contract_hits": 9
+        },
+        {
+          "query_id": "36::nda-15",
+          "expected_doc_id": "36",
+          "retrieved_doc_ids": [
+            "1",
+            "21",
+            "30",
+            "30",
+            "22",
+            "6",
+            "25",
+            "38",
+            "36",
+            "30"
+          ],
+          "cross_contract_hits": 9
+        },
+        {
+          "query_id": "38::nda-11",
+          "expected_doc_id": "38",
+          "retrieved_doc_ids": [
+            "2",
+            "1",
+            "26",
+            "36",
+            "1",
+            "22",
+            "38",
+            "24",
+            "21",
+            "25"
+          ],
+          "cross_contract_hits": 9
+        },
+        {
+          "query_id": "38::nda-15",
+          "expected_doc_id": "38",
+          "retrieved_doc_ids": [
+            "1",
+            "21",
+            "30",
+            "30",
+            "22",
+            "6",
+            "25",
+            "38",
+            "36",
+            "30"
+          ],
+          "cross_contract_hits": 9
+        },
+        {
+          "query_id": "40::nda-11",
+          "expected_doc_id": "40",
+          "retrieved_doc_ids": [
+            "2",
+            "1",
+            "26",
+            "36",
+            "1",
+            "22",
+            "38",
+            "24",
+            "21",
+            "25"
+          ],
+          "cross_contract_hits": 10
+        },
+        {
+          "query_id": "40::nda-2",
+          "expected_doc_id": "40",
+          "retrieved_doc_ids": [
+            "1",
+            "2",
+            "40",
+            "38",
+            "38",
+            "1",
+            "11",
+            "38",
+            "11",
+            "2"
+          ],
+          "cross_contract_hits": 9
+        },
+        {
+          "query_id": "41::nda-11",
+          "expected_doc_id": "41",
+          "retrieved_doc_ids": [
+            "2",
+            "1",
+            "26",
+            "36",
+            "1",
+            "22",
+            "38",
+            "24",
+            "21",
+            "25"
+          ],
+          "cross_contract_hits": 10
+        },
+        {
+          "query_id": "41::nda-16",
+          "expected_doc_id": "41",
+          "retrieved_doc_ids": [
+            "21",
+            "30",
+            "30",
+            "2",
+            "24",
+            "26",
+            "24",
+            "1",
+            "22",
+            "6"
+          ],
+          "cross_contract_hits": 10
+        }
+      ]
+    }
+  },
+  "hosted_calls": 0,
+  "selection": "first answerable and first null query per each of 20 documents; same sample as the policy study"
+}

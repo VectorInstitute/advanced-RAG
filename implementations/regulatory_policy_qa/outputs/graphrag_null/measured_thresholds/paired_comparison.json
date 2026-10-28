@@ -1,0 +1,27 @@
+{
+  "produced_by": {
+    "model": "Qwen3_6-35B-A3B",
+    "response_models": [],
+    "family": "onprem",
+    "endpoint": "vector-cluster",
+    "producer": "regulatory_policy_qa/graphrag_null/run_null_arm.py",
+    "usage": {},
+    "note": "Computed offline from the recorded outcomes; no model calls of its own.",
+    "source": "derived from outcomes_dense.json and outcomes_lightrag-mix.json",
+    "model_calls": 0
+  },
+  "arms": {
+    "dense": {
+      "decision_accuracy": 0.7558823529411764,
+      "balanced_accuracy": 0.7572261355355842
+    },
+    "lightrag-mix": {
+      "decision_accuracy": 0.7411764705882353,
+      "balanced_accuracy": 0.7457580068704674
+    }
+  },
+  "abstention_disagreements": 65,
+  "dense_only_correct": 35,
+  "lightrag_only_correct": 30,
+  "mcnemar_exact_two_sided_p": 0.620144765081303
+}

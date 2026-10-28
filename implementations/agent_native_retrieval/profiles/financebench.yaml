@@ -1,0 +1,56 @@
+# Data profile for the 84 FinanceBench filings as RI #3 ingested them with
+# Docling, written by `describe_your_data.py prepare financebench`: one
+# Markdown file per filing and three tables.
+name: financebench
+description: >-
+  SEC filings of US public companies (10-K, 10-Q, 8-K, and earnings releases), converted from PDF.
+  Each filing is one document with a "# Page N" heading per PDF page and "##" headings for the
+  section titles found on the page. Financial statements appear as Markdown tables; amounts are
+  usually in millions of US dollars, as each table's heading states.
+
+files:
+  - glob: "filings/*.md"
+    kind: document
+    sections: markdown
+
+tables:
+  - name: filings
+    file: filings.csv
+    description: one row per filing
+    doc_column: doc_id
+    columns:
+      - {name: doc_id, type: text, description: "the filing's document, such as filings/3M_2018_10K.md"}
+      - {name: filing, type: text, description: "the filing name, company_period_type, such as 3M_2018_10K"}
+      - {name: company, type: text, description: "company name"}
+      - {name: sector, type: text, description: "GICS sector"}
+      - {name: doc_type, type: text, description: "10k, 10q, 8k, or earnings"}
+      - {name: period, type: integer, description: "fiscal year the filing covers"}
+      - {name: pages, type: integer, description: "PDF pages"}
+  - name: tables
+    file: tables.csv
+    description: one row per table found in a filing
+    doc_column: doc_id
+    columns:
+      - {name: table_id, type: text, description: "filing#tNNN"}
+      - {name: doc_id, type: text, description: "the filing's document"}
+      - {name: filing, type: text, description: "the filing name"}
+      - {name: page, type: integer, description: "PDF page the table is on, matching the # Page N heading"}
+      - {name: n_rows, type: integer, description: "rows"}
+      - {name: n_cols, type: integer, description: "columns"}
+      - {name: columns, type: text, description: "the column headers joined by ' | ', often years"}
+      - {name: first_row_label, type: text, description: "the first row's label"}
+  - name: cells
+    file: cells.csv
+    description: >-
+      one row per non-empty table cell outside the first column, with its row's label and its
+      column's header; use LIKE on row_label to find a line item
+    columns:
+      - {name: table_id, type: text, description: "the table"}
+      - {name: filing, type: text, description: "the filing name"}
+      - {name: page, type: integer, description: "PDF page"}
+      - {name: row, type: integer, description: "row index in the table, from 0"}
+      - {name: col, type: integer, description: "column index, from 0"}
+      - {name: row_label, type: text, description: "the row's line item, such as Total revenues"}
+      - {name: column_label, type: text, description: "the column header, such as 2018"}
+      - {name: text, type: text, description: "the cell as printed, such as $ 1,577 or (370)"}
+      - {name: value, type: real, description: "the cell as a number, negative for parentheses, NULL if not a number"}

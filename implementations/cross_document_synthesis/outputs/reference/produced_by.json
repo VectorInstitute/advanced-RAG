@@ -1,0 +1,8 @@
+{
+  "files": {
+    "execution_usage.json": {
+      "model": "Qwen3_6-35B-A3B",
+      "note": "Derived from recorded Qwen3_6-35B-A3B executions; summarization makes no new model calls."
+    }
+  }
+}

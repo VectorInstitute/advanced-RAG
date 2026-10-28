@@ -1,0 +1,56 @@
+{
+  "produced_by": {
+    "model": "Qwen3_6-35B-A3B",
+    "role": "contextual chunking (contexts written per chunk)",
+    "embedder": "BAAI/bge-small-en-v1.5",
+    "source": "contextual chunking runs on CUAD and ServerFault, made with code not included in this repository"
+  },
+  "prompt_version": "head-neighbourhood-v1",
+  "notes": "Embedding half only: no contextual BM25 and no reranker. The ServerFault query is the post title, and the written context usually repeats the title, so its gain is an upper bound.",
+  "corpora": {
+    "CUAD": {
+      "slice": "20 contracts",
+      "scope": "per document",
+      "queries": 250,
+      "chunks": 954,
+      "k": 10,
+      "plain": {
+        "retrieval_failure_rate": 0.24,
+        "mrr": 0.4348,
+        "ndcg_at_10": 0.4355
+      },
+      "contextual": {
+        "retrieval_failure_rate": 0.264,
+        "mrr": 0.44,
+        "ndcg_at_10": 0.4511
+      },
+      "cost": {
+        "calls": 953,
+        "prompt_tokens": 2045462,
+        "completion_tokens": 44405
+      }
+    },
+    "ServerFault": {
+      "slice": "600 documents",
+      "scope": "corpus-wide",
+      "queries": 600,
+      "chunks": 1414,
+      "k": 10,
+      "plain": {
+        "retrieval_failure_rate": 0.0133,
+        "mrr": 0.9238,
+        "ndcg_at_10": 0.8717
+      },
+      "contextual": {
+        "retrieval_failure_rate": 0.0017,
+        "mrr": 0.9591,
+        "ndcg_at_10": 0.966
+      },
+      "cost": {
+        "calls": 1414,
+        "prompt_tokens": 2199640,
+        "completion_tokens": 63022
+      }
+    }
+  }
+}

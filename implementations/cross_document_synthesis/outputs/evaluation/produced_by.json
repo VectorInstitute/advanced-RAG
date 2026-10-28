@@ -1,0 +1,43 @@
+{
+  "files": {
+    "musique_decomposition.json": {
+      "model": "Qwen3_6-35B-A3B",
+      "source": "spec.model",
+      "note": "Recorded execution model; replaying scores makes no new model calls."
+    },
+    "musique_dense.json": {
+      "model": "Qwen3_6-35B-A3B",
+      "source": "spec.model",
+      "note": "Recorded execution model; replaying scores makes no new model calls."
+    },
+    "musique_ircot.json": {
+      "model": "Qwen3_6-35B-A3B",
+      "source": "spec.model",
+      "note": "Recorded execution model; replaying scores makes no new model calls."
+    },
+    "nq_decomposition.json": {
+      "model": "Qwen3_6-35B-A3B",
+      "source": "spec.model",
+      "note": "Recorded execution model; replaying scores makes no new model calls."
+    },
+    "nq_dense.json": {
+      "model": "Qwen3_6-35B-A3B",
+      "source": "spec.model",
+      "note": "Recorded execution model; replaying scores makes no new model calls."
+    },
+    "nq_ircot.json": {
+      "model": "Qwen3_6-35B-A3B",
+      "source": "spec.model",
+      "note": "Recorded execution model; replaying scores makes no new model calls."
+    },
+    "shared_300.json": {
+      "model": "Qwen3_6-35B-A3B",
+      "source": "produced_by.model",
+      "note": "Core and graph arms rescored from the recorded Qwen3_6-35B-A3B executions on the shared 300 questions; the correction cohort ran on those 300 questions on 2026-10-24. No new model calls."
+    },
+    "summary.json": {
+      "model": "Qwen3_6-35B-A3B",
+      "note": "Built by build_summaries.py from the recorded Qwen3_6-35B-A3B executions; summarization makes no new model calls."
+    }
+  }
+}

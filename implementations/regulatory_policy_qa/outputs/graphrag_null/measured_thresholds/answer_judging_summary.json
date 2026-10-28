@@ -1,0 +1,134 @@
+{
+  "generated_at": "2026-10-06T23:19:48+00:00",
+  "judge": {
+    "model": "Qwen3_6-35B-A3B",
+    "temperature": 0,
+    "max_tokens": 512,
+    "reasoning": "disabled",
+    "protocol": "separate semantic correctness and evidence grounding passes",
+    "correctness_prompt_sha256": "03f4384fd52ea96fc60139f62c1946b24920af14899c5c10971a6efd13b3d535",
+    "grounding_prompt_sha256": "465f7c05e61791aa25ba3c26a5b5346de8439b2a5458282a3139dc26f494cc1b"
+  },
+  "generation_model": "Qwen3_6-35B-A3B",
+  "evidence_budget": 5,
+  "max_chars_per_passage": 1200,
+  "reference": "ContractNLI annotation polarity expressed in natural language, with gold spans as supporting justification; classification labels are not required wording",
+  "denominator": "all answerable queries, including pipeline abstentions",
+  "abstention_rule": "canonical saved pipeline flag; incorrect and vacuously grounded on answerable queries; both raw judge passes are preserved",
+  "cache_only": true,
+  "limitations": [
+    "Automated judgments; generator and judge use the same model, with possible shared errors.",
+    "Separate correctness and grounding passes; no human adjudication or independence assumption across questions in a contract.",
+    "Grounding includes vacuously grounded canonical abstentions; hallucination excludes pipeline abstentions.",
+    "Correctness measures agreement with ContractNLI's binary annotations; qualified answers can conflict with those labels."
+  ],
+  "input_sha256": {
+    "null_arm_summary.json": "d9ff768b17efdf956285f83a921491a13c87d92ef8369220c2e38799efa2af89",
+    "corpus/contract-nli-test.json": "460267b56052a2dc5aead98eb35eadef9e6734d5723d37b4a9790e410f812387",
+    "evidence/dense.json": "1eb55eb890e5cc260920fcaf5614d069d732b4889adee39edb2dd289c2d293db",
+    "outcomes_dense.json": "20df5fccd13231ab612a235c76f9f6f08050dbb05b23f7b5a707ff81f6fb6741",
+    "evidence/lightrag-mix.json": "e91c167c97afe03c275ff6d8bc7af68a9b31e9c3a5098a835e64e09421900ae3",
+    "outcomes_lightrag-mix.json": "ca1b6063b7dd2e7c1c4535da58da9b31bbe394bab603ef55d5e5f07bc61fcb91"
+  },
+  "runner_sha256": "0e855a25c70147ca5240d4ac2ae3714d15cc4796ae8cbbd8cef5aeba199a27d5",
+  "cost": {
+    "calls": 0,
+    "prompt_tokens": 0,
+    "completion_tokens": 0,
+    "total_tokens": 0,
+    "cache_hits": 741,
+    "empty_responses": 0,
+    "call_seconds": 0.0,
+    "by_phase": {
+      "answer-judge:dense": {
+        "calls": 0,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "cache_hits": 370,
+        "empty_responses": 0,
+        "call_seconds": 0.0
+      },
+      "answer-judge:lightrag-mix": {
+        "calls": 0,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "total_tokens": 0,
+        "cache_hits": 371,
+        "empty_responses": 0,
+        "call_seconds": 0.0
+      }
+    }
+  },
+  "consistency_checks": {
+    "identical_answer_pairs": 48,
+    "correctness_disagreements": 0
+  },
+  "arms": [
+    {
+      "method": "dense",
+      "evidence_budget": 5,
+      "questions": 179,
+      "answered": 131,
+      "correctness": 0.6816,
+      "grounding": 0.9832,
+      "abstention": 0.2682,
+      "hallucination": 0.0229,
+      "pipeline_abstentions": 48,
+      "judge_pipeline_abstention_disagreements": 2,
+      "correct_count": 122,
+      "correct_among_pipeline_attempts": 122,
+      "judge_pass_abstention_disagreements": 14,
+      "abstention_rule": "canonical pipeline abstentions are incorrect on answerable queries and vacuously grounded; raw judge verdicts are retained"
+    },
+    {
+      "method": "lightrag-mix",
+      "evidence_budget": 5,
+      "questions": 179,
+      "answered": 118,
+      "correctness": 0.6089,
+      "grounding": 0.9944,
+      "abstention": 0.3408,
+      "hallucination": 0.0085,
+      "pipeline_abstentions": 61,
+      "judge_pipeline_abstention_disagreements": 3,
+      "correct_count": 109,
+      "correct_among_pipeline_attempts": 109,
+      "judge_pass_abstention_disagreements": 27,
+      "abstention_rule": "canonical pipeline abstentions are incorrect on answerable queries and vacuously grounded; raw judge verdicts are retained"
+    }
+  ],
+  "cold_run_cost": {
+    "calls": 645,
+    "prompt_tokens": 616059,
+    "completion_tokens": 32399,
+    "total_tokens": 648458,
+    "cache_hits": 96,
+    "empty_responses": 0,
+    "call_seconds": 1111.9,
+    "by_phase": {
+      "answer-judge:dense": {
+        "calls": 322,
+        "prompt_tokens": 296637,
+        "completion_tokens": 16197,
+        "total_tokens": 312834,
+        "cache_hits": 48,
+        "empty_responses": 0,
+        "call_seconds": 560.3
+      },
+      "answer-judge:lightrag-mix": {
+        "calls": 323,
+        "prompt_tokens": 319422,
+        "completion_tokens": 16202,
+        "total_tokens": 335624,
+        "cache_hits": 48,
+        "empty_responses": 0,
+        "call_seconds": 551.6
+      }
+    }
+  },
+  "report_sha256": {
+    "answer_judgements_dense.json": "aae7480c66485f608882d0a6cc4e00487e8fd3111b17cd5159251712e899a6c7",
+    "answer_judgements_lightrag-mix.json": "aa017dee0a5f03a798fffa9cc75ce91ceb54bb7c30a82b79eb043c4812557e13"
+  }
+}

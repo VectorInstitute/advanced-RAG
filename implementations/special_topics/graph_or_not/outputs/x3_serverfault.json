@@ -1,0 +1,8683 @@
+{
+ "test": {
+  "questions": 60,
+  "per_family": {
+   "count": 15,
+   "co_mention": 15,
+   "relation": 15,
+   "path": 15
+  },
+  "seed": 20261023,
+  "posts": 9999,
+  "graph": "RI #4 ServerFault graph, Qwen3_8-27B direct extraction, 7 entity and 7 relation types",
+  "reader": "Qwen3_6-35B-A3B",
+  "dense": "BAAI/bge-small-en-v1.5 over whole posts, first 512 tokens; top 10 read, top 50 mapped",
+  "query_language": "SQLite over entities, mentions, relations; no graph database in the locked environment"
+ },
+ "produced_by": {
+  "model": "Qwen3_6-35B-A3B",
+  "endpoint": "vector-cluster",
+  "producer": "run_graph_or_not.py x3",
+  "label": "reference trajectories"
+ },
+ "summary": {
+  "dense": {
+   "count": {
+    "graph_within_20pct": 0.0,
+    "lexical_within_20pct": 0.0
+   },
+   "co_mention": {
+    "graph_f1": 0.3133,
+    "lexical_f1": 0.2371
+   },
+   "relation": {
+    "graph_f1": 0.0893
+   },
+   "path": {
+    "graph_f1": 0.0735
+   }
+  },
+  "dense-map": {
+   "count": {
+    "graph_within_20pct": 0.1333,
+    "lexical_within_20pct": 0.0667
+   },
+   "co_mention": {
+    "graph_f1": 0.3202,
+    "lexical_f1": 0.3798
+   },
+   "relation": {
+    "graph_f1": 0.1351
+   },
+   "path": {
+    "graph_f1": 0.015
+   }
+  },
+  "grep": {
+   "count": {
+    "graph_within_20pct": 0.2,
+    "lexical_within_20pct": 1.0
+   },
+   "co_mention": {
+    "graph_f1": 0.7962,
+    "lexical_f1": 1.0
+   },
+   "relation": {
+    "graph_f1": 0.2257
+   },
+   "path": {
+    "graph_f1": 0.0889
+   }
+  },
+  "grep-map": {
+   "count": {
+    "graph_within_20pct": 0.2,
+    "lexical_within_20pct": 0.8
+   },
+   "co_mention": {
+    "graph_f1": 0.7356,
+    "lexical_f1": 0.9192
+   },
+   "relation": {
+    "graph_f1": 0.1794
+   },
+   "path": {
+    "graph_f1": 0.0
+   }
+  },
+  "graph-template": {
+   "count": {
+    "graph_within_20pct": 1.0,
+    "lexical_within_20pct": 0.2
+   },
+   "co_mention": {
+    "graph_f1": 1.0,
+    "lexical_f1": 0.7962
+   },
+   "relation": {
+    "graph_f1": 1.0
+   },
+   "path": {
+    "graph_f1": 1.0
+   }
+  },
+  "graph-like": {
+   "count": {
+    "graph_within_20pct": 0.3333,
+    "lexical_within_20pct": 0.6
+   },
+   "co_mention": {
+    "graph_f1": 0.9075,
+    "lexical_f1": 0.8593
+   },
+   "relation": {
+    "graph_f1": 1.0
+   },
+   "path": {
+    "graph_f1": 1.0
+   }
+  },
+  "text2sql": {
+   "count": {
+    "graph_within_20pct": 1.0,
+    "lexical_within_20pct": 0.2
+   },
+   "co_mention": {
+    "graph_f1": 1.0,
+    "lexical_f1": 0.7962
+   },
+   "relation": {
+    "graph_f1": 0.7273
+   },
+   "path": {
+    "graph_f1": 0.0667
+   },
+   "sql_errors": 5,
+   "sql_empty": 12,
+   "sql_failed_after_repair": 0
+  },
+  "text2sql-repair": {
+   "count": {
+    "graph_within_20pct": 1.0,
+    "lexical_within_20pct": 0.2
+   },
+   "co_mention": {
+    "graph_f1": 1.0,
+    "lexical_f1": 0.7962
+   },
+   "relation": {
+    "graph_f1": 0.8511
+   },
+   "path": {
+    "graph_f1": 0.0667
+   },
+   "sql_errors": 5,
+   "sql_empty": 12,
+   "sql_failed_after_repair": 14
+  }
+ },
+ "costs": {
+  "dense": {
+   "calls": 0,
+   "total_tokens": 0,
+   "cache_hits": 60
+  },
+  "dense-map": {
+   "calls": 300,
+   "total_tokens": 164530,
+   "cache_hits": 2700
+  },
+  "grep": {
+   "calls": 28,
+   "total_tokens": 90564,
+   "cache_hits": 2
+  },
+  "grep-map": {
+   "calls": 935,
+   "total_tokens": 572144,
+   "cache_hits": 333
+  },
+  "graph-template": {
+   "calls": 0,
+   "total_tokens": 0,
+   "cache_hits": 0
+  },
+  "graph-like": {
+   "calls": 0,
+   "total_tokens": 0,
+   "cache_hits": 0
+  },
+  "text2sql": {
+   "calls": 56,
+   "total_tokens": 24303,
+   "cache_hits": 4
+  },
+  "text2sql-repair": {
+   "calls": 15,
+   "total_tokens": 10172,
+   "cache_hits": 62
+  }
+ },
+ "questions": [
+  {
+   "qid": "count-00",
+   "family": "count",
+   "entities": [
+    "http/1.0"
+   ],
+   "relation": null,
+   "graph_gold": 6,
+   "lexical_gold": 26,
+   "evidence_docs": [
+    "q143238",
+    "q149982",
+    "q317103",
+    "q35040",
+    "q482875",
+    "q875229"
+   ]
+  },
+  {
+   "qid": "count-01",
+   "family": "count",
+   "entities": [
+    "centos5"
+   ],
+   "relation": null,
+   "graph_gold": 6,
+   "lexical_gold": 25,
+   "evidence_docs": [
+    "q166034",
+    "q170617",
+    "q367141",
+    "q463111",
+    "q523808",
+    "q95322"
+   ]
+  },
+  {
+   "qid": "count-02",
+   "family": "count",
+   "entities": [
+    "notify"
+   ],
+   "relation": null,
+   "graph_gold": 6,
+   "lexical_gold": 68,
+   "evidence_docs": [
+    "q255241",
+    "q350230",
+    "q40156",
+    "q69183",
+    "q720598",
+    "q954269"
+   ]
+  },
+  {
+   "qid": "count-03",
+   "family": "count",
+   "entities": [
+    "mongodb"
+   ],
+   "relation": null,
+   "graph_gold": 27,
+   "lexical_gold": 31,
+   "evidence_docs": [
+    "q171166",
+    "q199697",
+    "q231842",
+    "q237505",
+    "q269851",
+    "q275736",
+    "q284553",
+    "q296246",
+    "q330532",
+    "q347499",
+    "q372575",
+    "q376846",
+    "q390687",
+    "q408100",
+    "q424465",
+    "q425834",
+    "q439658",
+    "q504633",
+    "q540423",
+    "q544171",
+    "q597765",
+    "q602240",
+    "q61673",
+    "q631479",
+    "q650598",
+    "q727404",
+    "q879797"
+   ]
+  },
+  {
+   "qid": "count-04",
+   "family": "count",
+   "entities": [
+    "unix socket"
+   ],
+   "relation": null,
+   "graph_gold": 9,
+   "lexical_gold": 20,
+   "evidence_docs": [
+    "q195328",
+    "q252723",
+    "q295285",
+    "q337818",
+    "q517906",
+    "q588701",
+    "q610944",
+    "q881875",
+    "q970335"
+   ]
+  },
+  {
+   "qid": "count-05",
+   "family": "count",
+   "entities": [
+    "a2enmod"
+   ],
+   "relation": null,
+   "graph_gold": 7,
+   "lexical_gold": 19,
+   "evidence_docs": [
+    "q1035016",
+    "q195611",
+    "q216252",
+    "q464319",
+    "q56394",
+    "q904065",
+    "q91468"
+   ]
+  },
+  {
+   "qid": "count-06",
+   "family": "count",
+   "entities": [
+    "ubuntu 16.04"
+   ],
+   "relation": null,
+   "graph_gold": 29,
+   "lexical_gold": 47,
+   "evidence_docs": [
+    "q1030527",
+    "q6714",
+    "q775965",
+    "q785502",
+    "q790143",
+    "q790772",
+    "q797482",
+    "q807763",
+    "q809093",
+    "q816393",
+    "q822556",
+    "q824389",
+    "q842964",
+    "q867509",
+    "q867830",
+    "q870568",
+    "q871328",
+    "q883073",
+    "q889631",
+    "q895746",
+    "q897230",
+    "q901403",
+    "q918335",
+    "q931514",
+    "q941855",
+    "q943752",
+    "q949808",
+    "q952318",
+    "q963178"
+   ]
+  },
+  {
+   "qid": "count-07",
+   "family": "count",
+   "entities": [
+    "google compute engine"
+   ],
+   "relation": null,
+   "graph_gold": 8,
+   "lexical_gold": 9,
+   "evidence_docs": [
+    "q590530",
+    "q695063",
+    "q705588",
+    "q716362",
+    "q733166",
+    "q747022",
+    "q769386",
+    "q869418"
+   ]
+  },
+  {
+   "qid": "count-08",
+   "family": "count",
+   "entities": [
+    "nehalem"
+   ],
+   "relation": null,
+   "graph_gold": 6,
+   "lexical_gold": 11,
+   "evidence_docs": [
+    "q10241",
+    "q17965",
+    "q2701",
+    "q404195",
+    "q448550",
+    "q454706"
+   ]
+  },
+  {
+   "qid": "count-09",
+   "family": "count",
+   "entities": [
+    "sysctl"
+   ],
+   "relation": null,
+   "graph_gold": 25,
+   "lexical_gold": 88,
+   "evidence_docs": [
+    "q255969",
+    "q263656",
+    "q277009",
+    "q295390",
+    "q307489",
+    "q328212",
+    "q336021",
+    "q341680",
+    "q362506",
+    "q362589",
+    "q373375",
+    "q373624",
+    "q414637",
+    "q415304",
+    "q417944",
+    "q421995",
+    "q463836",
+    "q48717",
+    "q56667",
+    "q648118",
+    "q664586",
+    "q715861",
+    "q724469",
+    "q734920",
+    "q984066"
+   ]
+  },
+  {
+   "qid": "count-10",
+   "family": "count",
+   "entities": [
+    "wi-fi"
+   ],
+   "relation": null,
+   "graph_gold": 8,
+   "lexical_gold": 15,
+   "evidence_docs": [
+    "q321499",
+    "q515437",
+    "q638949",
+    "q648448",
+    "q72767",
+    "q811381",
+    "q814197",
+    "q8462"
+   ]
+  },
+  {
+   "qid": "count-11",
+   "family": "count",
+   "entities": [
+    "cpanel"
+   ],
+   "relation": null,
+   "graph_gold": 14,
+   "lexical_gold": 19,
+   "evidence_docs": [
+    "q110152",
+    "q153921",
+    "q293117",
+    "q299287",
+    "q3410",
+    "q386106",
+    "q406554",
+    "q42539",
+    "q44100",
+    "q483650",
+    "q560256",
+    "q563714",
+    "q607137",
+    "q729391"
+   ]
+  },
+  {
+   "qid": "count-12",
+   "family": "count",
+   "entities": [
+    "application server"
+   ],
+   "relation": null,
+   "graph_gold": 7,
+   "lexical_gold": 31,
+   "evidence_docs": [
+    "q210559",
+    "q22644",
+    "q524525",
+    "q537083",
+    "q560970",
+    "q636790",
+    "q953169"
+   ]
+  },
+  {
+   "qid": "count-13",
+   "family": "count",
+   "entities": [
+    "server 2012 r2"
+   ],
+   "relation": null,
+   "graph_gold": 14,
+   "lexical_gold": 65,
+   "evidence_docs": [
+    "q355949",
+    "q562953",
+    "q580751",
+    "q589476",
+    "q627683",
+    "q652237",
+    "q705702",
+    "q761887",
+    "q815310",
+    "q828555",
+    "q835005",
+    "q875838",
+    "q883226",
+    "q891616"
+   ]
+  },
+  {
+   "qid": "count-14",
+   "family": "count",
+   "entities": [
+    "l2tp"
+   ],
+   "relation": null,
+   "graph_gold": 9,
+   "lexical_gold": 9,
+   "evidence_docs": [
+    "q1112364",
+    "q145681",
+    "q331712",
+    "q376752",
+    "q451381",
+    "q574121",
+    "q81747",
+    "q830919",
+    "q928"
+   ]
+  },
+  {
+   "qid": "co_mention-00",
+   "family": "co_mention",
+   "entities": [
+    "alpn",
+    "http2"
+   ],
+   "relation": null,
+   "graph_gold": [
+    "q775298",
+    "q831534",
+    "q875140"
+   ],
+   "lexical_gold": [
+    "q732474",
+    "q775298",
+    "q831534",
+    "q875140",
+    "q889631"
+   ],
+   "evidence_docs": [
+    "q775298",
+    "q831534",
+    "q875140"
+   ]
+  },
+  {
+   "qid": "co_mention-01",
+   "family": "co_mention",
+   "entities": [
+    "kvm",
+    "virbr0"
+   ],
+   "relation": null,
+   "graph_gold": [
+    "q803283",
+    "q948339"
+   ],
+   "lexical_gold": [
+    "q101982",
+    "q803283",
+    "q948339"
+   ],
+   "evidence_docs": [
+    "q803283",
+    "q948339"
+   ]
+  },
+  {
+   "qid": "co_mention-02",
+   "family": "co_mention",
+   "entities": [
+    "chef server",
+    "git"
+   ],
+   "relation": null,
+   "graph_gold": [
+    "q345113",
+    "q518402"
+   ],
+   "lexical_gold": [
+    "q283470",
+    "q345113",
+    "q518402"
+   ],
+   "evidence_docs": [
+    "q345113",
+    "q518402"
+   ]
+  },
+  {
+   "qid": "co_mention-03",
+   "family": "co_mention",
+   "entities": [
+    "ssd",
+    "ubuntu 16.04"
+   ],
+   "relation": null,
+   "graph_gold": [
+    "q822556",
+    "q952318"
+   ],
+   "lexical_gold": [
+    "q822556",
+    "q943752",
+    "q952318"
+   ],
+   "evidence_docs": [
+    "q822556",
+    "q952318"
+   ]
+  },
+  {
+   "qid": "co_mention-04",
+   "family": "co_mention",
+   "entities": [
+    "chef",
+    "virtualbox"
+   ],
+   "relation": null,
+   "graph_gold": [
+    "q453185",
+    "q538466"
+   ],
+   "lexical_gold": [
+    "q453185",
+    "q495914",
+    "q538466"
+   ],
+   "evidence_docs": [
+    "q453185",
+    "q538466"
+   ]
+  },
+  {
+   "qid": "co_mention-05",
+   "family": "co_mention",
+   "entities": [
+    "java",
+    "python"
+   ],
+   "relation": null,
+   "graph_gold": [
+    "q367921",
+    "q7778"
+   ],
+   "lexical_gold": [
+    "q251427",
+    "q367921",
+    "q526668",
+    "q625600",
+    "q7778",
+    "q848580",
+    "q908000"
+   ],
+   "evidence_docs": [
+    "q367921",
+    "q7778"
+   ]
+  },
+  {
+   "qid": "co_mention-06",
+   "family": "co_mention",
+   "entities": [
+    "get-aduser",
+    "windows-server-2008"
+   ],
+   "relation": null,
+   "graph_gold": [
+    "q310529",
+    "q628038"
+   ],
+   "lexical_gold": [
+    "q310529",
+    "q628038"
+   ],
+   "evidence_docs": [
+    "q310529",
+    "q628038"
+   ]
+  },
+  {
+   "qid": "co_mention-07",
+   "family": "co_mention",
+   "entities": [
+    "fdisk -l",
+    "parted"
+   ],
+   "relation": null,
+   "graph_gold": [
+    "q424678",
+    "q444706",
+    "q809809",
+    "q810221"
+   ],
+   "lexical_gold": [
+    "q190685",
+    "q424678",
+    "q444706",
+    "q528370",
+    "q809809",
+    "q810221",
+    "q870594",
+    "q946055",
+    "q953174"
+   ],
+   "evidence_docs": [
+    "q424678",
+    "q444706",
+    "q809809",
+    "q810221"
+   ]
+  },
+  {
+   "qid": "co_mention-08",
+   "family": "co_mention",
+   "entities": [
+    "gpedit.msc",
+    "windows server 2019"
+   ],
+   "relation": null,
+   "graph_gold": [
+    "q967452",
+    "q971937"
+   ],
+   "lexical_gold": [
+    "q967452",
+    "q971937"
+   ],
+   "evidence_docs": [
+    "q967452",
+    "q971937"
+   ]
+  },
+  {
+   "qid": "co_mention-09",
+   "family": "co_mention",
+   "entities": [
+    "rsa",
+    "ssh-keyscan"
+   ],
+   "relation": null,
+   "graph_gold": [
+    "q321167",
+    "q480063"
+   ],
+   "lexical_gold": [
+    "q321167",
+    "q422869",
+    "q480063",
+    "q856194"
+   ],
+   "evidence_docs": [
+    "q321167",
+    "q480063"
+   ]
+  },
+  {
+   "qid": "co_mention-10",
+   "family": "co_mention",
+   "entities": [
+    "avahi",
+    "debian linux"
+   ],
+   "relation": null,
+   "graph_gold": [
+    "q276521",
+    "q49236"
+   ],
+   "lexical_gold": [
+    "q200613",
+    "q276521",
+    "q49236"
+   ],
+   "evidence_docs": [
+    "q276521",
+    "q49236"
+   ]
+  },
+  {
+   "qid": "co_mention-11",
+   "family": "co_mention",
+   "entities": [
+    "grub",
+    "lilo"
+   ],
+   "relation": null,
+   "graph_gold": [
+    "q167991",
+    "q4427",
+    "q586171",
+    "q614051"
+   ],
+   "lexical_gold": [
+    "q106537",
+    "q167991",
+    "q4427",
+    "q586171",
+    "q614051",
+    "q6714"
+   ],
+   "evidence_docs": [
+    "q167991",
+    "q4427",
+    "q586171",
+    "q614051"
+   ]
+  },
+  {
+   "qid": "co_mention-12",
+   "family": "co_mention",
+   "entities": [
+    "robocopy",
+    "server 2003"
+   ],
+   "relation": null,
+   "graph_gold": [
+    "q394705",
+    "q73635"
+   ],
+   "lexical_gold": [
+    "q394705",
+    "q73635"
+   ],
+   "evidence_docs": [
+    "q394705",
+    "q73635"
+   ]
+  },
+  {
+   "qid": "co_mention-13",
+   "family": "co_mention",
+   "entities": [
+    "a2enmod",
+    "a2ensite"
+   ],
+   "relation": null,
+   "graph_gold": [
+    "q216252",
+    "q56394"
+   ],
+   "lexical_gold": [
+    "q216252",
+    "q56394"
+   ],
+   "evidence_docs": [
+    "q216252",
+    "q56394"
+   ]
+  },
+  {
+   "qid": "co_mention-14",
+   "family": "co_mention",
+   "entities": [
+    "cloud-init",
+    "ec2 instance"
+   ],
+   "relation": null,
+   "graph_gold": [
+    "q369872",
+    "q797482"
+   ],
+   "lexical_gold": [
+    "q369872",
+    "q374861",
+    "q521124",
+    "q797482"
+   ],
+   "evidence_docs": [
+    "q369872",
+    "q797482"
+   ]
+  },
+  {
+   "qid": "relation-00",
+   "family": "relation",
+   "entities": [
+    "cloudflare"
+   ],
+   "relation": "causes",
+   "graph_gold": [
+    "404 response",
+    "error 1003",
+    "tcp rst"
+   ],
+   "lexical_gold": null,
+   "evidence_docs": [
+    "q1008522",
+    "q641794",
+    "q690199"
+   ]
+  },
+  {
+   "qid": "relation-01",
+   "family": "relation",
+   "entities": [
+    "cloudfront"
+   ],
+   "relation": "depends_on",
+   "graph_gold": [
+    "cache times",
+    "elb",
+    "gzipped content",
+    "origin",
+    "origin server",
+    "s3",
+    "sni"
+   ],
+   "lexical_gold": null,
+   "evidence_docs": [
+    "q339719",
+    "q594368",
+    "q610799",
+    "q619699",
+    "q770302",
+    "q828409",
+    "q856904"
+   ]
+  },
+  {
+   "qid": "relation-02",
+   "family": "relation",
+   "entities": [
+    "ping"
+   ],
+   "relation": "causes",
+   "graph_gold": [
+    "100% packet loss",
+    "100.0% packet loss",
+    "hangs",
+    "icmp open socket: operation not permitted",
+    "name does not exist",
+    "no response",
+    "permission denied",
+    "ping: sendmsg: operation not permitted",
+    "request timeout for icmp_seq 0",
+    "server offline",
+    "timeout option is ignored",
+    "ttl expired in transit",
+    "unknown host",
+    "unknown host www.local"
+   ],
+   "lexical_gold": null,
+   "evidence_docs": [
+    "q1001174",
+    "q172915",
+    "q200468",
+    "q233925",
+    "q245916",
+    "q263260",
+    "q280369",
+    "q282755",
+    "q391954",
+    "q39712",
+    "q579967",
+    "q594142",
+    "q67145",
+    "q696281"
+   ]
+  },
+  {
+   "qid": "relation-03",
+   "family": "relation",
+   "entities": [
+    "single point of failure"
+   ],
+   "relation": "fixes",
+   "graph_gold": [
+    "dns",
+    "dns providers",
+    "drbd",
+    "keepalive",
+    "multiple dns hosts",
+    "redundancy"
+   ],
+   "lexical_gold": null,
+   "evidence_docs": [
+    "q101620",
+    "q187882",
+    "q35895",
+    "q426101",
+    "q625166"
+   ]
+  },
+  {
+   "qid": "relation-04",
+   "family": "relation",
+   "entities": [
+    "no space left on device"
+   ],
+   "relation": "fixes",
+   "graph_gold": [
+    "btrfs fi balance start -dusage=5 /mnt/durable",
+    "rebooting",
+    "snapshot"
+   ],
+   "lexical_gold": null,
+   "evidence_docs": [
+    "q427091",
+    "q817751"
+   ]
+  },
+  {
+   "qid": "relation-05",
+   "family": "relation",
+   "entities": [
+    "kernel bug"
+   ],
+   "relation": "causes",
+   "graph_gold": [
+    "high cpu usage from a flush process",
+    "kernel panic",
+    "unprocessed orphan inode list"
+   ],
+   "lexical_gold": null,
+   "evidence_docs": [
+    "q278198",
+    "q341123",
+    "q693060"
+   ]
+  },
+  {
+   "qid": "relation-06",
+   "family": "relation",
+   "entities": [
+    "slowloris"
+   ],
+   "relation": "fixes",
+   "graph_gold": [
+    "apache 2.2.15",
+    "cherokee",
+    "iptables"
+   ],
+   "lexical_gold": null,
+   "evidence_docs": [
+    "q152139",
+    "q216212"
+   ]
+  },
+  {
+   "qid": "relation-07",
+   "family": "relation",
+   "entities": [
+    "mitm attack"
+   ],
+   "relation": "fixes",
+   "graph_gold": [
+    "flexible ssl",
+    "full ssl (strict)",
+    "ssl",
+    "verify-ca",
+    "verify-full"
+   ],
+   "lexical_gold": null,
+   "evidence_docs": [
+    "q662946",
+    "q988404"
+   ]
+  },
+  {
+   "qid": "relation-08",
+   "family": "relation",
+   "entities": [
+    "http/1.1"
+   ],
+   "relation": "depends_on",
+   "graph_gold": [
+    "host header",
+    "rfc 2616",
+    "tcp"
+   ],
+   "lexical_gold": null,
+   "evidence_docs": [
+    "q546787",
+    "q702725",
+    "q878080"
+   ]
+  },
+  {
+   "qid": "relation-09",
+   "family": "relation",
+   "entities": [
+    "tcpdump"
+   ],
+   "relation": "causes",
+   "graph_gold": [
+    "dropped packets",
+    "gibberish",
+    "permission denied",
+    "syntax errors"
+   ],
+   "lexical_gold": null,
+   "evidence_docs": [
+    "q1025292",
+    "q421789",
+    "q478636",
+    "q504431"
+   ]
+  },
+  {
+   "qid": "relation-10",
+   "family": "relation",
+   "entities": [
+    "a record"
+   ],
+   "relation": "depends_on",
+   "graph_gold": [
+    "caching",
+    "canonical name",
+    "ptr record",
+    "rfc-compliant",
+    "smtp port",
+    "spf record"
+   ],
+   "lexical_gold": null,
+   "evidence_docs": [
+    "q100064",
+    "q1049316",
+    "q1064046",
+    "q116359",
+    "q390694",
+    "q612833"
+   ]
+  },
+  {
+   "qid": "relation-11",
+   "family": "relation",
+   "entities": [
+    "ssh-agent"
+   ],
+   "relation": "depends_on",
+   "graph_gold": [
+    "ssh",
+    "ssh keys",
+    "unix"
+   ],
+   "lexical_gold": null,
+   "evidence_docs": [
+    "q4993",
+    "q602240",
+    "q8882"
+   ]
+  },
+  {
+   "qid": "relation-12",
+   "family": "relation",
+   "entities": [
+    "mysql replication"
+   ],
+   "relation": "depends_on",
+   "graph_gold": [
+    "binlog",
+    "mysql",
+    "socket",
+    "wide area networks"
+   ],
+   "lexical_gold": null,
+   "evidence_docs": [
+    "q1274",
+    "q30605"
+   ]
+  },
+  {
+   "qid": "relation-13",
+   "family": "relation",
+   "entities": [
+    "lock"
+   ],
+   "relation": "fixes",
+   "graph_gold": [
+    "building master",
+    "sql server configuration manager",
+    "ssms"
+   ],
+   "lexical_gold": null,
+   "evidence_docs": [
+    "q100731",
+    "q61257"
+   ]
+  },
+  {
+   "qid": "relation-14",
+   "family": "relation",
+   "entities": [
+    "deduplication"
+   ],
+   "relation": "causes",
+   "graph_gold": [
+    "0 bytes",
+    "340gb reduction",
+    "expensive deletes",
+    "file doesn't actually work",
+    "server stall"
+   ],
+   "lexical_gold": null,
+   "evidence_docs": [
+    "q234475",
+    "q659584",
+    "q801074"
+   ]
+  },
+  {
+   "qid": "path-00",
+   "family": "path",
+   "entities": [
+    "ata",
+    "7200 rpm"
+   ],
+   "relation": null,
+   "graph_gold": [
+    "sata"
+   ],
+   "lexical_gold": null,
+   "evidence_docs": [
+    "q1047331",
+    "q206370",
+    "q297759",
+    "q5031",
+    "q535397",
+    "q585803",
+    "q712849"
+   ]
+  },
+  {
+   "qid": "path-01",
+   "family": "path",
+   "entities": [
+    "sql server management studio",
+    "keypass"
+   ],
+   "relation": null,
+   "graph_gold": [
+    "database"
+   ],
+   "lexical_gold": null,
+   "evidence_docs": [
+    "q11745",
+    "q128934",
+    "q147638",
+    "q168388",
+    "q224821",
+    "q276811",
+    "q278582",
+    "q30080",
+    "q326847",
+    "q33159",
+    "q387682",
+    "q44968",
+    "q555249",
+    "q596659",
+    "q704553",
+    "q751567"
+   ]
+  },
+  {
+   "qid": "path-02",
+   "family": "path",
+   "entities": [
+    "tls 1.3",
+    "ssl_connect"
+   ],
+   "relation": null,
+   "graph_gold": [
+    "ssl handshake"
+   ],
+   "lexical_gold": null,
+   "evidence_docs": [
+    "q570387",
+    "q875229",
+    "q976377",
+    "q997614"
+   ]
+  },
+  {
+   "qid": "path-03",
+   "family": "path",
+   "entities": [
+    "backup server",
+    "ssh public key authentication"
+   ],
+   "relation": null,
+   "graph_gold": [
+    "private key"
+   ],
+   "lexical_gold": null,
+   "evidence_docs": [
+    "q117072",
+    "q281819",
+    "q300718",
+    "q339426",
+    "q344546",
+    "q366230",
+    "q388289",
+    "q390988",
+    "q40543",
+    "q560970",
+    "q751552",
+    "q964229"
+   ]
+  },
+  {
+   "qid": "path-04",
+   "family": "path",
+   "entities": [
+    "usb drive",
+    "/dev/sda1"
+   ],
+   "relation": null,
+   "graph_gold": [
+    "dd"
+   ],
+   "lexical_gold": null,
+   "evidence_docs": [
+    "q1133297",
+    "q118791",
+    "q145064",
+    "q153921",
+    "q170682",
+    "q221377",
+    "q267546",
+    "q269918",
+    "q29887",
+    "q3132",
+    "q33603",
+    "q338937",
+    "q348983",
+    "q3868",
+    "q418352",
+    "q429937",
+    "q433703",
+    "q462272",
+    "q499051",
+    "q52640",
+    "q551053",
+    "q571458",
+    "q62119",
+    "q637806",
+    "q639537",
+    "q650151",
+    "q666013",
+    "q698334",
+    "q73051",
+    "q751113",
+    "q825477",
+    "q870594"
+   ]
+  },
+  {
+   "qid": "path-05",
+   "family": "path",
+   "entities": [
+    "trickle",
+    "ufw limit from any to any port 0:29999,30006:65535"
+   ],
+   "relation": null,
+   "graph_gold": [
+    "rate limiting"
+   ],
+   "lexical_gold": null,
+   "evidence_docs": [
+    "q279989",
+    "q29783",
+    "q368523",
+    "q376128"
+   ]
+  },
+  {
+   "qid": "path-06",
+   "family": "path",
+   "entities": [
+    "rubygems",
+    "metalink"
+   ],
+   "relation": null,
+   "graph_gold": [
+    "yum"
+   ],
+   "lexical_gold": null,
+   "evidence_docs": [
+    "q125753",
+    "q128582",
+    "q196313",
+    "q637549",
+    "q682982"
+   ]
+  },
+  {
+   "qid": "path-07",
+   "family": "path",
+   "entities": [
+    "type",
+    "ctrl+c"
+   ],
+   "relation": null,
+   "graph_gold": [
+    "bash"
+   ],
+   "lexical_gold": null,
+   "evidence_docs": [
+    "q141410",
+    "q177699",
+    "q206544",
+    "q20713",
+    "q256331",
+    "q27917",
+    "q328089",
+    "q356259",
+    "q387547",
+    "q46655",
+    "q52034",
+    "q545116",
+    "q573336",
+    "q613341",
+    "q636854",
+    "q674496",
+    "q696938",
+    "q718901",
+    "q842366",
+    "q869418"
+   ]
+  },
+  {
+   "qid": "path-08",
+   "family": "path",
+   "entities": [
+    "ldapmodify",
+    "sasl/external"
+   ],
+   "relation": null,
+   "graph_gold": [
+    "ldapadd"
+   ],
+   "lexical_gold": null,
+   "evidence_docs": [
+    "q275813",
+    "q325912",
+    "q451869",
+    "q459718",
+    "q577356",
+    "q578710",
+    "q587721",
+    "q81684"
+   ]
+  },
+  {
+   "qid": "path-09",
+   "family": "path",
+   "entities": [
+    "arch",
+    "host os"
+   ],
+   "relation": null,
+   "graph_gold": [
+    "virtualbox"
+   ],
+   "lexical_gold": null,
+   "evidence_docs": [
+    "q110181",
+    "q141553",
+    "q173286",
+    "q1750",
+    "q200728",
+    "q300214",
+    "q581817",
+    "q61673",
+    "q649647",
+    "q681907",
+    "q751113",
+    "q755607",
+    "q855094"
+   ]
+  },
+  {
+   "qid": "path-10",
+   "family": "path",
+   "entities": [
+    "svnadmin",
+    "vps ram"
+   ],
+   "relation": null,
+   "graph_gold": [
+    "svn"
+   ],
+   "lexical_gold": null,
+   "evidence_docs": [
+    "q198043",
+    "q388016",
+    "q52252",
+    "q52767"
+   ]
+  },
+  {
+   "qid": "path-11",
+   "family": "path",
+   "entities": [
+    "windows server backup",
+    "iis"
+   ],
+   "relation": null,
+   "graph_gold": [
+    "windows server 2008 r2",
+    "windows server 2012 r2"
+   ],
+   "lexical_gold": null,
+   "evidence_docs": [
+    "q102523",
+    "q10518",
+    "q1058",
+    "q108725",
+    "q110936",
+    "q111066",
+    "q11202",
+    "q1125575",
+    "q114795",
+    "q115235",
+    "q118872",
+    "q1191",
+    "q123720",
+    "q123729",
+    "q124274",
+    "q133784",
+    "q13676",
+    "q151793",
+    "q158610",
+    "q159662",
+    "q16",
+    "q163502",
+    "q1649",
+    "q167851",
+    "q17624",
+    "q192748",
+    "q193609",
+    "q194827",
+    "q1954",
+    "q1968",
+    "q200789",
+    "q20383",
+    "q20652",
+    "q21131",
+    "q21412",
+    "q229860",
+    "q236223",
+    "q237146",
+    "q24372",
+    "q244711",
+    "q24885",
+    "q251427",
+    "q254813",
+    "q255849",
+    "q257680",
+    "q260777",
+    "q27119",
+    "q273225",
+    "q273875",
+    "q279414",
+    "q282093",
+    "q286891",
+    "q289279",
+    "q29521",
+    "q298552",
+    "q303097",
+    "q30440",
+    "q305295",
+    "q309104",
+    "q309291",
+    "q311883",
+    "q315721",
+    "q31575",
+    "q31686",
+    "q321577",
+    "q333907",
+    "q343442",
+    "q347108",
+    "q347199",
+    "q348493",
+    "q350550",
+    "q350782",
+    "q352647",
+    "q359904",
+    "q367071",
+    "q370359",
+    "q373604",
+    "q373772",
+    "q377367",
+    "q382116",
+    "q382511",
+    "q384050",
+    "q38549",
+    "q390112",
+    "q394393",
+    "q396045",
+    "q40328",
+    "q403310",
+    "q405395",
+    "q410757",
+    "q411184",
+    "q417173",
+    "q423013",
+    "q423161",
+    "q424279",
+    "q42571",
+    "q429122",
+    "q435690",
+    "q438496",
+    "q441235",
+    "q445881",
+    "q45347",
+    "q458394",
+    "q4589",
+    "q469944",
+    "q47537",
+    "q476527",
+    "q48934",
+    "q495112",
+    "q497246",
+    "q50128",
+    "q510016",
+    "q514091",
+    "q52199",
+    "q52872",
+    "q538803",
+    "q547410",
+    "q554140",
+    "q555350",
+    "q567987",
+    "q570842",
+    "q573465",
+    "q575656",
+    "q579109",
+    "q579222",
+    "q581529",
+    "q592006",
+    "q613927",
+    "q637195",
+    "q637207",
+    "q64232",
+    "q648898",
+    "q650339",
+    "q650598",
+    "q65329",
+    "q659225",
+    "q659584",
+    "q669397",
+    "q6756",
+    "q69810",
+    "q703373",
+    "q708669",
+    "q711470",
+    "q713187",
+    "q722151",
+    "q723",
+    "q72338",
+    "q76715",
+    "q813735",
+    "q814214",
+    "q81689",
+    "q81736",
+    "q820235",
+    "q822952",
+    "q823203",
+    "q825423",
+    "q83718",
+    "q871501",
+    "q87334",
+    "q891302",
+    "q89681",
+    "q9121",
+    "q930464"
+   ]
+  },
+  {
+   "qid": "path-12",
+   "family": "path",
+   "entities": [
+    "unmount",
+    "windows server 2008 r2"
+   ],
+   "relation": null,
+   "graph_gold": [
+    "physical hard drive"
+   ],
+   "lexical_gold": null,
+   "evidence_docs": [
+    "q10518",
+    "q108866",
+    "q109839",
+    "q110332",
+    "q11350",
+    "q115982",
+    "q119120",
+    "q12005",
+    "q126909",
+    "q131046",
+    "q132738",
+    "q13493",
+    "q151824",
+    "q155629",
+    "q162280",
+    "q166768",
+    "q182834",
+    "q184505",
+    "q185819",
+    "q194570",
+    "q196301",
+    "q204417",
+    "q206085",
+    "q216421",
+    "q218745",
+    "q219930",
+    "q230033",
+    "q235451",
+    "q244642",
+    "q266425",
+    "q270072",
+    "q270268",
+    "q271124",
+    "q273225",
+    "q275796",
+    "q291658",
+    "q292663",
+    "q308785",
+    "q314311",
+    "q323323",
+    "q325277",
+    "q326844",
+    "q330776",
+    "q351777",
+    "q359976",
+    "q370359",
+    "q371228",
+    "q377367",
+    "q377932",
+    "q384050",
+    "q388422",
+    "q38999",
+    "q402440",
+    "q404024",
+    "q405346",
+    "q416087",
+    "q418712",
+    "q424279",
+    "q454138",
+    "q458759",
+    "q469980",
+    "q485532",
+    "q528075",
+    "q543904",
+    "q545116",
+    "q549297",
+    "q550595",
+    "q55355",
+    "q554378",
+    "q555996",
+    "q558104",
+    "q559288",
+    "q55983",
+    "q562953",
+    "q570476",
+    "q570842",
+    "q576497",
+    "q578129",
+    "q585650",
+    "q590340",
+    "q599099",
+    "q604083",
+    "q608227",
+    "q631995",
+    "q637195",
+    "q680559",
+    "q691247",
+    "q69296",
+    "q702828",
+    "q71027",
+    "q743271",
+    "q746710",
+    "q768822",
+    "q776413",
+    "q81165",
+    "q817528",
+    "q850734",
+    "q929081",
+    "q948625"
+   ]
+  },
+  {
+   "qid": "path-13",
+   "family": "path",
+   "entities": [
+    "usb device",
+    "alter assembly"
+   ],
+   "relation": null,
+   "graph_gold": [
+    "triggers"
+   ],
+   "lexical_gold": null,
+   "evidence_docs": [
+    "q323014",
+    "q355949",
+    "q44339",
+    "q599099"
+   ]
+  },
+  {
+   "qid": "path-14",
+   "family": "path",
+   "entities": [
+    "hardware raid",
+    "dns"
+   ],
+   "relation": null,
+   "graph_gold": [
+    "nagios"
+   ],
+   "lexical_gold": null,
+   "evidence_docs": [
+    "q100064",
+    "q1006700",
+    "q1008522",
+    "q1012044",
+    "q1025614",
+    "q1040512",
+    "q105014",
+    "q105061",
+    "q1050958",
+    "q1057780",
+    "q113202",
+    "q116359",
+    "q118378",
+    "q118653",
+    "q119253",
+    "q12124",
+    "q121890",
+    "q122250",
+    "q122356",
+    "q122631",
+    "q123144",
+    "q123208",
+    "q12378",
+    "q126243",
+    "q129354",
+    "q132805",
+    "q135642",
+    "q13597",
+    "q136332",
+    "q142697",
+    "q143184",
+    "q143481",
+    "q144354",
+    "q144780",
+    "q145777",
+    "q14985",
+    "q15073",
+    "q151042",
+    "q153526",
+    "q153605",
+    "q154004",
+    "q154685",
+    "q158610",
+    "q15862",
+    "q158828",
+    "q160716",
+    "q162038",
+    "q162280",
+    "q169279",
+    "q170070",
+    "q170194",
+    "q17049",
+    "q172326",
+    "q17255",
+    "q178887",
+    "q178931",
+    "q18113",
+    "q181927",
+    "q181956",
+    "q182455",
+    "q184646",
+    "q18748",
+    "q187882",
+    "q190",
+    "q191096",
+    "q195611",
+    "q202534",
+    "q203210",
+    "q204479",
+    "q21455",
+    "q216602",
+    "q217666",
+    "q218532",
+    "q218707",
+    "q218745",
+    "q219628",
+    "q220775",
+    "q222641",
+    "q223927",
+    "q224821",
+    "q224920",
+    "q225999",
+    "q227834",
+    "q227993",
+    "q228102",
+    "q228794",
+    "q228985",
+    "q229331",
+    "q234591",
+    "q23518",
+    "q235307",
+    "q23744",
+    "q240476",
+    "q24121",
+    "q24176",
+    "q243782",
+    "q244660",
+    "q253213",
+    "q255580",
+    "q259523",
+    "q26056",
+    "q261341",
+    "q26166",
+    "q261779",
+    "q269838",
+    "q270683",
+    "q27134",
+    "q274106",
+    "q274424",
+    "q274852",
+    "q275050",
+    "q276901",
+    "q278196",
+    "q281230",
+    "q282755",
+    "q282792",
+    "q286132",
+    "q287218",
+    "q287803",
+    "q291027",
+    "q291577",
+    "q292076",
+    "q292625",
+    "q293117",
+    "q2932",
+    "q297318",
+    "q29777",
+    "q299907",
+    "q300076",
+    "q30079",
+    "q303026",
+    "q305532",
+    "q308238",
+    "q309651",
+    "q31060",
+    "q318007",
+    "q319737",
+    "q320287",
+    "q322626",
+    "q325997",
+    "q327708",
+    "q331587",
+    "q331712",
+    "q332440",
+    "q333865",
+    "q336762",
+    "q339128",
+    "q339661",
+    "q341290",
+    "q341810",
+    "q343941",
+    "q346178",
+    "q350062",
+    "q351108",
+    "q351962",
+    "q353569",
+    "q355414",
+    "q355887",
+    "q356115",
+    "q357474",
+    "q357650",
+    "q358629",
+    "q360815",
+    "q363122",
+    "q36457",
+    "q36562",
+    "q369403",
+    "q369593",
+    "q371833",
+    "q373178",
+    "q383984",
+    "q385893",
+    "q388289",
+    "q388422",
+    "q390841",
+    "q394804",
+    "q402580",
+    "q404840",
+    "q405152",
+    "q406786",
+    "q408017",
+    "q415289",
+    "q416708",
+    "q418599",
+    "q423882",
+    "q425427",
+    "q426101",
+    "q426326",
+    "q42678",
+    "q426803",
+    "q42909",
+    "q429400",
+    "q429757",
+    "q430408",
+    "q431853",
+    "q433295",
+    "q441191",
+    "q45470",
+    "q458958",
+    "q459500",
+    "q459948",
+    "q459968",
+    "q461097",
+    "q4689",
+    "q469094",
+    "q469895",
+    "q470649",
+    "q47175",
+    "q47303",
+    "q47458",
+    "q475555",
+    "q476700",
+    "q479945",
+    "q480069",
+    "q480913",
+    "q484208",
+    "q486406",
+    "q486518",
+    "q495914",
+    "q498500",
+    "q503041",
+    "q50386",
+    "q50443",
+    "q504727",
+    "q506347",
+    "q507117",
+    "q50789",
+    "q5084",
+    "q508691",
+    "q509116",
+    "q51662",
+    "q520195",
+    "q523443",
+    "q525581",
+    "q526205",
+    "q528773",
+    "q52923",
+    "q532008",
+    "q537133",
+    "q537310",
+    "q537450",
+    "q540399",
+    "q548888",
+    "q553994",
+    "q55611",
+    "q560256",
+    "q56539",
+    "q566641",
+    "q569528",
+    "q570316",
+    "q573465",
+    "q573681",
+    "q574072",
+    "q574116",
+    "q576461",
+    "q579393",
+    "q579967",
+    "q581922",
+    "q584443",
+    "q585089",
+    "q585650",
+    "q587625",
+    "q588217",
+    "q589781",
+    "q590892",
+    "q596520",
+    "q596616",
+    "q598789",
+    "q606291",
+    "q607178",
+    "q608852",
+    "q609365",
+    "q609812",
+    "q61302",
+    "q614574",
+    "q615641",
+    "q618700",
+    "q627870",
+    "q630043",
+    "q631037",
+    "q634546",
+    "q634684",
+    "q634793",
+    "q638260",
+    "q639398",
+    "q639891",
+    "q64232",
+    "q642981",
+    "q647045",
+    "q654428",
+    "q655306",
+    "q65712",
+    "q65784",
+    "q663112",
+    "q66556",
+    "q667042",
+    "q669441",
+    "q669819",
+    "q672270",
+    "q68021",
+    "q685289",
+    "q688837",
+    "q698251",
+    "q69836",
+    "q701371",
+    "q705192",
+    "q708076",
+    "q717624",
+    "q718654",
+    "q72363",
+    "q723872",
+    "q72492",
+    "q729856",
+    "q731238",
+    "q732325",
+    "q740245",
+    "q740630",
+    "q74067",
+    "q745389",
+    "q7478",
+    "q749826",
+    "q752123",
+    "q755351",
+    "q758997",
+    "q762171",
+    "q764006",
+    "q765913",
+    "q770968",
+    "q779592",
+    "q78089",
+    "q788862",
+    "q803033",
+    "q804492",
+    "q810636",
+    "q811271",
+    "q815841",
+    "q817651",
+    "q818455",
+    "q82251",
+    "q823027",
+    "q823071",
+    "q823234",
+    "q833893",
+    "q834341",
+    "q835660",
+    "q840241",
+    "q841281",
+    "q846241",
+    "q847946",
+    "q85078",
+    "q85267",
+    "q85408",
+    "q85602",
+    "q856885",
+    "q857800",
+    "q857845",
+    "q866830",
+    "q867830",
+    "q876699",
+    "q878080",
+    "q88064",
+    "q904131",
+    "q90481",
+    "q906108",
+    "q906615",
+    "q90725",
+    "q90908",
+    "q91063",
+    "q92139",
+    "q9306",
+    "q932249",
+    "q933943",
+    "q935025",
+    "q937547",
+    "q938639",
+    "q941735",
+    "q943308",
+    "q955112",
+    "q963115",
+    "q966466",
+    "q972720",
+    "q973666",
+    "q988169"
+   ]
+  }
+ ],
+ "scores": {
+  "dense": {
+   "count-00": {
+    "answer_size": 1,
+    "score": {
+     "graph": {
+      "within_20pct": 0.0,
+      "relative_error": 0.8333
+     },
+     "lexical": {
+      "within_20pct": 0.0,
+      "relative_error": 0.9615
+     }
+    }
+   },
+   "count-01": {
+    "answer_size": 3,
+    "score": {
+     "graph": {
+      "within_20pct": 0.0,
+      "relative_error": 0.5
+     },
+     "lexical": {
+      "within_20pct": 0.0,
+      "relative_error": 0.88
+     }
+    }
+   },
+   "count-02": {
+    "answer_size": 1,
+    "score": {
+     "graph": {
+      "within_20pct": 0.0,
+      "relative_error": 0.8333
+     },
+     "lexical": {
+      "within_20pct": 0.0,
+      "relative_error": 0.9853
+     }
+    }
+   },
+   "count-03": {
+    "answer_size": 9,
+    "score": {
+     "graph": {
+      "within_20pct": 0.0,
+      "relative_error": 0.6667
+     },
+     "lexical": {
+      "within_20pct": 0.0,
+      "relative_error": 0.7097
+     }
+    }
+   },
+   "count-04": {
+    "answer_size": 4,
+    "score": {
+     "graph": {
+      "within_20pct": 0.0,
+      "relative_error": 0.5556
+     },
+     "lexical": {
+      "within_20pct": 0.0,
+      "relative_error": 0.8
+     }
+    }
+   },
+   "count-05": {
+    "answer_size": 0,
+    "score": {
+     "graph": {
+      "within_20pct": 0.0,
+      "relative_error": 1.0
+     },
+     "lexical": {
+      "within_20pct": 0.0,
+      "relative_error": 1.0
+     }
+    }
+   },
+   "count-06": {
+    "answer_size": 1,
+    "score": {
+     "graph": {
+      "within_20pct": 0.0,
+      "relative_error": 0.9655
+     },
+     "lexical": {
+      "within_20pct": 0.0,
+      "relative_error": 0.9787
+     }
+    }
+   },
+   "count-07": {
+    "answer_size": 5,
+    "score": {
+     "graph": {
+      "within_20pct": 0.0,
+      "relative_error": 0.375
+     },
+     "lexical": {
+      "within_20pct": 0.0,
+      "relative_error": 0.4444
+     }
+    }
+   },
+   "count-08": {
+    "answer_size": 0,
+    "score": {
+     "graph": {
+      "within_20pct": 0.0,
+      "relative_error": 1.0
+     },
+     "lexical": {
+      "within_20pct": 0.0,
+      "relative_error": 1.0
+     }
+    }
+   },
+   "count-09": {
+    "answer_size": 4,
+    "score": {
+     "graph": {
+      "within_20pct": 0.0,
+      "relative_error": 0.84
+     },
+     "lexical": {
+      "within_20pct": 0.0,
+      "relative_error": 0.9545
+     }
+    }
+   },
+   "count-10": {
+    "answer_size": 6,
+    "score": {
+     "graph": {
+      "within_20pct": 0.0,
+      "relative_error": 0.25
+     },
+     "lexical": {
+      "within_20pct": 0.0,
+      "relative_error": 0.6
+     }
+    }
+   },
+   "count-11": {
+    "answer_size": 4,
+    "score": {
+     "graph": {
+      "within_20pct": 0.0,
+      "relative_error": 0.7143
+     },
+     "lexical": {
+      "within_20pct": 0.0,
+      "relative_error": 0.7895
+     }
+    }
+   },
+   "count-12": {
+    "answer_size": 2,
+    "score": {
+     "graph": {
+      "within_20pct": 0.0,
+      "relative_error": 0.7143
+     },
+     "lexical": {
+      "within_20pct": 0.0,
+      "relative_error": 0.9355
+     }
+    }
+   },
+   "count-13": {
+    "answer_size": 5,
+    "score": {
+     "graph": {
+      "within_20pct": 0.0,
+      "relative_error": 0.6429
+     },
+     "lexical": {
+      "within_20pct": 0.0,
+      "relative_error": 0.9231
+     }
+    }
+   },
+   "count-14": {
+    "answer_size": 0,
+    "score": {
+     "graph": {
+      "within_20pct": 0.0,
+      "relative_error": 1.0
+     },
+     "lexical": {
+      "within_20pct": 0.0,
+      "relative_error": 1.0
+     }
+    }
+   },
+   "co_mention-00": {
+    "answer_size": 2,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 0.6667,
+      "f1": 0.8
+     },
+     "lexical": {
+      "precision": 1.0,
+      "recall": 0.4,
+      "f1": 0.5714
+     }
+    }
+   },
+   "co_mention-01": {
+    "answer_size": 0,
+    "score": {
+     "graph": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     },
+     "lexical": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     }
+    }
+   },
+   "co_mention-02": {
+    "answer_size": 1,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6667
+     },
+     "lexical": {
+      "precision": 1.0,
+      "recall": 0.3333,
+      "f1": 0.5
+     }
+    }
+   },
+   "co_mention-03": {
+    "answer_size": 0,
+    "score": {
+     "graph": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     },
+     "lexical": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     }
+    }
+   },
+   "co_mention-04": {
+    "answer_size": 1,
+    "score": {
+     "graph": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     },
+     "lexical": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     }
+    }
+   },
+   "co_mention-05": {
+    "answer_size": 0,
+    "score": {
+     "graph": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     },
+     "lexical": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     }
+    }
+   },
+   "co_mention-06": {
+    "answer_size": 0,
+    "score": {
+     "graph": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     },
+     "lexical": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     }
+    }
+   },
+   "co_mention-07": {
+    "answer_size": 2,
+    "score": {
+     "graph": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     },
+     "lexical": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     }
+    }
+   },
+   "co_mention-08": {
+    "answer_size": 1,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6667
+     },
+     "lexical": {
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6667
+     }
+    }
+   },
+   "co_mention-09": {
+    "answer_size": 1,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6667
+     },
+     "lexical": {
+      "precision": 1.0,
+      "recall": 0.25,
+      "f1": 0.4
+     }
+    }
+   },
+   "co_mention-10": {
+    "answer_size": 2,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     },
+     "lexical": {
+      "precision": 1.0,
+      "recall": 0.6667,
+      "f1": 0.8
+     }
+    }
+   },
+   "co_mention-11": {
+    "answer_size": 1,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 0.25,
+      "f1": 0.4
+     },
+     "lexical": {
+      "precision": 1.0,
+      "recall": 0.1667,
+      "f1": 0.2857
+     }
+    }
+   },
+   "co_mention-12": {
+    "answer_size": 1,
+    "score": {
+     "graph": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     },
+     "lexical": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     }
+    }
+   },
+   "co_mention-13": {
+    "answer_size": 2,
+    "score": {
+     "graph": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     },
+     "lexical": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     }
+    }
+   },
+   "co_mention-14": {
+    "answer_size": 2,
+    "score": {
+     "graph": {
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1": 0.5
+     },
+     "lexical": {
+      "precision": 0.5,
+      "recall": 0.25,
+      "f1": 0.3333
+     }
+    }
+   },
+   "relation-00": {
+    "answer_size": 2,
+    "score": {
+     "graph": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     }
+    }
+   },
+   "relation-01": {
+    "answer_size": 8,
+    "score": {
+     "graph": {
+      "precision": 0.5,
+      "recall": 0.5714,
+      "f1": 0.5333
+     }
+    }
+   },
+   "relation-02": {
+    "answer_size": 4,
+    "score": {
+     "graph": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     }
+    }
+   },
+   "relation-03": {
+    "answer_size": 0,
+    "score": {
+     "graph": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     }
+    }
+   },
+   "relation-04": {
+    "answer_size": 5,
+    "score": {
+     "graph": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     }
+    }
+   },
+   "relation-05": {
+    "answer_size": 2,
+    "score": {
+     "graph": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     }
+    }
+   },
+   "relation-06": {
+    "answer_size": 3,
+    "score": {
+     "graph": {
+      "precision": 0.3333,
+      "recall": 0.3333,
+      "f1": 0.3333
+     }
+    }
+   },
+   "relation-07": {
+    "answer_size": 0,
+    "score": {
+     "graph": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     }
+    }
+   },
+   "relation-08": {
+    "answer_size": 0,
+    "score": {
+     "graph": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     }
+    }
+   },
+   "relation-09": {
+    "answer_size": 4,
+    "score": {
+     "graph": {
+      "precision": 0.25,
+      "recall": 0.25,
+      "f1": 0.25
+     }
+    }
+   },
+   "relation-10": {
+    "answer_size": 3,
+    "score": {
+     "graph": {
+      "precision": 0.3333,
+      "recall": 0.1667,
+      "f1": 0.2222
+     }
+    }
+   },
+   "relation-11": {
+    "answer_size": 3,
+    "score": {
+     "graph": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     }
+    }
+   },
+   "relation-12": {
+    "answer_size": 1,
+    "score": {
+     "graph": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     }
+    }
+   },
+   "relation-13": {
+    "answer_size": 4,
+    "score": {
+     "graph": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     }
+    }
+   },
+   "relation-14": {
+    "answer_size": 2,
+    "score": {
+     "graph": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     }
+    }
+   },
+   "path-00": {
+    "answer_size": 2,
+    "score": {
+     "graph": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     }
+    }
+   },
+   "path-01": {
+    "answer_size": 0,
+    "score": {
+     "graph": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     }
+    }
+   },
+   "path-02": {
+    "answer_size": 0,
+    "score": {
+     "graph": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     }
+    }
+   },
+   "path-03": {
+    "answer_size": 11,
+    "score": {
+     "graph": {
+      "precision": 0.0909,
+      "recall": 1.0,
+      "f1": 0.1667
+     }
+    }
+   },
+   "path-04": {
+    "answer_size": 6,
+    "score": {
+     "graph": {
+      "precision": 0.1667,
+      "recall": 1.0,
+      "f1": 0.2857
+     }
+    }
+   },
+   "path-05": {
+    "answer_size": 1,
+    "score": {
+     "graph": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     }
+    }
+   },
+   "path-06": {
+    "answer_size": 0,
+    "score": {
+     "graph": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     }
+    }
+   },
+   "path-07": {
+    "answer_size": 7,
+    "score": {
+     "graph": {
+      "precision": 0.1429,
+      "recall": 1.0,
+      "f1": 0.25
+     }
+    }
+   },
+   "path-08": {
+    "answer_size": 0,
+    "score": {
+     "graph": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     }
+    }
+   },
+   "path-09": {
+    "answer_size": 5,
+    "score": {
+     "graph": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     }
+    }
+   },
+   "path-10": {
+    "answer_size": 4,
+    "score": {
+     "graph": {
+      "precision": 0.25,
+      "recall": 1.0,
+      "f1": 0.4
+     }
+    }
+   },
+   "path-11": {
+    "answer_size": 2,
+    "score": {
+     "graph": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     }
+    }
+   },
+   "path-12": {
+    "answer_size": 0,
+    "score": {
+     "graph": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     }
+    }
+   },
+   "path-13": {
+    "answer_size": 0,
+    "score": {
+     "graph": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     }
+    }
+   },
+   "path-14": {
+    "answer_size": 0,
+    "score": {
+     "graph": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     }
+    }
+   }
+  },
+  "dense-map": {
+   "count-00": {
+    "answer_size": 3,
+    "score": {
+     "graph": {
+      "within_20pct": 0.0,
+      "relative_error": 0.5
+     },
+     "lexical": {
+      "within_20pct": 0.0,
+      "relative_error": 0.8846
+     }
+    }
+   },
+   "count-01": {
+    "answer_size": 15,
+    "score": {
+     "graph": {
+      "within_20pct": 0.0,
+      "relative_error": 1.5
+     },
+     "lexical": {
+      "within_20pct": 0.0,
+      "relative_error": 0.4
+     }
+    }
+   },
+   "count-02": {
+    "answer_size": 12,
+    "score": {
+     "graph": {
+      "within_20pct": 0.0,
+      "relative_error": 1.0
+     },
+     "lexical": {
+      "within_20pct": 0.0,
+      "relative_error": 0.8235
+     }
+    }
+   },
+   "count-03": {
+    "answer_size": 15,
+    "score": {
+     "graph": {
+      "within_20pct": 0.0,
+      "relative_error": 0.4444
+     },
+     "lexical": {
+      "within_20pct": 0.0,
+      "relative_error": 0.5161
+     }
+    }
+   },
+   "count-04": {
+    "answer_size": 11,
+    "score": {
+     "graph": {
+      "within_20pct": 0.0,
+      "relative_error": 0.2222
+     },
+     "lexical": {
+      "within_20pct": 0.0,
+      "relative_error": 0.45
+     }
+    }
+   },
+   "count-05": {
+    "answer_size": 1,
+    "score": {
+     "graph": {
+      "within_20pct": 0.0,
+      "relative_error": 0.8571
+     },
+     "lexical": {
+      "within_20pct": 0.0,
+      "relative_error": 0.9474
+     }
+    }
+   },
+   "count-06": {
+    "answer_size": 4,
+    "score": {
+     "graph": {
+      "within_20pct": 0.0,
+      "relative_error": 0.8621
+     },
+     "lexical": {
+      "within_20pct": 0.0,
+      "relative_error": 0.9149
+     }
+    }
+   },
+   "count-07": {
+    "answer_size": 8,
+    "score": {
+     "graph": {
+      "within_20pct": 1.0,
+      "relative_error": 0.0
+     },
+     "lexical": {
+      "within_20pct": 1.0,
+      "relative_error": 0.1111
+     }
+    }
+   },
+   "count-08": {
+    "answer_size": 0,
+    "score": {
+     "graph": {
+      "within_20pct": 0.0,
+      "relative_error": 1.0
+     },
+     "lexical": {
+      "within_20pct": 0.0,
+      "relative_error": 1.0
+     }
+    }
+   },
+   "count-09": {
+    "answer_size": 9,
+    "score": {
+     "graph": {
+      "within_20pct": 0.0,
+      "relative_error": 0.64
+     },
+     "lexical": {
+      "within_20pct": 0.0,
+      "relative_error": 0.8977
+     }
+    }
+   },
+   "count-10": {
+    "answer_size": 27,
+    "score": {
+     "graph": {
+      "within_20pct": 0.0,
+      "relative_error": 2.375
+     },
+     "lexical": {
+      "within_20pct": 0.0,
+      "relative_error": 0.8
+     }
+    }
+   },
+   "count-11": {
+    "answer_size": 7,
+    "score": {
+     "graph": {
+      "within_20pct": 0.0,
+      "relative_error": 0.5
+     },
+     "lexical": {
+      "within_20pct": 0.0,
+      "relative_error": 0.6316
+     }
+    }
+   },
+   "count-12": {
+    "answer_size": 20,
+    "score": {
+     "graph": {
+      "within_20pct": 0.0,
+      "relative_error": 1.8571
+     },
+     "lexical": {
+      "within_20pct": 0.0,
+      "relative_error": 0.3548
+     }
+    }
+   },
+   "count-13": {
+    "answer_size": 16,
+    "score": {
+     "graph": {
+      "within_20pct": 1.0,
+      "relative_error": 0.1429
+     },
+     "lexical": {
+      "within_20pct": 0.0,
+      "relative_error": 0.7538
+     }
+    }
+   },
+   "count-14": {
+    "answer_size": 0,
+    "score": {
+     "graph": {
+      "within_20pct": 0.0,
+      "relative_error": 1.0
+     },
+     "lexical": {
+      "within_20pct": 0.0,
+      "relative_error": 1.0
+     }
+    }
+   },
+   "co_mention-00": {
+    "answer_size": 4,
+    "score": {
+     "graph": {
+      "precision": 0.5,
+      "recall": 0.6667,
+      "f1": 0.5714
+     },
+     "lexical": {
+      "precision": 0.75,
+      "recall": 0.6,
+      "f1": 0.6667
+     }
+    }
+   },
+   "co_mention-01": {
+    "answer_size": 22,
+    "score": {
+     "graph": {
+      "precision": 0.0455,
+      "recall": 0.5,
+      "f1": 0.0833
+     },
+     "lexical": {
+      "precision": 0.0909,
+      "recall": 0.6667,
+      "f1": 0.16
+     }
+    }
+   },
+   "co_mention-02": {
+    "answer_size": 5,
+    "score": {
+     "graph": {
+      "precision": 0.2,
+      "recall": 0.5,
+      "f1": 0.2857
+     },
+     "lexical": {
+      "precision": 0.4,
+      "recall": 0.6667,
+      "f1": 0.5
+     }
+    }
+   },
+   "co_mention-03": {
+    "answer_size": 2,
+    "score": {
+     "graph": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     },
+     "lexical": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     }
+    }
+   },
+   "co_mention-04": {
+    "answer_size": 6,
+    "score": {
+     "graph": {
+      "precision": 0.1667,
+      "recall": 0.5,
+      "f1": 0.25
+     },
+     "lexical": {
+      "precision": 0.3333,
+      "recall": 0.6667,
+      "f1": 0.4444
+     }
+    }
+   },
+   "co_mention-05": {
+    "answer_size": 4,
+    "score": {
+     "graph": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     },
+     "lexical": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     }
+    }
+   },
+   "co_mention-06": {
+    "answer_size": 2,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     },
+     "lexical": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     }
+    }
+   },
+   "co_mention-07": {
+    "answer_size": 7,
+    "score": {
+     "graph": {
+      "precision": 0.2857,
+      "recall": 0.5,
+      "f1": 0.3636
+     },
+     "lexical": {
+      "precision": 0.5714,
+      "recall": 0.4444,
+      "f1": 0.5
+     }
+    }
+   },
+   "co_mention-08": {
+    "answer_size": 1,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6667
+     },
+     "lexical": {
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6667
+     }
+    }
+   },
+   "co_mention-09": {
+    "answer_size": 19,
+    "score": {
+     "graph": {
+      "precision": 0.1053,
+      "recall": 1.0,
+      "f1": 0.1905
+     },
+     "lexical": {
+      "precision": 0.1579,
+      "recall": 0.75,
+      "f1": 0.2609
+     }
+    }
+   },
+   "co_mention-10": {
+    "answer_size": 4,
+    "score": {
+     "graph": {
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1": 0.6667
+     },
+     "lexical": {
+      "precision": 0.75,
+      "recall": 1.0,
+      "f1": 0.8571
+     }
+    }
+   },
+   "co_mention-11": {
+    "answer_size": 3,
+    "score": {
+     "graph": {
+      "precision": 0.3333,
+      "recall": 0.25,
+      "f1": 0.2857
+     },
+     "lexical": {
+      "precision": 0.3333,
+      "recall": 0.1667,
+      "f1": 0.2222
+     }
+    }
+   },
+   "co_mention-12": {
+    "answer_size": 4,
+    "score": {
+     "graph": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     },
+     "lexical": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     }
+    }
+   },
+   "co_mention-13": {
+    "answer_size": 5,
+    "score": {
+     "graph": {
+      "precision": 0.2,
+      "recall": 0.5,
+      "f1": 0.2857
+     },
+     "lexical": {
+      "precision": 0.2,
+      "recall": 0.5,
+      "f1": 0.2857
+     }
+    }
+   },
+   "co_mention-14": {
+    "answer_size": 11,
+    "score": {
+     "graph": {
+      "precision": 0.0909,
+      "recall": 0.5,
+      "f1": 0.1538
+     },
+     "lexical": {
+      "precision": 0.0909,
+      "recall": 0.25,
+      "f1": 0.1333
+     }
+    }
+   },
+   "relation-00": {
+    "answer_size": 4,
+    "score": {
+     "graph": {
+      "precision": 0.25,
+      "recall": 0.3333,
+      "f1": 0.2857
+     }
+    }
+   },
+   "relation-01": {
+    "answer_size": 6,
+    "score": {
+     "graph": {
+      "precision": 0.5,
+      "recall": 0.4286,
+      "f1": 0.4615
+     }
+    }
+   },
+   "relation-02": {
+    "answer_size": 17,
+    "score": {
+     "graph": {
+      "precision": 0.1765,
+      "recall": 0.2857,
+      "f1": 0.2182
+     }
+    }
+   },
+   "relation-03": {
+    "answer_size": 9,
+    "score": {
+     "graph": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     }
+    }
+   },
+   "relation-04": {
+    "answer_size": 7,
+    "score": {
+     "graph": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     }
+    }
+   },
+   "relation-05": {
+    "answer_size": 10,
+    "score": {
+     "graph": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     }
+    }
+   },
+   "relation-06": {
+    "answer_size": 0,
+    "score": {
+     "graph": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     }
+    }
+   },
+   "relation-07": {
+    "answer_size": 10,
+    "score": {
+     "graph": {
+      "precision": 0.2,
+      "recall": 0.2,
+      "f1": 0.2
+     }
+    }
+   },
+   "relation-08": {
+    "answer_size": 13,
+    "score": {
+     "graph": {
+      "precision": 0.0769,
+      "recall": 0.3333,
+      "f1": 0.125
+     }
+    }
+   },
+   "relation-09": {
+    "answer_size": 4,
+    "score": {
+     "graph": {
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1": 0.5
+     }
+    }
+   },
+   "relation-10": {
+    "answer_size": 43,
+    "score": {
+     "graph": {
+      "precision": 0.0465,
+      "recall": 0.3333,
+      "f1": 0.0816
+     }
+    }
+   },
+   "relation-11": {
+    "answer_size": 1,
+    "score": {
+     "graph": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     }
+    }
+   },
+   "relation-12": {
+    "answer_size": 11,
+    "score": {
+     "graph": {
+      "precision": 0.0909,
+      "recall": 0.5,
+      "f1": 0.1538
+     }
+    }
+   },
+   "relation-13": {
+    "answer_size": 13,
+    "score": {
+     "graph": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     }
+    }
+   },
+   "relation-14": {
+    "answer_size": 7,
+    "score": {
+     "graph": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     }
+    }
+   },
+   "path-00": {
+    "answer_size": 2,
+    "score": {
+     "graph": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     }
+    }
+   },
+   "path-01": {
+    "answer_size": 0,
+    "score": {
+     "graph": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     }
+    }
+   },
+   "path-02": {
+    "answer_size": 0,
+    "score": {
+     "graph": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     }
+    }
+   },
+   "path-03": {
+    "answer_size": 15,
+    "score": {
+     "graph": {
+      "precision": 0.0667,
+      "recall": 1.0,
+      "f1": 0.125
+     }
+    }
+   },
+   "path-04": {
+    "answer_size": 23,
+    "score": {
+     "graph": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     }
+    }
+   },
+   "path-05": {
+    "answer_size": 2,
+    "score": {
+     "graph": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     }
+    }
+   },
+   "path-06": {
+    "answer_size": 0,
+    "score": {
+     "graph": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     }
+    }
+   },
+   "path-07": {
+    "answer_size": 46,
+    "score": {
+     "graph": {
+      "precision": 0.0217,
+      "recall": 1.0,
+      "f1": 0.0426
+     }
+    }
+   },
+   "path-08": {
+    "answer_size": 2,
+    "score": {
+     "graph": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     }
+    }
+   },
+   "path-09": {
+    "answer_size": 34,
+    "score": {
+     "graph": {
+      "precision": 0.0294,
+      "recall": 1.0,
+      "f1": 0.0571
+     }
+    }
+   },
+   "path-10": {
+    "answer_size": 4,
+    "score": {
+     "graph": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     }
+    }
+   },
+   "path-11": {
+    "answer_size": 1,
+    "score": {
+     "graph": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     }
+    }
+   },
+   "path-12": {
+    "answer_size": 11,
+    "score": {
+     "graph": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     }
+    }
+   },
+   "path-13": {
+    "answer_size": 7,
+    "score": {
+     "graph": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     }
+    }
+   },
+   "path-14": {
+    "answer_size": 2,
+    "score": {
+     "graph": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     }
+    }
+   }
+  },
+  "grep": {
+   "count-00": {
+    "answer_size": 26,
+    "score": {
+     "graph": {
+      "within_20pct": 0.0,
+      "relative_error": 3.3333
+     },
+     "lexical": {
+      "within_20pct": 1.0,
+      "relative_error": 0.0
+     }
+    }
+   },
+   "count-01": {
+    "answer_size": 25,
+    "score": {
+     "graph": {
+      "within_20pct": 0.0,
+      "relative_error": 3.1667
+     },
+     "lexical": {
+      "within_20pct": 1.0,
+      "relative_error": 0.0
+     }
+    }
+   },
+   "count-02": {
+    "answer_size": 68,
+    "score": {
+     "graph": {
+      "within_20pct": 0.0,
+      "relative_error": 10.3333
+     },
+     "lexical": {
+      "within_20pct": 1.0,
+      "relative_error": 0.0
+     }
+    }
+   },
+   "count-03": {
+    "answer_size": 31,
+    "score": {
+     "graph": {
+      "within_20pct": 1.0,
+      "relative_error": 0.1481
+     },
+     "lexical": {
+      "within_20pct": 1.0,
+      "relative_error": 0.0
+     }
+    }
+   },
+   "count-04": {
+    "answer_size": 20,
+    "score": {
+     "graph": {
+      "within_20pct": 0.0,
+      "relative_error": 1.2222
+     },
+     "lexical": {
+      "within_20pct": 1.0,
+      "relative_error": 0.0
+     }
+    }
+   },
+   "count-05": {
+    "answer_size": 19,
+    "score": {
+     "graph": {
+      "within_20pct": 0.0,
+      "relative_error": 1.7143
+     },
+     "lexical": {
+      "within_20pct": 1.0,
+      "relative_error": 0.0
+     }
+    }
+   },
+   "count-06": {
+    "answer_size": 47,
+    "score": {
+     "graph": {
+      "within_20pct": 0.0,
+      "relative_error": 0.6207
+     },
+     "lexical": {
+      "within_20pct": 1.0,
+      "relative_error": 0.0
+     }
+    }
+   },
+   "count-07": {
+    "answer_size": 9,
+    "score": {
+     "graph": {
+      "within_20pct": 1.0,
+      "relative_error": 0.125
+     },
+     "lexical": {
+      "within_20pct": 1.0,
+      "relative_error": 0.0
+     }
+    }
+   },
+   "count-08": {
+    "answer_size": 11,
+    "score": {
+     "graph": {
+      "within_20pct": 0.0,
+      "relative_error": 0.8333
+     },
+     "lexical": {
+      "within_20pct": 1.0,
+      "relative_error": 0.0
+     }
+    }
+   },
+   "count-09": {
+    "answer_size": 88,
+    "score": {
+     "graph": {
+      "within_20pct": 0.0,
+      "relative_error": 2.52
+     },
+     "lexical": {
+      "within_20pct": 1.0,
+      "relative_error": 0.0
+     }
+    }
+   },
+   "count-10": {
+    "answer_size": 15,
+    "score": {
+     "graph": {
+      "within_20pct": 0.0,
+      "relative_error": 0.875
+     },
+     "lexical": {
+      "within_20pct": 1.0,
+      "relative_error": 0.0
+     }
+    }
+   },
+   "count-11": {
+    "answer_size": 19,
+    "score": {
+     "graph": {
+      "within_20pct": 0.0,
+      "relative_error": 0.3571
+     },
+     "lexical": {
+      "within_20pct": 1.0,
+      "relative_error": 0.0
+     }
+    }
+   },
+   "count-12": {
+    "answer_size": 31,
+    "score": {
+     "graph": {
+      "within_20pct": 0.0,
+      "relative_error": 3.4286
+     },
+     "lexical": {
+      "within_20pct": 1.0,
+      "relative_error": 0.0
+     }
+    }
+   },
+   "count-13": {
+    "answer_size": 65,
+    "score": {
+     "graph": {
+      "within_20pct": 0.0,
+      "relative_error": 3.6429
+     },
+     "lexical": {
+      "within_20pct": 1.0,
+      "relative_error": 0.0
+     }
+    }
+   },
+   "count-14": {
+    "answer_size": 9,
+    "score": {
+     "graph": {
+      "within_20pct": 1.0,
+      "relative_error": 0.0
+     },
+     "lexical": {
+      "within_20pct": 1.0,
+      "relative_error": 0.0
+     }
+    }
+   },
+   "co_mention-00": {
+    "answer_size": 5,
+    "score": {
+     "graph": {
+      "precision": 0.6,
+      "recall": 1.0,
+      "f1": 0.75
+     },
+     "lexical": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     }
+    }
+   },
+   "co_mention-01": {
+    "answer_size": 3,
+    "score": {
+     "graph": {
+      "precision": 0.6667,
+      "recall": 1.0,
+      "f1": 0.8
+     },
+     "lexical": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     }
+    }
+   },
+   "co_mention-02": {
+    "answer_size": 3,
+    "score": {
+     "graph": {
+      "precision": 0.6667,
+      "recall": 1.0,
+      "f1": 0.8
+     },
+     "lexical": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     }
+    }
+   },
+   "co_mention-03": {
+    "answer_size": 3,
+    "score": {
+     "graph": {
+      "precision": 0.6667,
+      "recall": 1.0,
+      "f1": 0.8
+     },
+     "lexical": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     }
+    }
+   },
+   "co_mention-04": {
+    "answer_size": 3,
+    "score": {
+     "graph": {
+      "precision": 0.6667,
+      "recall": 1.0,
+      "f1": 0.8
+     },
+     "lexical": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     }
+    }
+   },
+   "co_mention-05": {
+    "answer_size": 7,
+    "score": {
+     "graph": {
+      "precision": 0.2857,
+      "recall": 1.0,
+      "f1": 0.4444
+     },
+     "lexical": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     }
+    }
+   },
+   "co_mention-06": {
+    "answer_size": 2,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     },
+     "lexical": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     }
+    }
+   },
+   "co_mention-07": {
+    "answer_size": 9,
+    "score": {
+     "graph": {
+      "precision": 0.4444,
+      "recall": 1.0,
+      "f1": 0.6154
+     },
+     "lexical": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     }
+    }
+   },
+   "co_mention-08": {
+    "answer_size": 2,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     },
+     "lexical": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     }
+    }
+   },
+   "co_mention-09": {
+    "answer_size": 4,
+    "score": {
+     "graph": {
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1": 0.6667
+     },
+     "lexical": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     }
+    }
+   },
+   "co_mention-10": {
+    "answer_size": 3,
+    "score": {
+     "graph": {
+      "precision": 0.6667,
+      "recall": 1.0,
+      "f1": 0.8
+     },
+     "lexical": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     }
+    }
+   },
+   "co_mention-11": {
+    "answer_size": 6,
+    "score": {
+     "graph": {
+      "precision": 0.6667,
+      "recall": 1.0,
+      "f1": 0.8
+     },
+     "lexical": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     }
+    }
+   },
+   "co_mention-12": {
+    "answer_size": 2,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     },
+     "lexical": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     }
+    }
+   },
+   "co_mention-13": {
+    "answer_size": 2,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     },
+     "lexical": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     }
+    }
+   },
+   "co_mention-14": {
+    "answer_size": 4,
+    "score": {
+     "graph": {
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1": 0.6667
+     },
+     "lexical": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     }
+    }
+   },
+   "relation-00": {
+    "answer_size": 2,
+    "score": {
+     "graph": {
+      "precision": 0.5,
+      "recall": 0.3333,
+      "f1": 0.4
+     }
+    }
+   },
+   "relation-01": {
+    "answer_size": 2,
+    "score": {
+     "graph": {
+      "precision": 0.5,
+      "recall": 0.2857,
+      "f1": 0.3636
+     }
+    }
+   },
+   "relation-02": {
+    "answer_size": 2,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 0.0714,
+      "f1": 0.1333
+     }
+    }
+   },
+   "relation-03": {
+    "answer_size": 9,
+    "score": {
+     "graph": {
+      "precision": 0.2222,
+      "recall": 0.3333,
+      "f1": 0.2667
+     }
+    }
+   },
+   "relation-04": {
+    "answer_size": 7,
+    "score": {
+     "graph": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     }
+    }
+   },
+   "relation-05": {
+    "answer_size": 4,
+    "score": {
+     "graph": {
+      "precision": 0.25,
+      "recall": 0.3333,
+      "f1": 0.2857
+     }
+    }
+   },
+   "relation-06": {
+    "answer_size": 4,
+    "score": {
+     "graph": {
+      "precision": 0.25,
+      "recall": 0.3333,
+      "f1": 0.2857
+     }
+    }
+   },
+   "relation-07": {
+    "answer_size": 1,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 0.6,
+      "f1": 0.75
+     }
+    }
+   },
+   "relation-08": {
+    "answer_size": 1,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 0.3333,
+      "f1": 0.5
+     }
+    }
+   },
+   "relation-09": {
+    "answer_size": 0,
+    "score": {
+     "graph": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     }
+    }
+   },
+   "relation-10": {
+    "answer_size": 1,
+    "score": {
+     "graph": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     }
+    }
+   },
+   "relation-11": {
+    "answer_size": 2,
+    "score": {
+     "graph": {
+      "precision": 0.5,
+      "recall": 0.3333,
+      "f1": 0.4
+     }
+    }
+   },
+   "relation-12": {
+    "answer_size": 1,
+    "score": {
+     "graph": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     }
+    }
+   },
+   "relation-13": {
+    "answer_size": 3,
+    "score": {
+     "graph": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     }
+    }
+   },
+   "relation-14": {
+    "answer_size": 1,
+    "score": {
+     "graph": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     }
+    }
+   },
+   "path-00": {
+    "answer_size": 6,
+    "score": {
+     "graph": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     }
+    }
+   },
+   "path-01": {
+    "answer_size": 0,
+    "score": {
+     "graph": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     }
+    }
+   },
+   "path-02": {
+    "answer_size": 1,
+    "score": {
+     "graph": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     }
+    }
+   },
+   "path-03": {
+    "answer_size": 4,
+    "score": {
+     "graph": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     }
+    }
+   },
+   "path-04": {
+    "answer_size": 5,
+    "score": {
+     "graph": {
+      "precision": 0.2,
+      "recall": 1.0,
+      "f1": 0.3333
+     }
+    }
+   },
+   "path-05": {
+    "answer_size": 1,
+    "score": {
+     "graph": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     }
+    }
+   },
+   "path-06": {
+    "answer_size": 2,
+    "score": {
+     "graph": {
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1": 0.6667
+     }
+    }
+   },
+   "path-07": {
+    "answer_size": 0,
+    "score": {
+     "graph": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     }
+    }
+   },
+   "path-08": {
+    "answer_size": 5,
+    "score": {
+     "graph": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     }
+    }
+   },
+   "path-09": {
+    "answer_size": 5,
+    "score": {
+     "graph": {
+      "precision": 0.2,
+      "recall": 1.0,
+      "f1": 0.3333
+     }
+    }
+   },
+   "path-10": {
+    "answer_size": 0,
+    "score": {
+     "graph": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     }
+    }
+   },
+   "path-11": {
+    "answer_size": 0,
+    "score": {
+     "graph": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     }
+    }
+   },
+   "path-12": {
+    "answer_size": 5,
+    "score": {
+     "graph": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     }
+    }
+   },
+   "path-13": {
+    "answer_size": 0,
+    "score": {
+     "graph": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     }
+    }
+   },
+   "path-14": {
+    "answer_size": 0,
+    "score": {
+     "graph": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     }
+    }
+   }
+  },
+  "grep-map": {
+   "count-00": {
+    "answer_size": 23,
+    "score": {
+     "graph": {
+      "within_20pct": 0.0,
+      "relative_error": 2.8333
+     },
+     "lexical": {
+      "within_20pct": 1.0,
+      "relative_error": 0.1154
+     }
+    }
+   },
+   "count-01": {
+    "answer_size": 25,
+    "score": {
+     "graph": {
+      "within_20pct": 0.0,
+      "relative_error": 3.1667
+     },
+     "lexical": {
+      "within_20pct": 1.0,
+      "relative_error": 0.0
+     }
+    }
+   },
+   "count-02": {
+    "answer_size": 31,
+    "score": {
+     "graph": {
+      "within_20pct": 0.0,
+      "relative_error": 4.1667
+     },
+     "lexical": {
+      "within_20pct": 0.0,
+      "relative_error": 0.5441
+     }
+    }
+   },
+   "count-03": {
+    "answer_size": 30,
+    "score": {
+     "graph": {
+      "within_20pct": 1.0,
+      "relative_error": 0.1111
+     },
+     "lexical": {
+      "within_20pct": 1.0,
+      "relative_error": 0.0323
+     }
+    }
+   },
+   "count-04": {
+    "answer_size": 17,
+    "score": {
+     "graph": {
+      "within_20pct": 0.0,
+      "relative_error": 0.8889
+     },
+     "lexical": {
+      "within_20pct": 1.0,
+      "relative_error": 0.15
+     }
+    }
+   },
+   "count-05": {
+    "answer_size": 18,
+    "score": {
+     "graph": {
+      "within_20pct": 0.0,
+      "relative_error": 1.5714
+     },
+     "lexical": {
+      "within_20pct": 1.0,
+      "relative_error": 0.0526
+     }
+    }
+   },
+   "count-06": {
+    "answer_size": 45,
+    "score": {
+     "graph": {
+      "within_20pct": 0.0,
+      "relative_error": 0.5517
+     },
+     "lexical": {
+      "within_20pct": 1.0,
+      "relative_error": 0.0426
+     }
+    }
+   },
+   "count-07": {
+    "answer_size": 9,
+    "score": {
+     "graph": {
+      "within_20pct": 1.0,
+      "relative_error": 0.125
+     },
+     "lexical": {
+      "within_20pct": 1.0,
+      "relative_error": 0.0
+     }
+    }
+   },
+   "count-08": {
+    "answer_size": 11,
+    "score": {
+     "graph": {
+      "within_20pct": 0.0,
+      "relative_error": 0.8333
+     },
+     "lexical": {
+      "within_20pct": 1.0,
+      "relative_error": 0.0
+     }
+    }
+   },
+   "count-09": {
+    "answer_size": 44,
+    "score": {
+     "graph": {
+      "within_20pct": 0.0,
+      "relative_error": 0.76
+     },
+     "lexical": {
+      "within_20pct": 0.0,
+      "relative_error": 0.5
+     }
+    }
+   },
+   "count-10": {
+    "answer_size": 13,
+    "score": {
+     "graph": {
+      "within_20pct": 0.0,
+      "relative_error": 0.625
+     },
+     "lexical": {
+      "within_20pct": 1.0,
+      "relative_error": 0.1333
+     }
+    }
+   },
+   "count-11": {
+    "answer_size": 17,
+    "score": {
+     "graph": {
+      "within_20pct": 0.0,
+      "relative_error": 0.2143
+     },
+     "lexical": {
+      "within_20pct": 1.0,
+      "relative_error": 0.1053
+     }
+    }
+   },
+   "count-12": {
+    "answer_size": 28,
+    "score": {
+     "graph": {
+      "within_20pct": 0.0,
+      "relative_error": 3.0
+     },
+     "lexical": {
+      "within_20pct": 1.0,
+      "relative_error": 0.0968
+     }
+    }
+   },
+   "count-13": {
+    "answer_size": 47,
+    "score": {
+     "graph": {
+      "within_20pct": 0.0,
+      "relative_error": 2.3571
+     },
+     "lexical": {
+      "within_20pct": 0.0,
+      "relative_error": 0.2769
+     }
+    }
+   },
+   "count-14": {
+    "answer_size": 8,
+    "score": {
+     "graph": {
+      "within_20pct": 1.0,
+      "relative_error": 0.1111
+     },
+     "lexical": {
+      "within_20pct": 1.0,
+      "relative_error": 0.1111
+     }
+    }
+   },
+   "co_mention-00": {
+    "answer_size": 5,
+    "score": {
+     "graph": {
+      "precision": 0.6,
+      "recall": 1.0,
+      "f1": 0.75
+     },
+     "lexical": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     }
+    }
+   },
+   "co_mention-01": {
+    "answer_size": 3,
+    "score": {
+     "graph": {
+      "precision": 0.6667,
+      "recall": 1.0,
+      "f1": 0.8
+     },
+     "lexical": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     }
+    }
+   },
+   "co_mention-02": {
+    "answer_size": 2,
+    "score": {
+     "graph": {
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1": 0.5
+     },
+     "lexical": {
+      "precision": 1.0,
+      "recall": 0.6667,
+      "f1": 0.8
+     }
+    }
+   },
+   "co_mention-03": {
+    "answer_size": 3,
+    "score": {
+     "graph": {
+      "precision": 0.6667,
+      "recall": 1.0,
+      "f1": 0.8
+     },
+     "lexical": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     }
+    }
+   },
+   "co_mention-04": {
+    "answer_size": 2,
+    "score": {
+     "graph": {
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1": 0.5
+     },
+     "lexical": {
+      "precision": 1.0,
+      "recall": 0.6667,
+      "f1": 0.8
+     }
+    }
+   },
+   "co_mention-05": {
+    "answer_size": 6,
+    "score": {
+     "graph": {
+      "precision": 0.3333,
+      "recall": 1.0,
+      "f1": 0.5
+     },
+     "lexical": {
+      "precision": 1.0,
+      "recall": 0.8571,
+      "f1": 0.9231
+     }
+    }
+   },
+   "co_mention-06": {
+    "answer_size": 2,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     },
+     "lexical": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     }
+    }
+   },
+   "co_mention-07": {
+    "answer_size": 8,
+    "score": {
+     "graph": {
+      "precision": 0.375,
+      "recall": 0.75,
+      "f1": 0.5
+     },
+     "lexical": {
+      "precision": 1.0,
+      "recall": 0.8889,
+      "f1": 0.9412
+     }
+    }
+   },
+   "co_mention-08": {
+    "answer_size": 2,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     },
+     "lexical": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     }
+    }
+   },
+   "co_mention-09": {
+    "answer_size": 4,
+    "score": {
+     "graph": {
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1": 0.6667
+     },
+     "lexical": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     }
+    }
+   },
+   "co_mention-10": {
+    "answer_size": 3,
+    "score": {
+     "graph": {
+      "precision": 0.6667,
+      "recall": 1.0,
+      "f1": 0.8
+     },
+     "lexical": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     }
+    }
+   },
+   "co_mention-11": {
+    "answer_size": 4,
+    "score": {
+     "graph": {
+      "precision": 0.75,
+      "recall": 0.75,
+      "f1": 0.75
+     },
+     "lexical": {
+      "precision": 1.0,
+      "recall": 0.6667,
+      "f1": 0.8
+     }
+    }
+   },
+   "co_mention-12": {
+    "answer_size": 1,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6667
+     },
+     "lexical": {
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6667
+     }
+    }
+   },
+   "co_mention-13": {
+    "answer_size": 2,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     },
+     "lexical": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     }
+    }
+   },
+   "co_mention-14": {
+    "answer_size": 3,
+    "score": {
+     "graph": {
+      "precision": 0.6667,
+      "recall": 1.0,
+      "f1": 0.8
+     },
+     "lexical": {
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571
+     }
+    }
+   },
+   "relation-00": {
+    "answer_size": 5,
+    "score": {
+     "graph": {
+      "precision": 0.2,
+      "recall": 0.3333,
+      "f1": 0.25
+     }
+    }
+   },
+   "relation-01": {
+    "answer_size": 11,
+    "score": {
+     "graph": {
+      "precision": 0.3636,
+      "recall": 0.5714,
+      "f1": 0.4444
+     }
+    }
+   },
+   "relation-02": {
+    "answer_size": 7,
+    "score": {
+     "graph": {
+      "precision": 0.1429,
+      "recall": 0.0714,
+      "f1": 0.0952
+     }
+    }
+   },
+   "relation-03": {
+    "answer_size": 21,
+    "score": {
+     "graph": {
+      "precision": 0.2857,
+      "recall": 0.3333,
+      "f1": 0.3077
+     }
+    }
+   },
+   "relation-04": {
+    "answer_size": 7,
+    "score": {
+     "graph": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     }
+    }
+   },
+   "relation-05": {
+    "answer_size": 13,
+    "score": {
+     "graph": {
+      "precision": 0.0769,
+      "recall": 0.3333,
+      "f1": 0.125
+     }
+    }
+   },
+   "relation-06": {
+    "answer_size": 1,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 0.3333,
+      "f1": 0.5
+     }
+    }
+   },
+   "relation-07": {
+    "answer_size": 5,
+    "score": {
+     "graph": {
+      "precision": 0.2,
+      "recall": 0.4,
+      "f1": 0.2667
+     }
+    }
+   },
+   "relation-08": {
+    "answer_size": 11,
+    "score": {
+     "graph": {
+      "precision": 0.0909,
+      "recall": 0.3333,
+      "f1": 0.1429
+     }
+    }
+   },
+   "relation-09": {
+    "answer_size": 7,
+    "score": {
+     "graph": {
+      "precision": 0.1429,
+      "recall": 0.25,
+      "f1": 0.1818
+     }
+    }
+   },
+   "relation-10": {
+    "answer_size": 66,
+    "score": {
+     "graph": {
+      "precision": 0.0606,
+      "recall": 0.6667,
+      "f1": 0.1111
+     }
+    }
+   },
+   "relation-11": {
+    "answer_size": 1,
+    "score": {
+     "graph": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     }
+    }
+   },
+   "relation-12": {
+    "answer_size": 7,
+    "score": {
+     "graph": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     }
+    }
+   },
+   "relation-13": {
+    "answer_size": 18,
+    "score": {
+     "graph": {
+      "precision": 0.1667,
+      "recall": 0.6667,
+      "f1": 0.2667
+     }
+    }
+   },
+   "relation-14": {
+    "answer_size": 15,
+    "score": {
+     "graph": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     }
+    }
+   },
+   "path-00": {
+    "answer_size": 0,
+    "score": {
+     "graph": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     }
+    }
+   },
+   "path-01": {
+    "answer_size": 0,
+    "score": {
+     "graph": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     }
+    }
+   },
+   "path-02": {
+    "answer_size": 0,
+    "score": {
+     "graph": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     }
+    }
+   },
+   "path-03": {
+    "answer_size": 5,
+    "score": {
+     "graph": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     }
+    }
+   },
+   "path-04": {
+    "answer_size": 12,
+    "score": {
+     "graph": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     }
+    }
+   },
+   "path-05": {
+    "answer_size": 0,
+    "score": {
+     "graph": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     }
+    }
+   },
+   "path-06": {
+    "answer_size": 0,
+    "score": {
+     "graph": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     }
+    }
+   },
+   "path-07": {
+    "answer_size": 62,
+    "score": {
+     "graph": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     }
+    }
+   },
+   "path-08": {
+    "answer_size": 1,
+    "score": {
+     "graph": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     }
+    }
+   },
+   "path-09": {
+    "answer_size": 37,
+    "score": {
+     "graph": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     }
+    }
+   },
+   "path-10": {
+    "answer_size": 0,
+    "score": {
+     "graph": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     }
+    }
+   },
+   "path-11": {
+    "answer_size": 2,
+    "score": {
+     "graph": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     }
+    }
+   },
+   "path-12": {
+    "answer_size": 4,
+    "score": {
+     "graph": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     }
+    }
+   },
+   "path-13": {
+    "answer_size": 3,
+    "score": {
+     "graph": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     }
+    }
+   },
+   "path-14": {
+    "answer_size": 3,
+    "score": {
+     "graph": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     }
+    }
+   }
+  },
+  "graph-template": {
+   "count-00": {
+    "answer_size": 6,
+    "score": {
+     "graph": {
+      "within_20pct": 1.0,
+      "relative_error": 0.0
+     },
+     "lexical": {
+      "within_20pct": 0.0,
+      "relative_error": 0.7692
+     }
+    }
+   },
+   "count-01": {
+    "answer_size": 6,
+    "score": {
+     "graph": {
+      "within_20pct": 1.0,
+      "relative_error": 0.0
+     },
+     "lexical": {
+      "within_20pct": 0.0,
+      "relative_error": 0.76
+     }
+    }
+   },
+   "count-02": {
+    "answer_size": 6,
+    "score": {
+     "graph": {
+      "within_20pct": 1.0,
+      "relative_error": 0.0
+     },
+     "lexical": {
+      "within_20pct": 0.0,
+      "relative_error": 0.9118
+     }
+    }
+   },
+   "count-03": {
+    "answer_size": 27,
+    "score": {
+     "graph": {
+      "within_20pct": 1.0,
+      "relative_error": 0.0
+     },
+     "lexical": {
+      "within_20pct": 1.0,
+      "relative_error": 0.129
+     }
+    }
+   },
+   "count-04": {
+    "answer_size": 9,
+    "score": {
+     "graph": {
+      "within_20pct": 1.0,
+      "relative_error": 0.0
+     },
+     "lexical": {
+      "within_20pct": 0.0,
+      "relative_error": 0.55
+     }
+    }
+   },
+   "count-05": {
+    "answer_size": 7,
+    "score": {
+     "graph": {
+      "within_20pct": 1.0,
+      "relative_error": 0.0
+     },
+     "lexical": {
+      "within_20pct": 0.0,
+      "relative_error": 0.6316
+     }
+    }
+   },
+   "count-06": {
+    "answer_size": 29,
+    "score": {
+     "graph": {
+      "within_20pct": 1.0,
+      "relative_error": 0.0
+     },
+     "lexical": {
+      "within_20pct": 0.0,
+      "relative_error": 0.383
+     }
+    }
+   },
+   "count-07": {
+    "answer_size": 8,
+    "score": {
+     "graph": {
+      "within_20pct": 1.0,
+      "relative_error": 0.0
+     },
+     "lexical": {
+      "within_20pct": 1.0,
+      "relative_error": 0.1111
+     }
+    }
+   },
+   "count-08": {
+    "answer_size": 6,
+    "score": {
+     "graph": {
+      "within_20pct": 1.0,
+      "relative_error": 0.0
+     },
+     "lexical": {
+      "within_20pct": 0.0,
+      "relative_error": 0.4545
+     }
+    }
+   },
+   "count-09": {
+    "answer_size": 25,
+    "score": {
+     "graph": {
+      "within_20pct": 1.0,
+      "relative_error": 0.0
+     },
+     "lexical": {
+      "within_20pct": 0.0,
+      "relative_error": 0.7159
+     }
+    }
+   },
+   "count-10": {
+    "answer_size": 8,
+    "score": {
+     "graph": {
+      "within_20pct": 1.0,
+      "relative_error": 0.0
+     },
+     "lexical": {
+      "within_20pct": 0.0,
+      "relative_error": 0.4667
+     }
+    }
+   },
+   "count-11": {
+    "answer_size": 14,
+    "score": {
+     "graph": {
+      "within_20pct": 1.0,
+      "relative_error": 0.0
+     },
+     "lexical": {
+      "within_20pct": 0.0,
+      "relative_error": 0.2632
+     }
+    }
+   },
+   "count-12": {
+    "answer_size": 7,
+    "score": {
+     "graph": {
+      "within_20pct": 1.0,
+      "relative_error": 0.0
+     },
+     "lexical": {
+      "within_20pct": 0.0,
+      "relative_error": 0.7742
+     }
+    }
+   },
+   "count-13": {
+    "answer_size": 14,
+    "score": {
+     "graph": {
+      "within_20pct": 1.0,
+      "relative_error": 0.0
+     },
+     "lexical": {
+      "within_20pct": 0.0,
+      "relative_error": 0.7846
+     }
+    }
+   },
+   "count-14": {
+    "answer_size": 9,
+    "score": {
+     "graph": {
+      "within_20pct": 1.0,
+      "relative_error": 0.0
+     },
+     "lexical": {
+      "within_20pct": 1.0,
+      "relative_error": 0.0
+     }
+    }
+   },
+   "co_mention-00": {
+    "answer_size": 3,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     },
+     "lexical": {
+      "precision": 1.0,
+      "recall": 0.6,
+      "f1": 0.75
+     }
+    }
+   },
+   "co_mention-01": {
+    "answer_size": 2,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     },
+     "lexical": {
+      "precision": 1.0,
+      "recall": 0.6667,
+      "f1": 0.8
+     }
+    }
+   },
+   "co_mention-02": {
+    "answer_size": 2,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     },
+     "lexical": {
+      "precision": 1.0,
+      "recall": 0.6667,
+      "f1": 0.8
+     }
+    }
+   },
+   "co_mention-03": {
+    "answer_size": 2,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     },
+     "lexical": {
+      "precision": 1.0,
+      "recall": 0.6667,
+      "f1": 0.8
+     }
+    }
+   },
+   "co_mention-04": {
+    "answer_size": 2,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     },
+     "lexical": {
+      "precision": 1.0,
+      "recall": 0.6667,
+      "f1": 0.8
+     }
+    }
+   },
+   "co_mention-05": {
+    "answer_size": 2,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     },
+     "lexical": {
+      "precision": 1.0,
+      "recall": 0.2857,
+      "f1": 0.4444
+     }
+    }
+   },
+   "co_mention-06": {
+    "answer_size": 2,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     },
+     "lexical": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     }
+    }
+   },
+   "co_mention-07": {
+    "answer_size": 4,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     },
+     "lexical": {
+      "precision": 1.0,
+      "recall": 0.4444,
+      "f1": 0.6154
+     }
+    }
+   },
+   "co_mention-08": {
+    "answer_size": 2,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     },
+     "lexical": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     }
+    }
+   },
+   "co_mention-09": {
+    "answer_size": 2,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     },
+     "lexical": {
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6667
+     }
+    }
+   },
+   "co_mention-10": {
+    "answer_size": 2,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     },
+     "lexical": {
+      "precision": 1.0,
+      "recall": 0.6667,
+      "f1": 0.8
+     }
+    }
+   },
+   "co_mention-11": {
+    "answer_size": 4,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     },
+     "lexical": {
+      "precision": 1.0,
+      "recall": 0.6667,
+      "f1": 0.8
+     }
+    }
+   },
+   "co_mention-12": {
+    "answer_size": 2,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     },
+     "lexical": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     }
+    }
+   },
+   "co_mention-13": {
+    "answer_size": 2,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     },
+     "lexical": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     }
+    }
+   },
+   "co_mention-14": {
+    "answer_size": 2,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     },
+     "lexical": {
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6667
+     }
+    }
+   },
+   "relation-00": {
+    "answer_size": 3,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     }
+    }
+   },
+   "relation-01": {
+    "answer_size": 7,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     }
+    }
+   },
+   "relation-02": {
+    "answer_size": 14,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     }
+    }
+   },
+   "relation-03": {
+    "answer_size": 6,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     }
+    }
+   },
+   "relation-04": {
+    "answer_size": 3,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     }
+    }
+   },
+   "relation-05": {
+    "answer_size": 3,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     }
+    }
+   },
+   "relation-06": {
+    "answer_size": 3,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     }
+    }
+   },
+   "relation-07": {
+    "answer_size": 5,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     }
+    }
+   },
+   "relation-08": {
+    "answer_size": 3,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     }
+    }
+   },
+   "relation-09": {
+    "answer_size": 4,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     }
+    }
+   },
+   "relation-10": {
+    "answer_size": 6,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     }
+    }
+   },
+   "relation-11": {
+    "answer_size": 3,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     }
+    }
+   },
+   "relation-12": {
+    "answer_size": 4,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     }
+    }
+   },
+   "relation-13": {
+    "answer_size": 3,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     }
+    }
+   },
+   "relation-14": {
+    "answer_size": 5,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     }
+    }
+   },
+   "path-00": {
+    "answer_size": 1,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     }
+    }
+   },
+   "path-01": {
+    "answer_size": 1,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     }
+    }
+   },
+   "path-02": {
+    "answer_size": 1,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     }
+    }
+   },
+   "path-03": {
+    "answer_size": 1,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     }
+    }
+   },
+   "path-04": {
+    "answer_size": 1,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     }
+    }
+   },
+   "path-05": {
+    "answer_size": 1,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     }
+    }
+   },
+   "path-06": {
+    "answer_size": 1,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     }
+    }
+   },
+   "path-07": {
+    "answer_size": 1,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     }
+    }
+   },
+   "path-08": {
+    "answer_size": 1,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     }
+    }
+   },
+   "path-09": {
+    "answer_size": 1,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     }
+    }
+   },
+   "path-10": {
+    "answer_size": 1,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     }
+    }
+   },
+   "path-11": {
+    "answer_size": 2,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     }
+    }
+   },
+   "path-12": {
+    "answer_size": 1,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     }
+    }
+   },
+   "path-13": {
+    "answer_size": 1,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     }
+    }
+   },
+   "path-14": {
+    "answer_size": 1,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     }
+    }
+   }
+  },
+  "graph-like": {
+   "count-00": {
+    "answer_size": 9,
+    "score": {
+     "graph": {
+      "within_20pct": 0.0,
+      "relative_error": 0.5
+     },
+     "lexical": {
+      "within_20pct": 0.0,
+      "relative_error": 0.6538
+     }
+    }
+   },
+   "count-01": {
+    "answer_size": 6,
+    "score": {
+     "graph": {
+      "within_20pct": 1.0,
+      "relative_error": 0.0
+     },
+     "lexical": {
+      "within_20pct": 0.0,
+      "relative_error": 0.76
+     }
+    }
+   },
+   "count-02": {
+    "answer_size": 32,
+    "score": {
+     "graph": {
+      "within_20pct": 0.0,
+      "relative_error": 4.3333
+     },
+     "lexical": {
+      "within_20pct": 0.0,
+      "relative_error": 0.5294
+     }
+    }
+   },
+   "count-03": {
+    "answer_size": 28,
+    "score": {
+     "graph": {
+      "within_20pct": 1.0,
+      "relative_error": 0.037
+     },
+     "lexical": {
+      "within_20pct": 1.0,
+      "relative_error": 0.0968
+     }
+    }
+   },
+   "count-04": {
+    "answer_size": 17,
+    "score": {
+     "graph": {
+      "within_20pct": 0.0,
+      "relative_error": 0.8889
+     },
+     "lexical": {
+      "within_20pct": 1.0,
+      "relative_error": 0.15
+     }
+    }
+   },
+   "count-05": {
+    "answer_size": 16,
+    "score": {
+     "graph": {
+      "within_20pct": 0.0,
+      "relative_error": 1.2857
+     },
+     "lexical": {
+      "within_20pct": 1.0,
+      "relative_error": 0.1579
+     }
+    }
+   },
+   "count-06": {
+    "answer_size": 38,
+    "score": {
+     "graph": {
+      "within_20pct": 0.0,
+      "relative_error": 0.3103
+     },
+     "lexical": {
+      "within_20pct": 1.0,
+      "relative_error": 0.1915
+     }
+    }
+   },
+   "count-07": {
+    "answer_size": 9,
+    "score": {
+     "graph": {
+      "within_20pct": 1.0,
+      "relative_error": 0.125
+     },
+     "lexical": {
+      "within_20pct": 1.0,
+      "relative_error": 0.0
+     }
+    }
+   },
+   "count-08": {
+    "answer_size": 10,
+    "score": {
+     "graph": {
+      "within_20pct": 0.0,
+      "relative_error": 0.6667
+     },
+     "lexical": {
+      "within_20pct": 1.0,
+      "relative_error": 0.0909
+     }
+    }
+   },
+   "count-09": {
+    "answer_size": 67,
+    "score": {
+     "graph": {
+      "within_20pct": 0.0,
+      "relative_error": 1.68
+     },
+     "lexical": {
+      "within_20pct": 0.0,
+      "relative_error": 0.2386
+     }
+    }
+   },
+   "count-10": {
+    "answer_size": 10,
+    "score": {
+     "graph": {
+      "within_20pct": 0.0,
+      "relative_error": 0.25
+     },
+     "lexical": {
+      "within_20pct": 0.0,
+      "relative_error": 0.3333
+     }
+    }
+   },
+   "count-11": {
+    "answer_size": 16,
+    "score": {
+     "graph": {
+      "within_20pct": 1.0,
+      "relative_error": 0.1429
+     },
+     "lexical": {
+      "within_20pct": 1.0,
+      "relative_error": 0.1579
+     }
+    }
+   },
+   "count-12": {
+    "answer_size": 14,
+    "score": {
+     "graph": {
+      "within_20pct": 0.0,
+      "relative_error": 1.0
+     },
+     "lexical": {
+      "within_20pct": 0.0,
+      "relative_error": 0.5484
+     }
+    }
+   },
+   "count-13": {
+    "answer_size": 60,
+    "score": {
+     "graph": {
+      "within_20pct": 0.0,
+      "relative_error": 3.2857
+     },
+     "lexical": {
+      "within_20pct": 1.0,
+      "relative_error": 0.0769
+     }
+    }
+   },
+   "count-14": {
+    "answer_size": 10,
+    "score": {
+     "graph": {
+      "within_20pct": 1.0,
+      "relative_error": 0.1111
+     },
+     "lexical": {
+      "within_20pct": 1.0,
+      "relative_error": 0.1111
+     }
+    }
+   },
+   "co_mention-00": {
+    "answer_size": 4,
+    "score": {
+     "graph": {
+      "precision": 0.75,
+      "recall": 1.0,
+      "f1": 0.8571
+     },
+     "lexical": {
+      "precision": 1.0,
+      "recall": 0.8,
+      "f1": 0.8889
+     }
+    }
+   },
+   "co_mention-01": {
+    "answer_size": 3,
+    "score": {
+     "graph": {
+      "precision": 0.6667,
+      "recall": 1.0,
+      "f1": 0.8
+     },
+     "lexical": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     }
+    }
+   },
+   "co_mention-02": {
+    "answer_size": 2,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     },
+     "lexical": {
+      "precision": 1.0,
+      "recall": 0.6667,
+      "f1": 0.8
+     }
+    }
+   },
+   "co_mention-03": {
+    "answer_size": 4,
+    "score": {
+     "graph": {
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1": 0.6667
+     },
+     "lexical": {
+      "precision": 0.75,
+      "recall": 1.0,
+      "f1": 0.8571
+     }
+    }
+   },
+   "co_mention-04": {
+    "answer_size": 2,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     },
+     "lexical": {
+      "precision": 1.0,
+      "recall": 0.6667,
+      "f1": 0.8
+     }
+    }
+   },
+   "co_mention-05": {
+    "answer_size": 2,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     },
+     "lexical": {
+      "precision": 1.0,
+      "recall": 0.2857,
+      "f1": 0.4444
+     }
+    }
+   },
+   "co_mention-06": {
+    "answer_size": 2,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     },
+     "lexical": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     }
+    }
+   },
+   "co_mention-07": {
+    "answer_size": 6,
+    "score": {
+     "graph": {
+      "precision": 0.6667,
+      "recall": 1.0,
+      "f1": 0.8
+     },
+     "lexical": {
+      "precision": 0.8333,
+      "recall": 0.5556,
+      "f1": 0.6667
+     }
+    }
+   },
+   "co_mention-08": {
+    "answer_size": 2,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     },
+     "lexical": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     }
+    }
+   },
+   "co_mention-09": {
+    "answer_size": 2,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     },
+     "lexical": {
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6667
+     }
+    }
+   },
+   "co_mention-10": {
+    "answer_size": 3,
+    "score": {
+     "graph": {
+      "precision": 0.6667,
+      "recall": 1.0,
+      "f1": 0.8
+     },
+     "lexical": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     }
+    }
+   },
+   "co_mention-11": {
+    "answer_size": 5,
+    "score": {
+     "graph": {
+      "precision": 0.8,
+      "recall": 1.0,
+      "f1": 0.8889
+     },
+     "lexical": {
+      "precision": 1.0,
+      "recall": 0.8333,
+      "f1": 0.9091
+     }
+    }
+   },
+   "co_mention-12": {
+    "answer_size": 2,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     },
+     "lexical": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     }
+    }
+   },
+   "co_mention-13": {
+    "answer_size": 2,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     },
+     "lexical": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     }
+    }
+   },
+   "co_mention-14": {
+    "answer_size": 3,
+    "score": {
+     "graph": {
+      "precision": 0.6667,
+      "recall": 1.0,
+      "f1": 0.8
+     },
+     "lexical": {
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571
+     }
+    }
+   },
+   "relation-00": {
+    "answer_size": 3,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     }
+    }
+   },
+   "relation-01": {
+    "answer_size": 7,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     }
+    }
+   },
+   "relation-02": {
+    "answer_size": 14,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     }
+    }
+   },
+   "relation-03": {
+    "answer_size": 6,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     }
+    }
+   },
+   "relation-04": {
+    "answer_size": 3,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     }
+    }
+   },
+   "relation-05": {
+    "answer_size": 3,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     }
+    }
+   },
+   "relation-06": {
+    "answer_size": 3,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     }
+    }
+   },
+   "relation-07": {
+    "answer_size": 5,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     }
+    }
+   },
+   "relation-08": {
+    "answer_size": 3,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     }
+    }
+   },
+   "relation-09": {
+    "answer_size": 4,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     }
+    }
+   },
+   "relation-10": {
+    "answer_size": 6,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     }
+    }
+   },
+   "relation-11": {
+    "answer_size": 3,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     }
+    }
+   },
+   "relation-12": {
+    "answer_size": 4,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     }
+    }
+   },
+   "relation-13": {
+    "answer_size": 3,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     }
+    }
+   },
+   "relation-14": {
+    "answer_size": 5,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     }
+    }
+   },
+   "path-00": {
+    "answer_size": 1,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     }
+    }
+   },
+   "path-01": {
+    "answer_size": 1,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     }
+    }
+   },
+   "path-02": {
+    "answer_size": 1,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     }
+    }
+   },
+   "path-03": {
+    "answer_size": 1,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     }
+    }
+   },
+   "path-04": {
+    "answer_size": 1,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     }
+    }
+   },
+   "path-05": {
+    "answer_size": 1,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     }
+    }
+   },
+   "path-06": {
+    "answer_size": 1,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     }
+    }
+   },
+   "path-07": {
+    "answer_size": 1,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     }
+    }
+   },
+   "path-08": {
+    "answer_size": 1,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     }
+    }
+   },
+   "path-09": {
+    "answer_size": 1,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     }
+    }
+   },
+   "path-10": {
+    "answer_size": 1,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     }
+    }
+   },
+   "path-11": {
+    "answer_size": 2,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     }
+    }
+   },
+   "path-12": {
+    "answer_size": 1,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     }
+    }
+   },
+   "path-13": {
+    "answer_size": 1,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     }
+    }
+   },
+   "path-14": {
+    "answer_size": 1,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     }
+    }
+   }
+  },
+  "text2sql": {
+   "count-00": {
+    "answer_size": 6,
+    "score": {
+     "graph": {
+      "within_20pct": 1.0,
+      "relative_error": 0.0
+     },
+     "lexical": {
+      "within_20pct": 0.0,
+      "relative_error": 0.7692
+     }
+    }
+   },
+   "count-01": {
+    "answer_size": 6,
+    "score": {
+     "graph": {
+      "within_20pct": 1.0,
+      "relative_error": 0.0
+     },
+     "lexical": {
+      "within_20pct": 0.0,
+      "relative_error": 0.76
+     }
+    }
+   },
+   "count-02": {
+    "answer_size": 6,
+    "score": {
+     "graph": {
+      "within_20pct": 1.0,
+      "relative_error": 0.0
+     },
+     "lexical": {
+      "within_20pct": 0.0,
+      "relative_error": 0.9118
+     }
+    }
+   },
+   "count-03": {
+    "answer_size": 27,
+    "score": {
+     "graph": {
+      "within_20pct": 1.0,
+      "relative_error": 0.0
+     },
+     "lexical": {
+      "within_20pct": 1.0,
+      "relative_error": 0.129
+     }
+    }
+   },
+   "count-04": {
+    "answer_size": 9,
+    "score": {
+     "graph": {
+      "within_20pct": 1.0,
+      "relative_error": 0.0
+     },
+     "lexical": {
+      "within_20pct": 0.0,
+      "relative_error": 0.55
+     }
+    }
+   },
+   "count-05": {
+    "answer_size": 7,
+    "score": {
+     "graph": {
+      "within_20pct": 1.0,
+      "relative_error": 0.0
+     },
+     "lexical": {
+      "within_20pct": 0.0,
+      "relative_error": 0.6316
+     }
+    }
+   },
+   "count-06": {
+    "answer_size": 29,
+    "score": {
+     "graph": {
+      "within_20pct": 1.0,
+      "relative_error": 0.0
+     },
+     "lexical": {
+      "within_20pct": 0.0,
+      "relative_error": 0.383
+     }
+    }
+   },
+   "count-07": {
+    "answer_size": 8,
+    "score": {
+     "graph": {
+      "within_20pct": 1.0,
+      "relative_error": 0.0
+     },
+     "lexical": {
+      "within_20pct": 1.0,
+      "relative_error": 0.1111
+     }
+    }
+   },
+   "count-08": {
+    "answer_size": 6,
+    "score": {
+     "graph": {
+      "within_20pct": 1.0,
+      "relative_error": 0.0
+     },
+     "lexical": {
+      "within_20pct": 0.0,
+      "relative_error": 0.4545
+     }
+    }
+   },
+   "count-09": {
+    "answer_size": 25,
+    "score": {
+     "graph": {
+      "within_20pct": 1.0,
+      "relative_error": 0.0
+     },
+     "lexical": {
+      "within_20pct": 0.0,
+      "relative_error": 0.7159
+     }
+    }
+   },
+   "count-10": {
+    "answer_size": 8,
+    "score": {
+     "graph": {
+      "within_20pct": 1.0,
+      "relative_error": 0.0
+     },
+     "lexical": {
+      "within_20pct": 0.0,
+      "relative_error": 0.4667
+     }
+    }
+   },
+   "count-11": {
+    "answer_size": 14,
+    "score": {
+     "graph": {
+      "within_20pct": 1.0,
+      "relative_error": 0.0
+     },
+     "lexical": {
+      "within_20pct": 0.0,
+      "relative_error": 0.2632
+     }
+    }
+   },
+   "count-12": {
+    "answer_size": 7,
+    "score": {
+     "graph": {
+      "within_20pct": 1.0,
+      "relative_error": 0.0
+     },
+     "lexical": {
+      "within_20pct": 0.0,
+      "relative_error": 0.7742
+     }
+    }
+   },
+   "count-13": {
+    "answer_size": 14,
+    "score": {
+     "graph": {
+      "within_20pct": 1.0,
+      "relative_error": 0.0
+     },
+     "lexical": {
+      "within_20pct": 0.0,
+      "relative_error": 0.7846
+     }
+    }
+   },
+   "count-14": {
+    "answer_size": 9,
+    "score": {
+     "graph": {
+      "within_20pct": 1.0,
+      "relative_error": 0.0
+     },
+     "lexical": {
+      "within_20pct": 1.0,
+      "relative_error": 0.0
+     }
+    }
+   },
+   "co_mention-00": {
+    "answer_size": 3,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     },
+     "lexical": {
+      "precision": 1.0,
+      "recall": 0.6,
+      "f1": 0.75
+     }
+    }
+   },
+   "co_mention-01": {
+    "answer_size": 2,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     },
+     "lexical": {
+      "precision": 1.0,
+      "recall": 0.6667,
+      "f1": 0.8
+     }
+    }
+   },
+   "co_mention-02": {
+    "answer_size": 2,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     },
+     "lexical": {
+      "precision": 1.0,
+      "recall": 0.6667,
+      "f1": 0.8
+     }
+    }
+   },
+   "co_mention-03": {
+    "answer_size": 2,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     },
+     "lexical": {
+      "precision": 1.0,
+      "recall": 0.6667,
+      "f1": 0.8
+     }
+    }
+   },
+   "co_mention-04": {
+    "answer_size": 2,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     },
+     "lexical": {
+      "precision": 1.0,
+      "recall": 0.6667,
+      "f1": 0.8
+     }
+    }
+   },
+   "co_mention-05": {
+    "answer_size": 2,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     },
+     "lexical": {
+      "precision": 1.0,
+      "recall": 0.2857,
+      "f1": 0.4444
+     }
+    }
+   },
+   "co_mention-06": {
+    "answer_size": 2,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     },
+     "lexical": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     }
+    }
+   },
+   "co_mention-07": {
+    "answer_size": 4,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     },
+     "lexical": {
+      "precision": 1.0,
+      "recall": 0.4444,
+      "f1": 0.6154
+     }
+    }
+   },
+   "co_mention-08": {
+    "answer_size": 2,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     },
+     "lexical": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     }
+    }
+   },
+   "co_mention-09": {
+    "answer_size": 2,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     },
+     "lexical": {
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6667
+     }
+    }
+   },
+   "co_mention-10": {
+    "answer_size": 2,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     },
+     "lexical": {
+      "precision": 1.0,
+      "recall": 0.6667,
+      "f1": 0.8
+     }
+    }
+   },
+   "co_mention-11": {
+    "answer_size": 4,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     },
+     "lexical": {
+      "precision": 1.0,
+      "recall": 0.6667,
+      "f1": 0.8
+     }
+    }
+   },
+   "co_mention-12": {
+    "answer_size": 2,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     },
+     "lexical": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     }
+    }
+   },
+   "co_mention-13": {
+    "answer_size": 2,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     },
+     "lexical": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     }
+    }
+   },
+   "co_mention-14": {
+    "answer_size": 2,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     },
+     "lexical": {
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6667
+     }
+    }
+   },
+   "relation-00": {
+    "answer_size": 0,
+    "score": {
+     "graph": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     }
+    }
+   },
+   "relation-01": {
+    "answer_size": 7,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     }
+    }
+   },
+   "relation-02": {
+    "answer_size": 14,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     }
+    }
+   },
+   "relation-03": {
+    "answer_size": 6,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     }
+    }
+   },
+   "relation-04": {
+    "answer_size": 3,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     }
+    }
+   },
+   "relation-05": {
+    "answer_size": 0,
+    "score": {
+     "graph": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     }
+    }
+   },
+   "relation-06": {
+    "answer_size": 3,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     }
+    }
+   },
+   "relation-07": {
+    "answer_size": 5,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     }
+    }
+   },
+   "relation-08": {
+    "answer_size": 3,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     }
+    }
+   },
+   "relation-09": {
+    "answer_size": 0,
+    "score": {
+     "graph": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     }
+    }
+   },
+   "relation-10": {
+    "answer_size": 200,
+    "score": {
+     "graph": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     }
+    }
+   },
+   "relation-11": {
+    "answer_size": 3,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     }
+    }
+   },
+   "relation-12": {
+    "answer_size": 4,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     }
+    }
+   },
+   "relation-13": {
+    "answer_size": 3,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     }
+    }
+   },
+   "relation-14": {
+    "answer_size": 6,
+    "score": {
+     "graph": {
+      "precision": 0.8333,
+      "recall": 1.0,
+      "f1": 0.9091
+     }
+    }
+   },
+   "path-00": {
+    "answer_size": 0,
+    "score": {
+     "graph": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     }
+    }
+   },
+   "path-01": {
+    "answer_size": 0,
+    "score": {
+     "graph": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     }
+    }
+   },
+   "path-02": {
+    "answer_size": 0,
+    "score": {
+     "graph": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     }
+    }
+   },
+   "path-03": {
+    "answer_size": 0,
+    "score": {
+     "graph": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     }
+    }
+   },
+   "path-04": {
+    "answer_size": 0,
+    "score": {
+     "graph": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     }
+    }
+   },
+   "path-05": {
+    "answer_size": 1,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     }
+    }
+   },
+   "path-06": {
+    "answer_size": 0,
+    "score": {
+     "graph": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     }
+    }
+   },
+   "path-07": {
+    "answer_size": 0,
+    "score": {
+     "graph": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     }
+    }
+   },
+   "path-08": {
+    "answer_size": 0,
+    "score": {
+     "graph": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     }
+    }
+   },
+   "path-09": {
+    "answer_size": 0,
+    "score": {
+     "graph": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     }
+    }
+   },
+   "path-10": {
+    "answer_size": 0,
+    "score": {
+     "graph": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     }
+    }
+   },
+   "path-11": {
+    "answer_size": 0,
+    "score": {
+     "graph": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     }
+    }
+   },
+   "path-12": {
+    "answer_size": 0,
+    "score": {
+     "graph": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     }
+    }
+   },
+   "path-13": {
+    "answer_size": 0,
+    "score": {
+     "graph": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     }
+    }
+   },
+   "path-14": {
+    "answer_size": 0,
+    "score": {
+     "graph": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     }
+    }
+   }
+  },
+  "text2sql-repair": {
+   "count-00": {
+    "answer_size": 6,
+    "score": {
+     "graph": {
+      "within_20pct": 1.0,
+      "relative_error": 0.0
+     },
+     "lexical": {
+      "within_20pct": 0.0,
+      "relative_error": 0.7692
+     }
+    }
+   },
+   "count-01": {
+    "answer_size": 6,
+    "score": {
+     "graph": {
+      "within_20pct": 1.0,
+      "relative_error": 0.0
+     },
+     "lexical": {
+      "within_20pct": 0.0,
+      "relative_error": 0.76
+     }
+    }
+   },
+   "count-02": {
+    "answer_size": 6,
+    "score": {
+     "graph": {
+      "within_20pct": 1.0,
+      "relative_error": 0.0
+     },
+     "lexical": {
+      "within_20pct": 0.0,
+      "relative_error": 0.9118
+     }
+    }
+   },
+   "count-03": {
+    "answer_size": 27,
+    "score": {
+     "graph": {
+      "within_20pct": 1.0,
+      "relative_error": 0.0
+     },
+     "lexical": {
+      "within_20pct": 1.0,
+      "relative_error": 0.129
+     }
+    }
+   },
+   "count-04": {
+    "answer_size": 9,
+    "score": {
+     "graph": {
+      "within_20pct": 1.0,
+      "relative_error": 0.0
+     },
+     "lexical": {
+      "within_20pct": 0.0,
+      "relative_error": 0.55
+     }
+    }
+   },
+   "count-05": {
+    "answer_size": 7,
+    "score": {
+     "graph": {
+      "within_20pct": 1.0,
+      "relative_error": 0.0
+     },
+     "lexical": {
+      "within_20pct": 0.0,
+      "relative_error": 0.6316
+     }
+    }
+   },
+   "count-06": {
+    "answer_size": 29,
+    "score": {
+     "graph": {
+      "within_20pct": 1.0,
+      "relative_error": 0.0
+     },
+     "lexical": {
+      "within_20pct": 0.0,
+      "relative_error": 0.383
+     }
+    }
+   },
+   "count-07": {
+    "answer_size": 8,
+    "score": {
+     "graph": {
+      "within_20pct": 1.0,
+      "relative_error": 0.0
+     },
+     "lexical": {
+      "within_20pct": 1.0,
+      "relative_error": 0.1111
+     }
+    }
+   },
+   "count-08": {
+    "answer_size": 6,
+    "score": {
+     "graph": {
+      "within_20pct": 1.0,
+      "relative_error": 0.0
+     },
+     "lexical": {
+      "within_20pct": 0.0,
+      "relative_error": 0.4545
+     }
+    }
+   },
+   "count-09": {
+    "answer_size": 25,
+    "score": {
+     "graph": {
+      "within_20pct": 1.0,
+      "relative_error": 0.0
+     },
+     "lexical": {
+      "within_20pct": 0.0,
+      "relative_error": 0.7159
+     }
+    }
+   },
+   "count-10": {
+    "answer_size": 8,
+    "score": {
+     "graph": {
+      "within_20pct": 1.0,
+      "relative_error": 0.0
+     },
+     "lexical": {
+      "within_20pct": 0.0,
+      "relative_error": 0.4667
+     }
+    }
+   },
+   "count-11": {
+    "answer_size": 14,
+    "score": {
+     "graph": {
+      "within_20pct": 1.0,
+      "relative_error": 0.0
+     },
+     "lexical": {
+      "within_20pct": 0.0,
+      "relative_error": 0.2632
+     }
+    }
+   },
+   "count-12": {
+    "answer_size": 7,
+    "score": {
+     "graph": {
+      "within_20pct": 1.0,
+      "relative_error": 0.0
+     },
+     "lexical": {
+      "within_20pct": 0.0,
+      "relative_error": 0.7742
+     }
+    }
+   },
+   "count-13": {
+    "answer_size": 14,
+    "score": {
+     "graph": {
+      "within_20pct": 1.0,
+      "relative_error": 0.0
+     },
+     "lexical": {
+      "within_20pct": 0.0,
+      "relative_error": 0.7846
+     }
+    }
+   },
+   "count-14": {
+    "answer_size": 9,
+    "score": {
+     "graph": {
+      "within_20pct": 1.0,
+      "relative_error": 0.0
+     },
+     "lexical": {
+      "within_20pct": 1.0,
+      "relative_error": 0.0
+     }
+    }
+   },
+   "co_mention-00": {
+    "answer_size": 3,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     },
+     "lexical": {
+      "precision": 1.0,
+      "recall": 0.6,
+      "f1": 0.75
+     }
+    }
+   },
+   "co_mention-01": {
+    "answer_size": 2,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     },
+     "lexical": {
+      "precision": 1.0,
+      "recall": 0.6667,
+      "f1": 0.8
+     }
+    }
+   },
+   "co_mention-02": {
+    "answer_size": 2,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     },
+     "lexical": {
+      "precision": 1.0,
+      "recall": 0.6667,
+      "f1": 0.8
+     }
+    }
+   },
+   "co_mention-03": {
+    "answer_size": 2,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     },
+     "lexical": {
+      "precision": 1.0,
+      "recall": 0.6667,
+      "f1": 0.8
+     }
+    }
+   },
+   "co_mention-04": {
+    "answer_size": 2,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     },
+     "lexical": {
+      "precision": 1.0,
+      "recall": 0.6667,
+      "f1": 0.8
+     }
+    }
+   },
+   "co_mention-05": {
+    "answer_size": 2,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     },
+     "lexical": {
+      "precision": 1.0,
+      "recall": 0.2857,
+      "f1": 0.4444
+     }
+    }
+   },
+   "co_mention-06": {
+    "answer_size": 2,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     },
+     "lexical": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     }
+    }
+   },
+   "co_mention-07": {
+    "answer_size": 4,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     },
+     "lexical": {
+      "precision": 1.0,
+      "recall": 0.4444,
+      "f1": 0.6154
+     }
+    }
+   },
+   "co_mention-08": {
+    "answer_size": 2,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     },
+     "lexical": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     }
+    }
+   },
+   "co_mention-09": {
+    "answer_size": 2,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     },
+     "lexical": {
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6667
+     }
+    }
+   },
+   "co_mention-10": {
+    "answer_size": 2,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     },
+     "lexical": {
+      "precision": 1.0,
+      "recall": 0.6667,
+      "f1": 0.8
+     }
+    }
+   },
+   "co_mention-11": {
+    "answer_size": 4,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     },
+     "lexical": {
+      "precision": 1.0,
+      "recall": 0.6667,
+      "f1": 0.8
+     }
+    }
+   },
+   "co_mention-12": {
+    "answer_size": 2,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     },
+     "lexical": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     }
+    }
+   },
+   "co_mention-13": {
+    "answer_size": 2,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     },
+     "lexical": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     }
+    }
+   },
+   "co_mention-14": {
+    "answer_size": 2,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     },
+     "lexical": {
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6667
+     }
+    }
+   },
+   "relation-00": {
+    "answer_size": 4,
+    "score": {
+     "graph": {
+      "precision": 0.75,
+      "recall": 1.0,
+      "f1": 0.8571
+     }
+    }
+   },
+   "relation-01": {
+    "answer_size": 7,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     }
+    }
+   },
+   "relation-02": {
+    "answer_size": 14,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     }
+    }
+   },
+   "relation-03": {
+    "answer_size": 6,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     }
+    }
+   },
+   "relation-04": {
+    "answer_size": 3,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     }
+    }
+   },
+   "relation-05": {
+    "answer_size": 0,
+    "score": {
+     "graph": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     }
+    }
+   },
+   "relation-06": {
+    "answer_size": 3,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     }
+    }
+   },
+   "relation-07": {
+    "answer_size": 5,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     }
+    }
+   },
+   "relation-08": {
+    "answer_size": 3,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     }
+    }
+   },
+   "relation-09": {
+    "answer_size": 4,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     }
+    }
+   },
+   "relation-10": {
+    "answer_size": 200,
+    "score": {
+     "graph": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     }
+    }
+   },
+   "relation-11": {
+    "answer_size": 3,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     }
+    }
+   },
+   "relation-12": {
+    "answer_size": 4,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     }
+    }
+   },
+   "relation-13": {
+    "answer_size": 3,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     }
+    }
+   },
+   "relation-14": {
+    "answer_size": 6,
+    "score": {
+     "graph": {
+      "precision": 0.8333,
+      "recall": 1.0,
+      "f1": 0.9091
+     }
+    }
+   },
+   "path-00": {
+    "answer_size": 0,
+    "score": {
+     "graph": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     }
+    }
+   },
+   "path-01": {
+    "answer_size": 0,
+    "score": {
+     "graph": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     }
+    }
+   },
+   "path-02": {
+    "answer_size": 0,
+    "score": {
+     "graph": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     }
+    }
+   },
+   "path-03": {
+    "answer_size": 0,
+    "score": {
+     "graph": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     }
+    }
+   },
+   "path-04": {
+    "answer_size": 0,
+    "score": {
+     "graph": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     }
+    }
+   },
+   "path-05": {
+    "answer_size": 1,
+    "score": {
+     "graph": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+     }
+    }
+   },
+   "path-06": {
+    "answer_size": 0,
+    "score": {
+     "graph": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     }
+    }
+   },
+   "path-07": {
+    "answer_size": 0,
+    "score": {
+     "graph": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     }
+    }
+   },
+   "path-08": {
+    "answer_size": 0,
+    "score": {
+     "graph": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     }
+    }
+   },
+   "path-09": {
+    "answer_size": 0,
+    "score": {
+     "graph": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     }
+    }
+   },
+   "path-10": {
+    "answer_size": 0,
+    "score": {
+     "graph": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     }
+    }
+   },
+   "path-11": {
+    "answer_size": 0,
+    "score": {
+     "graph": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     }
+    }
+   },
+   "path-12": {
+    "answer_size": 3,
+    "score": {
+     "graph": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     }
+    }
+   },
+   "path-13": {
+    "answer_size": 0,
+    "score": {
+     "graph": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     }
+    }
+   },
+   "path-14": {
+    "answer_size": 0,
+    "score": {
+     "graph": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0
+     }
+    }
+   }
+  }
+ },
+ "text2sql_outcomes": {
+  "text2sql": {
+   "count-00": {
+    "error": false,
+    "empty": false,
+    "repaired": false
+   },
+   "count-01": {
+    "error": false,
+    "empty": false,
+    "repaired": false
+   },
+   "count-02": {
+    "error": false,
+    "empty": false,
+    "repaired": false
+   },
+   "count-03": {
+    "error": false,
+    "empty": false,
+    "repaired": false
+   },
+   "count-04": {
+    "error": false,
+    "empty": false,
+    "repaired": false
+   },
+   "count-05": {
+    "error": false,
+    "empty": false,
+    "repaired": false
+   },
+   "count-06": {
+    "error": false,
+    "empty": false,
+    "repaired": false
+   },
+   "count-07": {
+    "error": false,
+    "empty": false,
+    "repaired": false
+   },
+   "count-08": {
+    "error": false,
+    "empty": false,
+    "repaired": false
+   },
+   "count-09": {
+    "error": false,
+    "empty": false,
+    "repaired": false
+   },
+   "count-10": {
+    "error": false,
+    "empty": false,
+    "repaired": false
+   },
+   "count-11": {
+    "error": false,
+    "empty": false,
+    "repaired": false
+   },
+   "count-12": {
+    "error": false,
+    "empty": false,
+    "repaired": false
+   },
+   "count-13": {
+    "error": false,
+    "empty": false,
+    "repaired": false
+   },
+   "count-14": {
+    "error": false,
+    "empty": false,
+    "repaired": false
+   },
+   "co_mention-00": {
+    "error": false,
+    "empty": false,
+    "repaired": false
+   },
+   "co_mention-01": {
+    "error": false,
+    "empty": false,
+    "repaired": false
+   },
+   "co_mention-02": {
+    "error": false,
+    "empty": false,
+    "repaired": false
+   },
+   "co_mention-03": {
+    "error": false,
+    "empty": false,
+    "repaired": false
+   },
+   "co_mention-04": {
+    "error": false,
+    "empty": false,
+    "repaired": false
+   },
+   "co_mention-05": {
+    "error": false,
+    "empty": false,
+    "repaired": false
+   },
+   "co_mention-06": {
+    "error": false,
+    "empty": false,
+    "repaired": false
+   },
+   "co_mention-07": {
+    "error": false,
+    "empty": false,
+    "repaired": false
+   },
+   "co_mention-08": {
+    "error": false,
+    "empty": false,
+    "repaired": false
+   },
+   "co_mention-09": {
+    "error": false,
+    "empty": false,
+    "repaired": false
+   },
+   "co_mention-10": {
+    "error": false,
+    "empty": false,
+    "repaired": false
+   },
+   "co_mention-11": {
+    "error": false,
+    "empty": false,
+    "repaired": false
+   },
+   "co_mention-12": {
+    "error": false,
+    "empty": false,
+    "repaired": false
+   },
+   "co_mention-13": {
+    "error": false,
+    "empty": false,
+    "repaired": false
+   },
+   "co_mention-14": {
+    "error": false,
+    "empty": false,
+    "repaired": false
+   },
+   "relation-00": {
+    "error": false,
+    "empty": true,
+    "repaired": false
+   },
+   "relation-01": {
+    "error": false,
+    "empty": false,
+    "repaired": false
+   },
+   "relation-02": {
+    "error": false,
+    "empty": false,
+    "repaired": false
+   },
+   "relation-03": {
+    "error": false,
+    "empty": false,
+    "repaired": false
+   },
+   "relation-04": {
+    "error": false,
+    "empty": false,
+    "repaired": false
+   },
+   "relation-05": {
+    "error": false,
+    "empty": true,
+    "repaired": false
+   },
+   "relation-06": {
+    "error": false,
+    "empty": false,
+    "repaired": false
+   },
+   "relation-07": {
+    "error": false,
+    "empty": false,
+    "repaired": false
+   },
+   "relation-08": {
+    "error": false,
+    "empty": false,
+    "repaired": false
+   },
+   "relation-09": {
+    "error": false,
+    "empty": true,
+    "repaired": false
+   },
+   "relation-10": {
+    "error": false,
+    "empty": false,
+    "repaired": false
+   },
+   "relation-11": {
+    "error": false,
+    "empty": false,
+    "repaired": false
+   },
+   "relation-12": {
+    "error": false,
+    "empty": false,
+    "repaired": false
+   },
+   "relation-13": {
+    "error": false,
+    "empty": false,
+    "repaired": false
+   },
+   "relation-14": {
+    "error": false,
+    "empty": false,
+    "repaired": false
+   },
+   "path-00": {
+    "error": false,
+    "empty": true,
+    "repaired": false
+   },
+   "path-01": {
+    "error": true,
+    "empty": false,
+    "repaired": false
+   },
+   "path-02": {
+    "error": false,
+    "empty": true,
+    "repaired": false
+   },
+   "path-03": {
+    "error": false,
+    "empty": true,
+    "repaired": false
+   },
+   "path-04": {
+    "error": false,
+    "empty": true,
+    "repaired": false
+   },
+   "path-05": {
+    "error": false,
+    "empty": false,
+    "repaired": false
+   },
+   "path-06": {
+    "error": true,
+    "empty": false,
+    "repaired": false
+   },
+   "path-07": {
+    "error": false,
+    "empty": true,
+    "repaired": false
+   },
+   "path-08": {
+    "error": false,
+    "empty": true,
+    "repaired": false
+   },
+   "path-09": {
+    "error": true,
+    "empty": false,
+    "repaired": false
+   },
+   "path-10": {
+    "error": false,
+    "empty": true,
+    "repaired": false
+   },
+   "path-11": {
+    "error": true,
+    "empty": false,
+    "repaired": false
+   },
+   "path-12": {
+    "error": true,
+    "empty": false,
+    "repaired": false
+   },
+   "path-13": {
+    "error": false,
+    "empty": true,
+    "repaired": false
+   },
+   "path-14": {
+    "error": false,
+    "empty": true,
+    "repaired": false
+   }
+  },
+  "text2sql-repair": {
+   "count-00": {
+    "error": false,
+    "empty": false,
+    "repaired": false
+   },
+   "count-01": {
+    "error": false,
+    "empty": false,
+    "repaired": false
+   },
+   "count-02": {
+    "error": false,
+    "empty": false,
+    "repaired": false
+   },
+   "count-03": {
+    "error": false,
+    "empty": false,
+    "repaired": false
+   },
+   "count-04": {
+    "error": false,
+    "empty": false,
+    "repaired": false
+   },
+   "count-05": {
+    "error": false,
+    "empty": false,
+    "repaired": false
+   },
+   "count-06": {
+    "error": false,
+    "empty": false,
+    "repaired": false
+   },
+   "count-07": {
+    "error": false,
+    "empty": false,
+    "repaired": false
+   },
+   "count-08": {
+    "error": false,
+    "empty": false,
+    "repaired": false
+   },
+   "count-09": {
+    "error": false,
+    "empty": false,
+    "repaired": false
+   },
+   "count-10": {
+    "error": false,
+    "empty": false,
+    "repaired": false
+   },
+   "count-11": {
+    "error": false,
+    "empty": false,
+    "repaired": false
+   },
+   "count-12": {
+    "error": false,
+    "empty": false,
+    "repaired": false
+   },
+   "count-13": {
+    "error": false,
+    "empty": false,
+    "repaired": false
+   },
+   "count-14": {
+    "error": false,
+    "empty": false,
+    "repaired": false
+   },
+   "co_mention-00": {
+    "error": false,
+    "empty": false,
+    "repaired": false
+   },
+   "co_mention-01": {
+    "error": false,
+    "empty": false,
+    "repaired": false
+   },
+   "co_mention-02": {
+    "error": false,
+    "empty": false,
+    "repaired": false
+   },
+   "co_mention-03": {
+    "error": false,
+    "empty": false,
+    "repaired": false
+   },
+   "co_mention-04": {
+    "error": false,
+    "empty": false,
+    "repaired": false
+   },
+   "co_mention-05": {
+    "error": false,
+    "empty": false,
+    "repaired": false
+   },
+   "co_mention-06": {
+    "error": false,
+    "empty": false,
+    "repaired": false
+   },
+   "co_mention-07": {
+    "error": false,
+    "empty": false,
+    "repaired": false
+   },
+   "co_mention-08": {
+    "error": false,
+    "empty": false,
+    "repaired": false
+   },
+   "co_mention-09": {
+    "error": false,
+    "empty": false,
+    "repaired": false
+   },
+   "co_mention-10": {
+    "error": false,
+    "empty": false,
+    "repaired": false
+   },
+   "co_mention-11": {
+    "error": false,
+    "empty": false,
+    "repaired": false
+   },
+   "co_mention-12": {
+    "error": false,
+    "empty": false,
+    "repaired": false
+   },
+   "co_mention-13": {
+    "error": false,
+    "empty": false,
+    "repaired": false
+   },
+   "co_mention-14": {
+    "error": false,
+    "empty": false,
+    "repaired": false
+   },
+   "relation-00": {
+    "error": false,
+    "empty": true,
+    "repaired": true,
+    "after_repair_error": false,
+    "after_repair_empty": false
+   },
+   "relation-01": {
+    "error": false,
+    "empty": false,
+    "repaired": false
+   },
+   "relation-02": {
+    "error": false,
+    "empty": false,
+    "repaired": false
+   },
+   "relation-03": {
+    "error": false,
+    "empty": false,
+    "repaired": false
+   },
+   "relation-04": {
+    "error": false,
+    "empty": false,
+    "repaired": false
+   },
+   "relation-05": {
+    "error": false,
+    "empty": true,
+    "repaired": true,
+    "after_repair_error": false,
+    "after_repair_empty": true
+   },
+   "relation-06": {
+    "error": false,
+    "empty": false,
+    "repaired": false
+   },
+   "relation-07": {
+    "error": false,
+    "empty": false,
+    "repaired": false
+   },
+   "relation-08": {
+    "error": false,
+    "empty": false,
+    "repaired": false
+   },
+   "relation-09": {
+    "error": false,
+    "empty": true,
+    "repaired": true,
+    "after_repair_error": false,
+    "after_repair_empty": false
+   },
+   "relation-10": {
+    "error": false,
+    "empty": false,
+    "repaired": false
+   },
+   "relation-11": {
+    "error": false,
+    "empty": false,
+    "repaired": false
+   },
+   "relation-12": {
+    "error": false,
+    "empty": false,
+    "repaired": false
+   },
+   "relation-13": {
+    "error": false,
+    "empty": false,
+    "repaired": false
+   },
+   "relation-14": {
+    "error": false,
+    "empty": false,
+    "repaired": false
+   },
+   "path-00": {
+    "error": false,
+    "empty": true,
+    "repaired": true,
+    "after_repair_error": false,
+    "after_repair_empty": true
+   },
+   "path-01": {
+    "error": true,
+    "empty": false,
+    "repaired": true,
+    "after_repair_error": true,
+    "after_repair_empty": false
+   },
+   "path-02": {
+    "error": false,
+    "empty": true,
+    "repaired": true,
+    "after_repair_error": false,
+    "after_repair_empty": true
+   },
+   "path-03": {
+    "error": false,
+    "empty": true,
+    "repaired": true,
+    "after_repair_error": false,
+    "after_repair_empty": true
+   },
+   "path-04": {
+    "error": false,
+    "empty": true,
+    "repaired": true,
+    "after_repair_error": false,
+    "after_repair_empty": true
+   },
+   "path-05": {
+    "error": false,
+    "empty": false,
+    "repaired": false
+   },
+   "path-06": {
+    "error": true,
+    "empty": false,
+    "repaired": true,
+    "after_repair_error": false,
+    "after_repair_empty": true
+   },
+   "path-07": {
+    "error": false,
+    "empty": true,
+    "repaired": true,
+    "after_repair_error": false,
+    "after_repair_empty": true
+   },
+   "path-08": {
+    "error": false,
+    "empty": true,
+    "repaired": true,
+    "after_repair_error": false,
+    "after_repair_empty": true
+   },
+   "path-09": {
+    "error": true,
+    "empty": false,
+    "repaired": true,
+    "after_repair_error": false,
+    "after_repair_empty": true
+   },
+   "path-10": {
+    "error": false,
+    "empty": true,
+    "repaired": true,
+    "after_repair_error": false,
+    "after_repair_empty": true
+   },
+   "path-11": {
+    "error": true,
+    "empty": false,
+    "repaired": true,
+    "after_repair_error": true,
+    "after_repair_empty": false
+   },
+   "path-12": {
+    "error": true,
+    "empty": false,
+    "repaired": true,
+    "after_repair_error": false,
+    "after_repair_empty": false
+   },
+   "path-13": {
+    "error": false,
+    "empty": true,
+    "repaired": true,
+    "after_repair_error": false,
+    "after_repair_empty": true
+   },
+   "path-14": {
+    "error": false,
+    "empty": true,
+    "repaired": true,
+    "after_repair_error": false,
+    "after_repair_empty": true
+   }
+  }
+ },
+ "graph_coverage": {
+  "lexical_mentions": 483,
+  "exact_name_recall": 0.3665,
+  "substring_recall": 0.6335
+ },
+ "hand_check": {
+  "relation_facts": {
+   "checked": 20,
+   "supported": 12
+  },
+  "lexical_only_mentions": {
+   "checked": 14,
+   "real_mentions": 14
+  },
+  "path_connectors": {
+   "checked": 15,
+   "meaningful": 9
+  },
+  "labels": "x3_hand_check.json"
+ }
+}

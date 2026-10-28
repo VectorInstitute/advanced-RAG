@@ -1,0 +1,58 @@
+{
+ "acceptance_rate": 0.7692,
+ "accepted": 30,
+ "accepted_by_kind": {
+  "code": 3,
+  "identifier": 9,
+  "message": 18
+ },
+ "candidates_eligible_by_kind": {
+  "code": 289,
+  "identifier": 328,
+  "message": 1803
+ },
+ "candidates_extracted": 2723,
+ "checked": 39,
+ "checker": "Qwen3_8-Flash-Next",
+ "generator": null,
+ "models": [
+  {
+   "cache_hits": 50,
+   "call_seconds": 0.0,
+   "calls": 0,
+   "cold_completion_tokens": 3790,
+   "cold_prompt_tokens": 40747,
+   "cold_requests": 50,
+   "completion_tokens": 0,
+   "empty_responses": 0,
+   "failed_attempts": 0,
+   "label": "Qwen3_8-Flash-Next",
+   "model": "Qwen3_8-Flash-Next",
+   "prompt_tokens": 0,
+   "total_tokens": 0
+  }
+ ],
+ "price_note": "On-prem models through the proxy carry no charge.",
+ "price_usd": 0.0,
+ "produced_by": {
+  "endpoint": "vector-cluster",
+  "family": "onprem",
+  "model": "Qwen3_8-Flash-Next",
+  "producer": "agent_native_retrieval/build_serverfault_errors.py",
+  "usage": {
+   "Qwen3_8-Flash-Next": {
+    "calls": 0,
+    "cold_requests": 50
+   }
+  }
+ },
+ "question_source": "extracted keys in fixed templates",
+ "rejected_check_failures": {
+  "about": 1,
+  "resolved": 6,
+  "verbatim": 4
+ },
+ "seconds": 89.6,
+ "set": "serverfault_error_strings.jsonl",
+ "slice": "serverfault 10,000-question slice, 9,999 documents"
+}

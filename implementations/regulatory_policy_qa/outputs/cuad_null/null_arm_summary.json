@@ -1,0 +1,285 @@
+{
+  "generated_at": "2026-10-20T22:59:52+00:00",
+  "model": "Qwen3_6-35B-A3B",
+  "embedding_model": "BAAI/bge-small-en-v1.5",
+  "reasoning": "disabled on every call",
+  "corpus": {
+    "name": "CUAD test split",
+    "licence": "CC BY 4.0",
+    "attribution": "Contract Understanding Atticus Dataset (CUAD) v1, The Atticus Project, licensed CC BY 4.0. https://doi.org/10.5281/zenodo.4595826",
+    "contracts": 5,
+    "chunks": 353,
+    "queries": 205,
+    "answerable_queries": 70,
+    "null_queries": 135,
+    "null_rate": 0.6585,
+    "mean_gold_chunks": 2.47
+  },
+  "pipeline": {
+    "top_k": 10,
+    "evidence_budget": 5,
+    "max_attempts": 2,
+    "require_citations": true,
+    "sufficient": 0.6,
+    "insufficient": 0.0,
+    "grader": "LLMGrader",
+    "rewriter": null,
+    "thresholds_note": "measured on ContractNLI; the sweep is in THRESHOLDS.md. insufficient ships at 0.0 because 0.3 caught 20 more of 322 null questions and refused 43 more of 358 answerable ones. sufficient was flat from 0.2 to 1.0 within sampling error and stays at 0.6"
+  },
+  "cost": {
+    "lightrag_index": {
+      "documents": 5,
+      "doc_chars": 352270,
+      "chunk_token_size": 300,
+      "chunk_overlap_token_size": 50,
+      "llm_model_max_async": 8,
+      "wall_seconds": 6427.4,
+      "totals": {
+        "calls": 538,
+        "prompt_tokens": 1340364,
+        "completion_tokens": 355996,
+        "total_tokens": 1696360,
+        "cache_hits": 136
+      },
+      "per_document": {
+        "LohaCompanyltd_20191209_F-1_EX-10.16_11917878_EX-10.16_Supply Agreement": {
+          "calls": 0,
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "total_tokens": 0,
+          "cache_hits": 0,
+          "empty_responses": 0,
+          "call_seconds": 0.0,
+          "doc_chars": 11475,
+          "wall_seconds": 0.0,
+          "status": "processed"
+        },
+        "CENTRACKINTERNATIONALINC_10_29_1999-EX-10.3-WEB SITE HOSTING AGREEMENT": {
+          "calls": 0,
+          "prompt_tokens": 0,
+          "completion_tokens": 0,
+          "total_tokens": 0,
+          "cache_hits": 0,
+          "empty_responses": 0,
+          "call_seconds": 0.0,
+          "doc_chars": 15176,
+          "wall_seconds": 0.0,
+          "status": "processed"
+        },
+        "DovaPharmaceuticalsInc_20181108_10-Q_EX-10.2_11414857_EX-10.2_Promotion Agreement": {
+          "calls": 227,
+          "prompt_tokens": 536714,
+          "completion_tokens": 155142,
+          "total_tokens": 691856,
+          "cache_hits": 136,
+          "empty_responses": 0,
+          "call_seconds": 15807.9,
+          "doc_chars": 175580,
+          "wall_seconds": 2733.7,
+          "status": "processed"
+        },
+        "PACIRA PHARMACEUTICALS, INC. - A_R STRATEGIC LICENSING, DISTRIBUTION AND MARKETING AGREEMENT ": {
+          "calls": 301,
+          "prompt_tokens": 774417,
+          "completion_tokens": 192369,
+          "total_tokens": 966786,
+          "cache_hits": 0,
+          "empty_responses": 0,
+          "call_seconds": 20985.3,
+          "doc_chars": 145168,
+          "wall_seconds": 3322.3,
+          "status": "processed"
+        },
+        "ThriventVariableInsuranceAccountB_20190701_N-6_EX-99.D(IV)_11720968_EX-99.D(IV)_Endorsement Agreement": {
+          "calls": 10,
+          "prompt_tokens": 29233,
+          "completion_tokens": 8485,
+          "total_tokens": 37718,
+          "cache_hits": 0,
+          "empty_responses": 0,
+          "call_seconds": 847.4,
+          "doc_chars": 4871,
+          "wall_seconds": 369.7,
+          "status": "processed"
+        }
+      },
+      "status_reconciliation": {
+        "reason": "LightRAG duplicate-attempt receipts are not source-document failures; all referenced originals independently verified processed",
+        "original_report_sha256": "a94f24a05e0f0a2834afb8dca40e42912fbc0334c1835fc800efa9254bfea186",
+        "duplicate_receipts": {
+          "DovaPharmaceuticalsInc_20181108_10-Q_EX-10.2_11414857_EX-10.2_Promotion Agreement": 1,
+          "ThriventVariableInsuranceAccountB_20190701_N-6_EX-99.D(IV)_11720968_EX-99.D(IV)_Endorsement Agreement": 0,
+          "PACIRA PHARMACEUTICALS, INC. - A_R STRATEGIC LICENSING, DISTRIBUTION AND MARKETING AGREEMENT ": 0,
+          "LohaCompanyltd_20191209_F-1_EX-10.16_11917878_EX-10.16_Supply Agreement": 2,
+          "CENTRACKINTERNATIONALINC_10_29_1999-EX-10.3-WEB SITE HOSTING AGREEMENT": 2
+        },
+        "cost_fields_unchanged": true
+      }
+    },
+    "lightrag_query": {
+      "calls": 41,
+      "prompt_tokens": 28957,
+      "completion_tokens": 3213,
+      "total_tokens": 32170,
+      "cache_hits": null,
+      "wall_seconds": null,
+      "questions": 205,
+      "documents": 5,
+      "evidence_sha256": "ae6ad898f80d61d79cbe3c9654b366e4c3db1ca6a7c635847c10bd563947b986",
+      "recovery": {
+        "method": "41 unique completed keyword response rows form final cache suffix before any generation",
+        "cache_sha256_before_generation": "b092ad12b4d4bbb61bf85e8c64c25e1098c6863edf55631fb04e45bcfa90d9ff",
+        "limitation": "Completed unique requests are a lower bound; retry billing, cache hits and timing were not persisted."
+      }
+    },
+    "pipeline": {
+      "calls": 2403,
+      "prompt_tokens": 1610538,
+      "completion_tokens": 89883,
+      "total_tokens": 1700421,
+      "cache_hits": 57,
+      "empty_responses": 0,
+      "call_seconds": 10300.5,
+      "by_phase": {
+        "pipeline:dense": {
+          "calls": 1230,
+          "prompt_tokens": 829685,
+          "completion_tokens": 47572,
+          "total_tokens": 877257,
+          "cache_hits": 0,
+          "empty_responses": 0,
+          "call_seconds": 6646.1
+        },
+        "pipeline:lightrag-mix": {
+          "calls": 1173,
+          "prompt_tokens": 780853,
+          "completion_tokens": 42311,
+          "total_tokens": 823164,
+          "cache_hits": 57,
+          "empty_responses": 0,
+          "call_seconds": 3654.4
+        }
+      }
+    }
+  },
+  "arms": [
+    {
+      "arm": "dense",
+      "queries": 205,
+      "null_detection": {
+        "null_queries": 135,
+        "answerable_queries": 70,
+        "abstain_precision": 0.8519,
+        "abstain_recall": 0.8519,
+        "false_answer_rate": 0.1481
+      },
+      "answerable": {
+        "answerable_queries": 70,
+        "abstained_on_answerable": 20,
+        "answerable_abstention_rate": 0.2857,
+        "span_reached": 32,
+        "span_reach_rate": 0.4571,
+        "answered_with_span": 27,
+        "grounded_answer_rate": 0.3857
+      },
+      "abstention_reasons": {
+        "the model reported the sources do not answer the question": 118,
+        "the answer cited no usable source": 17
+      },
+      "span_rule_check": {
+        "answerable_queries": 70,
+        "qrels_hit_rate": 0.7,
+        "span_reach_rate": 0.4571,
+        "agreement": 0.7
+      },
+      "cost": {
+        "calls": 1230,
+        "prompt_tokens": 829685,
+        "completion_tokens": 47572,
+        "total_tokens": 877257,
+        "cache_hits": 0,
+        "empty_responses": 0,
+        "call_seconds": 6646.1,
+        "wall_seconds": 1886.5
+      }
+    },
+    {
+      "arm": "lightrag-mix",
+      "queries": 205,
+      "null_detection": {
+        "null_queries": 135,
+        "answerable_queries": 70,
+        "abstain_precision": 0.8138,
+        "abstain_recall": 0.8741,
+        "false_answer_rate": 0.1259
+      },
+      "answerable": {
+        "answerable_queries": 70,
+        "abstained_on_answerable": 27,
+        "answerable_abstention_rate": 0.3857,
+        "span_reached": 25,
+        "span_reach_rate": 0.3571,
+        "answered_with_span": 21,
+        "grounded_answer_rate": 0.3
+      },
+      "abstention_reasons": {
+        "the model reported the sources do not answer the question": 121,
+        "the answer cited no usable source": 24
+      },
+      "cost": {
+        "calls": 1173,
+        "prompt_tokens": 780853,
+        "completion_tokens": 42311,
+        "total_tokens": 823164,
+        "cache_hits": 57,
+        "empty_responses": 0,
+        "call_seconds": 3654.4,
+        "wall_seconds": 1759.9
+      }
+    },
+    {
+      "arm": "always-abstain",
+      "queries": 205,
+      "null_detection": {
+        "null_queries": 135,
+        "answerable_queries": 70,
+        "abstain_precision": 0.6585,
+        "abstain_recall": 1.0,
+        "false_answer_rate": 0.0
+      },
+      "answerable": {
+        "answerable_queries": 70,
+        "abstained_on_answerable": 70,
+        "answerable_abstention_rate": 1.0,
+        "span_reached": 0,
+        "span_reach_rate": 0.0,
+        "answered_with_span": 0,
+        "grounded_answer_rate": 0.0
+      },
+      "abstention_reasons": {
+        "control": 205
+      }
+    },
+    {
+      "arm": "always-answer",
+      "queries": 205,
+      "null_detection": {
+        "null_queries": 135,
+        "answerable_queries": 70,
+        "abstain_precision": 0.0,
+        "abstain_recall": 0.0,
+        "false_answer_rate": 1.0
+      },
+      "answerable": {
+        "answerable_queries": 70,
+        "abstained_on_answerable": 0,
+        "answerable_abstention_rate": 0.0,
+        "span_reached": 0,
+        "span_reach_rate": 0.0,
+        "answered_with_span": 0,
+        "grounded_answer_rate": 0.0
+      },
+      "abstention_reasons": {}
+    }
+  ]
+}

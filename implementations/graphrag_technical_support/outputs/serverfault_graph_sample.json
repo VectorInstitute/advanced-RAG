@@ -1,0 +1,409 @@
+{
+ "produced_by": {
+  "model": "Qwen3_8-27B",
+  "response_models": [],
+  "family": "onprem",
+  "endpoint": "vector-cluster",
+  "producer": "graphrag_technical_support/build_serverfault_graph.py",
+  "usage": {},
+  "note": "One document of the ServerFault graph; the summary holds the build's cost.",
+  "source": "serverfault_graph_summary.json in this directory (model)"
+ },
+ "document": "q9708",
+ "validation_problems": 0,
+ "entities": [
+  {
+   "name": "pem file",
+   "type": "Concept",
+   "cites": [
+    {
+     "section": "Title",
+     "block": "q9708::title::b000",
+     "start": 2,
+     "end": 20,
+     "located": true
+    }
+   ]
+  },
+  {
+   "name": "openssl",
+   "type": "Software",
+   "cites": [
+    {
+     "section": "Title",
+     "block": "q9708::title::b000",
+     "start": 55,
+     "end": 89,
+     "located": true
+    },
+    {
+     "section": "Accepted answer",
+     "block": "q9708::accepted-answer::b004",
+     "start": 2852,
+     "end": 2890,
+     "located": true
+    }
+   ]
+  },
+  {
+   "name": ".key",
+   "type": "ConfigItem",
+   "cites": [
+    {
+     "section": "Question",
+     "block": "q9708::question::b001",
+     "start": 348,
+     "end": 389,
+     "located": true
+    },
+    {
+     "section": "Accepted answer",
+     "block": "q9708::accepted-answer::b003",
+     "start": 2140,
+     "end": 2217,
+     "located": true
+    }
+   ]
+  },
+  {
+   "name": ".csr",
+   "type": "ConfigItem",
+   "cites": [
+    {
+     "section": "Question",
+     "block": "q9708::question::b001",
+     "start": 348,
+     "end": 389,
+     "located": true
+    },
+    {
+     "section": "Accepted answer",
+     "block": "q9708::accepted-answer::b001",
+     "start": 968,
+     "end": 1012,
+     "located": true
+    }
+   ]
+  },
+  {
+   "name": ".pem",
+   "type": "ConfigItem",
+   "cites": [
+    {
+     "section": "Question",
+     "block": "q9708::question::b001",
+     "start": 348,
+     "end": 389,
+     "located": true
+    },
+    {
+     "section": "Accepted answer",
+     "block": "q9708::accepted-answer::b002",
+     "start": 1541,
+     "end": 1567,
+     "located": true
+    }
+   ]
+  },
+  {
+   "name": "debian",
+   "type": "Software",
+   "cites": [
+    {
+     "section": "Question",
+     "block": "q9708::question::b000",
+     "start": 149,
+     "end": 179,
+     "located": true
+    }
+   ]
+  },
+  {
+   "name": "security certificates",
+   "type": "Concept",
+   "cites": [
+    {
+     "section": "Question",
+     "block": "q9708::question::b000",
+     "start": 205,
+     "end": 240,
+     "located": true
+    }
+   ]
+  },
+  {
+   "name": "asn.1",
+   "type": "Concept",
+   "cites": [
+    {
+     "section": "Accepted answer",
+     "block": "q9708::accepted-answer::b000",
+     "start": 821,
+     "end": 870,
+     "located": true
+    }
+   ]
+  },
+  {
+   "name": "x509",
+   "type": "Concept",
+   "cites": [
+    {
+     "section": "Accepted answer",
+     "block": "q9708::accepted-answer::b000",
+     "start": 904,
+     "end": 936,
+     "located": true
+    }
+   ]
+  },
+  {
+   "name": "pkcs10",
+   "type": "Protocol",
+   "cites": [
+    {
+     "section": "Accepted answer",
+     "block": "q9708::accepted-answer::b001",
+     "start": 1094,
+     "end": 1121,
+     "located": true
+    }
+   ]
+  },
+  {
+   "name": ".pkcs12",
+   "type": "ConfigItem",
+   "cites": [
+    {
+     "section": "Accepted answer",
+     "block": "q9708::accepted-answer::b004",
+     "start": 2500,
+     "end": 2545,
+     "located": true
+    }
+   ]
+  },
+  {
+   "name": ".der",
+   "type": "ConfigItem",
+   "cites": [
+    {
+     "section": "Accepted answer",
+     "block": "q9708::accepted-answer::b006",
+     "start": 3052,
+     "end": 3097,
+     "located": true
+    }
+   ]
+  },
+  {
+   "name": "windows",
+   "type": "Software",
+   "cites": [
+    {
+     "section": "Accepted answer",
+     "block": "q9708::accepted-answer::b006",
+     "start": 3247,
+     "end": 3286,
+     "located": true
+    }
+   ]
+  },
+  {
+   "name": "java",
+   "type": "Software",
+   "cites": [
+    {
+     "section": "Accepted answer",
+     "block": "q9708::accepted-answer::b008",
+     "start": 3681,
+     "end": 3712,
+     "located": true
+    }
+   ]
+  },
+  {
+   "name": ".crl",
+   "type": "ConfigItem",
+   "cites": [
+    {
+     "section": "Accepted answer",
+     "block": "q9708::accepted-answer::b009",
+     "start": 3873,
+     "end": 3909,
+     "located": true
+    }
+   ]
+  }
+ ],
+ "relations": [
+  {
+   "source": "openssl",
+   "type": "configures",
+   "target": "pem file",
+   "cites": [
+    {
+     "section": "Title",
+     "block": "q9708::title::b000",
+     "start": 55,
+     "end": 89,
+     "located": true
+    }
+   ]
+  },
+  {
+   "source": "debian",
+   "type": "depends_on",
+   "target": "security certificates",
+   "cites": [
+    {
+     "section": "Question",
+     "block": "q9708::question::b000",
+     "start": 149,
+     "end": 240,
+     "located": true
+    }
+   ]
+  },
+  {
+   "source": "x509",
+   "type": "depends_on",
+   "target": "asn.1",
+   "cites": [
+    {
+     "section": "Accepted answer",
+     "block": "q9708::accepted-answer::b000",
+     "start": 904,
+     "end": 936,
+     "located": true
+    }
+   ]
+  },
+  {
+   "source": ".csr",
+   "type": "part_of",
+   "target": "pkcs10",
+   "cites": [
+    {
+     "section": "Accepted answer",
+     "block": "q9708::accepted-answer::b001",
+     "start": 1094,
+     "end": 1121,
+     "located": true
+    }
+   ]
+  },
+  {
+   "source": ".pem",
+   "type": "depends_on",
+   "target": "asn.1",
+   "cites": [
+    {
+     "section": "Accepted answer",
+     "block": "q9708::accepted-answer::b002",
+     "start": 2094,
+     "end": 2135,
+     "located": true
+    }
+   ]
+  },
+  {
+   "source": ".key",
+   "type": "part_of",
+   "target": ".pem",
+   "cites": [
+    {
+     "section": "Accepted answer",
+     "block": "q9708::accepted-answer::b003",
+     "start": 2147,
+     "end": 2185,
+     "located": true
+    }
+   ]
+  },
+  {
+   "source": "openssl",
+   "type": "fixes",
+   "target": ".pkcs12",
+   "cites": [
+    {
+     "section": "Accepted answer",
+     "block": "q9708::accepted-answer::b004",
+     "start": 2852,
+     "end": 2890,
+     "located": true
+    }
+   ]
+  },
+  {
+   "source": ".der",
+   "type": "depends_on",
+   "target": "asn.1",
+   "cites": [
+    {
+     "section": "Accepted answer",
+     "block": "q9708::accepted-answer::b006",
+     "start": 3059,
+     "end": 3097,
+     "located": true
+    }
+   ]
+  },
+  {
+   "source": ".pem",
+   "type": "alternative_to",
+   "target": ".der",
+   "cites": [
+    {
+     "section": "Accepted answer",
+     "block": "q9708::accepted-answer::b006",
+     "start": 3099,
+     "end": 3145,
+     "located": true
+    }
+   ]
+  },
+  {
+   "source": "openssl",
+   "type": "fixes",
+   "target": ".der",
+   "cites": [
+    {
+     "section": "Accepted answer",
+     "block": "q9708::accepted-answer::b006",
+     "start": 3147,
+     "end": 3180,
+     "located": true
+    }
+   ]
+  },
+  {
+   "source": "windows",
+   "type": "configures",
+   "target": ".der",
+   "cites": [
+    {
+     "section": "Accepted answer",
+     "block": "q9708::accepted-answer::b006",
+     "start": 3300,
+     "end": 3356,
+     "located": true
+    }
+   ]
+  },
+  {
+   "source": ".crl",
+   "type": "diagnoses",
+   "target": "x509",
+   "cites": [
+    {
+     "section": "Accepted answer",
+     "block": "q9708::accepted-answer::b009",
+     "start": 3954,
+     "end": 4004,
+     "located": true
+    }
+   ]
+  }
+ ]
+}

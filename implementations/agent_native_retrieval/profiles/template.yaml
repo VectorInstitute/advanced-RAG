@@ -1,0 +1,74 @@
+# Data profile template. Copy this file next to your documents, edit it, and load it with
+#
+#   from aieng.advanced_rag.agents import build_server, load_profile
+#   profile = load_profile("my-profile.yaml", root="path/to/your/folder")
+#   server, tools = build_server(profile)
+#
+# Each part you fill in adds tools the agent can call. Delete a part you do not need; only
+# `name` and `files` are required. Paths are relative to the folder you pass as `root`.
+#
+# YAML tip: quote any value that contains a comma or a colon, especially inside {...}.
+# The loader refuses unknown keys, so an unquoted comma shows up as an error, not a silent drop.
+
+# A short label, used in reports and cache keys.
+name: my-corpus
+
+# One paragraph the agent reads before every question: what the documents are, who wrote
+# them, and anything about their form that helps (units, naming rules, what a heading means).
+description: >-
+  Internal runbooks for the payments platform, written by the on-call team, and the
+  incident tickets that reference them.
+
+# Which files are documents. A file matching several rules takes the first. `kind` is
+# `document` (prose), `code` (source files), or `text`. `sections` is how a document splits:
+# `markdown` (# headings), `rst` (underlined titles), `none`, or a regular expression that
+# matches a section's first line, with an optional named group `title`.
+# Sections add the tools `outline` (list a document's sections) and `open_section`.
+files:
+  - glob: "runbooks/**/*.md"
+    kind: document
+    sections: markdown
+  - glob: "tickets/*.txt"
+    kind: text
+    sections: '^(?P<title>[A-Z][A-Z ]+):$'    # lines such as "RESOLUTION:"
+  - glob: "src/**/*.py"
+    kind: code
+    language: python
+
+# Identifiers your documents use: error codes, ticket numbers, part numbers, file paths.
+# Each kind is a Python regular expression; the whole match is the identifier. These add
+# `find_identifier` (the documents holding one value, matched exactly) and
+# `list_identifiers` (the distinct values of a kind, with document counts).
+identifiers:
+  - name: ticket_id
+    pattern: '\bPAY-\d{4,6}\b'
+    description: an incident ticket number
+    examples: [PAY-10432]
+  - name: error_code
+    pattern: '\bE[0-9]{3}\b'
+    description: a payment gateway error code
+    examples: [E402, E517]
+    ignore_case: false
+
+# Tables the agent can query with SQL. Each file is a .csv, .tsv, or .jsonl under the root.
+# List the columns with a type (text, integer, or real) and a description: the agent sees
+# both in the `sql` tool's description. Leave `columns` out to load every column as text.
+# `doc_column` names a column that holds document paths, so the trace records which
+# documents a query pointed at.
+tables:
+  - name: tickets
+    file: tickets.csv
+    description: one row per incident ticket
+    doc_column: doc_id
+    columns:
+      - {name: doc_id, type: text, description: "the ticket's file, such as tickets/PAY-10432.txt"}
+      - {name: severity, type: integer, description: "1 is the most severe"}
+      - {name: service, type: text, description: "the affected service, such as ledger"}
+      - {name: opened, type: text, description: "date opened, YYYY-MM-DD"}
+
+# Source code to index. Only Python is indexed. This adds `find_symbol` and `open_symbol`,
+# which look classes, functions, methods, and module-level names up by name.
+# `package_root` is a leading folder to drop from module names, such as src.
+code:
+  language: python
+  package_root: src

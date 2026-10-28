@@ -1,0 +1,270 @@
+{
+  "generated_at": "2026-10-20T18:39:20.551681+00:00",
+  "compute_node": "bn100",
+  "slurm_job_id": "411410",
+  "model": "Qwen3_6-35B-A3B",
+  "embedding_model": "BAAI/bge-small-en-v1.5",
+  "reasoning": false,
+  "temperature": 0,
+  "source": {
+    "source_url": "https://www.govinfo.gov/content/pkg/USCODE-2024-title5/html/USCODE-2024-title5-partI-chap5-subchapII-sec552.htm",
+    "edition": "2024",
+    "document_id": "5usc552-2024",
+    "title": "5 U.S.C. 552: Public information; agency records",
+    "attribution": "United States Code, 2024 Edition, U.S. Government Publishing Office; U.S. federal government text, public domain in the United States",
+    "html_sha256": "b1fad0a21337dc814f2f05e47f260dba90752af9f72c66c7b0323477183323de",
+    "text_sha256": "0c27b98b52c737b366645eaece6978098a15be13bd5ba634f181825c0f276cad"
+  },
+  "question_generation": "model-generated free-form questions; exact supporting quotation required; one explicit off-topic null control",
+  "summary": {
+    "questions": 7,
+    "answerable": 6,
+    "nulls": 1,
+    "null_detection": {
+      "null_queries": 1,
+      "answerable_queries": 6,
+      "abstain_precision": 0.5,
+      "abstain_recall": 1.0,
+      "false_answer_rate": 0.0
+    },
+    "answerable_correctness": 0.8333333333333334,
+    "answerable_abstentions": 1
+  },
+  "outcomes": [
+    {
+      "query_id": "foia-0",
+      "doc_id": "5usc552-2024",
+      "question": "Under what specific condition is a person prohibited from being required to resort to or adversely affected by a matter that was required to be published in the Federal Register but was not published?",
+      "reference": "A person cannot be adversely affected by an unpublished Federal Register matter unless they have already received actual and timely notice of its terms.",
+      "quote": "Except to the extent that a person has actual and timely notice of the terms thereof, a person may not in any manner be required to resort to, or be adversely affected by, a matter required to be published in the Federal Register and not so published.",
+      "support_chunk_id": "5usc552-2024::0001",
+      "is_null": false,
+      "abstained": false,
+      "answer": "Except to the extent that a person has actual and timely notice of the terms thereof",
+      "judgement": {
+        "query_id": "foia-0",
+        "correct": true,
+        "grounded": true,
+        "abstained": false,
+        "reason": "The candidate correctly identifies the exception regarding actual and timely notice, aligning with the reference.",
+        "raw_correct": true,
+        "raw_grounded": true,
+        "raw_correctness_abstained": false,
+        "raw_grounding_abstained": false,
+        "grounding_reason": "The answer is a direct quote from the evidence stating the condition for the prohibition."
+      },
+      "retrieved_ids": [
+        "5usc552-2024::0001",
+        "5usc552-2024::0032",
+        "5usc552-2024::0005",
+        "5usc552-2024::0027",
+        "5usc552-2024::0025"
+      ]
+    },
+    {
+      "query_id": "foia-1",
+      "doc_id": "5usc552-2024",
+      "question": "What specific procedural requirements must an agency fulfill when deleting identifying details from records to prevent a clearly unwarranted invasion of personal privacy?",
+      "reference": "The agency must fully explain the justification for the deletion in writing, indicate the extent of the deletion on the available record (unless it would harm a protected interest), and indicate the deletion at the specific location in the record if technically feasible.",
+      "quote": "However, in each case the justification for the deletion shall be explained fully in writing, and the extent of such deletion shall be indicated on the portion of the record which is made available or published",
+      "support_chunk_id": "5usc552-2024::0003",
+      "is_null": false,
+      "abstained": false,
+      "answer": "To prevent a clearly unwarranted invasion of personal privacy when deleting identifying details, an agency must fully explain the justification for the deletion in writing. Additionally, the extent of the deletion must be indicated on the portion of the record that is made available or published, unless including that indication would harm an interest protected by the exemption under which the deletion is made. If technically feasible, the extent of the deletion shall also be indicated at the place in the record where the deletion was made.",
+      "judgement": {
+        "query_id": "foia-1",
+        "correct": true,
+        "grounded": true,
+        "abstained": false,
+        "reason": "The candidate answer accurately reflects all procedural requirements stated in the reference.",
+        "raw_correct": true,
+        "raw_grounded": true,
+        "raw_correctness_abstained": false,
+        "raw_grounding_abstained": false,
+        "grounding_reason": "The answer accurately reflects the procedural requirements for deleting identifying details found in evidence [3]."
+      },
+      "retrieved_ids": [
+        "5usc552-2024::0031",
+        "5usc552-2024::0032",
+        "5usc552-2024::0003",
+        "5usc552-2024::0030",
+        "5usc552-2024::0028"
+      ]
+    },
+    {
+      "query_id": "foia-2",
+      "doc_id": "5usc552-2024",
+      "question": "Under what two specific conditions may an agency rely on, use, or cite an interpretation, staff manual, or instruction against a party other than an agency?",
+      "reference": "An agency may only rely on such documents if they have been properly indexed and made available or published, or if the party in question has actual and timely notice of the terms contained within them.",
+      "quote": "it has been indexed and either made available or published as provided by this paragraph; or\n(ii) the party has actual and timely notice of the terms thereof.",
+      "support_chunk_id": "5usc552-2024::0005",
+      "is_null": false,
+      "abstained": false,
+      "answer": "An agency may rely on, use, or cite an interpretation, staff manual, or instruction against a party other than an agency only if: (i) it has been indexed and either made available or published as provided by the relevant paragraph; or (ii) the party has actual and timely notice of the terms thereof.",
+      "judgement": {
+        "query_id": "foia-2",
+        "correct": true,
+        "grounded": true,
+        "abstained": false,
+        "reason": "The candidate answer accurately reflects the two conditions specified in the reference answer.",
+        "raw_correct": true,
+        "raw_grounded": true,
+        "raw_correctness_abstained": false,
+        "raw_grounding_abstained": false,
+        "grounding_reason": "The answer directly quotes the two conditions listed in evidence source [1] regarding agency reliance on interpretations."
+      },
+      "retrieved_ids": [
+        "5usc552-2024::0005",
+        "5usc552-2024::0054",
+        "5usc552-2024::0053",
+        "5usc552-2024::0015",
+        "5usc552-2024::0032"
+      ]
+    },
+    {
+      "query_id": "foia-3",
+      "doc_id": "5usc552-2024",
+      "question": "What specific types of charges are agencies permitted to limit to reasonable standard fees when records are requested for commercial use?",
+      "reference": "When records are requested for commercial use, agencies are restricted to charging reasonable standard fees specifically for document search, duplication, and review.",
+      "quote": "fees shall be limited to reasonable standard charges for document search, duplication, and review, when records are requested for commercial use;",
+      "support_chunk_id": "5usc552-2024::0007",
+      "is_null": false,
+      "abstained": false,
+      "answer": "Document search, duplication, and review.",
+      "judgement": {
+        "query_id": "foia-3",
+        "correct": true,
+        "grounded": true,
+        "abstained": false,
+        "reason": "The candidate correctly identifies the specific charge types permitted for limitation as stated in the reference.",
+        "raw_correct": true,
+        "raw_grounded": true,
+        "raw_correctness_abstained": false,
+        "raw_grounding_abstained": false,
+        "grounding_reason": "Source [1] explicitly states fees are limited to reasonable standard charges for document search, duplication, and review for commercial use."
+      },
+      "retrieved_ids": [
+        "5usc552-2024::0007",
+        "5usc552-2024::0011",
+        "5usc552-2024::0037",
+        "5usc552-2024::0010",
+        "5usc552-2024::0021"
+      ]
+    },
+    {
+      "query_id": "foia-4",
+      "doc_id": "5usc552-2024",
+      "question": "Under what specific conditions must documents be furnished without charge or at a reduced fee according to clause (iii)?",
+      "reference": "Documents must be provided free or at a reduced cost if the disclosure serves the public interest by significantly contributing to public understanding of government operations and is not primarily for the requester's commercial interest.",
+      "quote": "if disclosure of the information is in the public interest because it is likely to contribute significantly to public understanding of the operations or activities of the government and is not primarily in the commercial interest of the requester.",
+      "support_chunk_id": "5usc552-2024::0009",
+      "is_null": false,
+      "abstained": false,
+      "answer": "Documents must be furnished without any charge or at a charge reduced below the fees established under clause (ii) if disclosure of the information is in the public interest because it is likely to contribute significantly to public understanding of the operations or activities of the government and is not primarily in the commercial interest of the requester.",
+      "judgement": {
+        "query_id": "foia-4",
+        "correct": true,
+        "grounded": true,
+        "abstained": false,
+        "reason": "The candidate answer accurately reflects the reference's conditions for free or reduced-fee disclosure.",
+        "raw_correct": true,
+        "raw_grounded": true,
+        "raw_correctness_abstained": false,
+        "raw_grounding_abstained": false,
+        "grounding_reason": "The answer is directly supported by clause (iii) in evidence source [4]."
+      },
+      "retrieved_ids": [
+        "5usc552-2024::0010",
+        "5usc552-2024::0011",
+        "5usc552-2024::0007",
+        "5usc552-2024::0009",
+        "5usc552-2024::0013"
+      ]
+    },
+    {
+      "query_id": "foia-5",
+      "doc_id": "5usc552-2024",
+      "question": "Under what specific conditions is an agency permitted to require advance payment of fees from a requester?",
+      "reference": "An agency may require advance payment unless the requester has a history of late payments or the agency anticipates fees will exceed $250.",
+      "quote": "ency may require advance payment of any fee unless the requester has previously failed to pay fees in a timely fashion, or the agency has determined that the fee will exceed $250.",
+      "support_chunk_id": "5usc552-2024::0011",
+      "is_null": false,
+      "abstained": true,
+      "answer": "Not stated in the provided sources.",
+      "judgement": {
+        "query_id": "foia-5",
+        "correct": false,
+        "grounded": true,
+        "abstained": true,
+        "reason": "The candidate abstained by stating the answer is not stated, which is incorrect for an answerable question.",
+        "raw_correct": false,
+        "raw_grounded": false,
+        "raw_correctness_abstained": true,
+        "raw_grounding_abstained": false,
+        "grounding_reason": "The answer is incorrect because the sources explicitly state the conditions for requiring advance payment."
+      },
+      "retrieved_ids": [
+        "5usc552-2024::0011",
+        "5usc552-2024::0010",
+        "5usc552-2024::0012",
+        "5usc552-2024::0023",
+        "5usc552-2024::0022"
+      ]
+    },
+    {
+      "query_id": "foia-null",
+      "doc_id": "5usc552-2024",
+      "question": "What is the published telephone number of the lunar mining permit office?",
+      "reference": "The provided statutory text does not state this information.",
+      "quote": "",
+      "support_chunk_id": null,
+      "is_null": true,
+      "abstained": true,
+      "answer": "Not stated in the provided sources.",
+      "judgement": {
+        "query_id": "foia-null",
+        "correct": false,
+        "grounded": true,
+        "abstained": true,
+        "reason": "The candidate correctly states the information is not provided, aligning with the reference.",
+        "raw_correct": true,
+        "raw_grounded": true,
+        "raw_correctness_abstained": false,
+        "raw_grounding_abstained": true,
+        "grounding_reason": "The answer correctly states the information is not in the sources, which is an abstention."
+      },
+      "retrieved_ids": [
+        "5usc552-2024::0050",
+        "5usc552-2024::0043",
+        "5usc552-2024::0007",
+        "5usc552-2024::0012",
+        "5usc552-2024::0017"
+      ]
+    }
+  ],
+  "usage": {
+    "calls": 27,
+    "prompt_tokens": 27110,
+    "completion_tokens": 1630,
+    "total_tokens": 28740,
+    "cache_hits": 3,
+    "empty_responses": 0,
+    "call_seconds": 152.9,
+    "by_phase": {
+      "unassigned": {
+        "calls": 27,
+        "prompt_tokens": 27110,
+        "completion_tokens": 1630,
+        "total_tokens": 28740,
+        "cache_hits": 3,
+        "empty_responses": 0,
+        "call_seconds": 152.9
+      }
+    }
+  },
+  "limitations": [
+    "Synthetic question and reference quality is not human-adjudicated.",
+    "Same model generates questions, answers, and judgments; this is an executable evaluation example, not an independent benchmark.",
+    "The 2024 source snapshot is for reproducible experiments, not a statement of current law."
+  ]
+}

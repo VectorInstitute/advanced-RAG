@@ -1,0 +1,429 @@
+{
+  "parser_version": 1,
+  "documents": 84,
+  "pages": 11678,
+  "tables": 7600,
+  "failures": 0,
+  "per_document": {
+    "3M_2018_10K": {
+      "pages": 158,
+      "tables": 117,
+      "failures": 0
+    },
+    "3M_2022_10K": {
+      "pages": 249,
+      "tables": 113,
+      "failures": 0
+    },
+    "3M_2023Q2_10Q": {
+      "pages": 92,
+      "tables": 76,
+      "failures": 0
+    },
+    "ACTIVISIONBLIZZARD_2019_10K": {
+      "pages": 198,
+      "tables": 99,
+      "failures": 0
+    },
+    "ADOBE_2015_10K": {
+      "pages": 115,
+      "tables": 92,
+      "failures": 0
+    },
+    "ADOBE_2016_10K": {
+      "pages": 112,
+      "tables": 84,
+      "failures": 0
+    },
+    "ADOBE_2017_10K": {
+      "pages": 107,
+      "tables": 86,
+      "failures": 0
+    },
+    "ADOBE_2022_10K": {
+      "pages": 99,
+      "tables": 68,
+      "failures": 0
+    },
+    "AES_2022_10K": {
+      "pages": 246,
+      "tables": 182,
+      "failures": 0
+    },
+    "AMAZON_2017_10K": {
+      "pages": 83,
+      "tables": 66,
+      "failures": 0
+    },
+    "AMAZON_2019_10K": {
+      "pages": 81,
+      "tables": 64,
+      "failures": 0
+    },
+    "AMCOR_2020_10K": {
+      "pages": 162,
+      "tables": 138,
+      "failures": 0
+    },
+    "AMCOR_2022_8K_dated-2022-07-01": {
+      "pages": 8,
+      "tables": 2,
+      "failures": 0
+    },
+    "AMCOR_2023Q2_10Q": {
+      "pages": 55,
+      "tables": 56,
+      "failures": 0
+    },
+    "AMCOR_2023Q4_EARNINGS": {
+      "pages": 14,
+      "tables": 14,
+      "failures": 0
+    },
+    "AMCOR_2023_10K": {
+      "pages": 155,
+      "tables": 109,
+      "failures": 0
+    },
+    "AMD_2015_10K": {
+      "pages": 209,
+      "tables": 73,
+      "failures": 0
+    },
+    "AMD_2022_10K": {
+      "pages": 118,
+      "tables": 65,
+      "failures": 0
+    },
+    "AMERICANEXPRESS_2022_10K": {
+      "pages": 256,
+      "tables": 112,
+      "failures": 0
+    },
+    "AMERICANWATERWORKS_2020_10K": {
+      "pages": 149,
+      "tables": 110,
+      "failures": 0
+    },
+    "AMERICANWATERWORKS_2021_10K": {
+      "pages": 175,
+      "tables": 109,
+      "failures": 0
+    },
+    "AMERICANWATERWORKS_2022_10K": {
+      "pages": 296,
+      "tables": 132,
+      "failures": 0
+    },
+    "BESTBUY_2017_10K": {
+      "pages": 104,
+      "tables": 98,
+      "failures": 0
+    },
+    "BESTBUY_2019_10K": {
+      "pages": 103,
+      "tables": 101,
+      "failures": 0
+    },
+    "BESTBUY_2023_10K": {
+      "pages": 72,
+      "tables": 77,
+      "failures": 0
+    },
+    "BESTBUY_2024Q2_10Q": {
+      "pages": 29,
+      "tables": 42,
+      "failures": 0
+    },
+    "BLOCK_2016_10K": {
+      "pages": 115,
+      "tables": 75,
+      "failures": 0
+    },
+    "BLOCK_2020_10K": {
+      "pages": 153,
+      "tables": 97,
+      "failures": 0
+    },
+    "BOEING_2018_10K": {
+      "pages": 133,
+      "tables": 120,
+      "failures": 0
+    },
+    "BOEING_2022_10K": {
+      "pages": 185,
+      "tables": 116,
+      "failures": 0
+    },
+    "COCACOLA_2017_10K": {
+      "pages": 191,
+      "tables": 125,
+      "failures": 0
+    },
+    "COCACOLA_2021_10K": {
+      "pages": 182,
+      "tables": 111,
+      "failures": 0
+    },
+    "COCACOLA_2022_10K": {
+      "pages": 179,
+      "tables": 116,
+      "failures": 0
+    },
+    "CORNING_2020_10K": {
+      "pages": 137,
+      "tables": 112,
+      "failures": 0
+    },
+    "CORNING_2021_10K": {
+      "pages": 124,
+      "tables": 108,
+      "failures": 0
+    },
+    "CORNING_2022_10K": {
+      "pages": 158,
+      "tables": 93,
+      "failures": 0
+    },
+    "COSTCO_2021_10K": {
+      "pages": 75,
+      "tables": 51,
+      "failures": 0
+    },
+    "CVSHEALTH_2018_10K": {
+      "pages": 386,
+      "tables": 109,
+      "failures": 0
+    },
+    "CVSHEALTH_2022_10K": {
+      "pages": 210,
+      "tables": 106,
+      "failures": 0
+    },
+    "FOOTLOCKER_2022_8K_dated-2022-05-20": {
+      "pages": 4,
+      "tables": 5,
+      "failures": 0
+    },
+    "FOOTLOCKER_2022_8K_dated_2022-08-19": {
+      "pages": 30,
+      "tables": 1,
+      "failures": 0
+    },
+    "GENERALMILLS_2019_10K": {
+      "pages": 139,
+      "tables": 136,
+      "failures": 0
+    },
+    "GENERALMILLS_2020_10K": {
+      "pages": 126,
+      "tables": 127,
+      "failures": 0
+    },
+    "GENERALMILLS_2022_10K": {
+      "pages": 119,
+      "tables": 121,
+      "failures": 0
+    },
+    "JOHNSON_JOHNSON_2022Q4_EARNINGS": {
+      "pages": 24,
+      "tables": 31,
+      "failures": 0
+    },
+    "JOHNSON_JOHNSON_2022_10K": {
+      "pages": 149,
+      "tables": 96,
+      "failures": 0
+    },
+    "JOHNSON_JOHNSON_2023Q2_EARNINGS": {
+      "pages": 24,
+      "tables": 28,
+      "failures": 0
+    },
+    "JOHNSON_JOHNSON_2023_8K_dated-2023-08-30": {
+      "pages": 27,
+      "tables": 35,
+      "failures": 0
+    },
+    "JPMORGAN_2021Q1_10Q": {
+      "pages": 178,
+      "tables": 218,
+      "failures": 0
+    },
+    "JPMORGAN_2022Q2_10Q": {
+      "pages": 195,
+      "tables": 241,
+      "failures": 0
+    },
+    "JPMORGAN_2022_10K": {
+      "pages": 374,
+      "tables": 292,
+      "failures": 0
+    },
+    "JPMORGAN_2023Q2_10Q": {
+      "pages": 214,
+      "tables": 262,
+      "failures": 0
+    },
+    "KRAFTHEINZ_2019_10K": {
+      "pages": 148,
+      "tables": 146,
+      "failures": 0
+    },
+    "LOCKHEEDMARTIN_2020_10K": {
+      "pages": 132,
+      "tables": 63,
+      "failures": 0
+    },
+    "LOCKHEEDMARTIN_2021_10K": {
+      "pages": 134,
+      "tables": 62,
+      "failures": 0
+    },
+    "LOCKHEEDMARTIN_2022_10K": {
+      "pages": 130,
+      "tables": 62,
+      "failures": 0
+    },
+    "MGMRESORTS_2018_10K": {
+      "pages": 185,
+      "tables": 113,
+      "failures": 0
+    },
+    "MGMRESORTS_2020_10K": {
+      "pages": 144,
+      "tables": 91,
+      "failures": 0
+    },
+    "MGMRESORTS_2022Q4_EARNINGS": {
+      "pages": 15,
+      "tables": 15,
+      "failures": 0
+    },
+    "MGMRESORTS_2022_10K": {
+      "pages": 216,
+      "tables": 90,
+      "failures": 0
+    },
+    "MGMRESORTS_2023Q2_10Q": {
+      "pages": 62,
+      "tables": 51,
+      "failures": 0
+    },
+    "MICROSOFT_2016_10K": {
+      "pages": 119,
+      "tables": 79,
+      "failures": 0
+    },
+    "MICROSOFT_2023_10K": {
+      "pages": 112,
+      "tables": 76,
+      "failures": 0
+    },
+    "NETFLIX_2015_10K": {
+      "pages": 71,
+      "tables": 56,
+      "failures": 0
+    },
+    "NETFLIX_2017_10K": {
+      "pages": 71,
+      "tables": 54,
+      "failures": 0
+    },
+    "NIKE_2018_10K": {
+      "pages": 93,
+      "tables": 66,
+      "failures": 0
+    },
+    "NIKE_2019_10K": {
+      "pages": 102,
+      "tables": 70,
+      "failures": 0
+    },
+    "NIKE_2021_10K": {
+      "pages": 106,
+      "tables": 72,
+      "failures": 0
+    },
+    "NIKE_2023_10K": {
+      "pages": 99,
+      "tables": 72,
+      "failures": 0
+    },
+    "PAYPAL_2022_10K": {
+      "pages": 132,
+      "tables": 89,
+      "failures": 0
+    },
+    "PEPSICO_2021_10K": {
+      "pages": 523,
+      "tables": 114,
+      "failures": 0
+    },
+    "PEPSICO_2022_10K": {
+      "pages": 480,
+      "tables": 112,
+      "failures": 0
+    },
+    "PEPSICO_2023Q1_EARNINGS": {
+      "pages": 16,
+      "tables": 18,
+      "failures": 0
+    },
+    "PEPSICO_2023_8K_dated-2023-05-05": {
+      "pages": 5,
+      "tables": 9,
+      "failures": 0
+    },
+    "PEPSICO_2023_8K_dated-2023-05-30": {
+      "pages": 162,
+      "tables": 17,
+      "failures": 0
+    },
+    "PFIZER_2021_10K": {
+      "pages": 142,
+      "tables": 114,
+      "failures": 0
+    },
+    "Pfizer_2023Q2_10Q": {
+      "pages": 70,
+      "tables": 59,
+      "failures": 0
+    },
+    "ULTABEAUTY_2023Q4_EARNINGS": {
+      "pages": 9,
+      "tables": 10,
+      "failures": 0
+    },
+    "ULTABEAUTY_2023_10K": {
+      "pages": 104,
+      "tables": 71,
+      "failures": 0
+    },
+    "VERIZON_2021_10K": {
+      "pages": 117,
+      "tables": 125,
+      "failures": 0
+    },
+    "VERIZON_2022_10K": {
+      "pages": 120,
+      "tables": 121,
+      "failures": 0
+    },
+    "WALMART_2018_10K": {
+      "pages": 295,
+      "tables": 105,
+      "failures": 0
+    },
+    "WALMART_2019_10K": {
+      "pages": 123,
+      "tables": 93,
+      "failures": 0
+    },
+    "WALMART_2020_10K": {
+      "pages": 165,
+      "tables": 88,
+      "failures": 0
+    }
+  }
+}

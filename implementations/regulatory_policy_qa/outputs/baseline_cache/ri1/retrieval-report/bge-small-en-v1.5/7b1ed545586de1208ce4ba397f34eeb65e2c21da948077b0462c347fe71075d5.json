@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "cache_key": "7b1ed545586de1208ce4ba397f34eeb65e2c21da948077b0462c347fe71075d5",
+  "ri_id": "ri1",
+  "artifact_type": "retrieval-report",
+  "producer_id": "bge-small-en-v1.5",
+  "config": {
+    "chunk_chars": 1200,
+    "corpus_sha256": "007b6a40b0c65247f881627375c3d2e9b6aeeb5dfa89957494feed0765a1a073",
+    "k": 10,
+    "max_documents": 20,
+    "model": "BAAI/bge-small-en-v1.5",
+    "overlap_chars": 200,
+    "query_prompt": "Represent this sentence for searching relevant passages: ",
+    "scope": "contract"
+  },
+  "created_at": "2026-10-06T21:50:49.885289+00:00",
+  "value": {
+    "failure": 0.24,
+    "mrr": 0.4632,
+    "model_revision": "5c38ec7c405ec4b44b94cc5a9bb96e735b38267a",
+    "versions": {
+      "sentence-transformers": "6.0.0",
+      "transformers": "5.16.1",
+      "torch": "2.13.0",
+      "numpy": "2.3.5"
+    }
+  }
+}

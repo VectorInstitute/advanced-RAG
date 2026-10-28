@@ -1,0 +1,1339 @@
+{
+  "artifacts": [
+    {
+      "key": {
+        "artifact_type": "agent-judgments",
+        "config": {
+          "answered_by": "gemini-3.5-flash-lite",
+          "answers": "3f737ebf0bd90174",
+          "corpus": "musique-11656",
+          "endpoint": "vector-proxy-paid",
+          "model": "gemini-3.8-flash"
+        },
+        "producer_id": "judge/C0/shared-11656",
+        "ri_id": "ri5"
+      },
+      "sha256": "1b8b8e72520ec2d75be729197443a7ea051402421834f7eedc58eedd9837827e",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-ri5-52e5e1c4b30d/ri5.agent-judgments.judge-c0-shared-11656.005d982f28f8b63ac739893131d9883613e958b906a73cdd74201a6342fe0996.json"
+    },
+    {
+      "key": {
+        "artifact_type": "agent-judgments",
+        "config": {
+          "answered_by": "Qwen3_6-35B-A3B",
+          "answers": "89e497d6060040b1",
+          "corpus": "musique-11656",
+          "endpoint": "vector-proxy-paid",
+          "model": "gemini-3.8-flash"
+        },
+        "producer_id": "judge/C0/shared-11656",
+        "ri_id": "ri5"
+      },
+      "sha256": "62106265239d32d5f27a8afb81bb2b5e87433b778604d86cf53990b9c50e911e",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-ri5-52e5e1c4b30d/ri5.agent-judgments.judge-c0-shared-11656.bf5c38f2cd63e27ed57e690426a7f0508d57c8f331b65fe23c79bd8ac674e972.json"
+    },
+    {
+      "key": {
+        "artifact_type": "agent-judgments",
+        "config": {
+          "answered_by": "gemini-3.5-flash-lite",
+          "answers": "a89d40d8cb5aec0f",
+          "corpus": "musique-11656",
+          "endpoint": "vector-proxy-paid",
+          "model": "gemini-3.8-flash"
+        },
+        "producer_id": "judge/C0/shared-11656-first6",
+        "ri_id": "ri5"
+      },
+      "sha256": "aa4c005b6b13950de41843c6183158242732aac5dd7d4813f66fda3a3e7b8568",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-ri5-52e5e1c4b30d/ri5.agent-judgments.judge-c0-shared-11656-first6.591985abafd16a5a84c0f0e3d5902d2ba54f35832ea7e0f44a8286eac9ac81ee.json"
+    },
+    {
+      "key": {
+        "artifact_type": "agent-judgments",
+        "config": {
+          "answered_by": "gemini-3.5-flash-lite",
+          "answers": "d93e37fd4c99e3c2",
+          "corpus": "musique-11656",
+          "endpoint": "vector-proxy-paid",
+          "model": "gemini-3.8-flash"
+        },
+        "producer_id": "judge/C5/shared-11656",
+        "ri_id": "ri5"
+      },
+      "sha256": "5614ea25c220da4479a25cefeee11f026d2ef40578ba577d8e79a9c51c245d5d",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-ri5-52e5e1c4b30d/ri5.agent-judgments.judge-c5-shared-11656.16f64201a67d2a364562fb1a893ecbbe5674ddfc8b81cf21ef6ee6a2fb7af66c.json"
+    },
+    {
+      "key": {
+        "artifact_type": "agent-judgments",
+        "config": {
+          "answered_by": "Qwen3_6-35B-A3B",
+          "answers": "1b124183401c5cba",
+          "corpus": "musique-11656",
+          "endpoint": "vector-proxy-paid",
+          "model": "gemini-3.8-flash"
+        },
+        "producer_id": "judge/C5/shared-11656",
+        "ri_id": "ri5"
+      },
+      "sha256": "5c73538560e4ccdedca45805482db825834cde6c458ee2839ac7f39a850ee97f",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-ri5-52e5e1c4b30d/ri5.agent-judgments.judge-c5-shared-11656.2890e4f30db1acafef7f18f86b528cd2d24a27d151a86874baa4b656788549cc.json"
+    },
+    {
+      "key": {
+        "artifact_type": "agent-judgments",
+        "config": {
+          "answered_by": "gemini-3.5-flash-lite",
+          "answers": "87995a0d49920d5c",
+          "corpus": "musique-11656",
+          "endpoint": "vector-proxy-paid",
+          "model": "gemini-3.8-flash"
+        },
+        "producer_id": "judge/C5/shared-11656-first6",
+        "ri_id": "ri5"
+      },
+      "sha256": "c2dbfa5e56dfd78291b20b08d103bd92cb626851c4cb88376b9a05a6572a1530",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-ri5-52e5e1c4b30d/ri5.agent-judgments.judge-c5-shared-11656-first6.cd1f0caf2369debc38bfdd14232388f736f7aab5f3eb74288df078d4e44fd034.json"
+    },
+    {
+      "key": {
+        "artifact_type": "agent-judgments",
+        "config": {
+          "answered_by": "Qwen3_6-35B-A3B",
+          "answers": "cf05db4a3db78d88",
+          "corpus": "musique-11656",
+          "endpoint": "vector-proxy-paid",
+          "model": "gemini-3.8-flash"
+        },
+        "producer_id": "judge/grep-iterative/shared-11656",
+        "ri_id": "ri5"
+      },
+      "sha256": "a9be5c693cc9946c2934c3532e1975acbc39f86cdcb4f884399b276687c03d0a",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-ri5-52e5e1c4b30d/ri5.agent-judgments.judge-grep-iterative-shared-11656.08521351f2bc2656ea365ce685dae4b73d603a5c39a1e077ad28a5d577c2eb69.json"
+    },
+    {
+      "key": {
+        "artifact_type": "agent-judgments",
+        "config": {
+          "answered_by": "gemini-3.5-flash-lite",
+          "answers": "dfd5d19708403b57",
+          "corpus": "musique-11656",
+          "endpoint": "vector-proxy-paid",
+          "model": "gemini-3.8-flash"
+        },
+        "producer_id": "judge/grep-iterative/shared-11656",
+        "ri_id": "ri5"
+      },
+      "sha256": "798d8def1120ef98dab032bfb5d3a9d99b3db323cc0a131fa41ede6e9892247d",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-ri5-52e5e1c4b30d/ri5.agent-judgments.judge-grep-iterative-shared-11656.604e813a157ad92afac67e04338a52a79e4198fece2f8d30108625d41d317cea.json"
+    },
+    {
+      "key": {
+        "artifact_type": "agent-judgments",
+        "config": {
+          "answered_by": "gemini-3.5-flash-lite",
+          "answers": "882853d75d158423",
+          "corpus": "musique-11656",
+          "endpoint": "vector-proxy-paid",
+          "model": "gemini-3.8-flash"
+        },
+        "producer_id": "judge/grep-iterative/shared-11656-first6",
+        "ri_id": "ri5"
+      },
+      "sha256": "50a25f1aa8de9bbec81efb55081ca471618735c0846bcf27af42253168b949e8",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-ri5-52e5e1c4b30d/ri5.agent-judgments.judge-grep-iterative-shared-11656-first6.7d52f4e8537907e74c03a31d254ffaa9b998f7e30c09c7faef6ee77806971aab.json"
+    },
+    {
+      "key": {
+        "artifact_type": "agent-runs",
+        "config": {
+          "arm": {
+            "already_read_notice": true,
+            "description": "search with k fixed at 5 and 512-token previews",
+            "grep_max_results": 20,
+            "grep_preview_chars": 200,
+            "grep_scope": "corpus",
+            "ignore_case": true,
+            "max_model_calls": 30,
+            "name": "C0",
+            "narrow_above": 200,
+            "output_cap_tokens": 4000,
+            "read_before_answer": false,
+            "search_k": 5,
+            "search_preview_tokens": 512,
+            "tools": [
+              "search"
+            ]
+          },
+          "corpus": "musique-11656",
+          "endpoint": "vector-cluster",
+          "max_tokens": 1024,
+          "model": "Qwen3_6-35B-A3B",
+          "prompts": "a4721184eb118d51",
+          "question_count": 75,
+          "questions": "67ef938b654a55e5"
+        },
+        "producer_id": "C0/4hop-11656",
+        "ri_id": "ri5"
+      },
+      "sha256": "39e4dbb1fbe7f139b5d6eb1e7d702bee1014b72fe28289300b8d62ca9836eb22",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-ri5-52e5e1c4b30d/ri5.agent-runs.c0-4hop-11656.6f817535e2d96e789bbd8074a52a2c594d95f6ea2c318b4e78c3ad9bfb42c3f2.json"
+    },
+    {
+      "key": {
+        "artifact_type": "agent-runs",
+        "config": {
+          "arm": {
+            "already_read_notice": true,
+            "description": "search with k fixed at 5 and 512-token previews",
+            "grep_max_results": 20,
+            "grep_preview_chars": 200,
+            "grep_scope": "corpus",
+            "ignore_case": true,
+            "max_model_calls": 30,
+            "name": "C0",
+            "narrow_above": 200,
+            "output_cap_tokens": 4000,
+            "read_before_answer": false,
+            "search_k": 5,
+            "search_preview_tokens": 512,
+            "tools": [
+              "search"
+            ]
+          },
+          "corpus": "musique-11656",
+          "endpoint": "vector-cluster",
+          "max_tokens": 1024,
+          "model": "Qwen3_6-35B-A3B",
+          "prompts": "a4721184eb118d51",
+          "question_count": 3,
+          "questions": "77d02e927f59f0a0"
+        },
+        "producer_id": "C0/4hop-11656-first3",
+        "ri_id": "ri5"
+      },
+      "sha256": "ccbdd7596485b59a2cb1b4d9dd5db6a7eac5410c0ef0604f7abe6740ba414d59",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-ri5-52e5e1c4b30d/ri5.agent-runs.c0-4hop-11656-first3.c2c73348cd6d19e4fd3525f4e88e2189b0b3cdadfd842befcbf938d379f012bc.json"
+    },
+    {
+      "key": {
+        "artifact_type": "agent-runs",
+        "config": {
+          "arm": {
+            "already_read_notice": true,
+            "description": "search with k fixed at 5 and 512-token previews",
+            "grep_max_results": 20,
+            "grep_preview_chars": 200,
+            "grep_scope": "corpus",
+            "ignore_case": true,
+            "max_model_calls": 30,
+            "name": "C0",
+            "narrow_above": 200,
+            "output_cap_tokens": 4000,
+            "read_before_answer": false,
+            "search_k": 5,
+            "search_preview_tokens": 512,
+            "tools": [
+              "search"
+            ]
+          },
+          "corpus": "serverfault-10k",
+          "endpoint": "vector-cluster",
+          "max_tokens": 1024,
+          "model": "Qwen3_6-35B-A3B",
+          "prompts": "2a153f7cf276fd67",
+          "question_count": 30,
+          "questions": "3ed77d93d9372ffb"
+        },
+        "producer_id": "C0/errors-serverfault",
+        "ri_id": "ri5"
+      },
+      "sha256": "748de5e6d13cdef73d4c9a3dad76940c033eb2d3b748be8733acd1e6240fa6ce",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-ri5-52e5e1c4b30d/ri5.agent-runs.c0-errors-serverfault.ef2804218c6cc7f2ae8c43aaca53ab249a925e4c74cced3e9c0f6841abdd3ed2.json"
+    },
+    {
+      "key": {
+        "artifact_type": "agent-runs",
+        "config": {
+          "arm": {
+            "already_read_notice": true,
+            "description": "search with k fixed at 5 and 512-token previews",
+            "grep_max_results": 20,
+            "grep_preview_chars": 200,
+            "grep_scope": "corpus",
+            "ignore_case": true,
+            "max_model_calls": 30,
+            "name": "C0",
+            "narrow_above": 200,
+            "output_cap_tokens": 4000,
+            "read_before_answer": false,
+            "search_k": 5,
+            "search_preview_tokens": 512,
+            "tools": [
+              "search"
+            ]
+          },
+          "corpus": "folder-docs",
+          "endpoint": "vector-cluster",
+          "max_tokens": 1024,
+          "model": "Qwen3_6-35B-A3B",
+          "prompts": "744726c563d3c120",
+          "question_count": 5,
+          "questions": "21ac89afc14e65a4"
+        },
+        "producer_id": "C0/folder-docs",
+        "ri_id": "ri5"
+      },
+      "sha256": "f14975a36fd4361d1329b937e93f19165c6f895c262ff97235c30df1de5ad292",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-ri5-52e5e1c4b30d/ri5.agent-runs.c0-folder-docs.beac6b7687d2dac5e71a03f39fefc139d957a0cfb4e9a88d15dd016c33f32a14.json"
+    },
+    {
+      "key": {
+        "artifact_type": "agent-runs",
+        "config": {
+          "arm": {
+            "already_read_notice": true,
+            "description": "search with k fixed at 5 and 512-token previews",
+            "grep_max_results": 20,
+            "grep_preview_chars": 200,
+            "grep_scope": "corpus",
+            "ignore_case": true,
+            "max_model_calls": 30,
+            "name": "C0",
+            "narrow_above": 200,
+            "output_cap_tokens": 4000,
+            "read_before_answer": false,
+            "search_k": 5,
+            "search_preview_tokens": 512,
+            "tools": [
+              "search"
+            ]
+          },
+          "corpus": "musique-11656",
+          "endpoint": "vector-cluster",
+          "max_tokens": 1024,
+          "model": "Qwen3_6-35B-A3B",
+          "prompts": "a4721184eb118d51",
+          "question_count": 120,
+          "questions": "f6d5f395f331f49b"
+        },
+        "producer_id": "C0/ladder-11656",
+        "ri_id": "ri5"
+      },
+      "sha256": "eabeb04bfcd584822b5197c41e849396c1fad6b3146b496ec68066316e9cca29",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-ri5-52e5e1c4b30d/ri5.agent-runs.c0-ladder-11656.842ebdc8dd3d6ca461356f984a18ed31350334face423398cc8d1b51cd583093.json"
+    },
+    {
+      "key": {
+        "artifact_type": "agent-runs",
+        "config": {
+          "arm": {
+            "already_read_notice": true,
+            "description": "search with k fixed at 5 and 512-token previews",
+            "grep_max_results": 20,
+            "grep_preview_chars": 200,
+            "grep_scope": "corpus",
+            "ignore_case": true,
+            "max_model_calls": 30,
+            "name": "C0",
+            "narrow_above": 200,
+            "output_cap_tokens": 4000,
+            "read_before_answer": false,
+            "search_k": 5,
+            "search_preview_tokens": 512,
+            "tools": [
+              "search"
+            ]
+          },
+          "corpus": "musique-139416",
+          "endpoint": "vector-cluster",
+          "max_tokens": 1024,
+          "model": "Qwen3_6-35B-A3B",
+          "prompts": "a4721184eb118d51",
+          "question_count": 120,
+          "questions": "f6d5f395f331f49b"
+        },
+        "producer_id": "C0/ladder-139416",
+        "ri_id": "ri5"
+      },
+      "sha256": "78edd56e208053b630b83a03367132e27bbcf7fdb6b4d51e287e2494846b7131",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-ri5-52e5e1c4b30d/ri5.agent-runs.c0-ladder-139416.967d13b0e9b3446bee6dc3128441095987b4a3d7ae381d562ac1cdbc1ee57184.json"
+    },
+    {
+      "key": {
+        "artifact_type": "agent-runs",
+        "config": {
+          "arm": {
+            "already_read_notice": true,
+            "description": "search with k fixed at 5 and 512-token previews",
+            "grep_max_results": 20,
+            "grep_preview_chars": 200,
+            "grep_scope": "corpus",
+            "ignore_case": true,
+            "max_model_calls": 30,
+            "name": "C0",
+            "narrow_above": 200,
+            "output_cap_tokens": 4000,
+            "read_before_answer": false,
+            "search_k": 5,
+            "search_preview_tokens": 512,
+            "tools": [
+              "search"
+            ]
+          },
+          "corpus": "musique-11656",
+          "endpoint": "vector-cluster",
+          "max_tokens": 1024,
+          "model": "Qwen3_6-35B-A3B",
+          "prompts": "a4721184eb118d51",
+          "question_count": 30,
+          "questions": "38dbf91492d86dd7"
+        },
+        "producer_id": "C0/live-11656",
+        "ri_id": "ri5"
+      },
+      "sha256": "c1f223d36030be1c22b915da212c3adb4167eb7911cf2b4e0b5860f991e8686b",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-ri5-52e5e1c4b30d/ri5.agent-runs.c0-live-11656.6f52fdfe7cb1eb9d89d593d7d119cb7a051d3e5a7566529bd551be2d34b8a578.json"
+    },
+    {
+      "key": {
+        "artifact_type": "agent-runs",
+        "config": {
+          "arm": {
+            "already_read_notice": true,
+            "description": "search with k fixed at 5 and 512-token previews",
+            "grep_max_results": 20,
+            "grep_preview_chars": 200,
+            "grep_scope": "corpus",
+            "ignore_case": true,
+            "max_model_calls": 30,
+            "name": "C0",
+            "narrow_above": 200,
+            "output_cap_tokens": 4000,
+            "read_before_answer": false,
+            "search_k": 5,
+            "search_preview_tokens": 512,
+            "tools": [
+              "search"
+            ]
+          },
+          "corpus": "musique-11656",
+          "endpoint": "vector-cluster",
+          "max_tokens": 1024,
+          "model": "Qwen3_6-35B-A3B",
+          "prompts": "a4721184eb118d51",
+          "question_count": 50,
+          "questions": "45ecccb0b71d77e9"
+        },
+        "producer_id": "C0/nulls-11656",
+        "ri_id": "ri5"
+      },
+      "sha256": "54794d16dd24fe3c4a23a172bd594512cc24eca7e235c643015146f9a6efc6f6",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-ri5-52e5e1c4b30d/ri5.agent-runs.c0-nulls-11656.1b4240605bbc7bf680a9fc39f2b18ba017454ad765a97f17dcf054d37941310c.json"
+    },
+    {
+      "key": {
+        "artifact_type": "agent-runs",
+        "config": {
+          "arm": {
+            "already_read_notice": true,
+            "description": "search with k fixed at 5 and 512-token previews",
+            "grep_max_results": 20,
+            "grep_preview_chars": 200,
+            "grep_scope": "corpus",
+            "ignore_case": true,
+            "max_model_calls": 30,
+            "name": "C0",
+            "narrow_above": 200,
+            "output_cap_tokens": 4000,
+            "read_before_answer": false,
+            "search_k": 5,
+            "search_preview_tokens": 512,
+            "tools": [
+              "search"
+            ]
+          },
+          "corpus": "musique-11656",
+          "endpoint": "vector-cluster",
+          "max_tokens": 1024,
+          "model": "Qwen3_6-35B-A3B",
+          "prompts": "a4721184eb118d51",
+          "question_count": 50,
+          "questions": "784ccd0d68bd94c7"
+        },
+        "producer_id": "C0/paraphrase-11656",
+        "ri_id": "ri5"
+      },
+      "sha256": "ae139288d48c3f40fe405869ec2e97a37bae0cbebe010792c1ec922105f07760",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-ri5-52e5e1c4b30d/ri5.agent-runs.c0-paraphrase-11656.90b050842e66804da87a9e2234d09ead2556ebc1bc088878cc369b5e2cdcf134.json"
+    },
+    {
+      "key": {
+        "artifact_type": "agent-runs",
+        "config": {
+          "arm": {
+            "already_read_notice": true,
+            "description": "search with k fixed at 5 and 512-token previews",
+            "grep_max_results": 20,
+            "grep_preview_chars": 200,
+            "grep_scope": "corpus",
+            "ignore_case": true,
+            "max_model_calls": 30,
+            "name": "C0",
+            "narrow_above": 200,
+            "output_cap_tokens": 4000,
+            "read_before_answer": false,
+            "search_k": 5,
+            "search_preview_tokens": 512,
+            "tools": [
+              "search"
+            ]
+          },
+          "corpus": "musique-11656",
+          "endpoint": "vector-cluster",
+          "max_tokens": 1024,
+          "model": "Qwen3_6-35B-A3B",
+          "prompts": "a4721184eb118d51",
+          "question_count": 300,
+          "questions": "8c2adc2885ab9902"
+        },
+        "producer_id": "C0/shared-11656",
+        "ri_id": "ri5"
+      },
+      "sha256": "90d072bc3814cc198c03e16292824c52f9c7c718ba95d3a95c4bb6892677b431",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-ri5-52e5e1c4b30d/ri5.agent-runs.c0-shared-11656.28647f7c66f5af498b0cdb0084f98470a7fee20d587beada76eda011cedf9258.json"
+    },
+    {
+      "key": {
+        "artifact_type": "agent-runs",
+        "config": {
+          "arm": {
+            "already_read_notice": true,
+            "description": "search with k fixed at 5 and 512-token previews",
+            "grep_max_results": 20,
+            "grep_preview_chars": 200,
+            "grep_scope": "corpus",
+            "ignore_case": true,
+            "max_model_calls": 30,
+            "name": "C0",
+            "narrow_above": 200,
+            "output_cap_tokens": 4000,
+            "read_before_answer": false,
+            "search_k": 5,
+            "search_preview_tokens": 512,
+            "tools": [
+              "search"
+            ]
+          },
+          "corpus": "musique-11656",
+          "endpoint": "vector-proxy-paid",
+          "max_tokens": 1024,
+          "model": "gemini-3.5-flash-lite",
+          "prompts": "a4721184eb118d51",
+          "question_count": 300,
+          "questions": "8c2adc2885ab9902"
+        },
+        "producer_id": "C0/shared-11656",
+        "ri_id": "ri5"
+      },
+      "sha256": "0fec99a8e747322c0228651b4f33c3ba4a9f72bef21182211c29e671e1352c71",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-ri5-52e5e1c4b30d/ri5.agent-runs.c0-shared-11656.eb68f5a20799306cf20ed2e01ea89bd5f146d0a92541a1e5dc8a5c6e035075eb.json"
+    },
+    {
+      "key": {
+        "artifact_type": "agent-runs",
+        "config": {
+          "arm": {
+            "already_read_notice": true,
+            "description": "search with k fixed at 5 and 512-token previews",
+            "grep_max_results": 20,
+            "grep_preview_chars": 200,
+            "grep_scope": "corpus",
+            "ignore_case": true,
+            "max_model_calls": 30,
+            "name": "C0",
+            "narrow_above": 200,
+            "output_cap_tokens": 4000,
+            "read_before_answer": false,
+            "search_k": 5,
+            "search_preview_tokens": 512,
+            "tools": [
+              "search"
+            ]
+          },
+          "corpus": "musique-11656",
+          "endpoint": "vector-proxy-paid",
+          "max_tokens": 1024,
+          "model": "gemini-3.5-flash-lite",
+          "prompts": "a4721184eb118d51",
+          "question_count": 6,
+          "questions": "23fddafb8f2a8f98"
+        },
+        "producer_id": "C0/shared-11656-first6",
+        "ri_id": "ri5"
+      },
+      "sha256": "5d750ad081152e8e8203a56f002ca9f4648e8db50fcddaab982c0ae9d7cc1c77",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-ri5-52e5e1c4b30d/ri5.agent-runs.c0-shared-11656-first6.ffc7581b035c5caccd04017f58e29bdc756d773158c989a04bc9d53f3d824e3a.json"
+    },
+    {
+      "key": {
+        "artifact_type": "agent-runs",
+        "config": {
+          "arm": {
+            "already_read_notice": true,
+            "description": "grep and open only",
+            "grep_max_results": 20,
+            "grep_preview_chars": 200,
+            "grep_scope": "corpus",
+            "ignore_case": true,
+            "max_model_calls": 30,
+            "name": "C5",
+            "narrow_above": 200,
+            "output_cap_tokens": 4000,
+            "read_before_answer": true,
+            "search_k": 5,
+            "search_preview_tokens": 512,
+            "tools": [
+              "grep",
+              "open"
+            ]
+          },
+          "corpus": "musique-11656",
+          "endpoint": "vector-cluster",
+          "max_tokens": 1024,
+          "model": "Qwen3_6-35B-A3B",
+          "prompts": "989ec4b91c23e778",
+          "question_count": 75,
+          "questions": "67ef938b654a55e5"
+        },
+        "producer_id": "C5/4hop-11656",
+        "ri_id": "ri5"
+      },
+      "sha256": "13f1487ed3906f4586365c9024e0690447e923d0bac7dbb76ee3ef5c297fd4b4",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-ri5-52e5e1c4b30d/ri5.agent-runs.c5-4hop-11656.2f4e2712aabdb79120fa8aa63e9e874eddc7a0403c7a041ae260eb5a811ab59d.json"
+    },
+    {
+      "key": {
+        "artifact_type": "agent-runs",
+        "config": {
+          "arm": {
+            "already_read_notice": true,
+            "description": "grep and open only",
+            "grep_max_results": 20,
+            "grep_preview_chars": 200,
+            "grep_scope": "corpus",
+            "ignore_case": true,
+            "max_model_calls": 30,
+            "name": "C5",
+            "narrow_above": 200,
+            "output_cap_tokens": 4000,
+            "read_before_answer": true,
+            "search_k": 5,
+            "search_preview_tokens": 512,
+            "tools": [
+              "grep",
+              "open"
+            ]
+          },
+          "corpus": "serverfault-10k",
+          "endpoint": "vector-cluster",
+          "max_tokens": 1024,
+          "model": "Qwen3_6-35B-A3B",
+          "prompts": "10a04abc1d925e20",
+          "question_count": 30,
+          "questions": "3ed77d93d9372ffb"
+        },
+        "producer_id": "C5/errors-serverfault",
+        "ri_id": "ri5"
+      },
+      "sha256": "511baabba1151641cde117ec6e255bd31bca84037159735cc05d5a547797326c",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-ri5-52e5e1c4b30d/ri5.agent-runs.c5-errors-serverfault.9292045bf83c1dd3336b24c87a7e3b1613e69d929029938fcc0b4ed19b40f7f2.json"
+    },
+    {
+      "key": {
+        "artifact_type": "agent-runs",
+        "config": {
+          "arm": {
+            "already_read_notice": true,
+            "description": "grep and open only",
+            "grep_max_results": 20,
+            "grep_preview_chars": 200,
+            "grep_scope": "corpus",
+            "ignore_case": true,
+            "max_model_calls": 30,
+            "name": "C5",
+            "narrow_above": 200,
+            "output_cap_tokens": 4000,
+            "read_before_answer": true,
+            "search_k": 5,
+            "search_preview_tokens": 512,
+            "tools": [
+              "grep",
+              "open"
+            ]
+          },
+          "corpus": "folder-docs",
+          "endpoint": "vector-cluster",
+          "max_tokens": 1024,
+          "model": "Qwen3_6-35B-A3B",
+          "prompts": "36efcfdfe4077183",
+          "question_count": 5,
+          "questions": "21ac89afc14e65a4"
+        },
+        "producer_id": "C5/folder-docs",
+        "ri_id": "ri5"
+      },
+      "sha256": "07f9cd924155156b6a03739052dd42b10eb982a2796556ccba62cf127d5ca752",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-ri5-52e5e1c4b30d/ri5.agent-runs.c5-folder-docs.ec5b5aab38ff9e92d2bd6300d6a3ec73ac9bb405a1cac9eb3ee68f4e782709df.json"
+    },
+    {
+      "key": {
+        "artifact_type": "agent-runs",
+        "config": {
+          "arm": {
+            "already_read_notice": true,
+            "description": "grep and open only",
+            "grep_max_results": 20,
+            "grep_preview_chars": 200,
+            "grep_scope": "corpus",
+            "ignore_case": true,
+            "max_model_calls": 30,
+            "name": "C5",
+            "narrow_above": 200,
+            "output_cap_tokens": 4000,
+            "read_before_answer": true,
+            "search_k": 5,
+            "search_preview_tokens": 512,
+            "tools": [
+              "grep",
+              "open"
+            ]
+          },
+          "corpus": "musique-11656",
+          "endpoint": "vector-cluster",
+          "max_tokens": 1024,
+          "model": "Qwen3_6-35B-A3B",
+          "prompts": "989ec4b91c23e778",
+          "question_count": 120,
+          "questions": "f6d5f395f331f49b"
+        },
+        "producer_id": "C5/ladder-11656",
+        "ri_id": "ri5"
+      },
+      "sha256": "3b6483768f0636fbc229451c774f47a7d4adf25ab47c52fd4ab0dd0f48003846",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-ri5-52e5e1c4b30d/ri5.agent-runs.c5-ladder-11656.a3c5eab59d255a140e7024373394b48903172fcdc4ac3bf6ccd20b42455d4023.json"
+    },
+    {
+      "key": {
+        "artifact_type": "agent-runs",
+        "config": {
+          "arm": {
+            "already_read_notice": true,
+            "description": "grep and open only",
+            "grep_max_results": 20,
+            "grep_preview_chars": 200,
+            "grep_scope": "corpus",
+            "ignore_case": true,
+            "max_model_calls": 30,
+            "name": "C5",
+            "narrow_above": 200,
+            "output_cap_tokens": 4000,
+            "read_before_answer": true,
+            "search_k": 5,
+            "search_preview_tokens": 512,
+            "tools": [
+              "grep",
+              "open"
+            ]
+          },
+          "corpus": "musique-139416",
+          "endpoint": "vector-cluster",
+          "max_tokens": 1024,
+          "model": "Qwen3_6-35B-A3B",
+          "prompts": "989ec4b91c23e778",
+          "question_count": 120,
+          "questions": "f6d5f395f331f49b"
+        },
+        "producer_id": "C5/ladder-139416",
+        "ri_id": "ri5"
+      },
+      "sha256": "2b58cc4c72a47b0c738a915d536691ce00ccd6cc002592f7f115d564b02f65b1",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-ri5-52e5e1c4b30d/ri5.agent-runs.c5-ladder-139416.8967c2d48aef38f1671af4a81aed0b2d3c976e2b670fbf600f75d89e0179800a.json"
+    },
+    {
+      "key": {
+        "artifact_type": "agent-runs",
+        "config": {
+          "arm": {
+            "already_read_notice": true,
+            "description": "grep and open only",
+            "grep_max_results": 20,
+            "grep_preview_chars": 200,
+            "grep_scope": "corpus",
+            "ignore_case": true,
+            "max_model_calls": 30,
+            "name": "C5",
+            "narrow_above": 200,
+            "output_cap_tokens": 4000,
+            "read_before_answer": true,
+            "search_k": 5,
+            "search_preview_tokens": 512,
+            "tools": [
+              "grep",
+              "open"
+            ]
+          },
+          "corpus": "musique-11656",
+          "endpoint": "vector-cluster",
+          "max_tokens": 1024,
+          "model": "Qwen3_6-35B-A3B",
+          "prompts": "989ec4b91c23e778",
+          "question_count": 30,
+          "questions": "38dbf91492d86dd7"
+        },
+        "producer_id": "C5/live-11656",
+        "ri_id": "ri5"
+      },
+      "sha256": "2d7f3a2fba93330c77f4f6138cec68a79e8560d7e6bb9234988eb8b5ce1faa7a",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-ri5-52e5e1c4b30d/ri5.agent-runs.c5-live-11656.a568e7f9370bc45b9b61759c40030788a17c88565f85b4c30d5e94552bfde114.json"
+    },
+    {
+      "key": {
+        "artifact_type": "agent-runs",
+        "config": {
+          "arm": {
+            "already_read_notice": true,
+            "description": "grep and open only",
+            "grep_max_results": 20,
+            "grep_preview_chars": 200,
+            "grep_scope": "corpus",
+            "ignore_case": true,
+            "max_model_calls": 30,
+            "name": "C5",
+            "narrow_above": 200,
+            "output_cap_tokens": 4000,
+            "read_before_answer": true,
+            "search_k": 5,
+            "search_preview_tokens": 512,
+            "tools": [
+              "grep",
+              "open"
+            ]
+          },
+          "corpus": "musique-11656",
+          "endpoint": "vector-cluster",
+          "max_tokens": 1024,
+          "model": "Qwen3_6-35B-A3B",
+          "prompts": "989ec4b91c23e778",
+          "question_count": 50,
+          "questions": "45ecccb0b71d77e9"
+        },
+        "producer_id": "C5/nulls-11656",
+        "ri_id": "ri5"
+      },
+      "sha256": "3c58c8530f04064e6731ebbbf09c0e498040712eb1aec81559c36cd9979ddc95",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-ri5-52e5e1c4b30d/ri5.agent-runs.c5-nulls-11656.1dc04c61cc08b1fdd863e792f251ec208e64e44c96fae96a69b037a11235cd73.json"
+    },
+    {
+      "key": {
+        "artifact_type": "agent-runs",
+        "config": {
+          "arm": {
+            "already_read_notice": true,
+            "description": "grep and open only",
+            "grep_max_results": 20,
+            "grep_preview_chars": 200,
+            "grep_scope": "corpus",
+            "ignore_case": true,
+            "max_model_calls": 30,
+            "name": "C5",
+            "narrow_above": 200,
+            "output_cap_tokens": 4000,
+            "read_before_answer": true,
+            "search_k": 5,
+            "search_preview_tokens": 512,
+            "tools": [
+              "grep",
+              "open"
+            ]
+          },
+          "corpus": "musique-11656",
+          "endpoint": "vector-cluster",
+          "max_tokens": 1024,
+          "model": "Qwen3_6-35B-A3B",
+          "prompts": "989ec4b91c23e778",
+          "question_count": 50,
+          "questions": "784ccd0d68bd94c7"
+        },
+        "producer_id": "C5/paraphrase-11656",
+        "ri_id": "ri5"
+      },
+      "sha256": "993ba985ec8eb2e925a9a76af2131cdda4d2f713332699ea1904b39ab9b49f62",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-ri5-52e5e1c4b30d/ri5.agent-runs.c5-paraphrase-11656.c0bb59c02e264665e0d7d43a6e9615d5b45c333d2b496ed4a5fd620728db8f9c.json"
+    },
+    {
+      "key": {
+        "artifact_type": "agent-runs",
+        "config": {
+          "arm": {
+            "already_read_notice": true,
+            "description": "grep and open only",
+            "grep_max_results": 20,
+            "grep_preview_chars": 200,
+            "grep_scope": "corpus",
+            "ignore_case": true,
+            "max_model_calls": 30,
+            "name": "C5",
+            "narrow_above": 200,
+            "output_cap_tokens": 4000,
+            "read_before_answer": true,
+            "search_k": 5,
+            "search_preview_tokens": 512,
+            "tools": [
+              "grep",
+              "open"
+            ]
+          },
+          "corpus": "musique-11656",
+          "endpoint": "vector-proxy-paid",
+          "max_tokens": 1024,
+          "model": "gemini-3.5-flash-lite",
+          "prompts": "989ec4b91c23e778",
+          "question_count": 300,
+          "questions": "8c2adc2885ab9902"
+        },
+        "producer_id": "C5/shared-11656",
+        "ri_id": "ri5"
+      },
+      "sha256": "20f556eacad3a0569f87393ff7567f665ddb7e190c3d2182b69a31ce6709ed53",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-ri5-52e5e1c4b30d/ri5.agent-runs.c5-shared-11656.4e8fb468dc173c2711edf544c9bbc9a36960c8e3f22df028eb318442dfe2ed98.json"
+    },
+    {
+      "key": {
+        "artifact_type": "agent-runs",
+        "config": {
+          "arm": {
+            "already_read_notice": true,
+            "description": "grep and open only",
+            "grep_max_results": 20,
+            "grep_preview_chars": 200,
+            "grep_scope": "corpus",
+            "ignore_case": true,
+            "max_model_calls": 30,
+            "name": "C5",
+            "narrow_above": 200,
+            "output_cap_tokens": 4000,
+            "read_before_answer": true,
+            "search_k": 5,
+            "search_preview_tokens": 512,
+            "tools": [
+              "grep",
+              "open"
+            ]
+          },
+          "corpus": "musique-11656",
+          "endpoint": "vector-cluster",
+          "max_tokens": 1024,
+          "model": "Qwen3_6-35B-A3B",
+          "prompts": "989ec4b91c23e778",
+          "question_count": 300,
+          "questions": "8c2adc2885ab9902"
+        },
+        "producer_id": "C5/shared-11656",
+        "ri_id": "ri5"
+      },
+      "sha256": "0b4d68f52019d34bec0255847b0b6e237612ce853c987998740407b5cc8580ed",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-ri5-52e5e1c4b30d/ri5.agent-runs.c5-shared-11656.840218c69f29885de229d1161f230a3aaaa84aa058d4281ab4117ded182800b2.json"
+    },
+    {
+      "key": {
+        "artifact_type": "agent-runs",
+        "config": {
+          "arm": {
+            "already_read_notice": true,
+            "description": "grep and open only",
+            "grep_max_results": 20,
+            "grep_preview_chars": 200,
+            "grep_scope": "corpus",
+            "ignore_case": true,
+            "max_model_calls": 30,
+            "name": "C5",
+            "narrow_above": 200,
+            "output_cap_tokens": 4000,
+            "read_before_answer": true,
+            "search_k": 5,
+            "search_preview_tokens": 512,
+            "tools": [
+              "grep",
+              "open"
+            ]
+          },
+          "corpus": "musique-11656",
+          "endpoint": "vector-proxy-paid",
+          "max_tokens": 1024,
+          "model": "gemini-3.5-flash-lite",
+          "prompts": "989ec4b91c23e778",
+          "question_count": 6,
+          "questions": "23fddafb8f2a8f98"
+        },
+        "producer_id": "C5/shared-11656-first6",
+        "ri_id": "ri5"
+      },
+      "sha256": "af8a219997e1341f8226e856c1a2312c5a2b836532a4a2617e7d44e755b35a5b",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-ri5-52e5e1c4b30d/ri5.agent-runs.c5-shared-11656-first6.3e02176cc534ec898ee2e9f1df8c96073a8ca2f4631caddd0dd65b1f3c666c98.json"
+    },
+    {
+      "key": {
+        "artifact_type": "agent-runs",
+        "config": {
+          "arm": {
+            "already_read_notice": true,
+            "description": "search at k 20, then grep inside what search returned, then open",
+            "grep_max_results": 20,
+            "grep_preview_chars": 200,
+            "grep_scope": "searched",
+            "ignore_case": true,
+            "max_model_calls": 30,
+            "name": "C7",
+            "narrow_above": 200,
+            "output_cap_tokens": 4000,
+            "read_before_answer": true,
+            "search_k": 20,
+            "search_preview_tokens": 40,
+            "tools": [
+              "search",
+              "grep",
+              "open"
+            ]
+          },
+          "corpus": "musique-11656",
+          "endpoint": "vector-cluster",
+          "max_tokens": 1024,
+          "model": "Qwen3_6-35B-A3B",
+          "prompts": "66443176c9dc4e29",
+          "question_count": 120,
+          "questions": "f6d5f395f331f49b"
+        },
+        "producer_id": "C7/ladder-11656",
+        "ri_id": "ri5"
+      },
+      "sha256": "23b8caf32bffa972c511e43f01cc139aa37b9efd8f38505e53f7f24d2abb9905",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-ri5-52e5e1c4b30d/ri5.agent-runs.c7-ladder-11656.2a63972045e1c266a3e550cbe0b969e655302ea73c3fc426518076a66f561239.json"
+    },
+    {
+      "key": {
+        "artifact_type": "agent-runs",
+        "config": {
+          "arm": {
+            "already_read_notice": true,
+            "description": "search at k 20, then grep inside what search returned, then open",
+            "grep_max_results": 20,
+            "grep_preview_chars": 200,
+            "grep_scope": "searched",
+            "ignore_case": true,
+            "max_model_calls": 30,
+            "name": "C7",
+            "narrow_above": 200,
+            "output_cap_tokens": 4000,
+            "read_before_answer": true,
+            "search_k": 20,
+            "search_preview_tokens": 40,
+            "tools": [
+              "search",
+              "grep",
+              "open"
+            ]
+          },
+          "corpus": "musique-139416",
+          "endpoint": "vector-cluster",
+          "max_tokens": 1024,
+          "model": "Qwen3_6-35B-A3B",
+          "prompts": "66443176c9dc4e29",
+          "question_count": 120,
+          "questions": "f6d5f395f331f49b"
+        },
+        "producer_id": "C7/ladder-139416",
+        "ri_id": "ri5"
+      },
+      "sha256": "ec26f85405525f21b670b5cda5dba8513fa53ce46e6ff3fb385e0ab9180a4a98",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-ri5-52e5e1c4b30d/ri5.agent-runs.c7-ladder-139416.1832ca8ff291d3e0b4fdb3946a2f939efa4f20c0dada5e17379de474f494d9cd.json"
+    },
+    {
+      "key": {
+        "artifact_type": "agent-runs",
+        "config": {
+          "arm": {
+            "already_read_notice": true,
+            "description": "RI #4's dense-iterative with grep in place of dense retrieval",
+            "grep_max_results": 20,
+            "grep_preview_chars": 200,
+            "grep_scope": "corpus",
+            "ignore_case": true,
+            "max_model_calls": 6,
+            "name": "grep-iterative",
+            "narrow_above": 200,
+            "output_cap_tokens": 4000,
+            "read_before_answer": false,
+            "search_k": 5,
+            "search_preview_tokens": 512,
+            "tools": [
+              "grep"
+            ]
+          },
+          "corpus": "musique-11656",
+          "endpoint": "vector-cluster",
+          "max_tokens": 1024,
+          "model": "Qwen3_6-35B-A3B",
+          "prompts": "e487425e36290977",
+          "question_count": 75,
+          "questions": "67ef938b654a55e5"
+        },
+        "producer_id": "grep-iterative/4hop-11656",
+        "ri_id": "ri5"
+      },
+      "sha256": "a2879271b06b456a29d45a404498315f9bc1c31a612c79a1ff73ba47dfa06d08",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-ri5-52e5e1c4b30d/ri5.agent-runs.grep-iterative-4hop-11656.786bea13d6c001dd3c6b61f114c77a4a775aac5601f40db332b090d4bb8f8f65.json"
+    },
+    {
+      "key": {
+        "artifact_type": "agent-runs",
+        "config": {
+          "arm": {
+            "already_read_notice": true,
+            "description": "RI #4's dense-iterative with grep in place of dense retrieval",
+            "grep_max_results": 20,
+            "grep_preview_chars": 200,
+            "grep_scope": "corpus",
+            "ignore_case": true,
+            "max_model_calls": 6,
+            "name": "grep-iterative",
+            "narrow_above": 200,
+            "output_cap_tokens": 4000,
+            "read_before_answer": false,
+            "search_k": 5,
+            "search_preview_tokens": 512,
+            "tools": [
+              "grep"
+            ]
+          },
+          "corpus": "musique-11656",
+          "endpoint": "vector-cluster",
+          "max_tokens": 1024,
+          "model": "Qwen3_6-35B-A3B",
+          "prompts": "e487425e36290977",
+          "question_count": 3,
+          "questions": "77d02e927f59f0a0"
+        },
+        "producer_id": "grep-iterative/4hop-11656-first3",
+        "ri_id": "ri5"
+      },
+      "sha256": "c3cd25cc0be14f51b396a54f87af5437f0c40eeb80013fb218bb9e1b34623d2a",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-ri5-52e5e1c4b30d/ri5.agent-runs.grep-iterative-4hop-11656-first3.34d75a94fdc98b1d0033d3f9e9c770a2e3e2e5a743df045e7653f843f8ce4f64.json"
+    },
+    {
+      "key": {
+        "artifact_type": "agent-runs",
+        "config": {
+          "arm": {
+            "already_read_notice": true,
+            "description": "RI #4's dense-iterative with grep in place of dense retrieval",
+            "grep_max_results": 20,
+            "grep_preview_chars": 200,
+            "grep_scope": "corpus",
+            "ignore_case": true,
+            "max_model_calls": 6,
+            "name": "grep-iterative",
+            "narrow_above": 200,
+            "output_cap_tokens": 4000,
+            "read_before_answer": false,
+            "search_k": 5,
+            "search_preview_tokens": 512,
+            "tools": [
+              "grep"
+            ]
+          },
+          "corpus": "musique-11656",
+          "endpoint": "vector-cluster",
+          "max_tokens": 1024,
+          "model": "Qwen3_6-35B-A3B",
+          "prompts": "e487425e36290977",
+          "question_count": 300,
+          "questions": "8c2adc2885ab9902"
+        },
+        "producer_id": "grep-iterative/shared-11656",
+        "ri_id": "ri5"
+      },
+      "sha256": "3ecc85538649d4f3257377790a838f49ffd76fa19484be5337060a4f2da9ce30",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-ri5-52e5e1c4b30d/ri5.agent-runs.grep-iterative-shared-11656.3b7c914d34432abf45f6cd38e1a3358751c1248d09d2ddcd6d9815e15663a871.json"
+    },
+    {
+      "key": {
+        "artifact_type": "agent-runs",
+        "config": {
+          "arm": {
+            "already_read_notice": true,
+            "description": "RI #4's dense-iterative with grep in place of dense retrieval",
+            "grep_max_results": 20,
+            "grep_preview_chars": 200,
+            "grep_scope": "corpus",
+            "ignore_case": true,
+            "max_model_calls": 6,
+            "name": "grep-iterative",
+            "narrow_above": 200,
+            "output_cap_tokens": 4000,
+            "read_before_answer": false,
+            "search_k": 5,
+            "search_preview_tokens": 512,
+            "tools": [
+              "grep"
+            ]
+          },
+          "corpus": "musique-11656",
+          "endpoint": "vector-proxy-paid",
+          "max_tokens": 1024,
+          "model": "gemini-3.5-flash-lite",
+          "prompts": "e487425e36290977",
+          "question_count": 300,
+          "questions": "8c2adc2885ab9902"
+        },
+        "producer_id": "grep-iterative/shared-11656",
+        "ri_id": "ri5"
+      },
+      "sha256": "dd4cd029cfcdd8cbbada7d3ecace84ce7f9999c0ef292c78483adcbcfe4e2eb7",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-ri5-52e5e1c4b30d/ri5.agent-runs.grep-iterative-shared-11656.c8e813defd7e0cae532390a378ba667bf50114e5d6269a53ea96e927e521569e.json"
+    },
+    {
+      "key": {
+        "artifact_type": "agent-runs",
+        "config": {
+          "arm": {
+            "already_read_notice": true,
+            "description": "RI #4's dense-iterative with grep in place of dense retrieval",
+            "grep_max_results": 20,
+            "grep_preview_chars": 200,
+            "grep_scope": "corpus",
+            "ignore_case": true,
+            "max_model_calls": 6,
+            "name": "grep-iterative",
+            "narrow_above": 200,
+            "output_cap_tokens": 4000,
+            "read_before_answer": false,
+            "search_k": 5,
+            "search_preview_tokens": 512,
+            "tools": [
+              "grep"
+            ]
+          },
+          "corpus": "musique-11656",
+          "endpoint": "vector-proxy-paid",
+          "max_tokens": 1024,
+          "model": "gemini-3.5-flash-lite",
+          "prompts": "e487425e36290977",
+          "question_count": 6,
+          "questions": "23fddafb8f2a8f98"
+        },
+        "producer_id": "grep-iterative/shared-11656-first6",
+        "ri_id": "ri5"
+      },
+      "sha256": "b33d41abcf09e49fc5a52c4d69a6d8173087aac951b06bb94ed682c58ea32bb0",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-ri5-52e5e1c4b30d/ri5.agent-runs.grep-iterative-shared-11656-first6.f6e836beeae946ee0c102bb60e3ec22b840b220e9b6042c9c6b73b7ca4d838e3.json"
+    },
+    {
+      "key": {
+        "artifact_type": "describe-your-data-judgements",
+        "config": {
+          "corpus": "serverfault",
+          "endpoint": "vector-cluster",
+          "model": "Qwen3_6-35B-A3B",
+          "prompt": "evaluation.answers.JUDGE_PROMPT",
+          "upstream": {
+            "runs": "eeca2dca6a11f257ae16d3ba323a01bfe396cff59a32448fefe4690edd30ebf5"
+          }
+        },
+        "producer_id": "04_describe_your_data",
+        "ri_id": "ri5"
+      },
+      "sha256": "31488416491432232e2e05699a489f89a6dde01c7df2aed1941501e87c931890",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-ri5-52e5e1c4b30d/ri5.describe-your-data-judgements.04_describe_your_data.08347ef49daf09a57ed5ee3c64a442ee69f99e6f7cdb8a4e6f1a0fa550ffb1fb.json"
+    },
+    {
+      "key": {
+        "artifact_type": "describe-your-data-judgements",
+        "config": {
+          "corpus": "click",
+          "endpoint": "vector-cluster",
+          "model": "Qwen3_6-35B-A3B",
+          "prompt": "evaluation.answers.JUDGE_PROMPT",
+          "upstream": {
+            "runs": "3013994c133dfed372612a270124bfda98c676b7cae8448165e46f1704561e43"
+          }
+        },
+        "producer_id": "04_describe_your_data",
+        "ri_id": "ri5"
+      },
+      "sha256": "dedfd9cfd2a159f59b8e558033c070626bb881be90c5ad58fad270ea50dd043e",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-ri5-52e5e1c4b30d/ri5.describe-your-data-judgements.04_describe_your_data.67bdb7b7f96c6bacd8626e07f67114cd7b611b7656916fdb9d7cd4f48f87c333.json"
+    },
+    {
+      "key": {
+        "artifact_type": "describe-your-data-runs",
+        "config": {
+          "arm_configs": {
+            "D": "C7+description",
+            "G": "C7",
+            "P": "C7+profile-tools+description",
+            "Q": "open+profile-tools+description"
+          },
+          "arms": [
+            "G",
+            "D",
+            "P",
+            "Q"
+          ],
+          "corpus": "click",
+          "endpoint": "vector-cluster",
+          "instruction": "76d3b492e5a4",
+          "loop": "adk",
+          "model": "Qwen3_6-35B-A3B",
+          "profile": "5460fd7e5a2121e1",
+          "questions": "f4205952a08ad13d"
+        },
+        "producer_id": "04_describe_your_data",
+        "ri_id": "ri5"
+      },
+      "sha256": "0a5f7a40cbd6c2f4011c6bbd8b265ad6e20bb878f168136c9b679f5cb2b0e5b2",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-ri5-52e5e1c4b30d/ri5.describe-your-data-runs.04_describe_your_data.3013994c133dfed372612a270124bfda98c676b7cae8448165e46f1704561e43.json"
+    },
+    {
+      "key": {
+        "artifact_type": "describe-your-data-runs",
+        "config": {
+          "arm_configs": {
+            "D": "C7+description",
+            "G": "C7",
+            "P": "C7+profile-tools+description",
+            "Q": "open+profile-tools+description"
+          },
+          "arms": [
+            "G",
+            "D",
+            "P",
+            "Q"
+          ],
+          "corpus": "serverfault",
+          "endpoint": "vector-cluster",
+          "instruction": "76d3b492e5a4",
+          "loop": "adk",
+          "model": "Qwen3_6-35B-A3B",
+          "profile": "c4cae943b995106b",
+          "questions": "e5058e574a4dbacf"
+        },
+        "producer_id": "04_describe_your_data",
+        "ri_id": "ri5"
+      },
+      "sha256": "a6907dedfdaea96e1976dd51bbf2b65ad92c0fb50e15b166bf395b91b53c3eb5",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-ri5-52e5e1c4b30d/ri5.describe-your-data-runs.04_describe_your_data.eeca2dca6a11f257ae16d3ba323a01bfe396cff59a32448fefe4690edd30ebf5.json"
+    }
+  ]
+}

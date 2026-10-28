@@ -1,0 +1,199 @@
+{
+  "corpus": {
+    "name": "CUAD test split",
+    "licence": "CC BY 4.0",
+    "attribution": "Contract Understanding Atticus Dataset (CUAD) v1, The Atticus Project, licensed CC BY 4.0. https://doi.org/10.5281/zenodo.4595826",
+    "contracts": 5,
+    "chunks": 353,
+    "queries": 205,
+    "answerable_queries": 70,
+    "null_queries": 135,
+    "null_rate": 0.6585,
+    "mean_gold_chunks": 2.47
+  },
+  "model": "Qwen3_6-35B-A3B",
+  "judge": {
+    "model": "Qwen3_6-35B-A3B",
+    "temperature": 0,
+    "max_tokens": 512,
+    "reasoning": "disabled",
+    "protocol": "separate semantic correctness and evidence grounding passes",
+    "correctness_prompt_sha256": "03f4384fd52ea96fc60139f62c1946b24920af14899c5c10971a6efd13b3d535",
+    "grounding_prompt_sha256": "465f7c05e61791aa25ba3c26a5b5346de8439b2a5458282a3139dc26f494cc1b"
+  },
+  "embedding_controls": {
+    "model": "BAAI/bge-small-en-v1.5",
+    "dense_queries": "encode_queries with BGE's published query prompt",
+    "lightrag_callback": "encode for all embedding requests; the shared encode_queries method is not used"
+  },
+  "pipeline": {
+    "top_k": 10,
+    "evidence_budget": 5,
+    "max_attempts": 2,
+    "require_citations": true,
+    "sufficient": 0.6,
+    "insufficient": 0.0,
+    "grader": "LLMGrader",
+    "rewriter": null,
+    "thresholds_note": "measured on ContractNLI; the sweep is in THRESHOLDS.md. insufficient ships at 0.0 because 0.3 caught 20 more of 322 null questions and refused 43 more of 358 answerable ones. sufficient was flat from 0.2 to 1.0 within sampling error and stays at 0.6"
+  },
+  "arms": {
+    "dense": {
+      "questions": 205,
+      "answerable_queries": 70,
+      "null_queries": 135,
+      "decision_accuracy": 0.8048780487804879,
+      "balanced_accuracy": 0.783068783068783,
+      "null_false_answer_rate": 0.14814814814814814,
+      "answerable_abstentions": 20,
+      "correct_count": 39,
+      "answerable_correctness": 0.5571428571428572,
+      "answerable_grounding_including_abstentions": 0.9714285714285714
+    },
+    "lightrag-mix": {
+      "questions": 205,
+      "answerable_queries": 70,
+      "null_queries": 135,
+      "decision_accuracy": 0.7853658536585366,
+      "balanced_accuracy": 0.7441798941798943,
+      "null_false_answer_rate": 0.12592592592592589,
+      "answerable_abstentions": 27,
+      "correct_count": 29,
+      "answerable_correctness": 0.4142857142857143,
+      "answerable_grounding_including_abstentions": 0.9571428571428572
+    }
+  },
+  "decision_comparison": {
+    "questions": 205,
+    "dense_only_correct": 19,
+    "lightrag_only_correct": 15,
+    "mcnemar_exact_two_sided_p": 0.6075913612730801,
+    "inference_limit": "Descriptive paired test only: questions within a contract are correlated; this is not contract-level population inference."
+  },
+  "answer_correctness_comparison": {
+    "questions": 70,
+    "dense_only_correct": 16,
+    "lightrag_only_correct": 6,
+    "mcnemar_exact_two_sided_p": 0.052478790283203125,
+    "inference_limit": "Descriptive paired test only: questions within a contract are correlated; this is not contract-level population inference."
+  },
+  "retrieved_evidence_chars_before_truncation": {
+    "dense": {
+      "mean": 5886.8439024390245,
+      "maximum": 6000
+    },
+    "lightrag-mix": {
+      "mean": 6761.629268292683,
+      "maximum": 8165
+    }
+  },
+  "reader_evidence_chars": {
+    "dense": {
+      "mean": 5886.8439024390245,
+      "maximum": 6000,
+      "passage_cap": 5,
+      "characters_per_passage_cap": 1200,
+      "evidence_sha256": "db3d6328bf32e6ec7bf1e6f67b86c2ebabfe903123a8967836a94302c8d55fb9"
+    },
+    "lightrag-mix": {
+      "mean": 5626.585365853659,
+      "maximum": 6000,
+      "passage_cap": 5,
+      "characters_per_passage_cap": 1200,
+      "evidence_sha256": "ae6ad898f80d61d79cbe3c9654b366e4c3db1ca6a7c635847c10bd563947b986"
+    }
+  },
+  "input_sha256": {
+    "null_arm_summary.json": "18f4e0399b5ae43957b38e997555d9fc92af0e094861c20fc7f0cfadbfc8d210",
+    "answer_judging_summary.json": "2791a6d3ea8fa05ff3ed8a5291e3af2c3a4b603c1b6f86eb00d545d53c7c8078",
+    "outcomes_dense.json": "9d8ca2c0486c8438784f783319568b100453a3feed40e66a5759b8dd6e284d78",
+    "answer_judgements_dense.json": "fc4617f4af9dda08c3486a90550952dfdc6c472279a773d4dea753d213be6212",
+    "outcomes_lightrag-mix.json": "f5b2438a98bfc8eed4fa54903c7efab275bc21d0cea3c9b0ab7b5e0830fe1eb0",
+    "answer_judgements_lightrag-mix.json": "f3d70018b2af6f213a1ef57750a1e87f7f2be972cfd131dc4323555df072fdd4",
+    "scope_restoration.json": "a1a9b35163bd4e94a44c6aedc1c4c6dbf288f93c78060ca3ea422397c89047e0",
+    "index_resume_cost.json": "8a7ae14f049a2bbfce5db4ec2f028a0f7cc443e02d0a1352228cc3b6cb23220f"
+  },
+  "limitations": [
+    "Fixed leading contracts, not a random or full-corpus sample.",
+    "Same-model generation and judging can share errors; annotated null labels may omit valid answers.",
+    "Equal passage caps do not guarantee equal realized text lengths; both arm budgets are reported.",
+    "Embedding query conventions differ between adapters; this compares implemented configurations and does not isolate graph structure alone."
+  ],
+  "graph_query_cost": {
+    "calls": 41,
+    "prompt_tokens": 28957,
+    "completion_tokens": 3213,
+    "total_tokens": 32170,
+    "cache_hits": null,
+    "wall_seconds": null,
+    "questions": 205,
+    "documents": 5,
+    "evidence_sha256": "ae6ad898f80d61d79cbe3c9654b366e4c3db1ca6a7c635847c10bd563947b986",
+    "recovery": {
+      "method": "41 unique completed keyword response rows form final cache suffix before any generation",
+      "cache_sha256_before_generation": "b092ad12b4d4bbb61bf85e8c64c25e1098c6863edf55631fb04e45bcfa90d9ff",
+      "limitation": "Completed unique requests are a lower bound; retry billing, cache hits and timing were not persisted."
+    }
+  },
+  "scope_restoration": {
+    "reason": "LightRAG stripped trailing whitespace from one CUAD document ID; restored only exact stripped matches in its per-contract workspace",
+    "passages_restored": 410,
+    "text_and_ranking_unchanged": true,
+    "original_evidence_sha256": "ed3cc9cdf53af4ac545473bc909a38b9c89e987d5f574d8179fd50443c8fa635",
+    "evidence_sha256": "ae6ad898f80d61d79cbe3c9654b366e4c3db1ca6a7c635847c10bd563947b986"
+  },
+  "prior_index_run": {
+    "recorded_at": "2026-10-20T20:01:58.553534+00:00",
+    "reason": "same five-contract pilot resumed at max_async=8, retaining completed indexes and responses; request-rate cap remains 40/minute",
+    "observed_completed_calls": 185,
+    "prompt_tokens": 525336,
+    "completion_tokens": 138139,
+    "total_tokens": 663475,
+    "source": "all pre-resume response-cache rows; only indexing has run",
+    "log_sha256": {
+      "ri1-cuad-null.log": "7296e89b2fb77e2dfda3d4a5d9c1b911c4125a27fddcf821eace64a555cea45e",
+      "ri1-cuad-null-resumed.log": "abdc68c3210aa15bec7bc84824d3664c7e669eae076b1da68a89c728459ea5dc"
+    },
+    "completed_contracts": [
+      "index 1/5 doc LohaCompanyltd_20191209_F-1_EX-10.16_11917878_EX-10.16_Supply Agreement: 20 calls, 73805 tokens, 1522.9s, processed",
+      "index 1/5 doc LohaCompanyltd_20191209_F-1_EX-10.16_11917878_EX-10.16_Supply Agreement: 0 calls, 0 tokens, 0.0s, failed/processed",
+      "index 2/5 doc CENTRACKINTERNATIONALINC_10_29_1999-EX-10.3-WEB SITE HOSTING AGREEMENT: 27 calls, 83216 tokens, 443.5s, failed/processed"
+    ],
+    "previous_ledger": {
+      "recorded_at": "2026-10-20T19:11:30.926131+00:00",
+      "reason": "same five-contract pilot resumed with max_async=4 instead of 1; completed graph and response caches preserved",
+      "observed_completed_calls": 22,
+      "prompt_tokens": 63250,
+      "completion_tokens": 17188,
+      "total_tokens": 80438,
+      "source": "pre-resume private response-cache rows; only indexing had run",
+      "log_sha256": "7296e89b2fb77e2dfda3d4a5d9c1b911c4125a27fddcf821eace64a555cea45e",
+      "completed_contracts": [
+        "index 1/5 doc LohaCompanyltd_20191209_F-1_EX-10.16_11917878_EX-10.16_Supply Agreement: 20 calls, 73805 tokens, 1522.9s, processed"
+      ],
+      "limitations": [
+        "An interrupted in-flight request may still be billed by the provider; its unknown usage is not included in completed-response totals.",
+        "The resumed runner reports new calls only; include this ledger when reporting total observed indexing cost."
+      ]
+    },
+    "limitations": [
+      "Two concurrency adjustments interrupted in-flight requests. Their unknown provider billing is excluded from completed-response totals.",
+      "This is a cumulative ledger, including the earlier 22 cached responses; do not add the previous ledger again."
+    ]
+  },
+  "observed_index_cost_across_runs": {
+    "calls": 723,
+    "total_tokens": 2359835,
+    "scope": "lower bound: prior unique cached completions plus new metered responses; cache rows do not record repeated calls or interrupted request billing"
+  },
+  "index_diagnostics": {
+    "format_warning_events": 99,
+    "zero_relation_extraction_events": 12,
+    "log_sha256": {
+      "ri1-cuad-null.log": "7296e89b2fb77e2dfda3d4a5d9c1b911c4125a27fddcf821eace64a555cea45e",
+      "ri1-cuad-null-resumed.log": "abdc68c3210aa15bec7bc84824d3664c7e669eae076b1da68a89c728459ea5dc",
+      "ri1-cuad-null-eight.log": "2d9ec983368491707ae822fa442117df8373c9b40794e0960e4dd2c966239df3"
+    },
+    "interpretation": "Warning events can repeat during retries. Malformed graph records limit conclusions about the method; a processed document status does not establish extraction quality."
+  }
+}

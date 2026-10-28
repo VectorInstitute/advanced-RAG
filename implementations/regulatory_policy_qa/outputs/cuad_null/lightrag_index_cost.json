@@ -1,0 +1,89 @@
+{
+  "documents": 5,
+  "doc_chars": 352270,
+  "chunk_token_size": 300,
+  "chunk_overlap_token_size": 50,
+  "llm_model_max_async": 8,
+  "wall_seconds": 6427.4,
+  "totals": {
+    "calls": 538,
+    "prompt_tokens": 1340364,
+    "completion_tokens": 355996,
+    "total_tokens": 1696360,
+    "cache_hits": 136
+  },
+  "per_document": {
+    "LohaCompanyltd_20191209_F-1_EX-10.16_11917878_EX-10.16_Supply Agreement": {
+      "calls": 0,
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "total_tokens": 0,
+      "cache_hits": 0,
+      "empty_responses": 0,
+      "call_seconds": 0.0,
+      "doc_chars": 11475,
+      "wall_seconds": 0.0,
+      "status": "processed"
+    },
+    "CENTRACKINTERNATIONALINC_10_29_1999-EX-10.3-WEB SITE HOSTING AGREEMENT": {
+      "calls": 0,
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "total_tokens": 0,
+      "cache_hits": 0,
+      "empty_responses": 0,
+      "call_seconds": 0.0,
+      "doc_chars": 15176,
+      "wall_seconds": 0.0,
+      "status": "processed"
+    },
+    "DovaPharmaceuticalsInc_20181108_10-Q_EX-10.2_11414857_EX-10.2_Promotion Agreement": {
+      "calls": 227,
+      "prompt_tokens": 536714,
+      "completion_tokens": 155142,
+      "total_tokens": 691856,
+      "cache_hits": 136,
+      "empty_responses": 0,
+      "call_seconds": 15807.9,
+      "doc_chars": 175580,
+      "wall_seconds": 2733.7,
+      "status": "processed"
+    },
+    "PACIRA PHARMACEUTICALS, INC. - A_R STRATEGIC LICENSING, DISTRIBUTION AND MARKETING AGREEMENT ": {
+      "calls": 301,
+      "prompt_tokens": 774417,
+      "completion_tokens": 192369,
+      "total_tokens": 966786,
+      "cache_hits": 0,
+      "empty_responses": 0,
+      "call_seconds": 20985.3,
+      "doc_chars": 145168,
+      "wall_seconds": 3322.3,
+      "status": "processed"
+    },
+    "ThriventVariableInsuranceAccountB_20190701_N-6_EX-99.D(IV)_11720968_EX-99.D(IV)_Endorsement Agreement": {
+      "calls": 10,
+      "prompt_tokens": 29233,
+      "completion_tokens": 8485,
+      "total_tokens": 37718,
+      "cache_hits": 0,
+      "empty_responses": 0,
+      "call_seconds": 847.4,
+      "doc_chars": 4871,
+      "wall_seconds": 369.7,
+      "status": "processed"
+    }
+  },
+  "status_reconciliation": {
+    "reason": "LightRAG duplicate-attempt receipts are not source-document failures; all referenced originals independently verified processed",
+    "original_report_sha256": "a94f24a05e0f0a2834afb8dca40e42912fbc0334c1835fc800efa9254bfea186",
+    "duplicate_receipts": {
+      "DovaPharmaceuticalsInc_20181108_10-Q_EX-10.2_11414857_EX-10.2_Promotion Agreement": 1,
+      "ThriventVariableInsuranceAccountB_20190701_N-6_EX-99.D(IV)_11720968_EX-99.D(IV)_Endorsement Agreement": 0,
+      "PACIRA PHARMACEUTICALS, INC. - A_R STRATEGIC LICENSING, DISTRIBUTION AND MARKETING AGREEMENT ": 0,
+      "LohaCompanyltd_20191209_F-1_EX-10.16_11917878_EX-10.16_Supply Agreement": 2,
+      "CENTRACKINTERNATIONALINC_10_29_1999-EX-10.3-WEB SITE HOSTING AGREEMENT": 2
+    },
+    "cost_fields_unchanged": true
+  }
+}

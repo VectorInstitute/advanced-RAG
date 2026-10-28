@@ -1,0 +1,57 @@
+{
+  "note": "Provenance for the list-shaped results in this directory, whose readers expect a bare list. Dict-shaped results carry their own produced_by.",
+  "files": {
+    "outcomes_always-abstain.json": {
+      "model": null,
+      "response_models": [],
+      "family": null,
+      "endpoint": null,
+      "producer": "regulatory_policy_qa/graphrag_null/run_null_arm.py",
+      "usage": {},
+      "note": "Control arm always-abstain: decided without a model call. The run's model was Qwen3_6-35B-A3B.",
+      "source": "replay_provenance.json in this directory (answering_model)",
+      "model_calls": 0
+    },
+    "outcomes_always-answer.json": {
+      "model": null,
+      "response_models": [],
+      "family": null,
+      "endpoint": null,
+      "producer": "regulatory_policy_qa/graphrag_null/run_null_arm.py",
+      "usage": {},
+      "note": "Control arm always-answer: decided without a model call. The run's model was Qwen3_6-35B-A3B.",
+      "source": "replay_provenance.json in this directory (answering_model)",
+      "model_calls": 0
+    },
+    "outcomes_dense.json": {
+      "model": "Qwen3_6-35B-A3B",
+      "response_models": [],
+      "family": "onprem",
+      "endpoint": "vector-cluster",
+      "producer": "regulatory_policy_qa/graphrag_null/run_null_arm.py",
+      "usage": {},
+      "note": "Arm dense: grading and generation, reasoning disabled.",
+      "source": "replay_provenance.json in this directory (answering_model)",
+      "request": {
+        "max_tokens": 512,
+        "temperature": 0,
+        "thinking": "disabled"
+      }
+    },
+    "outcomes_lightrag-mix.json": {
+      "model": "Qwen3_6-35B-A3B",
+      "response_models": [],
+      "family": "onprem",
+      "endpoint": "vector-cluster",
+      "producer": "regulatory_policy_qa/graphrag_null/run_null_arm.py",
+      "usage": {},
+      "note": "Arm lightrag-mix: grading and generation, reasoning disabled.",
+      "source": "replay_provenance.json in this directory (answering_model)",
+      "request": {
+        "max_tokens": 512,
+        "temperature": 0,
+        "thinking": "disabled"
+      }
+    }
+  }
+}

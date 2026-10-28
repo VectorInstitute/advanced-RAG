@@ -1,0 +1,27 @@
+{
+ "produced_by": {
+  "model": "Qwen3_8-27B",
+  "reader": "Qwen3_8-27B",
+  "enrichment": "Qwen3_8-27B",
+  "question_generator": "Qwen3_8-27B",
+  "question_checker": "Qwen3_8-Flash-Next",
+  "judge": "Qwen3_6-35B-A3B",
+  "endpoint": "vector-cluster",
+  "embeddings": "BAAI/bge-small-en-v1.5 (local)",
+  "page_embeddings": "Qdrant/colmodernvbert (local)",
+  "producer": "implementations/special_topics/visual_documents/build_reference.py",
+  "mode": "explore: one run, no seeds beyond the fixed sampling seed 0"
+ },
+ "E1": {
+  "n": 30,
+  "wrong_value": 0.0333,
+  "invented": 0.0333,
+  "missing_values": 0.1
+ },
+ "E2": {
+  "n": 30,
+  "wrong_value": 0.0667,
+  "invented": 0.0,
+  "missing_values": 0.0
+ }
+}

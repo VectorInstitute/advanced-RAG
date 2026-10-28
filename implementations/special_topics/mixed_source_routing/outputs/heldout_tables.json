@@ -1,0 +1,510 @@
+{
+ "produced_by": {
+  "model": "Qwen3_6-35B-A3B",
+  "judge": "Qwen3_6-35B-A3B",
+  "embeddings": "BAAI/bge-small-en-v1.5 (local)",
+  "endpoint": "vector-cluster",
+  "producer": "implementations/special_topics/mixed_source_routing/build_reference.py",
+  "mode": "explore: one run, sampling seed 1, filings outside the reference question set",
+  "question_writer": "Qwen3_6-35B-A3B",
+  "question_checker": "Qwen3_8-27B",
+  "rate_per_minute": 20
+ },
+ "filings": 19,
+ "filings_overlapping_reference_set": 0,
+ "funnel": [
+  {
+   "kind": "table",
+   "stage": "filing has a table-only cell",
+   "entered": 36,
+   "passed": 34
+  },
+  {
+   "kind": "table",
+   "stage": "question written",
+   "entered": 68,
+   "passed": 68
+  },
+  {
+   "kind": "table",
+   "stage": "question names the column's year",
+   "entered": 68,
+   "passed": 68
+  },
+  {
+   "kind": "table",
+   "stage": "checker answers from the source alone",
+   "entered": 68,
+   "passed": 65
+  }
+ ],
+ "routes": {
+  "sql_plain": "SQL from the reference prompt",
+  "sql_linked": "SQL from the follow-up prompt (filing list and matching rules)",
+  "table_chunks": "top 5 table chunks by dense search",
+  "table_hybrid": "follow-up SQL rows and the top 5 table chunks, one reading call"
+ },
+ "results": {
+  "sql_plain": {
+   "label": "SQL from the reference prompt",
+   "questions": 20,
+   "correct": 7,
+   "calls": 2.75,
+   "prompt_tokens": 1649,
+   "sql_no_rows": 11,
+   "sql_errors": 0,
+   "sql_reference_in_rows": 7
+  },
+  "sql_linked": {
+   "label": "SQL from the follow-up prompt (filing list and matching rules)",
+   "questions": 20,
+   "correct": 12,
+   "calls": 2.25,
+   "prompt_tokens": 4508,
+   "sql_no_rows": 3,
+   "sql_errors": 0,
+   "sql_reference_in_rows": 13
+  },
+  "table_chunks": {
+   "label": "top 5 table chunks by dense search",
+   "questions": 20,
+   "correct": 15,
+   "calls": 1.0,
+   "prompt_tokens": 1658
+  },
+  "table_hybrid": {
+   "label": "follow-up SQL rows and the top 5 table chunks, one reading call",
+   "questions": 20,
+   "correct": 16,
+   "calls": 2.25,
+   "prompt_tokens": 6062
+  },
+  "paired": {
+   "linked_only": 6,
+   "plain_only": 1,
+   "any_source": 19
+  }
+ },
+ "per_question": [
+  {
+   "qid": "msr-189540bce3",
+   "filing": "WALMART_2018_10K",
+   "sources": [
+    "WALMART_2018_10K#i0395@r2c4"
+   ],
+   "correct": {
+    "sql_plain": false,
+    "sql_linked": false,
+    "table_chunks": true,
+    "table_hybrid": true
+   },
+   "sql_rows": {
+    "sql_plain": 0,
+    "sql_linked": 30
+   },
+   "reference_in_rows": {
+    "sql_plain": false,
+    "sql_linked": false
+   }
+  },
+  {
+   "qid": "msr-1da70efdcf",
+   "filing": "MGMRESORTS_2020_10K",
+   "sources": [
+    "MGMRESORTS_2020_10K#i0783@r4c1"
+   ],
+   "correct": {
+    "sql_plain": false,
+    "sql_linked": true,
+    "table_chunks": false,
+    "table_hybrid": false
+   },
+   "sql_rows": {
+    "sql_plain": 0,
+    "sql_linked": 14
+   },
+   "reference_in_rows": {
+    "sql_plain": false,
+    "sql_linked": true
+   }
+  },
+  {
+   "qid": "msr-225954a613",
+   "filing": "LOCKHEEDMARTIN_2020_10K",
+   "sources": [
+    "LOCKHEEDMARTIN_2020_10K#i0740@r12c3"
+   ],
+   "correct": {
+    "sql_plain": false,
+    "sql_linked": true,
+    "table_chunks": true,
+    "table_hybrid": true
+   },
+   "sql_rows": {
+    "sql_plain": 0,
+    "sql_linked": 3
+   },
+   "reference_in_rows": {
+    "sql_plain": false,
+    "sql_linked": true
+   }
+  },
+  {
+   "qid": "msr-2e2a4b5c84",
+   "filing": "BLOCK_2020_10K",
+   "sources": [
+    "BLOCK_2020_10K#i1001@r1c2"
+   ],
+   "correct": {
+    "sql_plain": true,
+    "sql_linked": true,
+    "table_chunks": true,
+    "table_hybrid": true
+   },
+   "sql_rows": {
+    "sql_plain": 9,
+    "sql_linked": 9
+   },
+   "reference_in_rows": {
+    "sql_plain": true,
+    "sql_linked": true
+   }
+  },
+  {
+   "qid": "msr-30e54ab303",
+   "filing": "BESTBUY_2023_10K",
+   "sources": [
+    "BESTBUY_2023_10K#i0921@r3c1"
+   ],
+   "correct": {
+    "sql_plain": true,
+    "sql_linked": true,
+    "table_chunks": true,
+    "table_hybrid": false
+   },
+   "sql_rows": {
+    "sql_plain": 3,
+    "sql_linked": 1
+   },
+   "reference_in_rows": {
+    "sql_plain": true,
+    "sql_linked": true
+   }
+  },
+  {
+   "qid": "msr-4b2457bd95",
+   "filing": "VERIZON_2021_10K",
+   "sources": [
+    "VERIZON_2021_10K#i0932@r7c1"
+   ],
+   "correct": {
+    "sql_plain": true,
+    "sql_linked": false,
+    "table_chunks": true,
+    "table_hybrid": true
+   },
+   "sql_rows": {
+    "sql_plain": 7,
+    "sql_linked": 0
+   },
+   "reference_in_rows": {
+    "sql_plain": true,
+    "sql_linked": false
+   }
+  },
+  {
+   "qid": "msr-5ffa391fe2",
+   "filing": "CVSHEALTH_2022_10K",
+   "sources": [
+    "CVSHEALTH_2022_10K#i1586@r3c3"
+   ],
+   "correct": {
+    "sql_plain": false,
+    "sql_linked": true,
+    "table_chunks": false,
+    "table_hybrid": true
+   },
+   "sql_rows": {
+    "sql_plain": 0,
+    "sql_linked": 2
+   },
+   "reference_in_rows": {
+    "sql_plain": false,
+    "sql_linked": true
+   }
+  },
+  {
+   "qid": "msr-614a5fab0f",
+   "filing": "CORNING_2020_10K",
+   "sources": [
+    "CORNING_2020_10K#i0907@r6c2"
+   ],
+   "correct": {
+    "sql_plain": false,
+    "sql_linked": false,
+    "table_chunks": true,
+    "table_hybrid": true
+   },
+   "sql_rows": {
+    "sql_plain": 0,
+    "sql_linked": 9
+   },
+   "reference_in_rows": {
+    "sql_plain": false,
+    "sql_linked": true
+   }
+  },
+  {
+   "qid": "msr-68b0f43690",
+   "filing": "COCACOLA_2017_10K",
+   "sources": [
+    "COCACOLA_2017_10K#i0754@r15c1"
+   ],
+   "correct": {
+    "sql_plain": false,
+    "sql_linked": true,
+    "table_chunks": true,
+    "table_hybrid": true
+   },
+   "sql_rows": {
+    "sql_plain": 0,
+    "sql_linked": 5
+   },
+   "reference_in_rows": {
+    "sql_plain": false,
+    "sql_linked": true
+   }
+  },
+  {
+   "qid": "msr-6a304722fd",
+   "filing": "PEPSICO_2022_10K",
+   "sources": [
+    "PEPSICO_2022_10K#i0935@r14c1"
+   ],
+   "correct": {
+    "sql_plain": true,
+    "sql_linked": true,
+    "table_chunks": true,
+    "table_hybrid": true
+   },
+   "sql_rows": {
+    "sql_plain": 22,
+    "sql_linked": 4
+   },
+   "reference_in_rows": {
+    "sql_plain": true,
+    "sql_linked": true
+   }
+  },
+  {
+   "qid": "msr-6d4e0cc358",
+   "filing": "3M_2018_10K",
+   "sources": [
+    "3M_2018_10K#i0555@r4c2"
+   ],
+   "correct": {
+    "sql_plain": false,
+    "sql_linked": true,
+    "table_chunks": true,
+    "table_hybrid": true
+   },
+   "sql_rows": {
+    "sql_plain": 0,
+    "sql_linked": 2
+   },
+   "reference_in_rows": {
+    "sql_plain": false,
+    "sql_linked": true
+   }
+  },
+  {
+   "qid": "msr-79ac102e41",
+   "filing": "AMERICANWATERWORKS_2021_10K",
+   "sources": [
+    "AMERICANWATERWORKS_2021_10K#i0562@r13c4"
+   ],
+   "correct": {
+    "sql_plain": false,
+    "sql_linked": true,
+    "table_chunks": true,
+    "table_hybrid": true
+   },
+   "sql_rows": {
+    "sql_plain": 0,
+    "sql_linked": 4
+   },
+   "reference_in_rows": {
+    "sql_plain": false,
+    "sql_linked": true
+   }
+  },
+  {
+   "qid": "msr-7f7c559ced",
+   "filing": "BESTBUY_2017_10K",
+   "sources": [
+    "BESTBUY_2017_10K#i1092@r6c4"
+   ],
+   "correct": {
+    "sql_plain": true,
+    "sql_linked": true,
+    "table_chunks": true,
+    "table_hybrid": true
+   },
+   "sql_rows": {
+    "sql_plain": 5,
+    "sql_linked": 4
+   },
+   "reference_in_rows": {
+    "sql_plain": true,
+    "sql_linked": true
+   }
+  },
+  {
+   "qid": "msr-922116de9e",
+   "filing": "BOEING_2018_10K",
+   "sources": [
+    "BOEING_2018_10K#i0805@r2c3"
+   ],
+   "correct": {
+    "sql_plain": false,
+    "sql_linked": false,
+    "table_chunks": true,
+    "table_hybrid": true
+   },
+   "sql_rows": {
+    "sql_plain": 3,
+    "sql_linked": 1
+   },
+   "reference_in_rows": {
+    "sql_plain": false,
+    "sql_linked": false
+   }
+  },
+  {
+   "qid": "msr-a443c4a237",
+   "filing": "BLOCK_2020_10K",
+   "sources": [
+    "BLOCK_2020_10K#i0783@r23c3"
+   ],
+   "correct": {
+    "sql_plain": false,
+    "sql_linked": false,
+    "table_chunks": false,
+    "table_hybrid": false
+   },
+   "sql_rows": {
+    "sql_plain": 0,
+    "sql_linked": 0
+   },
+   "reference_in_rows": {
+    "sql_plain": false,
+    "sql_linked": false
+   }
+  },
+  {
+   "qid": "msr-b0ce4cae34",
+   "filing": "JPMORGAN_2023Q2_10Q",
+   "sources": [
+    "JPMORGAN_2023Q2_10Q#i1099@r8c5"
+   ],
+   "correct": {
+    "sql_plain": false,
+    "sql_linked": false,
+    "table_chunks": true,
+    "table_hybrid": false
+   },
+   "sql_rows": {
+    "sql_plain": 30,
+    "sql_linked": 16
+   },
+   "reference_in_rows": {
+    "sql_plain": false,
+    "sql_linked": false
+   }
+  },
+  {
+   "qid": "msr-dcbcee5dea",
+   "filing": "AMD_2015_10K",
+   "sources": [
+    "AMD_2015_10K#i0631@r7c5"
+   ],
+   "correct": {
+    "sql_plain": false,
+    "sql_linked": false,
+    "table_chunks": true,
+    "table_hybrid": true
+   },
+   "sql_rows": {
+    "sql_plain": 0,
+    "sql_linked": 0
+   },
+   "reference_in_rows": {
+    "sql_plain": false,
+    "sql_linked": false
+   }
+  },
+  {
+   "qid": "msr-e53c2caf4e",
+   "filing": "MICROSOFT_2016_10K",
+   "sources": [
+    "MICROSOFT_2016_10K#i0921@r3c2"
+   ],
+   "correct": {
+    "sql_plain": false,
+    "sql_linked": false,
+    "table_chunks": true,
+    "table_hybrid": true
+   },
+   "sql_rows": {
+    "sql_plain": 0,
+    "sql_linked": 30
+   },
+   "reference_in_rows": {
+    "sql_plain": false,
+    "sql_linked": false
+   }
+  },
+  {
+   "qid": "msr-e5fda108dc",
+   "filing": "CORNING_2022_10K",
+   "sources": [
+    "CORNING_2022_10K#i1150@r8c3"
+   ],
+   "correct": {
+    "sql_plain": true,
+    "sql_linked": true,
+    "table_chunks": false,
+    "table_hybrid": true
+   },
+   "sql_rows": {
+    "sql_plain": 9,
+    "sql_linked": 9
+   },
+   "reference_in_rows": {
+    "sql_plain": true,
+    "sql_linked": true
+   }
+  },
+  {
+   "qid": "msr-e63d00df65",
+   "filing": "GENERALMILLS_2022_10K",
+   "sources": [
+    "GENERALMILLS_2022_10K#i0472@r5c1"
+   ],
+   "correct": {
+    "sql_plain": true,
+    "sql_linked": true,
+    "table_chunks": false,
+    "table_hybrid": true
+   },
+   "sql_rows": {
+    "sql_plain": 24,
+    "sql_linked": 17
+   },
+   "reference_in_rows": {
+    "sql_plain": true,
+    "sql_linked": true
+   }
+  }
+ ]
+}

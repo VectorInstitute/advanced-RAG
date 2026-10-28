@@ -1,0 +1,122 @@
+{
+  "corpus": {
+    "revision": "5ec05b38deecc3318bb432c69865959c56058990",
+    "corpus_sha256": "73157a03ce3f0b1a5673dd5dc12bb970c24976dbffc688af9eecdd758c97ffcb",
+    "passages": 11656,
+    "questions": 1000
+  },
+  "hipporag2": {
+    "status": "verified",
+    "implementation": "atlas-rag",
+    "index_coverage": {
+      "complete": true,
+      "represented_passages": 11656
+    },
+    "release_used": {
+      "key": {
+        "artifact_type": "graph-index",
+        "config": {
+          "corpus_passages": 11656,
+          "dataset_revision": "5ec05b38deecc3318bb432c69865959c56058990",
+          "encoder": "BAAI/bge-small-en-v1.5",
+          "include_concept": false,
+          "include_events": false,
+          "keyword": "musique",
+          "method": "hipporag2",
+          "model": "Qwen3_6-35B-A3B",
+          "passages": 11656,
+          "stages": "entity_relation"
+        },
+        "producer_id": "hipporag2",
+        "ri_id": "ri4"
+      },
+      "payload_sha256": "bca72c067940681d22176c02b846be11e28fd3991b259c9a75e5b97fff9cab3e",
+      "payload_url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-ri4-bd05f7bb16c6/ri4.graph-index.hipporag2.ccd372ca76bb838d549f8f9292ada8da47221296a1bb50bd09d1ff414e64c6cd.artifact",
+      "sha256": "c38b9130a0adfa8b618395c1ffc183390d3722d964e19d7652aeed4189a71dab",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-ri4-bd05f7bb16c6/ri4.graph-index.hipporag2.ccd372ca76bb838d549f8f9292ada8da47221296a1bb50bd09d1ff414e64c6cd.json"
+    },
+    "release_pinned": {
+      "key": {
+        "artifact_type": "graph-index",
+        "config": {
+          "corpus_passages": 11656,
+          "dataset_revision": "5ec05b38deecc3318bb432c69865959c56058990",
+          "encoder": "BAAI/bge-small-en-v1.5",
+          "include_concept": false,
+          "include_events": false,
+          "keyword": "musique",
+          "method": "hipporag2",
+          "model": "Qwen3_6-35B-A3B",
+          "passages": 11656,
+          "stages": "entity_relation"
+        },
+        "producer_id": "hipporag2",
+        "ri_id": "ri4"
+      },
+      "payload_sha256": "bca72c067940681d22176c02b846be11e28fd3991b259c9a75e5b97fff9cab3e",
+      "payload_url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-ri4-bd05f7bb16c6/ri4.graph-index.hipporag2.ccd372ca76bb838d549f8f9292ada8da47221296a1bb50bd09d1ff414e64c6cd.artifact",
+      "sha256": "c38b9130a0adfa8b618395c1ffc183390d3722d964e19d7652aeed4189a71dab",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-ri4-bd05f7bb16c6/ri4.graph-index.hipporag2.ccd372ca76bb838d549f8f9292ada8da47221296a1bb50bd09d1ff414e64c6cd.json"
+    }
+  },
+  "lightrag": {
+    "status": "verified",
+    "implementation": "LightRAG",
+    "index_coverage": {
+      "complete": true,
+      "represented_passages": 11656,
+      "missing_passage_ids": [],
+      "allow_incomplete": false
+    },
+    "release_used": {
+      "key": {
+        "artifact_type": "graph-index",
+        "config": {
+          "chunk_tokens": 300,
+          "corpus_passages": 11656,
+          "dataset_revision": "5ec05b38deecc3318bb432c69865959c56058990",
+          "encoder": "BAAI/bge-small-en-v1.5",
+          "gleaning": "default",
+          "method": "lightrag",
+          "model": "Qwen3_6-35B-A3B",
+          "overlap": 50,
+          "passages": 11656
+        },
+        "producer_id": "lightrag",
+        "ri_id": "ri4"
+      },
+      "payload_sha256": "31b4656e2e74ec5bc7d88aa512fa9accad194fcf02fe5cfe18da8784f4df2a39",
+      "payload_url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-ri4-bd05f7bb16c6/ri4.graph-index.lightrag.93d5ddddf5f3c26978b0315d9a435adb0c249ff2624fc51f5c388621080ab03c.artifact",
+      "sha256": "62dfee541b66ed07a18ed09962dddebcceccea774a0fbfbeb61a71a18df4d4fd",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-ri4-bd05f7bb16c6/ri4.graph-index.lightrag.93d5ddddf5f3c26978b0315d9a435adb0c249ff2624fc51f5c388621080ab03c.json"
+    },
+    "release_pinned": {
+      "key": {
+        "artifact_type": "graph-index",
+        "config": {
+          "chunk_tokens": 300,
+          "corpus_passages": 11656,
+          "dataset_revision": "5ec05b38deecc3318bb432c69865959c56058990",
+          "encoder": "BAAI/bge-small-en-v1.5",
+          "gleaning": "default",
+          "method": "lightrag",
+          "model": "Qwen3_6-35B-A3B",
+          "overlap": 50,
+          "passages": 11656
+        },
+        "producer_id": "lightrag",
+        "ri_id": "ri4"
+      },
+      "payload_sha256": "31b4656e2e74ec5bc7d88aa512fa9accad194fcf02fe5cfe18da8784f4df2a39",
+      "payload_url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-ri4-bd05f7bb16c6/ri4.graph-index.lightrag.93d5ddddf5f3c26978b0315d9a435adb0c249ff2624fc51f5c388621080ab03c.artifact",
+      "sha256": "62dfee541b66ed07a18ed09962dddebcceccea774a0fbfbeb61a71a18df4d4fd",
+      "url": "https://github.com/VectorInstitute/advanced-RAG/releases/download/reference-ri4-bd05f7bb16c6/ri4.graph-index.lightrag.93d5ddddf5f3c26978b0315d9a435adb0c249ff2624fc51f5c388621080ab03c.json"
+    }
+  },
+  "produced_by": {
+    "model": "Qwen3_6-35B-A3B",
+    "endpoint": "vector-cluster",
+    "producer": "build_summaries.py",
+    "note": "Index coverage recorded by each graph run."
+  }
+}

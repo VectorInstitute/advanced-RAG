@@ -1,0 +1,41 @@
+{
+  "records": [
+    {
+      "method": "dense",
+      "corpus": "musique",
+      "original_report_sha256": "7d48dc9b0f9e8a003d35a3ae400479cbd451cc0772b8ddc7d0c13b8b2ff1c8bf",
+      "predictions_match_current_replay": true,
+      "usage": {
+        "questions": 1000,
+        "calls": 999,
+        "prompt_tokens": 865326,
+        "completion_tokens": 27583,
+        "total_tokens": 892909,
+        "tool_calls": 0,
+        "cache_hits": 1,
+        "empty_responses": 0,
+        "calls_missing_usage": 0,
+        "service_seconds": 755.9
+      }
+    },
+    {
+      "method": "decomposition",
+      "corpus": "musique",
+      "original_report_sha256": "e9d8aea294b2d4fb470cd4c3c89edd51ca9b2fa8d4d68b2fe32d1c1d050a716d",
+      "predictions_match_current_replay": true,
+      "usage": {
+        "questions": 1000,
+        "calls": 1892,
+        "prompt_tokens": 934310,
+        "completion_tokens": 69194,
+        "total_tokens": 1003504,
+        "tool_calls": 0,
+        "cache_hits": 108,
+        "empty_responses": 0,
+        "calls_missing_usage": 0,
+        "service_seconds": 1259.003
+      }
+    }
+  ],
+  "note": "Recorded original execution usage, including its own cache hits. This is distinct from current warm replay and is not a cache-free cost estimate."
+}

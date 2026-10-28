@@ -1,0 +1,181 @@
+{
+  "method": "dense-bge-small",
+  "corpus_revision": "5ec05b38deecc3318bb432c69865959c56058990",
+  "corpus_passages": 11656,
+  "questions": 1000,
+  "embeddings": {
+    "identity": {
+      "corpus_revision": "5ec05b38deecc3318bb432c69865959c56058990",
+      "corpus_sha256": "73157a03ce3f0b1a5673dd5dc12bb970c24976dbffc688af9eecdd758c97ffcb",
+      "questions_sha256": "98ed4e21d3076532f6388d42320fb809599c63a0d8dffca8ece5e41922be6b46",
+      "encoder": {
+        "hf_id": "BAAI/bge-small-en-v1.5",
+        "label": "bge-small-en-v1.5",
+        "params_millions": null,
+        "dimension": 384,
+        "pooling": "cls",
+        "max_seq_length": 512,
+        "truncate_dim": null,
+        "query_prompt": "Represent this sentence for searching relevant passages: ",
+        "document_prompt": "",
+        "note": "",
+        "revision": "5c38ec7c405ec4b44b94cc5a9bb96e735b38267a"
+      },
+      "passage_format": "title + newline + text",
+      "normalised": true,
+      "dtype": "float32"
+    },
+    "sha256": "ca0269acffdb7569391c4c067734dd623a2c44280459ce0c0c6a13aa4b9476f0",
+    "document_embedding_seconds": 204.1223492549907,
+    "batch_query_embedding_seconds": 3.874355142994318,
+    "document_vector_bytes": 17903616,
+    "query_vector_bytes": 1536000,
+    "cache_hit": false
+  },
+  "ranking_seconds": 1.293746890994953,
+  "metrics": {
+    "overall": {
+      "questions": 1000,
+      "retrieval": {
+        "5": {
+          "k": 5,
+          "queries": 1000,
+          "retrieval_failure_rate": 0.105,
+          "hit_rate": 0.895,
+          "recall_at_5": 0.506,
+          "mrr": 0.7702,
+          "ndcg_at_5": 0.523,
+          "all_supports_at_5": 0.171
+        },
+        "10": {
+          "k": 10,
+          "queries": 1000,
+          "retrieval_failure_rate": 0.056,
+          "hit_rate": 0.944,
+          "recall_at_10": 0.5794,
+          "mrr": 0.7702,
+          "ndcg_at_10": 0.5554,
+          "all_supports_at_10": 0.246
+        },
+        "20": {
+          "k": 20,
+          "queries": 1000,
+          "retrieval_failure_rate": 0.026,
+          "hit_rate": 0.974,
+          "recall_at_20": 0.6577,
+          "mrr": 0.7702,
+          "ndcg_at_20": 0.5822,
+          "all_supports_at_20": 0.335
+        }
+      }
+    },
+    "2": {
+      "questions": 518,
+      "retrieval": {
+        "5": {
+          "k": 5,
+          "queries": 518,
+          "retrieval_failure_rate": 0.0888,
+          "hit_rate": 0.9112,
+          "recall_at_5": 0.6052,
+          "mrr": 0.8151,
+          "ndcg_at_5": 0.6085,
+          "all_supports_at_5": 0.29922779922779924
+        },
+        "10": {
+          "k": 10,
+          "queries": 518,
+          "retrieval_failure_rate": 0.0502,
+          "hit_rate": 0.9498,
+          "recall_at_10": 0.666,
+          "mrr": 0.8151,
+          "ndcg_at_10": 0.6329,
+          "all_supports_at_10": 0.38223938223938225
+        },
+        "20": {
+          "k": 20,
+          "queries": 518,
+          "retrieval_failure_rate": 0.0251,
+          "hit_rate": 0.9749,
+          "recall_at_20": 0.7355,
+          "mrr": 0.8151,
+          "ndcg_at_20": 0.6543,
+          "all_supports_at_20": 0.49613899613899615
+        }
+      }
+    },
+    "3": {
+      "questions": 316,
+      "retrieval": {
+        "5": {
+          "k": 5,
+          "queries": 316,
+          "retrieval_failure_rate": 0.0918,
+          "hit_rate": 0.9082,
+          "recall_at_5": 0.4684,
+          "mrr": 0.7626,
+          "ndcg_at_5": 0.4933,
+          "all_supports_at_5": 0.05063291139240506
+        },
+        "10": {
+          "k": 10,
+          "queries": 316,
+          "retrieval_failure_rate": 0.0475,
+          "hit_rate": 0.9525,
+          "recall_at_10": 0.5654,
+          "mrr": 0.7626,
+          "ndcg_at_10": 0.5378,
+          "all_supports_at_10": 0.1518987341772152
+        },
+        "20": {
+          "k": 20,
+          "queries": 316,
+          "retrieval_failure_rate": 0.019,
+          "hit_rate": 0.981,
+          "recall_at_20": 0.6414,
+          "mrr": 0.7626,
+          "ndcg_at_20": 0.565,
+          "all_supports_at_20": 0.24050632911392406
+        }
+      }
+    },
+    "4": {
+      "questions": 166,
+      "retrieval": {
+        "5": {
+          "k": 5,
+          "queries": 166,
+          "retrieval_failure_rate": 0.1807,
+          "hit_rate": 0.8193,
+          "recall_at_5": 0.2681,
+          "mrr": 0.6447,
+          "ndcg_at_5": 0.3127,
+          "all_supports_at_5": 0.0
+        },
+        "10": {
+          "k": 10,
+          "queries": 166,
+          "retrieval_failure_rate": 0.0904,
+          "hit_rate": 0.9096,
+          "recall_at_10": 0.3358,
+          "mrr": 0.6447,
+          "ndcg_at_10": 0.3468,
+          "all_supports_at_10": 0.0
+        },
+        "20": {
+          "k": 20,
+          "queries": 166,
+          "retrieval_failure_rate": 0.0422,
+          "hit_rate": 0.9578,
+          "recall_at_20": 0.4458,
+          "mrr": 0.6447,
+          "ndcg_at_20": 0.3901,
+          "all_supports_at_20": 0.012048192771084338
+        }
+      }
+    }
+  },
+  "retrieval_model_calls": 0,
+  "latency_note": "Query embeddings are batched; batch time per query is throughput, not single-query latency.",
+  "attribution": "MuSiQue: Multihop Questions via Single-hop Question Composition, Trivedi, Balasubramanian, Khot, and Sabharwal, TACL 2022. https://github.com/StonyBrookNLP/musique"
+}

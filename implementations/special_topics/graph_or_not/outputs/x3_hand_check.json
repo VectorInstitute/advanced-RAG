@@ -1,0 +1,460 @@
+{
+ "produced_by": {
+  "model": null,
+  "model_calls": 0,
+  "producer": "hand check of the X3 golds against the posts",
+  "label": "hand labels"
+ },
+ "method": "One person read each post at the cited span (relation facts) or at the first whole-word match (lexical-only mentions) and recorded whether the post supports the fact or mentions the name. Relation facts: 20 drawn with random.Random(7) from the facts behind the relation-family graph golds. Lexical-only mentions: one post per count question, drawn with random.Random(11) from posts that contain the name but that the graph's exact entity does not cite. Path connectors: judged from the entity names alone (not the posts), as a meaningful technical link between the two ends or a generic hub.",
+ "checked_by": "agent, 2026-10-23",
+ "relation_facts": [
+  {
+   "qid": "relation-07",
+   "source": "ssl",
+   "relation": "fixes",
+   "target": "mitm attack",
+   "doc_id": "q662946",
+   "supported": true,
+   "failure": null
+  },
+  {
+   "qid": "relation-02",
+   "source": "ping",
+   "relation": "causes",
+   "target": "ping: sendmsg: operation not permitted",
+   "doc_id": "q594142",
+   "supported": false,
+   "failure": "symptom observed with X, not caused by X"
+  },
+  {
+   "qid": "relation-09",
+   "source": "tcpdump",
+   "relation": "causes",
+   "target": "syntax errors",
+   "doc_id": "q1025292",
+   "supported": false,
+   "failure": "symptom observed with X, not caused by X"
+  },
+  {
+   "qid": "relation-01",
+   "source": "cloudfront",
+   "relation": "depends_on",
+   "target": "origin server",
+   "doc_id": "q339719",
+   "supported": true,
+   "failure": null
+  },
+  {
+   "qid": "relation-01",
+   "source": "cloudfront",
+   "relation": "depends_on",
+   "target": "elb",
+   "doc_id": "q828409",
+   "supported": true,
+   "failure": null
+  },
+  {
+   "qid": "relation-02",
+   "source": "ping",
+   "relation": "causes",
+   "target": "hangs",
+   "doc_id": "q263260",
+   "supported": false,
+   "failure": "symptom observed with X, not caused by X"
+  },
+  {
+   "qid": "relation-08",
+   "source": "http/1.1",
+   "relation": "depends_on",
+   "target": "rfc 2616",
+   "doc_id": "q878080",
+   "supported": true,
+   "failure": null
+  },
+  {
+   "qid": "relation-01",
+   "source": "cloudfront",
+   "relation": "depends_on",
+   "target": "gzipped content",
+   "doc_id": "q339719",
+   "supported": false,
+   "failure": "wrong relation type"
+  },
+  {
+   "qid": "relation-03",
+   "source": "dns providers",
+   "relation": "fixes",
+   "target": "single point of failure",
+   "doc_id": "q426101",
+   "supported": true,
+   "failure": null
+  },
+  {
+   "qid": "relation-00",
+   "source": "cloudflare",
+   "relation": "causes",
+   "target": "error 1003",
+   "doc_id": "q1008522",
+   "supported": true,
+   "failure": null
+  },
+  {
+   "qid": "relation-01",
+   "source": "cloudfront",
+   "relation": "depends_on",
+   "target": "sni",
+   "doc_id": "q594368",
+   "supported": true,
+   "failure": null
+  },
+  {
+   "qid": "relation-12",
+   "source": "mysql replication",
+   "relation": "depends_on",
+   "target": "wide area networks",
+   "doc_id": "q1274",
+   "supported": false,
+   "failure": "a question stored as a fact"
+  },
+  {
+   "qid": "relation-03",
+   "source": "keepalive",
+   "relation": "fixes",
+   "target": "single point of failure",
+   "doc_id": "q35895",
+   "supported": false,
+   "failure": "an option the post rules out stored as a fact"
+  },
+  {
+   "qid": "relation-01",
+   "source": "cloudfront",
+   "relation": "depends_on",
+   "target": "origin",
+   "doc_id": "q619699",
+   "supported": true,
+   "failure": null
+  },
+  {
+   "qid": "relation-02",
+   "source": "ping",
+   "relation": "causes",
+   "target": "100% packet loss",
+   "doc_id": "q391954",
+   "supported": false,
+   "failure": "symptom observed with X, not caused by X"
+  },
+  {
+   "qid": "relation-12",
+   "source": "mysql replication",
+   "relation": "depends_on",
+   "target": "socket",
+   "doc_id": "q30605",
+   "supported": true,
+   "failure": null
+  },
+  {
+   "qid": "relation-05",
+   "source": "kernel bug",
+   "relation": "causes",
+   "target": "high cpu usage from a flush process",
+   "doc_id": "q341123",
+   "supported": true,
+   "failure": null
+  },
+  {
+   "qid": "relation-12",
+   "source": "mysql replication",
+   "relation": "depends_on",
+   "target": "binlog",
+   "doc_id": "q30605",
+   "supported": true,
+   "failure": null
+  },
+  {
+   "qid": "relation-01",
+   "source": "cloudfront",
+   "relation": "depends_on",
+   "target": "s3",
+   "doc_id": "q856904",
+   "supported": true,
+   "failure": null
+  },
+  {
+   "qid": "relation-10",
+   "source": "a record",
+   "relation": "depends_on",
+   "target": "rfc-compliant",
+   "doc_id": "q100064",
+   "supported": false,
+   "failure": "wrong relation type"
+  }
+ ],
+ "lexical_only_mentions": [
+  {
+   "qid": "count-00",
+   "entity": "http/1.0",
+   "doc_id": "q647060",
+   "real_mention": true,
+   "incidental": "literal, inside a configuration line"
+  },
+  {
+   "qid": "count-01",
+   "entity": "centos5",
+   "doc_id": "q512333",
+   "real_mention": true,
+   "incidental": "in the tags only"
+  },
+  {
+   "qid": "count-02",
+   "entity": "notify",
+   "doc_id": "q831880",
+   "real_mention": true,
+   "incidental": "Ansible keyword in a playbook"
+  },
+  {
+   "qid": "count-03",
+   "entity": "mongodb",
+   "doc_id": "q718239",
+   "real_mention": true,
+   "incidental": "inside a file path"
+  },
+  {
+   "qid": "count-04",
+   "entity": "unix socket",
+   "doc_id": "q724584",
+   "real_mention": true,
+   "incidental": null
+  },
+  {
+   "qid": "count-05",
+   "entity": "a2enmod",
+   "doc_id": "q64656",
+   "real_mention": true,
+   "incidental": null
+  },
+  {
+   "qid": "count-06",
+   "entity": "ubuntu 16.04",
+   "doc_id": "q893066",
+   "real_mention": true,
+   "incidental": null
+  },
+  {
+   "qid": "count-07",
+   "entity": "google compute engine",
+   "doc_id": "q641453",
+   "real_mention": true,
+   "incidental": null
+  },
+  {
+   "qid": "count-08",
+   "entity": "nehalem",
+   "doc_id": "q309989",
+   "real_mention": true,
+   "incidental": null
+  },
+  {
+   "qid": "count-09",
+   "entity": "sysctl",
+   "doc_id": "q711077",
+   "real_mention": true,
+   "incidental": null
+  },
+  {
+   "qid": "count-10",
+   "entity": "wi-fi",
+   "doc_id": "q57427",
+   "real_mention": true,
+   "incidental": null
+  },
+  {
+   "qid": "count-11",
+   "entity": "cpanel",
+   "doc_id": "q686665",
+   "real_mention": true,
+   "incidental": null
+  },
+  {
+   "qid": "count-12",
+   "entity": "application server",
+   "doc_id": "q79641",
+   "real_mention": true,
+   "incidental": null
+  },
+  {
+   "qid": "count-13",
+   "entity": "server 2012 r2",
+   "doc_id": "q738085",
+   "real_mention": true,
+   "incidental": null
+  }
+ ],
+ "path_connectors": [
+  {
+   "qid": "path-00",
+   "entities": [
+    "ata",
+    "7200 rpm"
+   ],
+   "connectors": [
+    "sata"
+   ],
+   "meaningful_link": true
+  },
+  {
+   "qid": "path-01",
+   "entities": [
+    "sql server management studio",
+    "keypass"
+   ],
+   "connectors": [
+    "database"
+   ],
+   "meaningful_link": false
+  },
+  {
+   "qid": "path-02",
+   "entities": [
+    "tls 1.3",
+    "ssl_connect"
+   ],
+   "connectors": [
+    "ssl handshake"
+   ],
+   "meaningful_link": true
+  },
+  {
+   "qid": "path-03",
+   "entities": [
+    "backup server",
+    "ssh public key authentication"
+   ],
+   "connectors": [
+    "private key"
+   ],
+   "meaningful_link": true
+  },
+  {
+   "qid": "path-04",
+   "entities": [
+    "usb drive",
+    "/dev/sda1"
+   ],
+   "connectors": [
+    "dd"
+   ],
+   "meaningful_link": true
+  },
+  {
+   "qid": "path-05",
+   "entities": [
+    "trickle",
+    "ufw limit from any to any port 0:29999,30006:65535"
+   ],
+   "connectors": [
+    "rate limiting"
+   ],
+   "meaningful_link": true
+  },
+  {
+   "qid": "path-06",
+   "entities": [
+    "rubygems",
+    "metalink"
+   ],
+   "connectors": [
+    "yum"
+   ],
+   "meaningful_link": true
+  },
+  {
+   "qid": "path-07",
+   "entities": [
+    "type",
+    "ctrl+c"
+   ],
+   "connectors": [
+    "bash"
+   ],
+   "meaningful_link": false
+  },
+  {
+   "qid": "path-08",
+   "entities": [
+    "ldapmodify",
+    "sasl/external"
+   ],
+   "connectors": [
+    "ldapadd"
+   ],
+   "meaningful_link": true
+  },
+  {
+   "qid": "path-09",
+   "entities": [
+    "arch",
+    "host os"
+   ],
+   "connectors": [
+    "virtualbox"
+   ],
+   "meaningful_link": true
+  },
+  {
+   "qid": "path-10",
+   "entities": [
+    "svnadmin",
+    "vps ram"
+   ],
+   "connectors": [
+    "svn"
+   ],
+   "meaningful_link": true
+  },
+  {
+   "qid": "path-11",
+   "entities": [
+    "windows server backup",
+    "iis"
+   ],
+   "connectors": [
+    "windows server 2008 r2",
+    "windows server 2012 r2"
+   ],
+   "meaningful_link": false
+  },
+  {
+   "qid": "path-12",
+   "entities": [
+    "unmount",
+    "windows server 2008 r2"
+   ],
+   "connectors": [
+    "physical hard drive"
+   ],
+   "meaningful_link": false
+  },
+  {
+   "qid": "path-13",
+   "entities": [
+    "usb device",
+    "alter assembly"
+   ],
+   "connectors": [
+    "triggers"
+   ],
+   "meaningful_link": false
+  },
+  {
+   "qid": "path-14",
+   "entities": [
+    "hardware raid",
+    "dns"
+   ],
+   "connectors": [
+    "nagios"
+   ],
+   "meaningful_link": false
+  }
+ ]
+}

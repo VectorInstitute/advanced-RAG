@@ -1,0 +1,6028 @@
+{
+ "produced_by": {
+  "model": "Qwen3_6-35B-A3B",
+  "judge": "Qwen3_6-35B-A3B",
+  "embeddings": "BAAI/bge-small-en-v1.5",
+  "endpoint": "vector-cluster"
+ },
+ "model": "Qwen3_6-35B-A3B",
+ "judge": "Qwen3_6-35B-A3B",
+ "embeddings": "BAAI/bge-small-en-v1.5",
+ "rate_per_minute": 45,
+ "click_commit": "d4ecb8a89a52ad3faacf3f1c65065d08c1d11c14",
+ "arms": {
+  "G": "C7",
+  "D": "C7+description",
+  "P": "C7+profile-tools+description",
+  "Q": "open+profile-tools+description"
+ },
+ "summaries": [
+  {
+   "corpus": "serverfault",
+   "arm": "G",
+   "model": "Qwen3_6-35B-A3B",
+   "judge": "Qwen3_6-35B-A3B",
+   "questions": 24,
+   "correct": 13,
+   "accuracy": 0.5417,
+   "calls": 10.75,
+   "tool_calls": 11.58,
+   "prompt_tokens": 111252,
+   "completion_tokens": 834,
+   "exhausted": 4,
+   "gold_read": 0.1667,
+   "by_type": {
+    "count": 0.0,
+    "count_two_tags": 0.0,
+    "identifier": 0.333,
+    "single_hop": 0.917,
+    "top_score": 0.333
+   },
+   "tool_mix": {
+    "grep": 124,
+    "open": 82,
+    "search": 72
+   }
+  },
+  {
+   "corpus": "serverfault",
+   "arm": "D",
+   "model": "Qwen3_6-35B-A3B",
+   "judge": "Qwen3_6-35B-A3B",
+   "questions": 24,
+   "correct": 12,
+   "accuracy": 0.5,
+   "calls": 9.67,
+   "tool_calls": 10.75,
+   "prompt_tokens": 86323,
+   "completion_tokens": 1072,
+   "exhausted": 1,
+   "gold_read": 0.2222,
+   "by_type": {
+    "count": 0.0,
+    "count_two_tags": 0.0,
+    "identifier": 0.333,
+    "single_hop": 0.917,
+    "top_score": 0.0
+   },
+   "tool_mix": {
+    "open": 96,
+    "search": 81,
+    "grep": 80
+   }
+  },
+  {
+   "corpus": "serverfault",
+   "arm": "P",
+   "model": "Qwen3_6-35B-A3B",
+   "judge": "Qwen3_6-35B-A3B",
+   "questions": 24,
+   "correct": 22,
+   "accuracy": 0.9167,
+   "calls": 5.54,
+   "tool_calls": 5.46,
+   "prompt_tokens": 27819,
+   "completion_tokens": 275,
+   "exhausted": 0,
+   "gold_read": 0.3333,
+   "by_type": {
+    "count": 1.0,
+    "count_two_tags": 1.0,
+    "identifier": 1.0,
+    "single_hop": 0.833,
+    "top_score": 1.0
+   },
+   "tool_mix": {
+    "open": 69,
+    "search": 25,
+    "sql": 18,
+    "grep": 17,
+    "find_identifier": 2
+   }
+  },
+  {
+   "corpus": "serverfault",
+   "arm": "Q",
+   "model": "Qwen3_6-35B-A3B",
+   "judge": "Qwen3_6-35B-A3B",
+   "questions": 24,
+   "correct": 21,
+   "accuracy": 0.875,
+   "calls": 9.92,
+   "tool_calls": 9.21,
+   "prompt_tokens": 40541,
+   "completion_tokens": 612,
+   "exhausted": 2,
+   "gold_read": 0.3333,
+   "by_type": {
+    "count": 1.0,
+    "count_two_tags": 1.0,
+    "identifier": 1.0,
+    "single_hop": 0.75,
+    "top_score": 1.0
+   },
+   "tool_mix": {
+    "sql": 139,
+    "open": 75,
+    "find_identifier": 5,
+    "list_identifiers": 2
+   }
+  },
+  {
+   "corpus": "financebench",
+   "arm": "G",
+   "model": "Qwen3_6-35B-A3B",
+   "judge": "Qwen3_6-35B-A3B",
+   "questions": 24,
+   "correct": 17,
+   "accuracy": 0.7083,
+   "calls": 14.62,
+   "tool_calls": 13.62,
+   "prompt_tokens": 278966,
+   "completion_tokens": 1402,
+   "exhausted": 3,
+   "gold_read": 0.7917,
+   "by_type": {
+    "domain-relevant": 0.875,
+    "metrics-generated": 0.5,
+    "novel-generated": 0.75
+   },
+   "tool_mix": {
+    "grep": 225,
+    "open": 71,
+    "search": 31
+   }
+  },
+  {
+   "corpus": "financebench",
+   "arm": "D",
+   "model": "Qwen3_6-35B-A3B",
+   "judge": "Qwen3_6-35B-A3B",
+   "questions": 24,
+   "correct": 13,
+   "accuracy": 0.5417,
+   "calls": 15.25,
+   "tool_calls": 14.21,
+   "prompt_tokens": 304363,
+   "completion_tokens": 1264,
+   "exhausted": 6,
+   "gold_read": 0.8333,
+   "by_type": {
+    "domain-relevant": 0.75,
+    "metrics-generated": 0.25,
+    "novel-generated": 0.625
+   },
+   "tool_mix": {
+    "grep": 254,
+    "open": 58,
+    "search": 29
+   }
+  },
+  {
+   "corpus": "financebench",
+   "arm": "P",
+   "model": "Qwen3_6-35B-A3B",
+   "judge": "Qwen3_6-35B-A3B",
+   "questions": 24,
+   "correct": 20,
+   "accuracy": 0.8333,
+   "calls": 13.38,
+   "tool_calls": 12.33,
+   "prompt_tokens": 170254,
+   "completion_tokens": 1303,
+   "exhausted": 3,
+   "gold_read": 0.9583,
+   "by_type": {
+    "domain-relevant": 0.875,
+    "metrics-generated": 0.75,
+    "novel-generated": 0.875
+   },
+   "tool_mix": {
+    "sql": 111,
+    "grep": 62,
+    "open": 48,
+    "open_section": 28,
+    "outline": 28,
+    "search": 19
+   }
+  },
+  {
+   "corpus": "financebench",
+   "arm": "Q",
+   "model": "Qwen3_6-35B-A3B",
+   "judge": "Qwen3_6-35B-A3B",
+   "questions": 24,
+   "correct": 18,
+   "accuracy": 0.75,
+   "calls": 15.38,
+   "tool_calls": 14.08,
+   "prompt_tokens": 184309,
+   "completion_tokens": 1652,
+   "exhausted": 3,
+   "gold_read": 0.875,
+   "by_type": {
+    "domain-relevant": 0.75,
+    "metrics-generated": 0.625,
+    "novel-generated": 0.875
+   },
+   "tool_mix": {
+    "sql": 214,
+    "open_section": 54,
+    "outline": 46,
+    "open": 24
+   }
+  },
+  {
+   "corpus": "click",
+   "arm": "G",
+   "model": "Qwen3_6-35B-A3B",
+   "judge": "Qwen3_6-35B-A3B",
+   "questions": 24,
+   "correct": 24,
+   "accuracy": 1.0,
+   "calls": 8.12,
+   "tool_calls": 6.96,
+   "prompt_tokens": 44368,
+   "completion_tokens": 321,
+   "exhausted": 1,
+   "gold_read": 0.625,
+   "by_type": {
+    "base_class": 1.0,
+    "default_value": 1.0,
+    "defining_file": 1.0,
+    "single_hop": 1.0
+   },
+   "tool_mix": {
+    "grep": 99,
+    "open": 37,
+    "search": 31
+   }
+  },
+  {
+   "corpus": "click",
+   "arm": "D",
+   "model": "Qwen3_6-35B-A3B",
+   "judge": "Qwen3_6-35B-A3B",
+   "questions": 24,
+   "correct": 23,
+   "accuracy": 0.9583,
+   "calls": 5.96,
+   "tool_calls": 4.75,
+   "prompt_tokens": 33084,
+   "completion_tokens": 225,
+   "exhausted": 0,
+   "gold_read": 0.6667,
+   "by_type": {
+    "base_class": 0.8,
+    "default_value": 1.0,
+    "defining_file": 1.0,
+    "single_hop": 1.0
+   },
+   "tool_mix": {
+    "grep": 48,
+    "open": 38,
+    "search": 28
+   }
+  },
+  {
+   "corpus": "click",
+   "arm": "P",
+   "model": "Qwen3_6-35B-A3B",
+   "judge": "Qwen3_6-35B-A3B",
+   "questions": 24,
+   "correct": 24,
+   "accuracy": 1.0,
+   "calls": 3.71,
+   "tool_calls": 2.5,
+   "prompt_tokens": 13484,
+   "completion_tokens": 113,
+   "exhausted": 0,
+   "gold_read": 0.6667,
+   "by_type": {
+    "base_class": 1.0,
+    "default_value": 1.0,
+    "defining_file": 1.0,
+    "single_hop": 1.0
+   },
+   "tool_mix": {
+    "find_symbol": 17,
+    "open_symbol": 12,
+    "open": 11,
+    "search": 10,
+    "open_section": 5,
+    "outline": 3,
+    "grep": 2
+   }
+  },
+  {
+   "corpus": "click",
+   "arm": "Q",
+   "model": "Qwen3_6-35B-A3B",
+   "judge": "Qwen3_6-35B-A3B",
+   "questions": 24,
+   "correct": 22,
+   "accuracy": 0.9167,
+   "calls": 4.79,
+   "tool_calls": 3.58,
+   "prompt_tokens": 15996,
+   "completion_tokens": 178,
+   "exhausted": 0,
+   "gold_read": 0.6667,
+   "by_type": {
+    "base_class": 1.0,
+    "default_value": 1.0,
+    "defining_file": 1.0,
+    "single_hop": 0.75
+   },
+   "tool_mix": {
+    "find_symbol": 31,
+    "outline": 21,
+    "open_symbol": 18,
+    "open_section": 9,
+    "open": 7
+   }
+  }
+ ],
+ "per_question": [
+  {
+   "qid": "serverfault-d11713fbbb",
+   "corpus": "serverfault",
+   "qtype": "count",
+   "source": "structured",
+   "arm": "G",
+   "model_calls": 6,
+   "tool_calls": 9,
+   "prompt_tokens": 21823,
+   "completion_tokens": 327,
+   "exhausted": false,
+   "gold_read": false,
+   "gold_seen": false,
+   "tool_counts": {
+    "grep": 2,
+    "search": 1,
+    "open": 6
+   },
+   "correct": false
+  },
+  {
+   "qid": "serverfault-a017d58a6e",
+   "corpus": "serverfault",
+   "qtype": "count",
+   "source": "structured",
+   "arm": "G",
+   "model_calls": 7,
+   "tool_calls": 12,
+   "prompt_tokens": 23605,
+   "completion_tokens": 431,
+   "exhausted": false,
+   "gold_read": false,
+   "gold_seen": false,
+   "tool_counts": {
+    "grep": 3,
+    "search": 1,
+    "open": 8
+   },
+   "correct": false
+  },
+  {
+   "qid": "serverfault-e22ba55f05",
+   "corpus": "serverfault",
+   "qtype": "count",
+   "source": "structured",
+   "arm": "G",
+   "model_calls": 8,
+   "tool_calls": 6,
+   "prompt_tokens": 22755,
+   "completion_tokens": 230,
+   "exhausted": false,
+   "gold_read": false,
+   "gold_seen": false,
+   "tool_counts": {
+    "grep": 3,
+    "search": 1,
+    "open": 2
+   },
+   "correct": false
+  },
+  {
+   "qid": "serverfault-b3ccf3be7d",
+   "corpus": "serverfault",
+   "qtype": "count_two_tags",
+   "source": "structured",
+   "arm": "G",
+   "model_calls": 6,
+   "tool_calls": 10,
+   "prompt_tokens": 20458,
+   "completion_tokens": 374,
+   "exhausted": false,
+   "gold_read": false,
+   "gold_seen": false,
+   "tool_counts": {
+    "grep": 2,
+    "search": 1,
+    "open": 7
+   },
+   "correct": false
+  },
+  {
+   "qid": "serverfault-7fe3a8eb5b",
+   "corpus": "serverfault",
+   "qtype": "count_two_tags",
+   "source": "structured",
+   "arm": "G",
+   "model_calls": 13,
+   "tool_calls": 12,
+   "prompt_tokens": 128439,
+   "completion_tokens": 5007,
+   "exhausted": false,
+   "gold_read": false,
+   "gold_seen": false,
+   "tool_counts": {
+    "grep": 5,
+    "search": 4,
+    "open": 3
+   },
+   "correct": false
+  },
+  {
+   "qid": "serverfault-a8ab6ec9c9",
+   "corpus": "serverfault",
+   "qtype": "count_two_tags",
+   "source": "structured",
+   "arm": "G",
+   "model_calls": 5,
+   "tool_calls": 6,
+   "prompt_tokens": 11719,
+   "completion_tokens": 302,
+   "exhausted": false,
+   "gold_read": false,
+   "gold_seen": false,
+   "tool_counts": {
+    "grep": 2,
+    "search": 1,
+    "open": 3
+   },
+   "correct": false
+  },
+  {
+   "qid": "serverfault-6f322cd2fa",
+   "corpus": "serverfault",
+   "qtype": "top_score",
+   "source": "structured",
+   "arm": "G",
+   "model_calls": 30,
+   "tool_calls": 46,
+   "prompt_tokens": 624786,
+   "completion_tokens": 2497,
+   "exhausted": true,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "grep": 22,
+    "search": 5,
+    "open": 19
+   },
+   "correct": true
+  },
+  {
+   "qid": "serverfault-1d27633927",
+   "corpus": "serverfault",
+   "qtype": "top_score",
+   "source": "structured",
+   "arm": "G",
+   "model_calls": 28,
+   "tool_calls": 34,
+   "prompt_tokens": 349680,
+   "completion_tokens": 2750,
+   "exhausted": false,
+   "gold_read": false,
+   "gold_seen": false,
+   "tool_counts": {
+    "grep": 15,
+    "search": 8,
+    "open": 11
+   },
+   "correct": false
+  },
+  {
+   "qid": "serverfault-6b506df3c5",
+   "corpus": "serverfault",
+   "qtype": "top_score",
+   "source": "structured",
+   "arm": "G",
+   "model_calls": 22,
+   "tool_calls": 27,
+   "prompt_tokens": 341691,
+   "completion_tokens": 2402,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "grep": 11,
+    "search": 11,
+    "open": 5
+   },
+   "correct": false
+  },
+  {
+   "qid": "serverfault-be223f5ff7",
+   "corpus": "serverfault",
+   "qtype": "identifier",
+   "source": "structured",
+   "arm": "G",
+   "model_calls": 30,
+   "tool_calls": 29,
+   "prompt_tokens": 339113,
+   "completion_tokens": 1311,
+   "exhausted": true,
+   "gold_read": false,
+   "gold_seen": false,
+   "tool_counts": {
+    "grep": 16,
+    "search": 8,
+    "open": 5
+   },
+   "correct": false
+  },
+  {
+   "qid": "serverfault-beafd5e12b",
+   "corpus": "serverfault",
+   "qtype": "identifier",
+   "source": "structured",
+   "arm": "G",
+   "model_calls": 5,
+   "tool_calls": 4,
+   "prompt_tokens": 12520,
+   "completion_tokens": 141,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "grep": 2,
+    "search": 1,
+    "open": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "serverfault-d66319ea03",
+   "corpus": "serverfault",
+   "qtype": "identifier",
+   "source": "structured",
+   "arm": "G",
+   "model_calls": 30,
+   "tool_calls": 29,
+   "prompt_tokens": 402105,
+   "completion_tokens": 1293,
+   "exhausted": true,
+   "gold_read": false,
+   "gold_seen": false,
+   "tool_counts": {
+    "grep": 14,
+    "search": 13,
+    "open": 2
+   },
+   "correct": false
+  },
+  {
+   "qid": "serverfault-0c5a0ceeb8",
+   "corpus": "serverfault",
+   "qtype": "single_hop",
+   "source": "synthetic",
+   "arm": "G",
+   "model_calls": 3,
+   "tool_calls": 2,
+   "prompt_tokens": 7430,
+   "completion_tokens": 76,
+   "exhausted": false,
+   "gold_read": false,
+   "gold_seen": false,
+   "tool_counts": {
+    "search": 1,
+    "open": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "serverfault-4dfb40cb17",
+   "corpus": "serverfault",
+   "qtype": "single_hop",
+   "source": "synthetic",
+   "arm": "G",
+   "model_calls": 3,
+   "tool_calls": 2,
+   "prompt_tokens": 7452,
+   "completion_tokens": 91,
+   "exhausted": false,
+   "gold_read": false,
+   "gold_seen": false,
+   "tool_counts": {
+    "search": 1,
+    "open": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "serverfault-643ab9525d",
+   "corpus": "serverfault",
+   "qtype": "single_hop",
+   "source": "synthetic",
+   "arm": "G",
+   "model_calls": 3,
+   "tool_calls": 2,
+   "prompt_tokens": 7722,
+   "completion_tokens": 141,
+   "exhausted": false,
+   "gold_read": false,
+   "gold_seen": false,
+   "tool_counts": {
+    "search": 1,
+    "open": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "serverfault-1b03bd4a39",
+   "corpus": "serverfault",
+   "qtype": "single_hop",
+   "source": "synthetic",
+   "arm": "G",
+   "model_calls": 3,
+   "tool_calls": 2,
+   "prompt_tokens": 7761,
+   "completion_tokens": 134,
+   "exhausted": false,
+   "gold_read": false,
+   "gold_seen": false,
+   "tool_counts": {
+    "search": 1,
+    "open": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "serverfault-2ea6f8d2f6",
+   "corpus": "serverfault",
+   "qtype": "single_hop",
+   "source": "synthetic",
+   "arm": "G",
+   "model_calls": 3,
+   "tool_calls": 2,
+   "prompt_tokens": 7447,
+   "completion_tokens": 99,
+   "exhausted": false,
+   "gold_read": false,
+   "gold_seen": false,
+   "tool_counts": {
+    "search": 1,
+    "open": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "serverfault-ec32c66c16",
+   "corpus": "serverfault",
+   "qtype": "single_hop",
+   "source": "synthetic",
+   "arm": "G",
+   "model_calls": 3,
+   "tool_calls": 2,
+   "prompt_tokens": 8082,
+   "completion_tokens": 107,
+   "exhausted": false,
+   "gold_read": false,
+   "gold_seen": false,
+   "tool_counts": {
+    "search": 1,
+    "open": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "serverfault-c1e4092d1c",
+   "corpus": "serverfault",
+   "qtype": "single_hop",
+   "source": "synthetic",
+   "arm": "G",
+   "model_calls": 3,
+   "tool_calls": 2,
+   "prompt_tokens": 7867,
+   "completion_tokens": 126,
+   "exhausted": false,
+   "gold_read": false,
+   "gold_seen": false,
+   "tool_counts": {
+    "search": 1,
+    "open": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "serverfault-31d120dfc7",
+   "corpus": "serverfault",
+   "qtype": "single_hop",
+   "source": "synthetic",
+   "arm": "G",
+   "model_calls": 4,
+   "tool_calls": 2,
+   "prompt_tokens": 10520,
+   "completion_tokens": 625,
+   "exhausted": false,
+   "gold_read": false,
+   "gold_seen": false,
+   "tool_counts": {
+    "search": 2
+   },
+   "correct": true
+  },
+  {
+   "qid": "serverfault-bf5903fef3",
+   "corpus": "serverfault",
+   "qtype": "single_hop",
+   "source": "synthetic",
+   "arm": "G",
+   "model_calls": 30,
+   "tool_calls": 28,
+   "prompt_tokens": 269659,
+   "completion_tokens": 1134,
+   "exhausted": true,
+   "gold_read": false,
+   "gold_seen": false,
+   "tool_counts": {
+    "search": 5,
+    "grep": 23
+   },
+   "correct": false
+  },
+  {
+   "qid": "serverfault-ef0ee15665",
+   "corpus": "serverfault",
+   "qtype": "single_hop",
+   "source": "synthetic",
+   "arm": "G",
+   "model_calls": 6,
+   "tool_calls": 5,
+   "prompt_tokens": 18414,
+   "completion_tokens": 199,
+   "exhausted": false,
+   "gold_read": false,
+   "gold_seen": false,
+   "tool_counts": {
+    "search": 1,
+    "grep": 3,
+    "open": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "serverfault-f61b74f2b7",
+   "corpus": "serverfault",
+   "qtype": "single_hop",
+   "source": "synthetic",
+   "arm": "G",
+   "model_calls": 3,
+   "tool_calls": 2,
+   "prompt_tokens": 7605,
+   "completion_tokens": 101,
+   "exhausted": false,
+   "gold_read": false,
+   "gold_seen": false,
+   "tool_counts": {
+    "search": 1,
+    "open": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "serverfault-51ffe5a074",
+   "corpus": "serverfault",
+   "qtype": "single_hop",
+   "source": "synthetic",
+   "arm": "G",
+   "model_calls": 4,
+   "tool_calls": 3,
+   "prompt_tokens": 11401,
+   "completion_tokens": 114,
+   "exhausted": false,
+   "gold_read": false,
+   "gold_seen": false,
+   "tool_counts": {
+    "search": 1,
+    "grep": 1,
+    "open": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "serverfault-d11713fbbb",
+   "corpus": "serverfault",
+   "qtype": "count",
+   "source": "structured",
+   "arm": "D",
+   "model_calls": 5,
+   "tool_calls": 5,
+   "prompt_tokens": 15595,
+   "completion_tokens": 629,
+   "exhausted": false,
+   "gold_read": false,
+   "gold_seen": false,
+   "tool_counts": {
+    "grep": 2,
+    "search": 1,
+    "open": 2
+   },
+   "correct": false
+  },
+  {
+   "qid": "serverfault-a017d58a6e",
+   "corpus": "serverfault",
+   "qtype": "count",
+   "source": "structured",
+   "arm": "D",
+   "model_calls": 6,
+   "tool_calls": 6,
+   "prompt_tokens": 20204,
+   "completion_tokens": 487,
+   "exhausted": false,
+   "gold_read": false,
+   "gold_seen": false,
+   "tool_counts": {
+    "grep": 3,
+    "search": 1,
+    "open": 2
+   },
+   "correct": false
+  },
+  {
+   "qid": "serverfault-e22ba55f05",
+   "corpus": "serverfault",
+   "qtype": "count",
+   "source": "structured",
+   "arm": "D",
+   "model_calls": 17,
+   "tool_calls": 17,
+   "prompt_tokens": 160624,
+   "completion_tokens": 1313,
+   "exhausted": false,
+   "gold_read": false,
+   "gold_seen": false,
+   "tool_counts": {
+    "grep": 7,
+    "search": 6,
+    "open": 4
+   },
+   "correct": false
+  },
+  {
+   "qid": "serverfault-b3ccf3be7d",
+   "corpus": "serverfault",
+   "qtype": "count_two_tags",
+   "source": "structured",
+   "arm": "D",
+   "model_calls": 11,
+   "tool_calls": 15,
+   "prompt_tokens": 76991,
+   "completion_tokens": 1572,
+   "exhausted": false,
+   "gold_read": false,
+   "gold_seen": false,
+   "tool_counts": {
+    "grep": 4,
+    "search": 3,
+    "open": 8
+   },
+   "correct": false
+  },
+  {
+   "qid": "serverfault-7fe3a8eb5b",
+   "corpus": "serverfault",
+   "qtype": "count_two_tags",
+   "source": "structured",
+   "arm": "D",
+   "model_calls": 16,
+   "tool_calls": 16,
+   "prompt_tokens": 136118,
+   "completion_tokens": 2063,
+   "exhausted": false,
+   "gold_read": false,
+   "gold_seen": false,
+   "tool_counts": {
+    "grep": 11,
+    "search": 2,
+    "open": 3
+   },
+   "correct": false
+  },
+  {
+   "qid": "serverfault-a8ab6ec9c9",
+   "corpus": "serverfault",
+   "qtype": "count_two_tags",
+   "source": "structured",
+   "arm": "D",
+   "model_calls": 6,
+   "tool_calls": 7,
+   "prompt_tokens": 17605,
+   "completion_tokens": 654,
+   "exhausted": false,
+   "gold_read": false,
+   "gold_seen": false,
+   "tool_counts": {
+    "grep": 3,
+    "search": 1,
+    "open": 3
+   },
+   "correct": false
+  },
+  {
+   "qid": "serverfault-6f322cd2fa",
+   "corpus": "serverfault",
+   "qtype": "top_score",
+   "source": "structured",
+   "arm": "D",
+   "model_calls": 12,
+   "tool_calls": 28,
+   "prompt_tokens": 94154,
+   "completion_tokens": 4166,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "grep": 3,
+    "search": 3,
+    "open": 21
+   },
+   "correct": false
+  },
+  {
+   "qid": "serverfault-1d27633927",
+   "corpus": "serverfault",
+   "qtype": "top_score",
+   "source": "structured",
+   "arm": "D",
+   "model_calls": 18,
+   "tool_calls": 35,
+   "prompt_tokens": 215253,
+   "completion_tokens": 4554,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "grep": 5,
+    "search": 8,
+    "open": 22
+   },
+   "correct": false
+  },
+  {
+   "qid": "serverfault-6b506df3c5",
+   "corpus": "serverfault",
+   "qtype": "top_score",
+   "source": "structured",
+   "arm": "D",
+   "model_calls": 21,
+   "tool_calls": 25,
+   "prompt_tokens": 244493,
+   "completion_tokens": 4747,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "grep": 7,
+    "search": 8,
+    "open": 10
+   },
+   "correct": false
+  },
+  {
+   "qid": "serverfault-be223f5ff7",
+   "corpus": "serverfault",
+   "qtype": "identifier",
+   "source": "structured",
+   "arm": "D",
+   "model_calls": 26,
+   "tool_calls": 25,
+   "prompt_tokens": 453777,
+   "completion_tokens": 1295,
+   "exhausted": false,
+   "gold_read": false,
+   "gold_seen": false,
+   "tool_counts": {
+    "grep": 3,
+    "search": 19,
+    "open": 3
+   },
+   "correct": false
+  },
+  {
+   "qid": "serverfault-beafd5e12b",
+   "corpus": "serverfault",
+   "qtype": "identifier",
+   "source": "structured",
+   "arm": "D",
+   "model_calls": 5,
+   "tool_calls": 4,
+   "prompt_tokens": 13475,
+   "completion_tokens": 192,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "grep": 2,
+    "search": 1,
+    "open": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "serverfault-d66319ea03",
+   "corpus": "serverfault",
+   "qtype": "identifier",
+   "source": "structured",
+   "arm": "D",
+   "model_calls": 30,
+   "tool_calls": 29,
+   "prompt_tokens": 346891,
+   "completion_tokens": 1455,
+   "exhausted": true,
+   "gold_read": false,
+   "gold_seen": false,
+   "tool_counts": {
+    "grep": 17,
+    "search": 9,
+    "open": 3
+   },
+   "correct": false
+  },
+  {
+   "qid": "serverfault-0c5a0ceeb8",
+   "corpus": "serverfault",
+   "qtype": "single_hop",
+   "source": "synthetic",
+   "arm": "D",
+   "model_calls": 3,
+   "tool_calls": 2,
+   "prompt_tokens": 8576,
+   "completion_tokens": 76,
+   "exhausted": false,
+   "gold_read": false,
+   "gold_seen": false,
+   "tool_counts": {
+    "search": 1,
+    "open": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "serverfault-4dfb40cb17",
+   "corpus": "serverfault",
+   "qtype": "single_hop",
+   "source": "synthetic",
+   "arm": "D",
+   "model_calls": 3,
+   "tool_calls": 2,
+   "prompt_tokens": 8688,
+   "completion_tokens": 110,
+   "exhausted": false,
+   "gold_read": false,
+   "gold_seen": false,
+   "tool_counts": {
+    "search": 1,
+    "open": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "serverfault-643ab9525d",
+   "corpus": "serverfault",
+   "qtype": "single_hop",
+   "source": "synthetic",
+   "arm": "D",
+   "model_calls": 3,
+   "tool_calls": 2,
+   "prompt_tokens": 8784,
+   "completion_tokens": 119,
+   "exhausted": false,
+   "gold_read": false,
+   "gold_seen": false,
+   "tool_counts": {
+    "search": 1,
+    "open": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "serverfault-1b03bd4a39",
+   "corpus": "serverfault",
+   "qtype": "single_hop",
+   "source": "synthetic",
+   "arm": "D",
+   "model_calls": 3,
+   "tool_calls": 2,
+   "prompt_tokens": 8907,
+   "completion_tokens": 134,
+   "exhausted": false,
+   "gold_read": false,
+   "gold_seen": false,
+   "tool_counts": {
+    "search": 1,
+    "open": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "serverfault-2ea6f8d2f6",
+   "corpus": "serverfault",
+   "qtype": "single_hop",
+   "source": "synthetic",
+   "arm": "D",
+   "model_calls": 3,
+   "tool_calls": 2,
+   "prompt_tokens": 8593,
+   "completion_tokens": 96,
+   "exhausted": false,
+   "gold_read": false,
+   "gold_seen": false,
+   "tool_counts": {
+    "search": 1,
+    "open": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "serverfault-ec32c66c16",
+   "corpus": "serverfault",
+   "qtype": "single_hop",
+   "source": "synthetic",
+   "arm": "D",
+   "model_calls": 4,
+   "tool_calls": 3,
+   "prompt_tokens": 16080,
+   "completion_tokens": 274,
+   "exhausted": false,
+   "gold_read": false,
+   "gold_seen": false,
+   "tool_counts": {
+    "search": 2,
+    "open": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "serverfault-c1e4092d1c",
+   "corpus": "serverfault",
+   "qtype": "single_hop",
+   "source": "synthetic",
+   "arm": "D",
+   "model_calls": 3,
+   "tool_calls": 2,
+   "prompt_tokens": 9013,
+   "completion_tokens": 126,
+   "exhausted": false,
+   "gold_read": false,
+   "gold_seen": false,
+   "tool_counts": {
+    "search": 1,
+    "open": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "serverfault-31d120dfc7",
+   "corpus": "serverfault",
+   "qtype": "single_hop",
+   "source": "synthetic",
+   "arm": "D",
+   "model_calls": 7,
+   "tool_calls": 5,
+   "prompt_tokens": 28290,
+   "completion_tokens": 317,
+   "exhausted": false,
+   "gold_read": false,
+   "gold_seen": false,
+   "tool_counts": {
+    "search": 2,
+    "grep": 2,
+    "open": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "serverfault-bf5903fef3",
+   "corpus": "serverfault",
+   "qtype": "single_hop",
+   "source": "synthetic",
+   "arm": "D",
+   "model_calls": 15,
+   "tool_calls": 14,
+   "prompt_tokens": 125106,
+   "completion_tokens": 687,
+   "exhausted": false,
+   "gold_read": false,
+   "gold_seen": false,
+   "tool_counts": {
+    "search": 5,
+    "grep": 7,
+    "open": 2
+   },
+   "correct": false
+  },
+  {
+   "qid": "serverfault-ef0ee15665",
+   "corpus": "serverfault",
+   "qtype": "single_hop",
+   "source": "synthetic",
+   "arm": "D",
+   "model_calls": 7,
+   "tool_calls": 6,
+   "prompt_tokens": 28150,
+   "completion_tokens": 380,
+   "exhausted": false,
+   "gold_read": false,
+   "gold_seen": false,
+   "tool_counts": {
+    "search": 2,
+    "grep": 3,
+    "open": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "serverfault-f61b74f2b7",
+   "corpus": "serverfault",
+   "qtype": "single_hop",
+   "source": "synthetic",
+   "arm": "D",
+   "model_calls": 4,
+   "tool_calls": 3,
+   "prompt_tokens": 13411,
+   "completion_tokens": 158,
+   "exhausted": false,
+   "gold_read": false,
+   "gold_seen": false,
+   "tool_counts": {
+    "search": 1,
+    "open": 2
+   },
+   "correct": true
+  },
+  {
+   "qid": "serverfault-51ffe5a074",
+   "corpus": "serverfault",
+   "qtype": "single_hop",
+   "source": "synthetic",
+   "arm": "D",
+   "model_calls": 4,
+   "tool_calls": 3,
+   "prompt_tokens": 12965,
+   "completion_tokens": 115,
+   "exhausted": false,
+   "gold_read": false,
+   "gold_seen": false,
+   "tool_counts": {
+    "search": 1,
+    "grep": 1,
+    "open": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "serverfault-d11713fbbb",
+   "corpus": "serverfault",
+   "qtype": "count",
+   "source": "structured",
+   "arm": "P",
+   "model_calls": 5,
+   "tool_calls": 13,
+   "prompt_tokens": 23281,
+   "completion_tokens": 458,
+   "exhausted": false,
+   "gold_read": false,
+   "gold_seen": false,
+   "tool_counts": {
+    "sql": 2,
+    "open": 11
+   },
+   "correct": true
+  },
+  {
+   "qid": "serverfault-a017d58a6e",
+   "corpus": "serverfault",
+   "qtype": "count",
+   "source": "structured",
+   "arm": "P",
+   "model_calls": 5,
+   "tool_calls": 12,
+   "prompt_tokens": 19674,
+   "completion_tokens": 418,
+   "exhausted": false,
+   "gold_read": false,
+   "gold_seen": false,
+   "tool_counts": {
+    "sql": 2,
+    "open": 10
+   },
+   "correct": true
+  },
+  {
+   "qid": "serverfault-e22ba55f05",
+   "corpus": "serverfault",
+   "qtype": "count",
+   "source": "structured",
+   "arm": "P",
+   "model_calls": 5,
+   "tool_calls": 11,
+   "prompt_tokens": 20427,
+   "completion_tokens": 389,
+   "exhausted": false,
+   "gold_read": false,
+   "gold_seen": false,
+   "tool_counts": {
+    "sql": 2,
+    "open": 9
+   },
+   "correct": true
+  },
+  {
+   "qid": "serverfault-b3ccf3be7d",
+   "corpus": "serverfault",
+   "qtype": "count_two_tags",
+   "source": "structured",
+   "arm": "P",
+   "model_calls": 13,
+   "tool_calls": 11,
+   "prompt_tokens": 72199,
+   "completion_tokens": 490,
+   "exhausted": false,
+   "gold_read": false,
+   "gold_seen": false,
+   "tool_counts": {
+    "sql": 2,
+    "open": 9
+   },
+   "correct": true
+  },
+  {
+   "qid": "serverfault-7fe3a8eb5b",
+   "corpus": "serverfault",
+   "qtype": "count_two_tags",
+   "source": "structured",
+   "arm": "P",
+   "model_calls": 5,
+   "tool_calls": 6,
+   "prompt_tokens": 16576,
+   "completion_tokens": 258,
+   "exhausted": false,
+   "gold_read": false,
+   "gold_seen": false,
+   "tool_counts": {
+    "sql": 2,
+    "open": 4
+   },
+   "correct": true
+  },
+  {
+   "qid": "serverfault-a8ab6ec9c9",
+   "corpus": "serverfault",
+   "qtype": "count_two_tags",
+   "source": "structured",
+   "arm": "P",
+   "model_calls": 5,
+   "tool_calls": 7,
+   "prompt_tokens": 15872,
+   "completion_tokens": 288,
+   "exhausted": false,
+   "gold_read": false,
+   "gold_seen": false,
+   "tool_counts": {
+    "sql": 2,
+    "open": 5
+   },
+   "correct": true
+  },
+  {
+   "qid": "serverfault-6f322cd2fa",
+   "corpus": "serverfault",
+   "qtype": "top_score",
+   "source": "structured",
+   "arm": "P",
+   "model_calls": 5,
+   "tool_calls": 3,
+   "prompt_tokens": 14751,
+   "completion_tokens": 158,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "sql": 2,
+    "open": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "serverfault-1d27633927",
+   "corpus": "serverfault",
+   "qtype": "top_score",
+   "source": "structured",
+   "arm": "P",
+   "model_calls": 6,
+   "tool_calls": 4,
+   "prompt_tokens": 17447,
+   "completion_tokens": 184,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "sql": 2,
+    "open": 2
+   },
+   "correct": true
+  },
+  {
+   "qid": "serverfault-6b506df3c5",
+   "corpus": "serverfault",
+   "qtype": "top_score",
+   "source": "structured",
+   "arm": "P",
+   "model_calls": 5,
+   "tool_calls": 3,
+   "prompt_tokens": 14369,
+   "completion_tokens": 146,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "sql": 2,
+    "open": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "serverfault-be223f5ff7",
+   "corpus": "serverfault",
+   "qtype": "identifier",
+   "source": "structured",
+   "arm": "P",
+   "model_calls": 8,
+   "tool_calls": 7,
+   "prompt_tokens": 41737,
+   "completion_tokens": 399,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "grep": 2,
+    "search": 2,
+    "open": 2,
+    "find_identifier": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "serverfault-beafd5e12b",
+   "corpus": "serverfault",
+   "qtype": "identifier",
+   "source": "structured",
+   "arm": "P",
+   "model_calls": 5,
+   "tool_calls": 4,
+   "prompt_tokens": 19717,
+   "completion_tokens": 194,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "grep": 2,
+    "search": 1,
+    "open": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "serverfault-d66319ea03",
+   "corpus": "serverfault",
+   "qtype": "identifier",
+   "source": "structured",
+   "arm": "P",
+   "model_calls": 6,
+   "tool_calls": 5,
+   "prompt_tokens": 24795,
+   "completion_tokens": 234,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "grep": 2,
+    "search": 1,
+    "find_identifier": 1,
+    "open": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "serverfault-0c5a0ceeb8",
+   "corpus": "serverfault",
+   "qtype": "single_hop",
+   "source": "synthetic",
+   "arm": "P",
+   "model_calls": 3,
+   "tool_calls": 2,
+   "prompt_tokens": 12368,
+   "completion_tokens": 76,
+   "exhausted": false,
+   "gold_read": false,
+   "gold_seen": false,
+   "tool_counts": {
+    "search": 1,
+    "open": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "serverfault-4dfb40cb17",
+   "corpus": "serverfault",
+   "qtype": "single_hop",
+   "source": "synthetic",
+   "arm": "P",
+   "model_calls": 4,
+   "tool_calls": 2,
+   "prompt_tokens": 15266,
+   "completion_tokens": 118,
+   "exhausted": false,
+   "gold_read": false,
+   "gold_seen": false,
+   "tool_counts": {
+    "search": 1,
+    "open": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "serverfault-643ab9525d",
+   "corpus": "serverfault",
+   "qtype": "single_hop",
+   "source": "synthetic",
+   "arm": "P",
+   "model_calls": 4,
+   "tool_calls": 2,
+   "prompt_tokens": 15591,
+   "completion_tokens": 166,
+   "exhausted": false,
+   "gold_read": false,
+   "gold_seen": false,
+   "tool_counts": {
+    "search": 1,
+    "open": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "serverfault-1b03bd4a39",
+   "corpus": "serverfault",
+   "qtype": "single_hop",
+   "source": "synthetic",
+   "arm": "P",
+   "model_calls": 3,
+   "tool_calls": 2,
+   "prompt_tokens": 12669,
+   "completion_tokens": 133,
+   "exhausted": false,
+   "gold_read": false,
+   "gold_seen": false,
+   "tool_counts": {
+    "search": 1,
+    "open": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "serverfault-2ea6f8d2f6",
+   "corpus": "serverfault",
+   "qtype": "single_hop",
+   "source": "synthetic",
+   "arm": "P",
+   "model_calls": 3,
+   "tool_calls": 2,
+   "prompt_tokens": 12385,
+   "completion_tokens": 97,
+   "exhausted": false,
+   "gold_read": false,
+   "gold_seen": false,
+   "tool_counts": {
+    "search": 1,
+    "open": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "serverfault-ec32c66c16",
+   "corpus": "serverfault",
+   "qtype": "single_hop",
+   "source": "synthetic",
+   "arm": "P",
+   "model_calls": 5,
+   "tool_calls": 4,
+   "prompt_tokens": 31077,
+   "completion_tokens": 327,
+   "exhausted": false,
+   "gold_read": false,
+   "gold_seen": false,
+   "tool_counts": {
+    "search": 3,
+    "open": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "serverfault-c1e4092d1c",
+   "corpus": "serverfault",
+   "qtype": "single_hop",
+   "source": "synthetic",
+   "arm": "P",
+   "model_calls": 3,
+   "tool_calls": 2,
+   "prompt_tokens": 12805,
+   "completion_tokens": 126,
+   "exhausted": false,
+   "gold_read": false,
+   "gold_seen": false,
+   "tool_counts": {
+    "search": 1,
+    "open": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "serverfault-31d120dfc7",
+   "corpus": "serverfault",
+   "qtype": "single_hop",
+   "source": "synthetic",
+   "arm": "P",
+   "model_calls": 7,
+   "tool_calls": 5,
+   "prompt_tokens": 38167,
+   "completion_tokens": 459,
+   "exhausted": false,
+   "gold_read": false,
+   "gold_seen": false,
+   "tool_counts": {
+    "search": 2,
+    "grep": 2,
+    "open": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "serverfault-bf5903fef3",
+   "corpus": "serverfault",
+   "qtype": "single_hop",
+   "source": "synthetic",
+   "arm": "P",
+   "model_calls": 15,
+   "tool_calls": 14,
+   "prompt_tokens": 152408,
+   "completion_tokens": 752,
+   "exhausted": false,
+   "gold_read": false,
+   "gold_seen": false,
+   "tool_counts": {
+    "search": 6,
+    "grep": 7,
+    "open": 1
+   },
+   "correct": false
+  },
+  {
+   "qid": "serverfault-ef0ee15665",
+   "corpus": "serverfault",
+   "qtype": "single_hop",
+   "source": "synthetic",
+   "arm": "P",
+   "model_calls": 5,
+   "tool_calls": 4,
+   "prompt_tokens": 27618,
+   "completion_tokens": 176,
+   "exhausted": false,
+   "gold_read": false,
+   "gold_seen": false,
+   "tool_counts": {
+    "search": 2,
+    "grep": 1,
+    "open": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "serverfault-f61b74f2b7",
+   "corpus": "serverfault",
+   "qtype": "single_hop",
+   "source": "synthetic",
+   "arm": "P",
+   "model_calls": 4,
+   "tool_calls": 3,
+   "prompt_tokens": 18467,
+   "completion_tokens": 158,
+   "exhausted": false,
+   "gold_read": false,
+   "gold_seen": false,
+   "tool_counts": {
+    "search": 1,
+    "open": 2
+   },
+   "correct": true
+  },
+  {
+   "qid": "serverfault-51ffe5a074",
+   "corpus": "serverfault",
+   "qtype": "single_hop",
+   "source": "synthetic",
+   "arm": "P",
+   "model_calls": 4,
+   "tool_calls": 3,
+   "prompt_tokens": 17988,
+   "completion_tokens": 388,
+   "exhausted": false,
+   "gold_read": false,
+   "gold_seen": false,
+   "tool_counts": {
+    "search": 1,
+    "grep": 1,
+    "open": 1
+   },
+   "correct": false
+  },
+  {
+   "qid": "serverfault-d11713fbbb",
+   "corpus": "serverfault",
+   "qtype": "count",
+   "source": "structured",
+   "arm": "Q",
+   "model_calls": 15,
+   "tool_calls": 13,
+   "prompt_tokens": 84674,
+   "completion_tokens": 458,
+   "exhausted": false,
+   "gold_read": false,
+   "gold_seen": false,
+   "tool_counts": {
+    "sql": 2,
+    "open": 11
+   },
+   "correct": true
+  },
+  {
+   "qid": "serverfault-a017d58a6e",
+   "corpus": "serverfault",
+   "qtype": "count",
+   "source": "structured",
+   "arm": "Q",
+   "model_calls": 5,
+   "tool_calls": 12,
+   "prompt_tokens": 17484,
+   "completion_tokens": 418,
+   "exhausted": false,
+   "gold_read": false,
+   "gold_seen": false,
+   "tool_counts": {
+    "sql": 2,
+    "open": 10
+   },
+   "correct": true
+  },
+  {
+   "qid": "serverfault-e22ba55f05",
+   "corpus": "serverfault",
+   "qtype": "count",
+   "source": "structured",
+   "arm": "Q",
+   "model_calls": 13,
+   "tool_calls": 11,
+   "prompt_tokens": 63652,
+   "completion_tokens": 389,
+   "exhausted": false,
+   "gold_read": false,
+   "gold_seen": false,
+   "tool_counts": {
+    "sql": 2,
+    "open": 9
+   },
+   "correct": true
+  },
+  {
+   "qid": "serverfault-b3ccf3be7d",
+   "corpus": "serverfault",
+   "qtype": "count_two_tags",
+   "source": "structured",
+   "arm": "Q",
+   "model_calls": 5,
+   "tool_calls": 11,
+   "prompt_tokens": 17985,
+   "completion_tokens": 469,
+   "exhausted": false,
+   "gold_read": false,
+   "gold_seen": false,
+   "tool_counts": {
+    "sql": 2,
+    "open": 9
+   },
+   "correct": true
+  },
+  {
+   "qid": "serverfault-7fe3a8eb5b",
+   "corpus": "serverfault",
+   "qtype": "count_two_tags",
+   "source": "structured",
+   "arm": "Q",
+   "model_calls": 5,
+   "tool_calls": 6,
+   "prompt_tokens": 14386,
+   "completion_tokens": 258,
+   "exhausted": false,
+   "gold_read": false,
+   "gold_seen": false,
+   "tool_counts": {
+    "sql": 2,
+    "open": 4
+   },
+   "correct": true
+  },
+  {
+   "qid": "serverfault-a8ab6ec9c9",
+   "corpus": "serverfault",
+   "qtype": "count_two_tags",
+   "source": "structured",
+   "arm": "Q",
+   "model_calls": 5,
+   "tool_calls": 7,
+   "prompt_tokens": 13746,
+   "completion_tokens": 310,
+   "exhausted": false,
+   "gold_read": false,
+   "gold_seen": false,
+   "tool_counts": {
+    "sql": 2,
+    "open": 5
+   },
+   "correct": true
+  },
+  {
+   "qid": "serverfault-6f322cd2fa",
+   "corpus": "serverfault",
+   "qtype": "top_score",
+   "source": "structured",
+   "arm": "Q",
+   "model_calls": 5,
+   "tool_calls": 3,
+   "prompt_tokens": 12561,
+   "completion_tokens": 158,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "sql": 2,
+    "open": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "serverfault-1d27633927",
+   "corpus": "serverfault",
+   "qtype": "top_score",
+   "source": "structured",
+   "arm": "Q",
+   "model_calls": 6,
+   "tool_calls": 4,
+   "prompt_tokens": 14819,
+   "completion_tokens": 184,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "sql": 2,
+    "open": 2
+   },
+   "correct": true
+  },
+  {
+   "qid": "serverfault-6b506df3c5",
+   "corpus": "serverfault",
+   "qtype": "top_score",
+   "source": "structured",
+   "arm": "Q",
+   "model_calls": 6,
+   "tool_calls": 4,
+   "prompt_tokens": 14774,
+   "completion_tokens": 179,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "sql": 2,
+    "open": 2
+   },
+   "correct": true
+  },
+  {
+   "qid": "serverfault-be223f5ff7",
+   "corpus": "serverfault",
+   "qtype": "identifier",
+   "source": "structured",
+   "arm": "Q",
+   "model_calls": 5,
+   "tool_calls": 3,
+   "prompt_tokens": 12445,
+   "completion_tokens": 132,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "find_identifier": 1,
+    "sql": 1,
+    "open": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "serverfault-beafd5e12b",
+   "corpus": "serverfault",
+   "qtype": "identifier",
+   "source": "structured",
+   "arm": "Q",
+   "model_calls": 5,
+   "tool_calls": 3,
+   "prompt_tokens": 13303,
+   "completion_tokens": 129,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "find_identifier": 1,
+    "sql": 1,
+    "open": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "serverfault-d66319ea03",
+   "corpus": "serverfault",
+   "qtype": "identifier",
+   "source": "structured",
+   "arm": "Q",
+   "model_calls": 5,
+   "tool_calls": 3,
+   "prompt_tokens": 17790,
+   "completion_tokens": 143,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "find_identifier": 1,
+    "sql": 1,
+    "open": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "serverfault-0c5a0ceeb8",
+   "corpus": "serverfault",
+   "qtype": "single_hop",
+   "source": "synthetic",
+   "arm": "Q",
+   "model_calls": 14,
+   "tool_calls": 13,
+   "prompt_tokens": 59126,
+   "completion_tokens": 750,
+   "exhausted": false,
+   "gold_read": false,
+   "gold_seen": false,
+   "tool_counts": {
+    "sql": 11,
+    "open": 2
+   },
+   "correct": true
+  },
+  {
+   "qid": "serverfault-4dfb40cb17",
+   "corpus": "serverfault",
+   "qtype": "single_hop",
+   "source": "synthetic",
+   "arm": "Q",
+   "model_calls": 5,
+   "tool_calls": 3,
+   "prompt_tokens": 14273,
+   "completion_tokens": 396,
+   "exhausted": false,
+   "gold_read": false,
+   "gold_seen": false,
+   "tool_counts": {
+    "sql": 2,
+    "open": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "serverfault-643ab9525d",
+   "corpus": "serverfault",
+   "qtype": "single_hop",
+   "source": "synthetic",
+   "arm": "Q",
+   "model_calls": 30,
+   "tool_calls": 28,
+   "prompt_tokens": 135664,
+   "completion_tokens": 1575,
+   "exhausted": true,
+   "gold_read": false,
+   "gold_seen": false,
+   "tool_counts": {
+    "sql": 27,
+    "open": 1
+   },
+   "correct": false
+  },
+  {
+   "qid": "serverfault-1b03bd4a39",
+   "corpus": "serverfault",
+   "qtype": "single_hop",
+   "source": "synthetic",
+   "arm": "Q",
+   "model_calls": 9,
+   "tool_calls": 8,
+   "prompt_tokens": 32853,
+   "completion_tokens": 491,
+   "exhausted": false,
+   "gold_read": false,
+   "gold_seen": false,
+   "tool_counts": {
+    "sql": 5,
+    "open": 3
+   },
+   "correct": true
+  },
+  {
+   "qid": "serverfault-2ea6f8d2f6",
+   "corpus": "serverfault",
+   "qtype": "single_hop",
+   "source": "synthetic",
+   "arm": "Q",
+   "model_calls": 7,
+   "tool_calls": 5,
+   "prompt_tokens": 25883,
+   "completion_tokens": 428,
+   "exhausted": false,
+   "gold_read": false,
+   "gold_seen": false,
+   "tool_counts": {
+    "sql": 2,
+    "open": 3
+   },
+   "correct": true
+  },
+  {
+   "qid": "serverfault-ec32c66c16",
+   "corpus": "serverfault",
+   "qtype": "single_hop",
+   "source": "synthetic",
+   "arm": "Q",
+   "model_calls": 17,
+   "tool_calls": 16,
+   "prompt_tokens": 70118,
+   "completion_tokens": 879,
+   "exhausted": false,
+   "gold_read": false,
+   "gold_seen": false,
+   "tool_counts": {
+    "sql": 15,
+    "open": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "serverfault-c1e4092d1c",
+   "corpus": "serverfault",
+   "qtype": "single_hop",
+   "source": "synthetic",
+   "arm": "Q",
+   "model_calls": 13,
+   "tool_calls": 12,
+   "prompt_tokens": 53879,
+   "completion_tokens": 746,
+   "exhausted": false,
+   "gold_read": false,
+   "gold_seen": false,
+   "tool_counts": {
+    "sql": 11,
+    "open": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "serverfault-31d120dfc7",
+   "corpus": "serverfault",
+   "qtype": "single_hop",
+   "source": "synthetic",
+   "arm": "Q",
+   "model_calls": 4,
+   "tool_calls": 2,
+   "prompt_tokens": 10500,
+   "completion_tokens": 613,
+   "exhausted": false,
+   "gold_read": false,
+   "gold_seen": false,
+   "tool_counts": {
+    "sql": 2
+   },
+   "correct": true
+  },
+  {
+   "qid": "serverfault-bf5903fef3",
+   "corpus": "serverfault",
+   "qtype": "single_hop",
+   "source": "synthetic",
+   "arm": "Q",
+   "model_calls": 30,
+   "tool_calls": 28,
+   "prompt_tokens": 125282,
+   "completion_tokens": 3949,
+   "exhausted": true,
+   "gold_read": false,
+   "gold_seen": false,
+   "tool_counts": {
+    "sql": 26,
+    "list_identifiers": 2
+   },
+   "correct": false
+  },
+  {
+   "qid": "serverfault-ef0ee15665",
+   "corpus": "serverfault",
+   "qtype": "single_hop",
+   "source": "synthetic",
+   "arm": "Q",
+   "model_calls": 19,
+   "tool_calls": 18,
+   "prompt_tokens": 112652,
+   "completion_tokens": 971,
+   "exhausted": false,
+   "gold_read": false,
+   "gold_seen": false,
+   "tool_counts": {
+    "sql": 14,
+    "find_identifier": 1,
+    "open": 3
+   },
+   "correct": true
+  },
+  {
+   "qid": "serverfault-f61b74f2b7",
+   "corpus": "serverfault",
+   "qtype": "single_hop",
+   "source": "synthetic",
+   "arm": "Q",
+   "model_calls": 6,
+   "tool_calls": 5,
+   "prompt_tokens": 24477,
+   "completion_tokens": 455,
+   "exhausted": false,
+   "gold_read": false,
+   "gold_seen": false,
+   "tool_counts": {
+    "sql": 2,
+    "open": 3
+   },
+   "correct": true
+  },
+  {
+   "qid": "serverfault-51ffe5a074",
+   "corpus": "serverfault",
+   "qtype": "single_hop",
+   "source": "synthetic",
+   "arm": "Q",
+   "model_calls": 4,
+   "tool_calls": 3,
+   "prompt_tokens": 10655,
+   "completion_tokens": 220,
+   "exhausted": false,
+   "gold_read": false,
+   "gold_seen": false,
+   "tool_counts": {
+    "find_identifier": 1,
+    "sql": 1,
+    "open": 1
+   },
+   "correct": false
+  },
+  {
+   "qid": "financebench_id_04458",
+   "corpus": "financebench",
+   "qtype": "metrics-generated",
+   "source": "gold",
+   "arm": "G",
+   "model_calls": 8,
+   "tool_calls": 7,
+   "prompt_tokens": 93907,
+   "completion_tokens": 1392,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "search": 1,
+    "open": 3,
+    "grep": 3
+   },
+   "correct": false
+  },
+  {
+   "qid": "financebench_id_10420",
+   "corpus": "financebench",
+   "qtype": "metrics-generated",
+   "source": "gold",
+   "arm": "G",
+   "model_calls": 18,
+   "tool_calls": 17,
+   "prompt_tokens": 377260,
+   "completion_tokens": 3502,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "search": 1,
+    "open": 5,
+    "grep": 11
+   },
+   "correct": false
+  },
+  {
+   "qid": "financebench_id_04660",
+   "corpus": "financebench",
+   "qtype": "metrics-generated",
+   "source": "gold",
+   "arm": "G",
+   "model_calls": 8,
+   "tool_calls": 7,
+   "prompt_tokens": 96653,
+   "completion_tokens": 1181,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "search": 1,
+    "open": 3,
+    "grep": 3
+   },
+   "correct": true
+  },
+  {
+   "qid": "financebench_id_02987",
+   "corpus": "financebench",
+   "qtype": "metrics-generated",
+   "source": "gold",
+   "arm": "G",
+   "model_calls": 28,
+   "tool_calls": 26,
+   "prompt_tokens": 313891,
+   "completion_tokens": 1796,
+   "exhausted": false,
+   "gold_read": false,
+   "gold_seen": false,
+   "tool_counts": {
+    "search": 4,
+    "grep": 22
+   },
+   "correct": false
+  },
+  {
+   "qid": "financebench_id_04080",
+   "corpus": "financebench",
+   "qtype": "metrics-generated",
+   "source": "gold",
+   "arm": "G",
+   "model_calls": 19,
+   "tool_calls": 18,
+   "prompt_tokens": 454437,
+   "completion_tokens": 2631,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "search": 2,
+    "open": 5,
+    "grep": 11
+   },
+   "correct": true
+  },
+  {
+   "qid": "financebench_id_04980",
+   "corpus": "financebench",
+   "qtype": "metrics-generated",
+   "source": "gold",
+   "arm": "G",
+   "model_calls": 27,
+   "tool_calls": 26,
+   "prompt_tokens": 702801,
+   "completion_tokens": 3632,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "search": 1,
+    "open": 7,
+    "grep": 18
+   },
+   "correct": false
+  },
+  {
+   "qid": "financebench_id_04854",
+   "corpus": "financebench",
+   "qtype": "metrics-generated",
+   "source": "gold",
+   "arm": "G",
+   "model_calls": 9,
+   "tool_calls": 8,
+   "prompt_tokens": 83593,
+   "completion_tokens": 579,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "search": 1,
+    "open": 2,
+    "grep": 5
+   },
+   "correct": true
+  },
+  {
+   "qid": "financebench_id_04481",
+   "corpus": "financebench",
+   "qtype": "metrics-generated",
+   "source": "gold",
+   "arm": "G",
+   "model_calls": 17,
+   "tool_calls": 16,
+   "prompt_tokens": 339637,
+   "completion_tokens": 1360,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "search": 1,
+    "open": 5,
+    "grep": 10
+   },
+   "correct": true
+  },
+  {
+   "qid": "financebench_id_00711",
+   "corpus": "financebench",
+   "qtype": "domain-relevant",
+   "source": "gold",
+   "arm": "G",
+   "model_calls": 11,
+   "tool_calls": 10,
+   "prompt_tokens": 155910,
+   "completion_tokens": 1690,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "search": 1,
+    "open": 4,
+    "grep": 5
+   },
+   "correct": true
+  },
+  {
+   "qid": "financebench_id_00995",
+   "corpus": "financebench",
+   "qtype": "domain-relevant",
+   "source": "gold",
+   "arm": "G",
+   "model_calls": 3,
+   "tool_calls": 2,
+   "prompt_tokens": 12268,
+   "completion_tokens": 381,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "search": 1,
+    "open": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "financebench_id_00735",
+   "corpus": "financebench",
+   "qtype": "domain-relevant",
+   "source": "gold",
+   "arm": "G",
+   "model_calls": 30,
+   "tool_calls": 29,
+   "prompt_tokens": 1102855,
+   "completion_tokens": 2362,
+   "exhausted": true,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "search": 1,
+    "open": 3,
+    "grep": 25
+   },
+   "correct": true
+  },
+  {
+   "qid": "financebench_id_01148",
+   "corpus": "financebench",
+   "qtype": "domain-relevant",
+   "source": "gold",
+   "arm": "G",
+   "model_calls": 7,
+   "tool_calls": 6,
+   "prompt_tokens": 41595,
+   "completion_tokens": 329,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "search": 1,
+    "open": 4,
+    "grep": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "financebench_id_00552",
+   "corpus": "financebench",
+   "qtype": "domain-relevant",
+   "source": "gold",
+   "arm": "G",
+   "model_calls": 15,
+   "tool_calls": 16,
+   "prompt_tokens": 258093,
+   "completion_tokens": 1377,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "search": 2,
+    "grep": 10,
+    "open": 4
+   },
+   "correct": true
+  },
+  {
+   "qid": "financebench_id_01028",
+   "corpus": "financebench",
+   "qtype": "domain-relevant",
+   "source": "gold",
+   "arm": "G",
+   "model_calls": 18,
+   "tool_calls": 17,
+   "prompt_tokens": 309262,
+   "completion_tokens": 1405,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "search": 3,
+    "grep": 10,
+    "open": 4
+   },
+   "correct": true
+  },
+  {
+   "qid": "financebench_id_00476",
+   "corpus": "financebench",
+   "qtype": "domain-relevant",
+   "source": "gold",
+   "arm": "G",
+   "model_calls": 22,
+   "tool_calls": 21,
+   "prompt_tokens": 597157,
+   "completion_tokens": 1865,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "search": 1,
+    "open": 2,
+    "grep": 18
+   },
+   "correct": true
+  },
+  {
+   "qid": "financebench_id_00685",
+   "corpus": "financebench",
+   "qtype": "domain-relevant",
+   "source": "gold",
+   "arm": "G",
+   "model_calls": 10,
+   "tool_calls": 9,
+   "prompt_tokens": 118121,
+   "completion_tokens": 1260,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "search": 1,
+    "open": 3,
+    "grep": 5
+   },
+   "correct": false
+  },
+  {
+   "qid": "financebench_id_00464",
+   "corpus": "financebench",
+   "qtype": "novel-generated",
+   "source": "gold",
+   "arm": "G",
+   "model_calls": 5,
+   "tool_calls": 4,
+   "prompt_tokens": 30196,
+   "completion_tokens": 187,
+   "exhausted": false,
+   "gold_read": false,
+   "gold_seen": false,
+   "tool_counts": {
+    "search": 1,
+    "open": 2,
+    "grep": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "financebench_id_02416",
+   "corpus": "financebench",
+   "qtype": "novel-generated",
+   "source": "gold",
+   "arm": "G",
+   "model_calls": 30,
+   "tool_calls": 29,
+   "prompt_tokens": 612694,
+   "completion_tokens": 1877,
+   "exhausted": true,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "search": 1,
+    "grep": 26,
+    "open": 2
+   },
+   "correct": false
+  },
+  {
+   "qid": "financebench_id_00407",
+   "corpus": "financebench",
+   "qtype": "novel-generated",
+   "source": "gold",
+   "arm": "G",
+   "model_calls": 8,
+   "tool_calls": 7,
+   "prompt_tokens": 119824,
+   "completion_tokens": 1030,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "search": 1,
+    "open": 3,
+    "grep": 3
+   },
+   "correct": true
+  },
+  {
+   "qid": "financebench_id_01928",
+   "corpus": "financebench",
+   "qtype": "novel-generated",
+   "source": "gold",
+   "arm": "G",
+   "model_calls": 3,
+   "tool_calls": 2,
+   "prompt_tokens": 12552,
+   "completion_tokens": 176,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "search": 1,
+    "open": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "financebench_id_00606",
+   "corpus": "financebench",
+   "qtype": "novel-generated",
+   "source": "gold",
+   "arm": "G",
+   "model_calls": 30,
+   "tool_calls": 29,
+   "prompt_tokens": 672580,
+   "completion_tokens": 1937,
+   "exhausted": true,
+   "gold_read": false,
+   "gold_seen": true,
+   "tool_counts": {
+    "search": 1,
+    "open": 1,
+    "grep": 27
+   },
+   "correct": true
+  },
+  {
+   "qid": "financebench_id_01858",
+   "corpus": "financebench",
+   "qtype": "novel-generated",
+   "source": "gold",
+   "arm": "G",
+   "model_calls": 8,
+   "tool_calls": 7,
+   "prompt_tokens": 84345,
+   "completion_tokens": 596,
+   "exhausted": false,
+   "gold_read": false,
+   "gold_seen": true,
+   "tool_counts": {
+    "search": 1,
+    "open": 4,
+    "grep": 2
+   },
+   "correct": true
+  },
+  {
+   "qid": "financebench_id_01912",
+   "corpus": "financebench",
+   "qtype": "novel-generated",
+   "source": "gold",
+   "arm": "G",
+   "model_calls": 6,
+   "tool_calls": 5,
+   "prompt_tokens": 53010,
+   "completion_tokens": 422,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "search": 1,
+    "open": 2,
+    "grep": 2
+   },
+   "correct": true
+  },
+  {
+   "qid": "financebench_id_00494",
+   "corpus": "financebench",
+   "qtype": "novel-generated",
+   "source": "gold",
+   "arm": "G",
+   "model_calls": 11,
+   "tool_calls": 9,
+   "prompt_tokens": 52541,
+   "completion_tokens": 678,
+   "exhausted": false,
+   "gold_read": false,
+   "gold_seen": false,
+   "tool_counts": {
+    "search": 1,
+    "grep": 7,
+    "open": 1
+   },
+   "correct": false
+  },
+  {
+   "qid": "financebench_id_04458",
+   "corpus": "financebench",
+   "qtype": "metrics-generated",
+   "source": "gold",
+   "arm": "D",
+   "model_calls": 7,
+   "tool_calls": 6,
+   "prompt_tokens": 78366,
+   "completion_tokens": 1683,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "search": 1,
+    "open": 3,
+    "grep": 2
+   },
+   "correct": false
+  },
+  {
+   "qid": "financebench_id_10420",
+   "corpus": "financebench",
+   "qtype": "metrics-generated",
+   "source": "gold",
+   "arm": "D",
+   "model_calls": 19,
+   "tool_calls": 18,
+   "prompt_tokens": 437426,
+   "completion_tokens": 1690,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "search": 1,
+    "open": 7,
+    "grep": 10
+   },
+   "correct": false
+  },
+  {
+   "qid": "financebench_id_04660",
+   "corpus": "financebench",
+   "qtype": "metrics-generated",
+   "source": "gold",
+   "arm": "D",
+   "model_calls": 10,
+   "tool_calls": 9,
+   "prompt_tokens": 136603,
+   "completion_tokens": 743,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "search": 1,
+    "open": 3,
+    "grep": 5
+   },
+   "correct": true
+  },
+  {
+   "qid": "financebench_id_02987",
+   "corpus": "financebench",
+   "qtype": "metrics-generated",
+   "source": "gold",
+   "arm": "D",
+   "model_calls": 30,
+   "tool_calls": 28,
+   "prompt_tokens": 293725,
+   "completion_tokens": 1571,
+   "exhausted": true,
+   "gold_read": false,
+   "gold_seen": false,
+   "tool_counts": {
+    "search": 2,
+    "grep": 26
+   },
+   "correct": false
+  },
+  {
+   "qid": "financebench_id_04080",
+   "corpus": "financebench",
+   "qtype": "metrics-generated",
+   "source": "gold",
+   "arm": "D",
+   "model_calls": 19,
+   "tool_calls": 17,
+   "prompt_tokens": 105663,
+   "completion_tokens": 1015,
+   "exhausted": false,
+   "gold_read": false,
+   "gold_seen": false,
+   "tool_counts": {
+    "search": 1,
+    "grep": 15,
+    "open": 1
+   },
+   "correct": false
+  },
+  {
+   "qid": "financebench_id_04980",
+   "corpus": "financebench",
+   "qtype": "metrics-generated",
+   "source": "gold",
+   "arm": "D",
+   "model_calls": 7,
+   "tool_calls": 6,
+   "prompt_tokens": 59829,
+   "completion_tokens": 466,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "search": 1,
+    "open": 3,
+    "grep": 2
+   },
+   "correct": false
+  },
+  {
+   "qid": "financebench_id_04854",
+   "corpus": "financebench",
+   "qtype": "metrics-generated",
+   "source": "gold",
+   "arm": "D",
+   "model_calls": 9,
+   "tool_calls": 8,
+   "prompt_tokens": 88501,
+   "completion_tokens": 608,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "search": 1,
+    "open": 2,
+    "grep": 5
+   },
+   "correct": true
+  },
+  {
+   "qid": "financebench_id_04481",
+   "corpus": "financebench",
+   "qtype": "metrics-generated",
+   "source": "gold",
+   "arm": "D",
+   "model_calls": 30,
+   "tool_calls": 29,
+   "prompt_tokens": 809826,
+   "completion_tokens": 1973,
+   "exhausted": true,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "search": 1,
+    "open": 3,
+    "grep": 25
+   },
+   "correct": false
+  },
+  {
+   "qid": "financebench_id_00711",
+   "corpus": "financebench",
+   "qtype": "domain-relevant",
+   "source": "gold",
+   "arm": "D",
+   "model_calls": 5,
+   "tool_calls": 5,
+   "prompt_tokens": 41974,
+   "completion_tokens": 618,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "search": 1,
+    "open": 2,
+    "grep": 2
+   },
+   "correct": true
+  },
+  {
+   "qid": "financebench_id_00995",
+   "corpus": "financebench",
+   "qtype": "domain-relevant",
+   "source": "gold",
+   "arm": "D",
+   "model_calls": 3,
+   "tool_calls": 2,
+   "prompt_tokens": 13819,
+   "completion_tokens": 360,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "search": 1,
+    "open": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "financebench_id_00735",
+   "corpus": "financebench",
+   "qtype": "domain-relevant",
+   "source": "gold",
+   "arm": "D",
+   "model_calls": 30,
+   "tool_calls": 29,
+   "prompt_tokens": 1036532,
+   "completion_tokens": 2115,
+   "exhausted": true,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "search": 1,
+    "grep": 25,
+    "open": 3
+   },
+   "correct": true
+  },
+  {
+   "qid": "financebench_id_01148",
+   "corpus": "financebench",
+   "qtype": "domain-relevant",
+   "source": "gold",
+   "arm": "D",
+   "model_calls": 6,
+   "tool_calls": 5,
+   "prompt_tokens": 36302,
+   "completion_tokens": 372,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "search": 1,
+    "open": 2,
+    "grep": 2
+   },
+   "correct": true
+  },
+  {
+   "qid": "financebench_id_00552",
+   "corpus": "financebench",
+   "qtype": "domain-relevant",
+   "source": "gold",
+   "arm": "D",
+   "model_calls": 30,
+   "tool_calls": 30,
+   "prompt_tokens": 725589,
+   "completion_tokens": 2014,
+   "exhausted": true,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "search": 3,
+    "grep": 26,
+    "open": 1
+   },
+   "correct": false
+  },
+  {
+   "qid": "financebench_id_01028",
+   "corpus": "financebench",
+   "qtype": "domain-relevant",
+   "source": "gold",
+   "arm": "D",
+   "model_calls": 23,
+   "tool_calls": 22,
+   "prompt_tokens": 519891,
+   "completion_tokens": 2047,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "search": 2,
+    "grep": 18,
+    "open": 2
+   },
+   "correct": false
+  },
+  {
+   "qid": "financebench_id_00476",
+   "corpus": "financebench",
+   "qtype": "domain-relevant",
+   "source": "gold",
+   "arm": "D",
+   "model_calls": 30,
+   "tool_calls": 29,
+   "prompt_tokens": 998532,
+   "completion_tokens": 2630,
+   "exhausted": true,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "search": 1,
+    "open": 2,
+    "grep": 26
+   },
+   "correct": true
+  },
+  {
+   "qid": "financebench_id_00685",
+   "corpus": "financebench",
+   "qtype": "domain-relevant",
+   "source": "gold",
+   "arm": "D",
+   "model_calls": 12,
+   "tool_calls": 11,
+   "prompt_tokens": 154195,
+   "completion_tokens": 1796,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "search": 1,
+    "open": 4,
+    "grep": 6
+   },
+   "correct": true
+  },
+  {
+   "qid": "financebench_id_00464",
+   "corpus": "financebench",
+   "qtype": "novel-generated",
+   "source": "gold",
+   "arm": "D",
+   "model_calls": 5,
+   "tool_calls": 4,
+   "prompt_tokens": 32579,
+   "completion_tokens": 297,
+   "exhausted": false,
+   "gold_read": false,
+   "gold_seen": false,
+   "tool_counts": {
+    "search": 1,
+    "open": 2,
+    "grep": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "financebench_id_02416",
+   "corpus": "financebench",
+   "qtype": "novel-generated",
+   "source": "gold",
+   "arm": "D",
+   "model_calls": 30,
+   "tool_calls": 29,
+   "prompt_tokens": 864159,
+   "completion_tokens": 2365,
+   "exhausted": true,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "search": 1,
+    "grep": 27,
+    "open": 1
+   },
+   "correct": false
+  },
+  {
+   "qid": "financebench_id_00407",
+   "corpus": "financebench",
+   "qtype": "novel-generated",
+   "source": "gold",
+   "arm": "D",
+   "model_calls": 9,
+   "tool_calls": 8,
+   "prompt_tokens": 146333,
+   "completion_tokens": 761,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "search": 1,
+    "open": 3,
+    "grep": 4
+   },
+   "correct": true
+  },
+  {
+   "qid": "financebench_id_01928",
+   "corpus": "financebench",
+   "qtype": "novel-generated",
+   "source": "gold",
+   "arm": "D",
+   "model_calls": 3,
+   "tool_calls": 2,
+   "prompt_tokens": 14103,
+   "completion_tokens": 178,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "search": 1,
+    "open": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "financebench_id_00606",
+   "corpus": "financebench",
+   "qtype": "novel-generated",
+   "source": "gold",
+   "arm": "D",
+   "model_calls": 17,
+   "tool_calls": 16,
+   "prompt_tokens": 381764,
+   "completion_tokens": 2518,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "search": 2,
+    "open": 4,
+    "grep": 10
+   },
+   "correct": false
+  },
+  {
+   "qid": "financebench_id_01858",
+   "corpus": "financebench",
+   "qtype": "novel-generated",
+   "source": "gold",
+   "arm": "D",
+   "model_calls": 9,
+   "tool_calls": 8,
+   "prompt_tokens": 82365,
+   "completion_tokens": 773,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "search": 1,
+    "grep": 4,
+    "open": 3
+   },
+   "correct": true
+  },
+  {
+   "qid": "financebench_id_01912",
+   "corpus": "financebench",
+   "qtype": "novel-generated",
+   "source": "gold",
+   "arm": "D",
+   "model_calls": 11,
+   "tool_calls": 10,
+   "prompt_tokens": 169823,
+   "completion_tokens": 1079,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "search": 1,
+    "open": 4,
+    "grep": 5
+   },
+   "correct": true
+  },
+  {
+   "qid": "financebench_id_00494",
+   "corpus": "financebench",
+   "qtype": "novel-generated",
+   "source": "gold",
+   "arm": "D",
+   "model_calls": 12,
+   "tool_calls": 10,
+   "prompt_tokens": 76822,
+   "completion_tokens": 673,
+   "exhausted": false,
+   "gold_read": false,
+   "gold_seen": false,
+   "tool_counts": {
+    "search": 1,
+    "grep": 8,
+    "open": 1
+   },
+   "correct": false
+  },
+  {
+   "qid": "financebench_id_04458",
+   "corpus": "financebench",
+   "qtype": "metrics-generated",
+   "source": "gold",
+   "arm": "P",
+   "model_calls": 15,
+   "tool_calls": 14,
+   "prompt_tokens": 130363,
+   "completion_tokens": 1820,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "sql": 9,
+    "open": 2,
+    "open_section": 1,
+    "grep": 1,
+    "search": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "financebench_id_10420",
+   "corpus": "financebench",
+   "qtype": "metrics-generated",
+   "source": "gold",
+   "arm": "P",
+   "model_calls": 20,
+   "tool_calls": 19,
+   "prompt_tokens": 297462,
+   "completion_tokens": 3949,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "sql": 16,
+    "open": 1,
+    "grep": 1,
+    "search": 1
+   },
+   "correct": false
+  },
+  {
+   "qid": "financebench_id_04660",
+   "corpus": "financebench",
+   "qtype": "metrics-generated",
+   "source": "gold",
+   "arm": "P",
+   "model_calls": 14,
+   "tool_calls": 13,
+   "prompt_tokens": 68291,
+   "completion_tokens": 1236,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "sql": 10,
+    "outline": 1,
+    "open_section": 2
+   },
+   "correct": true
+  },
+  {
+   "qid": "financebench_id_02987",
+   "corpus": "financebench",
+   "qtype": "metrics-generated",
+   "source": "gold",
+   "arm": "P",
+   "model_calls": 14,
+   "tool_calls": 12,
+   "prompt_tokens": 150920,
+   "completion_tokens": 1568,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "sql": 4,
+    "open": 1,
+    "outline": 5,
+    "open_section": 2
+   },
+   "correct": true
+  },
+  {
+   "qid": "financebench_id_04080",
+   "corpus": "financebench",
+   "qtype": "metrics-generated",
+   "source": "gold",
+   "arm": "P",
+   "model_calls": 17,
+   "tool_calls": 15,
+   "prompt_tokens": 305637,
+   "completion_tokens": 1666,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "sql": 6,
+    "open": 9
+   },
+   "correct": true
+  },
+  {
+   "qid": "financebench_id_04980",
+   "corpus": "financebench",
+   "qtype": "metrics-generated",
+   "source": "gold",
+   "arm": "P",
+   "model_calls": 7,
+   "tool_calls": 6,
+   "prompt_tokens": 29195,
+   "completion_tokens": 834,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "sql": 1,
+    "outline": 1,
+    "open_section": 4
+   },
+   "correct": false
+  },
+  {
+   "qid": "financebench_id_04854",
+   "corpus": "financebench",
+   "qtype": "metrics-generated",
+   "source": "gold",
+   "arm": "P",
+   "model_calls": 6,
+   "tool_calls": 5,
+   "prompt_tokens": 31596,
+   "completion_tokens": 430,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "search": 1,
+    "outline": 1,
+    "open_section": 2,
+    "open": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "financebench_id_04481",
+   "corpus": "financebench",
+   "qtype": "metrics-generated",
+   "source": "gold",
+   "arm": "P",
+   "model_calls": 30,
+   "tool_calls": 28,
+   "prompt_tokens": 456862,
+   "completion_tokens": 2823,
+   "exhausted": true,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "sql": 25,
+    "outline": 1,
+    "open": 2
+   },
+   "correct": true
+  },
+  {
+   "qid": "financebench_id_00711",
+   "corpus": "financebench",
+   "qtype": "domain-relevant",
+   "source": "gold",
+   "arm": "P",
+   "model_calls": 12,
+   "tool_calls": 10,
+   "prompt_tokens": 106957,
+   "completion_tokens": 1125,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "sql": 7,
+    "open": 3
+   },
+   "correct": true
+  },
+  {
+   "qid": "financebench_id_00995",
+   "corpus": "financebench",
+   "qtype": "domain-relevant",
+   "source": "gold",
+   "arm": "P",
+   "model_calls": 3,
+   "tool_calls": 2,
+   "prompt_tokens": 16669,
+   "completion_tokens": 275,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "search": 1,
+    "open": 1
+   },
+   "correct": false
+  },
+  {
+   "qid": "financebench_id_00735",
+   "corpus": "financebench",
+   "qtype": "domain-relevant",
+   "source": "gold",
+   "arm": "P",
+   "model_calls": 7,
+   "tool_calls": 11,
+   "prompt_tokens": 58217,
+   "completion_tokens": 1166,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "search": 2,
+    "outline": 2,
+    "open_section": 6,
+    "grep": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "financebench_id_01148",
+   "corpus": "financebench",
+   "qtype": "domain-relevant",
+   "source": "gold",
+   "arm": "P",
+   "model_calls": 11,
+   "tool_calls": 9,
+   "prompt_tokens": 83595,
+   "completion_tokens": 446,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "search": 1,
+    "sql": 1,
+    "open": 1,
+    "outline": 5,
+    "open_section": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "financebench_id_00552",
+   "corpus": "financebench",
+   "qtype": "domain-relevant",
+   "source": "gold",
+   "arm": "P",
+   "model_calls": 25,
+   "tool_calls": 23,
+   "prompt_tokens": 396209,
+   "completion_tokens": 1938,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "sql": 12,
+    "open_section": 1,
+    "open": 3,
+    "outline": 1,
+    "grep": 5,
+    "search": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "financebench_id_01028",
+   "corpus": "financebench",
+   "qtype": "domain-relevant",
+   "source": "gold",
+   "arm": "P",
+   "model_calls": 7,
+   "tool_calls": 6,
+   "prompt_tokens": 37308,
+   "completion_tokens": 430,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "search": 1,
+    "grep": 2,
+    "sql": 1,
+    "outline": 1,
+    "open_section": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "financebench_id_00476",
+   "corpus": "financebench",
+   "qtype": "domain-relevant",
+   "source": "gold",
+   "arm": "P",
+   "model_calls": 30,
+   "tool_calls": 29,
+   "prompt_tokens": 689937,
+   "completion_tokens": 2587,
+   "exhausted": true,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "search": 1,
+    "outline": 3,
+    "open_section": 2,
+    "grep": 15,
+    "open": 8
+   },
+   "correct": true
+  },
+  {
+   "qid": "financebench_id_00685",
+   "corpus": "financebench",
+   "qtype": "domain-relevant",
+   "source": "gold",
+   "arm": "P",
+   "model_calls": 17,
+   "tool_calls": 16,
+   "prompt_tokens": 245489,
+   "completion_tokens": 2072,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "search": 1,
+    "sql": 10,
+    "open": 4,
+    "grep": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "financebench_id_00464",
+   "corpus": "financebench",
+   "qtype": "novel-generated",
+   "source": "gold",
+   "arm": "P",
+   "model_calls": 7,
+   "tool_calls": 6,
+   "prompt_tokens": 36156,
+   "completion_tokens": 542,
+   "exhausted": false,
+   "gold_read": false,
+   "gold_seen": false,
+   "tool_counts": {
+    "search": 1,
+    "outline": 1,
+    "grep": 3,
+    "open": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "financebench_id_02416",
+   "corpus": "financebench",
+   "qtype": "novel-generated",
+   "source": "gold",
+   "arm": "P",
+   "model_calls": 10,
+   "tool_calls": 9,
+   "prompt_tokens": 78106,
+   "completion_tokens": 778,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "search": 1,
+    "outline": 1,
+    "open_section": 4,
+    "open": 1,
+    "grep": 2
+   },
+   "correct": true
+  },
+  {
+   "qid": "financebench_id_00407",
+   "corpus": "financebench",
+   "qtype": "novel-generated",
+   "source": "gold",
+   "arm": "P",
+   "model_calls": 5,
+   "tool_calls": 4,
+   "prompt_tokens": 24563,
+   "completion_tokens": 517,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "sql": 1,
+    "search": 1,
+    "grep": 1,
+    "open": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "financebench_id_01928",
+   "corpus": "financebench",
+   "qtype": "novel-generated",
+   "source": "gold",
+   "arm": "P",
+   "model_calls": 3,
+   "tool_calls": 2,
+   "prompt_tokens": 16984,
+   "completion_tokens": 220,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "search": 1,
+    "open": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "financebench_id_00606",
+   "corpus": "financebench",
+   "qtype": "novel-generated",
+   "source": "gold",
+   "arm": "P",
+   "model_calls": 14,
+   "tool_calls": 13,
+   "prompt_tokens": 228003,
+   "completion_tokens": 1662,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "search": 1,
+    "sql": 4,
+    "grep": 4,
+    "outline": 1,
+    "open_section": 2,
+    "open": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "financebench_id_01858",
+   "corpus": "financebench",
+   "qtype": "novel-generated",
+   "source": "gold",
+   "arm": "P",
+   "model_calls": 8,
+   "tool_calls": 7,
+   "prompt_tokens": 60794,
+   "completion_tokens": 868,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "search": 1,
+    "outline": 1,
+    "grep": 2,
+    "open": 3
+   },
+   "correct": true
+  },
+  {
+   "qid": "financebench_id_01912",
+   "corpus": "financebench",
+   "qtype": "novel-generated",
+   "source": "gold",
+   "arm": "P",
+   "model_calls": 9,
+   "tool_calls": 8,
+   "prompt_tokens": 133083,
+   "completion_tokens": 754,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "search": 1,
+    "open": 3,
+    "grep": 2,
+    "sql": 2
+   },
+   "correct": true
+  },
+  {
+   "qid": "financebench_id_00494",
+   "corpus": "financebench",
+   "qtype": "novel-generated",
+   "source": "gold",
+   "arm": "P",
+   "model_calls": 30,
+   "tool_calls": 29,
+   "prompt_tokens": 403704,
+   "completion_tokens": 1572,
+   "exhausted": true,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "search": 1,
+    "sql": 2,
+    "outline": 3,
+    "grep": 22,
+    "open": 1
+   },
+   "correct": false
+  },
+  {
+   "qid": "financebench_id_04458",
+   "corpus": "financebench",
+   "qtype": "metrics-generated",
+   "source": "gold",
+   "arm": "Q",
+   "model_calls": 9,
+   "tool_calls": 8,
+   "prompt_tokens": 43197,
+   "completion_tokens": 1365,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "sql": 6,
+    "outline": 1,
+    "open_section": 1
+   },
+   "correct": false
+  },
+  {
+   "qid": "financebench_id_10420",
+   "corpus": "financebench",
+   "qtype": "metrics-generated",
+   "source": "gold",
+   "arm": "Q",
+   "model_calls": 18,
+   "tool_calls": 17,
+   "prompt_tokens": 217617,
+   "completion_tokens": 2371,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "sql": 12,
+    "outline": 1,
+    "open_section": 4
+   },
+   "correct": false
+  },
+  {
+   "qid": "financebench_id_04660",
+   "corpus": "financebench",
+   "qtype": "metrics-generated",
+   "source": "gold",
+   "arm": "Q",
+   "model_calls": 11,
+   "tool_calls": 10,
+   "prompt_tokens": 82905,
+   "completion_tokens": 1072,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "sql": 5,
+    "outline": 2,
+    "open_section": 3
+   },
+   "correct": true
+  },
+  {
+   "qid": "financebench_id_02987",
+   "corpus": "financebench",
+   "qtype": "metrics-generated",
+   "source": "gold",
+   "arm": "Q",
+   "model_calls": 9,
+   "tool_calls": 7,
+   "prompt_tokens": 53448,
+   "completion_tokens": 972,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "sql": 6,
+    "open": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "financebench_id_04080",
+   "corpus": "financebench",
+   "qtype": "metrics-generated",
+   "source": "gold",
+   "arm": "Q",
+   "model_calls": 20,
+   "tool_calls": 18,
+   "prompt_tokens": 313249,
+   "completion_tokens": 2892,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "sql": 14,
+    "outline": 1,
+    "open": 3
+   },
+   "correct": true
+  },
+  {
+   "qid": "financebench_id_04980",
+   "corpus": "financebench",
+   "qtype": "metrics-generated",
+   "source": "gold",
+   "arm": "Q",
+   "model_calls": 6,
+   "tool_calls": 5,
+   "prompt_tokens": 19539,
+   "completion_tokens": 505,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "sql": 1,
+    "outline": 1,
+    "open_section": 3
+   },
+   "correct": false
+  },
+  {
+   "qid": "financebench_id_04854",
+   "corpus": "financebench",
+   "qtype": "metrics-generated",
+   "source": "gold",
+   "arm": "Q",
+   "model_calls": 8,
+   "tool_calls": 7,
+   "prompt_tokens": 26247,
+   "completion_tokens": 922,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "sql": 1,
+    "outline": 2,
+    "open_section": 3,
+    "open": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "financebench_id_04481",
+   "corpus": "financebench",
+   "qtype": "metrics-generated",
+   "source": "gold",
+   "arm": "Q",
+   "model_calls": 10,
+   "tool_calls": 8,
+   "prompt_tokens": 93732,
+   "completion_tokens": 923,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "sql": 5,
+    "outline": 1,
+    "open_section": 2
+   },
+   "correct": true
+  },
+  {
+   "qid": "financebench_id_00711",
+   "corpus": "financebench",
+   "qtype": "domain-relevant",
+   "source": "gold",
+   "arm": "Q",
+   "model_calls": 15,
+   "tool_calls": 13,
+   "prompt_tokens": 96492,
+   "completion_tokens": 1902,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "sql": 9,
+    "open": 2,
+    "open_section": 2
+   },
+   "correct": true
+  },
+  {
+   "qid": "financebench_id_00995",
+   "corpus": "financebench",
+   "qtype": "domain-relevant",
+   "source": "gold",
+   "arm": "Q",
+   "model_calls": 7,
+   "tool_calls": 6,
+   "prompt_tokens": 30259,
+   "completion_tokens": 643,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "sql": 3,
+    "outline": 1,
+    "open_section": 1,
+    "open": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "financebench_id_00735",
+   "corpus": "financebench",
+   "qtype": "domain-relevant",
+   "source": "gold",
+   "arm": "Q",
+   "model_calls": 30,
+   "tool_calls": 29,
+   "prompt_tokens": 356896,
+   "completion_tokens": 2398,
+   "exhausted": true,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "sql": 20,
+    "outline": 3,
+    "open_section": 5,
+    "open": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "financebench_id_01148",
+   "corpus": "financebench",
+   "qtype": "domain-relevant",
+   "source": "gold",
+   "arm": "Q",
+   "model_calls": 10,
+   "tool_calls": 8,
+   "prompt_tokens": 54143,
+   "completion_tokens": 502,
+   "exhausted": false,
+   "gold_read": false,
+   "gold_seen": false,
+   "tool_counts": {
+    "sql": 2,
+    "open": 1,
+    "outline": 3,
+    "open_section": 2
+   },
+   "correct": true
+  },
+  {
+   "qid": "financebench_id_00552",
+   "corpus": "financebench",
+   "qtype": "domain-relevant",
+   "source": "gold",
+   "arm": "Q",
+   "model_calls": 16,
+   "tool_calls": 14,
+   "prompt_tokens": 107775,
+   "completion_tokens": 1590,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "sql": 11,
+    "open": 3
+   },
+   "correct": true
+  },
+  {
+   "qid": "financebench_id_01028",
+   "corpus": "financebench",
+   "qtype": "domain-relevant",
+   "source": "gold",
+   "arm": "Q",
+   "model_calls": 4,
+   "tool_calls": 3,
+   "prompt_tokens": 9633,
+   "completion_tokens": 202,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "sql": 1,
+    "outline": 1,
+    "open_section": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "financebench_id_00476",
+   "corpus": "financebench",
+   "qtype": "domain-relevant",
+   "source": "gold",
+   "arm": "Q",
+   "model_calls": 30,
+   "tool_calls": 29,
+   "prompt_tokens": 372504,
+   "completion_tokens": 3003,
+   "exhausted": true,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "sql": 21,
+    "outline": 5,
+    "open_section": 3
+   },
+   "correct": false
+  },
+  {
+   "qid": "financebench_id_00685",
+   "corpus": "financebench",
+   "qtype": "domain-relevant",
+   "source": "gold",
+   "arm": "Q",
+   "model_calls": 30,
+   "tool_calls": 28,
+   "prompt_tokens": 864176,
+   "completion_tokens": 3395,
+   "exhausted": true,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "sql": 16,
+    "open": 7,
+    "outline": 5
+   },
+   "correct": false
+  },
+  {
+   "qid": "financebench_id_00464",
+   "corpus": "financebench",
+   "qtype": "novel-generated",
+   "source": "gold",
+   "arm": "Q",
+   "model_calls": 16,
+   "tool_calls": 15,
+   "prompt_tokens": 124063,
+   "completion_tokens": 1086,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "sql": 4,
+    "outline": 7,
+    "open_section": 4
+   },
+   "correct": true
+  },
+  {
+   "qid": "financebench_id_02416",
+   "corpus": "financebench",
+   "qtype": "novel-generated",
+   "source": "gold",
+   "arm": "Q",
+   "model_calls": 6,
+   "tool_calls": 5,
+   "prompt_tokens": 19306,
+   "completion_tokens": 459,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "sql": 1,
+    "outline": 1,
+    "open_section": 2,
+    "open": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "financebench_id_00407",
+   "corpus": "financebench",
+   "qtype": "novel-generated",
+   "source": "gold",
+   "arm": "Q",
+   "model_calls": 17,
+   "tool_calls": 16,
+   "prompt_tokens": 245578,
+   "completion_tokens": 2146,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "sql": 11,
+    "outline": 2,
+    "open_section": 1,
+    "open": 2
+   },
+   "correct": true
+  },
+  {
+   "qid": "financebench_id_01928",
+   "corpus": "financebench",
+   "qtype": "novel-generated",
+   "source": "gold",
+   "arm": "Q",
+   "model_calls": 21,
+   "tool_calls": 20,
+   "prompt_tokens": 158027,
+   "completion_tokens": 1510,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "sql": 17,
+    "outline": 2,
+    "open_section": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "financebench_id_00606",
+   "corpus": "financebench",
+   "qtype": "novel-generated",
+   "source": "gold",
+   "arm": "Q",
+   "model_calls": 23,
+   "tool_calls": 22,
+   "prompt_tokens": 306573,
+   "completion_tokens": 3386,
+   "exhausted": false,
+   "gold_read": false,
+   "gold_seen": false,
+   "tool_counts": {
+    "sql": 15,
+    "outline": 1,
+    "open_section": 5,
+    "open": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "financebench_id_01858",
+   "corpus": "financebench",
+   "qtype": "novel-generated",
+   "source": "gold",
+   "arm": "Q",
+   "model_calls": 10,
+   "tool_calls": 9,
+   "prompt_tokens": 95430,
+   "completion_tokens": 1747,
+   "exhausted": false,
+   "gold_read": false,
+   "gold_seen": true,
+   "tool_counts": {
+    "sql": 6,
+    "outline": 2,
+    "open_section": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "financebench_id_01912",
+   "corpus": "financebench",
+   "qtype": "novel-generated",
+   "source": "gold",
+   "arm": "Q",
+   "model_calls": 29,
+   "tool_calls": 28,
+   "prompt_tokens": 591751,
+   "completion_tokens": 3348,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "sql": 19,
+    "outline": 3,
+    "open_section": 6
+   },
+   "correct": true
+  },
+  {
+   "qid": "financebench_id_00494",
+   "corpus": "financebench",
+   "qtype": "novel-generated",
+   "source": "gold",
+   "arm": "Q",
+   "model_calls": 14,
+   "tool_calls": 13,
+   "prompt_tokens": 140881,
+   "completion_tokens": 1314,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "sql": 8,
+    "outline": 1,
+    "open_section": 4
+   },
+   "correct": false
+  },
+  {
+   "qid": "click-0dc500bb6f",
+   "corpus": "click",
+   "qtype": "default_value",
+   "source": "structured",
+   "arm": "G",
+   "model_calls": 3,
+   "tool_calls": 2,
+   "prompt_tokens": 11695,
+   "completion_tokens": 148,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "search": 1,
+    "open": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "click-85bbfae290",
+   "corpus": "click",
+   "qtype": "default_value",
+   "source": "structured",
+   "arm": "G",
+   "model_calls": 30,
+   "tool_calls": 29,
+   "prompt_tokens": 129668,
+   "completion_tokens": 886,
+   "exhausted": true,
+   "gold_read": false,
+   "gold_seen": false,
+   "tool_counts": {
+    "search": 1,
+    "grep": 28
+   },
+   "correct": true
+  },
+  {
+   "qid": "click-6e595c611d",
+   "corpus": "click",
+   "qtype": "default_value",
+   "source": "structured",
+   "arm": "G",
+   "model_calls": 28,
+   "tool_calls": 27,
+   "prompt_tokens": 145304,
+   "completion_tokens": 1576,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "search": 2,
+    "grep": 22,
+    "open": 3
+   },
+   "correct": true
+  },
+  {
+   "qid": "click-cb721bed3d",
+   "corpus": "click",
+   "qtype": "default_value",
+   "source": "structured",
+   "arm": "G",
+   "model_calls": 4,
+   "tool_calls": 3,
+   "prompt_tokens": 10011,
+   "completion_tokens": 124,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "search": 1,
+    "grep": 1,
+    "open": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "click-c21e90dcb4",
+   "corpus": "click",
+   "qtype": "default_value",
+   "source": "structured",
+   "arm": "G",
+   "model_calls": 3,
+   "tool_calls": 2,
+   "prompt_tokens": 11679,
+   "completion_tokens": 163,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "search": 1,
+    "open": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "click-c83c4e53aa",
+   "corpus": "click",
+   "qtype": "default_value",
+   "source": "structured",
+   "arm": "G",
+   "model_calls": 4,
+   "tool_calls": 3,
+   "prompt_tokens": 10685,
+   "completion_tokens": 169,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "search": 1,
+    "grep": 1,
+    "open": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "click-1488cf0aca",
+   "corpus": "click",
+   "qtype": "base_class",
+   "source": "structured",
+   "arm": "G",
+   "model_calls": 5,
+   "tool_calls": 4,
+   "prompt_tokens": 10725,
+   "completion_tokens": 147,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "grep": 2,
+    "search": 1,
+    "open": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "click-b4afea6b30",
+   "corpus": "click",
+   "qtype": "base_class",
+   "source": "structured",
+   "arm": "G",
+   "model_calls": 5,
+   "tool_calls": 4,
+   "prompt_tokens": 10768,
+   "completion_tokens": 149,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "grep": 2,
+    "search": 1,
+    "open": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "click-c000db13fe",
+   "corpus": "click",
+   "qtype": "base_class",
+   "source": "structured",
+   "arm": "G",
+   "model_calls": 5,
+   "tool_calls": 4,
+   "prompt_tokens": 10758,
+   "completion_tokens": 208,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "grep": 2,
+    "search": 1,
+    "open": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "click-aed1f7d5cd",
+   "corpus": "click",
+   "qtype": "base_class",
+   "source": "structured",
+   "arm": "G",
+   "model_calls": 5,
+   "tool_calls": 4,
+   "prompt_tokens": 10932,
+   "completion_tokens": 152,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "grep": 2,
+    "search": 1,
+    "open": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "click-a2beca7571",
+   "corpus": "click",
+   "qtype": "base_class",
+   "source": "structured",
+   "arm": "G",
+   "model_calls": 3,
+   "tool_calls": 2,
+   "prompt_tokens": 9936,
+   "completion_tokens": 64,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "search": 1,
+    "open": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "click-878b4c40c6",
+   "corpus": "click",
+   "qtype": "defining_file",
+   "source": "structured",
+   "arm": "G",
+   "model_calls": 10,
+   "tool_calls": 8,
+   "prompt_tokens": 34911,
+   "completion_tokens": 306,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "grep": 5,
+    "search": 2,
+    "open": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "click-22628a5e89",
+   "corpus": "click",
+   "qtype": "defining_file",
+   "source": "structured",
+   "arm": "G",
+   "model_calls": 6,
+   "tool_calls": 4,
+   "prompt_tokens": 13651,
+   "completion_tokens": 160,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "grep": 2,
+    "search": 1,
+    "open": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "click-0d9c76b2ba",
+   "corpus": "click",
+   "qtype": "defining_file",
+   "source": "structured",
+   "arm": "G",
+   "model_calls": 15,
+   "tool_calls": 14,
+   "prompt_tokens": 91898,
+   "completion_tokens": 556,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "grep": 8,
+    "search": 3,
+    "open": 3
+   },
+   "correct": true
+  },
+  {
+   "qid": "click-e5406f5ea0",
+   "corpus": "click",
+   "qtype": "defining_file",
+   "source": "structured",
+   "arm": "G",
+   "model_calls": 6,
+   "tool_calls": 4,
+   "prompt_tokens": 13846,
+   "completion_tokens": 157,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "grep": 2,
+    "search": 1,
+    "open": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "click-c1520c94c1",
+   "corpus": "click",
+   "qtype": "defining_file",
+   "source": "structured",
+   "arm": "G",
+   "model_calls": 6,
+   "tool_calls": 4,
+   "prompt_tokens": 13583,
+   "completion_tokens": 157,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "grep": 2,
+    "search": 1,
+    "open": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "click-0f4de7b46b",
+   "corpus": "click",
+   "qtype": "single_hop",
+   "source": "synthetic",
+   "arm": "G",
+   "model_calls": 13,
+   "tool_calls": 12,
+   "prompt_tokens": 214016,
+   "completion_tokens": 688,
+   "exhausted": false,
+   "gold_read": false,
+   "gold_seen": false,
+   "tool_counts": {
+    "search": 2,
+    "open": 7,
+    "grep": 3
+   },
+   "correct": true
+  },
+  {
+   "qid": "click-c487c29c62",
+   "corpus": "click",
+   "qtype": "single_hop",
+   "source": "synthetic",
+   "arm": "G",
+   "model_calls": 5,
+   "tool_calls": 4,
+   "prompt_tokens": 19774,
+   "completion_tokens": 178,
+   "exhausted": false,
+   "gold_read": false,
+   "gold_seen": false,
+   "tool_counts": {
+    "search": 2,
+    "grep": 1,
+    "open": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "click-b5852c819e",
+   "corpus": "click",
+   "qtype": "single_hop",
+   "source": "synthetic",
+   "arm": "G",
+   "model_calls": 20,
+   "tool_calls": 19,
+   "prompt_tokens": 204593,
+   "completion_tokens": 983,
+   "exhausted": false,
+   "gold_read": false,
+   "gold_seen": false,
+   "tool_counts": {
+    "search": 2,
+    "open": 3,
+    "grep": 14
+   },
+   "correct": true
+  },
+  {
+   "qid": "click-73c5c1c74e",
+   "corpus": "click",
+   "qtype": "single_hop",
+   "source": "synthetic",
+   "arm": "G",
+   "model_calls": 3,
+   "tool_calls": 2,
+   "prompt_tokens": 12024,
+   "completion_tokens": 175,
+   "exhausted": false,
+   "gold_read": false,
+   "gold_seen": false,
+   "tool_counts": {
+    "search": 1,
+    "open": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "click-7dc91acd35",
+   "corpus": "click",
+   "qtype": "single_hop",
+   "source": "synthetic",
+   "arm": "G",
+   "model_calls": 3,
+   "tool_calls": 2,
+   "prompt_tokens": 7394,
+   "completion_tokens": 110,
+   "exhausted": false,
+   "gold_read": false,
+   "gold_seen": false,
+   "tool_counts": {
+    "search": 1,
+    "open": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "click-596a67a08e",
+   "corpus": "click",
+   "qtype": "single_hop",
+   "source": "synthetic",
+   "arm": "G",
+   "model_calls": 5,
+   "tool_calls": 4,
+   "prompt_tokens": 30536,
+   "completion_tokens": 245,
+   "exhausted": false,
+   "gold_read": false,
+   "gold_seen": false,
+   "tool_counts": {
+    "search": 1,
+    "open": 2,
+    "grep": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "click-f8f369f453",
+   "corpus": "click",
+   "qtype": "single_hop",
+   "source": "synthetic",
+   "arm": "G",
+   "model_calls": 3,
+   "tool_calls": 2,
+   "prompt_tokens": 7212,
+   "completion_tokens": 64,
+   "exhausted": false,
+   "gold_read": false,
+   "gold_seen": false,
+   "tool_counts": {
+    "search": 1,
+    "open": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "click-1501a9b27c",
+   "corpus": "click",
+   "qtype": "single_hop",
+   "source": "synthetic",
+   "arm": "G",
+   "model_calls": 5,
+   "tool_calls": 4,
+   "prompt_tokens": 29222,
+   "completion_tokens": 150,
+   "exhausted": false,
+   "gold_read": false,
+   "gold_seen": false,
+   "tool_counts": {
+    "search": 1,
+    "open": 2,
+    "grep": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "click-0dc500bb6f",
+   "corpus": "click",
+   "qtype": "default_value",
+   "source": "structured",
+   "arm": "D",
+   "model_calls": 5,
+   "tool_calls": 4,
+   "prompt_tokens": 11542,
+   "completion_tokens": 147,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "grep": 2,
+    "search": 1,
+    "open": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "click-85bbfae290",
+   "corpus": "click",
+   "qtype": "default_value",
+   "source": "structured",
+   "arm": "D",
+   "model_calls": 9,
+   "tool_calls": 8,
+   "prompt_tokens": 27986,
+   "completion_tokens": 303,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "grep": 5,
+    "search": 1,
+    "open": 2
+   },
+   "correct": true
+  },
+  {
+   "qid": "click-6e595c611d",
+   "corpus": "click",
+   "qtype": "default_value",
+   "source": "structured",
+   "arm": "D",
+   "model_calls": 5,
+   "tool_calls": 4,
+   "prompt_tokens": 11920,
+   "completion_tokens": 145,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "grep": 2,
+    "search": 1,
+    "open": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "click-cb721bed3d",
+   "corpus": "click",
+   "qtype": "default_value",
+   "source": "structured",
+   "arm": "D",
+   "model_calls": 5,
+   "tool_calls": 4,
+   "prompt_tokens": 11977,
+   "completion_tokens": 151,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "grep": 2,
+    "search": 1,
+    "open": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "click-c21e90dcb4",
+   "corpus": "click",
+   "qtype": "default_value",
+   "source": "structured",
+   "arm": "D",
+   "model_calls": 5,
+   "tool_calls": 4,
+   "prompt_tokens": 11906,
+   "completion_tokens": 145,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "grep": 2,
+    "search": 1,
+    "open": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "click-c83c4e53aa",
+   "corpus": "click",
+   "qtype": "default_value",
+   "source": "structured",
+   "arm": "D",
+   "model_calls": 5,
+   "tool_calls": 4,
+   "prompt_tokens": 12531,
+   "completion_tokens": 143,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "grep": 2,
+    "search": 1,
+    "open": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "click-1488cf0aca",
+   "corpus": "click",
+   "qtype": "base_class",
+   "source": "structured",
+   "arm": "D",
+   "model_calls": 5,
+   "tool_calls": 4,
+   "prompt_tokens": 11407,
+   "completion_tokens": 147,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "grep": 2,
+    "search": 1,
+    "open": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "click-b4afea6b30",
+   "corpus": "click",
+   "qtype": "base_class",
+   "source": "structured",
+   "arm": "D",
+   "model_calls": 5,
+   "tool_calls": 4,
+   "prompt_tokens": 11470,
+   "completion_tokens": 149,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "grep": 2,
+    "search": 1,
+    "open": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "click-c000db13fe",
+   "corpus": "click",
+   "qtype": "base_class",
+   "source": "structured",
+   "arm": "D",
+   "model_calls": 5,
+   "tool_calls": 4,
+   "prompt_tokens": 11413,
+   "completion_tokens": 165,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "grep": 2,
+    "search": 1,
+    "open": 1
+   },
+   "correct": false
+  },
+  {
+   "qid": "click-aed1f7d5cd",
+   "corpus": "click",
+   "qtype": "base_class",
+   "source": "structured",
+   "arm": "D",
+   "model_calls": 5,
+   "tool_calls": 4,
+   "prompt_tokens": 11503,
+   "completion_tokens": 152,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "grep": 2,
+    "search": 1,
+    "open": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "click-a2beca7571",
+   "corpus": "click",
+   "qtype": "base_class",
+   "source": "structured",
+   "arm": "D",
+   "model_calls": 5,
+   "tool_calls": 4,
+   "prompt_tokens": 11471,
+   "completion_tokens": 145,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "grep": 2,
+    "search": 1,
+    "open": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "click-878b4c40c6",
+   "corpus": "click",
+   "qtype": "defining_file",
+   "source": "structured",
+   "arm": "D",
+   "model_calls": 6,
+   "tool_calls": 4,
+   "prompt_tokens": 14402,
+   "completion_tokens": 163,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "grep": 2,
+    "search": 1,
+    "open": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "click-22628a5e89",
+   "corpus": "click",
+   "qtype": "defining_file",
+   "source": "structured",
+   "arm": "D",
+   "model_calls": 6,
+   "tool_calls": 4,
+   "prompt_tokens": 14437,
+   "completion_tokens": 160,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "grep": 2,
+    "search": 1,
+    "open": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "click-0d9c76b2ba",
+   "corpus": "click",
+   "qtype": "defining_file",
+   "source": "structured",
+   "arm": "D",
+   "model_calls": 11,
+   "tool_calls": 9,
+   "prompt_tokens": 50103,
+   "completion_tokens": 440,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "grep": 5,
+    "search": 3,
+    "open": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "click-e5406f5ea0",
+   "corpus": "click",
+   "qtype": "defining_file",
+   "source": "structured",
+   "arm": "D",
+   "model_calls": 6,
+   "tool_calls": 4,
+   "prompt_tokens": 14561,
+   "completion_tokens": 160,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "grep": 2,
+    "search": 1,
+    "open": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "click-c1520c94c1",
+   "corpus": "click",
+   "qtype": "defining_file",
+   "source": "structured",
+   "arm": "D",
+   "model_calls": 6,
+   "tool_calls": 4,
+   "prompt_tokens": 14369,
+   "completion_tokens": 157,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "grep": 2,
+    "search": 1,
+    "open": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "click-0f4de7b46b",
+   "corpus": "click",
+   "qtype": "single_hop",
+   "source": "synthetic",
+   "arm": "D",
+   "model_calls": 22,
+   "tool_calls": 21,
+   "prompt_tokens": 422690,
+   "completion_tokens": 1580,
+   "exhausted": false,
+   "gold_read": false,
+   "gold_seen": false,
+   "tool_counts": {
+    "search": 3,
+    "open": 11,
+    "grep": 7
+   },
+   "correct": true
+  },
+  {
+   "qid": "click-c487c29c62",
+   "corpus": "click",
+   "qtype": "single_hop",
+   "source": "synthetic",
+   "arm": "D",
+   "model_calls": 3,
+   "tool_calls": 2,
+   "prompt_tokens": 8576,
+   "completion_tokens": 105,
+   "exhausted": false,
+   "gold_read": false,
+   "gold_seen": false,
+   "tool_counts": {
+    "search": 1,
+    "open": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "click-b5852c819e",
+   "corpus": "click",
+   "qtype": "single_hop",
+   "source": "synthetic",
+   "arm": "D",
+   "model_calls": 3,
+   "tool_calls": 2,
+   "prompt_tokens": 11846,
+   "completion_tokens": 92,
+   "exhausted": false,
+   "gold_read": false,
+   "gold_seen": false,
+   "tool_counts": {
+    "search": 1,
+    "open": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "click-73c5c1c74e",
+   "corpus": "click",
+   "qtype": "single_hop",
+   "source": "synthetic",
+   "arm": "D",
+   "model_calls": 4,
+   "tool_calls": 3,
+   "prompt_tokens": 10396,
+   "completion_tokens": 119,
+   "exhausted": false,
+   "gold_read": false,
+   "gold_seen": false,
+   "tool_counts": {
+    "search": 1,
+    "grep": 1,
+    "open": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "click-7dc91acd35",
+   "corpus": "click",
+   "qtype": "single_hop",
+   "source": "synthetic",
+   "arm": "D",
+   "model_calls": 3,
+   "tool_calls": 2,
+   "prompt_tokens": 7799,
+   "completion_tokens": 103,
+   "exhausted": false,
+   "gold_read": false,
+   "gold_seen": false,
+   "tool_counts": {
+    "search": 1,
+    "open": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "click-596a67a08e",
+   "corpus": "click",
+   "qtype": "single_hop",
+   "source": "synthetic",
+   "arm": "D",
+   "model_calls": 6,
+   "tool_calls": 5,
+   "prompt_tokens": 42160,
+   "completion_tokens": 311,
+   "exhausted": false,
+   "gold_read": false,
+   "gold_seen": false,
+   "tool_counts": {
+    "search": 1,
+    "open": 3,
+    "grep": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "click-f8f369f453",
+   "corpus": "click",
+   "qtype": "single_hop",
+   "source": "synthetic",
+   "arm": "D",
+   "model_calls": 3,
+   "tool_calls": 2,
+   "prompt_tokens": 7607,
+   "completion_tokens": 64,
+   "exhausted": false,
+   "gold_read": false,
+   "gold_seen": false,
+   "tool_counts": {
+    "search": 1,
+    "open": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "click-1501a9b27c",
+   "corpus": "click",
+   "qtype": "single_hop",
+   "source": "synthetic",
+   "arm": "D",
+   "model_calls": 5,
+   "tool_calls": 4,
+   "prompt_tokens": 29941,
+   "completion_tokens": 147,
+   "exhausted": false,
+   "gold_read": false,
+   "gold_seen": false,
+   "tool_counts": {
+    "search": 1,
+    "open": 2,
+    "grep": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "click-0dc500bb6f",
+   "corpus": "click",
+   "qtype": "default_value",
+   "source": "structured",
+   "arm": "P",
+   "model_calls": 3,
+   "tool_calls": 2,
+   "prompt_tokens": 6148,
+   "completion_tokens": 63,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "find_symbol": 1,
+    "open_symbol": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "click-85bbfae290",
+   "corpus": "click",
+   "qtype": "default_value",
+   "source": "structured",
+   "arm": "P",
+   "model_calls": 3,
+   "tool_calls": 2,
+   "prompt_tokens": 7228,
+   "completion_tokens": 62,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "find_symbol": 1,
+    "open_symbol": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "click-6e595c611d",
+   "corpus": "click",
+   "qtype": "default_value",
+   "source": "structured",
+   "arm": "P",
+   "model_calls": 3,
+   "tool_calls": 2,
+   "prompt_tokens": 6151,
+   "completion_tokens": 65,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "find_symbol": 1,
+    "open_symbol": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "click-cb721bed3d",
+   "corpus": "click",
+   "qtype": "default_value",
+   "source": "structured",
+   "arm": "P",
+   "model_calls": 3,
+   "tool_calls": 2,
+   "prompt_tokens": 7120,
+   "completion_tokens": 61,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "find_symbol": 1,
+    "open_symbol": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "click-c21e90dcb4",
+   "corpus": "click",
+   "qtype": "default_value",
+   "source": "structured",
+   "arm": "P",
+   "model_calls": 3,
+   "tool_calls": 2,
+   "prompt_tokens": 6825,
+   "completion_tokens": 62,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "find_symbol": 1,
+    "open_symbol": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "click-c83c4e53aa",
+   "corpus": "click",
+   "qtype": "default_value",
+   "source": "structured",
+   "arm": "P",
+   "model_calls": 3,
+   "tool_calls": 2,
+   "prompt_tokens": 8393,
+   "completion_tokens": 56,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "find_symbol": 1,
+    "open_symbol": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "click-1488cf0aca",
+   "corpus": "click",
+   "qtype": "base_class",
+   "source": "structured",
+   "arm": "P",
+   "model_calls": 3,
+   "tool_calls": 2,
+   "prompt_tokens": 10378,
+   "completion_tokens": 58,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "find_symbol": 1,
+    "open_symbol": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "click-b4afea6b30",
+   "corpus": "click",
+   "qtype": "base_class",
+   "source": "structured",
+   "arm": "P",
+   "model_calls": 3,
+   "tool_calls": 2,
+   "prompt_tokens": 6257,
+   "completion_tokens": 67,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "find_symbol": 1,
+    "open_symbol": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "click-c000db13fe",
+   "corpus": "click",
+   "qtype": "base_class",
+   "source": "structured",
+   "arm": "P",
+   "model_calls": 3,
+   "tool_calls": 2,
+   "prompt_tokens": 9968,
+   "completion_tokens": 102,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "find_symbol": 1,
+    "open_symbol": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "click-aed1f7d5cd",
+   "corpus": "click",
+   "qtype": "base_class",
+   "source": "structured",
+   "arm": "P",
+   "model_calls": 3,
+   "tool_calls": 2,
+   "prompt_tokens": 6044,
+   "completion_tokens": 64,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "find_symbol": 1,
+    "open_symbol": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "click-a2beca7571",
+   "corpus": "click",
+   "qtype": "base_class",
+   "source": "structured",
+   "arm": "P",
+   "model_calls": 3,
+   "tool_calls": 2,
+   "prompt_tokens": 6446,
+   "completion_tokens": 59,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "find_symbol": 1,
+    "open_symbol": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "click-878b4c40c6",
+   "corpus": "click",
+   "qtype": "defining_file",
+   "source": "structured",
+   "arm": "P",
+   "model_calls": 4,
+   "tool_calls": 2,
+   "prompt_tokens": 8231,
+   "completion_tokens": 106,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "find_symbol": 1,
+    "open": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "click-22628a5e89",
+   "corpus": "click",
+   "qtype": "defining_file",
+   "source": "structured",
+   "arm": "P",
+   "model_calls": 4,
+   "tool_calls": 2,
+   "prompt_tokens": 8230,
+   "completion_tokens": 103,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "find_symbol": 1,
+    "open": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "click-0d9c76b2ba",
+   "corpus": "click",
+   "qtype": "defining_file",
+   "source": "structured",
+   "arm": "P",
+   "model_calls": 4,
+   "tool_calls": 2,
+   "prompt_tokens": 8849,
+   "completion_tokens": 101,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "find_symbol": 1,
+    "open": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "click-e5406f5ea0",
+   "corpus": "click",
+   "qtype": "defining_file",
+   "source": "structured",
+   "arm": "P",
+   "model_calls": 4,
+   "tool_calls": 2,
+   "prompt_tokens": 8683,
+   "completion_tokens": 99,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "find_symbol": 1,
+    "open": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "click-c1520c94c1",
+   "corpus": "click",
+   "qtype": "defining_file",
+   "source": "structured",
+   "arm": "P",
+   "model_calls": 4,
+   "tool_calls": 2,
+   "prompt_tokens": 8176,
+   "completion_tokens": 100,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "find_symbol": 1,
+    "open": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "click-0f4de7b46b",
+   "corpus": "click",
+   "qtype": "single_hop",
+   "source": "synthetic",
+   "arm": "P",
+   "model_calls": 12,
+   "tool_calls": 11,
+   "prompt_tokens": 86587,
+   "completion_tokens": 444,
+   "exhausted": false,
+   "gold_read": false,
+   "gold_seen": false,
+   "tool_counts": {
+    "search": 4,
+    "open_section": 4,
+    "outline": 3
+   },
+   "correct": true
+  },
+  {
+   "qid": "click-c487c29c62",
+   "corpus": "click",
+   "qtype": "single_hop",
+   "source": "synthetic",
+   "arm": "P",
+   "model_calls": 3,
+   "tool_calls": 2,
+   "prompt_tokens": 10778,
+   "completion_tokens": 115,
+   "exhausted": false,
+   "gold_read": false,
+   "gold_seen": false,
+   "tool_counts": {
+    "search": 1,
+    "open": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "click-b5852c819e",
+   "corpus": "click",
+   "qtype": "single_hop",
+   "source": "synthetic",
+   "arm": "P",
+   "model_calls": 4,
+   "tool_calls": 3,
+   "prompt_tokens": 22887,
+   "completion_tokens": 212,
+   "exhausted": false,
+   "gold_read": false,
+   "gold_seen": false,
+   "tool_counts": {
+    "search": 1,
+    "open_section": 1,
+    "grep": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "click-73c5c1c74e",
+   "corpus": "click",
+   "qtype": "single_hop",
+   "source": "synthetic",
+   "arm": "P",
+   "model_calls": 3,
+   "tool_calls": 2,
+   "prompt_tokens": 14579,
+   "completion_tokens": 180,
+   "exhausted": false,
+   "gold_read": false,
+   "gold_seen": false,
+   "tool_counts": {
+    "search": 1,
+    "open": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "click-7dc91acd35",
+   "corpus": "click",
+   "qtype": "single_hop",
+   "source": "synthetic",
+   "arm": "P",
+   "model_calls": 3,
+   "tool_calls": 2,
+   "prompt_tokens": 9939,
+   "completion_tokens": 102,
+   "exhausted": false,
+   "gold_read": false,
+   "gold_seen": false,
+   "tool_counts": {
+    "search": 1,
+    "open": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "click-596a67a08e",
+   "corpus": "click",
+   "qtype": "single_hop",
+   "source": "synthetic",
+   "arm": "P",
+   "model_calls": 5,
+   "tool_calls": 4,
+   "prompt_tokens": 37544,
+   "completion_tokens": 300,
+   "exhausted": false,
+   "gold_read": false,
+   "gold_seen": false,
+   "tool_counts": {
+    "search": 1,
+    "open": 2,
+    "grep": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "click-f8f369f453",
+   "corpus": "click",
+   "qtype": "single_hop",
+   "source": "synthetic",
+   "arm": "P",
+   "model_calls": 3,
+   "tool_calls": 2,
+   "prompt_tokens": 9809,
+   "completion_tokens": 64,
+   "exhausted": false,
+   "gold_read": false,
+   "gold_seen": false,
+   "tool_counts": {
+    "search": 1,
+    "open": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "click-1501a9b27c",
+   "corpus": "click",
+   "qtype": "single_hop",
+   "source": "synthetic",
+   "arm": "P",
+   "model_calls": 3,
+   "tool_calls": 2,
+   "prompt_tokens": 8354,
+   "completion_tokens": 56,
+   "exhausted": false,
+   "gold_read": false,
+   "gold_seen": false,
+   "tool_counts": {
+    "find_symbol": 1,
+    "open_symbol": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "click-0dc500bb6f",
+   "corpus": "click",
+   "qtype": "default_value",
+   "source": "structured",
+   "arm": "Q",
+   "model_calls": 3,
+   "tool_calls": 2,
+   "prompt_tokens": 4834,
+   "completion_tokens": 63,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "find_symbol": 1,
+    "open_symbol": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "click-85bbfae290",
+   "corpus": "click",
+   "qtype": "default_value",
+   "source": "structured",
+   "arm": "Q",
+   "model_calls": 3,
+   "tool_calls": 2,
+   "prompt_tokens": 5914,
+   "completion_tokens": 62,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "find_symbol": 1,
+    "open_symbol": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "click-6e595c611d",
+   "corpus": "click",
+   "qtype": "default_value",
+   "source": "structured",
+   "arm": "Q",
+   "model_calls": 3,
+   "tool_calls": 2,
+   "prompt_tokens": 4837,
+   "completion_tokens": 65,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "find_symbol": 1,
+    "open_symbol": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "click-cb721bed3d",
+   "corpus": "click",
+   "qtype": "default_value",
+   "source": "structured",
+   "arm": "Q",
+   "model_calls": 3,
+   "tool_calls": 2,
+   "prompt_tokens": 5806,
+   "completion_tokens": 61,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "find_symbol": 1,
+    "open_symbol": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "click-c21e90dcb4",
+   "corpus": "click",
+   "qtype": "default_value",
+   "source": "structured",
+   "arm": "Q",
+   "model_calls": 3,
+   "tool_calls": 2,
+   "prompt_tokens": 5511,
+   "completion_tokens": 62,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "find_symbol": 1,
+    "open_symbol": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "click-c83c4e53aa",
+   "corpus": "click",
+   "qtype": "default_value",
+   "source": "structured",
+   "arm": "Q",
+   "model_calls": 3,
+   "tool_calls": 2,
+   "prompt_tokens": 7081,
+   "completion_tokens": 57,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "find_symbol": 1,
+    "open_symbol": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "click-1488cf0aca",
+   "corpus": "click",
+   "qtype": "base_class",
+   "source": "structured",
+   "arm": "Q",
+   "model_calls": 3,
+   "tool_calls": 2,
+   "prompt_tokens": 9064,
+   "completion_tokens": 58,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "find_symbol": 1,
+    "open_symbol": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "click-b4afea6b30",
+   "corpus": "click",
+   "qtype": "base_class",
+   "source": "structured",
+   "arm": "Q",
+   "model_calls": 3,
+   "tool_calls": 2,
+   "prompt_tokens": 4943,
+   "completion_tokens": 61,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "find_symbol": 1,
+    "open_symbol": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "click-c000db13fe",
+   "corpus": "click",
+   "qtype": "base_class",
+   "source": "structured",
+   "arm": "Q",
+   "model_calls": 3,
+   "tool_calls": 2,
+   "prompt_tokens": 8654,
+   "completion_tokens": 102,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "find_symbol": 1,
+    "open_symbol": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "click-aed1f7d5cd",
+   "corpus": "click",
+   "qtype": "base_class",
+   "source": "structured",
+   "arm": "Q",
+   "model_calls": 3,
+   "tool_calls": 2,
+   "prompt_tokens": 4730,
+   "completion_tokens": 64,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "find_symbol": 1,
+    "open_symbol": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "click-a2beca7571",
+   "corpus": "click",
+   "qtype": "base_class",
+   "source": "structured",
+   "arm": "Q",
+   "model_calls": 3,
+   "tool_calls": 2,
+   "prompt_tokens": 5132,
+   "completion_tokens": 64,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "find_symbol": 1,
+    "open_symbol": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "click-878b4c40c6",
+   "corpus": "click",
+   "qtype": "defining_file",
+   "source": "structured",
+   "arm": "Q",
+   "model_calls": 4,
+   "tool_calls": 2,
+   "prompt_tokens": 6479,
+   "completion_tokens": 106,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "find_symbol": 1,
+    "open": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "click-22628a5e89",
+   "corpus": "click",
+   "qtype": "defining_file",
+   "source": "structured",
+   "arm": "Q",
+   "model_calls": 4,
+   "tool_calls": 2,
+   "prompt_tokens": 6353,
+   "completion_tokens": 103,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "find_symbol": 1,
+    "open": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "click-0d9c76b2ba",
+   "corpus": "click",
+   "qtype": "defining_file",
+   "source": "structured",
+   "arm": "Q",
+   "model_calls": 4,
+   "tool_calls": 2,
+   "prompt_tokens": 7097,
+   "completion_tokens": 101,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "find_symbol": 1,
+    "open": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "click-e5406f5ea0",
+   "corpus": "click",
+   "qtype": "defining_file",
+   "source": "structured",
+   "arm": "Q",
+   "model_calls": 4,
+   "tool_calls": 2,
+   "prompt_tokens": 6715,
+   "completion_tokens": 100,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "find_symbol": 1,
+    "open": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "click-c1520c94c1",
+   "corpus": "click",
+   "qtype": "defining_file",
+   "source": "structured",
+   "arm": "Q",
+   "model_calls": 4,
+   "tool_calls": 2,
+   "prompt_tokens": 6424,
+   "completion_tokens": 100,
+   "exhausted": false,
+   "gold_read": true,
+   "gold_seen": true,
+   "tool_counts": {
+    "find_symbol": 1,
+    "open": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "click-0f4de7b46b",
+   "corpus": "click",
+   "qtype": "single_hop",
+   "source": "synthetic",
+   "arm": "Q",
+   "model_calls": 4,
+   "tool_calls": 3,
+   "prompt_tokens": 9283,
+   "completion_tokens": 292,
+   "exhausted": false,
+   "gold_read": false,
+   "gold_seen": false,
+   "tool_counts": {
+    "find_symbol": 1,
+    "outline": 1,
+    "open_section": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "click-c487c29c62",
+   "corpus": "click",
+   "qtype": "single_hop",
+   "source": "synthetic",
+   "arm": "Q",
+   "model_calls": 17,
+   "tool_calls": 16,
+   "prompt_tokens": 124001,
+   "completion_tokens": 988,
+   "exhausted": false,
+   "gold_read": false,
+   "gold_seen": false,
+   "tool_counts": {
+    "find_symbol": 3,
+    "open_symbol": 3,
+    "open_section": 3,
+    "outline": 7
+   },
+   "correct": true
+  },
+  {
+   "qid": "click-b5852c819e",
+   "corpus": "click",
+   "qtype": "single_hop",
+   "source": "synthetic",
+   "arm": "Q",
+   "model_calls": 9,
+   "tool_calls": 8,
+   "prompt_tokens": 40453,
+   "completion_tokens": 377,
+   "exhausted": false,
+   "gold_read": false,
+   "gold_seen": false,
+   "tool_counts": {
+    "find_symbol": 2,
+    "outline": 4,
+    "open_section": 2
+   },
+   "correct": true
+  },
+  {
+   "qid": "click-73c5c1c74e",
+   "corpus": "click",
+   "qtype": "single_hop",
+   "source": "synthetic",
+   "arm": "Q",
+   "model_calls": 5,
+   "tool_calls": 4,
+   "prompt_tokens": 14319,
+   "completion_tokens": 336,
+   "exhausted": false,
+   "gold_read": false,
+   "gold_seen": false,
+   "tool_counts": {
+    "find_symbol": 2,
+    "outline": 1,
+    "open": 1
+   },
+   "correct": true
+  },
+  {
+   "qid": "click-7dc91acd35",
+   "corpus": "click",
+   "qtype": "single_hop",
+   "source": "synthetic",
+   "arm": "Q",
+   "model_calls": 11,
+   "tool_calls": 10,
+   "prompt_tokens": 22358,
+   "completion_tokens": 395,
+   "exhausted": false,
+   "gold_read": false,
+   "gold_seen": false,
+   "tool_counts": {
+    "outline": 7,
+    "find_symbol": 1,
+    "open_section": 2
+   },
+   "correct": true
+  },
+  {
+   "qid": "click-596a67a08e",
+   "corpus": "click",
+   "qtype": "single_hop",
+   "source": "synthetic",
+   "arm": "Q",
+   "model_calls": 9,
+   "tool_calls": 8,
+   "prompt_tokens": 59112,
+   "completion_tokens": 479,
+   "exhausted": false,
+   "gold_read": false,
+   "gold_seen": false,
+   "tool_counts": {
+    "find_symbol": 3,
+    "open_symbol": 3,
+    "open_section": 1,
+    "outline": 1
+   },
+   "correct": false
+  },
+  {
+   "qid": "click-f8f369f453",
+   "corpus": "click",
+   "qtype": "single_hop",
+   "source": "synthetic",
+   "arm": "Q",
+   "model_calls": 4,
+   "tool_calls": 3,
+   "prompt_tokens": 7766,
+   "completion_tokens": 125,
+   "exhausted": false,
+   "gold_read": false,
+   "gold_seen": false,
+   "tool_counts": {
+    "find_symbol": 2,
+    "open": 1
+   },
+   "correct": false
+  },
+  {
+   "qid": "click-1501a9b27c",
+   "corpus": "click",
+   "qtype": "single_hop",
+   "source": "synthetic",
+   "arm": "Q",
+   "model_calls": 3,
+   "tool_calls": 2,
+   "prompt_tokens": 7040,
+   "completion_tokens": 56,
+   "exhausted": false,
+   "gold_read": false,
+   "gold_seen": false,
+   "tool_counts": {
+    "find_symbol": 1,
+    "open_symbol": 1
+   },
+   "correct": true
+  }
+ ]
+}

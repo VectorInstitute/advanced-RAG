@@ -1,0 +1,1041 @@
+{
+ "produced_by": {
+  "model": "gemini-3.5-flash-lite",
+  "producer": "implementations/special_topics/visual_documents/diagram_claim.py",
+  "mode": "explore: one run, control sample seed 0",
+  "dataset": "vidore/vidore_v3_physics (CC BY 4.0; French slides, English queries)",
+  "selector": "Qwen3_8-27B (vector-cluster)",
+  "relation_lister": "claude-sonnet-5-5",
+  "describers": {
+   "vlm-generic": "gemini-3.5-flash-lite",
+   "vlm-relations": "gemini-3.5-flash-lite",
+   "vlm-relations-haiku": "claude-haiku-5-5",
+   "vlm-text-only": "gemini-3.5-flash-lite"
+  },
+  "ocr": "RapidOCR (rapidocr package defaults) on 1600-pixel page renders",
+  "text_layer": "pypdfium2 get_text_range on the source PDF page",
+  "reader": "gemini-3.5-flash-lite",
+  "judge": "gemini-3.8-flash",
+  "endpoint": "vector-proxy-paid (describers, reader, judge); vector-cluster (selector)"
+ },
+ "selection": {
+  "picture_pairs": 137,
+  "diagram_relation": 34,
+  "kinds": {
+   "sequence": 9,
+   "connection": 14,
+   "arrangement": 11
+  },
+  "unparsed": 0
+ },
+ "groups": {
+  "diagram": {
+   "pairs": 34,
+   "query_ids": [
+    309,
+    313,
+    317,
+    336,
+    340,
+    345,
+    347,
+    361,
+    362,
+    363,
+    386,
+    397,
+    406,
+    414,
+    415,
+    420,
+    429,
+    430,
+    447,
+    449,
+    462,
+    470,
+    471,
+    497,
+    506,
+    514,
+    532,
+    543,
+    550,
+    566,
+    569,
+    571,
+    581,
+    582
+   ],
+   "pages": [
+    2,
+    30,
+    32,
+    71,
+    161,
+    180,
+    275,
+    357,
+    410,
+    425,
+    429,
+    432,
+    730,
+    756,
+    847,
+    881,
+    888,
+    912,
+    919,
+    978,
+    993,
+    1034,
+    1176,
+    1252,
+    1253,
+    1262,
+    1406,
+    1462,
+    1523,
+    1625
+   ],
+   "facts_per_pair": 6.76,
+   "relational_share": 0.687,
+   "coverage": {
+    "text-layer": {
+     "pairs": 34,
+     "facts": 230,
+     "recall": 0.0783,
+     "all_stated": 0.0
+    },
+    "ocr": {
+     "pairs": 34,
+     "facts": 230,
+     "recall": 0.0522,
+     "all_stated": 0.0294
+    },
+    "ocr-boxes": {
+     "pairs": 34,
+     "facts": 230,
+     "recall": 0.0783,
+     "all_stated": 0.0294
+    },
+    "vlm-generic": {
+     "pairs": 34,
+     "facts": 230,
+     "recall": 0.187,
+     "all_stated": 0.0588
+    },
+    "vlm-relations": {
+     "pairs": 34,
+     "facts": 230,
+     "recall": 0.1565,
+     "all_stated": 0.0882
+    },
+    "vlm-relations-haiku": {
+     "pairs": 34,
+     "facts": 230,
+     "recall": 0.1783,
+     "all_stated": 0.0588
+    },
+    "vlm-text-only": {
+     "pairs": 34,
+     "facts": 230,
+     "recall": 0.1957,
+     "all_stated": 0.0882
+    }
+   },
+   "relational_coverage": {
+    "text-layer": {
+     "pairs": 33,
+     "facts": 158,
+     "recall": 0.0823,
+     "all_stated": 0.0
+    },
+    "ocr": {
+     "pairs": 33,
+     "facts": 158,
+     "recall": 0.0443,
+     "all_stated": 0.0
+    },
+    "ocr-boxes": {
+     "pairs": 33,
+     "facts": 158,
+     "recall": 0.0633,
+     "all_stated": 0.0
+    },
+    "vlm-generic": {
+     "pairs": 33,
+     "facts": 158,
+     "recall": 0.1899,
+     "all_stated": 0.0606
+    },
+    "vlm-relations": {
+     "pairs": 33,
+     "facts": 158,
+     "recall": 0.1519,
+     "all_stated": 0.0606
+    },
+    "vlm-relations-haiku": {
+     "pairs": 33,
+     "facts": 158,
+     "recall": 0.1772,
+     "all_stated": 0.0606
+    },
+    "vlm-text-only": {
+     "pairs": 33,
+     "facts": 158,
+     "recall": 0.1899,
+     "all_stated": 0.0606
+    }
+   },
+   "correct": {
+    "text-layer": 5,
+    "ocr": 9,
+    "ocr-boxes": 4,
+    "vlm-generic": 12,
+    "vlm-relations": 8,
+    "vlm-relations-haiku": 8,
+    "vlm-text-only": 6,
+    "page-image": 9
+   },
+   "ungraded": 0,
+   "paired_answers": {
+    "text-layer_vs_vlm-relations": {
+     "base_only": 2,
+     "other_only": 5,
+     "p": 0.4531
+    },
+    "text-layer_vs_vlm-text-only": {
+     "base_only": 1,
+     "other_only": 2,
+     "p": 1.0
+    },
+    "text-layer_vs_page-image": {
+     "base_only": 0,
+     "other_only": 4,
+     "p": 0.125
+    },
+    "ocr_vs_vlm-relations": {
+     "base_only": 4,
+     "other_only": 3,
+     "p": 1.0
+    },
+    "ocr_vs_vlm-text-only": {
+     "base_only": 4,
+     "other_only": 1,
+     "p": 0.375
+    },
+    "ocr_vs_page-image": {
+     "base_only": 2,
+     "other_only": 2,
+     "p": 1.0
+    }
+   }
+  },
+  "other-picture": {
+   "pairs": 103,
+   "query_ids": [
+    303,
+    305,
+    315,
+    316,
+    320,
+    321,
+    324,
+    332,
+    337,
+    346,
+    348,
+    349,
+    350,
+    357,
+    359,
+    365,
+    367,
+    371,
+    377,
+    378,
+    382,
+    388,
+    391,
+    392,
+    394,
+    401,
+    403,
+    404,
+    417,
+    419,
+    421,
+    431,
+    435,
+    438,
+    448,
+    451,
+    455,
+    458,
+    461,
+    465,
+    467,
+    472,
+    475,
+    478,
+    479,
+    480,
+    481,
+    482,
+    484,
+    486,
+    487,
+    490,
+    496,
+    499,
+    500,
+    502,
+    504,
+    505,
+    507,
+    508,
+    511,
+    518,
+    527,
+    528,
+    531,
+    533,
+    535,
+    536,
+    537,
+    538,
+    539,
+    540,
+    541,
+    542,
+    544,
+    546,
+    547,
+    555,
+    557,
+    560,
+    561,
+    563,
+    564,
+    565,
+    567,
+    568,
+    572,
+    573,
+    574,
+    575,
+    580,
+    584,
+    585,
+    587,
+    588,
+    591,
+    593,
+    595,
+    596,
+    597,
+    601,
+    602,
+    603
+   ],
+   "pages": [
+    14,
+    17,
+    50,
+    60,
+    63,
+    70,
+    85,
+    86,
+    91,
+    99,
+    100,
+    103,
+    124,
+    130,
+    157,
+    195,
+    202,
+    204,
+    215,
+    226,
+    231,
+    234,
+    261,
+    289,
+    306,
+    313,
+    347,
+    364,
+    371,
+    389,
+    400,
+    405,
+    407,
+    414,
+    428,
+    442,
+    465,
+    496,
+    508,
+    526,
+    537,
+    566,
+    570,
+    579,
+    593,
+    595,
+    603,
+    625,
+    635,
+    640,
+    662,
+    663,
+    664,
+    679,
+    693,
+    758,
+    760,
+    777,
+    831,
+    853,
+    915,
+    924,
+    951,
+    982,
+    1009,
+    1034,
+    1064,
+    1070,
+    1082,
+    1119,
+    1121,
+    1159,
+    1175,
+    1198,
+    1199,
+    1240,
+    1246,
+    1254,
+    1258,
+    1282,
+    1298,
+    1317,
+    1334,
+    1421,
+    1431,
+    1440,
+    1441,
+    1453,
+    1457,
+    1511,
+    1533,
+    1542,
+    1549,
+    1574,
+    1578,
+    1582,
+    1618,
+    1646
+   ],
+   "facts_per_pair": 6.41,
+   "relational_share": 0.6697,
+   "coverage": {
+    "text-layer": {
+     "pairs": 103,
+     "facts": 660,
+     "recall": 0.0833,
+     "all_stated": 0.0388
+    },
+    "ocr": {
+     "pairs": 103,
+     "facts": 660,
+     "recall": 0.1015,
+     "all_stated": 0.0583
+    },
+    "ocr-boxes": {
+     "pairs": 103,
+     "facts": 660,
+     "recall": 0.0818,
+     "all_stated": 0.0485
+    },
+    "vlm-generic": {
+     "pairs": 103,
+     "facts": 660,
+     "recall": 0.1015,
+     "all_stated": 0.0485
+    },
+    "vlm-relations": {
+     "pairs": 103,
+     "facts": 660,
+     "recall": 0.1227,
+     "all_stated": 0.0485
+    },
+    "vlm-relations-haiku": {
+     "pairs": 103,
+     "facts": 660,
+     "recall": 0.1197,
+     "all_stated": 0.0583
+    },
+    "vlm-text-only": {
+     "pairs": 103,
+     "facts": 660,
+     "recall": 0.1167,
+     "all_stated": 0.0583
+    }
+   },
+   "relational_coverage": {
+    "text-layer": {
+     "pairs": 99,
+     "facts": 442,
+     "recall": 0.0611,
+     "all_stated": 0.0404
+    },
+    "ocr": {
+     "pairs": 99,
+     "facts": 442,
+     "recall": 0.0769,
+     "all_stated": 0.0606
+    },
+    "ocr-boxes": {
+     "pairs": 99,
+     "facts": 442,
+     "recall": 0.0588,
+     "all_stated": 0.0606
+    },
+    "vlm-generic": {
+     "pairs": 99,
+     "facts": 442,
+     "recall": 0.0928,
+     "all_stated": 0.0606
+    },
+    "vlm-relations": {
+     "pairs": 99,
+     "facts": 442,
+     "recall": 0.0995,
+     "all_stated": 0.0606
+    },
+    "vlm-relations-haiku": {
+     "pairs": 99,
+     "facts": 442,
+     "recall": 0.0928,
+     "all_stated": 0.0606
+    },
+    "vlm-text-only": {
+     "pairs": 99,
+     "facts": 442,
+     "recall": 0.086,
+     "all_stated": 0.0606
+    }
+   },
+   "correct": {
+    "text-layer": 12,
+    "ocr": 14,
+    "ocr-boxes": 13,
+    "vlm-generic": 12,
+    "vlm-relations": 13,
+    "vlm-relations-haiku": 11,
+    "vlm-text-only": 11,
+    "page-image": 13
+   },
+   "ungraded": 0,
+   "paired_answers": {
+    "text-layer_vs_vlm-relations": {
+     "base_only": 3,
+     "other_only": 4,
+     "p": 1.0
+    },
+    "text-layer_vs_vlm-text-only": {
+     "base_only": 3,
+     "other_only": 2,
+     "p": 1.0
+    },
+    "text-layer_vs_page-image": {
+     "base_only": 0,
+     "other_only": 1,
+     "p": 1.0
+    },
+    "ocr_vs_vlm-relations": {
+     "base_only": 3,
+     "other_only": 2,
+     "p": 1.0
+    },
+    "ocr_vs_vlm-text-only": {
+     "base_only": 4,
+     "other_only": 1,
+     "p": 0.375
+    },
+    "ocr_vs_page-image": {
+     "base_only": 2,
+     "other_only": 1,
+     "p": 1.0
+    }
+   }
+  },
+  "text": {
+   "pairs": 40,
+   "query_ids": [
+    322,
+    323,
+    326,
+    333,
+    334,
+    368,
+    372,
+    381,
+    384,
+    387,
+    393,
+    409,
+    423,
+    433,
+    436,
+    440,
+    441,
+    446,
+    453,
+    474,
+    483,
+    485,
+    489,
+    493,
+    495,
+    509,
+    510,
+    519,
+    520,
+    524,
+    530,
+    534,
+    553,
+    556,
+    576,
+    577,
+    586,
+    589,
+    590,
+    592
+   ],
+   "pages": [
+    6,
+    97,
+    176,
+    190,
+    207,
+    250,
+    276,
+    294,
+    367,
+    381,
+    394,
+    401,
+    411,
+    577,
+    608,
+    695,
+    769,
+    888,
+    893,
+    898,
+    928,
+    1025,
+    1065,
+    1118,
+    1128,
+    1231,
+    1305,
+    1314,
+    1426,
+    1468,
+    1490,
+    1496,
+    1533,
+    1547,
+    1558,
+    1622,
+    1629,
+    1648,
+    1659,
+    1668
+   ],
+   "facts_per_pair": 5.62,
+   "relational_share": 0.6267,
+   "coverage": {
+    "text-layer": {
+     "pairs": 40,
+     "facts": 225,
+     "recall": 0.1378,
+     "all_stated": 0.025
+    },
+    "ocr": {
+     "pairs": 40,
+     "facts": 225,
+     "recall": 0.1333,
+     "all_stated": 0.025
+    },
+    "ocr-boxes": {
+     "pairs": 40,
+     "facts": 225,
+     "recall": 0.1733,
+     "all_stated": 0.025
+    },
+    "vlm-generic": {
+     "pairs": 40,
+     "facts": 225,
+     "recall": 0.2,
+     "all_stated": 0.05
+    },
+    "vlm-relations": {
+     "pairs": 40,
+     "facts": 225,
+     "recall": 0.2622,
+     "all_stated": 0.075
+    },
+    "vlm-relations-haiku": {
+     "pairs": 40,
+     "facts": 225,
+     "recall": 0.2,
+     "all_stated": 0.025
+    },
+    "vlm-text-only": {
+     "pairs": 40,
+     "facts": 225,
+     "recall": 0.2578,
+     "all_stated": 0.05
+    }
+   },
+   "relational_coverage": {
+    "text-layer": {
+     "pairs": 40,
+     "facts": 141,
+     "recall": 0.1135,
+     "all_stated": 0.05
+    },
+    "ocr": {
+     "pairs": 40,
+     "facts": 141,
+     "recall": 0.0993,
+     "all_stated": 0.025
+    },
+    "ocr-boxes": {
+     "pairs": 40,
+     "facts": 141,
+     "recall": 0.1489,
+     "all_stated": 0.025
+    },
+    "vlm-generic": {
+     "pairs": 40,
+     "facts": 141,
+     "recall": 0.1348,
+     "all_stated": 0.075
+    },
+    "vlm-relations": {
+     "pairs": 40,
+     "facts": 141,
+     "recall": 0.1773,
+     "all_stated": 0.1
+    },
+    "vlm-relations-haiku": {
+     "pairs": 40,
+     "facts": 141,
+     "recall": 0.1418,
+     "all_stated": 0.025
+    },
+    "vlm-text-only": {
+     "pairs": 40,
+     "facts": 141,
+     "recall": 0.1915,
+     "all_stated": 0.075
+    }
+   },
+   "correct": {
+    "text-layer": 13,
+    "ocr": 14,
+    "ocr-boxes": 14,
+    "vlm-generic": 16,
+    "vlm-relations": 17,
+    "vlm-relations-haiku": 14,
+    "vlm-text-only": 15,
+    "page-image": 15
+   },
+   "ungraded": 0,
+   "paired_answers": {
+    "text-layer_vs_vlm-relations": {
+     "base_only": 0,
+     "other_only": 4,
+     "p": 0.125
+    },
+    "text-layer_vs_vlm-text-only": {
+     "base_only": 1,
+     "other_only": 3,
+     "p": 0.625
+    },
+    "text-layer_vs_page-image": {
+     "base_only": 1,
+     "other_only": 3,
+     "p": 0.625
+    },
+    "ocr_vs_vlm-relations": {
+     "base_only": 0,
+     "other_only": 3,
+     "p": 0.25
+    },
+    "ocr_vs_vlm-text-only": {
+     "base_only": 0,
+     "other_only": 1,
+     "p": 1.0
+    },
+    "ocr_vs_page-image": {
+     "base_only": 1,
+     "other_only": 2,
+     "p": 1.0
+    }
+   }
+  }
+ },
+ "relations": {
+  "diagram": {
+   "pages": [
+    2,
+    30,
+    32,
+    71,
+    161,
+    180,
+    275,
+    357,
+    410,
+    425,
+    429,
+    432,
+    730,
+    756,
+    847,
+    881,
+    888,
+    912,
+    919,
+    978,
+    993,
+    1034,
+    1176,
+    1252,
+    1253,
+    1262,
+    1406,
+    1462,
+    1523,
+    1625
+   ],
+   "pages_with_relations": 30,
+   "relations_per_page": 8.83,
+   "recall": {
+    "text-layer": {
+     "pairs": 30,
+     "facts": 265,
+     "recall": 0.0189,
+     "all_stated": 0.0
+    },
+    "ocr": {
+     "pairs": 30,
+     "facts": 265,
+     "recall": 0.0226,
+     "all_stated": 0.0
+    },
+    "ocr-boxes": {
+     "pairs": 30,
+     "facts": 265,
+     "recall": 0.0528,
+     "all_stated": 0.0
+    },
+    "vlm-generic": {
+     "pairs": 30,
+     "facts": 265,
+     "recall": 0.1849,
+     "all_stated": 0.0
+    },
+    "vlm-relations": {
+     "pairs": 30,
+     "facts": 265,
+     "recall": 0.5509,
+     "all_stated": 0.1333
+    },
+    "vlm-relations-haiku": {
+     "pairs": 30,
+     "facts": 265,
+     "recall": 0.6377,
+     "all_stated": 0.2
+    },
+    "vlm-text-only": {
+     "pairs": 30,
+     "facts": 265,
+     "recall": 0.1925,
+     "all_stated": 0.0
+    }
+   }
+  },
+  "other-picture": {
+   "pages": [
+    70,
+    124,
+    204,
+    364,
+    407,
+    414,
+    465,
+    508,
+    595,
+    640,
+    663,
+    679,
+    924,
+    951,
+    1009,
+    1064,
+    1119,
+    1240,
+    1298,
+    1646
+   ],
+   "pages_with_relations": 19,
+   "relations_per_page": 8.7,
+   "recall": {
+    "text-layer": {
+     "pairs": 19,
+     "facts": 174,
+     "recall": 0.0287,
+     "all_stated": 0.0
+    },
+    "ocr": {
+     "pairs": 19,
+     "facts": 174,
+     "recall": 0.069,
+     "all_stated": 0.0526
+    },
+    "ocr-boxes": {
+     "pairs": 19,
+     "facts": 174,
+     "recall": 0.069,
+     "all_stated": 0.0
+    },
+    "vlm-generic": {
+     "pairs": 19,
+     "facts": 174,
+     "recall": 0.1149,
+     "all_stated": 0.0
+    },
+    "vlm-relations": {
+     "pairs": 19,
+     "facts": 174,
+     "recall": 0.5115,
+     "all_stated": 0.0526
+    },
+    "vlm-relations-haiku": {
+     "pairs": 19,
+     "facts": 174,
+     "recall": 0.6552,
+     "all_stated": 0.2105
+    },
+    "vlm-text-only": {
+     "pairs": 19,
+     "facts": 174,
+     "recall": 0.1897,
+     "all_stated": 0.0
+    }
+   }
+  }
+ },
+ "cost": {
+  "claude-haiku-5-5": {
+   "calls": 165,
+   "prompt_tokens": 329835,
+   "completion_tokens": 160456,
+   "usd_list_price": 0.113
+  },
+  "claude-sonnet-5-5": {
+   "calls": 50,
+   "prompt_tokens": 104650,
+   "completion_tokens": 28128,
+   "usd_list_price": 0.491
+  },
+  "gemini-3.5-flash-lite": {
+   "calls": 1911,
+   "prompt_tokens": 1460330,
+   "completion_tokens": 292424,
+   "usd_list_price": 1.169
+  },
+  "gemini-3.8-flash": {
+   "calls": 3182,
+   "prompt_tokens": 1482963,
+   "completion_tokens": 316814,
+   "usd_list_price": 2.3
+  }
+ },
+ "retrieval": {
+  "pages": 1674,
+  "groups": {
+   "diagram": 34,
+   "other-picture": 103,
+   "text": 141,
+   "all": 302
+  },
+  "recall": {
+   "dense|text-layer": {
+    "diagram@5": 0.4412,
+    "diagram@10": 0.6176,
+    "other-picture@5": 0.5437,
+    "other-picture@10": 0.6893,
+    "text@5": 0.5035,
+    "text@10": 0.6241,
+    "all@5": 0.5099,
+    "all@10": 0.6424
+   },
+   "bm25|text-layer": {
+    "diagram@5": 0.5294,
+    "diagram@10": 0.7059,
+    "other-picture@5": 0.7379,
+    "other-picture@10": 0.7961,
+    "text@5": 0.6667,
+    "text@10": 0.7801,
+    "all@5": 0.6656,
+    "all@10": 0.7649
+   },
+   "dense|text-layer+vlm-relations": {
+    "diagram@5": 0.6176,
+    "diagram@10": 0.7353,
+    "other-picture@5": 0.6311,
+    "other-picture@10": 0.7476,
+    "text@5": 0.539,
+    "text@10": 0.7092,
+    "all@5": 0.5861,
+    "all@10": 0.7219
+   },
+   "bm25|text-layer+vlm-relations": {
+    "diagram@5": 0.5588,
+    "diagram@10": 0.7647,
+    "other-picture@5": 0.7379,
+    "other-picture@10": 0.8058,
+    "text@5": 0.6809,
+    "text@10": 0.8014,
+    "all@5": 0.6788,
+    "all@10": 0.7881
+   }
+  },
+  "cost": {
+   "gemini-3.5-flash-lite": {
+    "calls": 1674,
+    "prompt_tokens": 1941840,
+    "completion_tokens": 1110396
+   }
+  }
+ },
+ "hand_check": {
+  "pages": 2,
+  "relations_listed": 20,
+  "relations_confirmed": 19,
+  "relations_arguable": 1,
+  "note": "Two diagram pages (an energy-and-entropy flow figure and a roadmap of linked boxes) viewed against the lister's 20 relations; 19 match the drawing and one gives an arrow's start loosely. On the text-only copy of the roadmap page, the short arrows between stacked boxes survive inside the merged OCR boxes, so the text-only control keeps some drawing."
+ }
+}

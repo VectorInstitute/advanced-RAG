@@ -1,0 +1,737 @@
+{
+ "produced_by": {
+  "model": "gpt-6-luna",
+  "judging_model": "claude-haiku-5-5",
+  "generation": {
+   "model": "gpt-6-luna",
+   "response_models": [
+    "gpt-6-luna"
+   ],
+   "family": "openai",
+   "endpoint": "vector-proxy-paid",
+   "producer": "citations/generate_cited/inline",
+   "usage": {
+    "gpt-6-luna": {
+     "calls": 40,
+     "prompt_tokens": 50471,
+     "completion_tokens": 1287
+    }
+   },
+   "note": ""
+  },
+  "judging": {
+   "model": "claude-haiku-5-5",
+   "response_models": [
+    "claude-haiku-5-5"
+   ],
+   "family": "anthropic",
+   "endpoint": "vector-proxy-paid",
+   "producer": "citations/judge_citations/inline",
+   "usage": {
+    "claude-haiku-5-5": {
+     "calls": 40,
+     "prompt_tokens": 29006,
+     "completion_tokens": 2887
+    }
+   },
+   "note": ""
+  },
+  "note": "one run, explore mode, 40-question stratified subset of the ContractNLI test split"
+ },
+ "usage": {
+  "answers/answer": {
+   "unknown": {
+    "calls": 2,
+    "prompt_tokens": 0,
+    "completion_tokens": 0
+   },
+   "gpt-6-luna": {
+    "calls": 40,
+    "prompt_tokens": 51271,
+    "completion_tokens": 1583
+   }
+  },
+  "judge/answer": {
+   "claude-haiku-5-5": {
+    "calls": 47,
+    "prompt_tokens": 35340,
+    "completion_tokens": 3663
+   }
+  },
+  "answers/inline": {
+   "gpt-6-luna": {
+    "calls": 40,
+    "prompt_tokens": 50471,
+    "completion_tokens": 1287
+   }
+  },
+  "judge/inline": {
+   "claude-haiku-5-5": {
+    "calls": 40,
+    "prompt_tokens": 29006,
+    "completion_tokens": 2887
+   }
+  },
+  "answers/quotes": {
+   "gpt-6-luna": {
+    "calls": 40,
+    "prompt_tokens": 53551,
+    "completion_tokens": 4258
+   }
+  },
+  "judge/quotes": {
+   "claude-haiku-5-5": {
+    "calls": 39,
+    "prompt_tokens": 15086,
+    "completion_tokens": 2599
+   }
+  },
+  "answers/fulldoc": {
+   "gpt-6-luna": {
+    "calls": 40,
+    "prompt_tokens": 95178,
+    "completion_tokens": 4776
+   }
+  },
+  "judge/fulldoc": {
+   "claude-haiku-5-5": {
+    "calls": 41,
+    "prompt_tokens": 16285,
+    "completion_tokens": 2703
+   }
+  },
+  "judge/shuffled": {
+   "claude-haiku-5-5": {
+    "calls": 40,
+    "prompt_tokens": 28332,
+    "completion_tokens": 3004
+   }
+  },
+  "judge/rank1": {
+   "claude-haiku-5-5": {
+    "calls": 38,
+    "prompt_tokens": 25749,
+    "completion_tokens": 2776
+   }
+  }
+ },
+ "questions": 40,
+ "labelled": 33,
+ "nulls": 7,
+ "arms": {
+  "answer": {
+   "llm": {
+    "method": "answer",
+    "questions": 40,
+    "answered": 33,
+    "citations_per_answer": 1.2121,
+    "quote_found_rate": null,
+    "uncited_statement_rate": 0.0,
+    "gold_precision": 0.9667,
+    "gold_recall": 0.925,
+    "gold_shown_recall": 0.9713,
+    "judged_recall": 0.7273,
+    "judged_precision": 0.6667
+   },
+   "correctness": {
+    "labelled": 33,
+    "verdict_accuracy": 0.8485,
+    "nulls": 7,
+    "null_abstention": 0.7143,
+    "cited_answer_on_null": 2,
+    "unclear": 0
+   },
+   "agreement": {
+    "citation": {
+     "both": 23,
+     "judge_only": 1,
+     "gold_only": 12,
+     "neither": 1,
+     "total": 37,
+     "accuracy": 0.6486,
+     "kappa": 0.0437,
+     "judge_precision": 0.9583,
+     "judge_recall": 0.6571
+    },
+    "statement": {
+     "both": 22,
+     "judge_only": 0,
+     "gold_only": 7,
+     "neither": 1,
+     "total": 30,
+     "accuracy": 0.7667,
+     "kappa": 0.1732,
+     "judge_precision": 1.0,
+     "judge_recall": 0.7586
+    }
+   },
+   "median_cited_chars": 1200.0
+  },
+  "inline": {
+   "llm": {
+    "method": "inline",
+    "questions": 40,
+    "answered": 34,
+    "citations_per_answer": 1.0882,
+    "quote_found_rate": null,
+    "uncited_statement_rate": 0.1053,
+    "gold_precision": 0.9355,
+    "gold_recall": 0.879,
+    "gold_shown_recall": 0.954,
+    "judged_recall": 0.8824,
+    "judged_precision": 0.9265
+   },
+   "correctness": {
+    "labelled": 33,
+    "verdict_accuracy": 0.8788,
+    "nulls": 7,
+    "null_abstention": 0.5714,
+    "cited_answer_on_null": 3,
+    "unclear": 0
+   },
+   "agreement": {
+    "citation": {
+     "both": 27,
+     "judge_only": 2,
+     "gold_only": 5,
+     "neither": 0,
+     "total": 34,
+     "accuracy": 0.7941,
+     "kappa": -0.0917,
+     "judge_precision": 0.931,
+     "judge_recall": 0.8438
+    },
+    "statement": {
+     "both": 27,
+     "judge_only": 2,
+     "gold_only": 2,
+     "neither": 0,
+     "total": 31,
+     "accuracy": 0.871,
+     "kappa": -0.069,
+     "judge_precision": 0.931,
+     "judge_recall": 0.931
+    }
+   },
+   "median_cited_chars": 1200.0
+  },
+  "quotes": {
+   "llm": {
+    "method": "quotes",
+    "questions": 40,
+    "answered": 34,
+    "citations_per_answer": 1.0882,
+    "quote_found_rate": 1.0,
+    "uncited_statement_rate": 0.0,
+    "gold_precision": 0.9355,
+    "gold_recall": 0.7608,
+    "gold_shown_recall": 0.8247,
+    "judged_recall": 0.9265,
+    "judged_precision": 0.9118
+   },
+   "correctness": {
+    "labelled": 33,
+    "verdict_accuracy": 0.9091,
+    "nulls": 7,
+    "null_abstention": 0.5714,
+    "cited_answer_on_null": 3,
+    "unclear": 0
+   },
+   "agreement": {
+    "citation": {
+     "both": 26,
+     "judge_only": 2,
+     "gold_only": 5,
+     "neither": 1,
+     "total": 34,
+     "accuracy": 0.7941,
+     "kappa": 0.1185,
+     "judge_precision": 0.9286,
+     "judge_recall": 0.8387
+    },
+    "statement": {
+     "both": 27,
+     "judge_only": 2,
+     "gold_only": 2,
+     "neither": 1,
+     "total": 32,
+     "accuracy": 0.875,
+     "kappa": 0.2644,
+     "judge_precision": 0.931,
+     "judge_recall": 0.931
+    }
+   },
+   "median_cited_chars": 186.0
+  },
+  "fulldoc": {
+   "llm": {
+    "method": "fulldoc",
+    "questions": 40,
+    "answered": 39,
+    "citations_per_answer": 1.0256,
+    "quote_found_rate": 1.0,
+    "uncited_statement_rate": 0.0,
+    "gold_precision": 1.0,
+    "gold_recall": 0.8056,
+    "gold_shown_recall": 0.8056,
+    "judged_recall": 0.9231,
+    "judged_precision": 0.9103
+   },
+   "correctness": {
+    "labelled": 33,
+    "verdict_accuracy": 0.9697,
+    "nulls": 7,
+    "null_abstention": 0.1429,
+    "cited_answer_on_null": 6,
+    "unclear": 0
+   },
+   "agreement": {
+    "citation": {
+     "both": 31,
+     "judge_only": 0,
+     "gold_only": 3,
+     "neither": 0,
+     "total": 34,
+     "accuracy": 0.9118,
+     "kappa": 0.0,
+     "judge_precision": 1.0,
+     "judge_recall": 0.9118
+    },
+    "statement": {
+     "both": 31,
+     "judge_only": 0,
+     "gold_only": 2,
+     "neither": 0,
+     "total": 33,
+     "accuracy": 0.9394,
+     "kappa": 0.0,
+     "judge_precision": 1.0,
+     "judge_recall": 0.9394
+    }
+   },
+   "median_cited_chars": 229.0
+  },
+  "shuffled": {
+   "llm": {
+    "method": "shuffled",
+    "questions": 40,
+    "answered": 34,
+    "citations_per_answer": 1.0882,
+    "quote_found_rate": null,
+    "uncited_statement_rate": 0.1053,
+    "gold_precision": 0.0645,
+    "gold_recall": 0.0484,
+    "gold_shown_recall": 0.0575,
+    "judged_recall": 0.0588,
+    "judged_precision": 0.0294
+   },
+   "correctness": {
+    "labelled": 33,
+    "verdict_accuracy": 0.8788,
+    "nulls": 7,
+    "null_abstention": 0.5714,
+    "cited_answer_on_null": 3,
+    "unclear": 0
+   },
+   "agreement": {
+    "citation": {
+     "both": 2,
+     "judge_only": 0,
+     "gold_only": 2,
+     "neither": 30,
+     "total": 34,
+     "accuracy": 0.9412,
+     "kappa": 0.6383,
+     "judge_precision": 1.0,
+     "judge_recall": 0.5
+    },
+    "statement": {
+     "both": 2,
+     "judge_only": 0,
+     "gold_only": 1,
+     "neither": 28,
+     "total": 31,
+     "accuracy": 0.9677,
+     "kappa": 0.7832,
+     "judge_precision": 1.0,
+     "judge_recall": 0.6667
+    }
+   },
+   "median_cited_chars": 1200.0
+  },
+  "rank1": {
+   "llm": {
+    "method": "rank1",
+    "questions": 40,
+    "answered": 34,
+    "citations_per_answer": 1.1176,
+    "quote_found_rate": null,
+    "uncited_statement_rate": 0.0,
+    "gold_precision": 0.4839,
+    "gold_recall": 0.4194,
+    "gold_shown_recall": 0.454,
+    "judged_recall": 0.4412,
+    "judged_precision": 0.4412
+   },
+   "correctness": {
+    "labelled": 33,
+    "verdict_accuracy": 0.8788,
+    "nulls": 7,
+    "null_abstention": 0.5714,
+    "cited_answer_on_null": 3,
+    "unclear": 0
+   },
+   "agreement": {
+    "citation": {
+     "both": 14,
+     "judge_only": 1,
+     "gold_only": 3,
+     "neither": 17,
+     "total": 35,
+     "accuracy": 0.8857,
+     "kappa": 0.7705,
+     "judge_precision": 0.9333,
+     "judge_recall": 0.8235
+    },
+    "statement": {
+     "both": 14,
+     "judge_only": 1,
+     "gold_only": 3,
+     "neither": 17,
+     "total": 35,
+     "accuracy": 0.8857,
+     "kappa": 0.7705,
+     "judge_precision": 0.9333,
+     "judge_recall": 0.8235
+    }
+   },
+   "median_cited_chars": 1200.0
+  }
+ },
+ "on_prem_same_subset": {
+  "answer": {
+   "llm": {
+    "method": "answer",
+    "questions": 40,
+    "answered": 34,
+    "citations_per_answer": 1.0882,
+    "quote_found_rate": null,
+    "uncited_statement_rate": 0.0882,
+    "gold_precision": 0.9667,
+    "gold_recall": 0.8672,
+    "gold_shown_recall": 0.9389,
+    "judged_recall": 0.8824,
+    "judged_precision": 0.9677
+   },
+   "correctness": {
+    "labelled": 33,
+    "verdict_accuracy": 0.9394,
+    "nulls": 7,
+    "null_abstention": 0.7143,
+    "cited_answer_on_null": 1,
+    "unclear": 2
+   },
+   "agreement": {
+    "citation": {
+     "both": 33,
+     "judge_only": 0,
+     "gold_only": 0,
+     "neither": 3,
+     "total": 36,
+     "accuracy": 1.0,
+     "kappa": 1.0,
+     "judge_precision": 1.0,
+     "judge_recall": 1.0
+    },
+    "statement": {
+     "both": 29,
+     "judge_only": 0,
+     "gold_only": 0,
+     "neither": 1,
+     "total": 30,
+     "accuracy": 1.0,
+     "kappa": 1.0,
+     "judge_precision": 1.0,
+     "judge_recall": 1.0
+    }
+   }
+  },
+  "inline": {
+   "llm": {
+    "method": "inline",
+    "questions": 40,
+    "answered": 32,
+    "citations_per_answer": 1.3438,
+    "quote_found_rate": null,
+    "uncited_statement_rate": 0.0,
+    "gold_precision": 0.957,
+    "gold_recall": 0.9274,
+    "gold_shown_recall": 0.9722,
+    "judged_recall": 0.9688,
+    "judged_precision": 0.9583
+   },
+   "correctness": {
+    "labelled": 33,
+    "verdict_accuracy": 0.9394,
+    "nulls": 7,
+    "null_abstention": 0.8571,
+    "cited_answer_on_null": 1,
+    "unclear": 0
+   },
+   "agreement": {
+    "citation": {
+     "both": 39,
+     "judge_only": 0,
+     "gold_only": 0,
+     "neither": 3,
+     "total": 42,
+     "accuracy": 1.0,
+     "kappa": 1.0,
+     "judge_precision": 1.0,
+     "judge_recall": 1.0
+    },
+    "statement": {
+     "both": 36,
+     "judge_only": 0,
+     "gold_only": 0,
+     "neither": 1,
+     "total": 37,
+     "accuracy": 1.0,
+     "kappa": 1.0,
+     "judge_precision": 1.0,
+     "judge_recall": 1.0
+    }
+   }
+  },
+  "quotes": {
+   "llm": {
+    "method": "quotes",
+    "questions": 40,
+    "answered": 37,
+    "citations_per_answer": 1.0541,
+    "quote_found_rate": 1.0,
+    "uncited_statement_rate": 0.0,
+    "gold_precision": 0.9091,
+    "gold_recall": 0.7677,
+    "gold_shown_recall": 0.8583,
+    "judged_recall": 0.8919,
+    "judged_precision": 0.8919
+   },
+   "correctness": {
+    "labelled": 33,
+    "verdict_accuracy": 0.9394,
+    "nulls": 7,
+    "null_abstention": 0.4286,
+    "cited_answer_on_null": 4,
+    "unclear": 0
+   },
+   "agreement": {
+    "citation": {
+     "both": 31,
+     "judge_only": 1,
+     "gold_only": 1,
+     "neither": 2,
+     "total": 35,
+     "accuracy": 0.9429,
+     "kappa": 0.6354,
+     "judge_precision": 0.9688,
+     "judge_recall": 0.9688
+    },
+    "statement": {
+     "both": 31,
+     "judge_only": 1,
+     "gold_only": 1,
+     "neither": 2,
+     "total": 35,
+     "accuracy": 0.9429,
+     "kappa": 0.6354,
+     "judge_precision": 0.9688,
+     "judge_recall": 0.9688
+    }
+   }
+  },
+  "fulldoc": {
+   "llm": {
+    "method": "fulldoc",
+    "questions": 40,
+    "answered": 39,
+    "citations_per_answer": 1.0513,
+    "quote_found_rate": 1.0,
+    "uncited_statement_rate": 0.0,
+    "gold_precision": 1.0,
+    "gold_recall": 0.8586,
+    "gold_shown_recall": 0.8586,
+    "judged_recall": 0.9744,
+    "judged_precision": 0.9744
+   },
+   "correctness": {
+    "labelled": 33,
+    "verdict_accuracy": 0.9394,
+    "nulls": 7,
+    "null_abstention": 0.1429,
+    "cited_answer_on_null": 6,
+    "unclear": 0
+   },
+   "agreement": {
+    "citation": {
+     "both": 33,
+     "judge_only": 0,
+     "gold_only": 2,
+     "neither": 0,
+     "total": 35,
+     "accuracy": 0.9429,
+     "kappa": 0.0,
+     "judge_precision": 1.0,
+     "judge_recall": 0.9429
+    },
+    "statement": {
+     "both": 34,
+     "judge_only": 0,
+     "gold_only": 0,
+     "neither": 0,
+     "total": 34,
+     "accuracy": 1.0,
+     "kappa": null,
+     "judge_precision": 1.0,
+     "judge_recall": 1.0
+    }
+   }
+  },
+  "shuffled": {
+   "llm": {
+    "method": "shuffled",
+    "questions": 40,
+    "answered": 32,
+    "citations_per_answer": 1.3438,
+    "quote_found_rate": null,
+    "uncited_statement_rate": 0.0,
+    "gold_precision": 0.1129,
+    "gold_recall": 0.121,
+    "gold_shown_recall": 0.1278,
+    "judged_recall": 0.1719,
+    "judged_precision": 0.1667
+   },
+   "correctness": {
+    "labelled": 33,
+    "verdict_accuracy": 0.9394,
+    "nulls": 7,
+    "null_abstention": 0.8571,
+    "cited_answer_on_null": 1,
+    "unclear": 0
+   },
+   "agreement": {
+    "citation": {
+     "both": 4,
+     "judge_only": 3,
+     "gold_only": 4,
+     "neither": 31,
+     "total": 42,
+     "accuracy": 0.8333,
+     "kappa": 0.4324,
+     "judge_precision": 0.5714,
+     "judge_recall": 0.5
+    },
+    "statement": {
+     "both": 3,
+     "judge_only": 4,
+     "gold_only": 4,
+     "neither": 26,
+     "total": 37,
+     "accuracy": 0.7838,
+     "kappa": 0.2952,
+     "judge_precision": 0.4286,
+     "judge_recall": 0.4286
+    }
+   }
+  },
+  "rank1": {
+   "llm": {
+    "method": "rank1",
+    "questions": 40,
+    "answered": 32,
+    "citations_per_answer": 1.1875,
+    "quote_found_rate": null,
+    "uncited_statement_rate": 0.0,
+    "gold_precision": 0.5161,
+    "gold_recall": 0.4516,
+    "gold_shown_recall": 0.4722,
+    "judged_recall": 0.4375,
+    "judged_precision": 0.4375
+   },
+   "correctness": {
+    "labelled": 33,
+    "verdict_accuracy": 0.9394,
+    "nulls": 7,
+    "null_abstention": 0.8571,
+    "cited_answer_on_null": 1,
+    "unclear": 0
+   },
+   "agreement": {
+    "citation": {
+     "both": 18,
+     "judge_only": 0,
+     "gold_only": 3,
+     "neither": 16,
+     "total": 37,
+     "accuracy": 0.9189,
+     "kappa": 0.8384,
+     "judge_precision": 1.0,
+     "judge_recall": 0.8571
+    },
+    "statement": {
+     "both": 18,
+     "judge_only": 0,
+     "gold_only": 3,
+     "neither": 16,
+     "total": 37,
+     "accuracy": 0.9189,
+     "kappa": 0.8384,
+     "judge_precision": 1.0,
+     "judge_recall": 0.8571
+    }
+   }
+  }
+ },
+ "estimate": {
+  "answers": {
+   "model": "gpt-6-luna",
+   "calls": 160,
+   "prompt_tokens": 265318,
+   "completion_tokens": 14603,
+   "usd": 0.033833300000000004
+  },
+  "judge": {
+   "model": "claude-haiku-5-5",
+   "calls": 318,
+   "prompt_tokens": 131707,
+   "completion_tokens": 11159,
+   "usd": 0.018750199999999998
+  },
+  "total_usd": 0.0526
+ },
+ "cost": {
+  "by_model": {
+   "unknown": {
+    "calls": 2,
+    "prompt_tokens": 0,
+    "completion_tokens": 0,
+    "usd": 0.0
+   },
+   "gpt-6-luna": {
+    "calls": 160,
+    "prompt_tokens": 250471,
+    "completion_tokens": 11904,
+    "usd": 0.031
+   },
+   "claude-haiku-5-5": {
+    "calls": 245,
+    "prompt_tokens": 149798,
+    "completion_tokens": 17632,
+    "usd": 0.0238
+   }
+  },
+  "total_usd": 0.0548,
+  "proxy_delta_usd": 0.06,
+  "note": "the proxy figure is for the team key, rounded to the cent by spend.report, and includes other callers in the same window"
+ }
+}

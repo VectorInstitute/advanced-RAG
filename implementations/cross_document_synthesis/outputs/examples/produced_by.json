@@ -1,0 +1,10 @@
+{
+  "files": {
+    "graph_build_costs.json": {
+      "model": "Qwen3_6-35B-A3B",
+      "source": "records[*].model",
+      "note": "RI4 graph construction model; these are not RI2 query results."
+    }
+  },
+  "note": "The worked examples notebooks 01 to 04 and 99 show hold question and answer text, so they ship in RI #2's reference release (reference-artifacts.json) with their own produced_by blocks; synthesis_lab/reference.py loads them."
+}

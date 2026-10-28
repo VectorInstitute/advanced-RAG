@@ -1,0 +1,458 @@
+{
+ "produced_by": {
+  "model": null,
+  "response_models": [],
+  "family": null,
+  "endpoint": null,
+  "producer": "hand labels",
+  "usage": {},
+  "note": "Hand labels for a sample of the dedup groups, written by reading each group's names, types, and mention counts; no model call.",
+  "model_calls": 0
+ },
+ "labelled_by": "the build agent, reading each group's names, types, and mention counts; no model call",
+ "labels": [
+  "same: one thing spelled differently",
+  "different: a false merge",
+  "unclear: cannot tell from the names"
+ ],
+ "groups": [
+  {
+   "group": [
+    "local system account",
+    "localsystem account"
+   ],
+   "label": "same"
+  },
+  {
+   "group": [
+    "monitor",
+    "monitors"
+   ],
+   "label": "different",
+   "note": "monitoring as a concept against monitor hardware"
+  },
+  {
+   "group": [
+    "dhcp client",
+    "dhcp clients",
+    "dhcp-client"
+   ],
+   "label": "same"
+  },
+  {
+   "group": [
+    "docker-machine",
+    "docker machine"
+   ],
+   "label": "same"
+  },
+  {
+   "group": [
+    "puppet server",
+    "puppet-server"
+   ],
+   "label": "same"
+  },
+  {
+   "group": [
+    "physical machine",
+    "physical machines"
+   ],
+   "label": "same"
+  },
+  {
+   "group": [
+    "man",
+    "mans"
+   ],
+   "label": "unclear",
+   "note": "mans is likely a misspelling of man pages"
+  },
+  {
+   "group": [
+    "get request",
+    "get requests"
+   ],
+   "label": "same"
+  },
+  {
+   "group": [
+    "per second billing",
+    "per-second billing"
+   ],
+   "label": "same"
+  },
+  {
+   "group": [
+    "jail",
+    "jails"
+   ],
+   "label": "same"
+  },
+  {
+   "group": [
+    "server3",
+    "server 3"
+   ],
+   "label": "same"
+  },
+  {
+   "group": [
+    "copy-on-write",
+    "copy on write"
+   ],
+   "label": "same"
+  },
+  {
+   "group": [
+    "production server",
+    "production servers"
+   ],
+   "label": "same"
+  },
+  {
+   "group": [
+    "amazon ec2 instance",
+    "amazon ec2 instances"
+   ],
+   "label": "same"
+  },
+  {
+   "group": [
+    "exchange 2007",
+    "exchange-2007"
+   ],
+   "label": "same"
+  },
+  {
+   "group": [
+    "amazon elasticip",
+    "amazon elastic ip"
+   ],
+   "label": "same"
+  },
+  {
+   "group": [
+    "subjectaltname",
+    "subjectaltnames",
+    "subject alt name"
+   ],
+   "label": "same"
+  },
+  {
+   "group": [
+    "ssh private key",
+    "ssh private keys"
+   ],
+   "label": "same"
+  },
+  {
+   "group": [
+    "distinguishedname",
+    "distinguished name"
+   ],
+   "label": "same"
+  },
+  {
+   "group": [
+    "registry key",
+    "registry keys"
+   ],
+   "label": "same"
+  },
+  {
+   "group": [
+    "warning",
+    "warnings"
+   ],
+   "label": "same"
+  },
+  {
+   "group": [
+    "smtpd_relay_restrictions",
+    "smtpd_relay_restriction"
+   ],
+   "label": "same"
+  },
+  {
+   "group": [
+    "apparmor",
+    "app-armor"
+   ],
+   "label": "same"
+  },
+  {
+   "group": [
+    "grain table",
+    "grain tables"
+   ],
+   "label": "same"
+  },
+  {
+   "group": [
+    "template_file",
+    "template file",
+    "template files"
+   ],
+   "label": "same"
+  },
+  {
+   "group": [
+    "xenserver",
+    "xen server"
+   ],
+   "label": "same"
+  },
+  {
+   "group": [
+    "proxy_pass",
+    "proxypass",
+    "proxy pass"
+   ],
+   "label": "different",
+   "note": "nginx proxy_pass and Apache ProxyPass are different directives"
+  },
+  {
+   "group": [
+    "user id",
+    "user_id"
+   ],
+   "label": "same"
+  },
+  {
+   "group": [
+    "http redirect response",
+    "http redirect responses"
+   ],
+   "label": "same"
+  },
+  {
+   "group": [
+    "passwordless login",
+    "password-less login"
+   ],
+   "label": "same"
+  },
+  {
+   "group": [
+    "ruby on rails",
+    "ruby-on-rails"
+   ],
+   "label": "same"
+  },
+  {
+   "group": [
+    "txt record",
+    "txt records",
+    "txt-record"
+   ],
+   "label": "same"
+  },
+  {
+   "group": [
+    "ip-routing",
+    "ip routing"
+   ],
+   "label": "same"
+  },
+  {
+   "group": [
+    "named volume",
+    "named volumes"
+   ],
+   "label": "same"
+  },
+  {
+   "group": [
+    "harddisk load",
+    "hard disk load"
+   ],
+   "label": "same"
+  },
+  {
+   "group": [
+    "split horizon",
+    "split-horizon"
+   ],
+   "label": "same"
+  },
+  {
+   "group": [
+    "system restore",
+    "system-restore"
+   ],
+   "label": "same"
+  },
+  {
+   "group": [
+    "colocation",
+    "co-location"
+   ],
+   "label": "same"
+  },
+  {
+   "group": [
+    "rollback",
+    "roll back"
+   ],
+   "label": "same"
+  },
+  {
+   "group": [
+    "percent sign",
+    "percent signs"
+   ],
+   "label": "same"
+  },
+  {
+   "group": [
+    "new",
+    "news"
+   ],
+   "label": "different",
+   "note": "new and news are different words"
+  },
+  {
+   "group": [
+    "rdp connection",
+    "rdp connections"
+   ],
+   "label": "same"
+  },
+  {
+   "group": [
+    "domain backordering service",
+    "domain backordering services"
+   ],
+   "label": "same"
+  },
+  {
+   "group": [
+    "mod_security",
+    "modsecurity",
+    "mod-security"
+   ],
+   "label": "same"
+  },
+  {
+   "group": [
+    "rhel 4",
+    "rhel4"
+   ],
+   "label": "same"
+  },
+  {
+   "group": [
+    "mail server",
+    "mail servers",
+    "mailserver",
+    "mailservers"
+   ],
+   "label": "same"
+  },
+  {
+   "group": [
+    "static files",
+    "static file",
+    "staticfile"
+   ],
+   "label": "same"
+  },
+  {
+   "group": [
+    "windows update service",
+    "windows update services"
+   ],
+   "label": "same"
+  },
+  {
+   "group": [
+    "mac address table",
+    "mac-address table"
+   ],
+   "label": "same"
+  },
+  {
+   "group": [
+    "wildcard cert",
+    "wildcard certs"
+   ],
+   "label": "same"
+  },
+  {
+   "group": [
+    "type 1 hypervisor",
+    "type-1 hypervisors"
+   ],
+   "label": "same"
+  },
+  {
+   "group": [
+    "start parameter",
+    "start parameters"
+   ],
+   "label": "same"
+  },
+  {
+   "group": [
+    "ntp server",
+    "ntp servers",
+    "ntpservers",
+    "ntpserver",
+    "ntp-server",
+    "ntp-servers"
+   ],
+   "label": "same"
+  },
+  {
+   "group": [
+    "spot instances",
+    "spot instance"
+   ],
+   "label": "same"
+  },
+  {
+   "group": [
+    "postgresql-9.5",
+    "postgresql 9.5"
+   ],
+   "label": "same"
+  },
+  {
+   "group": [
+    "hyper-v server 2008 r2",
+    "hyper-v-server-2008-r2"
+   ],
+   "label": "same"
+  },
+  {
+   "group": [
+    "diff",
+    "diffs"
+   ],
+   "label": "unclear",
+   "note": "diff the command against diffs as outputs"
+  },
+  {
+   "group": [
+    "xserve",
+    "xserves"
+   ],
+   "label": "same"
+  },
+  {
+   "group": [
+    "hosted zone",
+    "hostedzone"
+   ],
+   "label": "same"
+  },
+  {
+   "group": [
+    "vswitch",
+    "v switch"
+   ],
+   "label": "same"
+  }
+ ]
+}

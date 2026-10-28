@@ -1,0 +1,961 @@
+{
+  "mode": "explore",
+  "produced_by": {
+    "model": "Qwen3_6-35B-A3B",
+    "response_models": [],
+    "family": "onprem",
+    "endpoint": "vector-cluster",
+    "producer": "regulatory_policy_qa/judge_not_stated_retry.py",
+    "usage": {
+      "Qwen3_6-35B-A3B": {
+        "calls": 1111
+      },
+      "Qwen3_8-Flash-Next": {
+        "calls": 656
+      }
+    },
+    "note": "Generator Qwen3_6-35B-A3B regenerates the answers and judge Qwen3_8-Flash-Next grades them, both with thinking off. Calls are the main comparison's cold run; the explore arms add their own, counted under each arm's calls."
+  },
+  "corpus": "ContractNLI test, first 40 documents, 680 queries",
+  "traces": "implementations/regulatory_policy_qa/outputs/traces_contract-nli_llm.json",
+  "traces_sha256": "7ae98bcdac58747fab21e77d4de50bf9eef709ca57fd4ba03242afe1ed5ffa8d",
+  "generator_model": "Qwen3_6-35B-A3B",
+  "judge_model": "Qwen3_8-Flash-Next",
+  "evidence_budget": 5,
+  "note": "Generation always uses the original question; the rewrite only changes which chunks are retrieved and their order. Answers are regenerated at temperature zero on the recorded chunk IDs because the harvest cache was not kept.",
+  "calls": {
+    "generator_only": 680,
+    "retry_on_not_stated": 1428,
+    "ratio": 2.1
+  },
+  "decision_scored": {
+    "generator_only": {
+      "balanced_accuracy": 0.7799,
+      "null_right_rate": 0.8447,
+      "answerable_right_rate": 0.7151
+    },
+    "retry_on_not_stated": {
+      "balanced_accuracy": 0.8085,
+      "null_right_rate": 0.8292,
+      "answerable_right_rate": 0.7877
+    },
+    "paired": {
+      "arm_right_only": 26,
+      "control_right_only": 5,
+      "mcnemar_p": 0.00019
+    }
+  },
+  "correctness_scored_trace_decisions": {
+    "generator_only": {
+      "balanced_accuracy": 0.7338,
+      "null_right_rate": 0.8447,
+      "answerable_right_rate": 0.6229
+    },
+    "retry_on_not_stated": {
+      "balanced_accuracy": 0.7484,
+      "null_right_rate": 0.8292,
+      "answerable_right_rate": 0.6676
+    },
+    "paired": {
+      "arm_right_only": 16,
+      "control_right_only": 5,
+      "mcnemar_p": 0.0266
+    }
+  },
+  "correctness_scored_regenerated_decisions": {
+    "generator_only": {
+      "balanced_accuracy": 0.7617,
+      "null_right_rate": 0.8447,
+      "answerable_right_rate": 0.6788
+    },
+    "retry_on_not_stated": {
+      "balanced_accuracy": 0.7693,
+      "null_right_rate": 0.8292,
+      "answerable_right_rate": 0.7095
+    },
+    "paired": {
+      "arm_right_only": 11,
+      "control_right_only": 5,
+      "mcnemar_p": 0.21011
+    }
+  },
+  "recovered_answerable": {
+    "questions": 26,
+    "regenerated_answered": 20,
+    "regenerated_abstained": 6,
+    "correct": 16,
+    "confidently_wrong": 4,
+    "confidently_wrong_but_grounded": 4
+  },
+  "attempt1_answers_answerable": {
+    "questions": 256,
+    "regenerated_answered": 242,
+    "regenerated_abstained": 14,
+    "correct": 223,
+    "confidently_wrong": 19,
+    "confidently_wrong_but_grounded": 17
+  },
+  "nulls_turned_into_answers": {
+    "questions": 5,
+    "regenerated_answered": 4
+  },
+  "reproduction": {
+    "answerable_attempt1_agree": 320,
+    "answerable_attempt1_total": 358,
+    "attempt2_agree": 89,
+    "attempt2_total": 107
+  },
+  "logical_calls_for_a_cold_run": {
+    "generator": 1111,
+    "judge": 656
+  },
+  "finding": "Scored by judged correctness, the retry on the generator's not-stated answer beats generator-only, and a retry that re-sends the identical first-attempt prompt on a fresh call matches it question for question at fewer calls. The rewrite and the second retrieval add nothing measurable here: the gain is a second draw from a generator whose abstain-or-answer decision changes on about one answerable question in ten when the same prompt is sent again at temperature zero. The harvest cached responses on the exact request, so inside the traces an identical retry prompt always returned the first refusal, which hid this. Generation on every attempt uses the original question, so the rewrite changes only which chunks reach the generator and in what order.",
+  "what_would_make_it_win": "The retry action would have to add information the first draw lacked, which needs first-pass retrieval that misses recoverable evidence. MuSiQue 2-hop (dense all-supporting recall@5 of 0.28) meets that. The cheapest test is a two-attempt harvest with no grader on RI #4's 150 2-hop questions, about 450 calls, with this script's resample arm as the control that the rewrite retry must beat.",
+  "discordant_questions": [
+    {
+      "query_id": "11::nda-12",
+      "is_null": false,
+      "regenerated_abstained": false,
+      "answer_sha256_16": "b963a555cfd9458a",
+      "correct": true,
+      "grounded": true,
+      "reason": "The candidate correctly affirms the hypothesis and includes the necessary condition regarding independent development without using Confidential Information.",
+      "attempt1_top5": [
+        "11::0003",
+        "11::0001",
+        "11::0004",
+        "11::0002",
+        "11::0008"
+      ],
+      "attempt2_top5": [
+        "11::0004",
+        "11::0003",
+        "11::0001",
+        "11::0008",
+        "11::0002"
+      ],
+      "gold_in_attempt1_top5": true,
+      "gold_in_attempt2_top5": true
+    },
+    {
+      "query_id": "21::nda-5",
+      "is_null": false,
+      "regenerated_abstained": false,
+      "answer_sha256_16": "0a81963b9b750c26",
+      "correct": true,
+      "grounded": false,
+      "reason": "The candidate correctly affirms the hypothesis and accurately cites the relevant clause allowing disclosure to Representatives, including employees.",
+      "attempt1_top5": [
+        "21::0002",
+        "21::0004",
+        "21::0001",
+        "21::0005",
+        "21::0003"
+      ],
+      "attempt2_top5": [
+        "21::0004",
+        "21::0002",
+        "21::0006",
+        "21::0005",
+        "21::0003"
+      ],
+      "gold_in_attempt1_top5": true,
+      "gold_in_attempt2_top5": true
+    },
+    {
+      "query_id": "23::nda-5",
+      "is_null": false,
+      "regenerated_abstained": false,
+      "answer_sha256_16": "1fa1ac6212d8d501",
+      "correct": true,
+      "grounded": true,
+      "reason": "The candidate correctly affirms that sharing with employees is permitted, aligning with the reference's supported status.",
+      "attempt1_top5": [
+        "23::0003",
+        "23::0002",
+        "23::0000",
+        "23::0007",
+        "23::0005"
+      ],
+      "attempt2_top5": [
+        "23::0003",
+        "23::0002",
+        "23::0000",
+        "23::0007",
+        "23::0008"
+      ],
+      "gold_in_attempt1_top5": true,
+      "gold_in_attempt2_top5": true
+    },
+    {
+      "query_id": "24::nda-13",
+      "is_null": false,
+      "regenerated_abstained": false,
+      "answer_sha256_16": "0361fa8dbbbc22c7",
+      "correct": true,
+      "grounded": false,
+      "reason": "The candidate correctly identifies that independently acquired information is excluded from obligations, supporting the reference's truth direction.",
+      "attempt1_top5": [
+        "24::0001",
+        "24::0003",
+        "24::0002",
+        "24::0004",
+        "24::0006"
+      ],
+      "attempt2_top5": [
+        "24::0003",
+        "24::0006",
+        "24::0004",
+        "24::0001",
+        "24::0007"
+      ],
+      "gold_in_attempt1_top5": true,
+      "gold_in_attempt2_top5": true
+    },
+    {
+      "query_id": "26::nda-2",
+      "is_null": false,
+      "regenerated_abstained": true,
+      "answer_sha256_16": "539560d19e006b37",
+      "correct": null,
+      "grounded": null,
+      "reason": null,
+      "attempt1_top5": [
+        "26::0002",
+        "26::0003",
+        "26::0004",
+        "26::0001",
+        "26::0005"
+      ],
+      "attempt2_top5": [
+        "26::0001",
+        "26::0002",
+        "26::0003",
+        "26::0004",
+        "26::0005"
+      ],
+      "gold_in_attempt1_top5": true,
+      "gold_in_attempt2_top5": true
+    },
+    {
+      "query_id": "26::nda-7",
+      "is_null": false,
+      "regenerated_abstained": true,
+      "answer_sha256_16": "539560d19e006b37",
+      "correct": null,
+      "grounded": null,
+      "reason": null,
+      "attempt1_top5": [
+        "26::0002",
+        "26::0003",
+        "26::0001",
+        "26::0004",
+        "26::0005"
+      ],
+      "attempt2_top5": [
+        "26::0003",
+        "26::0002",
+        "26::0001",
+        "26::0005",
+        "26::0004"
+      ],
+      "gold_in_attempt1_top5": true,
+      "gold_in_attempt2_top5": true
+    },
+    {
+      "query_id": "26::nda-5",
+      "is_null": false,
+      "regenerated_abstained": false,
+      "answer_sha256_16": "9f877bd6dc21b3f9",
+      "correct": true,
+      "grounded": true,
+      "reason": "The candidate correctly affirms that sharing with employees is permitted, aligning with the reference's supported status.",
+      "attempt1_top5": [
+        "26::0002",
+        "26::0003",
+        "26::0001",
+        "26::0004",
+        "26::0005"
+      ],
+      "attempt2_top5": [
+        "26::0001",
+        "26::0003",
+        "26::0002",
+        "26::0005",
+        "26::0004"
+      ],
+      "gold_in_attempt1_top5": true,
+      "gold_in_attempt2_top5": true
+    },
+    {
+      "query_id": "30::nda-12",
+      "is_null": false,
+      "regenerated_abstained": false,
+      "answer_sha256_16": "1a2e65cbf93a3e4b",
+      "correct": true,
+      "grounded": true,
+      "reason": "The candidate correctly affirms the hypothesis and cites the relevant clause supporting independent development.",
+      "attempt1_top5": [
+        "30::0012",
+        "30::0009",
+        "30::0003",
+        "30::0011",
+        "30::0013"
+      ],
+      "attempt2_top5": [
+        "30::0013",
+        "30::0012",
+        "30::0009",
+        "30::0010",
+        "30::0011"
+      ],
+      "gold_in_attempt1_top5": true,
+      "gold_in_attempt2_top5": true
+    },
+    {
+      "query_id": "36::nda-10",
+      "is_null": false,
+      "regenerated_abstained": false,
+      "answer_sha256_16": "f16b9b0269ea92ac",
+      "correct": true,
+      "grounded": true,
+      "reason": "The candidate correctly identifies that the fact of negotiations and the agreement's existence are confidential, supporting the hypothesis.",
+      "attempt1_top5": [
+        "36::0006",
+        "36::0004",
+        "36::0011",
+        "36::0008",
+        "36::0007"
+      ],
+      "attempt2_top5": [
+        "36::0004",
+        "36::0006",
+        "36::0008",
+        "36::0005",
+        "36::0001"
+      ],
+      "gold_in_attempt1_top5": false,
+      "gold_in_attempt2_top5": true
+    },
+    {
+      "query_id": "36::nda-7",
+      "is_null": false,
+      "regenerated_abstained": true,
+      "answer_sha256_16": "539560d19e006b37",
+      "correct": null,
+      "grounded": null,
+      "reason": null,
+      "attempt1_top5": [
+        "36::0003",
+        "36::0001",
+        "36::0006",
+        "36::0007",
+        "36::0005"
+      ],
+      "attempt2_top5": [
+        "36::0003",
+        "36::0006",
+        "36::0005",
+        "36::0007",
+        "36::0001"
+      ],
+      "gold_in_attempt1_top5": true,
+      "gold_in_attempt2_top5": true
+    },
+    {
+      "query_id": "38::nda-13",
+      "is_null": false,
+      "regenerated_abstained": false,
+      "answer_sha256_16": "1fc2d99f4d563683",
+      "correct": true,
+      "grounded": true,
+      "reason": "The candidate correctly affirms the hypothesis by citing the third-party disclosure exception, matching the reference's substantive answer.",
+      "attempt1_top5": [
+        "38::0002",
+        "38::0001",
+        "38::0016",
+        "38::0008",
+        "38::0006"
+      ],
+      "attempt2_top5": [
+        "38::0002",
+        "38::0001",
+        "38::0008",
+        "38::0016",
+        "38::0003"
+      ],
+      "gold_in_attempt1_top5": true,
+      "gold_in_attempt2_top5": true
+    },
+    {
+      "query_id": "40::nda-1",
+      "is_null": false,
+      "regenerated_abstained": false,
+      "answer_sha256_16": "e5504cda7bf2a938",
+      "correct": true,
+      "grounded": true,
+      "reason": "The candidate correctly identifies that the contract does not require all Confidential Information to be expressly identified, contradicting the hypothesis.",
+      "attempt1_top5": [
+        "40::0001",
+        "40::0002",
+        "40::0000"
+      ],
+      "attempt2_top5": [
+        "40::0001",
+        "40::0000",
+        "40::0002"
+      ],
+      "gold_in_attempt1_top5": true,
+      "gold_in_attempt2_top5": true
+    },
+    {
+      "query_id": "42::nda-18",
+      "is_null": false,
+      "regenerated_abstained": false,
+      "answer_sha256_16": "cd17907df8cc44a3",
+      "correct": false,
+      "grounded": true,
+      "reason": "The candidate incorrectly claims the sources do not support the hypothesis, whereas the reference states the hypothesis is supported by the non-solicitation clauses.",
+      "attempt1_top5": [
+        "42::0006",
+        "42::0003",
+        "42::0007",
+        "42::0005",
+        "42::0004"
+      ],
+      "attempt2_top5": [
+        "42::0006",
+        "42::0003",
+        "42::0007",
+        "42::0004",
+        "42::0005"
+      ],
+      "gold_in_attempt1_top5": true,
+      "gold_in_attempt2_top5": true
+    },
+    {
+      "query_id": "42::nda-4",
+      "is_null": false,
+      "regenerated_abstained": true,
+      "answer_sha256_16": "539560d19e006b37",
+      "correct": null,
+      "grounded": null,
+      "reason": null,
+      "attempt1_top5": [
+        "42::0001",
+        "42::0008",
+        "42::0003",
+        "42::0007",
+        "42::0002"
+      ],
+      "attempt2_top5": [
+        "42::0008",
+        "42::0003",
+        "42::0002",
+        "42::0001",
+        "42::0005"
+      ],
+      "gold_in_attempt1_top5": true,
+      "gold_in_attempt2_top5": true
+    },
+    {
+      "query_id": "46::nda-1",
+      "is_null": false,
+      "regenerated_abstained": false,
+      "answer_sha256_16": "acfcbbce7208889c",
+      "correct": false,
+      "grounded": true,
+      "reason": "The candidate incorrectly limits the definition to marked information, ignoring the reference's broader scope of all disclosed confidential information.",
+      "attempt1_top5": [
+        "46::0004",
+        "46::0006",
+        "46::0003",
+        "46::0005",
+        "46::0009"
+      ],
+      "attempt2_top5": [
+        "46::0004",
+        "46::0006",
+        "46::0003",
+        "46::0005",
+        "46::0002"
+      ],
+      "gold_in_attempt1_top5": false,
+      "gold_in_attempt2_top5": true
+    },
+    {
+      "query_id": "46::nda-19",
+      "is_null": false,
+      "regenerated_abstained": false,
+      "answer_sha256_16": "e55f875a0a7f58d7",
+      "correct": true,
+      "grounded": true,
+      "reason": "The candidate correctly affirms that obligations survive termination, aligning with the reference's supported status.",
+      "attempt1_top5": [
+        "46::0007",
+        "46::0006",
+        "46::0008",
+        "46::0005",
+        "46::0010"
+      ],
+      "attempt2_top5": [
+        "46::0007",
+        "46::0008",
+        "46::0006",
+        "46::0005",
+        "46::0010"
+      ],
+      "gold_in_attempt1_top5": true,
+      "gold_in_attempt2_top5": true
+    },
+    {
+      "query_id": "46::nda-7",
+      "is_null": false,
+      "regenerated_abstained": false,
+      "answer_sha256_16": "39d87533addbebfa",
+      "correct": true,
+      "grounded": true,
+      "reason": "The candidate correctly identifies that the hypothesis is contradicted because disclosure requires prior written consent, aligning with the reference.",
+      "attempt1_top5": [
+        "46::0006",
+        "46::0001",
+        "46::0005",
+        "46::0004",
+        "46::0009"
+      ],
+      "attempt2_top5": [
+        "46::0005",
+        "46::0006",
+        "46::0004",
+        "46::0001",
+        "46::0003"
+      ],
+      "gold_in_attempt1_top5": true,
+      "gold_in_attempt2_top5": true
+    },
+    {
+      "query_id": "49::nda-4",
+      "is_null": false,
+      "regenerated_abstained": true,
+      "answer_sha256_16": "539560d19e006b37",
+      "correct": null,
+      "grounded": null,
+      "reason": null,
+      "attempt1_top5": [
+        "49::0009",
+        "49::0004",
+        "49::0005",
+        "49::0006",
+        "49::0003"
+      ],
+      "attempt2_top5": [
+        "49::0004",
+        "49::0009",
+        "49::0005",
+        "49::0006",
+        "49::0003"
+      ],
+      "gold_in_attempt1_top5": true,
+      "gold_in_attempt2_top5": true
+    },
+    {
+      "query_id": "53::nda-4",
+      "is_null": false,
+      "regenerated_abstained": false,
+      "answer_sha256_16": "350d961072daec7d",
+      "correct": true,
+      "grounded": true,
+      "reason": "The candidate correctly identifies that the Receiving Party is restricted to using information only for the stated Purpose, matching the reference's substantive answer.",
+      "attempt1_top5": [
+        "53::0004",
+        "53::0009",
+        "53::0005",
+        "53::0010",
+        "53::0006"
+      ],
+      "attempt2_top5": [
+        "53::0003",
+        "53::0004",
+        "53::0009",
+        "53::0006",
+        "53::0005"
+      ],
+      "gold_in_attempt1_top5": false,
+      "gold_in_attempt2_top5": true
+    },
+    {
+      "query_id": "57::nda-7",
+      "is_null": false,
+      "regenerated_abstained": false,
+      "answer_sha256_16": "253dd2bd373ef738",
+      "correct": false,
+      "grounded": true,
+      "reason": "The candidate incorrectly claims the agreement does not support sharing with consultants and agents, contradicting the reference's confirmation that the hypothesis is supported.",
+      "attempt1_top5": [
+        "57::0001",
+        "57::0000",
+        "57::0002",
+        "57::0003"
+      ],
+      "attempt2_top5": [
+        "57::0000",
+        "57::0001",
+        "57::0002",
+        "57::0003"
+      ],
+      "gold_in_attempt1_top5": true,
+      "gold_in_attempt2_top5": true
+    },
+    {
+      "query_id": "62::nda-4",
+      "is_null": false,
+      "regenerated_abstained": false,
+      "answer_sha256_16": "1f3b1ad5f943d287",
+      "correct": true,
+      "grounded": true,
+      "reason": "The candidate correctly identifies that the hypothesis is supported by the contract's restriction on using Confidential Information for purposes other than those stated.",
+      "attempt1_top5": [
+        "62::0004",
+        "62::0013",
+        "62::0005",
+        "62::0007",
+        "62::0008"
+      ],
+      "attempt2_top5": [
+        "62::0004",
+        "62::0005",
+        "62::0003",
+        "62::0015",
+        "62::0007"
+      ],
+      "gold_in_attempt1_top5": true,
+      "gold_in_attempt2_top5": true
+    },
+    {
+      "query_id": "65::nda-2",
+      "is_null": false,
+      "regenerated_abstained": false,
+      "answer_sha256_16": "67d09642863a3453",
+      "correct": true,
+      "grounded": true,
+      "reason": "The candidate correctly identifies the statement as false, noting that Confidential Information includes business and trade secrets, not just technical information.",
+      "attempt1_top5": [
+        "65::0013",
+        "65::0004",
+        "65::0006",
+        "65::0008",
+        "65::0007"
+      ],
+      "attempt2_top5": [
+        "65::0013",
+        "65::0006",
+        "65::0004",
+        "65::0008",
+        "65::0000"
+      ],
+      "gold_in_attempt1_top5": false,
+      "gold_in_attempt2_top5": true
+    },
+    {
+      "query_id": "65::nda-5",
+      "is_null": false,
+      "regenerated_abstained": true,
+      "answer_sha256_16": "539560d19e006b37",
+      "correct": null,
+      "grounded": null,
+      "reason": null,
+      "attempt1_top5": [
+        "65::0003",
+        "65::0005",
+        "65::0004",
+        "65::0006",
+        "65::0001"
+      ],
+      "attempt2_top5": [
+        "65::0003",
+        "65::0005",
+        "65::0006",
+        "65::0004",
+        "65::0001"
+      ],
+      "gold_in_attempt1_top5": true,
+      "gold_in_attempt2_top5": true
+    },
+    {
+      "query_id": "66::nda-15",
+      "is_null": false,
+      "regenerated_abstained": false,
+      "answer_sha256_16": "ae943f789e7334c0",
+      "correct": true,
+      "grounded": true,
+      "reason": "The candidate correctly affirms that disclosure does not grant rights, matching the reference's substantive answer.",
+      "attempt1_top5": [
+        "66::0002",
+        "66::0003",
+        "66::0001",
+        "66::0004",
+        "66::0005"
+      ],
+      "attempt2_top5": [
+        "66::0002",
+        "66::0003",
+        "66::0004",
+        "66::0005",
+        "66::0001"
+      ],
+      "gold_in_attempt1_top5": true,
+      "gold_in_attempt2_top5": true
+    },
+    {
+      "query_id": "67::nda-17",
+      "is_null": false,
+      "regenerated_abstained": false,
+      "answer_sha256_16": "ba56445394ee5ca8",
+      "correct": true,
+      "grounded": true,
+      "reason": "The candidate correctly identifies that the contract prohibits reproduction without consent, contradicting the hypothesis that copies may be created.",
+      "attempt1_top5": [
+        "67::0001",
+        "67::0002",
+        "67::0000",
+        "67::0006",
+        "67::0003"
+      ],
+      "attempt2_top5": [
+        "67::0001",
+        "67::0002",
+        "67::0006",
+        "67::0000",
+        "67::0003"
+      ],
+      "gold_in_attempt1_top5": true,
+      "gold_in_attempt2_top5": true
+    },
+    {
+      "query_id": "68::nda-20",
+      "is_null": false,
+      "regenerated_abstained": false,
+      "answer_sha256_16": "55957d1642e6bc59",
+      "correct": false,
+      "grounded": true,
+      "reason": "The candidate incorrectly denies the reference's truth direction by claiming retention is prohibited, ignoring the explicit exception for automatic backup files.",
+      "attempt1_top5": [
+        "68::0014",
+        "68::0012",
+        "68::0007",
+        "68::0013",
+        "68::0008"
+      ],
+      "attempt2_top5": [
+        "68::0014",
+        "68::0007",
+        "68::0013",
+        "68::0012",
+        "68::0017"
+      ],
+      "gold_in_attempt1_top5": false,
+      "gold_in_attempt2_top5": false
+    },
+    {
+      "query_id": "18::nda-7",
+      "is_null": true,
+      "regenerated_abstained": false,
+      "answer_sha256_16": "736ec5fc446d1ead",
+      "correct": null,
+      "grounded": null,
+      "reason": null,
+      "attempt1_top5": [
+        "18::0001",
+        "18::0002",
+        "18::0003",
+        "18::0005",
+        "18::0000"
+      ],
+      "attempt2_top5": [
+        "18::0001",
+        "18::0002",
+        "18::0003",
+        "18::0000",
+        "18::0005"
+      ],
+      "gold_in_attempt1_top5": false,
+      "gold_in_attempt2_top5": false
+    },
+    {
+      "query_id": "23::nda-16",
+      "is_null": true,
+      "regenerated_abstained": true,
+      "answer_sha256_16": "539560d19e006b37",
+      "correct": null,
+      "grounded": null,
+      "reason": null,
+      "attempt1_top5": [
+        "23::0010",
+        "23::0008",
+        "23::0009",
+        "23::0002",
+        "23::0003"
+      ],
+      "attempt2_top5": [
+        "23::0010",
+        "23::0009",
+        "23::0008",
+        "23::0002",
+        "23::0003"
+      ],
+      "gold_in_attempt1_top5": false,
+      "gold_in_attempt2_top5": false
+    },
+    {
+      "query_id": "42::nda-20",
+      "is_null": true,
+      "regenerated_abstained": false,
+      "answer_sha256_16": "da9ba4bce5dfffe2",
+      "correct": null,
+      "grounded": null,
+      "reason": null,
+      "attempt1_top5": [
+        "42::0007",
+        "42::0002",
+        "42::0003",
+        "42::0004",
+        "42::0008"
+      ],
+      "attempt2_top5": [
+        "42::0007",
+        "42::0002",
+        "42::0004",
+        "42::0003",
+        "42::0001"
+      ],
+      "gold_in_attempt1_top5": false,
+      "gold_in_attempt2_top5": false
+    },
+    {
+      "query_id": "53::nda-16",
+      "is_null": true,
+      "regenerated_abstained": false,
+      "answer_sha256_16": "1a65c11a91ab5aa0",
+      "correct": null,
+      "grounded": null,
+      "reason": null,
+      "attempt1_top5": [
+        "53::0009",
+        "53::0004",
+        "53::0003",
+        "53::0010",
+        "53::0005"
+      ],
+      "attempt2_top5": [
+        "53::0004",
+        "53::0009",
+        "53::0007",
+        "53::0010",
+        "53::0005"
+      ],
+      "gold_in_attempt1_top5": false,
+      "gold_in_attempt2_top5": false
+    },
+    {
+      "query_id": "68::nda-16",
+      "is_null": true,
+      "regenerated_abstained": false,
+      "answer_sha256_16": "fa983b7d0109885a",
+      "correct": null,
+      "grounded": null,
+      "reason": null,
+      "attempt1_top5": [
+        "68::0013",
+        "68::0014",
+        "68::0007",
+        "68::0008",
+        "68::0004"
+      ],
+      "attempt2_top5": [
+        "68::0013",
+        "68::0014",
+        "68::0007",
+        "68::0008",
+        "68::0017"
+      ],
+      "gold_in_attempt1_top5": false,
+      "gold_in_attempt2_top5": false
+    }
+  ],
+  "explore_reversed_order_retry": {
+    "description": "retry each first-attempt refusal once on attempt 1's top five in reverse order; no rewrite, no second retrieval",
+    "calls": 1054,
+    "decision_scored": {
+      "balanced_accuracy": 0.7984,
+      "null_right_rate": 0.795,
+      "answerable_right_rate": 0.8017,
+      "paired_vs_generator_only": {
+        "arm_right_only": 31,
+        "control_right_only": 16,
+        "mcnemar_p": 0.03999
+      }
+    },
+    "correctness_scored": {
+      "balanced_accuracy": 0.7439,
+      "null_right_rate": 0.795,
+      "answerable_right_rate": 0.6927,
+      "paired_vs_generator_only": {
+        "arm_right_only": 25,
+        "control_right_only": 16,
+        "mcnemar_p": 0.21102
+      },
+      "paired_vs_rewrite_retry": {
+        "arm_right_only": 16,
+        "control_right_only": 18,
+        "mcnemar_p": 0.86417
+      }
+    },
+    "recovered_answerable": {
+      "questions": 31,
+      "regenerated_answered": 31,
+      "regenerated_abstained": 0,
+      "correct": 25,
+      "confidently_wrong": 6,
+      "confidently_wrong_but_grounded": 6
+    },
+    "nulls_turned_into_answers": 16
+  },
+  "explore_resample_retry": {
+    "description": "retry each first-attempt refusal once with the identical prompt on a fresh call at temperature zero; no rewrite, no second retrieval. Measures serving nondeterminism.",
+    "calls": 1054,
+    "decision_scored": {
+      "balanced_accuracy": 0.801,
+      "null_right_rate": 0.8199,
+      "answerable_right_rate": 0.7821,
+      "paired_vs_generator_only": {
+        "arm_right_only": 24,
+        "control_right_only": 8,
+        "mcnemar_p": 0.007
+      }
+    },
+    "correctness_scored": {
+      "balanced_accuracy": 0.7493,
+      "null_right_rate": 0.8199,
+      "answerable_right_rate": 0.6788,
+      "paired_vs_generator_only": {
+        "arm_right_only": 20,
+        "control_right_only": 8,
+        "mcnemar_p": 0.0357
+      },
+      "paired_vs_rewrite_retry": {
+        "arm_right_only": 18,
+        "control_right_only": 17,
+        "mcnemar_p": 1.0
+      }
+    },
+    "recovered_answerable": {
+      "questions": 24,
+      "regenerated_answered": 24,
+      "regenerated_abstained": 0,
+      "correct": 20,
+      "confidently_wrong": 4,
+      "confidently_wrong_but_grounded": 4
+    },
+    "nulls_turned_into_answers": 8
+  }
+}

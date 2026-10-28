@@ -1,0 +1,317 @@
+{
+ "produced_by": {
+  "model": "Qwen3_8-27B",
+  "producer": "implementations/special_topics/visual_documents/replicate_claims.py",
+  "mode": "explore: one run, fixed sampling seed 0",
+  "parser": "docling (table structure on); RapidOCR PP-OCRv6 small, English, for OCR conditions",
+  "raster_dpi": 216,
+  "embeddings": "BAAI/bge-small-en-v1.5 (local)",
+  "reader": "Qwen3_8-27B",
+  "answer_judge": "Qwen3_6-35B-A3B",
+  "describer": "Qwen3_8-27B",
+  "description_judge": "gemini-3.8-flash",
+  "endpoint": "vector-cluster (reader, describer, answer judge); vector-proxy-paid (description judge)"
+ },
+ "claim_1_text_layer_vs_ocr": {
+  "fidelity": {
+   "ocr-auto": {
+    "pages": 103,
+    "identical_pages": 82,
+    "pages_with_text_layer": 99,
+    "mean_word_accuracy": 0.9939,
+    "numbers_kept": 0.9965,
+    "numbers_extra_per_page": 1.26,
+    "pages_without_text_layer": 3,
+    "chars_added_on_pages_without_text_layer": 120,
+    "pages_without_text_layer_gaining_200_chars": 0,
+    "tables_ref": 45,
+    "tables": 45,
+    "table_cells_kept": 1.0
+   },
+   "ocr-forced": {
+    "pages": 300,
+    "identical_pages": 33,
+    "pages_with_text_layer": 296,
+    "mean_word_accuracy": 0.9527,
+    "numbers_kept": 0.981,
+    "numbers_extra_per_page": 0.87,
+    "pages_without_text_layer": 3,
+    "chars_added_on_pages_without_text_layer": 318,
+    "pages_without_text_layer_gaining_200_chars": 1,
+    "tables_ref": 249,
+    "tables": 245,
+    "table_cells_kept": 0.9775
+   },
+   "flag-forced": {
+    "pages": 40,
+    "identical_pages": 12,
+    "pages_with_text_layer": 39,
+    "mean_word_accuracy": 0.9667,
+    "numbers_kept": 0.9752,
+    "numbers_extra_per_page": 0.08,
+    "pages_without_text_layer": 1,
+    "chars_added_on_pages_without_text_layer": 14,
+    "pages_without_text_layer_gaining_200_chars": 0,
+    "tables_ref": 16,
+    "tables": 16,
+    "table_cells_kept": 1.0
+   }
+  },
+  "page_recall_at_5": {
+   "text-layer": {
+    "control": {
+     "n": 40,
+     "recall_at_5": 0.65
+    },
+    "duplicated": {
+     "n": 44,
+     "recall_at_5": 0.9318
+    },
+    "figure-only": {
+     "n": 76,
+     "recall_at_5": 0.7105
+    },
+    "null": {
+     "n": 0,
+     "recall_at_5": null
+    },
+    "table": {
+     "n": 60,
+     "recall_at_5": 0.7833
+    },
+    "all": {
+     "n": 220,
+     "recall_at_5": 0.7636
+    }
+   },
+   "ocr-forced": {
+    "control": {
+     "n": 40,
+     "recall_at_5": 0.625
+    },
+    "duplicated": {
+     "n": 44,
+     "recall_at_5": 0.9318
+    },
+    "figure-only": {
+     "n": 76,
+     "recall_at_5": 0.6974
+    },
+    "null": {
+     "n": 0,
+     "recall_at_5": null
+    },
+    "table": {
+     "n": 60,
+     "recall_at_5": 0.7667
+    },
+    "all": {
+     "n": 220,
+     "recall_at_5": 0.75
+    }
+   }
+  },
+  "answers": {
+   "text-layer": {
+    "control": {
+     "n": 40,
+     "correct": 4
+    },
+    "duplicated": {
+     "n": 44,
+     "correct": 37
+    },
+    "figure-only": {
+     "n": 76,
+     "correct": 5
+    },
+    "null": {
+     "n": 26,
+     "correct": 26
+    },
+    "table": {
+     "n": 60,
+     "correct": 36
+    },
+    "all": {
+     "n": 246,
+     "correct": 108
+    }
+   },
+   "ocr-forced": {
+    "control": {
+     "n": 40,
+     "correct": 5
+    },
+    "duplicated": {
+     "n": 44,
+     "correct": 33
+    },
+    "figure-only": {
+     "n": 76,
+     "correct": 6
+    },
+    "null": {
+     "n": 26,
+     "correct": 26
+    },
+    "table": {
+     "n": 60,
+     "correct": 32
+    },
+    "all": {
+     "n": 246,
+     "correct": 102
+    }
+   }
+  },
+  "paired": {
+   "text-layer_vs_ocr-forced": {
+    "text_layer_only": 10,
+    "condition_only": 4,
+    "p": 0.1796
+   }
+  }
+ },
+ "claim_2_small_crops": {
+  "per_bin": {
+   "<0.5%": {
+    "generic": {
+     "n": 30,
+     "claims_per_description": 7.07,
+     "any_unsupported": 0.1,
+     "claim_share": 0.0142
+    },
+    "domain": {
+     "n": 30,
+     "claims_per_description": 4.6,
+     "any_unsupported": 0.0333,
+     "claim_share": 0.0072
+    },
+    "grounded-generic": {
+     "n": 30,
+     "claims_per_description": 5.17,
+     "any_unsupported": 0.4333,
+     "claim_share": 0.1032
+    }
+   },
+   "0.5-1%": {
+    "generic": {
+     "n": 30,
+     "claims_per_description": 5.57,
+     "any_unsupported": 0.3667,
+     "claim_share": 0.0898
+    },
+    "domain": {
+     "n": 30,
+     "claims_per_description": 4.8,
+     "any_unsupported": 0.2333,
+     "claim_share": 0.0556
+    },
+    "grounded-generic": {
+     "n": 30,
+     "claims_per_description": 6.07,
+     "any_unsupported": 0.3333,
+     "claim_share": 0.0549
+    }
+   },
+   "1-5%": {
+    "generic": {
+     "n": 30,
+     "claims_per_description": 5.27,
+     "any_unsupported": 0.2667,
+     "claim_share": 0.0633
+    },
+    "domain": {
+     "n": 30,
+     "claims_per_description": 6.17,
+     "any_unsupported": 0.1,
+     "claim_share": 0.0162
+    },
+    "grounded-generic": {
+     "n": 30,
+     "claims_per_description": 6.73,
+     "any_unsupported": 0.1667,
+     "claim_share": 0.0248
+    }
+   },
+   "5-10%": {
+    "generic": {
+     "n": 30,
+     "claims_per_description": 7.97,
+     "any_unsupported": 0.3667,
+     "claim_share": 0.0586
+    },
+    "domain": {
+     "n": 30,
+     "claims_per_description": 10.57,
+     "any_unsupported": 0.1,
+     "claim_share": 0.0095
+    },
+    "grounded-generic": {
+     "n": 30,
+     "claims_per_description": 8.5,
+     "any_unsupported": 0.3333,
+     "claim_share": 0.0431
+    }
+   },
+   ">=10%": {
+    "generic": {
+     "n": 30,
+     "claims_per_description": 9.87,
+     "any_unsupported": 0.4667,
+     "claim_share": 0.0912
+    },
+    "domain": {
+     "n": 30,
+     "claims_per_description": 15.7,
+     "any_unsupported": 0.3,
+     "claim_share": 0.0786
+    },
+    "grounded-generic": {
+     "n": 30,
+     "claims_per_description": 11.2,
+     "any_unsupported": 0.4,
+     "claim_share": 0.1429
+    }
+   }
+  },
+  "bins": {
+   "<0.5%": 30,
+   "0.5-1%": 30,
+   "1-5%": 30,
+   "5-10%": 30,
+   ">=10%": 30
+  },
+  "all": {
+   "generic": {
+    "n": 150,
+    "claims_per_description": 7.15,
+    "any_unsupported": 0.3133,
+    "claim_share": 0.0644
+   },
+   "domain": {
+    "n": 150,
+    "claims_per_description": 8.37,
+    "any_unsupported": 0.1533,
+    "claim_share": 0.0414
+   },
+   "grounded-generic": {
+    "n": 150,
+    "claims_per_description": 7.53,
+    "any_unsupported": 0.3333,
+    "claim_share": 0.0796
+   }
+  },
+  "unparsed_judgements": 0,
+  "hand_check": {
+   "pictures": 12,
+   "descriptions": 36,
+   "judge_flags_checked": 9,
+   "flags_confirmed": 8,
+   "flags_rejected": 1,
+   "missed_unsupported_found": 0,
+   "note": "12 crops viewed by hand against all three descriptions: 5 from the smallest bin with a grounded-generic flag, 7 at random from the rest; flags were wrong legend styles, a wrong circle count, and wrong logo details. The one rejected flag was a script logo's flourishes."
+  }
+ }
+}

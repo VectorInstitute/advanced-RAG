@@ -1,0 +1,42 @@
+{
+ "produced_by": {
+  "model": "Qwen3_8-27B",
+  "reader": "Qwen3_8-27B",
+  "enrichment": "Qwen3_8-27B",
+  "question_generator": "Qwen3_8-27B",
+  "question_checker": "Qwen3_8-Flash-Next",
+  "judge": "Qwen3_6-35B-A3B",
+  "endpoint": "vector-cluster",
+  "embeddings": "BAAI/bge-small-en-v1.5 (local)",
+  "producer": "implementations/special_topics/visual_documents (follow-up probe)",
+  "mode": "explore: one run"
+ },
+ "asks": "Does E1 beat E2 on figure-only page retrieval because of the table summaries or because of the picture prompt?",
+ "arm": "E2 picture descriptions inlined, no table summaries, dense bge-small-en-v1.5, k=5",
+ "retrieval": {
+  "figure-only": {
+   "recall": 0.8026,
+   "ndcg": 0.611,
+   "failure": 0.1974,
+   "n": 76
+  },
+  "duplicated": {
+   "recall": 0.9091,
+   "ndcg": 0.7775,
+   "failure": 0.0909,
+   "n": 44
+  },
+  "table": {
+   "recall": 0.65,
+   "ndcg": 0.5141,
+   "failure": 0.35,
+   "n": 60
+  },
+  "control": {
+   "recall": 0.425,
+   "ndcg": 0.3323,
+   "failure": 0.5,
+   "n": 40
+  }
+ }
+}

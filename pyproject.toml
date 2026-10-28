@@ -1,0 +1,210 @@
+[project]
+name = "advanced-rag"
+version = "0.1.1"
+description = "Advanced RAG Bootcamp: reference implementations and shared library"
+authors = [ {name = "Vector AI Engineering", email = "ai_engineering@vectorinstitute.ai"}]
+readme = "README.md"
+repository = "https://github.com/VectorInstitute/advanced-rag"
+requires-python = ">=3.12"
+dependencies = [
+    "aieng-advanced-rag",
+    "filelock==4.2.4",
+    "idna>=3.18",
+    "jupyter-server>=2.20.0",
+    "jupyterlab>=4.6.2",
+    "mistune>=3.3.3",
+    "nbconvert>=7.17.0",
+    "pip>=26.2",
+    "pygments>=2.20.0",
+    "requests>=2.34.2",
+    "tornado>=6.5.7",
+    "urllib3>=2.7.0",
+    "virtualenv>=21.7.13",
+]
+
+[dependency-groups]
+dev = [
+    # The platform's `onboard` CLI. It runs tests/test_integration.py with this
+    # venv's interpreter, so the gate can import aieng.advanced_rag.
+    "aieng-platform-onboard>=0.7.3",
+    "codecov>=2.1.13",
+    "mypy>=2.2.0",
+    "nbqa>=1.9.1",
+    "pip-audit>=2.10.1",
+    "pre-commit>=4.6.0",
+    "pytest>=9.1.1",
+    "pytest-asyncio>=1.4.0",
+    "pytest-cov>=6.0.0",
+    "pytest-mock>=3.14.0",
+    "ruff>=0.15.21",
+]
+
+[tool.uv]
+# msgpack 1.2.3 and authlib 1.9.0 fix CVE-2026-114613 (a leak and a stale
+# reference in the C unpacker) and CVE-2026-96760 (a JWS signature bypass).
+constraint-dependencies = [
+    "msgpack>=1.2.3",
+]
+# aieng-platform-onboard pins four of its dependencies exactly, below the
+# versions this project already resolves: filelock 3.20.3, virtualenv 20.36.1,
+# urllib3 2.7.0, and authlib 1.6.12. The overrides replace those pins so the
+# onboarding CLI shares the venv without downgrading anything. Remove them when
+# the CLI relaxes its pins. docling-slim 2.133.0 caps pillow below 13, and
+# pillow 12.3.0 carries eight advisories fixed in 13.0.0 (PDF append, TIFF
+# tile decoding, morphology). Remove the pillow override when docling-slim
+# allows 13.
+override-dependencies = [
+    "authlib>=1.9.0,<2",
+    "filelock==4.2.4",
+    "pillow>=13.0.0",
+    "urllib3>=2.7.0,<3",
+    "virtualenv>=21.7.13",
+]
+
+[tool.uv.workspace]
+members = [
+  "aieng-advanced-rag",
+]
+
+# PyTorch comes from its CPU wheel index on Linux. The PyPI wheel pulls 15
+# nvidia-* packages, 2.7 GB of CUDA libraries that a CPU workspace never loads,
+# and nothing in the reference implementations needs a GPU: bge-small-en-v1.5
+# runs on CPU. macOS and Windows already get CPU wheels from PyPI. A GPU
+# workspace that needs CUDA torch can install it into its own venv.
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true
+
+[tool.uv.sources]
+aieng-advanced-rag = { workspace = true }
+torch = { index = "pytorch-cpu", marker = "sys_platform == 'linux'" }
+torchvision = { index = "pytorch-cpu", marker = "sys_platform == 'linux'" }
+
+[tool.mypy]
+# Resolve RI2 script imports as the same packages used by the runners.
+mypy_path = [
+    "$MYPY_CONFIG_FILE_DIR/implementations/cross_document_synthesis",
+]
+ignore_missing_imports = true
+install_types = true
+pretty = true
+namespace_packages = true
+explicit_package_bases = true
+non_interactive = true
+warn_unused_configs = true
+allow_any_generics = false
+allow_subclassing_any = false
+allow_untyped_calls = false
+allow_untyped_defs = false
+allow_incomplete_defs = false
+check_untyped_defs = true
+allow_untyped_decorators = false
+warn_redundant_casts = true
+warn_unused_ignores = true
+warn_return_any = true
+implicit_reexport = false
+strict_equality = true
+extra_checks = true
+
+# ADK is an optional extra, so mypy normally type-checks this repository without
+# `google-adk` installed, and `BaseToolset` resolves to `Any`. Subclassing it is
+# the documented way to build a toolset, so the check is relaxed for that one
+# module rather than silenced with an ignore comment, which would itself become
+# an error once the extra is installed.
+
+# docling-core ships py.typed but binds its public names without `__all__`, so
+# strict re-export checking rejects `from docling_core.types.doc.document import
+# TableItem` for a name the module exposes at runtime. The gap is in the
+# package's typing, so it is relaxed for that package alone.
+[[tool.mypy.overrides]]
+module = "docling_core.*"
+implicit_reexport = true
+
+[[tool.mypy.overrides]]
+module = ["*.agents.toolset"]
+disallow_subclassing_any = false
+
+# RAGAS is an optional RI1 evaluation extra. Its adapter bases resolve to Any
+# when that extra is absent, just as ADK's optional toolset base does above.
+[[tool.mypy.overrides]]
+module = ["advanced_lab.ragas_eval", "*.advanced_lab.ragas_eval"]
+disallow_subclassing_any = false
+
+[tool.ruff]
+include = ["*.py", "pyproject.toml", "*.ipynb"]
+line-length = 120
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+docstring-code-format = true
+
+[tool.ruff.lint]
+select = [
+    "A", # flake8-builtins
+    "B", # flake8-bugbear
+    "COM", # flake8-commas
+    "C4", # flake8-comprehensions
+    "RET", # flake8-return
+    "SIM", # flake8-simplify
+    "ICN", # flake8-import-conventions
+    "Q", # flake8-quotes
+    "RSE", # flake8-raise
+    "D", # pydocstyle
+    "E", # pycodestyle
+    "F", # pyflakes
+    "I", # isort
+    "W", # pycodestyle
+    "N", # pep8-naming
+    "ERA", # eradicate
+    "PL", # pylint
+]
+fixable = ["A", "B", "COM", "C4", "RET", "SIM", "ICN", "Q", "RSE", "D", "E", "F", "I", "W", "N", "ERA", "PL"]
+ignore = [
+    "B905", # `zip()` without an explicit `strict=` parameter
+    "E501", # line too long
+    "D203", # 1 blank line required before class docstring
+    "D213", # Multi-line docstring summary should start at the second line
+    "PLR2004", # Replace magic number with named constant
+    "PLR0913", # Too many arguments
+    "COM812", # Missing trailing comma
+]
+
+# Ignore import violations in all `__init__.py` files.
+[tool.ruff.lint.per-file-ignores]
+"__init__.py" = ["E402", "F401", "F403", "F811"]
+# Test names under `implementations/` are full sentences, so a per-test
+# docstring would restate the name. D100 stays on, so every test module still
+# says what it covers. This matches the per-file-ignores the aieng-advanced-rag
+# package already sets for its own tests.
+"implementations/**/tests/**" = ["D101", "D102", "D103", "D104", "D105"]
+# The measurement runners reach for LightRAG, numpy, and the OpenAI client,
+# every one of them an optional extra of `aieng-advanced-rag`. Importing them
+# at module level would make the runner unimportable without the extras
+# installed, which is the same reason the package itself ignores this rule.
+# Each measurement directory is listed as it is added.
+"implementations/*/graphrag_null/*.py" = ["PLC0415"]
+# The onboarding gate imports each optional extra inside the test that needs it,
+# so a missing extra fails that one check with a fix instead of failing
+# collection. Test names are sentences, as under implementations/.
+"tests/**" = ["D101", "D102", "D103", "D104", "D105", "PLC0415"]
+# The publishing scripts' tests, named as sentences like the ones above.
+"scripts/tests/**" = ["D101", "D102", "D103", "D104", "D105"]
+
+[tool.ruff.lint.pep8-naming]
+ignore-names = ["X*", "setUp"]
+
+[tool.ruff.lint.isort]
+lines-after-imports = 2
+
+[tool.ruff.lint.pydocstyle]
+convention = "numpy"
+
+[tool.ruff.lint.pycodestyle]
+max-doc-length = 88
+
+[tool.pytest.ini_options]
+markers = [
+    "integration_test: marks tests as integration tests",
+]

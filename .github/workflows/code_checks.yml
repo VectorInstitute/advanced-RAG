@@ -1,0 +1,114 @@
+name: code checks
+permissions:
+  contents: read
+  pull-requests: write
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - .pre-commit-config.yaml
+      - .github/workflows/code_checks.yml
+      - '**.py'
+      - uv.lock
+      - pyproject.toml
+      - '**.ipynb'
+  pull_request:
+    branches:
+      - main
+    paths:
+      - .pre-commit-config.yaml
+      - .github/workflows/code_checks.yml
+      - '**.py'
+      - uv.lock
+      - pyproject.toml
+      - '**.ipynb'
+
+jobs:
+  run-code-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7.0.1
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@07a047e608db84b3d8c06cd9a7c7dcc9c355c18e
+        with:
+          # Install a specific version of uv.
+          version: "0.9.11"
+          enable-cache: true
+
+      - name: "Set up Python"
+        uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0
+        with:
+          python-version-file: ".python-version"
+
+      - name: Install dependencies and check code
+        run: |
+          uv venv .venv
+          source .venv/bin/activate
+          # --all-packages installs the package's extras too. Without them mypy
+          # cannot see numpy or docling-core, which hid six type errors, and the
+          # audit below covered a fraction of what the tests run against.
+          uv sync --all-packages --all-extras --dev
+          pre-commit run --all-files
+
+      - name: pip-audit (gh-action-pip-audit)
+        uses: pypa/gh-action-pip-audit@1220774d901786e6f652ae159f7b6bc8fea6d266
+        with:
+          virtual-environment: .venv/
+          # GHSA-xm59-rqc7-hhvf: nbconvert Windows-only vulnerability (no fix available as of 2025-12-22)
+          # This is a Windows-specific code execution vulnerability via inkscape.bat path traversal
+          # CI runs on Linux, and no patch exists yet (published 2025-12-18)
+          # TODO: Remove this ignore once nbconvert releases a patched version
+          #
+          # The four PYSEC ids below are advisories this project cannot fix and
+          # does not reach, found on 2026-10-02 when the audit began covering the
+          # package's extras. Each comment says what removes its ignore.
+          #
+          # PYSEC-2026-4066 (GHSA-3cv6-jpf6-8222): the LiteLLM proxy server lets an
+          # authenticated user redirect a provider call and read the operator's
+          # credentials. This project imports litellm as a client library, inside
+          # the ADK loop and through infermesh, and never runs the proxy. The
+          # patched releases start at 1.88.6, and graphrag 3.1.0 caps litellm
+          # below that, so fixing it
+          # downgrades Microsoft GraphRAG to 3.0.6 and nltk to 3.9.1. Remove this
+          # ignore when graphrag allows a patched litellm.
+          #
+          # PYSEC-2026-113 (GHSA-rgxp-2hwp-jwgg): a use-after-free in pyarrow when it
+          # reads an Arrow IPC file with pre-buffering on, which is off by default.
+          # Nothing here imports pyarrow or reads IPC files. Resolving to the fixed
+          # 23.0.1 moves pandas to 3.0.6 and lancedb to 0.34.0 as well. Remove this
+          # ignore when those upgrades are taken.
+          #
+          # PYSEC-2026-3804 (GHSA-4j2p-28q2-5m79): accelerate path traversal in
+          # load_checkpoint_in_model and load_checkpoint_and_dispatch. Nothing here
+          # calls either. No patched release exists. Remove this ignore when one does.
+          #
+          # PYSEC-2026-3740 (GHSA-8mgp-746c-j5xp): nltk sandbox bypass in the model
+          # save and load APIs of TransitionParser, AveragedPerceptron, and
+          # PerceptronTagger. Nothing here imports nltk. No patched release exists.
+          # Remove this ignore when one does.
+          #
+          # CVE-2026-114603 (GHSA-xcq7-p3pf-p88h), found on 2026-10-22: quadratic
+          # CPU in opentelemetry-api's TraceState.from_header when a server extracts
+          # an inbound W3C tracestate header. This project exports traces through
+          # Langfuse and runs no server that extracts inbound trace context. The
+          # fix is 1.45.1, but every google-adk release through 2.12.0 caps
+          # opentelemetry-api at 1.42.1. Remove this ignore when google-adk raises
+          # that cap.
+          #
+          # GHSA-g5ff-637f-6q2m: the LiteLLM proxy server's request-body blocklist
+          # misses the `vertex_ai_credentials` alias, so an authenticated proxy user
+          # can read local files. This project imports litellm as a client library
+          # and never runs the proxy. The fix is 1.95.0, and graphrag 3.1.0 caps
+          # litellm below it, as for PYSEC-2026-4066. Remove this ignore when
+          # graphrag allows a patched litellm.
+          ignore-vulns: |
+            GHSA-xm59-rqc7-hhvf
+            PYSEC-2026-4066
+            PYSEC-2026-113
+            PYSEC-2026-3804
+            PYSEC-2026-3740
+            CVE-2026-114603
+            GHSA-g5ff-637f-6q2m

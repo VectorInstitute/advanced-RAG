@@ -1,0 +1,81 @@
+{
+  "verified_at": "2026-10-06T22:00:14.965083+00:00",
+  "environment": "Isolated Python 3.12 environment created from uv.lock with all workspace packages, extras, and development tools",
+  "fresh_corpus_cache": false,
+  "pinned_cuad_loaded": true,
+  "pinned_contract_nli_loaded": true,
+  "default_path_passed": true,
+  "expensive_path_passed": true,
+  "saved_expensive_flag": false,
+  "executed_code_cells": 7,
+  "dense_promptless": {
+    "retrieval_failure": 0.24,
+    "mrr": 0.4348,
+    "actually_recomputed": true
+  },
+  "dense_prompted": {
+    "retrieval_failure": 0.24,
+    "mrr": 0.4632,
+    "actually_recomputed": true
+  },
+  "single_pass_samples": {
+    "model": "Qwen3_6-35B-A3B",
+    "questions": 4,
+    "model_calls": 4,
+    "policy": "SingleShotPolicy",
+    "max_attempts": 1,
+    "thinking": false
+  },
+  "offline_tests": {
+    "full_suite_passed": 1690,
+    "final_added_regressions_passed": 5,
+    "distinct_tests_passed": 1695,
+    "skipped": 2,
+    "integration_tests_deselected": 2
+  },
+  "artifacts": [
+    {
+      "path": "outputs/baseline_cache/ri1/pipeline-example/qwen3_6-35b-a3b/0f1fb50e9b88d30ac609f9f91e791d732c16ea14ca7eb141588d6ae1bdcd3279.json",
+      "sha256": "5cb4fafeff48af694e3a0e7e1cef93cd1f92e79231ef3da5e5df171f01d3a791",
+      "artifact_type": "pipeline-example",
+      "producer_id": "Qwen3_6-35B-A3B"
+    },
+    {
+      "path": "outputs/baseline_cache/ri1/pipeline-example/qwen3_6-35b-a3b/43c6e5f35feb581e9611d5fd5bc8814e95181343f99d3a166aeaa0d596928fdd.json",
+      "sha256": "e09d889b7bad75e35a50741c5598013e82f7562f9d1f0a165b4e0276b8e33643",
+      "artifact_type": "pipeline-example",
+      "producer_id": "Qwen3_6-35B-A3B"
+    },
+    {
+      "path": "outputs/baseline_cache/ri1/pipeline-example/qwen3_6-35b-a3b/47e5897919e7fa93c3362f3d2393d9a35876a54e6ba9b2ca33ca04e4a0ea6b2f.json",
+      "sha256": "3b99a2ecd669703bdad78e4b85224383fd8a8a9b6f45b6685e1ce0fc544805d4",
+      "artifact_type": "pipeline-example",
+      "producer_id": "Qwen3_6-35B-A3B"
+    },
+    {
+      "path": "outputs/baseline_cache/ri1/pipeline-example/qwen3_6-35b-a3b/d8c65e0ebf7424717ea24146c1240553f5632e4eceffd08d1e6c6ff165473432.json",
+      "sha256": "b5d1915cee8ff92a7cbcb98004016c8138e088eb977509f2447f49be44b4a3aa",
+      "artifact_type": "pipeline-example",
+      "producer_id": "Qwen3_6-35B-A3B"
+    },
+    {
+      "path": "outputs/baseline_cache/ri1/retrieval-report/bge-small-en-v1.5/7b1ed545586de1208ce4ba397f34eeb65e2c21da948077b0462c347fe71075d5.json",
+      "sha256": "fdfc0f38c329dd5526fcb856222b5c2d1f4fc10e2bee4ef703c755d3f84cd060",
+      "artifact_type": "retrieval-report",
+      "producer_id": "bge-small-en-v1.5"
+    },
+    {
+      "path": "outputs/baseline_cache/ri1/retrieval-report/bge-small-en-v1.5/f43faeebe66b97aafd6e8648960a14f4536de6b0946d2ae26251da007d05e125.json",
+      "sha256": "7f0b4c651a5304c2899996ff2b0adb21dd224cc6c7b9ecb6c9765b35a6dfee32",
+      "artifact_type": "retrieval-report",
+      "producer_id": "bge-small-en-v1.5"
+    }
+  ],
+  "fresh_default_verification": {
+    "python": "3.12.11",
+    "environment_created_from_uv_lock": true,
+    "fresh_corpus_and_runtime_cache": true,
+    "model_calls": 0,
+    "note": "Default path in a newly created environment. The expensive-path verification and its metering are recorded above."
+  }
+}

@@ -1,0 +1,181 @@
+{
+  "verified_at": "2026-10-22T00:02:42.079849+00:00",
+  "base_revision": "94eaad24024d414331dc9a90eb216f92e35504e2",
+  "compute_node": "bn102",
+  "slurm_job_id": "411592",
+  "scope": "Remote-based missing-method integration; historical measurements preserved, no fresh paid measurement",
+  "runner_tests_passed": 292,
+  "precommit": "all applicable pinned hooks passed, including Ruff, formatting, mypy and nbQA",
+  "new_notebooks": [
+    {
+      "path": "05_answering_and_null_detection.ipynb",
+      "executed_code_cells": 9,
+      "expensive_flag_default": false
+    },
+    {
+      "path": "06_regulatory_qa_and_ragas.ipynb",
+      "executed_code_cells": 5,
+      "expensive_flag_default": false
+    },
+    {
+      "path": "99_starter_agent.ipynb",
+      "executed_code_cells": 7,
+      "expensive_flag_default": false
+    }
+  ],
+  "default_environment": {
+    "fresh_kernel_per_notebook": true,
+    "optional_model_sdks_installed": false,
+    "fresh_environment_verification": "Minimal Python 3.12 environment with IPython, nbclient and nbformat; no OpenAI, ADK, sentence-transformers or RAGAS"
+  },
+  "preserved_remote_notebooks": [
+    "implementations/regulatory_policy_qa/02_retrieval_levers.ipynb",
+    "implementations/regulatory_policy_qa/03_chunking_variants.ipynb",
+    "implementations/regulatory_policy_qa/04_bring_your_own_corpus.ipynb"
+  ],
+  "baseline_code_and_outputs_unchanged": true,
+  "baseline_expensive_path_rerun": false,
+  "baseline_historical_verification": "outputs/baseline_validation.json",
+  "reference_cli_replays_passed": [
+    "agent",
+    "policies",
+    "ragas",
+    "regulatory",
+    "scope"
+  ],
+  "portable_ragas_inputs": "Exactly match all seven original evaluation rows; six answerables",
+  "cuad_cached_judging": "Both 70-answerable reports reproduced exactly with no changes",
+  "cuad_paired_comparison": "Recomputed exactly from saved evidence, outcomes, judgments, resume-cost ledger and extraction logs in a temporary directory",
+  "full_split_cache_audit": {
+    "generated_at": "2026-10-21T23:43:35.575552+00:00",
+    "compute_node": "bn102",
+    "slurm_job_id": "411534",
+    "model": null,
+    "embedding_model": "BAAI/bge-small-en-v1.5",
+    "reasoning": false,
+    "temperature": 0,
+    "requested_model": "Qwen3_6-35B-A3B",
+    "execution": "cache-only coverage audit; no new measurement",
+    "corpus": {
+      "contracts": 123,
+      "chunks": 1418,
+      "queries": 2091,
+      "answerable_queries": 1188,
+      "null_queries": 903,
+      "null_rate": 0.4319,
+      "mean_gold_chunks": 1.94
+    },
+    "threshold_trace_coverage": {
+      "heuristic": {
+        "cached_queries": 680,
+        "missing_queries": 1411,
+        "unexpected_queries": 0,
+        "duplicate_rows": 0,
+        "trace_sha256": "2cae5d63cfd0109e84b0496463ef6d92c95e0c545e98506e0f9a293402866692"
+      },
+      "llm": {
+        "cached_queries": 680,
+        "missing_queries": 1411,
+        "unexpected_queries": 0,
+        "duplicate_rows": 0,
+        "trace_sha256": "7ae98bcdac58747fab21e77d4de50bf9eef709ca57fd4ba03242afe1ed5ffa8d"
+      }
+    },
+    "existing_dense_evidence_queries": 340,
+    "dense_evidence_sha256": "1eb55eb890e5cc260920fcaf5614d069d732b4889adee39edb2dd289c2d293db",
+    "full_split_measurement_complete": false,
+    "new_model_calls": 0,
+    "source_trace_model_provenance": "Legacy trace files have no per-trace model metadata. Replay preserves source outcomes and does not relabel their model.",
+    "reason": "Coverage is not quality scoring or cache validation. Complete ID, question, answerability, and qrel validation occurs during replay; no partial full-split quality figures are inferred.",
+    "corpus_sha256": "460267b56052a2dc5aead98eb35eadef9e6734d5723d37b4a9790e410f812387"
+  },
+  "new_model_calls": 0,
+  "new_indexing_calls": 0,
+  "paid_harvest_deferred": true,
+  "changed_file_sha256": {
+    "implementations/regulatory_policy_qa/01_harness_and_baseline.ipynb": "ee35bec12e05cd785962ced6ef63b51b69a667d52f12fee53ee0f2b48ced7c59",
+    "implementations/regulatory_policy_qa/05_answering_and_null_detection.ipynb": "1398e9d5e7ce29444fb0ddb9fb006be5e3e192e7b55c8afc71214b65b244706c",
+    "implementations/regulatory_policy_qa/06_regulatory_qa_and_ragas.ipynb": "459f7ff4339140e01fe01ca633fd5244fa34d2c3b5bd2e42020adbda4e687696",
+    "implementations/regulatory_policy_qa/99_starter_agent.ipynb": "1475e6047b3832129de4e18fa971cf21c53f5e4715d6c3f3ba9c00a49fc45681",
+    "implementations/regulatory_policy_qa/ANSWERING_EXPERIMENTS.md": "a50eb2e48ee51489c3321d7aa65aa875dfdac2f2c8af402b0b6691a3bd3c6a3a",
+    "implementations/regulatory_policy_qa/GRAPHRAG_NULL_ARM.md": "3babbf3c6306305767f1b3c27df7b5d29d63f17ba3dbe212e95833bd776dac64",
+    "implementations/regulatory_policy_qa/GUIDE.md": "9ce2d5ba905c7c39b0ed2f3284e089912d4ea3a85631b58a1f1165d70467ac8d",
+    "implementations/regulatory_policy_qa/README.md": "49421ca4608a25874d75a0ac3b1aaa05644c62b9b87f706b4dc2e627f5f41dbe",
+    "implementations/regulatory_policy_qa/advanced_lab/__init__.py": "0b0ac42b96c93ecc2ee6d63beae573abf90e009bfe313b99db636f6eb2061838",
+    "implementations/regulatory_policy_qa/advanced_lab/agent.py": "163bb45fccb336ac5f268c1a882cf0645d79714f07bc5fe5710f9d0bb6b72955",
+    "implementations/regulatory_policy_qa/advanced_lab/answering.py": "25812e706919aba361b23f941230d75207c801fa4c26df68cdd6865c57eea42e",
+    "implementations/regulatory_policy_qa/advanced_lab/common.py": "370322785dcd22bcf510b3b479704fbb5e8b3bb4b5a630306e4e249a2445fb1a",
+    "implementations/regulatory_policy_qa/advanced_lab/null_comparison.py": "caadedbbd555f89e0d02a8e4cd0d240758220fd87f46aeeafc32fad4121174dd",
+    "implementations/regulatory_policy_qa/advanced_lab/ragas_eval.py": "204f6cb7b7e6c7d3af0da299e8f0e6d3eb3551d734aef18851fe9f900fefd1e7",
+    "implementations/regulatory_policy_qa/advanced_lab/regulatory_inputs.py": "c850b4fdfc6c429c7e56717124df53d37818eb2da9a4047e7ad8ff55c693b87a",
+    "implementations/regulatory_policy_qa/advanced_lab/scope.py": "451c0f7e4336de60004fa2182083c334f6c8b3c89e1643897f9a223bd1b3e623",
+    "implementations/regulatory_policy_qa/graphrag_null/judge_null_arm.py": "f368b209df15f12ad87b228d4e45c2104ec34e0f5369fbdb77dba527f8fb2277",
+    "implementations/regulatory_policy_qa/graphrag_null/run_null_arm.py": "de1f6de221ce250e475e8c9a6a7730963d015c77f4da6c5c9a02790270d0a201",
+    "implementations/regulatory_policy_qa/graphrag_null/tests/test_judge_null_arm.py": "46670eb61c73bf9e599edc655cbcb11f8a31c5e0b7526a2cf1e83722e1943afd",
+    "implementations/regulatory_policy_qa/graphrag_null/tests/test_run_null_arm.py": "7acee7653ce0c3a999d8f0212b668ade9bb61179a64da3a3086428a7a7de547b",
+    "implementations/regulatory_policy_qa/outputs/ATTRIBUTION.md": "0ee1245b93ef2d8907a3ff80f8273dd631732a8f95eff3498c4e0f849616bd8b",
+    "implementations/regulatory_policy_qa/outputs/advanced/PROVENANCE.md": "a796d599b34997891ccd261c1cae0dd8b9b882602d105ea856a3cf8af65f64e4",
+    "implementations/regulatory_policy_qa/outputs/advanced/agent.json": "35b08308bbd7f48c42f72f72aa684492167b44c77c293973d39ce0d371bb513f",
+    "implementations/regulatory_policy_qa/outputs/advanced/cache/ri1/advanced-report/ri1-lab-v1/22386e57b9ca8b174f4e1fc6dc1dcd28bf8ab1dd10fee9d946e656ef7072dab2.json": "7806275ac718fc797caf1b1e51d740801630c95a65f479e6d8697393ea17323f",
+    "implementations/regulatory_policy_qa/outputs/advanced/cache/ri1/advanced-report/ri1-lab-v1/34229536eec46ed9370bdd775dda8026543ae6b475e4f7a7b7e335c0142b4475.json": "1156348251a487455f8189c9c1e71fad4c389bdf5faaf4cda9e53cd88c2edaaf",
+    "implementations/regulatory_policy_qa/outputs/advanced/cache/ri1/advanced-report/ri1-lab-v1/6f51589ff18ed95bef179d14621d902acc1b4dbecd32f0e264df1e8078676265.json": "a156ec9b988c688f30ac57d2310525b9f3bf8c56240e258000a337fcd3fe2b72",
+    "implementations/regulatory_policy_qa/outputs/advanced/cache/ri1/advanced-report/ri1-lab-v1/812a34047aac19f16b065bb6329c47e890d0a55a8cbbe538ad59ce349662cfab.json": "640097f95604831ca96defd31a7b1c24ad3a2699264b0c8c994ff8b43b9685c4",
+    "implementations/regulatory_policy_qa/outputs/advanced/cache/ri1/advanced-report/ri1-lab-v1/d27a51e8599e504b2aa191d8d8fc07a9294c66200d8e8f37de6cfdd5774aeadb.json": "132761be1208dd82ccc154125d4c6dbfaacafcbb2d3140ad7556283dfd7463dc",
+    "implementations/regulatory_policy_qa/outputs/advanced/policies.json": "df9cd31e133160d0edca123d780bd54859d5f9e00b50367011f3750bb05825b2",
+    "implementations/regulatory_policy_qa/outputs/advanced/ragas.json": "0df1425b2acdcd1a59cd470afb16d4f28c672ab2dcff7cf5c139968735b923b0",
+    "implementations/regulatory_policy_qa/outputs/advanced/regulatory.json": "139a479768f1453619c4aef425bdc4ac358aa632a1d1174aadd7aaffd8171554",
+    "implementations/regulatory_policy_qa/outputs/advanced/regulatory_source.json": "db973f07d077a0276c3fe388055f6fdde523f5b51dde54e9f916bf068a8ade00",
+    "implementations/regulatory_policy_qa/outputs/advanced/scope.json": "40d8384d4c6e23a7f5c5621d00165f009e02d407c5b64305757d58e6977e60ff",
+    "implementations/regulatory_policy_qa/outputs/cuad_null/COMPARISON.md": "e1e4d23a32f70dc0fd472f3bd3b720bdb456755625c18959d4226a4e379ef0b1",
+    "implementations/regulatory_policy_qa/outputs/cuad_null/answer_judgements_dense.json": "fc4617f4af9dda08c3486a90550952dfdc6c472279a773d4dea753d213be6212",
+    "implementations/regulatory_policy_qa/outputs/cuad_null/answer_judgements_lightrag-mix.json": "f3d70018b2af6f213a1ef57750a1e87f7f2be972cfd131dc4323555df072fdd4",
+    "implementations/regulatory_policy_qa/outputs/cuad_null/answer_judging_summary.json": "2791a6d3ea8fa05ff3ed8a5291e3af2c3a4b603c1b6f86eb00d545d53c7c8078",
+    "implementations/regulatory_policy_qa/outputs/cuad_null/lightrag_index_cost.json": "1fbf29af25985f001ca6ead6c825dd2117a647f3d0d393bf354c3271a5fa856d",
+    "implementations/regulatory_policy_qa/outputs/cuad_null/lightrag_query_cost.json": "eac88719325c9dbf12e67a936f4f3c4a2ebb1f4236bdad1ba22073cfcee9626a",
+    "implementations/regulatory_policy_qa/outputs/cuad_null/null_arm_summary.json": "18f4e0399b5ae43957b38e997555d9fc92af0e094861c20fc7f0cfadbfc8d210",
+    "implementations/regulatory_policy_qa/outputs/cuad_null/outcomes_always-abstain.json": "dd2256799e01773194fe1292892dfa081714070324d5f8eb7d6fc95263ac5b61",
+    "implementations/regulatory_policy_qa/outputs/cuad_null/outcomes_always-answer.json": "3322c337dfe3132937c0be15bd5e7fa8feb1b4756ac59ef18284fea44022b512",
+    "implementations/regulatory_policy_qa/outputs/cuad_null/outcomes_dense.json": "9d8ca2c0486c8438784f783319568b100453a3feed40e66a5759b8dd6e284d78",
+    "implementations/regulatory_policy_qa/outputs/cuad_null/outcomes_lightrag-mix.json": "f5b2438a98bfc8eed4fa54903c7efab275bc21d0cea3c9b0ab7b5e0830fe1eb0",
+    "implementations/regulatory_policy_qa/outputs/cuad_null/paired_comparison.json": "06bdfc06754af61e2033a3de1c16fd1c9b1295139a0012fadda70ee6b2a6fe9b",
+    "implementations/regulatory_policy_qa/outputs/cuad_null/scope_restoration.json": "a1a9b35163bd4e94a44c6aedc1c4c6dbf288f93c78060ca3ea422397c89047e0",
+    "implementations/regulatory_policy_qa/outputs/full_contract_nli/cache_status.json": "4f9ee58d5de6f9b62c5829d94f3996dbccad0fea35b811fe2ae3c0870075a7b0",
+    "implementations/regulatory_policy_qa/pyproject.toml": "90be46e7417bc06db16401a05c7b9e044bde4c4a871c6877010e949071516608",
+    "implementations/regulatory_policy_qa/run_advanced.py": "0f18e591bf3108ec0fc1e3856cf82a0aa963289f0007df609bf6f3e646613dea",
+    "implementations/regulatory_policy_qa/run_threshold_sweep.py": "3d94cf1935c6719e7e9562a00e39a83e136dfe7d920fd11dc982acc1a5c8bd59",
+    "implementations/regulatory_policy_qa/sweep_lab/proxy.py": "1f4cf5339d13638c150d64ff9b3a53d672923929600b7641af78231a79b15ad3",
+    "implementations/regulatory_policy_qa/tests/test_advanced_runner.py": "f9333b2389c9e37f9bfa0022c1bf61b007a98c2fa8238328e97854c3f1dbcc66",
+    "implementations/regulatory_policy_qa/tests/test_answering_methods.py": "a904b242c16db86ad7b3bc2882e5f537acad9c70b140b77d1b297ebb69b6f241",
+    "implementations/regulatory_policy_qa/tests/test_portable_answering_inputs.py": "4d3b603cd8c86f791c67ecadb0fe7586c775ef8900ee5815cb812620efda2097",
+    "pyproject.toml": "fa7a641315a0e5401425631a5ff98d889a7b2856125dd6c3ec17c828fe0a3efb"
+  },
+  "initial_integration_validation": {
+    "verified_at": "2026-10-21T23:46:31.614693+00:00",
+    "runner_tests_passed": 279,
+    "slurm_job_id": "411534"
+  },
+  "usability_review": {
+    "changes": [
+      "Selected-experiment imports only",
+      "Explicit private output directory and report-path receipt",
+      "Per-run checkpoints and input snapshots",
+      "Explicit RAGAS input directory for a fresh regulatory QA run",
+      "Strict CLI option validation and policy cache-only recomputation",
+      "Pinned source fails rather than downloading a replacement",
+      "README entry point and task/dependency/command guide"
+    ],
+    "validation": "292 runner tests; all applicable pinned hooks; three fresh minimal notebook kernels; five reference CLI replays and exact portable RAGAS input comparison",
+    "new_model_calls": 0,
+    "live_model_paths": "Routing tested with injected experiments; no new paid runs performed"
+  },
+  "latest_code_checks": {
+    "verified_at": "2026-10-22T00:06:46.083193+00:00",
+    "compute_node": "bn102",
+    "slurm_job_id": "411620",
+    "branch": "ri1-missing-parts",
+    "runner_tests_passed": 292,
+    "pinned_precommit_hooks": "All applicable hooks passed, including Ruff, formatting, mypy and nbQA",
+    "git_diff_check": "passed",
+    "new_model_calls": 0
+  }
+}

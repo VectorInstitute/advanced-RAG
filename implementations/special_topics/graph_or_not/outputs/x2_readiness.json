@@ -1,0 +1,90 @@
+{
+ "rows": {
+  "musique / multi-hop questions / graph names": {
+   "documents": 11656,
+   "names": 80715,
+   "hub_names": 43,
+   "recurring_name_share": 0.2556,
+   "linked_document_share": 1.0,
+   "questions": 300,
+   "relational_question_share": 0.1133,
+   "question_name_share": 0.9967,
+   "bridge_question_share": 0.4467,
+   "dense_all_supporting_at_k": 0.2367,
+   "k": 10
+  },
+  "musique / multi-hop questions / regex names": {
+   "documents": 11656,
+   "names": 63956,
+   "hub_names": 53,
+   "recurring_name_share": 0.268,
+   "linked_document_share": 1.0,
+   "questions": 300,
+   "relational_question_share": 0.1133,
+   "question_name_share": 0.9933,
+   "bridge_question_share": 0.4833,
+   "dense_all_supporting_at_k": 0.2367,
+   "k": 10
+  },
+  "serverfault / support questions / graph names": {
+   "documents": 9999,
+   "names": 57014,
+   "hub_names": 268,
+   "recurring_name_share": 0.3978,
+   "linked_document_share": 1.0,
+   "questions": 30,
+   "relational_question_share": 0.0,
+   "question_name_share": 0.9,
+   "bridge_question_share": 0.1667,
+   "dense_all_supporting_at_k": 0.9333,
+   "k": 10
+  },
+  "serverfault / support questions / regex names": {
+   "documents": 9999,
+   "names": 79500,
+   "hub_names": 504,
+   "recurring_name_share": 0.2923,
+   "linked_document_share": 1.0,
+   "questions": 30,
+   "relational_question_share": 0.0,
+   "question_name_share": 0.9667,
+   "bridge_question_share": 0.0667,
+   "dense_all_supporting_at_k": 0.9333,
+   "k": 10
+  },
+  "serverfault / X3 relational questions / graph names": {
+   "documents": 9999,
+   "names": 57014,
+   "hub_names": 268,
+   "recurring_name_share": 0.3978,
+   "linked_document_share": 1.0,
+   "questions": 60,
+   "relational_question_share": 1.0,
+   "question_name_share": 1.0,
+   "bridge_question_share": null,
+   "dense_all_supporting_at_k": null,
+   "k": null
+  },
+  "contractnli / hypotheses / regex names": {
+   "documents": 123,
+   "names": 3085,
+   "hub_names": 603,
+   "recurring_name_share": 0.2713,
+   "linked_document_share": 1.0,
+   "questions": 17,
+   "relational_question_share": 0.0,
+   "question_name_share": 0.0,
+   "bridge_question_share": null,
+   "dense_all_supporting_at_k": null,
+   "k": null
+  }
+ },
+ "hub_share": 0.05,
+ "k": 10,
+ "produced_by": {
+  "model": "Qwen3_6-35B-A3B",
+  "endpoint": "vector-cluster",
+  "producer": "run_graph_or_not.py x2",
+  "label": "reference trajectories"
+ }
+}

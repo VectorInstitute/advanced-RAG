@@ -1,0 +1,12 @@
+{
+ "method": "lightrag",
+ "model": "Qwen3_6-35B-A3B",
+ "passages": 11656,
+ "calls": 28203,
+ "prompt_tokens": 65990852,
+ "completion_tokens": 12751145,
+ "total_tokens": 78741997,
+ "calls_per_passage": 2.42,
+ "tokens_per_passage": 6755.5,
+ "note": "Unique cached responses across all runs and restarts, including 5 calls on 2026-10-22 that re-indexed 26 passages a killed run had marked processed without their chunks or graph links; wall time is not stated because the build was restarted four times."
+}
