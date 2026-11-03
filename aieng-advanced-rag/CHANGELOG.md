@@ -261,6 +261,12 @@ aliases go away one release later.
 
 ### Fixed
 
+- `graphrag.proxy.ResponseCache` takes SQLite's write lock before it reads the cache file's
+  schema, so threads or processes that open the same new file at once each wait their turn and
+  only the first adds the missing columns. The first live run of a visual-documents notebook,
+  whose eight worker threads each build a client on first use, failed with
+  `sqlite3.OperationalError: duplicate column name: response_model` on some starts; rerunning the
+  cell worked.
 - A live `load_or_run` step marked `Step(guarded=True)`, whose every model call goes through
   `govern`, `async_llm`, a metered client, `ProxyBatch`, or `GovernedLlmClient`, no longer stops
   before it starts when its pre-run estimate needs `confirm=True`. It runs while the response

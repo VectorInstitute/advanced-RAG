@@ -68,6 +68,9 @@ class ResponseCache:
     them on open, with nulls for its existing rows, and so does a file with
     only ``key`` and ``payload``, which gains the two token columns too.
 
+    Several threads or processes can open the same file at once, including a
+    file that does not exist yet.
+
     Parameters
     ----------
     path : Path
@@ -78,20 +81,34 @@ class ResponseCache:
         path.parent.mkdir(parents=True, exist_ok=True)
         self._lock = threading.Lock()
         self._db = sqlite3.connect(str(path), check_same_thread=False)
-        self._db.execute(
-            "CREATE TABLE IF NOT EXISTS responses ("
-            "key TEXT PRIMARY KEY, payload TEXT NOT NULL, "
-            "prompt_tokens INT, completion_tokens INT)"
-        )
-        columns = {row[1] for row in self._db.execute("PRAGMA table_info(responses)")}
-        for column, kind in (
-            ("prompt_tokens", "INT"),
-            ("completion_tokens", "INT"),
-            ("model", "TEXT"),
-            ("response_model", "TEXT"),
-        ):
-            if column not in columns:
-                self._db.execute(f"ALTER TABLE responses ADD COLUMN {column} {kind}")
+        # Parallel workers that build their clients on first use open a new file
+        # together. Taking the write lock before reading the schema makes each
+        # opener wait for the one ahead of it, so only the first adds the missing
+        # columns. Reading first and locking later let two openers both see a
+        # column missing, and the second ALTER failed with "duplicate column name".
+        self._db.execute("BEGIN IMMEDIATE")
+        try:
+            self._db.execute(
+                "CREATE TABLE IF NOT EXISTS responses ("
+                "key TEXT PRIMARY KEY, payload TEXT NOT NULL, "
+                "prompt_tokens INT, completion_tokens INT)"
+            )
+            columns = {
+                row[1] for row in self._db.execute("PRAGMA table_info(responses)")
+            }
+            for column, kind in (
+                ("prompt_tokens", "INT"),
+                ("completion_tokens", "INT"),
+                ("model", "TEXT"),
+                ("response_model", "TEXT"),
+            ):
+                if column not in columns:
+                    self._db.execute(
+                        f"ALTER TABLE responses ADD COLUMN {column} {kind}"
+                    )
+        except BaseException:
+            self._db.rollback()
+            raise
         self._db.commit()
 
     @staticmethod
