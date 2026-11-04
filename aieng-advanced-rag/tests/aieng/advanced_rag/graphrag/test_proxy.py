@@ -415,6 +415,46 @@ def test_a_cache_file_from_before_the_model_columns_opens_and_reads(tmp_path):
     assert cache.get("k") == "text"
 
 
+@pytest.mark.parametrize("old_schema", [False, True])
+def test_threads_opening_one_new_cache_file_together_all_succeed(tmp_path, old_schema):
+    # The visual-documents notebooks build their client on first use inside eight
+    # worker threads, so the first live run opens a new file eight times at once.
+    # Before the schema read took the write lock, about one such start in six
+    # failed with "duplicate column name: response_model".
+    import sqlite3
+    import threading
+
+    workers = 8
+    for trial in range(50):
+        path = tmp_path / f"responses-{trial}.sqlite"
+        if old_schema:
+            db = sqlite3.connect(str(path))
+            db.execute(
+                "CREATE TABLE responses (key TEXT PRIMARY KEY, payload TEXT NOT NULL)"
+            )
+            db.commit()
+            db.close()
+        start = threading.Barrier(workers)
+        errors: list[BaseException] = []
+
+        def open_cache(path=path, start=start, errors=errors):
+            start.wait()
+            try:
+                ResponseCache(path).put("k", "text", 5, 1, model="m")
+            except BaseException as exc:
+                errors.append(exc)
+
+        threads = [threading.Thread(target=open_cache) for _ in range(workers)]
+        for thread in threads:
+            thread.start()
+        for thread in threads:
+            thread.join()
+        assert errors == []
+        entry = ResponseCache(path).entry("k")
+        assert entry is not None
+        assert entry.model == "m"
+
+
 def test_a_governed_client_adapts_a_library_request_for_claude(cache):
     create = FakeCreate()
     client = govern(sync_client(create), cache=cache, limiter=RateLimiter(1000))
